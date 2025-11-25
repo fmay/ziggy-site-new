@@ -7,7 +7,7 @@ export default function Products() {
       title="Products"
       description="Explore our suite of products designed to power your business growth.">
       <Carousel slidesToShow={2}>
-        <div className="mx-4">
+        <div className="mx-2">
           <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
             <h3 className="text-2xl font-semibold text-stripe-navy mb-3">Product One</h3>
             <p className="text-stripe-gray mb-4">
@@ -20,7 +20,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mx-4">
+        <div className="mx-2">
           <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
             <h3 className="text-2xl font-semibold text-stripe-navy mb-3">Product Two</h3>
             <p className="text-stripe-gray mb-4">
@@ -33,7 +33,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mx-4">
+        <div className="mx-2">
           <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
             <h3 className="text-2xl font-semibold text-stripe-navy mb-3">Product Three</h3>
             <p className="text-stripe-gray mb-4">
