@@ -33,7 +33,11 @@ export const navigationConfig: NavigationConfig = {
           {
             title: 'Payments',
             items: [
-              { label: 'Payment Processing', href: '/products', description: 'Accept payments online' },
+              {
+                label: 'Payment Processing',
+                href: '/products',
+                description: 'Accept payments online',
+              },
               { label: 'Checkout', href: '/products', description: 'Pre-built payment form' },
               { label: 'Payment Links', href: '/products', description: 'No-code payment pages' },
             ],
@@ -56,7 +60,11 @@ export const navigationConfig: NavigationConfig = {
           {
             items: [
               { label: 'Startups', href: '/solutions', description: 'Launch and scale faster' },
-              { label: 'Enterprise', href: '/solutions', description: 'Built for complex businesses' },
+              {
+                label: 'Enterprise',
+                href: '/solutions',
+                description: 'Built for complex businesses',
+              },
               { label: 'SaaS', href: '/solutions', description: 'Subscription billing' },
               { label: 'Platforms', href: '/solutions', description: 'Marketplace solutions' },
             ],

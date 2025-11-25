@@ -62,13 +62,14 @@ const Header = () => {
     setMobileExpandedItem(mobileExpandedItem === label ? null : label)
   }
 
-  useEffect(() => {
-    return () => {
+  useEffect(
+    () => () => {
       if (closeTimeoutRef.current) {
         clearTimeout(closeTimeoutRef.current)
       }
-    }
-  }, [])
+    },
+    [],
+  )
 
   const renderDesktopNavItem = (item: NavItemWithDropdown, index: number) => {
     if (item.dropdown) {
@@ -78,14 +79,12 @@ const Header = () => {
         <div
           key={item.label}
           className={index > 0 ? 'ml-8' : ''}
-          onMouseEnter={(e) => handleMouseEnter(item.label, item, e.currentTarget)}
-        >
+          onMouseEnter={e => handleMouseEnter(item.label, item, e.currentTarget)}>
           <button
             className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
               isActive ? 'text-stripe-purple' : ''
             }`}
-            aria-expanded={isActive}
-          >
+            aria-expanded={isActive}>
             {item.label}
             <svg
               className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
@@ -94,9 +93,13 @@ const Header = () => {
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
         </div>
@@ -107,8 +110,7 @@ const Header = () => {
       <div key={item.label} className={index > 0 ? 'ml-8' : ''}>
         <Link
           href={item.href!}
-          className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
-        >
+          className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200">
           {item.label}
         </Link>
       </div>
@@ -124,8 +126,7 @@ const Header = () => {
           <button
             onClick={() => toggleMobileItem(item.label)}
             className="w-full flex items-center justify-between text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2"
-            aria-expanded={isExpanded}
-          >
+            aria-expanded={isExpanded}>
             <span>{item.label}</span>
             <svg
               className={`w-4 h-4 transition-transform duration-[400ms]`}
@@ -135,17 +136,20 @@ const Header = () => {
               }}
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
 
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
               isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-            }`}
-          >
+            }`}>
             <div className="pl-4 pb-2 space-y-2 pt-2">
               {item.dropdown.sections.map((section, sectionIdx) => (
                 <div key={sectionIdx}>
@@ -154,13 +158,12 @@ const Header = () => {
                       {section.title}
                     </div>
                   )}
-                  {section.items.map((subItem) => (
+                  {section.items.map(subItem => (
                     <Link
                       key={subItem.label}
                       href={subItem.href}
                       className="block text-stripe-gray hover:text-stripe-navy transition-colors duration-200 py-1.5"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
+                      onClick={() => setMobileMenuOpen(false)}>
                       {subItem.label}
                     </Link>
                   ))}
@@ -177,8 +180,7 @@ const Header = () => {
         key={item.label}
         href={item.href!}
         className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2 block"
-        onClick={() => setMobileMenuOpen(false)}
-      >
+        onClick={() => setMobileMenuOpen(false)}>
         {item.label}
       </Link>
     )
@@ -205,10 +207,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div
-              className="hidden md:flex items-center"
-              onMouseLeave={handleMouseLeave}
-            >
+            <div className="hidden md:flex items-center" onMouseLeave={handleMouseLeave}>
               {navigationConfig.desktop.map((item, index) => renderDesktopNavItem(item, index))}
             </div>
 
@@ -216,8 +215,7 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               <Link
                 href={navigationConfig.cta.contact.href}
-                  className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"
-              >
+                className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200">
                 {navigationConfig.cta.contact.label}
               </Link>
               {/*<Link*/}
@@ -233,15 +231,24 @@ const Header = () => {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-stripe-navy p-2"
-                aria-label="Toggle menu"
-              >
+                aria-label="Toggle menu">
                 {mobileMenuOpen ? (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 ) : (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
                   </svg>
                 )}
               </button>
@@ -259,31 +266,25 @@ const Header = () => {
                   closeTimeoutRef.current = null
                 }
               }}
-              onMouseLeave={handleMouseLeave}
-            >
+              onMouseLeave={handleMouseLeave}>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                   className="relative bg-white rounded-lg shadow-xl border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
                   style={{
                     marginLeft: `${dropdownPosition}px`,
                     transform: 'translateX(-50%)',
-                  }}
-                >
+                  }}>
                   {/* Arrow pointing up */}
-                  <div
-                    className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45"
-                  />
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45" />
 
                   <div
                     className={`transition-opacity duration-400 relative ${
                       isTransitioning ? 'opacity-0' : 'opacity-100'
-                    }`}
-                  >
+                    }`}>
                     {dropdownContent.dropdown.sections.map((section, sectionIdx) => (
                       <div
                         key={sectionIdx}
-                        className={sectionIdx > 0 ? 'mt-4 pt-4 border-t border-gray-100' : ''}
-                      >
+                        className={sectionIdx > 0 ? 'mt-4 pt-4 border-t border-gray-100' : ''}>
                         {section.title && (
                           <div className="px-4 mb-2">
                             <h3 className="text-xs font-semibold text-stripe-gray uppercase tracking-wide">
@@ -292,12 +293,11 @@ const Header = () => {
                           </div>
                         )}
                         <div className="px-2">
-                          {section.items.map((subItem) => (
+                          {section.items.map(subItem => (
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className="block px-3 py-2 rounded-md hover:bg-stripe-light-bg transition-all duration-150"
-                            >
+                              className="block px-3 py-2 rounded-md hover:bg-stripe-light-bg transition-all duration-150">
                               <div className="font-medium text-stripe-navy">{subItem.label}</div>
                               {subItem.description && (
                                 <div className="text-sm text-stripe-gray mt-0.5">
@@ -319,12 +319,11 @@ const Header = () => {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-100">
               <div className="flex flex-col space-y-4">
-                {navigationConfig.mobile.map((item) => renderMobileNavItem(item))}
+                {navigationConfig.mobile.map(item => renderMobileNavItem(item))}
                 <Link
                   href={navigationConfig.cta.signin.href}
                   className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 text-center"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                  onClick={() => setMobileMenuOpen(false)}>
                   {navigationConfig.cta.signin.label}
                 </Link>
               </div>

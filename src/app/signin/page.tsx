@@ -2,10 +2,7 @@ import PageLayout from '@/components/PageLayout'
 
 export default function SignIn() {
   return (
-    <PageLayout
-      title="Sign In"
-      description="Access your account to manage your business."
-    >
+    <PageLayout title="Sign In" description="Access your account to manage your business.">
       <div className="max-w-md mx-auto">
         <form className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
           <div className="space-y-6">
@@ -22,7 +19,9 @@ export default function SignIn() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-semibold text-stripe-navy mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-stripe-navy mb-2">
                 Password
               </label>
               <input
@@ -35,8 +34,7 @@ export default function SignIn() {
 
             <button
               type="submit"
-              className="w-full px-6 py-4 bg-stripe-purple text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
-            >
+              className="w-full px-6 py-4 bg-stripe-purple text-white rounded-full font-semibold hover:opacity-90 transition-opacity">
               Sign In
             </button>
 

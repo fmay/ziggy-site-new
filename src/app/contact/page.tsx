@@ -4,8 +4,7 @@ export default function Contact() {
   return (
     <PageLayout
       title="Contact Sales"
-      description="Get in touch with our team to learn more about how we can help your business."
-    >
+      description="Get in touch with our team to learn more about how we can help your business.">
       <div className="max-w-2xl mx-auto">
         <form className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
           <div className="space-y-6">
@@ -34,7 +33,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-semibold text-stripe-navy mb-2">
+              <label
+                htmlFor="company"
+                className="block text-sm font-semibold text-stripe-navy mb-2">
                 Company
               </label>
               <input
@@ -46,7 +47,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-stripe-navy mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-semibold text-stripe-navy mb-2">
                 Message
               </label>
               <textarea
@@ -59,8 +62,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full px-6 py-4 bg-stripe-purple text-white rounded-full font-semibold hover:opacity-90 transition-opacity"
-            >
+              className="w-full px-6 py-4 bg-stripe-purple text-white rounded-full font-semibold hover:opacity-90 transition-opacity">
               Send Message
             </button>
           </div>

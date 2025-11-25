@@ -4,8 +4,7 @@ export default function Pricing() {
   return (
     <PageLayout
       title="Pricing"
-      description="Simple, transparent pricing that scales with your business."
-    >
+      description="Simple, transparent pricing that scales with your business.">
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div className="bg-white p-8 rounded-lg border-2 border-gray-200 hover:border-stripe-purple transition-colors duration-200">
           <h3 className="text-2xl font-semibold text-stripe-navy mb-2">Starter</h3>
