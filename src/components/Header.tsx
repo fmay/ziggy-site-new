@@ -216,16 +216,16 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               <Link
                 href={navigationConfig.cta.contact.href}
-                className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
+                  className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"
               >
                 {navigationConfig.cta.contact.label}
               </Link>
-              <Link
-                href={navigationConfig.cta.signin.href}
-                className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"
-              >
-                {navigationConfig.cta.signin.label}
-              </Link>
+              {/*<Link*/}
+              {/*  href={navigationConfig.cta.signin.href}*/}
+              {/*  className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"*/}
+              {/*>*/}
+              {/*  {navigationConfig.cta.signin.label}*/}
+              {/*</Link>*/}
             </div>
 
             {/* Mobile menu button */}
