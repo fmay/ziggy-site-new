@@ -24,7 +24,8 @@ const Header = () => {
     const navContainer = element.closest('nav')
     if (navContainer) {
       const navRect = navContainer.getBoundingClientRect()
-      setDropdownPosition(rect.left - navRect.left + rect.width / 2)
+      // Offset slightly left to account for the chevron icon (~8px for icon + 4px for margin)
+      setDropdownPosition(rect.left - navRect.left + rect.width / 2 - 40)
     }
 
     const isSwitch = activeDropdown && activeDropdown !== label && dropdownContent
@@ -41,7 +42,7 @@ const Header = () => {
         setTimeout(() => {
           setIsTransitioning(false)
         }, 20)
-      }, 200)
+      }, 100)
     } else {
       // Opening fresh or staying on same dropdown
       setActiveDropdown(label)
@@ -262,7 +263,7 @@ const Header = () => {
             >
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
-                  className="relative bg-white rounded-lg shadow-xl border border-gray-100 py-4 inline-block min-w-[280px]"
+                  className="relative bg-white rounded-lg shadow-xl border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
                   style={{
                     marginLeft: `${dropdownPosition}px`,
                     transform: 'translateX(-50%)',
@@ -274,7 +275,7 @@ const Header = () => {
                   />
 
                   <div
-                    className={`transition-opacity duration-200 relative ${
+                    className={`transition-opacity duration-400 relative ${
                       isTransitioning ? 'opacity-0' : 'opacity-100'
                     }`}
                   >
