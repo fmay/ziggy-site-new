@@ -1,11 +1,23 @@
 export interface NavItem {
   label: string
   href: string
+  description?: string
+}
+
+export interface NavItemWithDropdown {
+  label: string
+  href?: string
+  dropdown?: {
+    sections: {
+      title?: string
+      items: NavItem[]
+    }[]
+  }
 }
 
 export interface NavigationConfig {
-  desktop: NavItem[]
-  mobile: NavItem[]
+  desktop: NavItemWithDropdown[]
+  mobile: NavItemWithDropdown[]
   cta: {
     contact: NavItem
     signin: NavItem
@@ -14,17 +26,141 @@ export interface NavigationConfig {
 
 export const navigationConfig: NavigationConfig = {
   desktop: [
-    { label: 'Products', href: '/products' },
-    { label: 'Solutions', href: '/solutions' },
-    { label: 'Developers', href: '/developers' },
-    { label: 'Resources', href: '/resources' },
+    {
+      label: 'Products',
+      dropdown: {
+        sections: [
+          {
+            title: 'Payments',
+            items: [
+              { label: 'Payment Processing', href: '/products', description: 'Accept payments online' },
+              { label: 'Checkout', href: '/products', description: 'Pre-built payment form' },
+              { label: 'Payment Links', href: '/products', description: 'No-code payment pages' },
+            ],
+          },
+          {
+            title: 'Business Operations',
+            items: [
+              { label: 'Billing', href: '/products', description: 'Subscription management' },
+              { label: 'Invoicing', href: '/products', description: 'Online invoices' },
+              { label: 'Tax', href: '/products', description: 'Sales tax automation' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Solutions',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              { label: 'Startups', href: '/solutions', description: 'Launch and scale faster' },
+              { label: 'Enterprise', href: '/solutions', description: 'Built for complex businesses' },
+              { label: 'SaaS', href: '/solutions', description: 'Subscription billing' },
+              { label: 'Platforms', href: '/solutions', description: 'Marketplace solutions' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Developers',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              { label: 'Documentation', href: '/developers', description: 'Start integrating' },
+              { label: 'API Reference', href: '/developers', description: 'Complete API docs' },
+              { label: 'Support', href: '/developers', description: 'Get help from our team' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Resources',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              { label: 'Blog', href: '/resources', description: 'Latest updates and insights' },
+              { label: 'Guides', href: '/resources', description: 'Best practices and tutorials' },
+              { label: 'Newsletter', href: '/resources', description: 'Stay up to date' },
+            ],
+          },
+        ],
+      },
+    },
     { label: 'Pricing', href: '/pricing' },
   ],
   mobile: [
-    { label: 'Products', href: '/products' },
-    { label: 'Solutions', href: '/solutions' },
-    { label: 'Developers', href: '/developers' },
-    { label: 'Resources', href: '/resources' },
+    {
+      label: 'Products',
+      dropdown: {
+        sections: [
+          {
+            title: 'Payments',
+            items: [
+              { label: 'Payment Processing', href: '/products' },
+              { label: 'Checkout', href: '/products' },
+              { label: 'Payment Links', href: '/products' },
+            ],
+          },
+          {
+            title: 'Business Operations',
+            items: [
+              { label: 'Billing', href: '/products' },
+              { label: 'Invoicing', href: '/products' },
+              { label: 'Tax', href: '/products' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Solutions',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              { label: 'Startups', href: '/solutions' },
+              { label: 'Enterprise', href: '/solutions' },
+              { label: 'SaaS', href: '/solutions' },
+              { label: 'Platforms', href: '/solutions' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Developers',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              { label: 'Documentation', href: '/developers' },
+              { label: 'API Reference', href: '/developers' },
+              { label: 'Support', href: '/developers' },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Resources',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              { label: 'Blog', href: '/resources' },
+              { label: 'Guides', href: '/resources' },
+              { label: 'Newsletter', href: '/resources' },
+            ],
+          },
+        ],
+      },
+    },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Contact sales', href: '/contact' },
   ],

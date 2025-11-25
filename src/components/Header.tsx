@@ -1,98 +1,337 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { navigationConfig } from '@/config/navigation'
+import { navigationConfig, NavItemWithDropdown } from '@/config/navigation'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [dropdownContent, setDropdownContent] = useState<NavItemWithDropdown | null>(null)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+  const [mobileExpandedItem, setMobileExpandedItem] = useState<string | null>(null)
+  const [dropdownPosition, setDropdownPosition] = useState<number>(0)
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  return (
-    <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-stripe-navy">
-              Ziggy
-            </Link>
-          </div>
+  const handleMouseEnter = (label: string, item: NavItemWithDropdown, element: HTMLElement) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationConfig.desktop.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+    // Calculate position of the menu item
+    const rect = element.getBoundingClientRect()
+    const navContainer = element.closest('nav')
+    if (navContainer) {
+      const navRect = navContainer.getBoundingClientRect()
+      setDropdownPosition(rect.left - navRect.left + rect.width / 2)
+    }
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href={navigationConfig.cta.contact.href}
-              className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
+    const isSwitch = activeDropdown && activeDropdown !== label && dropdownContent
+
+    if (isSwitch) {
+      // Switching between dropdowns - crossfade content
+      setIsTransitioning(true)
+
+      // Wait for old content to fade out completely
+      setTimeout(() => {
+        setDropdownContent(item)
+        setActiveDropdown(label)
+        // Small delay before fading in new content
+        setTimeout(() => {
+          setIsTransitioning(false)
+        }, 20)
+      }, 200)
+    } else {
+      // Opening fresh or staying on same dropdown
+      setActiveDropdown(label)
+      setDropdownContent(item)
+      setIsTransitioning(false)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+      setDropdownContent(null)
+    }, 150)
+  }
+
+  const toggleMobileItem = (label: string) => {
+    setMobileExpandedItem(mobileExpandedItem === label ? null : label)
+  }
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current)
+      }
+    }
+  }, [])
+
+  const renderDesktopNavItem = (item: NavItemWithDropdown, index: number) => {
+    if (item.dropdown) {
+      const isActive = activeDropdown === item.label
+
+      return (
+        <div
+          key={item.label}
+          className={index > 0 ? 'ml-8' : ''}
+          onMouseEnter={(e) => handleMouseEnter(item.label, item, e.currentTarget)}
+        >
+          <button
+            className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
+              isActive ? 'text-stripe-purple' : ''
+            }`}
+            aria-expanded={isActive}
+          >
+            {item.label}
+            <svg
+              className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
+                isActive ? 'rotate-180' : ''
+              }`}
+              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {navigationConfig.cta.contact.label}
-            </Link>
-            <Link
-              href={navigationConfig.cta.signin.href}
-              className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"
-            >
-              {navigationConfig.cta.signin.label}
-            </Link>
-          </div>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+      )
+    }
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-stripe-navy p-2"
-              aria-label="Toggle menu"
+    return (
+      <div key={item.label} className={index > 0 ? 'ml-8' : ''}>
+        <Link
+          href={item.href!}
+          className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
+        >
+          {item.label}
+        </Link>
+      </div>
+    )
+  }
+
+  const renderMobileNavItem = (item: NavItemWithDropdown) => {
+    if (item.dropdown) {
+      const isExpanded = mobileExpandedItem === item.label
+
+      return (
+        <div key={item.label}>
+          <button
+            onClick={() => toggleMobileItem(item.label)}
+            className="w-full flex items-center justify-between text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2"
+            aria-expanded={isExpanded}
+          >
+            <span>{item.label}</span>
+            <svg
+              className={`w-4 h-4 transition-transform duration-[400ms]`}
+              style={{
+                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+              }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <div className="pl-4 pb-2 space-y-2 pt-2">
+              {item.dropdown.sections.map((section, sectionIdx) => (
+                <div key={sectionIdx}>
+                  {section.title && (
+                    <div className="text-xs font-semibold text-stripe-gray uppercase tracking-wide mt-2 mb-1">
+                      {section.title}
+                    </div>
+                  )}
+                  {section.items.map((subItem) => (
+                    <Link
+                      key={subItem.label}
+                      href={subItem.href}
+                      className="block text-stripe-gray hover:text-stripe-navy transition-colors duration-200 py-1.5"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      )
+    }
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <div className="flex flex-col space-y-4">
-              {navigationConfig.mobile.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+    return (
+      <Link
+        key={item.label}
+        href={item.href!}
+        className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2 block"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        {item.label}
+      </Link>
+    )
+  }
+
+  return (
+    <>
+      {/* Overlay backdrop when dropdown is open */}
+      {activeDropdown && (
+        <div
+          className="fixed inset-0 bg-stripe-navy/5 z-40 transition-opacity duration-[250ms] ease-out"
+          onMouseEnter={handleMouseLeave}
+        />
+      )}
+
+      <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-50">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link href="/" className="text-2xl font-bold text-stripe-navy">
+                Ziggy
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div
+              className="hidden md:flex items-center"
+              onMouseLeave={handleMouseLeave}
+            >
+              {navigationConfig.desktop.map((item, index) => renderDesktopNavItem(item, index))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center space-x-4">
+              <Link
+                href={navigationConfig.cta.contact.href}
+                className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
+              >
+                {navigationConfig.cta.contact.label}
+              </Link>
               <Link
                 href={navigationConfig.cta.signin.href}
-                className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 text-center"
-                onClick={() => setMobileMenuOpen(false)}
+                className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"
               >
                 {navigationConfig.cta.signin.label}
               </Link>
             </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-stripe-navy p-2"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
-        )}
-      </nav>
-    </header>
+
+          {/* Shared Dropdown Container */}
+          {activeDropdown && dropdownContent?.dropdown && (
+            <div
+              className="hidden md:block absolute left-0 right-0 top-full"
+              style={{ paddingTop: '12px' }}
+              onMouseEnter={() => {
+                if (closeTimeoutRef.current) {
+                  clearTimeout(closeTimeoutRef.current)
+                  closeTimeoutRef.current = null
+                }
+              }}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                  className="relative bg-white rounded-lg shadow-xl border border-gray-100 py-4 inline-block min-w-[280px]"
+                  style={{
+                    marginLeft: `${dropdownPosition}px`,
+                    transform: 'translateX(-50%)',
+                  }}
+                >
+                  {/* Arrow pointing up */}
+                  <div
+                    className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45"
+                  />
+
+                  <div
+                    className={`transition-opacity duration-200 relative ${
+                      isTransitioning ? 'opacity-0' : 'opacity-100'
+                    }`}
+                  >
+                    {dropdownContent.dropdown.sections.map((section, sectionIdx) => (
+                      <div
+                        key={sectionIdx}
+                        className={sectionIdx > 0 ? 'mt-4 pt-4 border-t border-gray-100' : ''}
+                      >
+                        {section.title && (
+                          <div className="px-4 mb-2">
+                            <h3 className="text-xs font-semibold text-stripe-gray uppercase tracking-wide">
+                              {section.title}
+                            </h3>
+                          </div>
+                        )}
+                        <div className="px-2">
+                          {section.items.map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              href={subItem.href}
+                              className="block px-3 py-2 rounded-md hover:bg-stripe-light-bg transition-all duration-150"
+                            >
+                              <div className="font-medium text-stripe-navy">{subItem.label}</div>
+                              {subItem.description && (
+                                <div className="text-sm text-stripe-gray mt-0.5">
+                                  {subItem.description}
+                                </div>
+                              )}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-100">
+              <div className="flex flex-col space-y-4">
+                {navigationConfig.mobile.map((item) => renderMobileNavItem(item))}
+                <Link
+                  href={navigationConfig.cta.signin.href}
+                  className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 text-center"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {navigationConfig.cta.signin.label}
+                </Link>
+              </div>
+            </div>
+          )}
+        </nav>
+      </header>
+    </>
   )
 }
 
