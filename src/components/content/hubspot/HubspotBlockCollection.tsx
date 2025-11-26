@@ -7,7 +7,7 @@ interface HubspotBlockCollectionProps {}
 const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({}) => {
   return (
     <div>
-      <Carousel slidesToShow={3}>
+      <Carousel slidesToShow={3} minHeight={570}>
         {/*Read*/}
         <CarouselItem
           title="Read"
