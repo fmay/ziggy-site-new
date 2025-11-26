@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero'
+import Hero from '@/app/(home)/Hero'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 
 export default function Home() {

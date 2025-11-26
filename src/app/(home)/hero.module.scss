@@ -1,0 +1,45 @@
+.heroSection {
+  @apply relative pt-32 pb-20 px-4 sm:px-6 lg:px-8;
+}
+
+.overlay {
+  @apply absolute inset-0 -z-10 bg-gradient-to-b from-white/90 via-white/80 to-white/90;
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+.content {
+  @apply text-center max-w-4xl mx-auto;
+}
+
+.heading {
+  @apply text-5xl sm:text-6xl lg:text-7xl font-bold text-stripe-navy mb-6 leading-tight;
+}
+
+.heroList {
+  .row {
+    @apply flex mb-2;
+  }
+
+  .column1 {
+    @apply w-[250px] text-2xl flex-shrink-0 font-semibold text-left;
+  }
+
+  .column2 {
+    @apply flex-1 text-left;
+  }
+}
+
+.ctaButtons {
+  @apply flex flex-col sm:flex-row justify-center items-center gap-4 mt-12;
+
+  .primaryButton {
+    @apply w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;
+  }
+
+  .secondaryButton {
+    @apply w-full sm:w-auto px-8 py-4 rounded-full border-2 border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  }
+}
