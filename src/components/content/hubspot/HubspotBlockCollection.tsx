@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import Carousel from '@/components/ui/Carousel'
-import CarouselItem from '@/components/ui/Carouseltem'
+import Carousel from '@/components/ui/carousel/Carousel'
+import CarouselItem from '@/components/ui/carousel/Carouseltem'
 
 interface HubspotBlockCollectionProps {}
 

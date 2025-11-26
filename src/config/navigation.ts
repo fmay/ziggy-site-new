@@ -46,9 +46,9 @@ export const navigationConfig: NavigationConfig = {
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'Rate Limiting Queues',
+                label: 'System features',
                 href: '/products',
-                description: 'Protect APIs and overloads',
+                description: 'Everything you need to support integration and migration flows',
                 icon: '/nav/flow.svg',
               },
             ],
@@ -88,7 +88,7 @@ export const navigationConfig: NavigationConfig = {
               {
                 label: 'Integration Partners',
                 href: '/solutions',
-                description: 'White labelling Ziggy',
+                description: 'White label Ziggy and build a new revenue stream',
                 icon: '/nav/flow.svg',
               },
               {

@@ -1,6 +1,6 @@
 import PageLayout from '@/components/PageLayout'
-import Carousel from '@/components/ui/Carousel'
-import ExamplePage from '@/components/ScrollContentImagePairs.example'
+import Carousel from '@/components/ui/carousel/Carousel'
+import ExamplePage from '@/components/ui/scroll-pairs/ScrollContentImagePairs.example'
 
 export default function Products() {
   return (

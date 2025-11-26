@@ -1,5 +1,5 @@
 import PageLayout from '@/components/PageLayout'
-import Carousel from '@/components/ui/Carousel'
+import Carousel from '@/components/ui/carousel/Carousel'
 
 export default function Products() {
   return (
