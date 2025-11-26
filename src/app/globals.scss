@@ -80,9 +80,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-list {
-  @apply text-2xl text-[var(--mid-gray)];
+  @apply text-2xl mt-[40px] text-[var(--mid-gray)];
   li {
     @apply my-5;
+    span {
+      @apply font-semibold;
+    }
   }
 }
 

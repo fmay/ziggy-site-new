@@ -18,16 +18,17 @@ const Hero = () => (
 
         {/* Subheading */}
         <ul className="hero-list">
-          <li>Ziggy Blocks - fabulously easy access to all your platforms and data sources</li>
+          <li><span>Ziggy Flows</span> - build blazingly fast integrations and migrations in a fraction of the time</li>
+          <li><span>Ziggy Blocks</span> - fabulously easy access to all your platforms and data sources</li>
           <li>
-            Ziggy Flows and Ziggy Cluster - build blazingly fast integrations and migrations in a fraction of the time
+            <span>Ziggy Cluster</span> - scale as much as you need for any load and high availability
           </li>
-          <li>Performance and security 100% under you control on your servers</li>
-          <li>All at a low and predictable cost</li>
+          <li><span>Security</span> - Ziggy runs on your servers so it's 100% under you control</li>
+          <li><span>Cost</span> - low, predictable and not usage based</li>
         </ul>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
           <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200">
             Start now
           </button>
@@ -37,20 +38,20 @@ const Hero = () => (
         </div>
 
         {/* Email Form */}
-        <div className="max-w-md mx-auto">
-          <form className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="flex-1 px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 rounded-full bg-stripe-navy text-white font-semibold hover:opacity-90 transition-opacity duration-200">
-              Get started
-            </button>
-          </form>
-        </div>
+        {/*<div className="max-w-md mx-auto">*/}
+        {/*  <form className="flex flex-col sm:flex-row gap-3">*/}
+        {/*    <input*/}
+        {/*      type="email"*/}
+        {/*      placeholder="Email address"*/}
+        {/*      className="flex-1 px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent"*/}
+        {/*    />*/}
+        {/*    <button*/}
+        {/*      type="submit"*/}
+        {/*      className="px-6 py-3 rounded-full bg-stripe-navy text-white font-semibold hover:opacity-90 transition-opacity duration-200">*/}
+        {/*      Get started*/}
+        {/*    </button>*/}
+        {/*  </form>*/}
+        {/*</div>*/}
       </div>
     </div>
 
