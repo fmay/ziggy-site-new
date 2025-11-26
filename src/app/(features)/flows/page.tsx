@@ -1,5 +1,6 @@
 import PageLayout from '@/components/PageLayout'
 import Carousel from '@/components/ui/Carousel'
+import ExamplePage from '@/components/ScrollContentImagePairs.example'
 
 export default function Products() {
   return (
@@ -9,7 +10,9 @@ export default function Products() {
       video="https://nxucrsk2vrk61vtm.public.blob.vercel-storage.com/website-videos/flow-animated.mov"
     >
 
-      <div className="w-full h-[500px] bg-red-50">HELLO</div>
+    <ExamplePage />
+
+      <div className="w-full h-[1000px] bg-red-50">HELLO</div>
 
     </PageLayout>
   )

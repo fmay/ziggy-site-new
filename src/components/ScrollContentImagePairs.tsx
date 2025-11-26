@@ -1,0 +1,204 @@
+'use client'
+
+import { useEffect, useRef, useState, ReactNode } from 'react'
+
+interface ContentImagePair {
+  content: ReactNode
+  image: string
+}
+
+interface ScrollContentImagePairsProps {
+  contentImagePairs: ContentImagePair[]
+}
+
+const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsProps) => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [imagePosition, setImagePosition] = useState<'scrolling' | 'fixed' | 'scrolling-out'>('scrolling')
+  const [fixedImageLeft, setFixedImageLeft] = useState(0)
+  const [fixedImageWidth, setFixedImageWidth] = useState(0)
+  const [scrollOutTop, setScrollOutTop] = useState(0)
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([])
+  const containerRef = useRef<HTMLDivElement>(null)
+  const imageContainerRef = useRef<HTMLDivElement>(null)
+  const rightColumnRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0,
+    }
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = contentRefs.current.indexOf(entry.target as HTMLDivElement)
+          if (index !== -1) {
+            setActiveIndex(index)
+          }
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    contentRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref)
+    })
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [contentImagePairs.length])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current || !imageContainerRef.current || !rightColumnRef.current) return
+
+      const imageContainerRect = imageContainerRef.current.getBoundingClientRect()
+      const firstContentRect = contentRefs.current[0]?.getBoundingClientRect()
+      const lastContentRect = contentRefs.current[contentImagePairs.length - 1]?.getBoundingClientRect()
+      const rightColumnRect = rightColumnRef.current.getBoundingClientRect()
+
+      const viewportCenter = window.innerHeight / 2
+      const imageCenter = imageContainerRect.top + imageContainerRect.height / 2
+
+      // Store the position and width of the right column for fixed positioning
+      setFixedImageLeft(rightColumnRect.left)
+      setFixedImageWidth(rightColumnRect.width)
+
+      // Determine the state based on scroll position with clear priority order
+      let newPosition: 'scrolling' | 'fixed' | 'scrolling-out' = 'fixed'
+
+      // PRIORITY 1: Check if we should be scrolling with the FIRST item
+      // This handles both scrolling down initially and scrolling back up
+      if (firstContentRect) {
+        const firstContentCenter = firstContentRect.top + firstContentRect.height / 2
+
+        // Scrolling mode if: first content center is below viewport center OR image hasn't reached center
+        if (firstContentCenter > viewportCenter || imageCenter > viewportCenter) {
+          newPosition = 'scrolling'
+        }
+      } else if (imageCenter > viewportCenter) {
+        // Fallback if first content ref doesn't exist yet
+        newPosition = 'scrolling'
+      }
+
+      // PRIORITY 2: Only check for scrolling out with LAST item if we're NOT scrolling with first item
+      if (newPosition !== 'scrolling' && lastContentRect) {
+        const lastContentCenter = lastContentRect.top + lastContentRect.height / 2
+
+        // Scrolling-out mode if: last content center has risen above viewport center
+        if (lastContentCenter < viewportCenter) {
+          newPosition = 'scrolling-out'
+
+          // Calculate where the image should be positioned relative to the right column
+          // when it transitions from fixed to scrolling out (only on first transition)
+          if (imagePosition !== 'scrolling-out') {
+            const rightColumnTop = rightColumnRect.top
+            const currentImageTop = imageContainerRect.top
+            const topRelativeToColumn = currentImageTop - rightColumnTop
+            setScrollOutTop(topRelativeToColumn)
+          }
+        }
+      }
+
+      // PRIORITY 3: Default is 'fixed' (already set above)
+
+      setImagePosition(newPosition)
+    }
+
+    const handleResize = () => {
+      handleScroll()
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleResize, { passive: true })
+    handleScroll() // Initial check
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [contentImagePairs.length])
+
+  return (
+    <div ref={containerRef} className="relative">
+      {/* Desktop Layout */}
+      <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Left Column - Scrolling Content */}
+        <div className="space-y-32 py-32">
+          {contentImagePairs.map((pair, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                contentRefs.current[index] = el
+              }}
+              className="min-h-[50vh] flex items-center">
+              <div className="w-full">{pair.content}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Right Column - Fixed Images with Transitions */}
+        <div ref={rightColumnRef} className="relative">
+          <div
+            ref={imageContainerRef}
+            className={`w-full h-screen flex items-center justify-center ${
+              imagePosition === 'scrolling'
+                ? 'absolute top-0'
+                : imagePosition === 'scrolling-out'
+                  ? 'absolute'
+                  : 'fixed top-0'
+            }`}
+            style={
+              imagePosition === 'fixed'
+                ? {
+                    left: `${fixedImageLeft}px`,
+                    width: `${fixedImageWidth}px`,
+                  }
+                : imagePosition === 'scrolling-out'
+                  ? {
+                      top: `${scrollOutTop}px`,
+                    }
+                  : {}
+            }>
+            <div className="relative w-full h-[60vh] max-w-2xl">
+              {contentImagePairs.map((pair, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-500 ${
+                    index === activeIndex ? 'opacity-100' : 'opacity-0'
+                  }`}>
+                  <img
+                    src={pair.image}
+                    alt={`Content ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg shadow-2xl"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Layout - Stacked content and images */}
+      <div className="lg:hidden max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+        {contentImagePairs.map((pair, index) => (
+          <div key={index} className="space-y-8">
+            <div className="prose max-w-none">{pair.content}</div>
+            <div className="w-full aspect-video">
+              <img
+                src={pair.image}
+                alt={`Content ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default ScrollContentImagePairs
