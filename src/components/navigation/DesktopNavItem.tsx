@@ -6,9 +6,16 @@ interface DesktopNavItemProps {
   index: number
   activeDropdown: string | null
   onMouseEnter: (label: string, item: NavItemWithDropdown, element: HTMLElement) => void
+  onClearDropdown: () => void
 }
 
-const DesktopNavItem = ({ item, index, activeDropdown, onMouseEnter }: DesktopNavItemProps) => {
+const DesktopNavItem = ({
+  item,
+  index,
+  activeDropdown,
+  onMouseEnter,
+  onClearDropdown,
+}: DesktopNavItemProps) => {
   if (item.dropdown) {
     const isActive = activeDropdown === item.label
 
@@ -44,7 +51,7 @@ const DesktopNavItem = ({ item, index, activeDropdown, onMouseEnter }: DesktopNa
   }
 
   return (
-    <div key={item.label} className={`f${index > 0 ? 'ml-8' : ''}`}>
+    <div key={item.label} className={index > 0 ? 'ml-8' : ''} onMouseEnter={onClearDropdown}>
       <Link
         href={item.href!}
         className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200">

@@ -15,18 +15,6 @@ interface DropdownNavItemProps {
 }
 
 const DropdownNavItem = ({ subItem, variant = 'desktop', onMobileClick }: DropdownNavItemProps) => {
-  // if (variant === 'mobile') {
-  //   return (
-  //     <Link
-  //       key={subItem.label}
-  //       href={subItem.href}
-  //       className="block text-stripe-gray hover:text-stripe-navy transition-colors duration-200 py-1.5"
-  //       onClick={onMobileClick}>
-  //       {subItem.label}
-  //     </Link>
-  //   )
-  // }
-console.log(subItem.icon)
   return (
     <div className="dropdown-item">
       {subItem.icon && <img src={subItem.icon} alt="Flow icon" width={30} height={20} />}

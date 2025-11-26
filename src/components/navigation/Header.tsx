@@ -61,6 +61,15 @@ const Header = () => {
     }, 150)
   }
 
+  const handleClearDropdown = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
+    }
+    setActiveDropdown(null)
+    setDropdownContent(null)
+  }
+
   const toggleMobileItem = (label: string) => {
     setMobileExpandedItem(mobileExpandedItem === label ? null : label)
   }
@@ -103,6 +112,7 @@ const Header = () => {
                   index={index}
                   activeDropdown={activeDropdown}
                   onMouseEnter={handleMouseEnter}
+                  onClearDropdown={handleClearDropdown}
                 />
               ))}
             </div>

@@ -35,7 +35,7 @@ export const navigationConfig: NavigationConfig = {
             items: [
               {
                 label: 'Flows',
-                href: '/products',
+                href: '/flows',
                 description: 'Building your data pipeline',
                 icon: '/nav/flow.svg',
               },
