@@ -88,8 +88,11 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
       if (newPosition !== 'scrolling' && lastContentRect) {
         const lastContentCenter = lastContentRect.top + lastContentRect.height / 2
 
-        // Scrolling-out mode if: last content center has risen above viewport center
-        if (lastContentCenter < viewportCenter) {
+        // Add a small threshold to prevent flickering when transitioning between states
+        const threshold = 20
+
+        // Scrolling-out mode if: last content center has risen above viewport center (with threshold)
+        if (lastContentCenter < viewportCenter - threshold) {
           newPosition = 'scrolling-out'
 
           // Calculate where the image should be positioned relative to the right column
@@ -100,6 +103,10 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
             const topRelativeToColumn = currentImageTop - rightColumnTop
             setScrollOutTop(topRelativeToColumn)
           }
+        }
+        // When scrolling back up, stay in scrolling-out until clearly back in fixed range
+        else if (imagePosition === 'scrolling-out' && lastContentCenter < viewportCenter + threshold) {
+          newPosition = 'scrolling-out'
         }
       }
 
