@@ -3,6 +3,10 @@
   h2 {
     @apply text-[1.5rem];
   }
+
+  &:hover {
+    @apply shadow-2xl;
+  }
 }
 
 .graphicLayer {
@@ -13,16 +17,12 @@
   @apply relative h-[350px] overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300;
 
   .stackCard:hover & {
-    @apply h-[400px];
+    @apply h-[310px];
   }
 }
 
 .gradientOverlay {
   @apply absolute inset-0 z-[1] opacity-0 transition-opacity duration-300;
-
-  .stackCard:hover & {
-    @apply opacity-100;
-  }
 }
 
 .graphicImage {
@@ -54,11 +54,11 @@
 }
 
 .description {
-  @apply text-lg text-slate-700 lg:text-xl;
+  @apply text-lg text-slate-700;
 }
 
 .ctaWrapper {
-  @apply h-0 overflow-hidden transition-all duration-300 text-sm ;
+  @apply h-0 overflow-hidden transition-all duration-300 text-[1rem] ;
 
   .stackCard:hover & {
     @apply h-[40px];

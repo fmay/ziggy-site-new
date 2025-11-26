@@ -13,7 +13,7 @@ interface StackCardProps {
   /** Icon to display in the badge */
   icon?: ReactNode
   /** Badge label text */
-  badgeLabel: string
+  badgeLabel?: string
   /** Main heading text */
   title: string
   /** Description text */
@@ -22,6 +22,8 @@ interface StackCardProps {
   ctaText: string
   /** CTA link href */
   ctaHref: string
+  /** Open CTA link in new tab (reuses existing tab if domain matches) */
+  ctaNewTab?: boolean
   /** Path to image in public folder (e.g., '/images/dashboard.png') */
   graphic?: string
   /** Alt text for the graphic image */
@@ -39,6 +41,7 @@ const StackCard: FC<StackCardProps> = ({
   description,
   ctaText,
   ctaHref,
+  ctaNewTab = false,
   graphic,
   graphicAlt = '',
   className = ''
@@ -77,16 +80,18 @@ const StackCard: FC<StackCardProps> = ({
       {/* Content layer */}
       <div className={styles.contentLayer}>
         {/* Product Badge */}
-        <div className={styles.badge}>
-          {icon && (
-            <div className={styles.badgeIcon}>
-              {icon}
+        {badgeLabel && (
+          <div className={styles.badge}>
+            {icon && (
+              <div className={styles.badgeIcon}>
+                {icon}
+              </div>
+            )}
+            <div className={styles.badgeLabel}>
+              <span>{badgeLabel}</span>
             </div>
-          )}
-          <div className={styles.badgeLabel}>
-            <span>{badgeLabel}</span>
           </div>
-        </div>
+        )}
 
         {/* Title */}
         <h2 className={styles.title}>
@@ -103,6 +108,10 @@ const StackCard: FC<StackCardProps> = ({
           <a
             href={ctaHref}
             className={styles.ctaLink}
+            {...(ctaNewTab && {
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            })}
           >
             {ctaText} {'>'}
           </a>
