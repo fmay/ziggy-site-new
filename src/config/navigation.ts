@@ -2,6 +2,7 @@ export interface NavItem {
   label: string
   href: string
   description?: string
+  icon?: string
 }
 
 export interface NavItemWithDropdown {
@@ -36,13 +37,44 @@ export const navigationConfig: NavigationConfig = {
               {
                 label: 'Flows',
                 href: '/products',
-                description: 'Accept payments online',
+                description: 'Building your data pipeline',
+                icon: '/nav/flow.svg',
               },
-              { label: 'Blocks', href: '/products', description: 'Pre-built payment form' },
-              { label: 'Rate Limiting Queues', href: '/products', description: 'No-code payment pages' },
-              { label: 'Platform Blocks', href: '/products', description: 'No-code payment pages' },
-              { label: 'Ziggy Cluster', href: '/products', description: 'No-code payment pages' },
-              { label: 'Internet of Things', href: '/products', description: 'No-code payment pages' },
+              {
+                label: 'Blocks',
+                href: '/products',
+                description: 'What makes Ziggy so friendly',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Rate Limiting Queues',
+                href: '/products',
+                description: 'Protect APIs and overloads',
+                icon: '/nav/flow.svg',
+              },
+            ],
+          },
+          {
+            title: 'Advanced',
+            items: [
+              {
+                label: 'Ziggy Cluster',
+                href: '/products',
+                description: 'Scaling and high availability',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Extend',
+                href: '/products',
+                description: 'Build your own Custom Blocks',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Internet of Things',
+                href: '/products',
+                description: 'Messaging and MQTT Blocks',
+                icon: '/nav/flow.svg',
+              },
             ],
           },
         ],
@@ -54,14 +86,30 @@ export const navigationConfig: NavigationConfig = {
         sections: [
           {
             items: [
-              { label: 'Startups', href: '/solutions', description: 'Launch and scale faster' },
               {
-                label: 'Enterprise',
+                label: 'Integration Partners',
                 href: '/solutions',
-                description: 'Built for complex businesses',
+                description: 'White labelling Ziggy',
+                icon: '/nav/flow.svg',
               },
-              { label: 'SaaS', href: '/solutions', description: 'Subscription billing' },
-              { label: 'Platforms', href: '/solutions', description: 'Marketplace solutions' },
+              {
+                label: 'Migrations',
+                href: '/solutions',
+                description: 'Move any amount of data between systems',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Integrations',
+                href: '/solutions',
+                description: 'Trigger Ziggy Flows when data changes in any system',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Internet of Things',
+                href: '/solutions',
+                description: 'Store data anywhere at any scale, send messages to devices',
+                icon: '/nav/flow.svg',
+              },
             ],
           },
         ],
@@ -73,9 +121,30 @@ export const navigationConfig: NavigationConfig = {
         sections: [
           {
             items: [
-              { label: 'Documentation', href: '/developers', description: 'Start integrating' },
-              { label: 'API Reference', href: '/developers', description: 'Complete API docs' },
-              { label: 'Support', href: '/developers', description: 'Get help from our team' },
+              {
+                label: 'Documentation',
+                href: '/developers',
+                description: 'Read our documentation',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Custom Block development',
+                href: '/developers',
+                description: 'Build custom blocks to talk to your platform',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'CLI',
+                href: '/developers',
+                description: 'For Block development and system administration',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Source code',
+                href: '/developers',
+                description: 'Available upon request',
+                icon: '/nav/flow.svg',
+              },
             ],
           },
         ],
@@ -87,9 +156,24 @@ export const navigationConfig: NavigationConfig = {
         sections: [
           {
             items: [
-              { label: 'Blog', href: '/resources', description: 'Latest updates and insights' },
-              { label: 'Guides', href: '/resources', description: 'Best practices and tutorials' },
-              { label: 'Newsletter', href: '/resources', description: 'Stay up to date' },
+              {
+                label: 'Docs',
+                href: '/resources',
+                description: 'Latest updates and insights',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Professional Services',
+                href: '/resources',
+                description: 'Best practices and tutorials',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Support',
+                href: '/resources',
+                description: 'Stay up to date',
+                icon: '/nav/flow.svg',
+              },
             ],
           },
         ],

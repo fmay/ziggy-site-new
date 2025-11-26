@@ -3,6 +3,9 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { navigationConfig, NavItemWithDropdown } from '@/config/navigation'
+import DesktopNavItem from './DesktopNavItem'
+import MobileNavItem from './MobileNavItem'
+import DropdownNavItem from './DropdownNavItem'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -71,121 +74,6 @@ const Header = () => {
     [],
   )
 
-  const renderDesktopNavItem = (item: NavItemWithDropdown, index: number) => {
-    if (item.dropdown) {
-      const isActive = activeDropdown === item.label
-
-      return (
-        <div
-          key={item.label}
-          className={index > 0 ? 'ml-8' : ''}
-          onMouseEnter={e => handleMouseEnter(item.label, item, e.currentTarget)}>
-          <button
-            className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
-              isActive ? 'text-stripe-purple' : ''
-            }`}
-            aria-expanded={isActive}>
-            {item.label}
-            <svg
-              className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
-                isActive ? 'rotate-180' : ''
-              }`}
-              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-        </div>
-      )
-    }
-
-    return (
-      <div key={item.label} className={index > 0 ? 'ml-8' : ''}>
-        <Link
-          href={item.href!}
-          className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200">
-          {item.label}
-        </Link>
-      </div>
-    )
-  }
-
-  const renderMobileNavItem = (item: NavItemWithDropdown) => {
-    if (item.dropdown) {
-      const isExpanded = mobileExpandedItem === item.label
-
-      return (
-        <div key={item.label}>
-          <button
-            onClick={() => toggleMobileItem(item.label)}
-            className="w-full flex items-center justify-between text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2"
-            aria-expanded={isExpanded}>
-            <span>{item.label}</span>
-            <svg
-              className={`w-4 h-4 transition-transform duration-[400ms]`}
-              style={{
-                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-                transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
-              }}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-
-          <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-            }`}>
-            <div className="pl-4 pb-2 space-y-2 pt-2">
-              {item.dropdown.sections.map((section, sectionIdx) => (
-                <div key={sectionIdx}>
-                  {section.title && (
-                    <div className="text-xs font-semibold text-stripe-gray uppercase tracking-wide mt-2 mb-1">
-                      {section.title}
-                    </div>
-                  )}
-                  {section.items.map(subItem => (
-                    <Link
-                      key={subItem.label}
-                      href={subItem.href}
-                      className="block text-stripe-gray hover:text-stripe-navy transition-colors duration-200 py-1.5"
-                      onClick={() => setMobileMenuOpen(false)}>
-                      {subItem.label}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )
-    }
-
-    return (
-      <Link
-        key={item.label}
-        href={item.href!}
-        className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2 block"
-        onClick={() => setMobileMenuOpen(false)}>
-        {item.label}
-      </Link>
-    )
-  }
-
   return (
     <>
       {/* Overlay backdrop when dropdown is open */}
@@ -208,7 +96,15 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center" onMouseLeave={handleMouseLeave}>
-              {navigationConfig.desktop.map((item, index) => renderDesktopNavItem(item, index))}
+              {navigationConfig.desktop.map((item, index) => (
+                <DesktopNavItem
+                  key={item.label}
+                  item={item}
+                  index={index}
+                  activeDropdown={activeDropdown}
+                  onMouseEnter={handleMouseEnter}
+                />
+              ))}
             </div>
 
             {/* CTA Buttons */}
@@ -278,13 +174,11 @@ const Header = () => {
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45" />
 
                   <div
-                    className={`transition-opacity duration-400 relative ${
+                    className={`transition-opacity duration-400 relative flex gap-8 ${
                       isTransitioning ? 'opacity-0' : 'opacity-100'
                     }`}>
                     {dropdownContent.dropdown.sections.map((section, sectionIdx) => (
-                      <div
-                        key={sectionIdx}
-                        className={sectionIdx > 0 ? 'mt-4 pt-4 border-t border-gray-100' : ''}>
+                      <div key={sectionIdx} className="flex-shrink-0">
                         {section.title && (
                           <div className="px-4 mb-2">
                             <h3 className="text-xs font-semibold text-stripe-gray uppercase tracking-wide">
@@ -294,17 +188,7 @@ const Header = () => {
                         )}
                         <div className="px-2">
                           {section.items.map(subItem => (
-                            <Link
-                              key={subItem.label}
-                              href={subItem.href}
-                              className="block px-3 py-2 rounded-md hover:bg-stripe-light-bg transition-all duration-150">
-                              <div className="font-medium text-stripe-navy">{subItem.label}</div>
-                              {subItem.description && (
-                                <div className="text-sm text-stripe-gray mt-0.5">
-                                  {subItem.description}
-                                </div>
-                              )}
-                            </Link>
+                            <DropdownNavItem key={subItem.label} subItem={subItem} />
                           ))}
                         </div>
                       </div>
@@ -319,7 +203,15 @@ const Header = () => {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-100">
               <div className="flex flex-col space-y-4">
-                {navigationConfig.mobile.map(item => renderMobileNavItem(item))}
+                {navigationConfig.mobile.map(item => (
+                  <MobileNavItem
+                    key={item.label}
+                    item={item}
+                    mobileExpandedItem={mobileExpandedItem}
+                    toggleMobileItem={toggleMobileItem}
+                    setMobileMenuOpen={setMobileMenuOpen}
+                  />
+                ))}
                 <Link
                   href={navigationConfig.cta.signin.href}
                   className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 text-center"

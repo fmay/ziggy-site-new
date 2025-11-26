@@ -13,10 +13,12 @@
   --pale-gray: #8e9cb3;
 
   //Text
-  --small-text-spacing: "0.5px";
+  --text-spacing-standard: "0.5px";
+  --text-spacing-tight: "0.2px";
 }
 
 body {
+  letter-spacing: 0.2px;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -37,28 +39,41 @@ body {
 }
 
 .spaced-letters-small {
-  @apply font-normal tracking-[0.4px] text-[var(--dark-gray)] leading-[var(--small-text-spacing)] ;
+  @apply font-normal text-[var(--dark-gray)];
 }
 
 .link-text-small {
-  @apply font-normal tracking-[0.3px] flex flex-row place-items-center gap-2 text-[var(--mid-gray)];
+  @apply font-normal flex flex-row place-items-center gap-2 text-[var(--mid-gray)];
 }
 
 .image-treat-rounded {
-  @apply rounded-lg shadow-sm
+  @apply rounded-lg shadow-sm;
 }
 
 .section-title {
-  @apply text-3xl font-semibold mb-2 tracking-[0.2px]
+  @apply text-3xl font-semibold mb-2;
 }
 
 .section-title-text {
-  @apply text-base tracking-[0.2px] text-[var(--dark-gray)] max-w-[600px] my-[30px]
+  @apply text-base text-[var(--dark-gray)] max-w-[600px] my-[30px];
 }
 
 .hero-list {
   @apply text-2xl text-[var(--mid-gray)];
   li {
     @apply my-5;
+  }
+}
+
+.dropdown-item {
+  @apply flex flex-row gap-0 place-items-center;
+  a {
+    @apply px-3 py-2 rounded-md hover:bg-stripe-light-bg transition-all duration-150;
+  }
+  .label {
+    @apply font-medium text-stripe-navy;
+  }
+  .description {
+    @apply text-sm text-stripe-gray mt-0.5 leading-[1rem];
   }
 }
