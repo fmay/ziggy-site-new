@@ -11,6 +11,8 @@
   --dark-gray: rgb(66, 84, 102);
   --mid-gray: #68748a;
   --pale-gray: #8e9cb3;
+  --default-text: rgb(66, 84, 102);
+  --dark-text: rgb(10, 37, 64);
 
   //Text
   --text-spacing-standard: "0.5px";
@@ -19,13 +21,21 @@
 
 body {
   letter-spacing: 0.2px;
-  color: rgb(var(--foreground-rgb));
+  color: var(--default-text);
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+p {
+  @apply text-[1.05rem] mb-[1rem] leading-[1.6rem];
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-[var(--dark-text)] font-semibold;
 }
 
 @layer utilities {
@@ -75,5 +85,12 @@ body {
   }
   .description {
     @apply text-sm text-stripe-gray mt-0.5 leading-[1rem];
+  }
+}
+
+.section-intro {
+  @apply flex flex-col max-w-[600px];
+  h2 {
+    @apply font-semibold text-[2.3rem] mb-4;
   }
 }
