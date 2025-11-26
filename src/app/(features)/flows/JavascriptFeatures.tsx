@@ -9,30 +9,33 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
     <StackCard
       title="Basic features"
       description="Code completion, linting, full screen editor"
-      ctaText="Docs"
+      ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript"
       ctaNewTab
-      graphic="/images/flows/parallel.png"
+      graphic="/images/flows/js-ai.png"
     />,
     <StackCard
       title="AI Code generation"
       description="Ziggy will generate code from your instructions. It also understands the data in your flow to ensure it has the full context."
-      ctaText="aaa"
-      ctaHref="https://google.com"
-      graphic="/images/flows/parallel.png"
+      ctaText="Learn more in the docs"
+      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant"
+      ctaNewTab
+      graphic="/images/flows/js-ai.png"
     />,
     <StackCard
       title="Debugger"
       description="Comes with a fully integrated debugger, letting you step through your code and inspect variables"
-      ctaText="aaa"
-      ctaHref="https://google.com"
+      ctaText="Learn more in the docs"
+      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
+      ctaNewTab
       graphic="/images/flows/parallel.png"
     />,
     <StackCard
       title="AI Explain"
       description="Not sure what's going on? AI Explain will put you out of your misery."
-      ctaText="aaa"
+      ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
+      ctaNewTab
       graphic="/images/flows/parallel.png"
     />,
   ]

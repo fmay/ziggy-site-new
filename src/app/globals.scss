@@ -13,6 +13,7 @@
   --pale-gray: #8e9cb3;
   --default-text: rgb(66, 84, 102);
   --dark-text: rgb(10, 37, 64);
+  --hover-default-color: rgb(99, 91, 255);
 
   //Text
   --text-spacing-standard: "0.5px";
@@ -30,9 +31,19 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+a {
+  color: var(--hover-default-color);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--mid-gray);
+  }
+}
+
 p {
   @apply text-[1.05rem] mb-[1rem] leading-[1.6rem];
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   @apply text-[var(--dark-text)] font-semibold;
