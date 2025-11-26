@@ -1,5 +1,5 @@
 .heroSection {
-  @apply relative pt-32 pb-20 px-4 sm:px-6 lg:px-8;
+  @apply relative pt-10 pb-20 sm:px-6 lg:px-2;
 }
 
 .overlay {
@@ -7,28 +7,22 @@
 }
 
 .container {
-  @apply max-w-7xl mx-auto;
-}
-
-.content {
-  @apply text-center max-w-4xl mx-auto;
+  @apply flex flex-col gap-[50px] mx-auto px-[5%] text-center;
 }
 
 .heading {
-  @apply text-5xl sm:text-6xl lg:text-7xl font-bold text-stripe-navy mb-6 leading-tight;
+  @apply text-5xl mb-[0px] sm:text-6xl lg:text-7xl font-bold text-stripe-navy leading-tight;
 }
 
-.heroList {
-  .row {
-    @apply flex mb-2;
-  }
+.subheading {
+  @apply mx-auto text-4xl max-w-[800px] text-mid-gray font-semibold;
+}
 
-  .column1 {
-    @apply w-[250px] text-2xl flex-shrink-0 font-semibold text-left;
-  }
+.subheadingImage {
+  @apply w-full lg:w-[500px] mx-auto order-last lg:order-none;
 
-  .column2 {
-    @apply flex-1 text-left;
+  img {
+    @apply w-full h-auto rounded-lg;
   }
 }
 

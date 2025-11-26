@@ -12,48 +12,30 @@ const Hero = () => (
     <div className={styles.overlay} />
 
     <div className={styles.container}>
-      <div className={styles.content}>
-        {/* Main Heading */}
-        <h1 className={styles.heading}>
-          The new ETL pioneer
-        </h1>
+      {/* Main Heading */}
+      <h1 className={styles.heading}>The new ETL pioneer</h1>
 
-        {/* Subheading */}
-        <div className={styles.heroList}>
-          <div className={styles.row}>
-            <div className={styles.column1}>Ziggy Flows</div>
-            <div className={styles.column2}>Build blazingly fast integrations and migrations in a fraction of the time</div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column1}>Ziggy Blocks</div>
-            <div className={styles.column2}>Fabulously easy access to all your platforms and data sources</div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column1}>Ziggy Cluster</div>
-            <div className={styles.column2}>Scale as much as you need for any load and high availability</div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column1}>Secure</div>
-            <div className={styles.column2}>Ziggy runs on your servers so it's 100% under you control</div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.column1}>Cost</div>
-            <div className={styles.column2}>Low, predictable and not usage based</div>
-          </div>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className={styles.ctaButtons}>
-          <button className={styles.primaryButton}>
-            Start now
-          </button>
-          <button className={styles.secondaryButton}>
-            Contact sales
-          </button>
-        </div>
-
-
+      {/*Image*/}
+      <div className={styles.subheadingImage}>
+        <img src="https://picsum.photos/800/800" alt="Placeholder" />
       </div>
+
+      {/*Subheading*/}
+      <div className={styles.subheading}>
+        Build blazingly fast integrations and migrations unbelievably quickly and for so much less.
+        Ziggy runs on <strong>your</strong> servers so you have total control over security and performance.
+      </div>
+
+
+      {/* CTA Buttons */}
+      {/*<div className={styles.ctaButtons}>*/}
+      {/*  <button className={styles.primaryButton}>*/}
+      {/*    Start now*/}
+      {/*  </button>*/}
+      {/*  <button className={styles.secondaryButton}>*/}
+      {/*    Contact sales*/}
+      {/*  </button>*/}
+      {/*</div>*/}
     </div>
   </section>
 )
