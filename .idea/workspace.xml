@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="lint; carousel" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="HS collection 0.1">
+      <change afterPath="$PROJECT_DIR$/public/hero/hero-home.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Carouseltem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Carouseltem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,19 +57,39 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/freddymay/ziggy-site-new",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/public/hero",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site/node_modules/prettier",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/hero" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ui" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -71,6 +103,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -92,6 +125,7 @@
       <workItem from="1764067270640" duration="10377000" />
       <workItem from="1764081190549" duration="161000" />
       <workItem from="1764081406567" duration="141000" />
+      <workItem from="1764081554096" duration="8553000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -141,7 +175,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764080698394</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="moved project to new">
+      <option name="closed" value="true" />
+      <created>1764081629451</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764081629451</updated>
+    </task>
+    <task id="LOCAL-00008" summary="HS collection 0.1">
+      <option name="closed" value="true" />
+      <created>1764084744906</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764084744906</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +203,8 @@
     <MESSAGE value="menu 1" />
     <MESSAGE value="menu popup pointer" />
     <MESSAGE value="lint; carousel" />
-    <option name="LAST_COMMIT_MESSAGE" value="lint; carousel" />
+    <MESSAGE value="moved project to new" />
+    <MESSAGE value="HS collection 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="HS collection 0.1" />
   </component>
 </project>

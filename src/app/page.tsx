@@ -3,10 +3,20 @@ import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCol
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <Hero />
 
-      <HubspotBlockCollection />
+      <div className="page-section bg-gray-50">
+        <div>
+          <p className="section-title">HubSpot Blocks</p>
+          <p className="section-title-text">
+            This is our collection of HubSpot blocks. Removes all the pain of working with the API,
+            respects rate-limits, full batching support. Each block does just one thing and does it
+            beautifully.
+          </p>
+        </div>
+        <HubspotBlockCollection />
+      </div>
 
       {/* Additional Content Section */}
       {/*<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">*/}

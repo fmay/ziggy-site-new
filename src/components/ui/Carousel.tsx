@@ -56,7 +56,7 @@ const Carousel: React.FC<CarouselProps> = ({
       rows,
       swipeToSlide,
       touchMove,
-      infinite: true,
+      infinite: false,
     }).filter(([_, value]) => value !== undefined),
   )
 

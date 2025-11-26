@@ -1,19 +1,30 @@
 const Hero = () => (
-  <section className="relative bg-gradient-to-b from-white to-stripe-light-bg pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    {/* Background Image */}
+    {/*<div*/}
+    {/*  className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"*/}
+    {/*  style={{ backgroundImage: 'url(/hero/hero-home.jpg)' }}*/}
+    {/*/>*/}
+
+    {/* Overlay for better text readability */}
+    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/90 via-white/80 to-white/90" />
+
     <div className="max-w-7xl mx-auto">
       <div className="text-center max-w-4xl mx-auto">
         {/* Main Heading */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-stripe-navy mb-6 leading-tight">
-          Financial infrastructure
-          <br />
-          for the internet
+          The new ETL pioneer
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl sm:text-2xl text-stripe-gray mb-8 max-w-3xl mx-auto">
-          Millions of businesses of all sizes—from startups to large enterprises—use our software
-          and APIs to accept payments, send payouts, and manage their businesses online.
-        </p>
+        <ul className="hero-list">
+          <li>Ziggy Blocks - fabulously easy access to all your platforms and data sources</li>
+          <li>
+            Ziggy Flows and Ziggy Cluster - build blazingly fast integrations and migrations in a fraction of the time
+          </li>
+          <li>Performance and security 100% under you control on your servers</li>
+          <li>All at a low and predictable cost</li>
+        </ul>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
@@ -44,10 +55,10 @@ const Hero = () => (
     </div>
 
     {/* Gradient Background Effect */}
-    <div className="absolute inset-0 -z-10 overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-stripe-purple opacity-10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-stripe-purple opacity-10 rounded-full blur-3xl" />
-    </div>
+    {/*<div className="absolute inset-0 -z-5 overflow-hidden">*/}
+    {/*  <div className="absolute top-0 left-1/4 w-96 h-96 opacity-20 rounded-full blur-3xl" />*/}
+    {/*  <div className="absolute bottom-0 right-1/4 w-96 h-96 opacity-20 rounded-full blur-3xl" />*/}
+    {/*</div>*/}
   </section>
 )
 

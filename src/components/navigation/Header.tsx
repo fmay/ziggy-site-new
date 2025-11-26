@@ -201,7 +201,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-stripe-navy">
+              <Link href="/public" className="text-2xl font-bold text-stripe-navy">
                 Ziggy
               </Link>
             </div>

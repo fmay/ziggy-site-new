@@ -27,27 +27,22 @@ export interface NavigationConfig {
 export const navigationConfig: NavigationConfig = {
   desktop: [
     {
-      label: 'Products',
+      label: 'Product',
       dropdown: {
         sections: [
           {
-            title: 'Payments',
+            title: 'Core',
             items: [
               {
-                label: 'Payment Processing',
+                label: 'Flows',
                 href: '/products',
                 description: 'Accept payments online',
               },
-              { label: 'Checkout', href: '/products', description: 'Pre-built payment form' },
-              { label: 'Payment Links', href: '/products', description: 'No-code payment pages' },
-            ],
-          },
-          {
-            title: 'Business Operations',
-            items: [
-              { label: 'Billing', href: '/products', description: 'Subscription management' },
-              { label: 'Invoicing', href: '/products', description: 'Online invoices' },
-              { label: 'Tax', href: '/products', description: 'Sales tax automation' },
+              { label: 'Blocks', href: '/products', description: 'Pre-built payment form' },
+              { label: 'Rate Limiting Queues', href: '/products', description: 'No-code payment pages' },
+              { label: 'Platform Blocks', href: '/products', description: 'No-code payment pages' },
+              { label: 'Ziggy Cluster', href: '/products', description: 'No-code payment pages' },
+              { label: 'Internet of Things', href: '/products', description: 'No-code payment pages' },
             ],
           },
         ],
