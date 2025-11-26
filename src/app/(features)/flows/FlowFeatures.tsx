@@ -15,7 +15,7 @@ const FlowFeatures:FC<FlowFeaturesProps> = ({}) => {
           </p>
         </div>
       ),
-      image: '/images/flows/parallel.png',
+      image: '/images/flows/js-debugger.png',
     },
     {
       content: (
@@ -40,7 +40,7 @@ const FlowFeatures:FC<FlowFeaturesProps> = ({}) => {
           </p>
         </div>
       ),
-      image: '/images/flows/parallel.png',
+      image: '/images/flows/js-debugger.png',
     },
     {
       content: (
@@ -66,7 +66,7 @@ const FlowFeatures:FC<FlowFeaturesProps> = ({}) => {
           </ul>
         </div>
       ),
-      image: '/images/flows/parallel.png',
+      image: '/images/flows/js-debugger.png',
     },
     {
       content: (

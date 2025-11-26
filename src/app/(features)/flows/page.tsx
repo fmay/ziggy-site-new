@@ -6,6 +6,7 @@ import FlowFeatures from '@/app/(features)/flows/FlowFeatures'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import BlockCollections from '@/app/(features)/flows/BlockCollections'
 import JavascriptFeatures from '@/app/(features)/flows/JavascriptFeatures'
+import PageSection from '@/components/ui/page-wrappers/PageSection'
 
 export default function Products() {
   return (
@@ -22,9 +23,9 @@ export default function Products() {
         <HubspotBlockCollection />
       </div>
 
-      <div className="bg-gray-50 p-3">
+      <PageSection>
         <JavascriptFeatures />
-      </div>
+      </PageSection>
     </PageLayout>
   )
 }

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="stack item 0.76">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="carousel restyling 0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(features)/flows/FlowFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/flows/FlowFeatures.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(features)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/flows/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/CarouselItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/CarouselItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +122,7 @@
       <workItem from="1764081190549" duration="161000" />
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
-      <workItem from="1764156049915" duration="4888000" />
+      <workItem from="1764156049915" duration="7082000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -202,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764159742819</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="carousel restyling 0.1">
+      <option name="closed" value="true" />
+      <created>1764160998749</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1764160998749</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +229,8 @@
     <MESSAGE value="HS collection 0.1" />
     <MESSAGE value="stack item 0.75" />
     <MESSAGE value="stack item 0.76" />
-    <option name="LAST_COMMIT_MESSAGE" value="stack item 0.76" />
+    <MESSAGE value="carousel restyling 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="carousel restyling 0.1" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
