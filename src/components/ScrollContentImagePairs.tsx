@@ -134,14 +134,14 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
               ref={(el) => {
                 contentRefs.current[index] = el
               }}
-              className="min-h-[50vh] flex items-center">
+              className="min-h-[60vh] flex items-center">
               <div className="w-full">{pair.content}</div>
             </div>
           ))}
         </div>
 
         {/* Right Column - Fixed Images with Transitions */}
-        <div ref={rightColumnRef} className="relative">
+        <div ref={rightColumnRef} className="relative py-32">
           <div
             ref={imageContainerRef}
             className={`w-full h-screen flex items-center justify-center ${
