@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-medium text-stripe-navy;
   }
   .description {
-    @apply text-sm text-stripe-gray mt-0.5 leading-[1rem];
+    @apply text-sm max-w-[300px] text-stripe-gray mt-0.5 leading-[1rem];
   }
 }
 
