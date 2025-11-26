@@ -22,7 +22,9 @@ export default function Products() {
         <HubspotBlockCollection />
       </div>
 
-      <JavascriptFeatures />
+      <div className="bg-gray-50 p-3">
+        <JavascriptFeatures />
+      </div>
     </PageLayout>
   )
 }
