@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import { FaLongArrowAltRight } from 'react-icons/fa'
+import styles from './CarouselItem.module.scss'
 
 interface CarouselItemProps {
   children: React.ReactNode
@@ -20,20 +21,24 @@ const CarouselItem: FC<CarouselItemProps> = ({
   linkUrl,
 }) => {
   return (
-    <div className="link-small my-4 mx-4">
-      <div className="p-6 bg-white rounded-lg border border-gray-200 shadow-lg transition-shadow duration-200">
-        <h3 className="text-2xl font-semibold text-stripe-navy mb-3">{title}</h3>
-        {imageUrl && imageAlt && <Image className="image-treat-rounded" src={imageUrl} alt={imageAlt} width={300} height={300} />}
-        <div className="spaced-letters-small my-6">{children}</div>
-        {linkText && (
-          <div className="mt-3">
-            <a href={linkUrl} className="text-stripe-purple hover:underline font-semibold">
-              <div className="link-text-small">
-                <span>{linkText}</span> <FaLongArrowAltRight className="link-text-small" />
-              </div>
-            </a>
-          </div>
+    <div className={styles.wrapper}>
+      <div className={styles.card}>
+        {imageUrl && imageAlt && (
+          <Image className={styles.image} src={imageUrl} alt={imageAlt} width={300} height={300} />
         )}
+        <div className={styles.lowerContent}>
+          <h3 className={styles.title}>{title}</h3>
+          <div className={styles.content}>{children}</div>
+          {linkText && (
+            <div className={styles.linkWrapper}>
+              <a href={linkUrl} className={styles.link}>
+                <div className={styles.linkText}>
+                  <span>{linkText}</span> <FaLongArrowAltRight className={styles.icon} />
+                </div>
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

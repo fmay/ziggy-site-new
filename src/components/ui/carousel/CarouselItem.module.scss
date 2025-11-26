@@ -1,0 +1,39 @@
+.wrapper {
+  @apply my-4 mx-4;
+}
+
+.card {
+  @apply p-0 bg-white rounded-lg border border-gray-200 shadow-lg transition-shadow duration-200;
+}
+
+.image {
+  @apply mt-4 mx-auto rounded-lg shadow-sm brightness-90;
+}
+
+.title {
+  @apply text-2xl mt-3 font-semibold text-stripe-navy mb-3;
+}
+
+.content {
+  @apply font-normal text-[var(--dark-gray)] my-6;
+}
+
+.lowerContent {
+  @apply p-5;
+}
+
+.linkWrapper {
+  @apply mt-3;
+}
+
+.link {
+  @apply text-stripe-purple hover:underline font-semibold;
+}
+
+.linkText {
+  @apply font-normal flex flex-row place-items-center gap-2 text-[var(--mid-gray)];
+}
+
+.icon {
+  @apply font-normal;
+}
