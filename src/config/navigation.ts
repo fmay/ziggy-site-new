@@ -17,8 +17,7 @@ export interface NavItemWithDropdown {
 }
 
 export interface NavigationConfig {
-  desktop: NavItemWithDropdown[]
-  mobile: NavItemWithDropdown[]
+  items: NavItemWithDropdown[]
   cta: {
     contact: NavItem
     signin: NavItem
@@ -26,7 +25,7 @@ export interface NavigationConfig {
 }
 
 export const navigationConfig: NavigationConfig = {
-  desktop: [
+  items: [
     {
       label: 'Product',
       dropdown: {
@@ -180,76 +179,6 @@ export const navigationConfig: NavigationConfig = {
       },
     },
     { label: 'Pricing', href: '/pricing' },
-  ],
-  mobile: [
-    {
-      label: 'Products',
-      dropdown: {
-        sections: [
-          {
-            title: 'Payments',
-            items: [
-              { label: 'Payment Processing', href: '/products' },
-              { label: 'Checkout', href: '/products' },
-              { label: 'Payment Links', href: '/products' },
-            ],
-          },
-          {
-            title: 'Business Operations',
-            items: [
-              { label: 'Billing', href: '/products' },
-              { label: 'Invoicing', href: '/products' },
-              { label: 'Tax', href: '/products' },
-            ],
-          },
-        ],
-      },
-    },
-    {
-      label: 'Solutions',
-      dropdown: {
-        sections: [
-          {
-            items: [
-              { label: 'Startups', href: '/solutions' },
-              { label: 'Enterprise', href: '/solutions' },
-              { label: 'SaaS', href: '/solutions' },
-              { label: 'Platforms', href: '/solutions' },
-            ],
-          },
-        ],
-      },
-    },
-    {
-      label: 'Developers',
-      dropdown: {
-        sections: [
-          {
-            items: [
-              { label: 'Documentation', href: '/developers' },
-              { label: 'API Reference', href: '/developers' },
-              { label: 'Support', href: '/developers' },
-            ],
-          },
-        ],
-      },
-    },
-    {
-      label: 'Resources',
-      dropdown: {
-        sections: [
-          {
-            items: [
-              { label: 'Blog', href: '/resources' },
-              { label: 'Guides', href: '/resources' },
-              { label: 'Newsletter', href: '/resources' },
-            ],
-          },
-        ],
-      },
-    },
-    { label: 'Pricing', href: '/pricing' },
-    { label: 'Contact sales', href: '/contact' },
   ],
   cta: {
     contact: { label: 'Contact sales', href: '/contact' },

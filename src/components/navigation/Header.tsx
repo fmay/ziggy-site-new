@@ -96,7 +96,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center" onMouseLeave={handleMouseLeave}>
-              {navigationConfig.desktop.map((item, index) => (
+              {navigationConfig.items.map((item, index) => (
                 <DesktopNavItem
                   key={item.label}
                   item={item}
@@ -203,7 +203,7 @@ const Header = () => {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-100">
               <div className="flex flex-col space-y-4">
-                {navigationConfig.mobile.map(item => (
+                {navigationConfig.items.map(item => (
                   <MobileNavItem
                     key={item.label}
                     item={item}
