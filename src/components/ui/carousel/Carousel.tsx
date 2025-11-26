@@ -21,6 +21,9 @@ interface CarouselProps {
   rows?: number
   swipeToSlide?: boolean
   touchMove?: boolean
+  centerMode?: boolean
+  centerPadding?: string
+  infinite?: boolean
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -39,6 +42,9 @@ const Carousel: React.FC<CarouselProps> = ({
   rows,
   swipeToSlide,
   touchMove,
+  centerMode,
+  centerPadding,
+  infinite = false,
 }) => {
   // Filter out undefined values to avoid NaN errors in react-slick
   const settings = Object.fromEntries(
@@ -56,7 +62,9 @@ const Carousel: React.FC<CarouselProps> = ({
       rows,
       swipeToSlide,
       touchMove,
-      infinite: false,
+      centerMode,
+      centerPadding,
+      infinite,
     }).filter(([_, value]) => value !== undefined),
   )
 

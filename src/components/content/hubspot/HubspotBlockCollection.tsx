@@ -17,7 +17,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           flexDirection: 'column',
         }),
       }}>
-      <Carousel slidesToShow={3}>
+      <Carousel slidesToShow={3.3} slidesToScroll={1} swipeToSlide={true} infinite={false}>
         {/*Read*/}
         <CarouselItem
           title="Read"

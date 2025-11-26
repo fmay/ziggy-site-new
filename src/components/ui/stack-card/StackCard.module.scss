@@ -58,7 +58,7 @@
 }
 
 .ctaWrapper {
-  @apply h-0 overflow-hidden transition-all duration-300 text-[1rem] ;
+  @apply h-0 overflow-hidden transition-all duration-300 text-[0.8rem] ;
 
   .stackCard:hover & {
     @apply h-[40px];
