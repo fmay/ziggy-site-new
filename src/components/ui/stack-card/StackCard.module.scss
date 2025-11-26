@@ -1,153 +1,82 @@
 .stackCard {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  background-color: white;
-  transition: all 300ms;
-
-  &:hover {
-    // Add any card-level hover effects here
+  @apply relative overflow-hidden rounded-lg shadow-md bg-white transition-all duration-300;
+  h2 {
+    @apply text-[1.5rem];
   }
 }
 
 .graphicLayer {
-  position: relative;
-  z-index: 10;
-  padding: 2rem 2rem 0;
+  @apply relative z-10 px-1 pt-2;
 }
 
 .graphicContainer {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  background-color: white;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  transition: all 300ms;
+  @apply relative h-[350px] overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300;
 
   .stackCard:hover & {
-    height: 240px;
+    @apply h-[400px];
   }
 }
 
 .gradientOverlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 300ms;
-  z-index: 1;
+  @apply absolute inset-0 z-[1] opacity-0 transition-opacity duration-300;
 
   .stackCard:hover & {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
 
 .graphicImage {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: top;
-  z-index: 2;
+  @apply relative z-[2] h-full w-full object-cover object-top;
 }
 
 .contentLayer {
-  position: relative;
-  z-index: 20;
-  padding: 2rem;
+  @apply relative z-20 px-8 pt-8;
 }
 
 .badge {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  @apply mb-4 flex items-center gap-3;
 }
 
 .badgeIcon {
-  display: flex;
-  height: 2.5rem;
-  width: 2.5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  @apply flex h-10 w-10 items-center justify-center rounded-lg bg-white/90 shadow-sm;
 }
 
 .badgeLabel {
-  border-radius: 0.375rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 0.375rem 0.75rem;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  @apply rounded-md bg-white/90 px-3 py-1.5 shadow-sm;
 
   span {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: rgb(30, 41, 59);
+    @apply text-sm font-medium text-slate-800;
   }
 }
 
 .title {
-  margin-bottom: 0.75rem;
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: rgb(15, 23, 42);
-
-  @media (min-width: 1024px) {
-    font-size: 2.25rem;
-  }
+  @apply mb-3 text-3xl font-semibold text-slate-900 lg:text-4xl;
 }
 
 .description {
-  margin-bottom: 0;
-  font-size: 1.125rem;
-  color: rgb(51, 65, 85);
-
-  @media (min-width: 1024px) {
-    font-size: 1.25rem;
-  }
+  @apply text-lg text-slate-700 lg:text-xl;
 }
 
 .ctaWrapper {
-  height: 0;
-  overflow: hidden;
-  transition: height 300ms;
+  @apply h-0 overflow-hidden transition-all duration-300 text-sm ;
 
   .stackCard:hover & {
-    height: 60px;
+    @apply h-[40px];
   }
 }
 
 .ctaLink {
-  margin-top: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgb(99, 102, 241);
-  opacity: 0;
-  transition: opacity 300ms, gap 300ms;
-
-  @media (min-width: 1024px) {
-    font-size: 1.125rem;
-  }
+  @apply mt-0 inline-flex items-center gap-2 font-medium text-indigo-600 opacity-0 transition-all duration-300;
 
   .stackCard:hover & {
-    opacity: 1;
+    @apply opacity-100;
   }
 
   &:hover {
-    gap: 0.75rem;
+    @apply gap-3;
   }
 }
 
 .ctaArrow {
-  transition: transform 300ms;
-
-  .ctaLink:hover & {
-    transform: translateX(0.25rem);
-  }
+  @apply transition-transform duration-300;
 }

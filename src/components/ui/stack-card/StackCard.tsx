@@ -104,22 +104,7 @@ const StackCard: FC<StackCardProps> = ({
             href={ctaHref}
             className={styles.ctaLink}
           >
-            {ctaText}
-            <svg
-              className={styles.ctaArrow}
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              aria-hidden="true"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <g fillRule="evenodd">
-                <path d="M0 5h7" />
-                <path d="M1 1l4 4-4 4" />
-              </g>
-            </svg>
+            {ctaText} {'>'}
           </a>
         </div>
       </div>
