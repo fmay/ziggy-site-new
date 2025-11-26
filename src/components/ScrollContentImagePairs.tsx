@@ -153,7 +153,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
             ref={imageContainerRef}
             className={`w-full h-screen flex items-center justify-center ${
               imagePosition === 'scrolling'
-                ? 'absolute top-0'
+                ? 'absolute -top-[10vh]'
                 : imagePosition === 'scrolling-out'
                   ? 'absolute'
                   : 'fixed top-0'
