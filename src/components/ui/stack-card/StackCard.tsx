@@ -3,6 +3,7 @@
 import React, { ReactNode } from 'react'
 import type { FC } from 'react'
 import Image from 'next/image'
+import styles from './StackCard.module.scss'
 
 interface StackCardProps {
   /** Primary gradient color (e.g., '#FFA500') */
@@ -44,7 +45,7 @@ const StackCard: FC<StackCardProps> = ({
 }) => {
   return (
     <div
-      className={`group relative overflow-hidden rounded-lg shadow-md bg-white ${className}`}
+      className={`${styles.stackCard} ${className}`}
       style={{
         ['--productFeaturePrimaryAccentColor' as string]: primaryColor,
         ['--productFeatureSecondaryAccentColor' as string]: secondaryColor,
@@ -53,11 +54,11 @@ const StackCard: FC<StackCardProps> = ({
 
       {/* Graphic layer */}
       {graphic && (
-        <div className="relative z-10 px-8 pt-8">
-          <div className="relative h-[300px] overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 group-hover:h-[240px]">
+        <div className={styles.graphicLayer}>
+          <div className={styles.graphicContainer}>
             {/* Gradient overlay - only visible on hover */}
             <div
-              className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              className={styles.gradientOverlay}
               style={{
                 background: `radial-gradient(circle at 50% 50%, ${primaryColor}15 0%, ${secondaryColor}15 50%, transparent 100%)`
               }}
@@ -67,45 +68,45 @@ const StackCard: FC<StackCardProps> = ({
               alt={graphicAlt}
               width={800}
               height={500}
-              className="relative h-full w-full object-cover object-top"
+              className={styles.graphicImage}
             />
           </div>
         </div>
       )}
 
       {/* Content layer */}
-      <div className="relative z-20 p-8">
+      <div className={styles.contentLayer}>
         {/* Product Badge */}
-        <div className="mb-4 flex items-center gap-3">
+        <div className={styles.badge}>
           {icon && (
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/90 shadow-sm">
+            <div className={styles.badgeIcon}>
               {icon}
             </div>
           )}
-          <div className="rounded-md bg-white/90 px-3 py-1.5 shadow-sm">
-            <span className="text-sm font-medium text-slate-800">{badgeLabel}</span>
+          <div className={styles.badgeLabel}>
+            <span>{badgeLabel}</span>
           </div>
         </div>
 
         {/* Title */}
-        <h2 className="mb-3 text-3xl font-semibold text-slate-900 lg:text-4xl">
+        <h2 className={styles.title}>
           {title}
         </h2>
 
         {/* Description */}
-        <p className="mb-0 text-lg text-slate-700 lg:text-xl">
+        <p className={styles.description}>
           {description}
         </p>
 
         {/* CTA Link - Fixed height, hidden by default */}
-        <div className="h-0 overflow-hidden transition-all duration-300 group-hover:h-[60px]">
+        <div className={styles.ctaWrapper}>
           <a
             href={ctaHref}
-            className="mt-4 inline-flex items-center gap-2 text-base font-medium text-indigo-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:gap-3 lg:text-lg"
+            className={styles.ctaLink}
           >
             {ctaText}
             <svg
-              className="transition-transform duration-300"
+              className={styles.ctaArrow}
               width="10"
               height="10"
               viewBox="0 0 10 10"

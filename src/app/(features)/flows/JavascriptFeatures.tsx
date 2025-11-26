@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 import ImageStack from '@/components/ui/image-stack/ImageStack'
-import StackCard from '@/components/ui/stack-card'
+import StackCard from '@/components/ui/stack-card/StackCard'
 
 interface JavascriptFeaturesProps {}
 
