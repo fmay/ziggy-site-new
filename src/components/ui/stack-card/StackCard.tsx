@@ -28,6 +28,8 @@ interface StackCardProps {
   graphic?: string
   /** Alt text for the graphic image */
   graphicAlt?: string
+  /** Background color class for the image container (e.g., 'bg-white', 'bg-flow-gray') */
+  graphicBgColor?: string
   /** Optional className for additional styling */
   className?: string
 }
@@ -44,6 +46,7 @@ const StackCard: FC<StackCardProps> = ({
   ctaNewTab = false,
   graphic,
   graphicAlt = '',
+  graphicBgColor = 'bg-white',
   className = ''
 }) => {
   return (
@@ -58,7 +61,7 @@ const StackCard: FC<StackCardProps> = ({
       {/* Graphic layer */}
       {graphic && (
         <div className={styles.graphicLayer}>
-          <div className={styles.graphicContainer}>
+          <div className={`${styles.graphicContainer} ${graphicBgColor}`}>
             {/* Gradient overlay - only visible on hover */}
             <div
               className={styles.gradientOverlay}

@@ -12,7 +12,8 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript"
       ctaNewTab
-      graphic="/images/flows/js-ai.png"
+      graphic="/images/flows/js-example.png"
+      graphicBgColor="bg-flow-gray"
     />,
     <StackCard
       title="AI Code generation"
@@ -20,6 +21,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant"
       ctaNewTab
+      graphicBgColor="bg-flow-gray"
       graphic="/images/flows/js-ai.png"
     />,
     <StackCard
@@ -28,7 +30,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
       ctaNewTab
-      graphic="/images/flows/parallel.png"
+      graphic="/images/flows/js-debugger.png"
     />,
     <StackCard
       title="AI Explain"
@@ -36,7 +38,8 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
       ctaNewTab
-      graphic="/images/flows/parallel.png"
+      graphic="/images/flows/js-explain.png"
+      graphicBgColor="bg-flow-gray"
     />,
   ]
 

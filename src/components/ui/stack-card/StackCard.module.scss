@@ -10,11 +10,11 @@
 }
 
 .graphicLayer {
-  @apply relative z-10 px-1 pt-2;
+  @apply relative z-10 px-0 pt-0;
 }
 
 .graphicContainer {
-  @apply relative h-[350px] overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300;
+  @apply relative h-[350px] overflow-hidden rounded-b-lg shadow-lg transition-all duration-300 border-gray-200 brightness-75;
 
   .stackCard:hover & {
     @apply h-[310px];
@@ -26,7 +26,7 @@
 }
 
 .graphicImage {
-  @apply relative z-[2] h-full w-full object-cover object-top;
+  @apply relative z-[2] h-full w-full object-contain object-top transition-all duration-300 ;
 }
 
 .contentLayer {
@@ -54,7 +54,7 @@
 }
 
 .description {
-  @apply text-lg text-slate-700;
+  @apply text-slate-700;
 }
 
 .ctaWrapper {

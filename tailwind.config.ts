@@ -6,6 +6,10 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'bg-flow-gray',
+    'bg-white',
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,6 +17,7 @@ const config: Config = {
         'stripe-gray': '#727f96',
         'stripe-light-bg': '#f6f9fb',
         'stripe-purple': '#635bff',
+        'flow-gray': '#D0D8E0'
       },
       fontFamily: {
         sans: [
