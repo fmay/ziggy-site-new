@@ -130,45 +130,18 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    restore: () => {
     if (!loadedImage) return
 
-    const startTime = Date.now()
     const initialWidth = loadedImage.width * scale.x
     const initialHeight = loadedImage.height * scale.y
-    const startValues = trapezoidState
-    const targetValues = {
+
+    // Restore immediately without animation
+    setTrapezoidState({
      bottomWidth: initialWidth,
      topWidth: initialWidth,
      height: initialHeight,
      currentOpacity: 1,
      currentX: x,
      currentY: y,
-    }
-
-    const animate = () => {
-     const elapsed = Date.now() - startTime
-     const progress = Math.min(elapsed / duration, 1)
-
-     // Easing function (ease-in-out)
-     const eased =
-      progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
-
-     setTrapezoidState({
-      bottomWidth:
-       startValues.bottomWidth + (targetValues.bottomWidth - startValues.bottomWidth) * eased,
-      topWidth: startValues.topWidth + (targetValues.topWidth - startValues.topWidth) * eased,
-      height: startValues.height + (targetValues.height - startValues.height) * eased,
-      currentOpacity:
-       startValues.currentOpacity +
-       (targetValues.currentOpacity - startValues.currentOpacity) * eased,
-      currentX: startValues.currentX + (targetValues.currentX - startValues.currentX) * eased,
-      currentY: startValues.currentY + (targetValues.currentY - startValues.currentY) * eased,
-     })
-
-     if (progress < 1) {
-      requestAnimationFrame(animate)
-     }
-    }
-
-    animate()
+    })
    },
   }))
 
