@@ -345,25 +345,25 @@ const Test: FC<TestProps> = ({}) => {
 
           <LineDraw
             ref={LineCRM}
-            x={35}
-            y={90}
+            x={50}
+            y={120}
             endX={200}
             endY={260}
             stroke={2}
             color={'#ff0000'}
             duration={600}
-            deleteDelay={3000}
+            // deleteDelay={3000}
           />
 
-          <ImageMorph
-            ref={ERP}
-            x={30}
-            y={200}
-            scale={0.8}
-            image1={'/canvas/icons/erp.gray.png'}
-            image2={'/canvas/icons/erp.color.png'}
-            duration={1000}
-          />
+          {/*<ImageMorph*/}
+          {/*  ref={ERP}*/}
+          {/*  x={30}*/}
+          {/*  y={200}*/}
+          {/*  scale={0.8}*/}
+          {/*  image1={'/canvas/icons/erp.gray.png'}*/}
+          {/*  image2={'/canvas/icons/erp.color.png'}*/}
+          {/*  duration={1000}*/}
+          {/*/>*/}
         </Layer>
       </Stage>
     </div>
