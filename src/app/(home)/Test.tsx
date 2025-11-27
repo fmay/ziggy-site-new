@@ -40,17 +40,39 @@ interface FadeAction {
   duration?: number
 }
 
+interface BrightnessAction {
+  type: 'brightness'
+  value: number
+  duration?: number
+}
+
+interface GrayscaleAction {
+  type: 'grayscale'
+  duration?: number
+}
+
 interface MorphAction {
   type: 'morph'
   duration?: number
 }
 
-type Action = FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction | MorphAction
-
-interface ImageActions {
-  target: 'I1' | 'I2' | 'I3' | 'CRM'
-  actions: Action[]
+interface ResetMorphAction {
+  type: 'reset'
+  duration?: number
 }
+
+// Separate action types per component type
+interface ImageFlipActions {
+  target: React.RefObject<ImageFlipHandle | null>
+  actions: (FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction | BrightnessAction | GrayscaleAction)[]
+}
+
+interface ImageMorphActions {
+  target: React.RefObject<ImageMorphHandle | null>
+  actions: (MorphAction | ResetMorphAction)[]
+}
+
+type ImageActions = ImageFlipActions | ImageMorphActions
 
 interface SceneStep {
   delay: number // milliseconds after previous step completes
@@ -64,10 +86,11 @@ interface SceneDefinition {
 
 const Test: FC<TestProps> = ({}) => {
   const lineDrawRef = useRef<LineDrawHandle>(null)
-  const I1 = useRef<ImageFlipHandle>(null)
-  const I2 = useRef<ImageFlipHandle>(null)
-  const I3 = useRef<ImageFlipHandle>(null)
+  const CardFast= useRef<ImageFlipHandle>(null)
+  const CardOneInstance= useRef<ImageFlipHandle>(null)
+  const CardCluster= useRef<ImageFlipHandle>(null)
   const CRM = useRef<ImageMorphHandle>(null)
+  const ERP = useRef<ImageMorphHandle>(null)
 
   // Scene definition
   const sceneDefinition: SceneDefinition = {
@@ -77,23 +100,27 @@ const Test: FC<TestProps> = ({}) => {
         duration: 1500, // This step takes 1500ms to complete
         imageActions: [
           {
-            target: 'I1',
+            target: CardCluster,
             actions: [
               { type: 'flip', direction: 'front', duration: 1500 },
-              { type: 'moveRelative', x: 0, y: 300, duration: 1500 },
+              { type: 'moveRelative', x: 0, y: 200, duration: 1500 },
               { type: 'fade', opacity: 0, duration: 1500 },
             ],
           },
           {
-            target: 'I2',
-            actions: [{ type: 'moveRelative', x: 0, y: 120, duration: 1500 }],
+            target: CardOneInstance,
+            actions: [{ type: 'moveRelative', x: 0, y: 200, duration: 1500 }],
           },
           {
-            target: 'I3',
-            actions: [{ type: 'moveRelative', x: 0, y: 120, duration: 1500 }],
+            target: CardFast,
+            actions: [{ type: 'moveRelative', x: 0, y: 200, duration: 1500 }],
           },
           {
-            target: 'CRM',
+            target: CRM,
+            actions: [{ type: 'morph', duration: 1500 }],
+          },
+          {
+            target: ERP,
             actions: [{ type: 'morph', duration: 1500 }],
           },
         ],
@@ -103,20 +130,21 @@ const Test: FC<TestProps> = ({}) => {
         duration: 100, // This step takes 1500ms to complete
         imageActions: [
           {
-            target: 'I1',
+            target: CardCluster,
             actions: [
-              { type: 'fade', opacity: 100, duration: 100 },
               { type: 'unflip', duration: 0 },
-              { type: 'move', x: 300, y: 0, duration: 100 },
+              { type: 'moveRelative', x: 0, y: -400, duration: 0 },
+              { type: 'fade', opacity: 100, duration: 0 },
             ],
           },
         ],
       },
       // {
       //   delay: 2000, // After another 2 seconds
+      //   duration: 1500,
       //   imageActions: [
       //     {
-      //       target: 'I2',
+      //       target: I2,
       //       actions: [
       //         { type: 'flip', direction: 'front', duration: 1500 },
       //         { type: 'moveRelative', x: 0, y: 300, duration: 1500 },
@@ -124,11 +152,11 @@ const Test: FC<TestProps> = ({}) => {
       //       ],
       //     },
       //     {
-      //       target: 'I3',
+      //       target: I3,
       //       actions: [{ type: 'moveRelative', x: 0, y: 100, duration: 0 }],
       //     },
       //     {
-      //       target: 'I1',
+      //       target: I1,
       //       actions: [{ type: 'moveRelative', x: 0, y: 100, duration: 0 }],
       //     },
       //   ],
@@ -146,10 +174,8 @@ const Test: FC<TestProps> = ({}) => {
 
       setTimeout(() => {
         step.imageActions.forEach((imageAction) => {
-          const targetRef = getImageRef(imageAction.target)
-
           imageAction.actions.forEach((action) => {
-            executeAction(targetRef, action)
+            executeAction(imageAction.target, action)
           })
         })
       }, cumulativeTime)
@@ -159,54 +185,57 @@ const Test: FC<TestProps> = ({}) => {
     })
   }
 
-  // Helper to get the correct image ref
-  const getImageRef = (target: 'I1' | 'I2' | 'I3' | 'CRM') => {
-    switch (target) {
-      case 'I1':
-        return I1
-      case 'I2':
-        return I2
-      case 'I3':
-        return I3
-      case 'CRM':
-        return CRM
-    }
-  }
-
   // Execute individual action
   const executeAction = (
-    ref: React.RefObject<ImageFlipHandle | ImageMorphHandle | null>,
-    action: Action
+    ref: React.RefObject<ImageFlipHandle | null> | React.RefObject<ImageMorphHandle | null>,
+    action: FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction | BrightnessAction | GrayscaleAction | MorphAction | ResetMorphAction
   ) => {
+    if (!ref.current) return
+
     switch (action.type) {
       case 'flip':
-        if ('flip' in (ref.current || {})) {
-          (ref.current as ImageFlipHandle)?.flip(action.direction, action.duration)
+        if ('flip' in ref.current) {
+          ref.current.flip(action.direction, action.duration)
         }
         break
       case 'unflip':
-        if ('unflip' in (ref.current || {})) {
-          (ref.current as ImageFlipHandle)?.unflip(action.duration)
+        if ('unflip' in ref.current) {
+          ref.current.unflip(action.duration)
         }
         break
       case 'move':
-        if ('move' in (ref.current || {})) {
-          (ref.current as ImageFlipHandle)?.move(action.x, action.y, action.duration)
+        if ('move' in ref.current) {
+          ref.current.move(action.x, action.y, action.duration)
         }
         break
       case 'moveRelative':
-        if ('moveRelative' in (ref.current || {})) {
-          (ref.current as ImageFlipHandle)?.moveRelative(action.x, action.y, action.duration)
+        if ('moveRelative' in ref.current) {
+          ref.current.moveRelative(action.x, action.y, action.duration)
         }
         break
       case 'fade':
-        if ('fade' in (ref.current || {})) {
-          (ref.current as ImageFlipHandle)?.fade(action.opacity, action.duration)
+        if ('fade' in ref.current) {
+          ref.current.fade(action.opacity, action.duration)
+        }
+        break
+      case 'brightness':
+        if ('brightness' in ref.current) {
+          ref.current.brightness(action.value, action.duration)
+        }
+        break
+      case 'grayscale':
+        if ('grayscale' in ref.current) {
+          ref.current.grayscale(action.duration)
         }
         break
       case 'morph':
-        if ('morph' in (ref.current || {})) {
-          (ref.current as ImageMorphHandle)?.morph(action.duration)
+        if ('morph' in ref.current) {
+          ref.current.morph(action.duration)
+        }
+        break
+      case 'reset':
+        if ('reset' in ref.current) {
+          ref.current.reset(action.duration)
         }
         break
     }
@@ -218,39 +247,37 @@ const Test: FC<TestProps> = ({}) => {
 
   return (
     <div>
-      <Stage width={1200} height={600} className="bg-red-50" onClick={handleCanvasClick}>
+      <Stage width={1200} height={600} className="bg-gray-50 border" onClick={handleCanvasClick}>
         <Layer>
           {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
           <ImageFlip
-            ref={I1}
-            // width={300}
+            ref={CardFast}
+            x={200}
+            y={0}
+            scale={{ x: 1, y: 1 }}
+            image="/canvas/cards/fast-friendly.card.png"
+            direction="front"
+            duration={1500}
+            expansionScale={0.5}
+          />
+
+          <ImageFlip
+            ref={CardOneInstance}
+            x={200}
+            y={100}
+            scale={{ x: 1, y: 1 }}
+            image="/canvas/cards/one-instance.card.png"
+            direction="front"
+            duration={1500}
+            expansionScale={0.5}
+          />
+
+          <ImageFlip
+            ref={CardCluster}
             x={200}
             y={200}
-            scale={{ x: 0.4, y: 0.4 }}
-            image="/hubspot-blocks/write-upsert.png"
-            direction="front"
-            duration={1500}
-            expansionScale={0.5}
-          />
-
-          <ImageFlip
-            ref={I2}
-            x={300}
-            y={100}
-            scale={{ x: 0.4, y: 0.4 }}
-            image="/hubspot-blocks/get-owners.png"
-            direction="front"
-            duration={1500}
-            expansionScale={0.5}
-          />
-
-          <ImageFlip
-            ref={I3}
-            // width={300}
-            x={400}
-            y={0}
-            scale={{ x: 0.4, y: 0.4 }}
-            image="/hubspot-blocks/read-batch.png"
+            scale={{ x: 1, y: 1 }}
+            image="/canvas/cards/cluster.card.png"
             direction="front"
             duration={1500}
             expansionScale={0.5}
@@ -261,18 +288,18 @@ const Test: FC<TestProps> = ({}) => {
             x={20}
             y={20}
             scale={0.8}
-            image1={'/crm.gray.png'}
-            image2={'/crm.color.png'}
+            image1={'/canvas/icons/crm.gray.png'}
+            image2={'/canvas/icons/crm.color.png'}
             duration={1000}
           />
 
           <ImageMorph
-            ref={CRM}
+            ref={ERP}
             x={40}
             y={40}
             scale={0.8}
-            image1={'/erp.gray.png'}
-            image2={'/erp.color.png'}
+            image1={'/canvas/icons/erp.gray.png'}
+            image2={'/canvas/icons/erp.color.png'}
             duration={1000}
           />
         </Layer>
