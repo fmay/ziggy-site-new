@@ -1,8 +1,19 @@
 
+.primaryCTAButton, .secondaryCTAButton {
+  @apply my-10 sm:w-auto px-8 py-4 rounded-full;
+}
+
 .primaryCTAButton {
-  @apply w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;
+  @apply font-normal hover:font-semibold transition-all duration-200
+  bg-stripe-purple text-white;
+  &:hover {
+    color: white !important;
+  }
 }
 
 .secondaryCTAButton {
-  @apply w-full sm:w-auto px-8 py-4 rounded-full border-2 border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  @apply border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  &:hover {
+    color: white !important;
+  }
 }

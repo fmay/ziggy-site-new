@@ -2,12 +2,6 @@ import styles from './hero.module.scss'
 
 const Hero = () => (
   <section className={styles.heroSection}>
-    {/* Background Image */}
-    {/*<div*/}
-    {/*  className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"*/}
-    {/*  style={{ backgroundImage: 'url(/hero/hero-home.jpg)' }}*/}
-    {/*/>*/}
-
     {/* Overlay for better text readability */}
     <div className={styles.overlay} />
 
@@ -22,10 +16,15 @@ const Hero = () => (
 
       {/*Subheading*/}
       <div className={styles.subheading}>
-        Build blazingly fast integrations and migrations unbelievably quickly and for so much less.
-        Ziggy runs on <strong>your</strong> servers so you have total control over security and performance.
+        <p className={styles.subheading}>
+          Build blazingly fast integrations and migrations in a fraction of the time and at a fraction of
+          the cost of normal ETL platforms.
+        </p>
+        <p  className={styles.subheading}>
+          Run on <strong>your</strong> infrastructure so you have total control over security and
+          performance.
+        </p>
       </div>
-
 
       {/* CTA Buttons */}
       {/*<div className={styles.ctaButtons}>*/}

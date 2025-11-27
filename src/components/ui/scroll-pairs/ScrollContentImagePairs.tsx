@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, ReactNode } from 'react'
+import styles from './ScrollContentImagePairs.module.scss'
 
 interface ContentImagePair {
   content: ReactNode
@@ -130,33 +131,33 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
   }, [contentImagePairs.length])
 
   return (
-    <div ref={containerRef} className="relative">
+    <div ref={containerRef} className={styles.container}>
       {/* Desktop Layout */}
-      <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={styles.desktopLayout}>
         {/* Left Column - Scrolling Content */}
-        <div className="space-y-32 py-32">
+        <div className={styles.leftColumn}>
           {contentImagePairs.map((pair, index) => (
             <div
               key={index}
               ref={(el) => {
                 contentRefs.current[index] = el
               }}
-              className="min-h-[60vh] flex items-center">
-              <div className="w-full">{pair.content}</div>
+              className={styles.contentItem}>
+              <div className={styles.contentWrapper}>{pair.content}</div>
             </div>
           ))}
         </div>
 
         {/* Right Column - Fixed Images with Transitions */}
-        <div ref={rightColumnRef} className="relative py-32">
+        <div ref={rightColumnRef} className={styles.rightColumn}>
           <div
             ref={imageContainerRef}
-            className={`w-full h-screen flex items-center justify-center ${
+            className={`${styles.imageContainer} ${
               imagePosition === 'scrolling'
-                ? 'absolute -top-[10vh]'
+                ? styles.imageContainerScrolling
                 : imagePosition === 'scrolling-out'
-                  ? 'absolute'
-                  : 'fixed top-0'
+                  ? styles.imageContainerScrollingOut
+                  : styles.imageContainerFixed
             }`}
             style={
               imagePosition === 'fixed'
@@ -170,17 +171,17 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
                     }
                   : {}
             }>
-            <div className="relative w-full h-[60vh] max-w-2xl">
+            <div className={styles.imageWrapper}>
               {contentImagePairs.map((pair, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === activeIndex ? 'opacity-100' : 'opacity-0'
+                  className={`${styles.imageSlide} ${
+                    index === activeIndex ? styles.imageSlideActive : styles.imageSlideInactive
                   }`}>
                   <img
                     src={pair.image}
                     alt={`Content ${index + 1}`}
-                    className="w-full h-full object-cover rounded-lg shadow-2xl"
+                    className={styles.image}
                   />
                 </div>
               ))}
@@ -190,15 +191,15 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
       </div>
 
       {/* Mobile Layout - Stacked content and images */}
-      <div className="lg:hidden max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+      <div className={styles.mobileLayout}>
         {contentImagePairs.map((pair, index) => (
-          <div key={index} className="space-y-8">
-            <div className="prose max-w-none">{pair.content}</div>
-            <div className="w-full aspect-video">
+          <div key={index} className={styles.mobilePair}>
+            <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>
+            <div className={styles.mobileImageWrapper}>
               <img
                 src={pair.image}
                 alt={`Content ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg shadow-lg"
+                className={styles.mobileImage}
               />
             </div>
           </div>

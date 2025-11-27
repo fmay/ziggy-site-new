@@ -1,0 +1,86 @@
+.container {
+  @apply relative;
+
+  ul {
+    @apply mt-12;
+    li {
+      @apply list-none ml-4 mb-1 text-mid-gray;
+    }
+  }
+}
+
+.desktopLayout {
+  @apply hidden lg:grid lg:grid-cols-2 lg:gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.leftColumn {
+  @apply space-y-32 py-32;
+}
+
+.contentItem {
+  @apply min-h-[60vh] flex items-center;
+}
+
+.contentWrapper {
+  @apply w-full;
+}
+
+.rightColumn {
+  @apply relative py-32;
+}
+
+.imageContainer {
+  @apply w-full h-screen flex items-center justify-center;
+}
+
+.imageContainerScrolling {
+  @apply absolute -top-[10vh];
+}
+
+.imageContainerFixed {
+  @apply fixed top-0;
+}
+
+.imageContainerScrollingOut {
+  @apply absolute;
+}
+
+.imageWrapper {
+  @apply relative w-full h-[60vh] max-w-2xl;
+}
+
+.imageSlide {
+  @apply absolute inset-0 transition-opacity duration-500;
+}
+
+.imageSlideActive {
+  @apply opacity-100;
+}
+
+.imageSlideInactive {
+  @apply opacity-0;
+}
+
+.image {
+  @apply w-full h-full object-cover rounded-lg shadow-2xl;
+}
+
+.mobileLayout {
+  @apply lg:hidden max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16;
+}
+
+.mobilePair {
+  @apply space-y-8;
+}
+
+.mobileContent {
+  @apply max-w-none;
+}
+
+.mobileImageWrapper {
+  @apply w-full aspect-video;
+}
+
+.mobileImage {
+  @apply w-full h-full object-cover rounded-lg shadow-lg;
+}

@@ -42,7 +42,7 @@ export const navigationConfig: NavigationConfig = {
               {
                 label: 'Blocks',
                 href: '/products',
-                description: 'What makes Ziggy so friendly',
+                description: 'Make Ziggy so friendly - build your own to connect to your platform',
                 icon: '/nav/flow.svg',
               },
               {

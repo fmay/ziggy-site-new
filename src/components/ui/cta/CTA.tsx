@@ -1,16 +1,18 @@
 'use client'
 
 import { FC, useState, useEffect } from 'react'
+import Link from 'next/link'
 import styles from './cta.module.scss'
 
 interface CTAProps {
   label: string
   style?: 'primary' | 'secondary'
+  href: string
   className?: string
 }
 
-const CTA: FC<CTAProps> = ({ label, style, className = '' }) => {
-  const [styleClassName, setStyleClassName] = useState(styles.primaryButton)
+const CTA: FC<CTAProps> = ({ label, style, href, className = '' }) => {
+  const [styleClassName, setStyleClassName] = useState(styles.primaryCTAButton)
 
   useEffect(() => {
     switch (style) {
@@ -27,8 +29,21 @@ const CTA: FC<CTAProps> = ({ label, style, className = '' }) => {
   }, [style])
 
   return (
-    <div>
-      <button className={`${styleClassName} ${className}`}>{label}</button>
+    <div className={className}>
+      {href?.includes('http') ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styleClassName}
+        >
+          {label}
+        </a>
+      ) : (
+        <Link href={href || '#'} className={styleClassName}>
+          {label}
+        </Link>
+      )}
     </div>
   )
 }
