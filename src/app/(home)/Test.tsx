@@ -4,6 +4,7 @@ import { FC, useRef, useState, useEffect } from 'react'
 import { Stage, Layer, Line } from 'react-konva'
 import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import LineDraw, { LineDrawHandle } from '@/components/canvas/LineDraw'
+import ImageMorph, { ImageMorphHandle } from '@/components/canvas/ImageMorph'
 
 interface TestProps {}
 
@@ -39,10 +40,15 @@ interface FadeAction {
   duration?: number
 }
 
-type Action = FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction
+interface MorphAction {
+  type: 'morph'
+  duration?: number
+}
+
+type Action = FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction | MorphAction
 
 interface ImageActions {
-  target: 'I1' | 'I2' | 'I3'
+  target: 'I1' | 'I2' | 'I3' | 'CRM'
   actions: Action[]
 }
 
@@ -61,7 +67,7 @@ const Test: FC<TestProps> = ({}) => {
   const I1 = useRef<ImageFlipHandle>(null)
   const I2 = useRef<ImageFlipHandle>(null)
   const I3 = useRef<ImageFlipHandle>(null)
-  const Stripe = useRef<ImageFlipHandle>(null)
+  const CRM = useRef<ImageMorphHandle>(null)
 
   // Scene definition
   const sceneDefinition: SceneDefinition = {
@@ -85,6 +91,10 @@ const Test: FC<TestProps> = ({}) => {
           {
             target: 'I3',
             actions: [{ type: 'moveRelative', x: 0, y: 120, duration: 1500 }],
+          },
+          {
+            target: 'CRM',
+            actions: [{ type: 'morph', duration: 1500 }],
           },
         ],
       },
@@ -150,7 +160,7 @@ const Test: FC<TestProps> = ({}) => {
   }
 
   // Helper to get the correct image ref
-  const getImageRef = (target: 'I1' | 'I2' | 'I3') => {
+  const getImageRef = (target: 'I1' | 'I2' | 'I3' | 'CRM') => {
     switch (target) {
       case 'I1':
         return I1
@@ -158,29 +168,46 @@ const Test: FC<TestProps> = ({}) => {
         return I2
       case 'I3':
         return I3
+      case 'CRM':
+        return CRM
     }
   }
 
   // Execute individual action
   const executeAction = (
-    ref: React.RefObject<ImageFlipHandle | null>,
+    ref: React.RefObject<ImageFlipHandle | ImageMorphHandle | null>,
     action: Action
   ) => {
     switch (action.type) {
       case 'flip':
-        ref.current?.flip(action.direction, action.duration)
+        if ('flip' in (ref.current || {})) {
+          (ref.current as ImageFlipHandle)?.flip(action.direction, action.duration)
+        }
         break
       case 'unflip':
-        ref.current?.unflip(action.duration)
+        if ('unflip' in (ref.current || {})) {
+          (ref.current as ImageFlipHandle)?.unflip(action.duration)
+        }
         break
       case 'move':
-        ref.current?.move(action.x, action.y, action.duration)
+        if ('move' in (ref.current || {})) {
+          (ref.current as ImageFlipHandle)?.move(action.x, action.y, action.duration)
+        }
         break
       case 'moveRelative':
-        ref.current?.moveRelative(action.x, action.y, action.duration)
+        if ('moveRelative' in (ref.current || {})) {
+          (ref.current as ImageFlipHandle)?.moveRelative(action.x, action.y, action.duration)
+        }
         break
       case 'fade':
-        ref.current?.fade(action.opacity, action.duration)
+        if ('fade' in (ref.current || {})) {
+          (ref.current as ImageFlipHandle)?.fade(action.opacity, action.duration)
+        }
+        break
+      case 'morph':
+        if ('morph' in (ref.current || {})) {
+          (ref.current as ImageMorphHandle)?.morph(action.duration)
+        }
         break
     }
   }
@@ -229,15 +256,24 @@ const Test: FC<TestProps> = ({}) => {
             expansionScale={0.5}
           />
 
-          <ImageFlip
-            ref={Stripe}
-            // width={300}
+          <ImageMorph
+            ref={CRM}
             x={20}
             y={20}
-            scale={{ x: 0.4, y: 0.4 }}
-            image="/test.png"
+            scale={0.8}
+            image1={'/crm.gray.png'}
+            image2={'/crm.color.png'}
             duration={1000}
-            expansionScale={1}
+          />
+
+          <ImageMorph
+            ref={CRM}
+            x={40}
+            y={40}
+            scale={0.8}
+            image1={'/erp.gray.png'}
+            image2={'/erp.color.png'}
+            duration={1000}
           />
         </Layer>
       </Stage>
