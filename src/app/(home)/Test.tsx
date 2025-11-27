@@ -64,7 +64,15 @@ interface ResetMorphAction {
 // Separate action types per component type
 interface ImageFlipActions {
   target: React.RefObject<ImageFlipHandle | null>
-  actions: (FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction | BrightnessAction | GrayscaleAction)[]
+  actions: (
+    | FlipAction
+    | UnflipAction
+    | MoveAction
+    | MoveRelativeAction
+    | FadeAction
+    | BrightnessAction
+    | GrayscaleAction
+  )[]
 }
 
 interface ImageMorphActions {
@@ -86,11 +94,12 @@ interface SceneDefinition {
 
 const Test: FC<TestProps> = ({}) => {
   const lineDrawRef = useRef<LineDrawHandle>(null)
-  const CardFast= useRef<ImageFlipHandle>(null)
-  const CardOneInstance= useRef<ImageFlipHandle>(null)
-  const CardCluster= useRef<ImageFlipHandle>(null)
+  const CardFast = useRef<ImageFlipHandle>(null)
+  const CardOneInstance = useRef<ImageFlipHandle>(null)
+  const CardCluster = useRef<ImageFlipHandle>(null)
   const CRM = useRef<ImageMorphHandle>(null)
   const ERP = useRef<ImageMorphHandle>(null)
+  const LineCRM = useRef<LineDrawHandle>(null)
 
   // Scene definition
   const sceneDefinition: SceneDefinition = {
@@ -168,13 +177,13 @@ const Test: FC<TestProps> = ({}) => {
   const executeScene = (scene: SceneDefinition) => {
     let cumulativeTime = 0
 
-    scene.steps.forEach((step) => {
+    scene.steps.forEach(step => {
       // Wait for the delay after the previous step's duration
       cumulativeTime += step.delay
 
       setTimeout(() => {
-        step.imageActions.forEach((imageAction) => {
-          imageAction.actions.forEach((action) => {
+        step.imageActions.forEach(imageAction => {
+          imageAction.actions.forEach(action => {
             executeAction(imageAction.target, action)
           })
         })
@@ -188,7 +197,16 @@ const Test: FC<TestProps> = ({}) => {
   // Execute individual action
   const executeAction = (
     ref: React.RefObject<ImageFlipHandle | null> | React.RefObject<ImageMorphHandle | null>,
-    action: FlipAction | UnflipAction | MoveAction | MoveRelativeAction | FadeAction | BrightnessAction | GrayscaleAction | MorphAction | ResetMorphAction
+    action:
+      | FlipAction
+      | UnflipAction
+      | MoveAction
+      | MoveRelativeAction
+      | FadeAction
+      | BrightnessAction
+      | GrayscaleAction
+      | MorphAction
+      | ResetMorphAction,
   ) => {
     if (!ref.current) return
 
@@ -285,18 +303,30 @@ const Test: FC<TestProps> = ({}) => {
 
           <ImageMorph
             ref={CRM}
-            x={20}
-            y={20}
+            x={30}
+            y={80}
             scale={0.8}
             image1={'/canvas/icons/crm.gray.png'}
             image2={'/canvas/icons/crm.color.png'}
             duration={1000}
           />
 
+          <LineDraw
+            ref={LineCRM}
+            x={35}
+            y={90}
+            endX={200}
+            endY={120}
+            stroke={2}
+            color={'#ff0000'}
+            duration={600}
+            deleteDelay={1000}
+          />
+
           <ImageMorph
             ref={ERP}
-            x={40}
-            y={40}
+            x={30}
+            y={200}
             scale={0.8}
             image1={'/canvas/icons/erp.gray.png'}
             image2={'/canvas/icons/erp.color.png'}
