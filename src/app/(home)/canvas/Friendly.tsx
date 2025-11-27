@@ -29,13 +29,14 @@ const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0 }) => {
       ref={imageFlipRef}
       x={200}
       y={100}
+      finalY={600}
       scale={{ x: 0.5, y: 0.5 }}
       image="/hubspot-blocks/read-batch.png"
-      direction="front"
+      direction="back"
       opacity={0}
       duration={2000}
       expansionScale={1.3}
-      radius={16}
+      radius={0}
       shadow={{
         color: 'rgba(0, 0, 0, 0.5)',
         blur: 10,

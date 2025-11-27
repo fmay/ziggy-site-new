@@ -19,6 +19,8 @@ export interface ImageFlipProps {
  duration: number
  expansionScale: number
  radius?: number
+ finalX?: number
+ finalY?: number
  shadow?: {
   color: string
   blur: number
@@ -34,7 +36,7 @@ export interface ImageFlipHandle {
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
- ({ x, y, scale, image: imageUrl, direction, opacity, duration, expansionScale, radius = 0, shadow }, ref) => {
+ ({ x, y, scale, image: imageUrl, direction, opacity, duration, expansionScale, radius = 0, finalX, finalY, shadow }, ref) => {
   const shapeRef = useRef<Konva.Shape>(null)
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null)
   const [trapezoidState, setTrapezoidState] = useState({
@@ -42,6 +44,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    topWidth: 0,
    height: 0,
    currentOpacity: 1,
+   currentX: x,
+   currentY: y,
   })
 
   // Load image
@@ -58,6 +62,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
      topWidth: width,
      height: height,
      currentOpacity: 1,
+     currentX: x,
+     currentY: y,
     })
    }
   }, [imageUrl, scale.x, scale.y])
@@ -81,12 +87,16 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
          topWidth: targetWidth,
          height: 10, // Nearly flat
          currentOpacity: opacity,
+         currentX: finalX !== undefined ? finalX : startValues.currentX,
+         currentY: finalY !== undefined ? finalY : startValues.currentY,
         }
       : {
          bottomWidth: targetWidth,
          topWidth: initialWidth,
          height: 10, // Nearly flat
          currentOpacity: opacity,
+         currentX: finalX !== undefined ? finalX : startValues.currentX,
+         currentY: finalY !== undefined ? finalY : startValues.currentY,
         }
 
     const animate = () => {
@@ -105,6 +115,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
       currentOpacity:
        startValues.currentOpacity +
        (targetValues.currentOpacity - startValues.currentOpacity) * eased,
+      currentX: startValues.currentX + (targetValues.currentX - startValues.currentX) * eased,
+      currentY: startValues.currentY + (targetValues.currentY - startValues.currentY) * eased,
      })
 
      if (progress < 1) {
@@ -127,6 +139,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
      topWidth: initialWidth,
      height: initialHeight,
      currentOpacity: 1,
+     currentX: x,
+     currentY: y,
     }
 
     const animate = () => {
@@ -145,6 +159,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
       currentOpacity:
        startValues.currentOpacity +
        (targetValues.currentOpacity - startValues.currentOpacity) * eased,
+      currentX: startValues.currentX + (targetValues.currentX - startValues.currentX) * eased,
+      currentY: startValues.currentY + (targetValues.currentY - startValues.currentY) * eased,
      })
 
      if (progress < 1) {
@@ -164,7 +180,7 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     sceneFunc={(context, shape) => {
      const imgWidth = loadedImage.width
      const imgHeight = loadedImage.height
-     const { bottomWidth, topWidth, height, currentOpacity } = trapezoidState
+     const { bottomWidth, topWidth, height, currentOpacity, currentX, currentY } = trapezoidState
 
      // Enable high-quality image smoothing
      context.imageSmoothingEnabled = true
@@ -200,26 +216,93 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
        context.save()
        context.beginPath()
        const r = Math.min(radius, bottomWidth / 2, height / 2)
-       context.moveTo(x + r, y)
-       context.lineTo(x + bottomWidth - r, y)
-       context.arcTo(x + bottomWidth, y, x + bottomWidth, y + r, r)
-       context.lineTo(x + bottomWidth, y + height - r)
-       context.arcTo(x + bottomWidth, y + height, x + bottomWidth - r, y + height, r)
-       context.lineTo(x + r, y + height)
-       context.arcTo(x, y + height, x, y + height - r, r)
-       context.lineTo(x, y + r)
-       context.arcTo(x, y, x + r, y, r)
+       context.moveTo(currentX + r, currentY)
+       context.lineTo(currentX + bottomWidth - r, currentY)
+       context.arcTo(currentX + bottomWidth, currentY, currentX + bottomWidth, currentY + r, r)
+       context.lineTo(currentX + bottomWidth, currentY + height - r)
+       context.arcTo(currentX + bottomWidth, currentY + height, currentX + bottomWidth - r, currentY + height, r)
+       context.lineTo(currentX + r, currentY + height)
+       context.arcTo(currentX, currentY + height, currentX, currentY + height - r, r)
+       context.lineTo(currentX, currentY + r)
+       context.arcTo(currentX, currentY, currentX + r, currentY, r)
        context.closePath()
        context.clip()
-       context.drawImage(loadedImage, x, y, bottomWidth, height)
+       context.drawImage(loadedImage, currentX, currentY, bottomWidth, height)
        context.restore()
       } else {
-       context.drawImage(loadedImage, x, y, bottomWidth, height)
+       context.drawImage(loadedImage, currentX, currentY, bottomWidth, height)
       }
      } else {
       // Draw image in strips to create trapezoid effect (more strips = smoother)
       const strips = 200
       const overlap = 0.6 // Pixels of overlap to eliminate white lines
+
+      // Apply rounded corner clipping if radius is specified
+      if (radius > 0) {
+       context.save()
+       context.beginPath()
+
+       // Calculate initial dimensions
+       const initialHeight = loadedImage.height * scale.y
+
+       // Remove rounded corners after first 20% of flip (when height drops below 80%)
+       // This avoids geometric issues with rounded corners on heavily distorted trapezoids
+       const heightRatio = height / initialHeight
+       const effectiveRadius = heightRatio > 0.7 ? radius : 0
+
+       // Further constrain radius to available space
+       const r = Math.min(effectiveRadius, Math.min(bottomWidth, topWidth) / 2, height / 2)
+
+       // Only apply rounding if radius is meaningful
+       if (r > 0.5) {
+        // Anchor positioning based on direction:
+        // - 'front': bottom edge is narrower (constant), so anchor bottom-left at x
+        // - 'back': top edge is narrower (constant), so anchor top-left at x
+        let bottomLeft, bottomRight, topLeft, topRight
+
+        if (direction === 'front') {
+         // Bottom edge anchored, top edge floats
+         bottomLeft = currentX
+         bottomRight = currentX + bottomWidth
+         topLeft = currentX + (bottomWidth - topWidth) / 2
+         topRight = topLeft + topWidth
+        } else {
+         // Top edge anchored, bottom edge floats
+         topLeft = currentX
+         topRight = currentX + topWidth
+         bottomLeft = currentX + (topWidth - bottomWidth) / 2
+         bottomRight = bottomLeft + bottomWidth
+        }
+
+        // Draw the rounded trapezoid path
+        context.moveTo(bottomLeft + r, currentY + height)
+
+        // Bottom-left corner
+        context.arcTo(bottomLeft, currentY + height, bottomLeft, currentY + height - r, r)
+
+        // Left edge
+        context.lineTo(topLeft, currentY + r)
+
+        // Top-left corner
+        context.arcTo(topLeft, currentY, topLeft + r, currentY, r)
+
+        // Top edge
+        context.lineTo(topRight - r, currentY)
+
+        // Top-right corner
+        context.arcTo(topRight, currentY, topRight, currentY + r, r)
+
+        // Right edge
+        context.lineTo(bottomRight, currentY + height - r)
+
+        // Bottom-right corner
+        context.arcTo(bottomRight, currentY + height, bottomRight - r, currentY + height, r)
+
+        // Bottom edge
+        context.closePath()
+        context.clip()
+       }
+      }
 
       for (let i = 0; i < strips; i++) {
        const stripY = i / strips
@@ -229,9 +312,17 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
        const stripWidth = bottomWidth + (topWidth - bottomWidth) * stripY
        const nextStripWidth = bottomWidth + (topWidth - bottomWidth) * nextStripY
 
-       // Calculate x offset to center the strip
-       const stripX = x - (stripWidth - bottomWidth) / 2
-       const nextStripX = x - (nextStripWidth - bottomWidth) / 2
+       // Calculate x offset based on direction (anchor to the narrower edge)
+       let stripX, nextStripX
+       if (direction === 'front') {
+        // Bottom edge anchored, center strips relative to bottom
+        stripX = currentX + (bottomWidth - stripWidth) / 2
+        nextStripX = currentX + (bottomWidth - nextStripWidth) / 2
+       } else {
+        // Top edge anchored, center strips relative to top
+        stripX = currentX + (topWidth - stripWidth) / 2
+        nextStripX = currentX + (topWidth - nextStripWidth) / 2
+       }
 
        // Draw strip from source image
        const sourceY = stripY * imgHeight
@@ -241,8 +332,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
        context.save()
        context.beginPath()
        // Add overlap by extending the strip slightly
-       const yStart = y + stripY * height - (i > 0 ? overlap : 0)
-       const yEnd = y + nextStripY * height + (i < strips - 1 ? overlap : 0)
+       const yStart = currentY + stripY * height - (i > 0 ? overlap : 0)
+       const yEnd = currentY + nextStripY * height + (i < strips - 1 ? overlap : 0)
 
        context.moveTo(stripX, yStart)
        context.lineTo(stripX + stripWidth, yStart)
@@ -264,6 +355,11 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
         yEnd - yStart
        )
 
+       context.restore()
+      }
+
+      // Restore context if we applied rounded corner clipping
+      if (radius > 0) {
        context.restore()
       }
      }
