@@ -4,9 +4,11 @@ import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 interface FriendlyProps {
   flip?: number
   restore?: number
+  initialX?: number
+  initialY?: number
 }
 
-const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0 }) => {
+const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0, initialX = 200, initialY = 100 }) => {
   const imageFlipRef = useRef<ImageFlipHandle>(null)
 
   // Trigger flip when flip prop changes
@@ -27,8 +29,8 @@ const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0 }) => {
   return (
     <ImageFlip
       ref={imageFlipRef}
-      x={200}
-      y={100}
+      x={initialX}
+      y={initialY}
       finalY={600}
       scale={{ x: 0.5, y: 0.5 }}
       image="/hubspot-blocks/read-batch.png"

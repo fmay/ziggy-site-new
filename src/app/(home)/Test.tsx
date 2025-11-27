@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useRef, useState } from 'react'
+import { FC, useRef, useState, useEffect } from 'react'
 import { Stage, Layer, Line } from 'react-konva'
 import Konva from 'konva'
 import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
@@ -17,6 +17,7 @@ const Test: FC<TestProps> = ({}) => {
   const [points, setPoints] = useState([50, 150, 150, 150, 150, 50, 50, 50])
   const [flipTrigger, setFlipTrigger] = useState(0)
   const [restoreTrigger, setRestoreTrigger] = useState(0)
+  const [friendlyY, setFriendlyY] = useState(50)
 
   const handleCanvasClick = () => {
     // Trigger Friendly flip
@@ -26,11 +27,23 @@ const Test: FC<TestProps> = ({}) => {
     lineDrawRef.current?.draw()
   }
 
+  // Restore Friendly at new Y position after 3 seconds
+  useEffect(() => {
+    if (flipTrigger > 0) {
+      const timer = setTimeout(() => {
+        setFriendlyY(150)
+        setRestoreTrigger(prev => prev + 1)
+      }, 3000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [flipTrigger])
+
   return (
     <div>
       <Stage width={600} height={600} onClick={handleCanvasClick}>
         <Layer>
-          <Friendly flip={flipTrigger} restore={restoreTrigger} />
+          <Friendly flip={flipTrigger} restore={restoreTrigger} initialX={200} initialY={friendlyY} />
           <LineDraw
             ref={lineDrawRef}
             x={400}
