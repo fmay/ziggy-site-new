@@ -69,6 +69,11 @@ interface RestoreAction {
   type: 'restore'
 }
 
+interface ZIndexAction {
+  type: 'zIndex'
+  value: number
+}
+
 // Separate action types per component type
 interface ImageFlipActions {
   target: React.RefObject<ImageFlipHandle | null>
@@ -80,6 +85,7 @@ interface ImageFlipActions {
     | FadeAction
     | BrightnessAction
     | GrayscaleAction
+    | ZIndexAction
   )[]
 }
 
@@ -90,7 +96,7 @@ interface ImageMorphActions {
 
 interface LineDrawActions {
   target: React.RefObject<LineDrawHandle | null>
-  actions: (DrawAction | RestoreAction)[]
+  actions: (DrawAction | RestoreAction | ZIndexAction)[]
 }
 
 type ImageActions = ImageFlipActions | ImageMorphActions | LineDrawActions
@@ -135,11 +141,11 @@ const Test: FC<TestProps> = ({}) => {
           },
           {
             target: CardOneInstance,
-            actions: [{ type: 'moveRelative', x: 0, y: 200, duration: 1500 }],
+            actions: [{ type: 'moveRelative', x: 0, y: 100, duration: 1500 }],
           },
           {
             target: CardFast,
-            actions: [{ type: 'moveRelative', x: 0, y: 200, duration: 1500 }],
+            actions: [{ type: 'moveRelative', x: 0, y: 100, duration: 1500 }],
           },
           {
             target: CRM,
@@ -160,7 +166,8 @@ const Test: FC<TestProps> = ({}) => {
             actions: [
               { type: 'unflip', duration: 0 },
               { type: 'moveRelative', x: 0, y: -400, duration: 0 },
-              { type: 'fade', opacity: 100, duration: 0 },
+              { type: 'fade', opacity: 100, duration: 20 },
+              { type: 'zIndex', value: 0 }, // Set specific layer
             ],
           },
         ],
@@ -228,7 +235,8 @@ const Test: FC<TestProps> = ({}) => {
       | MorphAction
       | ResetMorphAction
       | DrawAction
-      | RestoreAction,
+      | RestoreAction
+      | ZIndexAction,
   ) => {
     if (!ref.current) return
 
@@ -288,6 +296,11 @@ const Test: FC<TestProps> = ({}) => {
           ref.current.restore()
         }
         break
+      case 'zIndex':
+        if ('zIndex' in ref.current) {
+          ref.current.zIndex(action.value)
+        }
+        break
     }
   }
 
@@ -304,6 +317,7 @@ const Test: FC<TestProps> = ({}) => {
             ref={CardFast}
             x={200}
             y={0}
+            zIndex={0}
             scale={{ x: 1, y: 1 }}
             image="/canvas/cards/fast-friendly.card.png"
             direction="front"
@@ -315,6 +329,7 @@ const Test: FC<TestProps> = ({}) => {
             ref={CardOneInstance}
             x={200}
             y={100}
+            zIndex={1}
             scale={{ x: 1, y: 1 }}
             image="/canvas/cards/one-instance.card.png"
             direction="front"
@@ -326,6 +341,7 @@ const Test: FC<TestProps> = ({}) => {
             ref={CardCluster}
             x={200}
             y={200}
+            zIndex={2}
             scale={{ x: 1, y: 1 }}
             image="/canvas/cards/cluster.card.png"
             direction="front"

@@ -19,6 +19,7 @@ export interface LineDrawProps {
 export interface LineDrawHandle {
  draw: () => void
  restore: () => void
+ zIndex: (value: number) => void
 }
 
 const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
@@ -26,6 +27,7 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
   const lineRef = useRef<Konva.Line>(null)
   const [startProgress, setStartProgress] = useState(0)
   const [endProgress, setEndProgress] = useState(0)
+  const [currentZIndex, setCurrentZIndex] = useState(0)
   const deleteTimeoutRef = useRef<number | null>(null)
 
   // Clean up timeout on unmount
@@ -245,6 +247,10 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
      animate()
     }
    },
+
+   zIndex: (value: number) => {
+    setCurrentZIndex(value)
+   },
   }), [duration, deleteDelay])
 
   const points = getProgressPoints(startProgress, endProgress)
@@ -259,6 +265,7 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
     strokeWidth={stroke}
     lineCap="round"
     lineJoin="round"
+    zIndex={currentZIndex}
    />
   )
  }

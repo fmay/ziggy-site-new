@@ -21,6 +21,7 @@ export interface ImageFlipProps {
  height?: number
  brightness?: number
  grayscale?: boolean
+ zIndex?: number
 }
 
 export interface ImageFlipHandle {
@@ -31,12 +32,14 @@ export interface ImageFlipHandle {
  moveRelative: (x: number, y: number, duration?: number) => void
  brightness: (value: number, duration?: number) => void
  grayscale: (duration?: number) => void
+ zIndex: (value: number) => void
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
- ({ x, y, scale = { x: 1, y: 1 }, image: imageUrl, direction = 'front', duration, expansionScale, width, height, brightness = 100, grayscale = false }, ref) => {
+ ({ x, y, scale = { x: 1, y: 1 }, image: imageUrl, direction = 'front', duration, expansionScale, width, height, brightness = 100, grayscale = false, zIndex: initialZIndex = 0 }, ref) => {
   const shapeRef = useRef<Konva.Shape>(null)
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null)
+  const [currentZIndex, setCurrentZIndex] = useState(initialZIndex)
   const [trapezoidState, setTrapezoidState] = useState({
    bottomWidth: 0,
    topWidth: 0,
@@ -351,6 +354,10 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
     animate()
    },
+
+   zIndex: (value: number) => {
+    setCurrentZIndex(value)
+   },
   }), [loadedImage, duration, scale.x, scale.y, expansionScale, trapezoidState, width, height])
 
   if (!loadedImage) return null
@@ -367,6 +374,7 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     y={trapezoidState.currentY}
     width={maxWidth}
     height={Math.max(trapezoidState.height, initialHeight)}
+    zIndex={currentZIndex}
     sceneFunc={(context, shape) => {
      const imgWidth = loadedImage.width
      const imgHeight = loadedImage.height
