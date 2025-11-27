@@ -15,21 +15,19 @@ export interface ImageFlipProps {
  scale: Vector2D
  image: string
  expansionScale: number
-
- direction: 'front' | 'back'
- opacity: number
+ direction?: 'front' | 'back'
  duration: number
- finalX?: number
- finalY?: number
 }
 
 export interface ImageFlipHandle {
- flip: () => void
- restore: () => void
+ flip: (direction: 'front' | 'back', duration?: number) => void
+ unflip: (duration?: number) => void
+ fade: (opacity: number, duration?: number) => void
+ move: (x: number, y: number, duration?: number) => void
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
- ({ x, y, scale, image: imageUrl, direction, opacity, duration, expansionScale, finalX, finalY }, ref) => {
+ ({ x, y, scale, image: imageUrl, direction = 'front', duration, expansionScale }, ref) => {
   const shapeRef = useRef<Konva.Shape>(null)
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null)
   const [trapezoidState, setTrapezoidState] = useState({
@@ -61,56 +59,46 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    }
   }, [imageUrl, scale.x, scale.y])
 
-  // Expose flip and restore methods
+  // Expose flip, unflip, fade, and move methods
   useImperativeHandle(ref, () => ({
-   flip: () => {
+   flip: (flipDirection: 'front' | 'back', animDuration?: number) => {
     if (!loadedImage) return
 
+    const dur = animDuration ?? duration
     const startTime = Date.now()
     const initialWidth = loadedImage.width * scale.x
-    const initialHeight = loadedImage.height * scale.y
-    const startValues = trapezoidState
+    const startValues = { ...trapezoidState }
 
     // Calculate target values based on direction
     const targetWidth = initialWidth * expansionScale
     const targetValues =
-     direction === 'front'
+     flipDirection === 'front'
       ? {
          bottomWidth: initialWidth,
          topWidth: targetWidth,
          height: 10, // Nearly flat
-         currentOpacity: opacity,
-         currentX: finalX !== undefined ? finalX : startValues.currentX,
-         currentY: finalY !== undefined ? finalY : startValues.currentY,
         }
       : {
          bottomWidth: targetWidth,
          topWidth: initialWidth,
          height: 10, // Nearly flat
-         currentOpacity: opacity,
-         currentX: finalX !== undefined ? finalX : startValues.currentX,
-         currentY: finalY !== undefined ? finalY : startValues.currentY,
         }
 
     const animate = () => {
      const elapsed = Date.now() - startTime
-     const progress = Math.min(elapsed / duration, 1)
+     const progress = Math.min(elapsed / dur, 1)
 
      // Easing function (ease-in-out)
      const eased =
       progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
 
-     setTrapezoidState({
+     setTrapezoidState(prev => ({
+      ...prev,
       bottomWidth:
        startValues.bottomWidth + (targetValues.bottomWidth - startValues.bottomWidth) * eased,
       topWidth: startValues.topWidth + (targetValues.topWidth - startValues.topWidth) * eased,
       height: startValues.height + (targetValues.height - startValues.height) * eased,
-      currentOpacity:
-       startValues.currentOpacity +
-       (targetValues.currentOpacity - startValues.currentOpacity) * eased,
-      currentX: startValues.currentX + (targetValues.currentX - startValues.currentX) * eased,
-      currentY: startValues.currentY + (targetValues.currentY - startValues.currentY) * eased,
-     })
+     }))
 
      if (progress < 1) {
       requestAnimationFrame(animate)
@@ -120,23 +108,131 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     animate()
    },
 
-   restore: () => {
+   unflip: (animDuration?: number) => {
     if (!loadedImage) return
 
+    const dur = animDuration ?? duration
     const initialWidth = loadedImage.width * scale.x
     const initialHeight = loadedImage.height * scale.y
 
-    // Restore immediately without animation
-    setTrapezoidState({
+    // If duration is 0, restore immediately
+    if (dur === 0) {
+     setTrapezoidState(prev => ({
+      ...prev,
+      bottomWidth: initialWidth,
+      topWidth: initialWidth,
+      height: initialHeight,
+     }))
+     return
+    }
+
+    const startTime = Date.now()
+    const startValues = { ...trapezoidState }
+    const targetValues = {
      bottomWidth: initialWidth,
      topWidth: initialWidth,
      height: initialHeight,
-     currentOpacity: 1,
-     currentX: x,
-     currentY: y,
-    })
+    }
+
+    const animate = () => {
+     const elapsed = Date.now() - startTime
+     const progress = Math.min(elapsed / dur, 1)
+
+     // Easing function (ease-in-out)
+     const eased =
+      progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+     setTrapezoidState(prev => ({
+      ...prev,
+      bottomWidth:
+       startValues.bottomWidth + (targetValues.bottomWidth - startValues.bottomWidth) * eased,
+      topWidth: startValues.topWidth + (targetValues.topWidth - startValues.topWidth) * eased,
+      height: startValues.height + (targetValues.height - startValues.height) * eased,
+     }))
+
+     if (progress < 1) {
+      requestAnimationFrame(animate)
+     }
+    }
+
+    animate()
    },
-  }))
+
+   fade: (targetOpacity: number, animDuration?: number) => {
+    const dur = animDuration ?? duration
+
+    // If duration is 0, fade immediately
+    if (dur === 0) {
+     setTrapezoidState(prev => ({
+      ...prev,
+      currentOpacity: targetOpacity,
+     }))
+     return
+    }
+
+    const startTime = Date.now()
+    const startOpacity = trapezoidState.currentOpacity
+
+    const animate = () => {
+     const elapsed = Date.now() - startTime
+     const progress = Math.min(elapsed / dur, 1)
+
+     // Easing function (ease-in-out)
+     const eased =
+      progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+     setTrapezoidState(prev => ({
+      ...prev,
+      currentOpacity: startOpacity + (targetOpacity - startOpacity) * eased,
+     }))
+
+     if (progress < 1) {
+      requestAnimationFrame(animate)
+     }
+    }
+
+    animate()
+   },
+
+   move: (targetX: number, targetY: number, animDuration?: number) => {
+    const dur = animDuration ?? duration
+
+    // If duration is 0, move immediately
+    if (dur === 0) {
+     setTrapezoidState(prev => ({
+      ...prev,
+      currentX: targetX,
+      currentY: targetY,
+     }))
+     return
+    }
+
+    const startTime = Date.now()
+    const startX = trapezoidState.currentX
+    const startY = trapezoidState.currentY
+
+    const animate = () => {
+     const elapsed = Date.now() - startTime
+     const progress = Math.min(elapsed / dur, 1)
+
+     // Easing function (ease-in-out)
+     const eased =
+      progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+     setTrapezoidState(prev => ({
+      ...prev,
+      currentX: startX + (targetX - startX) * eased,
+      currentY: startY + (targetY - startY) * eased,
+     }))
+
+     if (progress < 1) {
+      requestAnimationFrame(animate)
+     }
+    }
+
+    animate()
+   },
+  }), [loadedImage, duration, scale.x, scale.y, expansionScale, trapezoidState])
 
   if (!loadedImage) return null
 

@@ -14,14 +14,14 @@ const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0, initialX = 200, in
   // Trigger flip when flip prop changes
   useEffect(() => {
     if (flip > 0) {
-      imageFlipRef.current?.flip()
+      imageFlipRef.current?.flip('back')
     }
   }, [flip])
 
   // Trigger restore when restore prop changes
   useEffect(() => {
     if (restore > 0) {
-      imageFlipRef.current?.restore()
+      imageFlipRef.current?.unflip(0)
     }
   }, [restore])
 
@@ -31,11 +31,9 @@ const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0, initialX = 200, in
       ref={imageFlipRef}
       x={initialX}
       y={initialY}
-      finalY={600}
       scale={{ x: 0.5, y: 0.5 }}
       image="/hubspot-blocks/read-batch.png"
       direction="back"
-      opacity={0}
       duration={2000}
       expansionScale={1.3}
     />

@@ -12,40 +12,37 @@ interface TestProps {}
 
 const Test: FC<TestProps> = ({}) => {
   const lineDrawRef = useRef<LineDrawHandle>(null)
-  const [flipTrigger, setFlipTrigger] = useState(0)
-  const [flipTriggerPerformance, setFlipTriggerPerformance] = useState(0)
-  const [restoreTrigger, setRestoreTrigger] = useState(0)
-  const [restoreTriggerPerformance, setRestoreTriggerPerformance] = useState(0)
-  const [friendlyY, setFriendlyY] = useState(200)
-  const [performanceY, setPerformanceY] = useState(50)
+  const exampleImageFlipRef = useRef<ImageFlipHandle>(null)
 
   const handleCanvasClick = () => {
-    // Trigger Friendly flip
-    setFlipTrigger(prev => prev + 1)
+    // Example: Call flip, move, and fade in parallel on the same ImageFlip
+    // All three animations will run simultaneously
+    exampleImageFlipRef.current?.flip('back', 1500)
+    exampleImageFlipRef.current?.move(300, 600, 1500)
+    exampleImageFlipRef.current?.fade(0.3, 1500)
 
     // Trigger line drawing
     lineDrawRef.current?.draw()
   }
 
-  // Restore Friendly at new Y position after 3 seconds
-  useEffect(() => {
-    if (flipTrigger > 0) {
-      const timer = setTimeout(() => {
-        setFriendlyY(50)
-        setPerformanceY(200)
-        setRestoreTrigger(prev => prev + 1)
-      }, 3000)
-
-      return () => clearTimeout(timer)
-    }
-  }, [flipTrigger])
-
   return (
     <div>
       <Stage width={600} height={600} onClick={handleCanvasClick}>
         <Layer>
-          <Performance flip={flipTriggerPerformance} restore={restoreTriggerPerformance} initialX={200} initialY={performanceY} />
-          <Friendly flip={flipTrigger} restore={restoreTrigger} initialX={200} initialY={friendlyY} />
+          {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
+          <ImageFlip
+            ref={exampleImageFlipRef}
+            x={300}
+            y={50}
+            scale={{ x: 0.4, y: 0.4 }}
+            image="/hubspot-blocks/read-batch.png"
+            direction="back"
+            duration={1500}
+            expansionScale={0.5}
+          />
+
+          {/*<Performance flip={flipTriggerPerformance} restore={restoreTriggerPerformance} initialX={200} initialY={performanceY} />*/}
+          {/*<Friendly flip={flipTrigger} restore={restoreTrigger} initialX={200} initialY={friendlyY} />*/}
           {/*<LineDraw*/}
           {/*  ref={lineDrawRef}*/}
           {/*  x={400}*/}
