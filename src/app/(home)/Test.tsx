@@ -61,6 +61,7 @@ const Test: FC<TestProps> = ({}) => {
   const I1 = useRef<ImageFlipHandle>(null)
   const I2 = useRef<ImageFlipHandle>(null)
   const I3 = useRef<ImageFlipHandle>(null)
+  const Stripe = useRef<ImageFlipHandle>(null)
 
   // Scene definition
   const sceneDefinition: SceneDefinition = {
@@ -226,6 +227,17 @@ const Test: FC<TestProps> = ({}) => {
             direction="front"
             duration={1500}
             expansionScale={0.5}
+          />
+
+          <ImageFlip
+            ref={Stripe}
+            // width={300}
+            x={20}
+            y={20}
+            scale={{ x: 0.4, y: 0.4 }}
+            image="/test.png"
+            duration={1000}
+            expansionScale={1}
           />
         </Layer>
       </Stage>

@@ -19,6 +19,7 @@ export interface ImageFlipProps {
  duration: number
  width?: number
  height?: number
+ brightness?: number
  grayscale?: boolean
 }
 
@@ -28,11 +29,12 @@ export interface ImageFlipHandle {
  fade: (opacity: number, duration?: number) => void
  move: (x: number, y: number, duration?: number) => void
  moveRelative: (x: number, y: number, duration?: number) => void
+ brightness: (value: number, duration?: number) => void
  grayscale: (duration?: number) => void
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
- ({ x, y, scale = { x: 1, y: 1 }, image: imageUrl, direction = 'front', duration, expansionScale, width, height, grayscale = false }, ref) => {
+ ({ x, y, scale = { x: 1, y: 1 }, image: imageUrl, direction = 'front', duration, expansionScale, width, height, brightness = 100, grayscale = false }, ref) => {
   const shapeRef = useRef<Konva.Shape>(null)
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null)
   const [trapezoidState, setTrapezoidState] = useState({
@@ -42,6 +44,7 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    currentOpacity: 1,
    currentX: x,
    currentY: y,
+   brightness,
    isGrayscale: grayscale,
   })
 
@@ -61,10 +64,11 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
      currentOpacity: 1,
      currentX: x,
      currentY: y,
+     brightness,
      isGrayscale: grayscale,
     })
    }
-  }, [imageUrl, scale.x, scale.y, width, height, grayscale])
+  }, [imageUrl, scale.x, scale.y, width, height, brightness, grayscale])
 
   // Expose flip, unflip, fade, and move methods
   useImperativeHandle(ref, () => ({
@@ -281,6 +285,42 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     animate()
    },
 
+   brightness: (value: number, animDuration?: number) => {
+    const dur = animDuration ?? duration
+
+    // If duration is 0, apply immediately
+    if (dur === 0) {
+     setTrapezoidState(prev => ({
+      ...prev,
+      brightness: value,
+     }))
+     return
+    }
+
+    const startTime = Date.now()
+    const startBrightness = trapezoidState.brightness
+
+    const animate = () => {
+     const elapsed = Date.now() - startTime
+     const progress = Math.min(elapsed / dur, 1)
+
+     // Easing function (ease-in-out)
+     const eased =
+      progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+     setTrapezoidState(prev => ({
+      ...prev,
+      brightness: startBrightness + (value - startBrightness) * eased,
+     }))
+
+     if (progress < 1) {
+      requestAnimationFrame(animate)
+     }
+    }
+
+    animate()
+   },
+
    grayscale: (animDuration?: number) => {
     const dur = animDuration ?? duration
 
@@ -330,7 +370,7 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     sceneFunc={(context, shape) => {
      const imgWidth = loadedImage.width
      const imgHeight = loadedImage.height
-     const { bottomWidth, topWidth, height, currentOpacity, isGrayscale } = trapezoidState
+     const { bottomWidth, topWidth, height, currentOpacity, brightness, isGrayscale } = trapezoidState
 
      // Enable high-quality image smoothing
      context.imageSmoothingEnabled = true
@@ -341,9 +381,16 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
      // Set opacity
      context.globalAlpha = currentOpacity
 
-     // Apply grayscale filter if needed
+     // Apply filters
+     const filters: string[] = []
+     if (brightness !== 100) {
+      filters.push(`brightness(${brightness}%)`)
+     }
      if (isGrayscale) {
-      context.filter = 'grayscale(100%)'
+      filters.push('grayscale(100%)')
+     }
+     if (filters.length > 0) {
+      context.filter = filters.join(' ')
      }
 
      // Check if image is in rectangular state (not transformed)
