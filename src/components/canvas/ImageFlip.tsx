@@ -12,11 +12,13 @@ interface Vector2D {
 export interface ImageFlipProps {
  x: number
  y: number
- scale: Vector2D
+ scale?: Vector2D
  image: string
  expansionScale: number
  direction?: 'front' | 'back'
  duration: number
+ width?: number
+ height?: number
 }
 
 export interface ImageFlipHandle {
@@ -27,7 +29,7 @@ export interface ImageFlipHandle {
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
- ({ x, y, scale, image: imageUrl, direction = 'front', duration, expansionScale }, ref) => {
+ ({ x, y, scale = { x: 1, y: 1 }, image: imageUrl, direction = 'front', duration, expansionScale, width, height }, ref) => {
   const shapeRef = useRef<Konva.Shape>(null)
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null)
   const [trapezoidState, setTrapezoidState] = useState({
@@ -45,19 +47,19 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    img.src = imageUrl
    img.onload = () => {
     setLoadedImage(img)
-    // Set initial dimensions based on loaded image and scale
-    const width = img.width * scale.x
-    const height = img.height * scale.y
+    // Set initial dimensions: use provided width/height, or calculate from image and scale
+    const initialWidth = width ?? img.width * scale.x
+    const initialHeight = height ?? img.height * scale.y
     setTrapezoidState({
-     bottomWidth: width,
-     topWidth: width,
-     height: height,
+     bottomWidth: initialWidth,
+     topWidth: initialWidth,
+     height: initialHeight,
      currentOpacity: 1,
      currentX: x,
      currentY: y,
     })
    }
-  }, [imageUrl, scale.x, scale.y])
+  }, [imageUrl, scale.x, scale.y, width, height])
 
   // Expose flip, unflip, fade, and move methods
   useImperativeHandle(ref, () => ({
@@ -66,7 +68,7 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
     const dur = animDuration ?? duration
     const startTime = Date.now()
-    const initialWidth = loadedImage.width * scale.x
+    const initialWidth = width ?? loadedImage.width * scale.x
     const startValues = { ...trapezoidState }
 
     // Calculate target values based on direction
@@ -112,8 +114,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     if (!loadedImage) return
 
     const dur = animDuration ?? duration
-    const initialWidth = loadedImage.width * scale.x
-    const initialHeight = loadedImage.height * scale.y
+    const initialWidth = width ?? loadedImage.width * scale.x
+    const initialHeight = height ?? loadedImage.height * scale.y
 
     // If duration is 0, restore immediately
     if (dur === 0) {
@@ -232,17 +234,26 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
     animate()
    },
-  }), [loadedImage, duration, scale.x, scale.y, expansionScale, trapezoidState])
+  }), [loadedImage, duration, scale.x, scale.y, expansionScale, trapezoidState, width, height])
 
   if (!loadedImage) return null
+
+  // Calculate the maximum width needed for the shape bounds (for expansion)
+  const initialWidth = width ?? loadedImage.width * scale.x
+  const initialHeight = height ?? loadedImage.height * scale.y
+  const maxWidth = Math.max(initialWidth, initialWidth * expansionScale)
 
   return (
    <Shape
     ref={shapeRef}
+    x={trapezoidState.currentX}
+    y={trapezoidState.currentY}
+    width={maxWidth}
+    height={Math.max(trapezoidState.height, initialHeight)}
     sceneFunc={(context, shape) => {
      const imgWidth = loadedImage.width
      const imgHeight = loadedImage.height
-     const { bottomWidth, topWidth, height, currentOpacity, currentX, currentY } = trapezoidState
+     const { bottomWidth, topWidth, height, currentOpacity } = trapezoidState
 
      // Enable high-quality image smoothing
      context.imageSmoothingEnabled = true
@@ -254,11 +265,12 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
      context.globalAlpha = currentOpacity
 
      // Check if image is in rectangular state (not transformed)
-     const isRectangular = Math.abs(bottomWidth - topWidth) < 0.1 && height > 50
+     const isRectangular = Math.abs(bottomWidth - topWidth) < 0.1 && height > 10
 
      if (isRectangular) {
       // Use simple drawImage for rectangular state (no artifacts)
-      context.drawImage(loadedImage, currentX, currentY, bottomWidth, height)
+      // No offset needed - draw at origin since Shape handles positioning
+      context.drawImage(loadedImage, 0, 0, bottomWidth, height)
      } else {
       // Draw image in strips to create trapezoid effect (more strips = smoother)
       const strips = 200
@@ -274,14 +286,16 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
        // Calculate x offset based on direction (anchor to the narrower edge)
        let stripX, nextStripX
+       const maxWidth = Math.max(bottomWidth, topWidth)
+
        if (direction === 'front') {
         // Bottom edge anchored, center strips relative to bottom
-        stripX = currentX + (bottomWidth - stripWidth) / 2
-        nextStripX = currentX + (bottomWidth - nextStripWidth) / 2
+        stripX = (maxWidth - stripWidth) / 2
+        nextStripX = (maxWidth - nextStripWidth) / 2
        } else {
         // Top edge anchored, center strips relative to top
-        stripX = currentX + (topWidth - stripWidth) / 2
-        nextStripX = currentX + (topWidth - nextStripWidth) / 2
+        stripX = (maxWidth - stripWidth) / 2
+        nextStripX = (maxWidth - nextStripWidth) / 2
        }
 
        // Draw strip from source image
@@ -291,8 +305,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
        context.save()
        context.beginPath()
        // Add overlap by extending the strip slightly
-       const yStart = currentY + stripY * height - (i > 0 ? overlap : 0)
-       const yEnd = currentY + nextStripY * height + (i < strips - 1 ? overlap : 0)
+       const yStart = stripY * height - (i > 0 ? overlap : 0)
+       const yEnd = nextStripY * height + (i < strips - 1 ? overlap : 0)
 
        context.moveTo(stripX, yStart)
        context.lineTo(stripX + stripWidth, yStart)
