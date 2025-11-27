@@ -26,6 +26,7 @@ export interface ImageFlipHandle {
  unflip: (duration?: number) => void
  fade: (opacity: number, duration?: number) => void
  move: (x: number, y: number, duration?: number) => void
+ moveRelative: (x: number, y: number, duration?: number) => void
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
@@ -197,6 +198,47 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    },
 
    move: (targetX: number, targetY: number, animDuration?: number) => {
+    const dur = animDuration ?? duration
+
+    // If duration is 0, move immediately
+    if (dur === 0) {
+     setTrapezoidState(prev => ({
+      ...prev,
+      currentX: targetX,
+      currentY: targetY,
+     }))
+     return
+    }
+
+    const startTime = Date.now()
+    const startX = trapezoidState.currentX
+    const startY = trapezoidState.currentY
+
+    const animate = () => {
+     const elapsed = Date.now() - startTime
+     const progress = Math.min(elapsed / dur, 1)
+
+     // Easing function (ease-in-out)
+     const eased =
+      progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+     setTrapezoidState(prev => ({
+      ...prev,
+      currentX: startX + (targetX - startX) * eased,
+      currentY: startY + (targetY - startY) * eased,
+     }))
+
+     if (progress < 1) {
+      requestAnimationFrame(animate)
+     }
+    }
+
+    animate()
+   },
+
+   moveRelative: (deltaX: number, deltaY: number, animDuration?: number) => {
+    const targetX = trapezoidState.currentX + deltaX
+    const targetY = trapezoidState.currentY + deltaY
     const dur = animDuration ?? duration
 
     // If duration is 0, move immediately
