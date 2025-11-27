@@ -23,7 +23,8 @@ export interface LineDrawHandle {
 const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
  ({ x, y, endX, endY, stroke, color, duration, deleteDelay = 0 }, ref) => {
   const lineRef = useRef<Konva.Line>(null)
-  const [progress, setProgress] = useState(0)
+  const [startProgress, setStartProgress] = useState(0)
+  const [endProgress, setEndProgress] = useState(0)
   const deleteTimeoutRef = useRef<number | null>(null)
 
   // Clean up timeout on unmount
@@ -35,17 +36,19 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
    }
   }, [])
 
-  // Get points array based on progress (0 to 1)
-  const getProgressPoints = (prog: number): number[] => {
-   if (prog === 0) {
+  // Get points array based on start and end progress (0 to 1)
+  const getProgressPoints = (startProg: number, endProg: number): number[] => {
+   if (endProg === 0 || startProg >= endProg) {
     return []
    }
 
-   // Calculate the current end point based on progress
-   const currentEndX = x + (endX - x) * prog
-   const currentEndY = y + (endY - y) * prog
+   // Calculate the start and end points based on progress
+   const currentStartX = x + (endX - x) * startProg
+   const currentStartY = y + (endY - y) * startProg
+   const currentEndX = x + (endX - x) * endProg
+   const currentEndY = y + (endY - y) * endProg
 
-   return [x, y, currentEndX, currentEndY]
+   return [currentStartX, currentStartY, currentEndX, currentEndY]
   }
 
   // Expose draw and restore methods
@@ -57,8 +60,9 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
      deleteTimeoutRef.current = null
     }
 
-    // Reset to start
-    setProgress(0)
+    // Reset to start (line not visible)
+    setStartProgress(0)
+    setEndProgress(0)
 
     // Schedule auto-delete if deleteDelay is set (start timer immediately)
     if (deleteDelay > 0) {
@@ -69,16 +73,16 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
 
     if (duration === 0) {
      // Draw immediately
-     setProgress(1)
+     setEndProgress(1)
     } else {
-     // Animate drawing
+     // Animate drawing - end point moves from start to end
      const startTime = Date.now()
 
      const animate = () => {
       const elapsed = Date.now() - startTime
       const prog = Math.min(elapsed / duration, 1)
 
-      setProgress(prog)
+      setEndProgress(prog)
 
       if (prog < 1) {
        requestAnimationFrame(animate)
@@ -98,20 +102,19 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
 
     if (duration === 0) {
      // Restore immediately (hide the line)
-     setProgress(0)
+     setStartProgress(1)
     } else {
-     // Animate restoration (reverse the line drawing)
+     // Animate restoration - start point moves from start to end (same direction as draw)
      const startTime = Date.now()
-     const startProgress = progress
 
      const animate = () => {
       const elapsed = Date.now() - startTime
-      const animProgress = Math.min(elapsed / duration, 1)
+      const prog = Math.min(elapsed / duration, 1)
 
-      // Animate from current progress back to 0
-      setProgress(startProgress * (1 - animProgress))
+      // Animate start point forward to "erase" the line in the same direction
+      setStartProgress(prog)
 
-      if (animProgress < 1) {
+      if (prog < 1) {
        requestAnimationFrame(animate)
       }
      }
@@ -119,9 +122,9 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
      animate()
     }
    },
-  }), [duration, deleteDelay, progress])
+  }), [duration, deleteDelay])
 
-  const points = getProgressPoints(progress)
+  const points = getProgressPoints(startProgress, endProgress)
 
   if (points.length < 2) return null
 

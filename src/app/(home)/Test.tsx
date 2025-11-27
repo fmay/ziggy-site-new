@@ -61,6 +61,14 @@ interface ResetMorphAction {
   duration?: number
 }
 
+interface DrawAction {
+  type: 'draw'
+}
+
+interface RestoreAction {
+  type: 'restore'
+}
+
 // Separate action types per component type
 interface ImageFlipActions {
   target: React.RefObject<ImageFlipHandle | null>
@@ -80,7 +88,12 @@ interface ImageMorphActions {
   actions: (MorphAction | ResetMorphAction)[]
 }
 
-type ImageActions = ImageFlipActions | ImageMorphActions
+interface LineDrawActions {
+  target: React.RefObject<LineDrawHandle | null>
+  actions: (DrawAction | RestoreAction)[]
+}
+
+type ImageActions = ImageFlipActions | ImageMorphActions | LineDrawActions
 
 interface SceneStep {
   delay: number // milliseconds after previous step completes
@@ -115,6 +128,10 @@ const Test: FC<TestProps> = ({}) => {
               { type: 'moveRelative', x: 0, y: 200, duration: 1500 },
               { type: 'fade', opacity: 0, duration: 1500 },
             ],
+          },
+          {
+            target: LineCRM,
+            actions: [{ type: 'draw' }],
           },
           {
             target: CardOneInstance,
@@ -196,7 +213,10 @@ const Test: FC<TestProps> = ({}) => {
 
   // Execute individual action
   const executeAction = (
-    ref: React.RefObject<ImageFlipHandle | null> | React.RefObject<ImageMorphHandle | null>,
+    ref:
+      | React.RefObject<ImageFlipHandle | null>
+      | React.RefObject<ImageMorphHandle | null>
+      | React.RefObject<LineDrawHandle | null>,
     action:
       | FlipAction
       | UnflipAction
@@ -206,7 +226,9 @@ const Test: FC<TestProps> = ({}) => {
       | BrightnessAction
       | GrayscaleAction
       | MorphAction
-      | ResetMorphAction,
+      | ResetMorphAction
+      | DrawAction
+      | RestoreAction,
   ) => {
     if (!ref.current) return
 
@@ -254,6 +276,16 @@ const Test: FC<TestProps> = ({}) => {
       case 'reset':
         if ('reset' in ref.current) {
           ref.current.reset(action.duration)
+        }
+        break
+      case 'draw':
+        if ('draw' in ref.current) {
+          ref.current.draw()
+        }
+        break
+      case 'restore':
+        if ('restore' in ref.current) {
+          ref.current.restore()
         }
         break
     }
@@ -316,11 +348,11 @@ const Test: FC<TestProps> = ({}) => {
             x={35}
             y={90}
             endX={200}
-            endY={120}
+            endY={260}
             stroke={2}
             color={'#ff0000'}
             duration={600}
-            deleteDelay={1000}
+            deleteDelay={3000}
           />
 
           <ImageMorph
