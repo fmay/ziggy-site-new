@@ -14,20 +14,13 @@ export interface ImageFlipProps {
  y: number
  scale: Vector2D
  image: string
+ expansionScale: number
+
  direction: 'front' | 'back'
  opacity: number
  duration: number
- expansionScale: number
- radius?: number
  finalX?: number
  finalY?: number
- shadow?: {
-  color: string
-  blur: number
-  offsetX: number
-  offsetY: number
-  opacity?: number
- }
 }
 
 export interface ImageFlipHandle {
@@ -36,7 +29,7 @@ export interface ImageFlipHandle {
 }
 
 const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
- ({ x, y, scale, image: imageUrl, direction, opacity, duration, expansionScale, radius = 0, finalX, finalY, shadow }, ref) => {
+ ({ x, y, scale, image: imageUrl, direction, opacity, duration, expansionScale, finalX, finalY }, ref) => {
   const shapeRef = useRef<Konva.Shape>(null)
   const [loadedImage, setLoadedImage] = useState<HTMLImageElement | null>(null)
   const [trapezoidState, setTrapezoidState] = useState({
@@ -161,21 +154,6 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
       ;(context as any).imageSmoothingQuality = 'high'
      }
 
-     // Apply shadow if specified
-     if (shadow) {
-      context.shadowColor = shadow.color
-      context.shadowBlur = shadow.blur
-      context.shadowOffsetX = shadow.offsetX
-      context.shadowOffsetY = shadow.offsetY
-      if (shadow.opacity !== undefined) {
-       // Parse the color and apply opacity
-       const tempAlpha = context.globalAlpha
-       context.globalAlpha = shadow.opacity
-       context.shadowColor = shadow.color
-       context.globalAlpha = tempAlpha
-      }
-     }
-
      // Set opacity
      context.globalAlpha = currentOpacity
 
@@ -184,98 +162,11 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
      if (isRectangular) {
       // Use simple drawImage for rectangular state (no artifacts)
-      if (radius > 0) {
-       // Draw with rounded corners
-       context.save()
-       context.beginPath()
-       const r = Math.min(radius, bottomWidth / 2, height / 2)
-       context.moveTo(currentX + r, currentY)
-       context.lineTo(currentX + bottomWidth - r, currentY)
-       context.arcTo(currentX + bottomWidth, currentY, currentX + bottomWidth, currentY + r, r)
-       context.lineTo(currentX + bottomWidth, currentY + height - r)
-       context.arcTo(currentX + bottomWidth, currentY + height, currentX + bottomWidth - r, currentY + height, r)
-       context.lineTo(currentX + r, currentY + height)
-       context.arcTo(currentX, currentY + height, currentX, currentY + height - r, r)
-       context.lineTo(currentX, currentY + r)
-       context.arcTo(currentX, currentY, currentX + r, currentY, r)
-       context.closePath()
-       context.clip()
-       context.drawImage(loadedImage, currentX, currentY, bottomWidth, height)
-       context.restore()
-      } else {
-       context.drawImage(loadedImage, currentX, currentY, bottomWidth, height)
-      }
+      context.drawImage(loadedImage, currentX, currentY, bottomWidth, height)
      } else {
       // Draw image in strips to create trapezoid effect (more strips = smoother)
       const strips = 200
       const overlap = 0.6 // Pixels of overlap to eliminate white lines
-
-      // Apply rounded corner clipping if radius is specified
-      if (radius > 0) {
-       context.save()
-       context.beginPath()
-
-       // Calculate initial dimensions
-       const initialHeight = loadedImage.height * scale.y
-
-       // Remove rounded corners after first 20% of flip (when height drops below 80%)
-       // This avoids geometric issues with rounded corners on heavily distorted trapezoids
-       const heightRatio = height / initialHeight
-       const effectiveRadius = heightRatio > 0.7 ? radius : 0
-
-       // Further constrain radius to available space
-       const r = Math.min(effectiveRadius, Math.min(bottomWidth, topWidth) / 2, height / 2)
-
-       // Only apply rounding if radius is meaningful
-       if (r > 0.5) {
-        // Anchor positioning based on direction:
-        // - 'front': bottom edge is narrower (constant), so anchor bottom-left at x
-        // - 'back': top edge is narrower (constant), so anchor top-left at x
-        let bottomLeft, bottomRight, topLeft, topRight
-
-        if (direction === 'front') {
-         // Bottom edge anchored, top edge floats
-         bottomLeft = currentX
-         bottomRight = currentX + bottomWidth
-         topLeft = currentX + (bottomWidth - topWidth) / 2
-         topRight = topLeft + topWidth
-        } else {
-         // Top edge anchored, bottom edge floats
-         topLeft = currentX
-         topRight = currentX + topWidth
-         bottomLeft = currentX + (topWidth - bottomWidth) / 2
-         bottomRight = bottomLeft + bottomWidth
-        }
-
-        // Draw the rounded trapezoid path
-        context.moveTo(bottomLeft + r, currentY + height)
-
-        // Bottom-left corner
-        context.arcTo(bottomLeft, currentY + height, bottomLeft, currentY + height - r, r)
-
-        // Left edge
-        context.lineTo(topLeft, currentY + r)
-
-        // Top-left corner
-        context.arcTo(topLeft, currentY, topLeft + r, currentY, r)
-
-        // Top edge
-        context.lineTo(topRight - r, currentY)
-
-        // Top-right corner
-        context.arcTo(topRight, currentY, topRight, currentY + r, r)
-
-        // Right edge
-        context.lineTo(bottomRight, currentY + height - r)
-
-        // Bottom-right corner
-        context.arcTo(bottomRight, currentY + height, bottomRight - r, currentY + height, r)
-
-        // Bottom edge
-        context.closePath()
-        context.clip()
-       }
-      }
 
       for (let i = 0; i < strips; i++) {
        const stripY = i / strips
@@ -300,7 +191,6 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
        // Draw strip from source image
        const sourceY = stripY * imgHeight
        const sourceHeight = imgHeight / strips
-       const stripHeight = height / strips
 
        context.save()
        context.beginPath()
@@ -328,11 +218,6 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
         yEnd - yStart
        )
 
-       context.restore()
-      }
-
-      // Restore context if we applied rounded corner clipping
-      if (radius > 0) {
        context.restore()
       }
      }

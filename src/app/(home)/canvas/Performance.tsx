@@ -38,13 +38,6 @@ const Performance: FC<PerformanceProps> = ({ flip = 0, restore = 0, initialX = 2
       opacity={0}
       duration={2000}
       expansionScale={1.3}
-      radius={0}
-      shadow={{
-        color: 'rgba(0, 0, 0, 0.5)',
-        blur: 10,
-        offsetX: 5,
-        offsetY: 5,
-      }}
     />
   )
 }

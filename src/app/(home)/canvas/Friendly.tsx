@@ -38,13 +38,6 @@ const Friendly: FC<FriendlyProps> = ({ flip = 0, restore = 0, initialX = 200, in
       opacity={0}
       duration={2000}
       expansionScale={1.3}
-      radius={0}
-      shadow={{
-        color: 'rgba(0, 0, 0, 0.5)',
-        blur: 10,
-        offsetX: 5,
-        offsetY: 5,
-      }}
     />
   )
 }
