@@ -47,7 +47,8 @@ interface ImageActions {
 }
 
 interface SceneStep {
-  delay: number // milliseconds from previous step
+  delay: number // milliseconds after previous step completes
+  duration: number // how long this step takes to complete
   imageActions: ImageActions[]
 }
 
@@ -65,7 +66,8 @@ const Test: FC<TestProps> = ({}) => {
   const sceneDefinition: SceneDefinition = {
     steps: [
       {
-        delay: 0, // After 2 seconds
+        delay: 0, // Start immediately
+        duration: 1500, // This step takes 1500ms to complete
         imageActions: [
           {
             target: 'I1',
@@ -86,13 +88,15 @@ const Test: FC<TestProps> = ({}) => {
         ],
       },
       {
-        delay: 100, // After another 0.1 seconds
+        delay: 100, // Wait 100ms after previous step completes
+        duration: 100, // This step takes 1500ms to complete
         imageActions: [
           {
             target: 'I1',
             actions: [
+              { type: 'fade', opacity: 100, duration: 100 },
               { type: 'unflip', duration: 0 },
-              { type: 'move', x: 300, y: 0, duration: 1500 },
+              { type: 'move', x: 300, y: 0, duration: 100 },
             ],
           },
         ],
@@ -123,10 +127,11 @@ const Test: FC<TestProps> = ({}) => {
 
   // Scene execution function
   const executeScene = (scene: SceneDefinition) => {
-    let cumulativeDelay = 0
+    let cumulativeTime = 0
 
     scene.steps.forEach((step) => {
-      cumulativeDelay += step.delay
+      // Wait for the delay after the previous step's duration
+      cumulativeTime += step.delay
 
       setTimeout(() => {
         step.imageActions.forEach((imageAction) => {
@@ -136,7 +141,10 @@ const Test: FC<TestProps> = ({}) => {
             executeAction(targetRef, action)
           })
         })
-      }, cumulativeDelay)
+      }, cumulativeTime)
+
+      // Add this step's duration to cumulative time
+      cumulativeTime += step.duration
     })
   }
 
