@@ -3,7 +3,7 @@
 import { FC, useMemo, useRef } from 'react'
 import CanvasScene, { SceneDefinition } from '../../components/canvas/CanvasScene'
 import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
-import LineDraw, { LineDrawHandle } from '@/components/canvas/LineDraw'
+import { LineDrawHandle } from '@/components/canvas/LineDraw'
 import ImageMorph, { ImageMorphHandle } from '@/components/canvas/ImageMorph'
 import { parseScene } from '@/components/canvas/sceneParser'
 
@@ -25,16 +25,21 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   const MorphDBRight = useRef<ImageMorphHandle>(null)
   const MorphWarehouseLeft = useRef<ImageMorphHandle>(null)
   const MorphWarehouseRight = useRef<ImageMorphHandle>(null)
+  const MorphAPILeft = useRef<ImageMorphHandle>(null)
+  const MorphAPIRight = useRef<ImageMorphHandle>(null)
 
   const LineDBLeft = useRef<LineDrawHandle>(null)
   const LineCRMLeft = useRef<LineDrawHandle>(null)
   const LineERPLeft = useRef<LineDrawHandle>(null)
 
   const DiffY = 60
-  const CardsLeft = 150
-  const IconsRight = 600
+  const CardsLeft = 120
 
-  const CRM_X = 30
+  const IconsLeft = 40
+  const IconsRight = 500
+
+  const IconTopY = 55
+  const IconsDeltaY = 60
 
   // Parse the YAML scene definition
   const sceneDefinition: SceneDefinition = useMemo(() => {
@@ -51,6 +56,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       MorphDBRight,
       MorphWarehouseLeft,
       MorphWarehouseRight,
+      MorphAPILeft,
+      MorphAPIRight,
       LineDBLeft,
       LineCRMLeft,
       LineERPLeft,
@@ -119,8 +126,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*CRM*/}
       <ImageMorph
         ref={MorphCRMLeft}
-        x={30}
-        y={80}
+        x={IconsLeft}
+        y={IconTopY + IconsDeltaY * 0}
         scale={0.8}
         image1={'/canvas/icons/crm.gray.png'}
         image2={'/canvas/icons/crm.color.png'}
@@ -133,7 +140,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       <ImageMorph
         ref={MorphCRMRight}
         x={IconsRight}
-        y={80}
+        y={IconTopY + IconsDeltaY * 0}
         scale={0.8}
         image1={'/canvas/icons/crm.gray.png'}
         image2={'/canvas/icons/crm.color.png'}
@@ -146,8 +153,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*ERP*/}
       <ImageMorph
         ref={MorphERPLeft}
-        x={30}
-        y={180}
+        x={IconsLeft}
+        y={IconTopY + IconsDeltaY * 1}
         scale={0.8}
         image1={'/canvas/icons/erp.gray.png'}
         image2={'/canvas/icons/erp.color.png'}
@@ -158,7 +165,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       <ImageMorph
         ref={MorphERPRight}
         x={IconsRight}
-        y={180}
+        y={IconTopY + IconsDeltaY * 1}
         scale={0.8}
         image1={'/canvas/icons/erp.gray.png'}
         image2={'/canvas/icons/erp.color.png'}
@@ -171,8 +178,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*DATABASE*/}
       <ImageMorph
         ref={MorphDBLeft}
-        x={30}
-        y={280}
+        x={IconsLeft}
+        y={IconTopY + IconsDeltaY * 2}
         scale={0.8}
         image1={'/canvas/icons/database.gray.png'}
         image2={'/canvas/icons/database.color.png'}
@@ -185,7 +192,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       <ImageMorph
         ref={MorphDBRight}
         x={IconsRight}
-        y={280}
+        y={IconTopY + IconsDeltaY * 2}
         scale={0.8}
         image1={'/canvas/icons/database.gray.png'}
         image2={'/canvas/icons/database.color.png'}
@@ -198,8 +205,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*WAREHOUSE*/}
       <ImageMorph
         ref={MorphWarehouseLeft}
-        x={30}
-        y={380}
+        x={IconsLeft}
+        y={IconTopY + IconsDeltaY * 3}
         scale={0.8}
         image1={'/canvas/icons/warehouse.gray.png'}
         image2={'/canvas/icons/warehouse.color.png'}
@@ -212,7 +219,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       <ImageMorph
         ref={MorphWarehouseRight}
         x={IconsRight}
-        y={380}
+        y={IconTopY + IconsDeltaY * 3}
         scale={0.8}
         image1={'/canvas/icons/warehouse.gray.png'}
         image2={'/canvas/icons/warehouse.color.png'}
@@ -222,63 +229,30 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         // repeatDelay={0}
       />
 
-      {/* ------ LINES ---------*/}
-
-      {/*CRM TO ERP*/}
-      {/*<LineDraw*/}
-      {/*  ref={LineCRMLeft}*/}
-      {/*  x={50}*/}
-      {/*  y={120}*/}
-      {/*  endX={600}*/}
-      {/*  endY={200}*/}
-      {/*  stroke={2}*/}
-      {/*  color={'#a0a0a0'}*/}
-      {/*  duration={1000}*/}
-      {/*  deleteDelay={2000}*/}
-      {/*  drawAfter={1000}*/}
-      {/*  repeatDelay={1000}*/}
-      {/*  zIndex={-10}*/}
-      {/*/>*/}
-
-      {/*ERP TO DATABASE*/}
-      {/*<LineDraw*/}
-      {/*  ref={LineCRMLeft}*/}
-      {/*  x={50}*/}
-      {/*  y={120}*/}
-      {/*  endX={600}*/}
-      {/*  endY={200}*/}
-      {/*  stroke={2}*/}
-      {/*  color={'#a0a0a0'}*/}
-      {/*  duration={1000}*/}
-      {/*  deleteDelay={2000}*/}
-      {/*  drawAfter={1000}*/}
-      {/*  repeatDelay={1000}*/}
-      {/*  zIndex={-10}*/}
-      {/*/>*/}
-
-      {/*DATABASE*/}
-      {/*<LineDraw*/}
-      {/*  ref={LineCRMLeft}*/}
-      {/*  x={50}*/}
-      {/*  y={120}*/}
-      {/*  endX={280}*/}
-      {/*  endY={260}*/}
-      {/*  stroke={2}*/}
-      {/*  color={'#ff0000'}*/}
-      {/*  duration={600}*/}
-      {/*  deleteDelay={2000}*/}
-      {/*/>*/}
-
-      <LineDraw
-        ref={LineERPLeft}
-        x={50}
-        y={420}
-        endX={200}
-        endY={320}
-        stroke={2}
-        color={'#ff0000'}
-        duration={600}
-        deleteDelay={2000}
+      {/*API*/}
+      <ImageMorph
+        ref={MorphAPILeft}
+        x={IconsLeft}
+        y={IconTopY + IconsDeltaY * 4}
+        scale={0.8}
+        image1={'/canvas/icons/api.gray.png'}
+        image2={'/canvas/icons/api.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
+      />
+      <ImageMorph
+        ref={MorphAPIRight}
+        x={IconsRight}
+        y={IconTopY + IconsDeltaY * 4}
+        scale={0.8}
+        image1={'/canvas/icons/api.gray.png'}
+        image2={'/canvas/icons/api.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
       />
     </CanvasScene>
   )
