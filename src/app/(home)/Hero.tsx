@@ -13,7 +13,6 @@ const Hero = () => (
       {/*Image*/}
       <div className={styles.subheadingImage}>
         <HomeScene />
-        {/*<img src="https://picsum.photos/800/800" alt="Placeholder" />*/}
       </div>
 
       {/*Subheading*/}

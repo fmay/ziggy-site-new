@@ -299,7 +299,7 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
 
   return (
     <div>
-      <Stage width={800} height={500} className="bg-gray-50" onClick={handleCanvasClick}>
+      <Stage width={700} height={450} scale={{x:1.2, y: 1.2}} className="bg-gray-50" onClick={handleCanvasClick}>
         <Layer>{children}</Layer>
       </Stage>
     </div>

@@ -19,7 +19,7 @@
 }
 
 .subheadingImage {
-  @apply w-full  bg-gray-50 mx-auto order-last lg:order-none text-center;
+  @apply w-full bg-gray-50 mx-auto order-last lg:order-none flex justify-center items-center min-h-[700px];
 
   img {
     @apply w-full h-auto rounded-lg;
