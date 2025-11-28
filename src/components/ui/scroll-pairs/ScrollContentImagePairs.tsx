@@ -8,6 +8,7 @@ export interface ContentImagePair {
   image?: string
   scene?: ReactNode
   bgColor?: string
+  scaleToFit?: boolean
 }
 
 interface ScrollContentImagePairsProps {
@@ -22,10 +23,12 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
   const [fixedImageLeft, setFixedImageLeft] = useState(0)
   const [fixedImageWidth, setFixedImageWidth] = useState(0)
   const [scrollOutTop, setScrollOutTop] = useState(0)
+  const [imageHeights, setImageHeights] = useState<number[]>([])
   const contentRefs = useRef<(HTMLDivElement | null)[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
   const imageContainerRef = useRef<HTMLDivElement>(null)
   const rightColumnRef = useRef<HTMLDivElement>(null)
+  const imageRefs = useRef<(HTMLImageElement | null)[]>([])
 
   useEffect(() => {
     const observerOptions = {
@@ -55,6 +58,40 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
       observer.disconnect()
     }
   }, [contentImagePairs.length])
+
+  useEffect(() => {
+    const loadImageHeights = () => {
+      const heights: number[] = []
+      const containerWidth = rightColumnRef.current?.clientWidth || 0
+
+      contentImagePairs.forEach((pair, index) => {
+        if (pair.image && imageRefs.current[index]) {
+          const img = imageRefs.current[index]
+          if (img && img.complete && img.naturalWidth > 0) {
+            const aspectRatio = img.naturalHeight / img.naturalWidth
+            const calculatedHeight = containerWidth * aspectRatio
+            heights[index] = calculatedHeight
+          }
+        }
+      })
+
+      if (heights.length > 0) {
+        setImageHeights(heights)
+      }
+    }
+
+    loadImageHeights()
+
+    const handleResize = () => {
+      loadImageHeights()
+    }
+
+    window.addEventListener('resize', handleResize, { passive: true })
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [contentImagePairs])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -179,7 +216,13 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
                     }
                   : {}
             }>
-            <div className={styles.imageWrapper}>
+            <div
+              className={styles.imageWrapper}
+              style={
+                imageHeights[activeIndex] && contentImagePairs[activeIndex]?.image
+                  ? { height: `${imageHeights[activeIndex]}px` }
+                  : undefined
+              }>
               {contentImagePairs.map((pair, index) => (
                 <div
                   key={index}
@@ -188,9 +231,28 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
                   }`}
                   style={pair.bgColor ? { backgroundColor: pair.bgColor } : undefined}>
                   {pair.scene ? (
-                    pair.scene
+                    <div className={pair.scaleToFit ? styles.sceneScaleToFit : undefined}>
+                      {pair.scene}
+                    </div>
                   ) : pair.image ? (
-                    <img src={pair.image} alt={`Content ${index + 1}`} className={styles.image} />
+                    <img
+                      ref={el => {
+                        imageRefs.current[index] = el
+                      }}
+                      src={pair.image}
+                      alt={`Content ${index + 1}`}
+                      className={styles.image}
+                      onLoad={() => {
+                        const heights = [...imageHeights]
+                        const containerWidth = rightColumnRef.current?.clientWidth || 0
+                        const img = imageRefs.current[index]
+                        if (img && img.naturalWidth > 0) {
+                          const aspectRatio = img.naturalHeight / img.naturalWidth
+                          heights[index] = containerWidth * aspectRatio
+                          setImageHeights(heights)
+                        }
+                      }}
+                    />
                   ) : null}
                 </div>
               ))}
@@ -208,7 +270,9 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
               className={styles.mobileImageWrapper}
               style={pair.bgColor ? { backgroundColor: pair.bgColor } : undefined}>
               {pair.scene ? (
-                pair.scene
+                <div className={pair.scaleToFit ? styles.sceneScaleToFit : undefined}>
+                  {pair.scene}
+                </div>
               ) : pair.image ? (
                 <img src={pair.image} alt={`Content ${index + 1}`} className={styles.mobileImage} />
               ) : null}
