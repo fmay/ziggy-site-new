@@ -1,4 +1,5 @@
 import styles from './hero.module.scss'
+import HomeScene from '@/app/(home)/HomeScene'
 
 const Hero = () => (
   <section className={styles.heroSection}>
@@ -11,7 +12,8 @@ const Hero = () => (
 
       {/*Image*/}
       <div className={styles.subheadingImage}>
-        <img src="https://picsum.photos/800/800" alt="Placeholder" />
+        <HomeScene />
+        {/*<img src="https://picsum.photos/800/800" alt="Placeholder" />*/}
       </div>
 
       {/*Subheading*/}

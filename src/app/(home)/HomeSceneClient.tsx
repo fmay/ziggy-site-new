@@ -85,7 +85,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   }, [])
 
   return (
-    <CanvasScene scene={sceneDefinition}>
+    <CanvasScene scene={sceneDefinition} autoPlay>
       {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
 
       {/*CLUSTER*/}

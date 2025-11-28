@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, useEffect } from 'react'
 import { Stage, Layer } from 'react-konva'
 import { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import { LineDrawHandle } from '@/components/canvas/LineDraw'
@@ -115,9 +115,10 @@ export interface SceneDefinition {
 interface TestProps {
   children: ReactNode
   scene: SceneDefinition
+  autoPlay?: boolean
 }
 
-const CanvasScene: FC<TestProps> = ({ children, scene }) => {
+const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
 
   // Scene execution function
   const executeScene = () => {
@@ -285,13 +286,20 @@ const CanvasScene: FC<TestProps> = ({ children, scene }) => {
     }
   }
 
+  // Auto-play effect
+  useEffect(() => {
+    if (autoPlay) {
+      executeScene()
+    }
+  }, [autoPlay])
+
   const handleCanvasClick = () => {
     executeScene()
   }
 
   return (
     <div>
-      <Stage width={1200} height={600} className="bg-gray-50 border" onClick={handleCanvasClick}>
+      <Stage width={800} height={500} className="bg-gray-50" onClick={handleCanvasClick}>
         <Layer>{children}</Layer>
       </Stage>
     </div>

@@ -52,6 +52,23 @@ repeat1:
 
 repeat2:
   - steps:
+    # RESET CARD COORDS
+    - delay: 1500
+      duration: 10
+      imageActions:
+        - target: CardFast
+          actions:
+            - move: [_, {DiffY * 3}, 0]
+        - target: CardIntegrate
+          actions:
+            - move: [_, {DiffY * 2}, 0]
+        - target: CardOneInstance
+          actions:
+            - move: [_, {DiffY * 1}, 0]
+        - target: CardCluster
+          actions:
+            - move: [_, {DiffY * 0}, 0]
+
     # STEP 1
     - delay: 0
       duration: 1500
