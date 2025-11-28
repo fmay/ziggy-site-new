@@ -355,19 +355,10 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
       }
     }
 
-    const handleFocus = () => {
-      if (isVisible) {
-        // Window received focus and canvas is in viewport, reset and restart animations
-        resetCanvas()
-      }
-    }
-
     document.addEventListener('visibilitychange', handleVisibilityChange)
-    window.addEventListener('focus', handleFocus)
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange)
-      window.removeEventListener('focus', handleFocus)
     }
   }, [isVisible, autoPlay])
 
