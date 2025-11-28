@@ -12,6 +12,8 @@ interface HomeSceneClientProps {
 }
 
 const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
+  const cardYCounter = useRef(0)
+
   const CardFast = useRef<ImageFlipHandle>(null)
   const CardOneInstance = useRef<ImageFlipHandle>(null)
   const CardCluster = useRef<ImageFlipHandle>(null)
@@ -65,18 +67,35 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
     return parseScene(sceneYAML, refMap)
   }, [sceneYAML])
 
+  const getCardY = () => {
+    const currentY = cardYCounter.current * DiffY
+    cardYCounter.current += 1
+    return currentY
+  }
+
+  // Calculate Y positions once to avoid re-render issues
+  const cardPositions = useMemo(() => {
+    cardYCounter.current = 0 // Reset counter
+    return {
+      cluster: getCardY(),
+      oneInstance: getCardY(),
+      integrate: getCardY(),
+      fast: getCardY(),
+    }
+  }, [])
+
   return (
     <CanvasScene scene={sceneDefinition}>
       {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
 
-      {/*FAST & FRIENDLY*/}
+      {/*CLUSTER*/}
       <ImageFlip
-        ref={CardFast}
+        ref={CardCluster}
         x={CardsLeft}
-        y={0}
-        zIndex={0}
+        y={cardPositions.cluster}
+        zIndex={2}
         scale={{ x: 1, y: 1 }}
-        image="/canvas/cards/fast-friendly.card.png"
+        image="/canvas/cards/cluster.card.png"
         direction="front"
         duration={1500}
         expansionScale={0.5}
@@ -86,23 +105,10 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       <ImageFlip
         ref={CardOneInstance}
         x={CardsLeft}
-        y={DiffY}
+        y={cardPositions.oneInstance}
         zIndex={1}
         scale={{ x: 1, y: 1 }}
         image="/canvas/cards/one-instance.card.png"
-        direction="front"
-        duration={1500}
-        expansionScale={0.5}
-      />
-
-      {/*CLUSTER*/}
-      <ImageFlip
-        ref={CardCluster}
-        x={CardsLeft}
-        y={2 * DiffY}
-        zIndex={2}
-        scale={{ x: 1, y: 1 }}
-        image="/canvas/cards/cluster.card.png"
         direction="front"
         duration={1500}
         expansionScale={0.5}
@@ -112,10 +118,23 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       <ImageFlip
         ref={CardIntegrate}
         x={CardsLeft}
-        y={3 * DiffY}
+        y={cardPositions.integrate}
         zIndex={1}
         scale={{ x: 1, y: 1 }}
         image="/canvas/cards/integrations-migrations.card.png"
+        direction="front"
+        duration={1500}
+        expansionScale={0.5}
+      />
+
+      {/*FAST & FRIENDLY*/}
+      <ImageFlip
+        ref={CardFast}
+        x={CardsLeft}
+        y={cardPositions.fast}
+        zIndex={0}
+        scale={{ x: 1, y: 1 }}
+        image="/canvas/cards/fast-friendly.card.png"
         direction="front"
         duration={1500}
         expansionScale={0.5}

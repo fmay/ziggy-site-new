@@ -35,10 +35,6 @@ steps:
           - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
           - fade: [0, 1500]
 
-#      - target: LineCRMLeft
-#        actions:
-#          - draw:
-
       - target: CardOneInstance
         actions:
           - moveRelative: [0, { DiffY }, 1500]
@@ -66,10 +62,6 @@ steps:
           - flip: [front, 1500]
           - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
           - fade: [0, 1500]
-
-#      - target: LineERPLeft
-#        actions:
-#          - draw:
 
       - target: CardCluster
         actions:
