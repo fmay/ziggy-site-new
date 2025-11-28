@@ -15,6 +15,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   const CardFast = useRef<ImageFlipHandle>(null)
   const CardOneInstance = useRef<ImageFlipHandle>(null)
   const CardCluster = useRef<ImageFlipHandle>(null)
+  const CardIntegrate = useRef<ImageFlipHandle>(null)
 
   const MorphCRMLeft = useRef<ImageMorphHandle>(null)
   const MorphERPLeft = useRef<ImageMorphHandle>(null)
@@ -24,7 +25,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   const LineERPLeft = useRef<LineDrawHandle>(null)
 
   const DiffY = 60
-  const NumCards = 3
+  const CardsLeft = 150
 
   // Parse the YAML scene definition
   const sceneDefinition: SceneDefinition = useMemo(() => {
@@ -48,7 +49,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*FAST & FRIENDLY*/}
       <ImageFlip
         ref={CardFast}
-        x={200}
+        x={CardsLeft}
         y={0}
         zIndex={0}
         scale={{ x: 1, y: 1 }}
@@ -61,7 +62,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*ONE INSTANCE*/}
       <ImageFlip
         ref={CardOneInstance}
-        x={200}
+        x={CardsLeft}
         y={DiffY}
         zIndex={1}
         scale={{ x: 1, y: 1 }}
@@ -74,7 +75,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
       {/*CLUSTER*/}
       <ImageFlip
         ref={CardCluster}
-        x={200}
+        x={CardsLeft}
         y={2 * DiffY}
         zIndex={2}
         scale={{ x: 1, y: 1 }}
@@ -84,6 +85,32 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         expansionScale={0.5}
       />
 
+      {/*INTEGRATIONS MIGRATIONS*/}
+      <ImageFlip
+        ref={CardIntegrate}
+        x={CardsLeft}
+        y={3 * DiffY}
+        zIndex={1}
+        scale={{ x: 1, y: 1 }}
+        image="/canvas/cards/integrations-migrations.card.png"
+        direction="front"
+        duration={1500}
+        expansionScale={0.5}
+      />
+
+      {/*LINES & MORPHS*/}
+
+      {/*CRM*/}
+      <ImageMorph
+        ref={MorphCRMLeft}
+        x={30}
+        y={80}
+        scale={0.8}
+        image1={'/canvas/icons/crm.gray.png'}
+        image2={'/canvas/icons/crm.color.png'}
+        duration={1000}
+        morphBackAfter={1000}
+      />
       <LineDraw
         ref={LineCRMLeft}
         x={50}
@@ -108,6 +135,18 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         deleteDelay={2000}
       />
 
+
+      {/*ERP*/}
+      <ImageMorph
+        ref={MorphERPLeft}
+        x={30}
+        y={320}
+        scale={0.8}
+        image1={'/canvas/icons/erp.gray.png'}
+        image2={'/canvas/icons/erp.color.png'}
+        duration={1000}
+        morphBackAfter={1000}
+      />
       <LineDraw
         ref={LineERPLeft}
         x={50}
@@ -120,27 +159,6 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         deleteDelay={2000}
       />
 
-      <ImageMorph
-        ref={MorphCRMLeft}
-        x={30}
-        y={80}
-        scale={0.8}
-        image1={'/canvas/icons/crm.gray.png'}
-        image2={'/canvas/icons/crm.color.png'}
-        duration={1000}
-        morphBackAfter={1000}
-      />
-
-      <ImageMorph
-        ref={MorphERPLeft}
-        x={30}
-        y={420}
-        scale={0.8}
-        image1={'/canvas/icons/erp.gray.png'}
-        image2={'/canvas/icons/erp.color.png'}
-        duration={1000}
-        morphBackAfter={1000}
-      />
     </CanvasScene>
   )
 }
