@@ -25,6 +25,10 @@ steps:
         actions:
           - moveRelative: [0, { DiffY }, 1500]
 
+      - target: MorphCRMLeft
+        actions:
+          - morph:
+
   - delay: 0
     duration: 100
     imageActions:

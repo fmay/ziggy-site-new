@@ -18,6 +18,7 @@ export interface ImageMorphProps {
  duration: number
  width?: number
  height?: number
+ morphBackAfter?: number
 }
 
 export interface ImageMorphHandle {
@@ -26,11 +27,12 @@ export interface ImageMorphHandle {
 }
 
 const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
- ({ x, y, scale = 1, image1: image1Url, image2: image2Url, duration, width, height }, ref) => {
+ ({ x, y, scale = 1, image1: image1Url, image2: image2Url, duration, width, height, morphBackAfter }, ref) => {
   const [loadedImage1, setLoadedImage1] = useState<HTMLImageElement | null>(null)
   const [loadedImage2, setLoadedImage2] = useState<HTMLImageElement | null>(null)
   const [opacity1, setOpacity1] = useState(1)
   const [opacity2, setOpacity2] = useState(0)
+  const morphBackTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Load first image
   useEffect(() => {
@@ -53,6 +55,12 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
   // Expose morph and reset methods
   useImperativeHandle(ref, () => ({
    morph: (animDuration?: number) => {
+    // Clear any pending morph back timeout
+    if (morphBackTimeoutRef.current) {
+     clearTimeout(morphBackTimeoutRef.current)
+     morphBackTimeoutRef.current = null
+    }
+
     const dur = animDuration ?? duration
     const startTime = Date.now()
     const startOpacity1 = opacity1
@@ -72,6 +80,12 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
 
      if (progress < 1) {
       requestAnimationFrame(animate)
+     } else if (morphBackAfter !== undefined) {
+      // Schedule morph back after the specified duration
+      morphBackTimeoutRef.current = setTimeout(() => {
+       // Use reset method to morph back
+       ref && typeof ref !== 'function' && ref.current?.reset()
+      }, morphBackAfter)
      }
     }
 
@@ -79,6 +93,12 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
    },
 
    reset: (animDuration?: number) => {
+    // Clear any pending morph back timeout
+    if (morphBackTimeoutRef.current) {
+     clearTimeout(morphBackTimeoutRef.current)
+     morphBackTimeoutRef.current = null
+    }
+
     const dur = animDuration ?? duration
     const startTime = Date.now()
     const startOpacity1 = opacity1
@@ -103,7 +123,16 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
 
     animate()
    },
-  }), [duration, opacity1, opacity2])
+  }), [duration, opacity1, opacity2, morphBackAfter])
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+   return () => {
+    if (morphBackTimeoutRef.current) {
+     clearTimeout(morphBackTimeoutRef.current)
+    }
+   }
+  }, [])
 
   // Don't render anything if image1 hasn't loaded yet
   if (!loadedImage1) return null

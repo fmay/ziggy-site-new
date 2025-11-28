@@ -40,7 +40,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
           LineCRMLeft,
           LineERPLeft,
         }
-        const x =  parseScene(sceneYAML, refMap)
+        const x = parseScene(sceneYAML, refMap)
         console.log(x)
         return x
       } catch (error) {
@@ -51,93 +51,97 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
 
     // Default scene definition
     return {
-    steps: [
-      // STEP 1
-      {
-        delay: 0, // Start immediately
-        duration: 1500, // This step takes 1500ms to complete
-        imageActions: [
-          {
-            target: CardCluster,
-            actions: [
-              { type: 'flip', direction: 'front', duration: 1500 },
-              { type: 'moveRelative', x: 0, y: NumCards * (DiffY+20), duration: 1500 },
-              { type: 'fade', opacity: 0, duration: 1500 },
-            ],
-          },
-          {
-            target: LineCRMLeft,
-            actions: [{ type: 'draw' }],
-          },
-          {
-            target: CardOneInstance,
-            actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
-          },
-          {
-            target: CardFast,
-            actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
-          },
-        ],
-      },
-      {
-        delay: 100,
-        duration: 100,
-        imageActions: [
-          {
-            target: CardCluster,
-            actions: [
-              { type: 'unflip', duration: 0 },
-              { type: 'move', y: 0, duration: 0 },
-              { type: 'fade', opacity: 100, duration: 20 },
-              { type: 'zIndex', value: 0 }, // Set specific layer
-            ],
-          },
-        ],
-      },
-      // STEP 2
-      {
-        delay: 0, // Start immediately
-        duration: 1500, // This step takes 1500ms to complete
-        imageActions: [
-          {
-            target: CardOneInstance,
-            actions: [
-              { type: 'flip', direction: 'front', duration: 1500 },
-              { type: 'moveRelative', x: 0, y: NumCards * (DiffY+20), duration: 1500 },
-              { type: 'fade', opacity: 0, duration: 1500 },
-            ],
-          },
-          {
-            target: LineERPLeft,
-            actions: [{ type: 'draw' }],
-          },
-          {
-            target: CardCluster,
-            actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
-          },
-          {
-            target: CardFast,
-            actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
-          },
-        ],
-      },
-      {
-        delay: 100, // Wait 100ms after previous step completes
-        duration: 100, // This step takes 1500ms to complete
-        imageActions: [
-          {
-            target: CardOneInstance,
-            actions: [
-              { type: 'unflip', duration: 0 },
-              { type: 'move', y: 0, duration: 0 },
-              { type: 'fade', opacity: 100, duration: 20 },
-              { type: 'zIndex', value: 0 }, // Set specific layer
-            ],
-          },
-        ],
-      },
-    ],
-  }
+      steps: [
+        // STEP 1
+        {
+          delay: 0, // Start immediately
+          duration: 1500, // This step takes 1500ms to complete
+          imageActions: [
+            {
+              target: CardCluster,
+              actions: [
+                { type: 'flip', direction: 'front', duration: 1500 },
+                { type: 'moveRelative', x: 0, y: NumCards * (DiffY + 20), duration: 1500 },
+                { type: 'fade', opacity: 0, duration: 1500 },
+              ],
+            },
+            {
+              target: LineCRMLeft,
+              actions: [{ type: 'draw' }],
+            },
+            {
+              target: MorphCRMLeft,
+              actions: [{ type: 'morph' }],
+            },
+            {
+              target: CardOneInstance,
+              actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
+            },
+            {
+              target: CardFast,
+              actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
+            },
+          ],
+        },
+        {
+          delay: 100,
+          duration: 100,
+          imageActions: [
+            {
+              target: CardCluster,
+              actions: [
+                { type: 'unflip', duration: 0 },
+                { type: 'move', y: 0, duration: 0 },
+                { type: 'fade', opacity: 100, duration: 20 },
+                { type: 'zIndex', value: 0 }, // Set specific layer
+              ],
+            },
+          ],
+        },
+        // STEP 2
+        {
+          delay: 0, // Start immediately
+          duration: 1500, // This step takes 1500ms to complete
+          imageActions: [
+            {
+              target: CardOneInstance,
+              actions: [
+                { type: 'flip', direction: 'front', duration: 1500 },
+                { type: 'moveRelative', x: 0, y: NumCards * (DiffY + 20), duration: 1500 },
+                { type: 'fade', opacity: 0, duration: 1500 },
+              ],
+            },
+            {
+              target: LineERPLeft,
+              actions: [{ type: 'draw' }],
+            },
+            {
+              target: CardCluster,
+              actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
+            },
+            {
+              target: CardFast,
+              actions: [{ type: 'moveRelative', x: 0, y: DiffY, duration: 1500 }],
+            },
+          ],
+        },
+        {
+          delay: 100, // Wait 100ms after previous step completes
+          duration: 100, // This step takes 1500ms to complete
+          imageActions: [
+            {
+              target: CardOneInstance,
+              actions: [
+                { type: 'unflip', duration: 0 },
+                { type: 'move', y: 0, duration: 0 },
+                { type: 'fade', opacity: 100, duration: 20 },
+                { type: 'zIndex', value: 0 }, // Set specific layer
+              ],
+            },
+          ],
+        },
+      ],
+    }
   }, [sceneYAML])
 
   return (
@@ -199,7 +203,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         ref={LineDBLeft}
         x={50}
         y={120}
-        endX={200}
+        endX={280}
         endY={260}
         stroke={2}
         color={'#ff0000'}
@@ -227,16 +231,18 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         image1={'/canvas/icons/crm.gray.png'}
         image2={'/canvas/icons/crm.color.png'}
         duration={1000}
+        morphBackAfter={1000}
       />
 
       <ImageMorph
         ref={MorphERPLeft}
         x={30}
-        y={400}
+        y={500}
         scale={0.8}
         image1={'/canvas/icons/erp.gray.png'}
         image2={'/canvas/icons/erp.color.png'}
         duration={1000}
+        morphBackAfter={1000}
       />
     </CanvasScene>
   )

@@ -14,6 +14,7 @@ export interface LineDrawProps {
  duration: number
  deleteDelay?: number
  cornerRadius?: number
+ zIndex?: number
 }
 
 export interface LineDrawHandle {
@@ -23,11 +24,11 @@ export interface LineDrawHandle {
 }
 
 const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
- ({ x, y, endX, endY, stroke, color, duration, deleteDelay = 0, cornerRadius = 10 }, ref) => {
+ ({ x, y, endX, endY, stroke, color, duration, deleteDelay = 0, cornerRadius = 10, zIndex = -1 }, ref) => {
   const lineRef = useRef<Konva.Line>(null)
   const [startProgress, setStartProgress] = useState(0)
   const [endProgress, setEndProgress] = useState(0)
-  const [currentZIndex, setCurrentZIndex] = useState(0)
+  const [currentZIndex, setCurrentZIndex] = useState(zIndex)
   const deleteTimeoutRef = useRef<number | null>(null)
 
   // Clean up timeout on unmount
@@ -41,7 +42,7 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
 
   // Set initial zIndex after line is mounted
   useEffect(() => {
-   if (lineRef.current && currentZIndex !== 0) {
+   if (lineRef.current) {
     lineRef.current.zIndex(currentZIndex)
    }
   }, [currentZIndex])
