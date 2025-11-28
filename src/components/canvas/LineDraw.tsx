@@ -97,10 +97,15 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
    }
   }, [drawAfter, deleteDelay, repeatDelay, duration, ref])
 
-  // Set initial zIndex after line is mounted
+  // Update zIndex when currentZIndex changes (after initial mount)
   useEffect(() => {
    if (lineRef.current) {
-    lineRef.current.zIndex(currentZIndex)
+    if (currentZIndex < 0) {
+     lineRef.current.moveToBottom()
+    } else {
+     lineRef.current.zIndex(currentZIndex)
+    }
+    lineRef.current.getLayer()?.batchDraw()
    }
   }, [currentZIndex])
 
@@ -317,7 +322,12 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
     setCurrentZIndex(value)
     // Use the Konva API to set zIndex on the actual line node
     if (lineRef.current) {
-     lineRef.current.zIndex(value)
+     if (value < 0) {
+      // For negative zIndex, move to bottom of layer
+      lineRef.current.moveToBottom()
+     } else {
+      lineRef.current.zIndex(value)
+     }
     }
    },
   }), [duration, deleteDelay])
@@ -328,12 +338,24 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
 
   return (
    <Line
-    ref={lineRef}
+    ref={(node) => {
+     if (node) {
+      // @ts-ignore
+      lineRef.current = node
+      if (currentZIndex < 0) {
+       node.moveToBottom()
+      } else {
+       node.zIndex(currentZIndex)
+      }
+      node.getLayer()?.batchDraw()
+     }
+    }}
     points={points}
     stroke={color}
     strokeWidth={stroke}
     lineCap="round"
     lineJoin="round"
+    zIndex={currentZIndex}
    />
   )
  }

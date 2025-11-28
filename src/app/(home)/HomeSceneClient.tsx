@@ -18,7 +18,11 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   const CardIntegrate = useRef<ImageFlipHandle>(null)
 
   const MorphCRMLeft = useRef<ImageMorphHandle>(null)
+  const MorphCRMRight = useRef<ImageMorphHandle>(null)
   const MorphERPLeft = useRef<ImageMorphHandle>(null)
+  const MorphERPRight = useRef<ImageMorphHandle>(null)
+  const MorphDBLeft = useRef<ImageMorphHandle>(null)
+  const MorphDBRight = useRef<ImageMorphHandle>(null)
 
   const LineDBLeft = useRef<LineDrawHandle>(null)
   const LineCRMLeft = useRef<LineDrawHandle>(null)
@@ -26,6 +30,9 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
 
   const DiffY = 60
   const CardsLeft = 150
+  const IconsRight = 600
+
+  const CRM_X = 30
 
   // Parse the YAML scene definition
   const sceneDefinition: SceneDefinition = useMemo(() => {
@@ -98,7 +105,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         expansionScale={0.5}
       />
 
-      {/* ------ LINES & MORPHS*/}
+      {/* ------ MORPHS ---------*/}
 
       {/*CRM*/}
       <ImageMorph
@@ -109,50 +116,123 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         image1={'/canvas/icons/crm.gray.png'}
         image2={'/canvas/icons/crm.color.png'}
         duration={1000}
-        morphAfter={1000}
         reverseAfter={2000}
-        repeatDelay={0}
+        // morphAfter={1000}
+        // repeatDelay={0}
       />
-      <LineDraw
-        ref={LineCRMLeft}
-        x={50}
-        y={120}
-        endX={200}
-        endY={260}
-        stroke={2}
-        color={'#ff0000'}
+
+      <ImageMorph
+        ref={MorphCRMRight}
+        x={IconsRight}
+        y={80}
+        scale={0.8}
+        image1={'/canvas/icons/crm.gray.png'}
+        image2={'/canvas/icons/crm.color.png'}
         duration={1000}
-        deleteDelay={2000}
-        drawAfter={1000}
-        repeatDelay={2000}
-        zIndex={-10}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
       />
-
-      {/*DATABASE*/}
-      <LineDraw
-        ref={LineDBLeft}
-        x={50}
-        y={120}
-        endX={280}
-        endY={260}
-        stroke={2}
-        color={'#ff0000'}
-        duration={600}
-        deleteDelay={2000}
-      />
-
 
       {/*ERP*/}
       <ImageMorph
         ref={MorphERPLeft}
         x={30}
-        y={320}
+        y={180}
         scale={0.8}
         image1={'/canvas/icons/erp.gray.png'}
         image2={'/canvas/icons/erp.color.png'}
         duration={1000}
         reverseAfter={1000}
       />
+
+      <ImageMorph
+        ref={MorphERPRight}
+        x={IconsRight}
+        y={180}
+        scale={0.8}
+        image1={'/canvas/icons/erp.gray.png'}
+        image2={'/canvas/icons/erp.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
+      />
+
+      {/*DATABASE*/}
+      <ImageMorph
+        ref={MorphDBLeft}
+        x={30}
+        y={280}
+        scale={0.8}
+        image1={'/canvas/icons/database.gray.png'}
+        image2={'/canvas/icons/database.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
+      />
+
+      <ImageMorph
+        ref={MorphDBRight}
+        x={IconsRight}
+        y={280}
+        scale={0.8}
+        image1={'/canvas/icons/database.gray.png'}
+        image2={'/canvas/icons/database.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // repeatDelay={0}
+        // morphAfter={1000}
+      />
+
+      {/* ------ LINES ---------*/}
+
+      {/*CRM TO ERP*/}
+      {/*<LineDraw*/}
+      {/*  ref={LineCRMLeft}*/}
+      {/*  x={50}*/}
+      {/*  y={120}*/}
+      {/*  endX={600}*/}
+      {/*  endY={200}*/}
+      {/*  stroke={2}*/}
+      {/*  color={'#a0a0a0'}*/}
+      {/*  duration={1000}*/}
+      {/*  deleteDelay={2000}*/}
+      {/*  drawAfter={1000}*/}
+      {/*  repeatDelay={1000}*/}
+      {/*  zIndex={-10}*/}
+      {/*/>*/}
+
+      {/*ERP TO DATABASE*/}
+      {/*<LineDraw*/}
+      {/*  ref={LineCRMLeft}*/}
+      {/*  x={50}*/}
+      {/*  y={120}*/}
+      {/*  endX={600}*/}
+      {/*  endY={200}*/}
+      {/*  stroke={2}*/}
+      {/*  color={'#a0a0a0'}*/}
+      {/*  duration={1000}*/}
+      {/*  deleteDelay={2000}*/}
+      {/*  drawAfter={1000}*/}
+      {/*  repeatDelay={1000}*/}
+      {/*  zIndex={-10}*/}
+      {/*/>*/}
+
+      {/*DATABASE*/}
+      {/*<LineDraw*/}
+      {/*  ref={LineCRMLeft}*/}
+      {/*  x={50}*/}
+      {/*  y={120}*/}
+      {/*  endX={280}*/}
+      {/*  endY={260}*/}
+      {/*  stroke={2}*/}
+      {/*  color={'#ff0000'}*/}
+      {/*  duration={600}*/}
+      {/*  deleteDelay={2000}*/}
+      {/*/>*/}
+
       <LineDraw
         ref={LineERPLeft}
         x={50}
@@ -164,7 +244,6 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         duration={600}
         deleteDelay={2000}
       />
-
     </CanvasScene>
   )
 }
