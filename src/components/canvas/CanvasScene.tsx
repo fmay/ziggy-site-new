@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, ReactNode, useEffect } from 'react'
+import { FC, ReactNode, useEffect, useRef, useState } from 'react'
 import { Stage, Layer } from 'react-konva'
 import { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import { LineDrawHandle } from '@/components/canvas/LineDraw'
@@ -119,20 +119,39 @@ interface TestProps {
 }
 
 const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [canvasKey, setCanvasKey] = useState(0)
+  const timeoutsRef = useRef<number[]>([])
+
+  // Clear all active timeouts
+  const clearAllTimeouts = () => {
+    timeoutsRef.current.forEach(id => clearTimeout(id))
+    timeoutsRef.current = []
+  }
+
+  // Reset canvas by forcing remount
+  const resetCanvas = () => {
+    clearAllTimeouts()
+    setCanvasKey(prev => prev + 1)
+  }
 
   // Scene execution function
   const executeScene = () => {
+    // Clear any existing animations before starting new ones
+    clearAllTimeouts()
     const { steps, repeatStartIndex, repeatSections } = scene
 
     // Execute a single step
     const executeStep = (step: SceneStep, time: number) => {
-      setTimeout(() => {
+      const timeoutId = window.setTimeout(() => {
         step.imageActions.forEach(imageAction => {
           imageAction.actions.forEach(action => {
             executeAction(imageAction.target, action)
           })
         })
       }, time)
+      timeoutsRef.current.push(timeoutId)
     }
 
     // Execute each repeat section in parallel
@@ -152,7 +171,8 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
             (total, step) => total + step.delay + step.duration,
             0
           )
-          setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+          const timeoutId = window.setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+          timeoutsRef.current.push(timeoutId)
         }
 
         executeRepeatingCycle(0)
@@ -177,7 +197,8 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
             (total, step) => total + step.delay + step.duration,
             0
           )
-          setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+          const timeoutId = window.setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+          timeoutsRef.current.push(timeoutId)
         }
 
         executeRepeatingCycle(0)
@@ -286,20 +307,84 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
     }
   }
 
-  // Auto-play effect
+  // Auto-play effect - runs when component mounts or canvasKey changes
   useEffect(() => {
     if (autoPlay) {
-      executeScene()
+      // Small delay to ensure canvas is fully rendered before starting animations
+      const timeoutId = window.setTimeout(() => {
+        executeScene()
+      }, 50)
+      return () => clearTimeout(timeoutId)
     }
-  }, [autoPlay])
+  }, [autoPlay, canvasKey])
+
+  // Intersection Observer to detect when canvas enters/exits viewport
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container || !autoPlay) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const wasVisible = isVisible
+        setIsVisible(entry.isIntersecting)
+
+        // When canvas becomes visible after being invisible, reset and restart
+        if (entry.isIntersecting && !wasVisible) {
+          resetCanvas()
+        }
+      },
+      { threshold: 0.1 } // Trigger when at least 10% of canvas is visible
+    )
+
+    observer.observe(container)
+
+    return () => {
+      observer.disconnect()
+      clearAllTimeouts()
+    }
+  }, [autoPlay, isVisible])
+
+  // Handle tab visibility changes
+  useEffect(() => {
+    if (!autoPlay) return
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && isVisible) {
+        // Tab became visible and canvas is in viewport, reset and restart animations
+        resetCanvas()
+      }
+    }
+
+    const handleFocus = () => {
+      if (isVisible) {
+        // Window received focus and canvas is in viewport, reset and restart animations
+        resetCanvas()
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    window.addEventListener('focus', handleFocus)
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+      window.removeEventListener('focus', handleFocus)
+    }
+  }, [isVisible, autoPlay])
 
   const handleCanvasClick = () => {
     executeScene()
   }
 
   return (
-    <div>
-      <Stage width={700} height={450} scale={{x:1.2, y: 1.2}} className="bg-gray-50" onClick={handleCanvasClick}>
+    <div ref={containerRef}>
+      <Stage
+        key={canvasKey}
+        width={700}
+        height={450}
+        scale={{x:1.2, y: 1.2}}
+        className="bg-gray-50"
+        onClick={handleCanvasClick}
+      >
         <Layer>{children}</Layer>
       </Stage>
     </div>
