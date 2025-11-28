@@ -4,8 +4,8 @@ variables:
 
 repeats:
   - steps:
-      - delay: 0
-        duration: 2000
+      - delay: 1000
+        duration: 3000
         actions:
           - target: MorphCRMLeft
             actions:
@@ -14,7 +14,7 @@ repeats:
             actions:
               morph:
       - delay: 0
-        duration: 2000
+        duration: 3000
         actions:
           - target: MorphERPLeft
             actions:

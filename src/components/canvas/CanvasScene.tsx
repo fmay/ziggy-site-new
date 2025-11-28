@@ -103,10 +103,12 @@ export interface SceneStep {
   delay: number // milliseconds after previous step completes
   duration: number // how long this step takes to complete
   imageActions: ImageActions[]
+  isRepeating?: boolean // marks if this step is part of a repeating sequence
 }
 
 export interface SceneDefinition {
   steps: SceneStep[]
+  repeatStartIndex?: number // index where repeating steps start
 }
 
 interface TestProps {
@@ -118,23 +120,60 @@ const CanvasScene: FC<TestProps> = ({ children, scene }) => {
 
   // Scene execution function
   const executeScene = () => {
-    let cumulativeTime = 0
+    const { steps, repeatStartIndex } = scene
 
-    scene.steps.forEach(step => {
-      // Wait for the delay after the previous step's duration
-      cumulativeTime += step.delay
-
+    // Execute a single step
+    const executeStep = (step: SceneStep, time: number) => {
       setTimeout(() => {
         step.imageActions.forEach(imageAction => {
           imageAction.actions.forEach(action => {
             executeAction(imageAction.target, action)
           })
         })
-      }, cumulativeTime)
+      }, time)
+    }
 
-      // Add this step's duration to cumulative time
-      cumulativeTime += step.duration
-    })
+    // Separate repeating and non-repeating steps
+    const repeatingSteps = repeatStartIndex !== undefined
+      ? steps.slice(repeatStartIndex)
+      : steps.filter(s => s.isRepeating)
+
+    const nonRepeatingSteps = repeatStartIndex !== undefined
+      ? steps.slice(0, repeatStartIndex)
+      : steps.filter(s => !s.isRepeating)
+
+    // Execute repeating steps immediately and infinitely
+    if (repeatingSteps.length > 0) {
+      const executeRepeatingCycle = (cycleNumber: number) => {
+        let cycleTime = 0
+
+        repeatingSteps.forEach(step => {
+          cycleTime += step.delay
+          executeStep(step, cycleTime)
+          cycleTime += step.duration
+        })
+
+        // Calculate total cycle duration and schedule next cycle
+        const cycleDuration = repeatingSteps.reduce(
+          (total, step) => total + step.delay + step.duration,
+          0
+        )
+        setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+      }
+
+      executeRepeatingCycle(0)
+    }
+
+    // Execute non-repeating steps in parallel (also starting immediately)
+    if (nonRepeatingSteps.length > 0) {
+      let cumulativeTime = 0
+
+      nonRepeatingSteps.forEach(step => {
+        cumulativeTime += step.delay
+        executeStep(step, cumulativeTime)
+        cumulativeTime += step.duration
+      })
+    }
   }
 
   // Execute individual action

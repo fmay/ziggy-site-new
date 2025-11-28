@@ -21,15 +21,24 @@ type RefMap = {
   [key: string]: RefObject<ImageFlipHandle | null> | RefObject<LineDrawHandle | null> | RefObject<ImageMorphHandle | null>
 }
 
+interface StepDefinition {
+  delay: number
+  duration: number
+  imageActions?: Array<{
+    target: string
+    actions: Array<{ [actionName: string]: any }>
+  }>
+  actions?: Array<{
+    target: string
+    actions: Array<{ [actionName: string]: any }>
+  }>
+}
+
 interface SceneYAML {
   variables?: Array<{ [key: string]: number }>
-  steps: Array<{
-    delay: number
-    duration: number
-    imageActions: Array<{
-      target: string
-      actions: Array<{ [actionName: string]: any }>
-    }>
+  steps?: Array<StepDefinition>
+  repeats?: Array<{
+    steps: Array<StepDefinition>
   }>
 }
 
@@ -210,29 +219,38 @@ function parseAction(
 }
 
 /**
- * Parses the YAML scene structure into a SceneDefinition
+ * Parses a single step definition
  */
-export function parseScene(sceneYAML: SceneYAML, refMap: RefMap): SceneDefinition {
-  // Parse variables
-  const variables = parseVariables(sceneYAML.variables)
+function parseStepDefinition(
+  step: StepDefinition,
+  stepIndex: number,
+  variables: VariableDefinition,
+  refMap: RefMap,
+  isRepeating: boolean = false
+) {
+  const imageActions: ImageActions[] = []
 
-  // Parse steps
-  const steps = sceneYAML.steps.map((step, stepIndex) => {
-    const imageActions: ImageActions[] = []
+  // Handle both 'imageActions' and 'actions' fields (YAML uses 'actions')
+  const actionsList = step.imageActions || step.actions || []
 
-    for (const imageAction of step.imageActions) {
-      const targetRef = refMap[imageAction.target]
+  for (const imageAction of actionsList) {
+    const targetRef = refMap[imageAction.target]
 
-      if (!targetRef) {
-        throw new SceneParserError(
-          `Target '${imageAction.target}' in step ${stepIndex} not found in ref map`
-        )
-      }
+    if (!targetRef) {
+      throw new SceneParserError(
+        `Target '${imageAction.target}' in step ${stepIndex} not found in ref map`
+      )
+    }
 
-      const actions: ParsedAction[] = []
+    const actions: ParsedAction[] = []
 
-      for (const actionObj of imageAction.actions) {
-        // Each action is an object with one key (the action name)
+    // Check if actions is an object (YAML parses "morph:" as {morph: null})
+    // or an array (explicit array format)
+    const actionsData = imageAction.actions
+
+    if (Array.isArray(actionsData)) {
+      // Array format: [{ morph: [...] }, { fade: [...] }]
+      for (const actionObj of actionsData) {
         const [actionName, actionParams] = Object.entries(actionObj)[0]
         const parsedAction = parseAction(actionName, actionParams, variables)
 
@@ -240,19 +258,72 @@ export function parseScene(sceneYAML: SceneYAML, refMap: RefMap): SceneDefinitio
           actions.push(parsedAction)
         }
       }
+    } else if (typeof actionsData === 'object' && actionsData !== null) {
+      // Object format: { morph: null, fade: [0, 1000] }
+      for (const [actionName, actionParams] of Object.entries(actionsData)) {
+        const parsedAction = parseAction(actionName, actionParams, variables)
 
-      imageActions.push({
-        target: targetRef,
-        actions: actions
-      } as ImageActions)
+        if (parsedAction) {
+          actions.push(parsedAction)
+        }
+      }
     }
 
-    return {
-      delay: step.delay,
-      duration: step.duration,
-      imageActions
-    }
-  })
+    imageActions.push({
+      target: targetRef,
+      actions: actions
+    } as ImageActions)
+  }
 
-  return { steps }
+  return {
+    delay: step.delay,
+    duration: step.duration,
+    imageActions,
+    isRepeating
+  }
+}
+
+/**
+ * Parses the YAML scene structure into a SceneDefinition
+ */
+export function parseScene(sceneYAML: SceneYAML, refMap: RefMap): SceneDefinition {
+  // Parse variables
+  const variables = parseVariables(sceneYAML.variables)
+
+  const allSteps = []
+  let repeatStartIndex: number | undefined
+
+  // Parse repeating steps first if they exist
+  if (sceneYAML.repeats && sceneYAML.repeats.length > 0) {
+    repeatStartIndex = 0
+
+    for (const repeatBlock of sceneYAML.repeats) {
+      const repeatingSteps = repeatBlock.steps.map((step, stepIndex) =>
+        parseStepDefinition(step, stepIndex, variables, refMap, true)
+      )
+      allSteps.push(...repeatingSteps)
+    }
+  }
+
+  // Parse regular steps if they exist
+  if (sceneYAML.steps && sceneYAML.steps.length > 0) {
+    // If we have both repeats and steps, steps come after repeats
+    // But we want regular steps to execute first, so we need to insert them at the beginning
+    const regularSteps = sceneYAML.steps.map((step, stepIndex) =>
+      parseStepDefinition(step, stepIndex, variables, refMap, false)
+    )
+
+    if (repeatStartIndex !== undefined) {
+      // Insert regular steps at the beginning
+      allSteps.unshift(...regularSteps)
+      repeatStartIndex = regularSteps.length
+    } else {
+      allSteps.push(...regularSteps)
+    }
+  }
+
+  return {
+    steps: allSteps,
+    repeatStartIndex
+  }
 }
