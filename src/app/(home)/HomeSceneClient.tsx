@@ -6,12 +6,14 @@ import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import { LineDrawHandle } from '@/components/canvas/LineDraw'
 import ImageMorph, { ImageMorphHandle } from '@/components/canvas/ImageMorph'
 import { parseScene } from '@/components/canvas/sceneParser'
+import { Vector2d } from 'konva/lib/types'
 
 interface HomeSceneClientProps {
   sceneYAML: any
+  scale?: number | Vector2d
 }
 
-const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
+const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale }) => {
   const cardYCounter = useRef(0)
 
   const CardFast = useRef<ImageFlipHandle>(null)
@@ -85,7 +87,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   }, [])
 
   return (
-    <CanvasScene scene={sceneDefinition} autoPlay>
+    <CanvasScene scene={sceneDefinition} autoPlay scale={scale}>
       {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
 
       {/*CLUSTER*/}

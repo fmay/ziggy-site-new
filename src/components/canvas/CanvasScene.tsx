@@ -5,6 +5,7 @@ import { Stage, Layer } from 'react-konva'
 import { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import { LineDrawHandle } from '@/components/canvas/LineDraw'
 import { ImageMorphHandle } from '@/components/canvas/ImageMorph'
+import { Vector2d } from 'konva/lib/types'
 
 // Scene Management Types
 export interface FlipAction {
@@ -116,9 +117,10 @@ interface TestProps {
   children: ReactNode
   scene: SceneDefinition
   autoPlay?: boolean
+  scale?: number | Vector2d
 }
 
-const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
+const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [canvasKey, setCanvasKey] = useState(0)
@@ -366,13 +368,18 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false }) => {
     executeScene()
   }
 
+  // Convert scale prop to Vector2d format
+  const scaleValue: Vector2d = typeof scale === 'number'
+    ? { x: scale, y: scale }
+    : scale || { x: 1, y: 1 }
+
   return (
     <div ref={containerRef}>
       <Stage
         key={canvasKey}
         width={700}
         height={450}
-        scale={{x:1.2, y: 1.2}}
+        scale={scaleValue}
         className="bg-gray-50"
         onClick={handleCanvasClick}
       >
