@@ -327,6 +327,9 @@ export function parseScene(sceneYAML: SceneYAML, refMap: RefMap): SceneDefinitio
 
   return {
     steps: regularSteps,
-    repeatSections: repeatSections.length > 0 ? repeatSections : undefined
+    repeatSections: repeatSections.length > 0 ? repeatSections : undefined,
+    width: sceneYAML.width,
+    height: sceneYAML.height,
+    bgColor: sceneYAML.bgColor
   }
 }

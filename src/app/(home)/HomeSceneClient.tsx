@@ -90,7 +90,14 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale, bgColor, 
   }, [])
 
   return (
-    <CanvasScene scene={sceneDefinition} autoPlay scale={scale} bgColor={bgColor} width={width} height={height}>
+    <CanvasScene
+      scene={sceneDefinition}
+      autoPlay
+      scale={scale}
+      bgColor={bgColor ?? sceneDefinition.bgColor}
+      width={width ?? sceneDefinition.width}
+      height={height ?? sceneDefinition.height}
+    >
       {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
 
       {/*CLUSTER*/}

@@ -12,7 +12,7 @@ interface HomeSceneProps {
   height?: number
 }
 
-const HomeScene: FC<HomeSceneProps> = ({ scale, bgColor = 'transparent', width = 500, height = 500 }) => {
+const HomeScene: FC<HomeSceneProps> = ({ scale, bgColor, width, height }) => {
   const SceneYaml = fs.readFileSync(
     path.join(process.cwd(), 'src/app/(home)/home-scene.yaml'),
     'utf8'

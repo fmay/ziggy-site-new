@@ -1,5 +1,5 @@
-width: 700
-bgColor: #red
+width: 600
+height: 420
 
 variables:
   - DiffY: 50

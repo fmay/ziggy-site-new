@@ -111,6 +111,9 @@ export interface SceneDefinition {
   steps: SceneStep[]
   repeatStartIndex?: number // index where repeating steps start (deprecated)
   repeatSections?: SceneStep[][] // array of repeat sections to run in parallel
+  width?: number
+  height?: number
+  bgColor?: string
 }
 
 interface TestProps {
@@ -123,7 +126,12 @@ interface TestProps {
   height?: number
 }
 
-const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale, bgColor = 'transparent', width = 500, height = 500 }) => {
+const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale, bgColor, width, height }) => {
+  // Apply defaults inside the function body to allow undefined values to pass through
+  const finalBgColor = bgColor ?? 'transparent'
+  const finalWidth = width ?? 500
+  const finalHeight = height ?? 500
+
   const containerRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [canvasKey, setCanvasKey] = useState(0)
@@ -380,10 +388,10 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale, 
     <div ref={containerRef}>
       <Stage
         key={canvasKey}
-        width={width}
-        height={height}
+        width={finalWidth}
+        height={finalHeight}
         scale={scaleValue}
-        style={{ backgroundColor: bgColor }}
+        style={{ backgroundColor: finalBgColor }}
         onClick={handleCanvasClick}
       >
         <Layer>{children}</Layer>

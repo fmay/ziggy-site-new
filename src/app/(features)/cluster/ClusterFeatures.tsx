@@ -42,7 +42,7 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
           </p>
         </div>
       ),
-      scene: <HomeScene scale={1} />,
+      scene: <HomeScene scale={0.5} />,
     },
     {
       content: (
