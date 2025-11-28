@@ -1,12 +1,17 @@
 'use client'
 
-import { FC, useRef } from 'react'
+import { FC, useRef, useMemo } from 'react'
 import CanvasScene, { SceneDefinition } from '../../components/canvas/CanvasScene'
 import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import LineDraw, { LineDrawHandle } from '@/components/canvas/LineDraw'
 import ImageMorph, { ImageMorphHandle } from '@/components/canvas/ImageMorph'
+import { parseScene } from '../../components/canvas/sceneParser'
 
-const HomeSceneClient: FC = () => {
+interface HomeSceneClientProps {
+  sceneYAML?: any
+}
+
+const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   const CardFast = useRef<ImageFlipHandle>(null)
   const CardOneInstance = useRef<ImageFlipHandle>(null)
   const CardCluster = useRef<ImageFlipHandle>(null)
@@ -21,8 +26,31 @@ const HomeSceneClient: FC = () => {
   const DiffY = 60
   const NumCards = 3
 
-  // Scene definition
-  const sceneDefinition: SceneDefinition = {
+  // Parse the YAML scene definition if provided
+  const sceneDefinition: SceneDefinition = useMemo(() => {
+    if (sceneYAML) {
+      try {
+        const refMap = {
+          CardFast,
+          CardOneInstance,
+          CardCluster,
+          MorphCRMLeft,
+          MorphERPLeft,
+          LineDBLeft,
+          LineCRMLeft,
+          LineERPLeft,
+        }
+        const x =  parseScene(sceneYAML, refMap)
+        console.log(x)
+        return x
+      } catch (error) {
+        console.error('Failed to parse scene YAML:', error)
+        // Fall through to default scene on error
+      }
+    }
+
+    // Default scene definition
+    return {
     steps: [
       // STEP 1
       {
@@ -110,6 +138,7 @@ const HomeSceneClient: FC = () => {
       },
     ],
   }
+  }, [sceneYAML])
 
   return (
     <CanvasScene scene={sceneDefinition}>

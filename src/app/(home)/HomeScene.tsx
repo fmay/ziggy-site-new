@@ -10,11 +10,10 @@ const HomeScene: FC = () => {
     'utf8'
   )
   const SceneJSON = parse(SceneYaml)
-  console.log(SceneJSON)
 
-
-
-  return <HomeSceneClient />
+  // Pass the parsed YAML to the client component
+  // The client component will use the parser with its refs
+  return <HomeSceneClient sceneYAML={SceneJSON} />
 }
 
 export default HomeScene

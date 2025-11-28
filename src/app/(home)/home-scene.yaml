@@ -3,6 +3,7 @@ variables:
   - NumCards: 3
 
 steps:
+  # STEP 1
   - delay: 0
     duration: 1500
     imageActions:
@@ -24,17 +25,18 @@ steps:
         actions:
           - moveRelative: [0, { DiffY }, 1500]
 
-  - delay: 100
+  - delay: 0
     duration: 100
     imageActions:
       - target: CardCluster
         actions:
           - unflip: 0
-          - move: [0, 0]
+          - move: [_, 0]
           - fade: [100, 20]
           - zIndex: 0
 
-  - delay: 0
+# STEP 2
+  - delay: 1500
     duration: 1500
     imageActions:
       - target: CardOneInstance
@@ -55,12 +57,12 @@ steps:
         actions:
           - moveRelative: [0, { DiffY }, 1500]
 
-  - delay: 100
-    duration: 100
-    imageActions:
-      - target: CardOneInstance
-        actions:
-          - unflip: 0
-          - moveRelative: [0, { -(DiffY - 1) * NumCards }, 0]
-          - fade: [100, 20]
-          - zIndex: 0
+#  - delay: 100
+#    duration: 100
+#    imageActions:
+#      - target: CardOneInstance
+#        actions:
+#          - unflip: 0
+#          - move: [_, 0]
+#          - fade: [100, 20]
+#          - zIndex: 0
