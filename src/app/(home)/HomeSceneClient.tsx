@@ -110,7 +110,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         image2={'/canvas/icons/crm.color.png'}
         duration={1000}
         morphAfter={1000}
-        morphBackAfter={1000}
+        reverseAfter={1000}
         repeatDelay={3000}
       />
       <LineDraw
@@ -148,7 +148,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         image1={'/canvas/icons/erp.gray.png'}
         image2={'/canvas/icons/erp.color.png'}
         duration={1000}
-        morphBackAfter={1000}
+        reverseAfter={1000}
       />
       <LineDraw
         ref={LineERPLeft}
