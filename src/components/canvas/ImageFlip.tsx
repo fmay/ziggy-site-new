@@ -73,6 +73,13 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    }
   }, [imageUrl, scale.x, scale.y, width, height, brightness, grayscale])
 
+  // Set initial zIndex after shape is mounted
+  useEffect(() => {
+   if (shapeRef.current && initialZIndex !== 0) {
+    shapeRef.current.zIndex(initialZIndex)
+   }
+  }, [initialZIndex])
+
   // Expose flip, unflip, fade, and move methods
   useImperativeHandle(ref, () => ({
    flip: (flipDirection: 'front' | 'back', animDuration?: number) => {
@@ -359,6 +366,10 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
    zIndex: (value: number) => {
     setCurrentZIndex(value)
+    // Use the Konva API to set zIndex on the actual shape node
+    if (shapeRef.current) {
+     shapeRef.current.zIndex(value)
+    }
    },
   }), [loadedImage, duration, scale.x, scale.y, expansionScale, trapezoidState, width, height])
 
@@ -376,7 +387,6 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     y={trapezoidState.currentY}
     width={maxWidth}
     height={Math.max(trapezoidState.height, initialHeight)}
-    zIndex={currentZIndex}
     sceneFunc={(context, shape) => {
      const imgWidth = loadedImage.width
      const imgHeight = loadedImage.height

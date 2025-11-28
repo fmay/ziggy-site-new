@@ -39,6 +39,13 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
    }
   }, [])
 
+  // Set initial zIndex after line is mounted
+  useEffect(() => {
+   if (lineRef.current && currentZIndex !== 0) {
+    lineRef.current.zIndex(currentZIndex)
+   }
+  }, [currentZIndex])
+
   // Calculate the full path with rounded corner
   const calculateFullPath = (): { points: number[]; totalLength: number } => {
    const points: number[] = []
@@ -250,6 +257,10 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
 
    zIndex: (value: number) => {
     setCurrentZIndex(value)
+    // Use the Konva API to set zIndex on the actual line node
+    if (lineRef.current) {
+     lineRef.current.zIndex(value)
+    }
    },
   }), [duration, deleteDelay])
 
@@ -265,7 +276,6 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
     strokeWidth={stroke}
     lineCap="round"
     lineJoin="round"
-    zIndex={currentZIndex}
    />
   )
  }

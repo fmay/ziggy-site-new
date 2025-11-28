@@ -103,7 +103,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
             target: CardOneInstance,
             actions: [
               { type: 'flip', direction: 'front', duration: 1500 },
-              { type: 'moveRelative', x: 0, y: DiffY, duration: 1500 },
+              { type: 'moveRelative', x: 0, y: NumCards * (DiffY+20), duration: 1500 },
               { type: 'fade', opacity: 0, duration: 1500 },
             ],
           },
@@ -129,7 +129,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
             target: CardOneInstance,
             actions: [
               { type: 'unflip', duration: 0 },
-              { type: 'moveRelative', x: 0, y: -(DiffY - 1) * NumCards, duration: 0 },
+              { type: 'move', y: 0, duration: 0 },
               { type: 'fade', opacity: 100, duration: 20 },
               { type: 'zIndex', value: 0 }, // Set specific layer
             ],

@@ -14,6 +14,7 @@ const HomeScene: FC = () => {
   // Pass the parsed YAML to the client component
   // The client component will use the parser with its refs
   return <HomeSceneClient sceneYAML={SceneJSON} />
+  // return <HomeSceneClient />
 }
 
 export default HomeScene
