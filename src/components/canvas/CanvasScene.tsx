@@ -108,7 +108,8 @@ export interface SceneStep {
 
 export interface SceneDefinition {
   steps: SceneStep[]
-  repeatStartIndex?: number // index where repeating steps start
+  repeatStartIndex?: number // index where repeating steps start (deprecated)
+  repeatSections?: SceneStep[][] // array of repeat sections to run in parallel
 }
 
 interface TestProps {
@@ -120,7 +121,7 @@ const CanvasScene: FC<TestProps> = ({ children, scene }) => {
 
   // Scene execution function
   const executeScene = () => {
-    const { steps, repeatStartIndex } = scene
+    const { steps, repeatStartIndex, repeatSections } = scene
 
     // Execute a single step
     const executeStep = (step: SceneStep, time: number) => {
@@ -133,38 +134,60 @@ const CanvasScene: FC<TestProps> = ({ children, scene }) => {
       }, time)
     }
 
-    // Separate repeating and non-repeating steps
-    const repeatingSteps = repeatStartIndex !== undefined
-      ? steps.slice(repeatStartIndex)
-      : steps.filter(s => s.isRepeating)
+    // Execute each repeat section in parallel
+    if (repeatSections && repeatSections.length > 0) {
+      repeatSections.forEach(sectionSteps => {
+        const executeRepeatingCycle = (cycleNumber: number) => {
+          let cycleTime = 0
 
+          sectionSteps.forEach(step => {
+            cycleTime += step.delay
+            executeStep(step, cycleTime)
+            cycleTime += step.duration
+          })
+
+          // Calculate total cycle duration and schedule next cycle
+          const cycleDuration = sectionSteps.reduce(
+            (total, step) => total + step.delay + step.duration,
+            0
+          )
+          setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+        }
+
+        executeRepeatingCycle(0)
+      })
+    } else {
+      // Fallback to old behavior for backwards compatibility
+      const repeatingSteps = repeatStartIndex !== undefined
+        ? steps.slice(repeatStartIndex)
+        : steps.filter(s => s.isRepeating)
+
+      if (repeatingSteps.length > 0) {
+        const executeRepeatingCycle = (cycleNumber: number) => {
+          let cycleTime = 0
+
+          repeatingSteps.forEach(step => {
+            cycleTime += step.delay
+            executeStep(step, cycleTime)
+            cycleTime += step.duration
+          })
+
+          const cycleDuration = repeatingSteps.reduce(
+            (total, step) => total + step.delay + step.duration,
+            0
+          )
+          setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
+        }
+
+        executeRepeatingCycle(0)
+      }
+    }
+
+    // Execute non-repeating steps
     const nonRepeatingSteps = repeatStartIndex !== undefined
       ? steps.slice(0, repeatStartIndex)
       : steps.filter(s => !s.isRepeating)
 
-    // Execute repeating steps immediately and infinitely
-    if (repeatingSteps.length > 0) {
-      const executeRepeatingCycle = (cycleNumber: number) => {
-        let cycleTime = 0
-
-        repeatingSteps.forEach(step => {
-          cycleTime += step.delay
-          executeStep(step, cycleTime)
-          cycleTime += step.duration
-        })
-
-        // Calculate total cycle duration and schedule next cycle
-        const cycleDuration = repeatingSteps.reduce(
-          (total, step) => total + step.delay + step.duration,
-          0
-        )
-        setTimeout(() => executeRepeatingCycle(cycleNumber + 1), cycleDuration)
-      }
-
-      executeRepeatingCycle(0)
-    }
-
-    // Execute non-repeating steps in parallel (also starting immediately)
     if (nonRepeatingSteps.length > 0) {
       let cumulativeTime = 0
 

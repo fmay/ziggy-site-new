@@ -2,7 +2,7 @@ variables:
   - DiffY: 50
   - NumCards: 3
 
-repeats:
+repeat1:
   - steps:
       - delay: 1000
         duration: 3000
@@ -22,61 +22,152 @@ repeats:
           - target: MorphDBRight
             actions:
               morph:
-
-
-steps:
-  # STEP 1
-  - delay: 0
-    duration: 1500
-    imageActions:
-      - target: CardCluster
+      - delay: 0
+        duration: 3000
         actions:
-          - flip: [front, 1500]
-          - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
-          - fade: [0, 1500]
-
-      - target: CardOneInstance
+          - target: MorphAPILeft
+            actions:
+              morph:
+          - target: MorphCRMRight
+            actions:
+              morph:
+      - delay: 0
+        duration: 3000
         actions:
-          - moveRelative: [0, { DiffY }, 1500]
-
-      - target: CardFast
+          - target: MorphWarehouseLeft
+            actions:
+              morph:
+          - target: MorphERPRight
+            actions:
+              morph:
+      - delay: 0
+        duration: 3000
         actions:
-          - moveRelative: [0, { DiffY }, 1500]
+          - target: MorphCRMLeft
+            actions:
+              morph:
+          - target: MorphAPIRight
+            actions:
+              morph:
 
-  - delay: 0
-    duration: 100
-    imageActions:
-      - target: CardCluster
-        actions:
-          - unflip: 0
-          - move: [_, 0]
-          - fade: [100, 20]
-          - zIndex: 0
+repeat2:
+  - steps:
+    # STEP 1
+    - delay: 0
+      duration: 1500
+      imageActions:
+        - target: CardFast
+          actions:
+            - flip: [front, 1500]
+            - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+            - fade: [0, 1500]
 
-# STEP 2
-  - delay: 1500
-    duration: 1500
-    imageActions:
-      - target: CardOneInstance
-        actions:
-          - flip: [front, 1500]
-          - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
-          - fade: [0, 1500]
+        - target: CardIntegrate
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardOneInstance
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardCluster
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
 
-      - target: CardCluster
-        actions:
-          - moveRelative: [0, { DiffY }, 1500]
+    - delay: 0
+      duration: 100
+      imageActions:
+        - target: CardFast
+          actions:
+            - unflip: 0
+            - move: [_, 0]
+            - fade: [100, 20]
+            - zIndex: 0
 
-      - target: CardFast
-        actions:
-          - moveRelative: [0, { DiffY }, 1500]
+  # STEP 2
+    - delay: 1500
+      duration: 1500
+      imageActions:
+        - target: CardIntegrate
+          actions:
+            - flip: [front, 1500]
+            - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+            - fade: [0, 1500]
 
-  - delay: 100
-    duration: 100
-    imageActions:
-      - target: CardOneInstance
-        actions:
-          - unflip: 0
-          - move: [_, 0]
-          - fade: [100, 20]
-          - zIndex: 0
+        - target: CardFast
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardOneInstance
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardCluster
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+
+    - delay: 0
+      duration: 100
+      imageActions:
+        - target: CardIntegrate
+          actions:
+            - unflip: 0
+            - move: [_, 0]
+            - fade: [100, 20]
+            - zIndex: 0
+
+    # STEP 3
+    - delay: 1500
+      duration: 1500
+      imageActions:
+        - target: CardOneInstance
+          actions:
+            - flip: [front, 1500]
+            - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+            - fade: [0, 1500]
+
+        - target: CardFast
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardIntegrate
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardCluster
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+
+    - delay: 0
+      duration: 100
+      imageActions:
+        - target: CardOneInstance
+          actions:
+            - unflip: 0
+            - move: [_, 0]
+            - fade: [100, 20]
+            - zIndex: 0
+
+    # STEP 4
+    - delay: 1500
+      duration: 1500
+      imageActions:
+        - target: CardCluster
+          actions:
+            - flip: [front, 1500]
+            - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+            - fade: [0, 1500]
+
+        - target: CardFast
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardIntegrate
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+        - target: CardOneInstance
+          actions:
+            - moveRelative: [0, { DiffY }, 1500]
+
+    - delay: 0
+      duration: 100
+      imageActions:
+        - target: CardCluster
+          actions:
+            - unflip: 0
+            - move: [_, 0]
+            - fade: [100, 20]
+            - zIndex: 0

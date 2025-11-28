@@ -37,9 +37,7 @@ interface StepDefinition {
 interface SceneYAML {
   variables?: Array<{ [key: string]: number }>
   steps?: Array<StepDefinition>
-  repeats?: Array<{
-    steps: Array<StepDefinition>
-  }>
+  [key: string]: any // Allow dynamic repeatN properties
 }
 
 export class SceneParserError extends Error {
@@ -290,40 +288,45 @@ export function parseScene(sceneYAML: SceneYAML, refMap: RefMap): SceneDefinitio
   // Parse variables
   const variables = parseVariables(sceneYAML.variables)
 
-  const allSteps = []
-  let repeatStartIndex: number | undefined
+  const repeatSections: any[][] = []
+  const regularSteps: any[] = []
 
-  // Parse repeating steps first if they exist
-  if (sceneYAML.repeats && sceneYAML.repeats.length > 0) {
-    repeatStartIndex = 0
+  // Find all repeatN properties (repeat1, repeat2, etc.)
+  const repeatKeys = Object.keys(sceneYAML)
+    .filter(key => /^repeat\d+$/.test(key))
+    .sort() // Sort to maintain order (repeat1, repeat2, etc.)
 
-    for (const repeatBlock of sceneYAML.repeats) {
-      const repeatingSteps = repeatBlock.steps.map((step, stepIndex) =>
-        parseStepDefinition(step, stepIndex, variables, refMap, true)
-      )
-      allSteps.push(...repeatingSteps)
+  // Parse each repeat section separately
+  for (const repeatKey of repeatKeys) {
+    const repeatBlocks = sceneYAML[repeatKey]
+    const sectionSteps: any[] = []
+
+    if (Array.isArray(repeatBlocks)) {
+      for (const repeatBlock of repeatBlocks) {
+        if (repeatBlock.steps && Array.isArray(repeatBlock.steps)) {
+          const repeatingSteps = repeatBlock.steps.map((step: StepDefinition, stepIndex: number) =>
+            parseStepDefinition(step, stepIndex, variables, refMap, true)
+          )
+          sectionSteps.push(...repeatingSteps)
+        }
+      }
+    }
+
+    if (sectionSteps.length > 0) {
+      repeatSections.push(sectionSteps)
     }
   }
 
   // Parse regular steps if they exist
   if (sceneYAML.steps && sceneYAML.steps.length > 0) {
-    // If we have both repeats and steps, steps come after repeats
-    // But we want regular steps to execute first, so we need to insert them at the beginning
-    const regularSteps = sceneYAML.steps.map((step, stepIndex) =>
+    const steps = sceneYAML.steps.map((step, stepIndex) =>
       parseStepDefinition(step, stepIndex, variables, refMap, false)
     )
-
-    if (repeatStartIndex !== undefined) {
-      // Insert regular steps at the beginning
-      allSteps.unshift(...regularSteps)
-      repeatStartIndex = regularSteps.length
-    } else {
-      allSteps.push(...regularSteps)
-    }
+    regularSteps.push(...steps)
   }
 
   return {
-    steps: allSteps,
-    repeatStartIndex
+    steps: regularSteps,
+    repeatSections: repeatSections.length > 0 ? repeatSections : undefined
   }
 }
