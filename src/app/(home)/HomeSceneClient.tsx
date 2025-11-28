@@ -110,8 +110,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         image2={'/canvas/icons/crm.color.png'}
         duration={1000}
         morphAfter={1000}
-        reverseAfter={1000}
-        repeatDelay={3000}
+        reverseAfter={2000}
+        repeatDelay={0}
       />
       <LineDraw
         ref={LineCRMLeft}
@@ -121,8 +121,11 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         endY={260}
         stroke={2}
         color={'#ff0000'}
-        duration={600}
+        duration={1000}
         deleteDelay={2000}
+        drawAfter={1000}
+        repeatDelay={2000}
+        zIndex={-10}
       />
 
       {/*DATABASE*/}

@@ -15,6 +15,8 @@ export interface LineDrawProps {
  deleteDelay?: number
  cornerRadius?: number
  zIndex?: number
+ drawAfter?: number
+ repeatDelay?: number
 }
 
 export interface LineDrawHandle {
@@ -24,12 +26,15 @@ export interface LineDrawHandle {
 }
 
 const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
- ({ x, y, endX, endY, stroke, color, duration, deleteDelay = 0, cornerRadius = 10, zIndex = -1 }, ref) => {
+ ({ x, y, endX, endY, stroke, color, duration, deleteDelay = 0, cornerRadius = 10, zIndex = -1, drawAfter, repeatDelay }, ref) => {
   const lineRef = useRef<Konva.Line>(null)
   const [startProgress, setStartProgress] = useState(0)
   const [endProgress, setEndProgress] = useState(0)
   const [currentZIndex, setCurrentZIndex] = useState(zIndex)
   const deleteTimeoutRef = useRef<number | null>(null)
+  const drawAfterTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const restoreAfterTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const repeatIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
   // Clean up timeout on unmount
   useEffect(() => {
@@ -39,6 +44,58 @@ const LineDraw = forwardRef<LineDrawHandle, LineDrawProps>(
     }
    }
   }, [])
+
+  // Handle automatic drawing with drawAfter and repeatDelay
+  useEffect(() => {
+   // Clear any existing timeouts
+   const clearAllTimeouts = () => {
+    if (drawAfterTimeoutRef.current) {
+     clearTimeout(drawAfterTimeoutRef.current)
+     drawAfterTimeoutRef.current = null
+    }
+    if (restoreAfterTimeoutRef.current) {
+     clearTimeout(restoreAfterTimeoutRef.current)
+     restoreAfterTimeoutRef.current = null
+    }
+    if (repeatIntervalRef.current) {
+     clearTimeout(repeatIntervalRef.current)
+     repeatIntervalRef.current = null
+    }
+   }
+
+   const performCycle = () => {
+    // Perform draw after specified delay (or immediately if not set)
+    const drawDelay = drawAfter ?? 0
+    drawAfterTimeoutRef.current = setTimeout(() => {
+     ref && typeof ref !== 'function' && ref.current?.draw()
+    }, drawDelay)
+   }
+
+   // If repeatDelay is set, perform cycles repeatedly
+   if (repeatDelay !== undefined) {
+    performCycle()
+
+    // Calculate total cycle time
+    const cycleTime = (drawAfter ?? 0) + duration + (deleteDelay ?? 0)
+    const totalTime = cycleTime + repeatDelay
+
+    const scheduleNextCycle = () => {
+     repeatIntervalRef.current = setTimeout(() => {
+      performCycle()
+      scheduleNextCycle()
+     }, totalTime)
+    }
+
+    scheduleNextCycle()
+   } else if (drawAfter !== undefined) {
+    // Single cycle without repeat
+    performCycle()
+   }
+
+   return () => {
+    clearAllTimeouts()
+   }
+  }, [drawAfter, deleteDelay, repeatDelay, duration, ref])
 
   // Set initial zIndex after line is mounted
   useEffect(() => {
