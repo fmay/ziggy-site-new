@@ -11,9 +11,12 @@ import { Vector2d } from 'konva/lib/types'
 interface HomeSceneClientProps {
   sceneYAML: any
   scale?: number | Vector2d
+  bgColor?: string
+  width?: number
+  height?: number
 }
 
-const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale }) => {
+const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale, bgColor, width, height }) => {
   const cardYCounter = useRef(0)
 
   const CardFast = useRef<ImageFlipHandle>(null)
@@ -87,7 +90,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale }) => {
   }, [])
 
   return (
-    <CanvasScene scene={sceneDefinition} autoPlay scale={scale}>
+    <CanvasScene scene={sceneDefinition} autoPlay scale={scale} bgColor={bgColor} width={width} height={height}>
       {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
 
       {/*CLUSTER*/}

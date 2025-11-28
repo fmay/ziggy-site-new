@@ -7,9 +7,12 @@ import { Vector2d } from 'konva/lib/types'
 
 interface HomeSceneProps {
   scale?: number | Vector2d
+  bgColor?: string
+  width?: number
+  height?: number
 }
 
-const HomeScene: FC<HomeSceneProps> = ({ scale }) => {
+const HomeScene: FC<HomeSceneProps> = ({ scale, bgColor = 'transparent', width = 500, height = 500 }) => {
   const SceneYaml = fs.readFileSync(
     path.join(process.cwd(), 'src/app/(home)/home-scene.yaml'),
     'utf8'
@@ -18,7 +21,7 @@ const HomeScene: FC<HomeSceneProps> = ({ scale }) => {
 
   // Pass the parsed YAML to the client component
   // The client component will use the parser with its refs
-  return <HomeSceneClient sceneYAML={SceneJSON} scale={scale} />
+  return <HomeSceneClient sceneYAML={SceneJSON} scale={scale} bgColor={bgColor} width={width} height={height} />
   // return <HomeSceneClient />
 }
 

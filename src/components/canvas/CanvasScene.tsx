@@ -118,9 +118,12 @@ interface TestProps {
   scene: SceneDefinition
   autoPlay?: boolean
   scale?: number | Vector2d
+  bgColor?: string
+  width?: number
+  height?: number
 }
 
-const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale }) => {
+const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale, bgColor = 'transparent', width = 500, height = 500 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [canvasKey, setCanvasKey] = useState(0)
@@ -377,10 +380,10 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale }
     <div ref={containerRef}>
       <Stage
         key={canvasKey}
-        width={700}
-        height={450}
+        width={width}
+        height={height}
         scale={scaleValue}
-        className="bg-gray-50"
+        style={{ backgroundColor: bgColor }}
         onClick={handleCanvasClick}
       >
         <Layer>{children}</Layer>

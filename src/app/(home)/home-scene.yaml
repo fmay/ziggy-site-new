@@ -1,3 +1,6 @@
+width: 700
+bgColor: #red
+
 variables:
   - DiffY: 50
   - NumCards: 3
