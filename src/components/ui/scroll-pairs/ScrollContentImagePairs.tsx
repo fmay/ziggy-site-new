@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useRef, useState, ReactNode, ComponentType } from 'react'
+import { useEffect, useRef, useState, ReactNode } from 'react'
 import styles from './ScrollContentImagePairs.module.scss'
 
 export interface ContentImagePair {
   content: ReactNode
   image?: string
-  scene?: ComponentType
+  scene?: ReactNode
+  bgColor?: string
 }
 
 interface ScrollContentImagePairsProps {
@@ -179,22 +180,20 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
                   : {}
             }>
             <div className={styles.imageWrapper}>
-              {contentImagePairs.map((pair, index) => {
-                const Scene = pair.scene
-                return (
-                  <div
-                    key={index}
-                    className={`${styles.imageSlide} ${
-                      index === activeIndex ? styles.imageSlideActive : styles.imageSlideInactive
-                    }`}>
-                    {Scene ? (
-                      <Scene />
-                    ) : pair.image ? (
-                      <img src={pair.image} alt={`Content ${index + 1}`} className={styles.image} />
-                    ) : null}
-                  </div>
-                )
-              })}
+              {contentImagePairs.map((pair, index) => (
+                <div
+                  key={index}
+                  className={`${styles.imageSlide} ${
+                    index === activeIndex ? styles.imageSlideActive : styles.imageSlideInactive
+                  }`}
+                  style={pair.bgColor ? { backgroundColor: pair.bgColor } : undefined}>
+                  {pair.scene ? (
+                    pair.scene
+                  ) : pair.image ? (
+                    <img src={pair.image} alt={`Content ${index + 1}`} className={styles.image} />
+                  ) : null}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -202,21 +201,20 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
 
       {/* Mobile Layout - Stacked content and images */}
       <div className={styles.mobileLayout}>
-        {contentImagePairs.map((pair, index) => {
-          const Scene = pair.scene
-          return (
-            <div key={index} className={styles.mobilePair}>
-              <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>
-              <div className={styles.mobileImageWrapper}>
-                {Scene ? (
-                  <Scene />
-                ) : pair.image ? (
-                  <img src={pair.image} alt={`Content ${index + 1}`} className={styles.mobileImage} />
-                ) : null}
-              </div>
+        {contentImagePairs.map((pair, index) => (
+          <div key={index} className={styles.mobilePair}>
+            <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>
+            <div
+              className={styles.mobileImageWrapper}
+              style={pair.bgColor ? { backgroundColor: pair.bgColor } : undefined}>
+              {pair.scene ? (
+                pair.scene
+              ) : pair.image ? (
+                <img src={pair.image} alt={`Content ${index + 1}`} className={styles.mobileImage} />
+              ) : null}
             </div>
-          )
-        })}
+          </div>
+        ))}
       </div>
     </div>
   )

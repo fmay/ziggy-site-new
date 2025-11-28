@@ -1,7 +1,7 @@
 import PageLayout from '@/components/PageLayout'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Hero from '@/app/(features)/cluster/Hero'
-import ClusterFeatures from '@/app/(features)/cluster/FlowFeatures'
+import ClusterFeatures from '@/app/(features)/cluster/ClusterFeatures'
 
 export default function Cluster() {
   return (

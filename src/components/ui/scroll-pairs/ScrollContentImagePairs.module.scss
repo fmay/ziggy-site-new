@@ -50,7 +50,7 @@
 }
 
 .imageSlide {
-  @apply absolute inset-0 transition-opacity duration-500;
+  @apply absolute inset-0 transition-opacity duration-500 flex items-center justify-center;
 }
 
 .imageSlideActive {
@@ -62,7 +62,7 @@
 }
 
 .image {
-  @apply w-full h-full object-cover rounded-lg shadow-2xl;
+  @apply w-full h-full object-contain rounded-lg shadow-2xl;
 }
 
 .mobileLayout {
@@ -78,9 +78,9 @@
 }
 
 .mobileImageWrapper {
-  @apply w-full aspect-video;
+  @apply w-full aspect-video flex items-center justify-center;
 }
 
 .mobileImage {
-  @apply w-full h-full object-cover rounded-lg shadow-lg;
+  @apply w-full h-full object-contain rounded-lg shadow-lg;
 }

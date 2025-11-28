@@ -31,7 +31,7 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
           <p>Use a managed service or your own database cluster.</p>
         </div>
       ),
-      image: '/images/flows/parallel.png',
+      image: '/hubspot-blocks/filtering.png',
     },
     {
       content: (
@@ -42,7 +42,7 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
           </p>
         </div>
       ),
-      scene: HomeScene,
+      scene: <HomeScene />,
     },
     {
       content: (
