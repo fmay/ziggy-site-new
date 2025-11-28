@@ -1,0 +1,39 @@
+.heroSection {
+  @apply relative pt-20 pb-20 sm:px-6 lg:px-2;
+}
+
+.overlay {
+  @apply absolute inset-0 -z-10 bg-gradient-to-b from-white/90 via-white/80 to-white/90;
+}
+
+.container {
+  @apply flex flex-col gap-[50px] mx-auto px-[5%] text-center;
+}
+
+.heading {
+  @apply text-5xl mb-[0px] sm:text-6xl lg:text-7xl font-bold text-stripe-navy leading-tight;
+}
+
+.subheading {
+  @apply mx-auto text-2xl max-w-[800px] text-mid-gray font-semibold;
+}
+
+.subheadingImage {
+  @apply w-full bg-gray-50 mx-auto order-last lg:order-none flex justify-center items-center min-h-[700px];
+
+  img {
+    @apply w-full h-auto rounded-lg;
+  }
+}
+
+.ctaButtons {
+  @apply flex flex-col sm:flex-row justify-center items-center gap-4 mt-12;
+
+  .primaryButton {
+    @apply w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;
+  }
+
+  .secondaryButton {
+    @apply w-full sm:w-auto px-8 py-4 rounded-full border-2 border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  }
+}

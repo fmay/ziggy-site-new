@@ -14,7 +14,9 @@ interface ScrollContentImagePairsProps {
 
 const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [imagePosition, setImagePosition] = useState<'scrolling' | 'fixed' | 'scrolling-out'>('scrolling')
+  const [imagePosition, setImagePosition] = useState<'scrolling' | 'fixed' | 'scrolling-out'>(
+    'scrolling',
+  )
   const [fixedImageLeft, setFixedImageLeft] = useState(0)
   const [fixedImageWidth, setFixedImageWidth] = useState(0)
   const [scrollOutTop, setScrollOutTop] = useState(0)
@@ -31,7 +33,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
     }
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           const index = contentRefs.current.indexOf(entry.target as HTMLDivElement)
           if (index !== -1) {
@@ -43,7 +45,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
 
     const observer = new IntersectionObserver(observerCallback, observerOptions)
 
-    contentRefs.current.forEach((ref) => {
+    contentRefs.current.forEach(ref => {
       if (ref) observer.observe(ref)
     })
 
@@ -58,7 +60,8 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
 
       const imageContainerRect = imageContainerRef.current.getBoundingClientRect()
       const firstContentRect = contentRefs.current[0]?.getBoundingClientRect()
-      const lastContentRect = contentRefs.current[contentImagePairs.length - 1]?.getBoundingClientRect()
+      const lastContentRect =
+        contentRefs.current[contentImagePairs.length - 1]?.getBoundingClientRect()
       const rightColumnRect = rightColumnRef.current.getBoundingClientRect()
 
       const viewportCenter = window.innerHeight / 2
@@ -106,7 +109,10 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
           }
         }
         // When scrolling back up, stay in scrolling-out until clearly back in fixed range
-        else if (imagePosition === 'scrolling-out' && lastContentCenter < viewportCenter + threshold) {
+        else if (
+          imagePosition === 'scrolling-out' &&
+          lastContentCenter < viewportCenter + threshold
+        ) {
           newPosition = 'scrolling-out'
         }
       }
@@ -139,7 +145,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
           {contentImagePairs.map((pair, index) => (
             <div
               key={index}
-              ref={(el) => {
+              ref={el => {
                 contentRefs.current[index] = el
               }}
               className={styles.contentItem}>
@@ -178,11 +184,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
                   className={`${styles.imageSlide} ${
                     index === activeIndex ? styles.imageSlideActive : styles.imageSlideInactive
                   }`}>
-                  <img
-                    src={pair.image}
-                    alt={`Content ${index + 1}`}
-                    className={styles.image}
-                  />
+                  <img src={pair.image} alt={`Content ${index + 1}`} className={styles.image} />
                 </div>
               ))}
             </div>
@@ -196,11 +198,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
           <div key={index} className={styles.mobilePair}>
             <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>
             <div className={styles.mobileImageWrapper}>
-              <img
-                src={pair.image}
-                alt={`Content ${index + 1}`}
-                className={styles.mobileImage}
-              />
+              <img src={pair.image} alt={`Content ${index + 1}`} className={styles.mobileImage} />
             </div>
           </div>
         ))}

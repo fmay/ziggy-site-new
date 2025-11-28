@@ -58,7 +58,7 @@ export const navigationConfig: NavigationConfig = {
             items: [
               {
                 label: 'Ziggy Cluster',
-                href: '/products',
+                href: '/cluster',
                 description: 'Scaling and high availability',
                 icon: '/nav/flow.svg',
               },
@@ -87,7 +87,7 @@ export const navigationConfig: NavigationConfig = {
             items: [
               {
                 label: 'Integration Partners',
-                href: '/solutions',
+                href: '/integration-partners',
                 description: 'White label Ziggy and build a new revenue stream',
                 icon: '/nav/flow.svg',
               },
