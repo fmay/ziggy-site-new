@@ -99,6 +99,17 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
           }
 
           animate()
+
+          // If reverseAfter is set, schedule automatic reverse
+          if (reverseAfter !== undefined) {
+            // Clear any existing reverse timeout
+            if (reverseAfterTimeoutRef.current) {
+              clearTimeout(reverseAfterTimeoutRef.current)
+            }
+            reverseAfterTimeoutRef.current = setTimeout(() => {
+              ref && typeof ref !== 'function' && ref.current?.reset()
+            }, reverseAfter)
+          }
         },
 
         reset: (animDuration?: number) => {
@@ -125,9 +136,15 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
           }
 
           animate()
+
+          // Clear any pending reverse timeout when manually resetting
+          if (reverseAfterTimeoutRef.current) {
+            clearTimeout(reverseAfterTimeoutRef.current)
+            reverseAfterTimeoutRef.current = null
+          }
         },
       }),
-      [duration, opacity1, opacity2],
+      [duration, opacity1, opacity2, reverseAfter, ref],
     )
 
     // Handle automatic morphing with morphAfter, reverseAfter, and repeatDelay
@@ -149,8 +166,7 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
       }
 
       const performCycle = () => {
-        // Perform morph after specified delay (or immediately if not set)
-        const morphDelay = morphAfter ?? 0
+        // Perform morph after specified delay
         morphAfterTimeoutRef.current = setTimeout(() => {
           ref && typeof ref !== 'function' && ref.current?.morph()
 
@@ -160,28 +176,31 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
               ref && typeof ref !== 'function' && ref.current?.reset()
             }, reverseAfter)
           }
-        }, morphDelay)
+        }, morphAfter!)
       }
 
-      // If repeatDelay is set, perform cycles repeatedly
-      if (repeatDelay !== undefined) {
-        performCycle()
+      // Only perform automatic morph if morphAfter is explicitly specified
+      if (morphAfter !== undefined) {
+        // If repeatDelay is set, perform cycles repeatedly
+        if (repeatDelay !== undefined) {
+          performCycle()
 
-        // Calculate total cycle time
-        const cycleTime = (morphAfter ?? 0) + (reverseAfter ?? 0) + duration * 2
-        const totalTime = cycleTime + repeatDelay
+          // Calculate total cycle time
+          const cycleTime = morphAfter + (reverseAfter ?? 0) + duration * 2
+          const totalTime = cycleTime + repeatDelay
 
-        const scheduleNextCycle = () => {
-          repeatIntervalRef.current = setTimeout(() => {
-            performCycle()
-            scheduleNextCycle()
-          }, totalTime)
+          const scheduleNextCycle = () => {
+            repeatIntervalRef.current = setTimeout(() => {
+              performCycle()
+              scheduleNextCycle()
+            }, totalTime)
+          }
+
+          scheduleNextCycle()
+        } else {
+          // Single cycle without repeat
+          performCycle()
         }
-
-        scheduleNextCycle()
-      } else if (morphAfter !== undefined || reverseAfter !== undefined) {
-        // Single cycle without repeat
-        performCycle()
       }
 
       return () => {

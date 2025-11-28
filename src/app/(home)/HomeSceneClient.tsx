@@ -23,6 +23,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
   const MorphERPRight = useRef<ImageMorphHandle>(null)
   const MorphDBLeft = useRef<ImageMorphHandle>(null)
   const MorphDBRight = useRef<ImageMorphHandle>(null)
+  const MorphWarehouseLeft = useRef<ImageMorphHandle>(null)
+  const MorphWarehouseRight = useRef<ImageMorphHandle>(null)
 
   const LineDBLeft = useRef<LineDrawHandle>(null)
   const LineCRMLeft = useRef<LineDrawHandle>(null)
@@ -184,6 +186,33 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         reverseAfter={2000}
         // repeatDelay={0}
         // morphAfter={1000}
+      />
+
+      {/*WAREHOUSE*/}
+      <ImageMorph
+        ref={MorphWarehouseLeft}
+        x={30}
+        y={380}
+        scale={0.8}
+        image1={'/canvas/icons/warehouse.gray.png'}
+        image2={'/canvas/icons/warehouse.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
+      />
+
+      <ImageMorph
+        ref={MorphWarehouseRight}
+        x={IconsRight}
+        y={380}
+        scale={0.8}
+        image1={'/canvas/icons/warehouse.gray.png'}
+        image2={'/canvas/icons/warehouse.color.png'}
+        duration={1000}
+        reverseAfter={2000}
+        // morphAfter={1000}
+        // repeatDelay={0}
       />
 
       {/* ------ LINES ---------*/}

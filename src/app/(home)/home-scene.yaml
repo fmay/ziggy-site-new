@@ -2,6 +2,28 @@ variables:
   - DiffY: 50
   - NumCards: 3
 
+repeats:
+  - steps:
+      - delay: 0
+        duration: 2000
+        actions:
+          - target: MorphCRMLeft
+            actions:
+              morph:
+          - target: MorphERPRight
+            actions:
+              morph:
+      - delay: 0
+        duration: 2000
+        actions:
+          - target: MorphERPLeft
+            actions:
+              morph:
+          - target: MorphDBRight
+            actions:
+              morph:
+
+
 steps:
   # STEP 1
   - delay: 0
@@ -24,10 +46,6 @@ steps:
       - target: CardFast
         actions:
           - moveRelative: [0, { DiffY }, 1500]
-
-#      - target: MorphCRMLeft
-#        actions:
-#          - morph:
 
   - delay: 0
     duration: 100
