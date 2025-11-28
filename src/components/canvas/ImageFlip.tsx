@@ -28,8 +28,8 @@ export interface ImageFlipHandle {
  flip: (direction: 'front' | 'back', duration?: number) => void
  unflip: (duration?: number) => void
  fade: (opacity: number, duration?: number) => void
- move: (x: number, y: number, duration?: number) => void
- moveRelative: (x: number, y: number, duration?: number) => void
+ move: (x?: number, y?: number, duration?: number) => void
+ moveRelative: (x?: number, y?: number, duration?: number) => void
  brightness: (value: number, duration?: number) => void
  grayscale: (duration?: number) => void
  zIndex: (value: number) => void
@@ -208,15 +208,17 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     animate()
    },
 
-   move: (targetX: number, targetY: number, animDuration?: number) => {
+   move: (targetX?: number, targetY?: number, animDuration?: number) => {
     const dur = animDuration ?? duration
+    const finalTargetX = targetX ?? trapezoidState.currentX
+    const finalTargetY = targetY ?? trapezoidState.currentY
 
     // If duration is 0, move immediately
     if (dur === 0) {
      setTrapezoidState(prev => ({
       ...prev,
-      currentX: targetX,
-      currentY: targetY,
+      currentX: finalTargetX,
+      currentY: finalTargetY,
      }))
      return
     }
@@ -235,8 +237,8 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
      setTrapezoidState(prev => ({
       ...prev,
-      currentX: startX + (targetX - startX) * eased,
-      currentY: startY + (targetY - startY) * eased,
+      currentX: startX + (finalTargetX - startX) * eased,
+      currentY: startY + (finalTargetY - startY) * eased,
      }))
 
      if (progress < 1) {
@@ -247,9 +249,9 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     animate()
    },
 
-   moveRelative: (deltaX: number, deltaY: number, animDuration?: number) => {
-    const targetX = trapezoidState.currentX + deltaX
-    const targetY = trapezoidState.currentY + deltaY
+   moveRelative: (deltaX?: number, deltaY?: number, animDuration?: number) => {
+    const targetX = trapezoidState.currentX + (deltaX ?? 0)
+    const targetY = trapezoidState.currentY + (deltaY ?? 0)
     const dur = animDuration ?? duration
 
     // If duration is 0, move immediately

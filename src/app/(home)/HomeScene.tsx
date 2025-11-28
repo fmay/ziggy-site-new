@@ -5,6 +5,12 @@ import CanvasScene, { SceneDefinition } from '../../components/canvas/CanvasScen
 import ImageFlip, { ImageFlipHandle } from '@/components/canvas/ImageFlip'
 import LineDraw, { LineDrawHandle } from '@/components/canvas/LineDraw'
 import ImageMorph, { ImageMorphHandle } from '@/components/canvas/ImageMorph'
+import { parse } from 'yaml'
+import * as fs from 'node:fs'
+
+const SceneYaml =  fs.readFileSync('home-scene.yaml', 'utf8')
+const SceneJSON = parse(SceneYaml)
+console.log(SceneJSON)
 
 const HomeScene: FC = () => {
   const CardFast = useRef<ImageFlipHandle>(null)
@@ -52,14 +58,14 @@ const HomeScene: FC = () => {
         ],
       },
       {
-        delay: 100, // Wait 100ms after previous step completes
-        duration: 100, // This step takes 1500ms to complete
+        delay: 100,
+        duration: 100,
         imageActions: [
           {
             target: CardCluster,
             actions: [
               { type: 'unflip', duration: 0 },
-              { type: 'move', x: 0, duration: 0 },
+              { type: 'move', y: 0, duration: 0 },
               { type: 'fade', opacity: 100, duration: 20 },
               { type: 'zIndex', value: 0 }, // Set specific layer
             ],

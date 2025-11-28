@@ -1,0 +1,66 @@
+variables:
+  - DiffY: 50
+  - NumCards: 3
+
+steps:
+  - delay: 0
+    duration: 1500
+    imageActions:
+      - target: CardCluster
+        actions:
+          - flip: [front, 1500]
+          - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+          - fade: [0, 1500]
+
+      - target: LineCRMLeft
+        actions:
+          - draw
+
+      - target: CardOneInstance
+        actions:
+          - moveRelative: [0, { DiffY }, 1500]
+
+      - target: CardFast
+        actions:
+          - moveRelative: [0, { DiffY }, 1500]
+
+  - delay: 100
+    duration: 100
+    imageActions:
+      - target: CardCluster
+        actions:
+          - unflip: 0
+          - move: [0, 0]
+          - fade: [100, 20]
+          - zIndex: 0
+
+  - delay: 0
+    duration: 1500
+    imageActions:
+      - target: CardOneInstance
+        actions:
+          - flip: [front, 1500]
+          - moveRelative: [0, { DiffY }, 1500]
+          - fade: [0, 1500]
+
+      - target: LineERPLeft
+        actions:
+          - draw
+
+      - target: CardCluster
+        actions:
+          - moveRelative: [0, { DiffY }, 1500]
+
+      - target: CardFast
+        actions:
+          - moveRelative: [0, { DiffY }, 1500]
+
+  - delay: 100
+    duration: 100
+    imageActions:
+      - target: CardOneInstance
+        actions:
+          - unflip: 0
+          - moveRelative: [0, { -(DiffY - 1) * NumCards }, 0]
+          - fade: [100, 20]
+          - zIndex: 0

@@ -20,15 +20,15 @@ export interface UnflipAction {
 
 export interface MoveAction {
   type: 'move'
-  x: number
-  y: number
+  x?: number
+  y?: number
   duration?: number
 }
 
 export interface MoveRelativeAction {
   type: 'moveRelative'
-  x: number
-  y: number
+  x?: number
+  y?: number
   duration?: number
 }
 
