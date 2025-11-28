@@ -13,9 +13,9 @@ steps:
           - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
           - fade: [0, 1500]
 
-      - target: LineCRMLeft
-        actions:
-          - draw:
+#      - target: LineCRMLeft
+#        actions:
+#          - draw:
 
       - target: CardOneInstance
         actions:
@@ -25,9 +25,9 @@ steps:
         actions:
           - moveRelative: [0, { DiffY }, 1500]
 
-      - target: MorphCRMLeft
-        actions:
-          - morph:
+#      - target: MorphCRMLeft
+#        actions:
+#          - morph:
 
   - delay: 0
     duration: 100
@@ -49,9 +49,9 @@ steps:
           - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
           - fade: [0, 1500]
 
-      - target: LineERPLeft
-        actions:
-          - draw:
+#      - target: LineERPLeft
+#        actions:
+#          - draw:
 
       - target: CardCluster
         actions:

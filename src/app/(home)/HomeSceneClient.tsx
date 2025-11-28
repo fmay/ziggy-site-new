@@ -98,7 +98,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         expansionScale={0.5}
       />
 
-      {/*LINES & MORPHS*/}
+      {/* ------ LINES & MORPHS*/}
 
       {/*CRM*/}
       <ImageMorph
@@ -109,7 +109,9 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         image1={'/canvas/icons/crm.gray.png'}
         image2={'/canvas/icons/crm.color.png'}
         duration={1000}
+        morphAfter={1000}
         morphBackAfter={1000}
+        repeatDelay={3000}
       />
       <LineDraw
         ref={LineCRMLeft}
@@ -123,6 +125,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML }) => {
         deleteDelay={2000}
       />
 
+      {/*DATABASE*/}
       <LineDraw
         ref={LineDBLeft}
         x={50}

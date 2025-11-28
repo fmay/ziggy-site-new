@@ -19,6 +19,9 @@ export interface ImageMorphProps {
   width?: number
   height?: number
   morphBackAfter?: number
+  morphAfter?: number
+  reverseAfter?: number
+  repeatDelay?: number
 }
 
 export interface ImageMorphHandle {
@@ -38,6 +41,9 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
       width,
       height,
       morphBackAfter,
+      morphAfter,
+      reverseAfter,
+      repeatDelay,
     },
     ref,
   ) => {
@@ -46,6 +52,9 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
     const [opacity1, setOpacity1] = useState(1)
     const [opacity2, setOpacity2] = useState(0)
     const morphBackTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+    const morphAfterTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+    const reverseAfterTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+    const repeatIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
     // Load first image
     useEffect(() => {
@@ -141,6 +150,65 @@ const ImageMorph = forwardRef<ImageMorphHandle, ImageMorphProps>(
       }),
       [duration, opacity1, opacity2, morphBackAfter],
     )
+
+    // Handle automatic morphing with morphAfter, reverseAfter, and repeatDelay
+    useEffect(() => {
+      // Clear any existing timeouts
+      const clearAllTimeouts = () => {
+        if (morphAfterTimeoutRef.current) {
+          clearTimeout(morphAfterTimeoutRef.current)
+          morphAfterTimeoutRef.current = null
+        }
+        if (reverseAfterTimeoutRef.current) {
+          clearTimeout(reverseAfterTimeoutRef.current)
+          reverseAfterTimeoutRef.current = null
+        }
+        if (repeatIntervalRef.current) {
+          clearTimeout(repeatIntervalRef.current)
+          repeatIntervalRef.current = null
+        }
+      }
+
+      const performCycle = () => {
+        // Perform morph after specified delay (or immediately if not set)
+        const morphDelay = morphAfter ?? 0
+        morphAfterTimeoutRef.current = setTimeout(() => {
+          ref && typeof ref !== 'function' && ref.current?.morph()
+
+          // Perform reverse morph after specified delay
+          if (reverseAfter !== undefined) {
+            reverseAfterTimeoutRef.current = setTimeout(() => {
+              ref && typeof ref !== 'function' && ref.current?.reset()
+            }, reverseAfter)
+          }
+        }, morphDelay)
+      }
+
+      // If repeatDelay is set, perform cycles repeatedly
+      if (repeatDelay !== undefined) {
+        performCycle()
+
+        // Calculate total cycle time
+        const cycleTime = (morphAfter ?? 0) + (reverseAfter ?? 0) + duration * 2
+        const totalTime = cycleTime + repeatDelay
+
+        const scheduleNextCycle = () => {
+          repeatIntervalRef.current = setTimeout(() => {
+            performCycle()
+            scheduleNextCycle()
+          }, totalTime)
+        }
+
+        scheduleNextCycle()
+      } else if (morphAfter !== undefined || reverseAfter !== undefined) {
+        // Single cycle without repeat
+        performCycle()
+      }
+
+      return () => {
+        clearAllTimeouts()
+      }
+    }, [morphAfter, reverseAfter, repeatDelay, duration, ref])
 
     // Cleanup timeout on unmount
     useEffect(() => {
