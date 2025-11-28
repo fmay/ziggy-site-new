@@ -1,11 +1,12 @@
 import { FC } from 'react'
-import ScrollContentImagePairs from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
+import ScrollContentImagePairs, { ContentImagePair } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
+import HomeScene from '@/app/(home)/HomeScene'
 
 interface FlowFeaturesProps {
 }
 
 const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
-  const contentImagePairs = [
+  const contentImagePairs: ContentImagePair[] = [
     {
       content: (
         <div>
@@ -41,7 +42,7 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
           </p>
         </div>
       ),
-      image: '/images/flows/js-debugger.png',
+      scene: HomeScene,
     },
     {
       content: (
