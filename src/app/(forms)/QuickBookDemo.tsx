@@ -4,7 +4,9 @@ import { FC, useState } from 'react'
 import CTA from '@/components/ui/cta/CTA'
 import styles from './QuickBookDemo.module.scss'
 
-interface QuickBookDemoProps {}
+interface QuickBookDemoProps {
+  background: 'dark' | 'light'
+}
 
 interface FormData {
   firstName: string
@@ -13,7 +15,7 @@ interface FormData {
   email: string
 }
 
-const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
+const QuickBookDemo: FC<QuickBookDemoProps> = ({background='dark'}) => {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -31,7 +33,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
   }
 
   const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
       [field]: value,
     }))
@@ -42,10 +44,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
     console.log('Form submitted:', formData)
 
     // Open Calendly link
-    window.open(
-      'https://calendly.com/freddy-may-ziggyservices/30-minute-meeting-clone',
-      '_blank'
-    )
+    window.open('https://calendly.com/freddy-may-ziggyservices/30-minute-meeting-clone', '_blank')
   }
 
   return (
@@ -63,7 +62,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
             id="firstName"
             type="text"
             value={formData.firstName}
-            onChange={(e) => handleInputChange('firstName', e.target.value)}
+            onChange={e => handleInputChange('firstName', e.target.value)}
             className={styles.input}
           />
         </div>
@@ -76,7 +75,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
             id="lastName"
             type="text"
             value={formData.lastName}
-            onChange={(e) => handleInputChange('lastName', e.target.value)}
+            onChange={e => handleInputChange('lastName', e.target.value)}
             className={styles.input}
           />
         </div>
@@ -89,7 +88,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
             id="company"
             type="text"
             value={formData.company}
-            onChange={(e) => handleInputChange('company', e.target.value)}
+            onChange={e => handleInputChange('company', e.target.value)}
             className={styles.input}
           />
         </div>
@@ -102,7 +101,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
             id="email"
             type="email"
             value={formData.email}
-            onChange={(e) => handleInputChange('email', e.target.value)}
+            onChange={e => handleInputChange('email', e.target.value)}
             className={styles.input}
           />
         </div>
@@ -113,8 +112,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({}) => {
             disabled={!isFormValid()}
             className={`${styles.button} ${
               isFormValid() ? styles.buttonEnabled : styles.buttonDisabled
-            }`}
-          >
+            }`}>
             Book a Demo
           </button>
         </div>

@@ -9,6 +9,7 @@ export default function Cluster() {
   return (
     <PageLayout
       title="Ziggy Cluster"
+      style="feature"
       description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
       image="/canvas/home/cards/cluster.card.svg">
       <PageSection bgColor="bg-gray">
@@ -21,20 +22,24 @@ export default function Cluster() {
                 infrastructure of your choice.
               </p>
               <p>
-                If it's just fault tolerance you're after, you can use small (2GB) instances. For
+                For fault tolerance and normal loads you can use small (2GB) instances. For
                 performance, use larger instance sizes and add instances to your cluster.
               </p>
-              <CTA label="Overview" href="https://docs.ziggyservices.com/user-guide/cluster/overview" />
+              <CTA
+                label="Overview"
+                href="https://docs.ziggyservices.com/user-guide/cluster/overview"
+              />
             </div>
           }
           image="/misc/docker.svg"
           imageScale={0.5}
         />
         <ClusterFeatures />
-
-        <QuickBookDemo />
       </PageSection>
 
+      <PageSection bgColor="bg-gray-800">
+        <QuickBookDemo />
+      </PageSection>
     </PageLayout>
   )
 }

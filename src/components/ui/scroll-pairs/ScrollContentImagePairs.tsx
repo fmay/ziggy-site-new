@@ -33,7 +33,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-50% 0px -50% 0px',
+      rootMargin: '-55% 0px -45% 0px',
       threshold: 0,
     }
 

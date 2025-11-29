@@ -8,14 +8,24 @@ interface PageLayoutProps {
   image?: string
   video?: string
   style?: 'default' | 'feature' | 'test'
+  bgColor?: string
+  color?: string
 }
 
-const PageLayout = ({ title, description, children, image, video, style='default' }: PageLayoutProps) => {
+const styleConfig = {
+  default: { bgColor: 'bg-white', textColor: 'text-dark-gray' },
+  feature: { bgColor: 'bg-gray-800', textColor: 'text-white' },
+  test: { bgColor: 'bg-blue-100', textColor: '' }
+}
+
+const PageLayout = ({ title, description, children, image, video, style='default', bgColor, color }: PageLayoutProps) => {
+  const config = styleConfig[style]
+  const finalBgColor = bgColor || config.bgColor
   if (image) {
     return (
       <>
-        <PageSection>
-          <div className={style ? styles[style] : ''}>
+        <PageSection bgColor={finalBgColor}>
+          <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
             <div className={styles.headerWithImage}>
               <div className={styles.textSection}>
                 <h1 className={styles.title}>{title}</h1>
@@ -31,7 +41,7 @@ const PageLayout = ({ title, description, children, image, video, style='default
   }
 
   return (
-    <PageSection>
+    <PageSection bgColor={finalBgColor}>
     <div className={styles.pageContainer}>
       <div className={styles.contentWrapper}>
         <div className={styles.headerCentered}>

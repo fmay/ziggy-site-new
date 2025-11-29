@@ -15,13 +15,13 @@ const PageSection: FC<PageSectionProps> = ({
   children,
   paddingY = 100,
   paddingX = 40,
-  bgColor = 'bg-green-50',
+  bgColor = 'transparent',
   image,
   alt,
 }) => {
   if (image) {
     return (
-      <div className={`w-full ${bgColor} py-[80px] px-[10px]`}>
+      <div className={`w-full bg-red-50 text-white py-[80px] px-[10px]`}>
         <div className="w-full max-w-[1200px] bg-transparent mx-auto">
           <div className="flex flex-row">
             <div className="w-2/3">{children}</div>

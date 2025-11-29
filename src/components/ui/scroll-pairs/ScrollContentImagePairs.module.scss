@@ -1,5 +1,5 @@
 .container {
-  @apply relative;
+  @apply relative mb-[5vh];
 
   ul {
     @apply mt-12;
@@ -15,7 +15,12 @@
 
 // Adjust this value to nudge the first image
 .imageContainerScrolling {
-  @apply absolute top-[-38vh];
+  @apply absolute top-[-33vh];
+}
+
+// Adjust this value for the spacing
+.contentItem {
+  @apply min-h-[39vh] flex items-center;
 }
 
 .leftColumn {
@@ -26,12 +31,11 @@
   @apply relative pb-32 pt-[20vh];
 }
 
-.contentItem {
-  @apply min-h-[30vh] flex items-center;
-}
-
 .contentWrapper {
   @apply w-full;
+  h2 {
+    @apply font-normal
+  }
 }
 
 .imageContainer {

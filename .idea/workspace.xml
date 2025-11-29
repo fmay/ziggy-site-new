@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="quick demo component">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="scroll pairs spacing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/cta/cta.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/cta/cta.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +84,11 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/canvas/home/cards" />
       <recent name="$PROJECT_DIR$/public/product" />
       <recent name="$PROJECT_DIR$/src/components/ui/page-wrappers" />
       <recent name="$PROJECT_DIR$/public/misc" />
       <recent name="$PROJECT_DIR$/public/bg-images" />
-      <recent name="$PROJECT_DIR$/src/components/ui/layout/page-layout" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -128,15 +139,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
-      <workItem from="1764399109126" duration="19370000" />
-    </task>
-    <task id="LOCAL-00002" summary="menu 0.2">
-      <option name="closed" value="true" />
-      <created>1764073009823</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1764073009823</updated>
+      <workItem from="1764399109126" duration="23072000" />
     </task>
     <task id="LOCAL-00003" summary="menu 1">
       <option name="closed" value="true" />
@@ -522,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764418999737</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="scroll pairs spacing">
+      <option name="closed" value="true" />
+      <created>1764419432761</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1764419432761</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="canvas 0.13" />
     <MESSAGE value="canvas 0.14" />
     <MESSAGE value="canvas 0.15" />
     <MESSAGE value="canvas 0.16 refactored image flip" />
@@ -593,7 +603,8 @@
     <MESSAGE value="scrolling pairs tweak" />
     <MESSAGE value="iintro image scaling" />
     <MESSAGE value="quick demo component" />
-    <option name="LAST_COMMIT_MESSAGE" value="quick demo component" />
+    <MESSAGE value="scroll pairs spacing" />
+    <option name="LAST_COMMIT_MESSAGE" value="scroll pairs spacing" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

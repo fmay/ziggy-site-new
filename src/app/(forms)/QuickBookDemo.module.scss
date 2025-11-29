@@ -1,5 +1,7 @@
 .container {
-  @apply flex flex-row justify-between border-gray-50 border rounded-lg p-6 items-start relative z-50;
+  @apply flex flex-row justify-between
+   border-gray-50
+  border rounded-lg p-6 items-start relative z-50;
 }
 
 .heading {

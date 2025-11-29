@@ -1,5 +1,5 @@
 .pageContainer {
-  @apply min-h-screen pt-24 pb-16 bg-yellow-50  ;
+  @apply min-h-screen pt-24 pb-16;
 }
 
 .contentWrapper {
@@ -8,6 +8,10 @@
 
 // Page Layout Style
 .default {
+  @apply py-4 px-8;
+}
+
+.feature {
   @apply py-4 px-8;
 }
 
@@ -20,11 +24,11 @@
 }
 
 .title {
-  @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-stripe-navy mb-6;
+  @apply text-4xl sm:text-5xl lg:text-6xl font-normal mb-6;
 }
 
 .description {
-  @apply text-xl text-stripe-gray;
+  @apply text-xl leading-[2.2rem];
 }
 
 .videoSection {
@@ -40,7 +44,7 @@
 }
 
 .descriptionCentered {
-  @apply text-xl text-stripe-gray max-w-3xl mx-auto;
+  @apply text-xl max-w-3xl mx-auto;
 }
 
 .headerWithImage {
