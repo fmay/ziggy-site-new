@@ -1,4 +1,4 @@
-import PageLayout from '@/components/PageLayout'
+import PageLayout from '@/components/ui/layout/page-layout/PageLayout'
 import FlowFeatures from '@/app/(features)/flows/FlowFeatures'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import BlockCollections from '@/app/(features)/flows/BlockCollections'

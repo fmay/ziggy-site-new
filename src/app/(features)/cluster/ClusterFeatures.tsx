@@ -1,18 +1,19 @@
 import { FC } from 'react'
-import ScrollContentImagePairs, { ContentImagePair } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
+import ScrollContentImagePairs, {
+  ContentImagePair,
+} from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import HomeScene from '@/app/(home)/HomeScene'
 
-interface FlowFeaturesProps {
-}
+interface FlowFeaturesProps {}
 
-const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
+const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
   const contentImagePairs: ContentImagePair[] = [
     {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Level 1</h2>
           <p className="text-lg text-gray-600 mb-4">
-            The basic Ziggy cluster has as many servers as you like and one of them runs the database.
+            The basic Ziggy cluster has one or more many servers. One of them runs the database.
           </p>
           <p className="text-lg text-gray-600 mb-4">
             Ideal for high load but not fault tolerate if the database server goes down.
@@ -26,7 +27,8 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Level 2</h2>
           <p className="text-lg text-gray-600 mb-4">
-            When you need both high load and fault tolerance, you can run the database on any server you like.
+            When you need both high load and fault tolerance, you can run the database on any server
+            you like.
           </p>
           <p>Use a managed service or your own database cluster.</p>
         </div>
@@ -42,14 +44,15 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
           </p>
         </div>
       ),
-      scene: <HomeScene scale={0.5} />,
+      scene: <HomeScene scale={1} />,
     },
     {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Load Testing</h2>
           <p className="text-lg text-gray-600 mb-4">
-            We even offer a built-in load tester where you can run any Flow under normal and extreme conditions.
+            We even offer a built-in load tester where you can run any Flow under normal and extreme
+            conditions.
           </p>
           <p className="text-lg text-gray-600 mb-4">
             Use Ziggy monitoring to see exactly how the system and each server is performing.
@@ -61,21 +64,11 @@ const ClusterFeatures:FC<FlowFeaturesProps> = ({}) => {
   ]
 
   return (
-    <div className="bg-white">
+    <div className="">
       {/* Other page content above */}
-      <div className="py-16">
-        {/*<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">*/}
-        {/*  <h1 className="text-5xl font-bold text-gray-900 mb-4">*/}
-        {/*    A fully integrated suite of features*/}
-        {/*  </h1>*/}
-        {/*  <p className="text-xl text-gray-600">*/}
-        {/*    Scroll down to see the interactive content-image pairs*/}
-        {/*  </p>*/}
-        {/*</div>*/}
 
-        {/* The ScrollContentImagePairs component */}
-        <ScrollContentImagePairs contentImagePairs={contentImagePairs} />
-      </div>
+      {/* The ScrollContentImagePairs component */}
+      <ScrollContentImagePairs contentImagePairs={contentImagePairs} />
       {/* Other page content below */}
     </div>
   )

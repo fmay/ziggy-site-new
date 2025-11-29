@@ -4,11 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="canvas 0.22 refactored image flip">
-      <change afterPath="$PROJECT_DIR$/public/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/ImageFlip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/ImageFlip.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="fixed observer issues">
+      <change afterPath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PLImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PLVideo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/cards/cluster.card.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/cards/cluster.card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/cards/fast-friendly.card.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/fast-friendly.card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/cards/integrations-migrations.card.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/integrations-migrations.card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/cards/one-instance.card.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/one-instance.card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/api.color.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/api.color.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/api.gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/api.gray.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/crm.color.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/crm.color.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/crm.gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/crm.gray.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/database.color.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/database.color.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/database.gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/database.gray.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/erp.color.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/erp.color.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/erp.gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/erp.gray.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/warehouse.color.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/warehouse.color.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/icons/warehouse.gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/icons/warehouse.gray.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(features)/cluster/ClusterFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/cluster/ClusterFeatures.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(features)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/flows/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/HomeSceneClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomeSceneClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/careers/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/careers/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cookies/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cookies/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/developers/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/developers/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/privacy/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/resources/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/resources/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/signin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/solutions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/solutions/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/terms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/layout/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PageLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,43 +81,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "canvas",
-    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(home)/canvas",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(features)/cluster&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(features)/cluster" />
       <recent name="$PROJECT_DIR$/src/app/(home)/canvas" />
       <recent name="$PROJECT_DIR$/public/hero" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ui/layout/page-layout" />
+      <recent name="$PROJECT_DIR$/src/components/ui/layout" />
+      <recent name="$PROJECT_DIR$/public/canvas/home" />
+      <recent name="$PROJECT_DIR$/public/canvas/cards" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/app/(home)" />
-      <recent name="$PROJECT_DIR$/public/images/flows" />
-      <recent name="$PROJECT_DIR$/src/components/ui" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -104,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -129,6 +167,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
+      <workItem from="1764399109126" duration="3696000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -402,18 +441,125 @@
       <option name="project" value="LOCAL" />
       <updated>1764251941764</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="reset on no visibility">
+      <option name="closed" value="true" />
+      <created>1764338647517</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1764338647517</updated>
+    </task>
+    <task id="LOCAL-00036" summary="reset on no visibility 2">
+      <option name="closed" value="true" />
+      <created>1764338748730</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1764338748730</updated>
+    </task>
+    <task id="LOCAL-00037" summary="cluster page 0.1">
+      <option name="closed" value="true" />
+      <created>1764351673308</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1764351673308</updated>
+    </task>
+    <task id="LOCAL-00038" summary="cluster page 0.11">
+      <option name="closed" value="true" />
+      <created>1764352065095</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1764352065095</updated>
+    </task>
+    <task id="LOCAL-00039" summary="scroll image pair v center">
+      <option name="closed" value="true" />
+      <created>1764352530512</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1764352530512</updated>
+    </task>
+    <task id="LOCAL-00040" summary="scroll image pair container v shrink">
+      <option name="closed" value="true" />
+      <created>1764352766102</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1764352766102</updated>
+    </task>
+    <task id="LOCAL-00041" summary="scale prop for scene">
+      <option name="closed" value="true" />
+      <created>1764354646785</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1764354646785</updated>
+    </task>
+    <task id="LOCAL-00042" summary="width, height, bgColor for scenes">
+      <option name="closed" value="true" />
+      <created>1764354839437</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1764354839437</updated>
+    </task>
+    <task id="LOCAL-00043" summary="yaml size and color">
+      <option name="closed" value="true" />
+      <created>1764355519695</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1764355519695</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fixed observer issues">
+      <option name="closed" value="true" />
+      <created>1764398406232</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1764398406232</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -421,16 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="stack item 0.76" />
-    <MESSAGE value="carousel restyling 0.1" />
-    <MESSAGE value="carousel min height; page section" />
-    <MESSAGE value="dd menu tweak" />
-    <MESSAGE value="carousel tweaks" />
-    <MESSAGE value="changed to poppins" />
-    <MESSAGE value="pre home page table" />
-    <MESSAGE value="home 0.1" />
-    <MESSAGE value="home 0.11" />
-    <MESSAGE value="home 0.12" />
     <MESSAGE value="home 0.13" />
     <MESSAGE value="CTA + styling elsewhere" />
     <MESSAGE value="tweaks" />
@@ -446,7 +582,17 @@
     <MESSAGE value="canvas 0.19 refactored image flip" />
     <MESSAGE value="canvas 0.2 refactored image flip" />
     <MESSAGE value="canvas 0.22 refactored image flip" />
-    <option name="LAST_COMMIT_MESSAGE" value="canvas 0.22 refactored image flip" />
+    <MESSAGE value="reset on no visibility" />
+    <MESSAGE value="reset on no visibility 2" />
+    <MESSAGE value="cluster page 0.1" />
+    <MESSAGE value="cluster page 0.11" />
+    <MESSAGE value="scroll image pair v center" />
+    <MESSAGE value="scroll image pair container v shrink" />
+    <MESSAGE value="scale prop for scene" />
+    <MESSAGE value="width, height, bgColor for scenes" />
+    <MESSAGE value="yaml size and color" />
+    <MESSAGE value="fixed observer issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed observer issues" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

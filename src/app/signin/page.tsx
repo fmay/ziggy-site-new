@@ -1,4 +1,4 @@
-import PageLayout from '@/components/PageLayout'
+import PageLayout from '@/components/ui/layout/page-layout/PageLayout'
 
 export default function SignIn() {
   return (
