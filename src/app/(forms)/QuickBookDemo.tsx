@@ -15,7 +15,7 @@ interface FormData {
   email: string
 }
 
-const QuickBookDemo: FC<QuickBookDemoProps> = ({background='dark'}) => {
+const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -48,7 +48,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({background='dark'}) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
       <div className={styles.heading}>
         <h2>Book a demo</h2>
       </div>

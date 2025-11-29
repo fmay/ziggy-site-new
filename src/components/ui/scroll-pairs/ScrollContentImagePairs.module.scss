@@ -15,12 +15,12 @@
 
 // Adjust this value to nudge the first image
 .imageContainerScrolling {
-  @apply absolute top-[-33vh];
+  @apply absolute top-[-28vh];
 }
 
 // Adjust this value for the spacing
 .contentItem {
-  @apply min-h-[39vh] flex items-center;
+  @apply min-h-[45vh] flex items-center;
 }
 
 .leftColumn {

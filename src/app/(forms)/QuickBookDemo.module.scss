@@ -4,6 +4,14 @@
   border rounded-lg p-6 items-start relative z-50;
 }
 
+.bgDark {
+  @apply bg-gray-100 text-dark-text;
+}
+
+.bgLight {
+  @apply border-gray-700 text-white;
+}
+
 .heading {
   // No additional styles needed for h2
   @apply text-2xl
