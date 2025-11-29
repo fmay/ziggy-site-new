@@ -17,6 +17,10 @@
   @apply space-y-32 py-32;
 }
 
+.rightColumn {
+  @apply relative py-32;
+}
+
 .contentItem {
   @apply min-h-[60vh] flex items-center;
 }
@@ -25,9 +29,7 @@
   @apply w-full;
 }
 
-.rightColumn {
-  @apply relative py-32;
-}
+
 
 .imageContainer {
   @apply w-full h-screen flex items-center justify-center;

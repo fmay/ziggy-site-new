@@ -1,4 +1,4 @@
-import PageLayout from '@/components/ui/layout/page-layout/PageLayout'
+import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import Carousel from '@/components/ui/carousel/Carousel'
 
 export default function Products() {

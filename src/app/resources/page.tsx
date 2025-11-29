@@ -1,4 +1,4 @@
-import PageLayout from '@/components/ui/layout/page-layout/PageLayout'
+import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
 
 export default function Resources() {
   return (

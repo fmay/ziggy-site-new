@@ -1,15 +1,14 @@
 import { FC, ReactNode } from 'react'
-import styles from '@/components/ui/layout/page-layout/PageLayout.module.scss'
-import Image from 'next/image'
+import styles from '@/components/ui/page-wrappers/page-layout/PageLayout.module.scss'
 
-interface PLImageProps {
+interface PLVideoProps {
   title: string
   description: string
   children: ReactNode
-  image: string
+  video: string
 }
 
-const PLImage: FC<PLImageProps> = ({ title, description, children, image }) => {
+const PLVideo: FC<PLVideoProps> = ({ title, description, children, video }) => {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.contentWrapper}>
@@ -20,13 +19,16 @@ const PLImage: FC<PLImageProps> = ({ title, description, children, image }) => {
             </h1>
             <p className="text-xl text-stripe-gray">{description}</p>
           </div>
-          <div>
-            <Image src={image} alt={'Hero image'} />
+          <div className="w-full lg:w-1/2 brightness-75 shadow-md">
+            <video autoPlay loop muted playsInline className="w-full h-auto rounded-lg">
+              <source src={video} type="video/mp4" />
+            </video>
           </div>
+          {children}
         </div>
       </div>
     </div>
   )
 }
 
-export default PLImage
+export default PLVideo
