@@ -336,15 +336,20 @@ const CanvasScene: FC<TestProps> = ({ children, scene, autoPlay = false, scale, 
     const container = containerRef.current
     if (!container || !autoPlay) return
 
+    // Track if this is the first visibility check
+    let isFirstCheck = true
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         const wasVisible = isVisible
         setIsVisible(entry.isIntersecting)
 
         // When canvas becomes visible after being invisible, reset and restart
-        if (entry.isIntersecting && !wasVisible) {
+        // BUT skip reset on first visibility (initial mount)
+        if (entry.isIntersecting && !wasVisible && !isFirstCheck) {
           resetCanvas()
         }
+        isFirstCheck = false
       },
       { threshold: 0.1 } // Trigger when at least 10% of canvas is visible
     )
