@@ -4,7 +4,7 @@
   ul {
     @apply mt-12;
     li {
-      @apply list-none ml-0 mb-1 text-mid-gray;
+      @apply list-none text-lg ml-0 mb-1 text-mid-gray;
     }
   }
 }
@@ -32,7 +32,7 @@
 }
 
 .contentWrapper {
-  @apply w-full;
+  @apply w-full border-l-2 pl-4;
   h2 {
     @apply font-normal
   }

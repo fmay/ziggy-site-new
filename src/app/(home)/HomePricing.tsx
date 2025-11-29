@@ -8,10 +8,10 @@ const HomePricing: FC = () => {
   return (
     <PageSection>
       <div className="section-intro">
-        <h2>Pricing that is beyond fair</h2>
+        <h2>Transparent pricing</h2>
         <p>
           We hope you'll agree that our pricing is not only low, but it steers well clear of hidden
-          costs associated with ETL platforms, Make.com and Zapier let alone custom development!
+          costs associated with ETL platforms, Make.com and Zapier let alone custom development.
         </p>
       </div>
       <Carousel slidesToShow={3}>
@@ -21,7 +21,7 @@ const HomePricing: FC = () => {
             <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <h3 className={styles.title}>Always included</h3>
               <p className={styles.content}>
-                One production server, one development server and one staging server
+                One production server, one development server, one staging server
               </p>
               <a href="#" className={styles.link}>
                 Pricing →
@@ -36,7 +36,7 @@ const HomePricing: FC = () => {
             <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <h3 className={styles.title}>No usage based costs</h3>
               <p className={styles.content}>
-                As you add more Ziggy Flows that do more and more you will not be charged a cent
+                As you add more and more Ziggy Flows, you don't pay a cent more
                 more
               </p>
               <a href="#" className={styles.link}>

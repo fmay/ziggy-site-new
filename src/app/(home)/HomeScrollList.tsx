@@ -9,12 +9,17 @@ const HomeScrollList: FC = () => {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            <strong>Your</strong> servers
+            <strong>Your</strong> servers - single instance or cluster.
           </h2>
           <p className="text-lg text-gray-600 mb-4">
-            Complete control over performance, security, cost and customizations - you just can't
-            have these with cloud based platforms.
+            Ziggy gives you complete control over
           </p>
+          <ul>
+            <li>Performance</li>
+            <li>Fault-tolerance</li>
+            <li>Security</li>
+            <li>Customizations</li>
+          </ul>
           <CTA className="mt-20" label="Learn more" href="flows" />
         </div>
       ),
@@ -29,8 +34,7 @@ const HomeScrollList: FC = () => {
           <div className="">
             <p className="text-lg text-gray-600 mb-4">
               Whether you are moving millions of records from one platform to another or updating
-              one platform when data changes in another, Ziggy is fast to learn yet incredibly
-              powerful.
+              one platform when data changes in another, Ziggy is fast to learn and feature packed.
             </p>
           </div>
           <CTA className="mt-10" label="Feature overview" href="flows" />
@@ -57,19 +61,19 @@ const HomeScrollList: FC = () => {
       ),
       image: '/images/flows/js-debugger.png',
     },
-    {
-      content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Customizations</h2>
-          <p className="text-lg text-gray-600 mb-4">
-            Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
-            simple TypeScript code.
-          </p>
-          <CTA className="mt-20" label="Learn more" href="flows" />
-        </div>
-      ),
-      image: '/images/flows/js-debugger.png',
-    },
+    // {
+    //   content: (
+    //     <div>
+    //       <h2 className="text-4xl font-bold text-gray-900 mb-6">Customizations</h2>
+    //       <p className="text-lg text-gray-600 mb-4">
+    //         Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
+    //         simple TypeScript code.
+    //       </p>
+    //       <CTA className="mt-20" label="Learn more" href="flows" />
+    //     </div>
+    //   ),
+    //   image: '/images/flows/js-debugger.png',
+    // },
     {
       content: (
         <div>

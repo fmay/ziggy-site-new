@@ -26,7 +26,7 @@ export default function Home() {
           <h2>Professional Services</h2>
           <p>
             Whether you want us train, build flows, develop custom Ziggy Blocks or just hand-hold,
-            we're here to provide the expert support you need.
+            we're here to provide expert support when you need it.
           </p>
         </div>
       </PageSection>

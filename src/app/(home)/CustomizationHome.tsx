@@ -16,8 +16,8 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
       graphicBgColor="bg-flow-gray"
     />,
     <StackCard
-      title="AI Code generation"
-      description="Ziggy will generate code from your instructions. It also understands the data in your flow to ensure it has the full context."
+      title="Code"
+      description="Each block consists of a React UI component and an execution component - written in TypeScript"
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant"
       ctaNewTab
@@ -25,16 +25,16 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
       graphic="/images/flows/js-ai.png"
     />,
     <StackCard
-      title="Debugger"
-      description="Comes with a fully integrated debugger, letting you step through your code and inspect variables"
+      title="Embed in flows"
+      description="Custom blocks behave just like standard Ziggy blocks and can be used in any flow."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
       ctaNewTab
       graphic="/images/flows/js-debugger.png"
     />,
     <StackCard
-      title="AI Explain"
-      description="Not sure what's going on? AI Explain will put you out of your misery."
+      title="Access to your platform"
+      description="Build a collection of blocks that provide access to your platform for your customers."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
       ctaNewTab
