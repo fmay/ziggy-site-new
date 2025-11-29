@@ -8,7 +8,7 @@ const Hero = () => (
 
     <div className={styles.container}>
       {/* Main Heading */}
-      <h1 className={styles.heading}>The new ETL pioneer</h1>
+      <h1 className={styles.heading}>Integrations and Automations that run on <strong>your</strong> servers</h1>
 
       {/*Image*/}
       <div className={styles.subheadingImage}>
@@ -22,8 +22,10 @@ const Hero = () => (
           the cost of normal ETL platforms.
         </p>
         <p  className={styles.subheading}>
-          Run on <strong>your</strong> infrastructure so you have total control over security and
-          performance.
+          Customise with he Ziggy plugin system
+        </p>
+        <p className={styles.subheading}>
+          Simple, non-usage based pricing
         </p>
       </div>
     </div>

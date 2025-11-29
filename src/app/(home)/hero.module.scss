@@ -11,11 +11,12 @@
 }
 
 .heading {
-  @apply text-5xl mb-[0px] sm:text-6xl lg:text-7xl font-bold text-stripe-navy leading-tight;
+  @apply text-5xl mb-[0px] sm:text-6xl lg:text-7xl font-normal text-stripe-navy;
+  line-height: 5rem;
 }
 
 .subheading {
-  @apply mx-auto text-2xl max-w-[800px] text-mid-gray font-semibold;
+  @apply mx-auto text-2xl max-w-[800px] text-mid-gray font-normal;
 }
 
 .subheadingImage {

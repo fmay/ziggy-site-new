@@ -3,6 +3,7 @@ import HomeScrollList from '@/app/(home)/HomeScrollList'
 import HomePricing from '@/app/(home)/HomePricing'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import HomeScene from '@/app/(home)/HomeScene'
+import CustomizationHome from '@/app/(home)/CustomizationHome'
 
 export default function Home() {
   return (
@@ -12,6 +13,10 @@ export default function Home() {
       {/*<HomeScene />*/}
 
       <HomeScrollList />
+
+      <PageSection >
+        <CustomizationHome />
+      </PageSection>
 
       <HomePricing />
 
@@ -25,6 +30,7 @@ export default function Home() {
           </p>
         </div>
       </PageSection>
+
     </div>
   )
 }
