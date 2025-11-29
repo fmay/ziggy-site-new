@@ -56,10 +56,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.page-section {
-  @apply py-[40px] bg-red-50;
-}
-
 .spaced-letters-small {
   @apply font-normal text-[var(--dark-gray)];
 }

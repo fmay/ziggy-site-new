@@ -8,7 +8,7 @@ export default function Cluster() {
       title="Ziggy Cluster"
       description="Throw any load at Ziggy. Sleep well at night thanks to full fault tolerance."
       image="/canvas/home/cards/cluster.card.svg">
-      <PageSection bgColor="bg-blue-50">
+      <PageSection bgColor="bg-gray">
         <ClusterFeatures />
       </PageSection>
 

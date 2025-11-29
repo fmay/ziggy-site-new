@@ -1,0 +1,52 @@
+.pageContainer {
+  @apply min-h-screen pt-24 pb-16 bg-yellow-50  ;
+}
+
+.contentWrapper {
+  @apply mx-auto px-0;
+}
+
+// Page Layout Style
+.default {
+  @apply py-4 px-8;
+}
+
+.headerWithVideo {
+  @apply flex flex-col lg:flex-row items-center gap-8 mb-12;
+}
+
+.textSection {
+  @apply w-full lg:w-1/2;
+}
+
+.title {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-stripe-navy mb-6;
+}
+
+.description {
+  @apply text-xl text-stripe-gray;
+}
+
+.videoSection {
+  @apply w-full lg:w-1/2 brightness-75 shadow-md;
+}
+
+.video {
+  @apply w-full h-auto rounded-lg;
+}
+
+.headerCentered {
+  @apply text-center mb-12;
+}
+
+.descriptionCentered {
+  @apply text-xl text-stripe-gray max-w-3xl mx-auto;
+}
+
+.headerWithImage {
+  @apply flex flex-col lg:flex-row items-center gap-8 mb-12 pt-24;
+}
+
+.imageSection {
+  @apply w-full lg:w-1/2 h-64 lg:h-96 bg-cover bg-center bg-no-repeat rounded-lg;
+}

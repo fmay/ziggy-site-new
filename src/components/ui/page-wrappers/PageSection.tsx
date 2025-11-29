@@ -11,12 +11,12 @@ const PageSection: FC<PageSectionProps> = ({
   children,
   paddingY = 100,
   paddingX = 40,
-  bgColor = 'bg-white',
+  bgColor = 'bg-green-50',
 }) => {
   return (
     <div
-      className={`w-full ${bgColor} py-[${paddingY}px] px-[${paddingX}] `}>
-      <div className="w-full max-w-[1200px] mx-auto">
+      className={`w-full ${bgColor}`}>
+      <div className="w-full max-w-[1200px] bg-transparent mx-auto">
         {children}
       </div>
     </div>
