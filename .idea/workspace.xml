@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iintro image scaling">
-      <change afterPath="$PROJECT_DIR$/public/product/level1-cluster.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/product/level2-cluster.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/product/load-test.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/product/monitoring.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(features)/cluster/ClusterFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/cluster/ClusterFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/cta/CTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/cta/CTA.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/cta/cta.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/cta/cta.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="quick demo component">
       <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,15 +128,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
-      <workItem from="1764399109126" duration="19050000" />
-    </task>
-    <task id="LOCAL-00001" summary="init">
-      <option name="closed" value="true" />
-      <created>1764069173355</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1764069173355</updated>
+      <workItem from="1764399109126" duration="19370000" />
     </task>
     <task id="LOCAL-00002" summary="menu 0.2">
       <option name="closed" value="true" />
@@ -536,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764409353251</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="quick demo component">
+      <option name="closed" value="true" />
+      <created>1764418999737</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1764418999737</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +568,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="canvas 0.12" />
     <MESSAGE value="canvas 0.13" />
     <MESSAGE value="canvas 0.14" />
     <MESSAGE value="canvas 0.15" />
@@ -607,7 +592,8 @@
     <MESSAGE value="intro component" />
     <MESSAGE value="scrolling pairs tweak" />
     <MESSAGE value="iintro image scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="iintro image scaling" />
+    <MESSAGE value="quick demo component" />
+    <option name="LAST_COMMIT_MESSAGE" value="quick demo component" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

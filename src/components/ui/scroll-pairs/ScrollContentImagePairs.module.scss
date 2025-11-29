@@ -13,8 +13,13 @@
   @apply hidden lg:grid lg:grid-cols-2 lg:gap-8 mx-auto;
 }
 
+// Adjust this value to nudge the first image
+.imageContainerScrolling {
+  @apply absolute top-[-38vh];
+}
+
 .leftColumn {
-  @apply space-y-32 pb-32;
+  @apply space-y-16 pb-16;
 }
 
 .rightColumn {
@@ -22,21 +27,15 @@
 }
 
 .contentItem {
-  @apply min-h-[60vh] flex items-center;
+  @apply min-h-[30vh] flex items-center;
 }
 
 .contentWrapper {
   @apply w-full;
 }
 
-
-
 .imageContainer {
   @apply w-full h-screen flex items-center justify-center;
-}
-
-.imageContainerScrolling {
-  @apply absolute top-[-20vh];
 }
 
 .imageContainerFixed {
