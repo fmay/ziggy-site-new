@@ -2,12 +2,14 @@ import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import ClusterFeatures from '@/app/(features)/cluster/ClusterFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
+import CTA from '@/components/ui/cta/CTA'
+import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
 
 export default function Cluster() {
   return (
     <PageLayout
       title="Ziggy Cluster"
-      description="Throw any load at Ziggy. Sleep well at night thanks to full fault tolerance."
+      description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
       image="/canvas/home/cards/cluster.card.svg">
       <PageSection bgColor="bg-gray">
         <Intro
@@ -19,18 +21,20 @@ export default function Cluster() {
                 infrastructure of your choice.
               </p>
               <p>
-                If it's just fault tolerance you're after, you can use very small instances. For
-                performance, use larger instance sizes.
+                If it's just fault tolerance you're after, you can use small (2GB) instances. For
+                performance, use larger instance sizes and add instances to your cluster.
               </p>
+              <CTA label="Overview" href="https://docs.ziggyservices.com/user-guide/cluster/overview" />
             </div>
           }
           image="/misc/docker.svg"
           imageScale={0.5}
         />
         <ClusterFeatures />
+
+        <QuickBookDemo />
       </PageSection>
 
-      <PageSection>HELLO</PageSection>
     </PageLayout>
   )
 }

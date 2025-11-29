@@ -29,7 +29,7 @@ const CTA: FC<CTAProps> = ({ label, style, href, className = '' }) => {
   }, [style])
 
   return (
-    <div className={className}>
+    <div className={`${styles.button} className`}>
       {href?.includes('http') ? (
         <a
           href={href}

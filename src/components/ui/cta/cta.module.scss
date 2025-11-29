@@ -1,6 +1,10 @@
 
+.button {
+  @apply my-8;
+}
+
 .primaryCTAButton {
-  @apply my-10 sm:w-auto px-8 py-4 rounded-full;
+  @apply sm:w-auto px-8 py-4 rounded-full;
   @apply font-normal hover:font-semibold transition-all duration-200
   bg-stripe-purple text-white;
   &:hover {
@@ -9,7 +13,7 @@
 }
 
 .secondaryCTAButton {
-  @apply my-10 sm:w-auto px-8 py-4 rounded-full;
+  @apply  sm:w-auto px-8 py-4 rounded-full;
   @apply border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
   &:hover {
     color: white !important;

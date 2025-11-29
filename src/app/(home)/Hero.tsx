@@ -26,16 +26,6 @@ const Hero = () => (
           performance.
         </p>
       </div>
-
-      {/* CTA Buttons */}
-      {/*<div className={styles.ctaButtons}>*/}
-      {/*  <button className={styles.primaryButton}>*/}
-      {/*    Start now*/}
-      {/*  </button>*/}
-      {/*  <button className={styles.secondaryButton}>*/}
-      {/*    Contact sales*/}
-      {/*  </button>*/}
-      {/*</div>*/}
     </div>
   </section>
 )

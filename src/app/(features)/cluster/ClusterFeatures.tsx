@@ -3,6 +3,7 @@ import ScrollContentImagePairs, {
   ContentImagePair,
 } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import HomeScene from '@/app/(home)/HomeScene'
+import CTA from '@/components/ui/cta/CTA'
 
 interface FlowFeaturesProps {}
 
@@ -13,53 +14,63 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Level 1</h2>
           <p className="text-lg text-gray-600 mb-4">
-            The basic Ziggy cluster has one or more many servers. One of them runs the database.
+            The basic Ziggy cluster can have two or more servers. One of them runs the database.
           </p>
           <p className="text-lg text-gray-600 mb-4">
-            Ideal for high load but not fault tolerate if the database server goes down.
+            Level 1 is fine for testing scaling but is not fault tolerant if the database server
+            goes down.
           </p>
+          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
         </div>
       ),
-      image: '/images/flows/js-debugger.png',
+      image: '/product/level1-cluster.svg',
     },
     {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Level 2</h2>
           <p className="text-lg text-gray-600 mb-4">
-            When you need both high load and fault tolerance, you can run the database on any server
-            you like.
+            When you need both high performance and fault tolerance. The database can run in a
+            managed service such as AWS RDS or in your own database cluster.
           </p>
-          <p>Use a managed service or your own database cluster.</p>
+          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
         </div>
       ),
-      image: '/hubspot-blocks/filtering.png',
+      image: '/product/level2-cluster.svg',
     },
     {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Monitoring</h2>
           <p className="text-lg text-gray-600 mb-4">
-            Ziggy comes with several monitor tools for the system and individual servers.
+            Ziggy comes with several monitoring tools for the system and individual servers.
           </p>
+          <p>
+            System resources, flows per second, queue sizes, queue overflow to database can all be
+            monitored in the UI in real time.
+          </p>
+          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/monitoring" />
+
         </div>
       ),
-      scene: <HomeScene scale={1} />,
+      image: '/product/monitoring.svg',
     },
     {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Load Testing</h2>
           <p className="text-lg text-gray-600 mb-4">
-            We even offer a built-in load tester where you can run any Flow under normal and extreme
+            We even offer a built-in load tester where you can run Flows under expected and extreme
             conditions.
           </p>
           <p className="text-lg text-gray-600 mb-4">
             Use Ziggy monitoring to see exactly how the system and each server is performing.
           </p>
+          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/load-testing" />
+
         </div>
       ),
-      image: '/images/flows/parallel.png',
+      image: '/product/load-test.svg',
     },
   ]
 

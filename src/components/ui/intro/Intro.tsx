@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react'
 import Image from 'next/image'
+import { HiOutlineServer } from 'react-icons/hi2'
 
 interface IntroProps {
   title: string
@@ -19,11 +20,11 @@ const Intro: FC<IntroProps> = ({
   if (image) {
     return (
       <div className="flex flex-row items-center">
-        <div className="w-2/3">
+        <div className="w-1/2">
           <div className="section-title">{title}</div>
           {description && <div className="section-intro">{description}</div>}
         </div>
-        <div className="w-1/3" style={{ transform: `scale(${imageScale})` }}>
+        <div className="w-1/2" style={{ transform: `scale(${imageScale})` }}>
           <Image
             src={image}
             alt={imageAlt}

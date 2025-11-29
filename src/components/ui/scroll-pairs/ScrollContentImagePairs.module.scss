@@ -4,13 +4,13 @@
   ul {
     @apply mt-12;
     li {
-      @apply list-none ml-4 mb-1 text-mid-gray;
+      @apply list-none ml-0 mb-1 text-mid-gray;
     }
   }
 }
 
 .desktopLayout {
-  @apply hidden lg:grid lg:grid-cols-2 lg:gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply hidden lg:grid lg:grid-cols-2 lg:gap-8 mx-auto;
 }
 
 .leftColumn {
@@ -64,7 +64,7 @@
 }
 
 .image {
-  @apply w-full h-full object-contain rounded-lg shadow-2xl;
+  @apply w-full h-full object-contain;
 }
 
 .sceneScaleToFit {
@@ -78,7 +78,7 @@
 }
 
 .mobileLayout {
-  @apply lg:hidden max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16;
+  @apply lg:hidden  py-16 space-y-16;
 }
 
 .mobilePair {
@@ -94,5 +94,5 @@
 }
 
 .mobileImage {
-  @apply w-full h-full object-contain rounded-lg shadow-lg;
+  @apply w-full h-full object-contain;
 }
