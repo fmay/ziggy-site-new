@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="intro component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="scrolling pairs tweak">
+      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
-      <workItem from="1764399109126" duration="9393000" />
+      <workItem from="1764399109126" duration="9818000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -507,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764408381663</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="scrolling pairs tweak">
+      <option name="closed" value="true" />
+      <created>1764409100597</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1764409100597</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +560,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="canvas 0.1" />
     <MESSAGE value="canvas 0.11" />
     <MESSAGE value="canvas 0.12" />
     <MESSAGE value="canvas 0.13" />
@@ -578,7 +584,8 @@
     <MESSAGE value="reorg" />
     <MESSAGE value="fixed width sections" />
     <MESSAGE value="intro component" />
-    <option name="LAST_COMMIT_MESSAGE" value="intro component" />
+    <MESSAGE value="scrolling pairs tweak" />
+    <option name="LAST_COMMIT_MESSAGE" value="scrolling pairs tweak" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

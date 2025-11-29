@@ -6,9 +6,16 @@ interface IntroProps {
   description?: ReactNode
   image?: string
   imageAlt?: string
+  imageScale?: number
 }
 
-const Intro: FC<IntroProps> = ({ title, description, image, imageAlt = 'Intro image' }) => {
+const Intro: FC<IntroProps> = ({
+  title,
+  description,
+  image,
+  imageAlt = 'Intro image',
+  imageScale = 1,
+}) => {
   if (image) {
     return (
       <div className="flex flex-row items-center">
@@ -16,8 +23,15 @@ const Intro: FC<IntroProps> = ({ title, description, image, imageAlt = 'Intro im
           <div className="section-title">{title}</div>
           {description && <div className="section-intro">{description}</div>}
         </div>
-        <div className="w-1/3">
-          <Image src={image} alt={imageAlt} width={0} height={0} sizes="100vw" className="w-full h-auto" />
+        <div className="w-1/3" style={{ transform: `scale(${imageScale})` }}>
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
+          />
         </div>
       </div>
     )

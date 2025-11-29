@@ -25,6 +25,7 @@ export default function Cluster() {
             </div>
           }
           image="/misc/docker.svg"
+          imageScale={0.5}
         />
         <ClusterFeatures />
       </PageSection>
