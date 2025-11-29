@@ -14,11 +14,11 @@
 }
 
 .leftColumn {
-  @apply space-y-32 py-32;
+  @apply space-y-32 pb-32;
 }
 
 .rightColumn {
-  @apply relative py-32;
+  @apply relative pb-32 pt-[20vh];
 }
 
 .contentItem {
@@ -36,11 +36,11 @@
 }
 
 .imageContainerScrolling {
-  @apply absolute -top-[10vh];
+  @apply absolute top-[-20vh];
 }
 
 .imageContainerFixed {
-  @apply fixed top-0;
+  @apply fixed top-1/2 -translate-y-1/2;
 }
 
 .imageContainerScrollingOut {

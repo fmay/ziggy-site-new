@@ -4,31 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="fixed width sections">
-      <change afterPath="$PROJECT_DIR$/public/misc/docker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="intro component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/cluster/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(features)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(features)/flows/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/careers/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/careers/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cookies/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cookies/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/developers/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/developers/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/privacy/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/privacy/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/resources/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/resources/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/signin/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/solutions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/solutions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/terms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/terms/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PLImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PLImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PLVideo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PLVideo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PageLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/layout/page-layout/PageLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +129,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
-      <workItem from="1764399109126" duration="8650000" />
+      <workItem from="1764399109126" duration="9393000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -521,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764405209956</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="intro component">
+      <option name="closed" value="true" />
+      <created>1764408381663</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1764408381663</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="tweaks" />
     <MESSAGE value="canvas 0.1" />
     <MESSAGE value="canvas 0.11" />
     <MESSAGE value="canvas 0.12" />
@@ -592,7 +577,8 @@
     <MESSAGE value="fixed observer issues" />
     <MESSAGE value="reorg" />
     <MESSAGE value="fixed width sections" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed width sections" />
+    <MESSAGE value="intro component" />
+    <option name="LAST_COMMIT_MESSAGE" value="intro component" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
