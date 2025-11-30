@@ -24,12 +24,16 @@ const ImageStack: FC<ImageStackProps> = ({
     <div className={`grid grid-cols-1 lg:grid-cols-2 ${gap} ${className}`}>
       {/* Left column - offset on desktop */}
       <div className={`flex flex-col ${gap} ${offset}`}>
-        {leftColumn}
+        {leftColumn.map((item, index) => (
+          <React.Fragment key={index * 2}>{item}</React.Fragment>
+        ))}
       </div>
 
       {/* Right column */}
       <div className={`flex flex-col ${gap}`}>
-        {rightColumn}
+        {rightColumn.map((item, index) => (
+          <React.Fragment key={index * 2 + 1}>{item}</React.Fragment>
+        ))}
       </div>
     </div>
   )

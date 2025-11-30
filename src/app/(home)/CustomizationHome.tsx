@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 import ImageStack from '@/components/ui/image-stack/ImageStack'
-import StackCard from '@/components/ui/stack-card/StackCard'
+import StackCard from '@/components/ui/image-stack/StackCard'
 
 interface JavascriptFeaturesProps {}
 
@@ -31,16 +31,15 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
       ctaNewTab
       graphicBgColor=""
-      graphic="/images/customise/ss-custom-flow.png"
+      graphic="/images/customise/ss-custom-flow.webp"
     />,
     <StackCard
       title="Access to your platform"
-      description="Build a collection of blocks that provide access to your platform for your customers."
+      description="Build a collection of blocks that provide access to your platform for your customers. Above is a collection of HubSpot blocks, for example."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
       ctaNewTab
-      graphic="/images/flows/js-explain.png"
-      graphicBgColor="bg-flow-gray"
+      graphic="/images/customise/ss-collections.webp"
     />,
   ]
 

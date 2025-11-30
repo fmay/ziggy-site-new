@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import StackCard from '@/components/ui/stack-card/StackCard'
+import StackCard from '@/components/ui/image-stack/StackCard'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Carousel from '@/components/ui/carousel/Carousel'
 import styles from '@/components/ui/carousel/CarouselItem.module.scss'

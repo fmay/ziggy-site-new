@@ -20,14 +20,14 @@ const HomeScrollList: FC = () => {
               <li>Instantly respond to changes in one system and update another</li>
               <li>Automate data warehouse syncing</li>
               <li>High frequency event stream processing (IoT, Telco etc.)  </li>
-              <li>Keep platforms and data warehouses in sycn</li>
+              <li>Keep platforms and data warehouses in sync</li>
               <li>Migrate and transform large data volumes</li>
             </ul>
           </div>
           <CTA className="mt-10" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/images/flows/js-debugger.png',
+      image: '/images/customise/home/flows-list.webp',
     },
     {
       content: (
@@ -50,7 +50,7 @@ const HomeScrollList: FC = () => {
           <CTA className="mt-20" label="Learn more" href="flows" />
         </div>
       ),
-      image: '/images/flows/js-debugger.png',
+      image: '/images/customise/home/cluster-configs.webp',
     },
     {
       content: (
@@ -70,7 +70,7 @@ const HomeScrollList: FC = () => {
           <CTA className="mt-20" label="Learn more" href="flows" />
         </div>
       ),
-      image: '/images/flows/js-debugger.png',
+      image: '/images/customise/home/custom-flow.webp',
     },
   ]
   return <ScrollContentImagePairs contentImagePairs={HP_Pairs} />

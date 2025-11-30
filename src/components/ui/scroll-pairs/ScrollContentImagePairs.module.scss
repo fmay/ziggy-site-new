@@ -52,6 +52,9 @@
 
 .imageWrapper {
   @apply relative w-full h-[60vh] max-w-2xl;
+  img {
+    @apply rounded-sm shadow-md;
+  }
 }
 
 .imageSlide {

@@ -68,6 +68,7 @@ const StackCard: FC<StackCardProps> = ({
               width={800}
               height={500}
               className={styles.graphicImage}
+              unoptimized
             />
           </div>
         </div>

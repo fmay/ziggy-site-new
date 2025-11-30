@@ -4,6 +4,9 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  images: {
+    minimumCacheTTL: 0, // Disable image caching in development
+  },
 }
 
 module.exports = nextConfig
