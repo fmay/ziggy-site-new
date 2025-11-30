@@ -86,7 +86,6 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
     if (!loadedImage) return
 
     const dur = animDuration ?? duration
-    const startTime = Date.now()
     const initialWidth = width ?? loadedImage.width * scale.x
     const startValues = { ...trapezoidState }
 
@@ -104,6 +103,19 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
          topWidth: initialWidth,
          height: 10, // Nearly flat
         }
+
+    // If duration is 0, flip immediately
+    if (dur === 0) {
+     setTrapezoidState(prev => ({
+      ...prev,
+      bottomWidth: targetValues.bottomWidth,
+      topWidth: targetValues.topWidth,
+      height: targetValues.height,
+     }))
+     return
+    }
+
+    const startTime = Date.now()
 
     const animate = () => {
      const elapsed = Date.now() - startTime

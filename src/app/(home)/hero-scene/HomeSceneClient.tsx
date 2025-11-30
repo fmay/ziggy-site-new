@@ -55,8 +55,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
     cardYCounter.current = 0 // Reset counter
     return {
       cluster: getCardY(),
-      flows: getCardY(),
       custom: getCardY(),
+      flows: getCardY(),
       integrate: getCardY(),
     }
   }, [])
@@ -84,19 +84,6 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
         expansionScale={0.5}
       />
 
-      {/*FLOWS*/}
-      <ImageFlip
-        ref={CardFlows}
-        x={CardsLeft}
-        y={cardPositions.flows}
-        zIndex={2}
-        scale={{ x: 0.5, y: 0.5 }}
-        image="/canvas/home/cards/home-flow.card.svg"
-        direction="front"
-        duration={1500}
-        expansionScale={0.5}
-      />
-
       {/*CUSTOM*/}
       <ImageFlip
         ref={CardCustom}
@@ -105,6 +92,19 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
         zIndex={2}
         scale={{ x: 0.5, y: 0.5 }}
         image="/canvas/home/cards/customise.card.svg"
+        direction="front"
+        duration={1500}
+        expansionScale={0.5}
+      />
+
+      {/*FLOWS*/}
+      <ImageFlip
+        ref={CardFlows}
+        x={CardsLeft}
+        y={cardPositions.flows}
+        zIndex={2}
+        scale={{ x: 0.5, y: 0.5 }}
+        image="/canvas/home/cards/home-flow.card.svg"
         direction="front"
         duration={1500}
         expansionScale={0.5}

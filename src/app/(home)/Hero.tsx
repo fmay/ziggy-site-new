@@ -15,7 +15,7 @@ const Hero = () => (
 
       {/*Home Scene*/}
       <div className="object-contain object-top mx-auto">
-        <HomeScene bgColor="red"/>
+        <HomeScene bgColor=""/>
       </div>
 
       {/*Subheading*/}

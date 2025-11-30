@@ -213,7 +213,33 @@ function parseAction(
   const processed = processParameter(params, variables)
   if (processed === undefined) return null
 
-  return { type: actionName, value: processed }
+  // Map single values to the appropriate property based on action type
+  const action: ParsedAction = { type: actionName }
+
+  switch (actionName) {
+    case 'unflip':
+    case 'grayscale':
+    case 'morph':
+    case 'reset':
+      action.duration = processed
+      break
+
+    case 'zIndex':
+    case 'brightness':
+      action.value = processed
+      break
+
+    case 'fade':
+      action.opacity = processed
+      break
+
+    default:
+      // For unknown or generic cases, use 'value'
+      action.value = processed
+      break
+  }
+
+  return action
 }
 
 /**
@@ -232,14 +258,10 @@ function parseStepDefinition(
   const actionsList = step.imageActions || step.actions || []
 
   for (const imageAction of actionsList) {
-    const targetRef = refMap[imageAction.target]
+    // Split comma-separated targets and trim whitespace
+    const targets = imageAction.target.split(',').map((t: string) => t.trim())
 
-    if (!targetRef) {
-      throw new SceneParserError(
-        `Target '${imageAction.target}' in step ${stepIndex} not found in ref map`
-      )
-    }
-
+    // Process actions once (same actions will be applied to all targets)
     const actions: ParsedAction[] = []
 
     // Check if actions is an object (YAML parses "morph:" as {morph: null})
@@ -267,10 +289,21 @@ function parseStepDefinition(
       }
     }
 
-    imageActions.push({
-      target: targetRef,
-      actions: actions
-    } as ImageActions)
+    // Create image actions for each target
+    for (const target of targets) {
+      const targetRef = refMap[target]
+
+      if (!targetRef) {
+        throw new SceneParserError(
+          `Target '${target}' in step ${stepIndex} not found in ref map`
+        )
+      }
+
+      imageActions.push({
+        target: targetRef,
+        actions: actions
+      } as ImageActions)
+    }
   }
 
   return {
