@@ -47,7 +47,7 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
     <div>
       <div className="section-intro">
         <h2>
-          Integrate Ziggy with <span className="underline">your</span> platform. Ziggy for{' '}
+          Integrate Ziggy with <span className="underline">your</span> platform and for{' '}
           <span className="underline">your</span> customers.
         </h2>
         <p>
