@@ -38,7 +38,7 @@ export default function Cluster() {
       </PageSection>
 
       <PageSection bgColor="bg-gray-800">
-        <QuickBookDemo />
+        <QuickBookDemo background="dark" />
       </PageSection>
     </PageLayout>
   )

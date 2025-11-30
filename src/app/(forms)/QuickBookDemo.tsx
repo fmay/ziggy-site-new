@@ -5,7 +5,7 @@ import CTA from '@/components/ui/cta/CTA'
 import styles from './QuickBookDemo.module.scss'
 
 interface QuickBookDemoProps {
-  background: 'dark' | 'light'
+  background?: 'dark' | 'light'
 }
 
 interface FormData {

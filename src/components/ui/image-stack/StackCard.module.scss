@@ -15,10 +15,6 @@
 
 .graphicContainer {
   @apply relative px-2 pt-2 overflow-hidden transition-all duration-300 border-gray-200;
-
-  .stackCard:hover & {
-    @apply h-[310px];
-  }
 }
 
 //.gradientOverlay {
