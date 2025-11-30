@@ -194,11 +194,14 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
    fade: (targetOpacity: number, animDuration?: number) => {
     const dur = animDuration ?? duration
 
+    // Convert opacity from 0-100 to 0-1 if needed (values > 1 are assumed to be percentages)
+    const normalizedOpacity = targetOpacity > 1 ? targetOpacity / 100 : targetOpacity
+
     // If duration is 0, fade immediately
     if (dur === 0) {
      setTrapezoidState(prev => ({
       ...prev,
-      currentOpacity: targetOpacity,
+      currentOpacity: normalizedOpacity,
      }))
      return
     }
@@ -216,7 +219,7 @@ const ImageFlip = forwardRef<ImageFlipHandle, ImageFlipProps>(
 
      setTrapezoidState(prev => ({
       ...prev,
-      currentOpacity: startOpacity + (targetOpacity - startOpacity) * eased,
+      currentOpacity: startOpacity + (normalizedOpacity - startOpacity) * eased,
      }))
 
      if (progress < 1) {

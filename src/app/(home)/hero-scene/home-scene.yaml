@@ -2,54 +2,102 @@ width: 500
 height: 550
 
 variables:
-  - DiffY: 50
-  - NumCards: 3
-  - Delay: 1500
+  - FlipMove: 320
+  - DiffY: 60
+  - NumCards: 4
+  - Delay: 3500
 
-#repeat1:
-steps:
-# INTEGRATE
-    - delay: { Delay }
-      duration: { Delay }
-      imageActions:
-        - target: CardIntegrate
-          actions:
-            - moveRelative: [0, 260, 1500]
-            - flip: [front, 1500]
-            - fade: [0, 1500]
-        - target: CardFlows, CardCluster, CardCustom
-          actions:
-            - moveRelative: [0, 50, 1500]
+repeat1:
+  - steps:
+  # INTEGRATE
+      - delay: { Delay }
+        duration: 1500
+        imageActions:
+          - target: CardIntegrate
+            actions:
+              - moveRelative: [0, {FlipMove}, 1500]
+              - flip: [front, 1500]
+              - fade: [0, 1500]
+          - target: CardFlows, CardCluster, CardCustom
+            actions:
+              - moveRelative: [0, {DiffY}, 1500]
 
-    - delay: 0
-      duration: 100
-      imageActions:
-        - target: CardIntegrate
-          actions:
-            - unflip: 1
-            - fade: [100, 4500]
-            - move: [_, 0, 1]
-            - zIndex: 0
+      - delay: 0
+        duration: 100
+        imageActions:
+          - target: CardIntegrate
+            actions:
+              - unflip: 1
+              - fade: [100, 1500]
+              - move: [_, 0, 1]
+              - zIndex: 0
 
-# FLOWS
-    - delay: { Delay }
-      duration: { Delay }
-      imageActions:
-        - target: CardFlows
-          actions:
-            - moveRelative: [0, 260, 1500]
-            - flip: [front, 1500]
-            - fade: [0, 1500]
-        - target: CardIntegrate, CardCluster, CardCustom
-          actions:
-            - moveRelative: [0, 50, 1500]
+  # FLOWS
+      - delay: { Delay }
+        duration: { Delay }
+        imageActions:
+          - target: CardFlows
+            actions:
+              - moveRelative: [0, {FlipMove}, 1500]
+              - flip: [front, 1500]
+              - fade: [0, 1500]
+          - target: CardIntegrate, CardCluster, CardCustom
+            actions:
+              - moveRelative: [0, {DiffY}, 1500]
 
-    - delay: 0
-      imageActions:
-        - target: CardFlows
-          actions:
-            - unflip: 1
-            - move: [_, 0, 1]
-            - fade: [100, 20]
-            - zIndex: 0
+      - delay: 0
+        duration: 100
+        imageActions:
+          - target: CardFlows
+            actions:
+              - unflip: 1
+              - move: [_, 0, 1]
+              - fade: [100, 1500]
+              - zIndex: 0
+
+    # CUSTOMIZE
+      - delay: { Delay }
+        duration: { Delay }
+        imageActions:
+          - target: CardCustom
+            actions:
+              - moveRelative: [0, {FlipMove}, 1500]
+              - flip: [front, 1500]
+              - fade: [0, 1500]
+          - target: CardIntegrate, CardCluster, CardFlows
+            actions:
+              - moveRelative: [0, {DiffY}, 1500]
+
+      - delay: 0
+        duration: 100
+        imageActions:
+          - target: CardCustom
+            actions:
+              - unflip: 1
+              - move: [_, 0, 1]
+              - fade: [100, 1500]
+              - zIndex: 0
+
+    # CLUSTER
+      - delay: { Delay }
+        duration: { Delay }
+        imageActions:
+          - target: CardCluster
+            actions:
+              - moveRelative: [0, {FlipMove}, 1500]
+              - flip: [front, 1500]
+              - fade: [0, 1500]
+          - target: CardIntegrate, CardCustom, CardFlows
+            actions:
+              - moveRelative: [0, {DiffY}, 1500]
+
+      - delay: 0
+        duration: 100
+        imageActions:
+          - target: CardCluster
+            actions:
+              - unflip: 1
+              - move: [_, 0, 1]
+              - fade: [100, 1500]
+              - zIndex: 0
 
