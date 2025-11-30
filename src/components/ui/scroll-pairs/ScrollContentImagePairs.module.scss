@@ -2,9 +2,9 @@
   @apply relative mb-[5vh];
 
   ul {
-    @apply mt-12;
+    @apply my-12;
     li {
-      @apply list-none text-lg ml-0 mb-1 text-mid-gray;
+      @apply list-none text-base ml-0 mb-2 text-mid-gray;
     }
   }
 }
@@ -32,7 +32,7 @@
 }
 
 .contentWrapper {
-  @apply w-full border-l-2 pl-4;
+  @apply w-full border-l-2 border-stripe-purple pl-4;
   h2 {
     @apply font-normal
   }

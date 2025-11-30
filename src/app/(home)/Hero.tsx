@@ -1,6 +1,6 @@
 import styles from './hero.module.scss'
-import HomeScene from '@/app/(home)/HomeScene'
 import Image from 'next/image'
+import HomeScene from '@/app/(home)/hero-scene/HomeScene'
 
 const Hero = () => (
   <section className={styles.heroSection}>
@@ -13,9 +13,9 @@ const Hero = () => (
         Integrations and Automations that run on <strong>your</strong> servers
       </h1>
 
-      {/*Image*/}
+      {/*Home Scene*/}
       <div className="object-contain object-top mx-auto">
-        <Image src="/canvas/home/hero/server.svg" alt={'cluster'} width={400} height={400} />
+        <HomeScene />
       </div>
 
       {/*Subheading*/}

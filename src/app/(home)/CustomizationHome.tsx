@@ -7,8 +7,8 @@ interface JavascriptFeaturesProps {}
 const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
   const items: ReactNode[] = [
     <StackCard
-      title="Manage with the Ziggy CLI"
-      description="Create and manage your plugins with our CLI."
+      title="Ziggy CLI"
+      description="Create and manage your plugins with the Ziggy CLI."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript"
       ctaNewTab
@@ -46,13 +46,13 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
   return (
     <div>
       <div className="section-intro">
-        <h2>Customized by you</h2>
+        <h2>Endlessly customizable</h2>
         <p>
           Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
           simple TypeScript code.
         </p>
         <p>
-          For the ultimate in control, we also offer the Ziggy source code.
+          Ziggy source code is also available for those who require the ultimate control.
         </p>
       </div>
       <ImageStack items={items} />

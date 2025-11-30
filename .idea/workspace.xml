@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="cusotmisation home 0.4">
-      <change afterPath="$PROJECT_DIR$/public/canvas/home/hero/cluster.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/canvas/home/hero/flow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/canvas/home/hero/server.svg" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home updates">
+      <change afterPath="$PROJECT_DIR$/public/canvas/home/cards/home-flow.card.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/HomeScene.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/HomeSceneClient.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/home-scene.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/CustomizationHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/CustomizationHome.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/HomePricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomePricing.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/HomeScrollList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomeScrollList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
     </list>
@@ -57,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(home)",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(home)/hero-scene",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,15 +80,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(home)/hero-scene" />
       <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/(features)/cluster" />
       <recent name="$PROJECT_DIR$/src/app/(home)/canvas" />
       <recent name="$PROJECT_DIR$/public/hero" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/canvas/home/hero" />
       <recent name="$PROJECT_DIR$/public/canvas/home/cards" />
+      <recent name="$PROJECT_DIR$/public/canvas/home/hero" />
       <recent name="$PROJECT_DIR$/public/product" />
       <recent name="$PROJECT_DIR$/src/components/ui/page-wrappers" />
       <recent name="$PROJECT_DIR$/public/misc" />
@@ -139,15 +142,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
-      <workItem from="1764399109126" duration="31066000" />
-    </task>
-    <task id="LOCAL-00006" summary="lint; carousel">
-      <option name="closed" value="true" />
-      <created>1764080698394</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1764080698394</updated>
+      <workItem from="1764399109126" duration="35363000" />
     </task>
     <task id="LOCAL-00007" summary="moved project to new">
       <option name="closed" value="true" />
@@ -533,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764427884527</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="home updates">
+      <option name="closed" value="true" />
+      <created>1764442547642</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1764442547642</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +582,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="canvas 0.17 refactored image flip" />
     <MESSAGE value="canvas 0.18 refactored image flip" />
     <MESSAGE value="canvas 0.19 refactored image flip" />
     <MESSAGE value="canvas 0.2 refactored image flip" />
@@ -604,7 +606,8 @@
     <MESSAGE value="quick demo 0.5" />
     <MESSAGE value="cluster 0.6" />
     <MESSAGE value="cusotmisation home 0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="cusotmisation home 0.4" />
+    <MESSAGE value="home updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="home updates" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

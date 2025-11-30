@@ -9,6 +9,30 @@ const HomeScrollList: FC = () => {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Integrate, Automate, Migrate
+          </h2>
+          <div className="">
+            <p className="text-lg text-gray-600 mb-4">
+              Whether you are moving millions of records from one platform to another or updating
+              one platform when data changes in another, Ziggy is fast to learn and feature packed.
+            </p>
+            <ul>
+              <li>Instantly respond to changes in one system and update another</li>
+              <li>Automate data warehouse syncing</li>
+              <li>High frequency event stream processing (IoT, Telco etc.)  </li>
+              <li>Keep platforms and data warehouses in sycn</li>
+              <li>Migrate and transform large data volumes</li>
+            </ul>
+          </div>
+          <CTA className="mt-10" label="How Ziggy works" href="flows" />
+        </div>
+      ),
+      image: '/images/flows/js-debugger.png',
+    },
+    {
+      content: (
+        <div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             <strong>Your</strong> servers - single instance or cluster.
           </h2>
           <p className="text-lg text-gray-600 mb-4">
@@ -20,60 +44,14 @@ const HomeScrollList: FC = () => {
             <li>Security</li>
             <li>Customizations</li>
           </ul>
+          <p>
+            Start with a low cost 2GB instance. Scale up and out as demand dictates.
+          </p>
           <CTA className="mt-20" label="Learn more" href="flows" />
         </div>
       ),
       image: '/images/flows/js-debugger.png',
     },
-    {
-      content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Integrations, Automations, Migrations
-          </h2>
-          <div className="">
-            <p className="text-lg text-gray-600 mb-4">
-              Whether you are moving millions of records from one platform to another or updating
-              one platform when data changes in another, Ziggy is fast to learn and feature packed.
-            </p>
-          </div>
-          <CTA className="mt-10" label="Feature overview" href="flows" />
-        </div>
-      ),
-      image: '/images/flows/js-debugger.png',
-    },
-    {
-      content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            For simple and the most complex cases
-          </h2>
-          <p className="text-lg text-gray-600 mb-4">
-            Most integrations run very happily on a single, low-cost 2GB instance. Most migrations
-            will run on your laptop.
-          </p>
-          <p className="text-lg text-gray-600 mb-4">
-            When you need to go big, a Ziggy Cluster provides high availability and lets you scale
-            up on your own infrastructure and with your desired configuration.
-          </p>
-          <CTA className="mt-20" label="Ziggy Cluster" href="cluster" />
-        </div>
-      ),
-      image: '/images/flows/js-debugger.png',
-    },
-    // {
-    //   content: (
-    //     <div>
-    //       <h2 className="text-4xl font-bold text-gray-900 mb-6">Customizations</h2>
-    //       <p className="text-lg text-gray-600 mb-4">
-    //         Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
-    //         simple TypeScript code.
-    //       </p>
-    //       <CTA className="mt-20" label="Learn more" href="flows" />
-    //     </div>
-    //   ),
-    //   image: '/images/flows/js-debugger.png',
-    // },
     {
       content: (
         <div>

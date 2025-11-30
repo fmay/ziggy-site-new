@@ -21,7 +21,7 @@ const HomePricing: FC = () => {
             <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <h3 className={styles.title}>Always included</h3>
               <p className={styles.content}>
-                One production server, one development server, one staging server
+                One production server, one development server, one staging server.
               </p>
               <a href="#" className={styles.link}>
                 Pricing →
@@ -36,8 +36,7 @@ const HomePricing: FC = () => {
             <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <h3 className={styles.title}>No usage based costs</h3>
               <p className={styles.content}>
-                As you add more and more Ziggy Flows, you don't pay a cent more
-                more
+                As you add more and more Ziggy Flows, you won't pay a cent more.
               </p>
               <a href="#" className={styles.link}>
                 Pricing →

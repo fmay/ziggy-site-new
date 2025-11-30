@@ -15,6 +15,23 @@ interface FormData {
   email: string
 }
 
+const PUBLIC_EMAIL_DOMAINS = [
+  'gmail.com',
+  'yahoo.com',
+  'hotmail.com',
+  'outlook.com',
+  'aol.com',
+  'icloud.com',
+  'mail.com',
+  'protonmail.com',
+  'zoho.com',
+  'yandex.com',
+  'gmx.com',
+  'live.com',
+  'me.com',
+  'msn.com',
+]
+
 const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
@@ -22,13 +39,37 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
     company: '',
     email: '',
   })
+  const [emailError, setEmailError] = useState<string>('')
+
+  const validateEmail = (email: string): string => {
+    if (!email.trim()) {
+      return ''
+    }
+
+    // Check if valid email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return 'Please enter a valid email address'
+    }
+
+    // Extract domain from email
+    const domain = email.split('@')[1]?.toLowerCase()
+
+    // Check if it's a public domain
+    if (PUBLIC_EMAIL_DOMAINS.includes(domain)) {
+      return 'Please use your company email address'
+    }
+
+    return ''
+  }
 
   const isFormValid = () => {
     return (
       formData.firstName.trim() !== '' &&
-      formData.lastName.trim() !== '' &&
-      formData.company.trim() !== '' &&
-      formData.email.trim() !== ''
+      // formData.lastName.trim() !== '' &&
+      // formData.company.trim() !== '' &&
+      formData.email.trim() !== '' &&
+      emailError === ''
     )
   }
 
@@ -37,6 +78,12 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
       ...prev,
       [field]: value,
     }))
+
+    // Validate email on change
+    if (field === 'email') {
+      const error = validateEmail(value)
+      setEmailError(error)
+    }
   }
 
   const handleSubmit = () => {
@@ -59,7 +106,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
             First name
           </label>
           <input
-            id="firstName"
+            id="Your name"
             type="text"
             value={formData.firstName}
             onChange={e => handleInputChange('firstName', e.target.value)}
@@ -67,31 +114,31 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
           />
         </div>
 
-        <div className={styles.formField}>
-          <label htmlFor="lastName" className={styles.label}>
-            Last name
-          </label>
-          <input
-            id="lastName"
-            type="text"
-            value={formData.lastName}
-            onChange={e => handleInputChange('lastName', e.target.value)}
-            className={styles.input}
-          />
-        </div>
+        {/*<div className={styles.formField}>*/}
+        {/*  <label htmlFor="lastName" className={styles.label}>*/}
+        {/*    Last name*/}
+        {/*  </label>*/}
+        {/*  <input*/}
+        {/*    id="lastName"*/}
+        {/*    type="text"*/}
+        {/*    value={formData.lastName}*/}
+        {/*    onChange={e => handleInputChange('lastName', e.target.value)}*/}
+        {/*    className={styles.input}*/}
+        {/*  />*/}
+        {/*</div>*/}
 
-        <div className={styles.formField}>
-          <label htmlFor="company" className={styles.label}>
-            Company
-          </label>
-          <input
-            id="company"
-            type="text"
-            value={formData.company}
-            onChange={e => handleInputChange('company', e.target.value)}
-            className={styles.input}
-          />
-        </div>
+        {/*<div className={styles.formField}>*/}
+        {/*  <label htmlFor="company" className={styles.label}>*/}
+        {/*    Company*/}
+        {/*  </label>*/}
+        {/*  <input*/}
+        {/*    id="company"*/}
+        {/*    type="text"*/}
+        {/*    value={formData.company}*/}
+        {/*    onChange={e => handleInputChange('company', e.target.value)}*/}
+        {/*    className={styles.input}*/}
+        {/*  />*/}
+        {/*</div>*/}
 
         <div className={styles.formField}>
           <label htmlFor="email" className={styles.label}>
@@ -104,6 +151,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
             onChange={e => handleInputChange('email', e.target.value)}
             className={styles.input}
           />
+          {emailError && <p className={styles.error}>{emailError}</p>}
         </div>
 
         <div className={styles.buttonWrapper}>
@@ -113,7 +161,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
             className={`${styles.button} ${
               isFormValid() ? styles.buttonEnabled : styles.buttonDisabled
             }`}>
-            Book a Demo
+            Schedule a time
           </button>
         </div>
       </div>

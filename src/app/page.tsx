@@ -4,17 +4,18 @@ import HomePricing from '@/app/(home)/HomePricing'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import HomeScene from '@/app/(home)/HomeScene'
 import CustomizationHome from '@/app/(home)/CustomizationHome'
+import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen mx-auto py-12">
       <Hero />
 
-      {/*<HomeScene />*/}
+      <PageSection bgColor="bg-gray-100">
+        <HomeScrollList />
+      </PageSection>
 
-      <HomeScrollList />
-
-      <PageSection >
+      <PageSection>
         <CustomizationHome />
       </PageSection>
 
@@ -31,6 +32,9 @@ export default function Home() {
         </div>
       </PageSection>
 
+      <PageSection bgColor="bg-gray-700">
+        <QuickBookDemo background="dark" />
+      </PageSection>
     </div>
   )
 }
