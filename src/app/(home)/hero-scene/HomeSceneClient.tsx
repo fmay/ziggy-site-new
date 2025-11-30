@@ -27,6 +27,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
   const CardFlows = useRef<ImageFlipHandle>(null)
   const CardIntegrate = useRef<ImageFlipHandle>(null)
   const CardCluster = useRef<ImageFlipHandle>(null)
+  const CardCustom = useRef<ImageFlipHandle>(null)
 
   const DiffY = 60
   const CardsLeft = 0
@@ -37,6 +38,7 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
       CardFlows,
       CardIntegrate,
       CardCluster,
+      CardCustom,
     }
     return parseScene(sceneYAML, refMap)
   }, [sceneYAML])
@@ -48,11 +50,13 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
   }
 
   // Calculate Y positions once to avoid re-render issues
+  // ORDER MATTERS
   const cardPositions = useMemo(() => {
     cardYCounter.current = 0 // Reset counter
     return {
       cluster: getCardY(),
       flows: getCardY(),
+      custom: getCardY(),
       integrate: getCardY(),
     }
   }, [])
@@ -88,6 +92,19 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({
         zIndex={2}
         scale={{ x: 0.5, y: 0.5 }}
         image="/canvas/home/cards/home-flow.card.svg"
+        direction="front"
+        duration={1500}
+        expansionScale={0.5}
+      />
+
+      {/*CUSTOM*/}
+      <ImageFlip
+        ref={CardCustom}
+        x={CardsLeft}
+        y={cardPositions.custom}
+        zIndex={2}
+        scale={{ x: 0.5, y: 0.5 }}
+        image="/canvas/home/cards/customise.card.svg"
         direction="front"
         duration={1500}
         expansionScale={0.5}

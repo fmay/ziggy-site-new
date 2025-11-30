@@ -1,17 +1,19 @@
-width: 900
-height: 600
+width: 500
+height: 550
 
 variables:
   - DiffY: 50
   - NumCards: 3
+  - Delay: 1000
 
-#repeat2:
-#  - steps:
-#      - delay: 3000
-#        duration: 1500
-#        imageActions:
-#          - target: CardFlows
-#            actions:
-#              - flip: [front, 1500]
-##              - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+#repeat1:
+steps:
+    - delay: { Delay }
+      duration: 1500
+      imageActions:
+        - target: CardIntegrate
+          actions:
+            - moveRelative: [0, 260, 1500]
+            - flip: [front, 1500]
+#              - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
 #              - fade: [0, 1500]
