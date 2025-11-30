@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home updates">
-      <change afterPath="$PROJECT_DIR$/public/canvas/home/cards/home-flow.card.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/HomeScene.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/HomeSceneClient.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/home-scene.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/canvas/home/cards/integrations-migrations.card.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/CustomizationHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/CustomizationHome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/HomePricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomePricing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/HomeScrollList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomeScrollList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/cards/home-flow.card.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/cards/home-flow.card.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/cards/integrations-migrations.card.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/cards/integrations-migrations.card.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/icons/warehouse.color.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/icons/warehouse.color.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/home-flow.card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/canvas/home/cards/home-flow.card.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero-scene/HomeSceneClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/HomeSceneClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero-scene/home-scene.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero-scene/home-scene.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,15 +138,7 @@
       <workItem from="1764081406567" duration="141000" />
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
-      <workItem from="1764399109126" duration="35363000" />
-    </task>
-    <task id="LOCAL-00007" summary="moved project to new">
-      <option name="closed" value="true" />
-      <created>1764081629451</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1764081629451</updated>
+      <workItem from="1764399109126" duration="39079000" />
     </task>
     <task id="LOCAL-00008" summary="HS collection 0.1">
       <option name="closed" value="true" />
@@ -536,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764442547642</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="home updates">
+      <option name="closed" value="true" />
+      <created>1764484026975</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1764484026975</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

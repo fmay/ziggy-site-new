@@ -5,13 +5,13 @@ variables:
   - DiffY: 50
   - NumCards: 3
 
-repeat2:
-  - steps:
-      - delay: 3000
-        duration: 1500
-        imageActions:
-          - target: CardFlows
-            actions:
-              - flip: [front, 1500]
-#              - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
-              - fade: [0, 1500]
+#repeat2:
+#  - steps:
+#      - delay: 3000
+#        duration: 1500
+#        imageActions:
+#          - target: CardFlows
+#            actions:
+#              - flip: [front, 1500]
+##              - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
+#              - fade: [0, 1500]

@@ -15,18 +15,28 @@ interface HomeSceneClientProps {
   height?: number
 }
 
-const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale, bgColor, width, height }) => {
+const HomeSceneClient: FC<HomeSceneClientProps> = ({
+  sceneYAML,
+  scale,
+  bgColor,
+  width,
+  height,
+}) => {
   const cardYCounter = useRef(0)
 
   const CardFlows = useRef<ImageFlipHandle>(null)
+  const CardIntegrate = useRef<ImageFlipHandle>(null)
+  const CardCluster = useRef<ImageFlipHandle>(null)
 
   const DiffY = 60
-  const CardsLeft = 120
+  const CardsLeft = 0
 
   // Parse the YAML scene definition
   const sceneDefinition: SceneDefinition = useMemo(() => {
     const refMap = {
-      CardFlows
+      CardFlows,
+      CardIntegrate,
+      CardCluster,
     }
     return parseScene(sceneYAML, refMap)
   }, [sceneYAML])
@@ -42,9 +52,8 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale, bgColor, 
     cardYCounter.current = 0 // Reset counter
     return {
       cluster: getCardY(),
-      oneInstance: getCardY(),
+      flows: getCardY(),
       integrate: getCardY(),
-      fast: getCardY(),
     }
   }, [])
 
@@ -55,15 +64,27 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale, bgColor, 
       scale={scale}
       bgColor={bgColor ?? sceneDefinition.bgColor}
       width={width ?? sceneDefinition.width}
-      height={height ?? sceneDefinition.height}
-    >
+      height={height ?? sceneDefinition.height}>
       {/* Example ImageFlip demonstrating parallel execution of flip, move, and fade */}
 
       {/*CLUSTER*/}
       <ImageFlip
-        ref={CardFlows}
+        ref={CardCluster}
         x={CardsLeft}
         y={cardPositions.cluster}
+        zIndex={2}
+        scale={{ x: 1.43, y: 1.43 }}
+        image="/canvas/home/cards/cluster.card.svg"
+        direction="front"
+        duration={1500}
+        expansionScale={0.5}
+      />
+
+      {/*FLOWS*/}
+      <ImageFlip
+        ref={CardFlows}
+        x={CardsLeft}
+        y={cardPositions.flows}
         zIndex={2}
         scale={{ x: 0.5, y: 0.5 }}
         image="/canvas/home/cards/home-flow.card.svg"
@@ -72,7 +93,18 @@ const HomeSceneClient: FC<HomeSceneClientProps> = ({ sceneYAML, scale, bgColor, 
         expansionScale={0.5}
       />
 
-
+      {/*INTEGRATE*/}
+      <ImageFlip
+        ref={CardIntegrate}
+        x={CardsLeft}
+        y={cardPositions.integrate}
+        zIndex={2}
+        scale={{ x: 1.43, y: 1.43 }}
+        image="/canvas/home/cards/integrations-migrations.card.svg"
+        direction="front"
+        duration={1500}
+        expansionScale={0.5}
+      />
     </CanvasScene>
   )
 }
