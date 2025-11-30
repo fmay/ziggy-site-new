@@ -62,13 +62,6 @@ const StackCard: FC<StackCardProps> = ({
       {graphic && (
         <div className={styles.graphicLayer}>
           <div className={`${styles.graphicContainer} ${graphicBgColor}`}>
-            {/* Gradient overlay - only visible on hover */}
-            <div
-              className={styles.gradientOverlay}
-              style={{
-                background: `radial-gradient(circle at 50% 50%, ${primaryColor}15 0%, ${secondaryColor}15 50%, transparent 100%)`
-              }}
-            />
             <Image
               src={graphic}
               alt={graphicAlt}

@@ -12,8 +12,8 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript"
       ctaNewTab
-      graphic="/images/flows/js-example.png"
-      graphicBgColor="bg-flow-gray"
+      graphic="/images/customise/ss-cli.webp"
+      graphicBgColor=""
     />,
     <StackCard
       title="Code"
@@ -21,16 +21,17 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant"
       ctaNewTab
-      graphicBgColor="bg-flow-gray"
-      graphic="/images/flows/js-ai.png"
+      graphicBgColor=""
+      graphic="/images/customise/ss-custom-block-code.webp"
     />,
     <StackCard
       title="Embed in flows"
-      description="Custom blocks behave just like standard Ziggy blocks and can be used in any flow."
+      description="This flow read from your platform (green block) then writes to Snowflake"
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
       ctaNewTab
-      graphic="/images/flows/js-debugger.png"
+      graphicBgColor=""
+      graphic="/images/customise/ss-custom-flow.png"
     />,
     <StackCard
       title="Access to your platform"
@@ -46,14 +47,15 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
   return (
     <div>
       <div className="section-intro">
-        <h2>Endlessly customizable</h2>
+        <h2>
+          Integrate Ziggy with <span className="underline">your</span> platform. Ziggy for{' '}
+          <span className="underline">your</span> customers.
+        </h2>
         <p>
           Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
           simple TypeScript code.
         </p>
-        <p>
-          Ziggy source code is also available for those who require the ultimate control.
-        </p>
+        <p>Ziggy source code is also available for those who require the ultimate control.</p>
       </div>
       <ImageStack items={items} />
     </div>
