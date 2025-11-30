@@ -47,8 +47,8 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
     <div>
       <div className="section-intro">
         <h2>
-          Integrate Ziggy with <span className="underline">your</span> platform for{' '}
-          <span className="underline">your</span> customers.
+          Integrate Ziggy with <strong>your</strong> platform for{' '}
+          <strong>your</strong> customers.
         </h2>
         <p>
           Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
