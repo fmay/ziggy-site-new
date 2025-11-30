@@ -274,8 +274,8 @@ function parseStepDefinition(
   }
 
   return {
-    delay: step.delay,
-    duration: step.duration,
+    delay: processParameter(step.delay, variables),
+    duration: processParameter(step.duration, variables),
     imageActions,
     isRepeating
   }

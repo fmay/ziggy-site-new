@@ -1,5 +1,5 @@
 width: 500
-height: 550
+height: 500
 
 variables:
   - DiffY: 50
@@ -15,5 +15,8 @@ steps:
           actions:
             - moveRelative: [0, 260, 1500]
             - flip: [front, 1500]
-#              - moveRelative: [0, { NumCards * (DiffY + 20) }, 1500]
-#              - fade: [0, 1500]
+            - fade: [0, 1500]
+        - target: CardFlows, CardCluster, CardCustom
+          actions:
+            - moveRelative: [0, 50, 1500]
+
