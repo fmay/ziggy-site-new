@@ -8,7 +8,7 @@ import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
 
 export default function Home() {
   return (
-    <div className="min-h-screen mx-auto py-12">
+    <div className="min-h-screen mx-auto pt-12">
       <Hero />
 
       <PageSection bgColor="bg-gray-100">
