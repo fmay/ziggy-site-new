@@ -29,8 +29,9 @@ const sliderConfigs: SliderConfig[] = [
 
 export default function PricingCalculator() {
   const [servers, setServers] = useState(1)
-  const [serviceAmount, setServiceAmount] = useState(0)]
+  const [serviceAmount, setServiceAmount] = useState(0)
   const [serviceUnit, setServiceUnit] = useState('Hours')
+  const [supportHours, setSupportHours] = useState(0)
 
   const BasePrice = 7000
 
@@ -43,14 +44,37 @@ export default function PricingCalculator() {
     return price
   }, [servers])
 
-  const calculateServices = () => {
-    return 1000
-  }
+  const calculateSupport = useCallback(() => {
+    if (supportHours === 0) return 0
+    return supportHours * 100 * 12
+  }, [supportHours])
+
+  const calculateServices = useCallback(() => {
+    if (serviceAmount === 0) return 0
+
+    const hourlyRate = 150
+    let totalHours = serviceAmount
+
+    // Convert units to hours
+    if (serviceUnit === 'Days') {
+      totalHours = serviceAmount * 8 * 0.8
+    } else if (serviceUnit === 'Weeks') {
+      totalHours = serviceAmount * 40 * 0.75
+    } else if (serviceUnit === 'Months') {
+      totalHours = serviceAmount * 160 * 0.7
+    }
+
+    return totalHours * hourlyRate
+  }, [serviceAmount, serviceUnit])
 
   const calculatePrice = useCallback(() => {
     const basePrice = calculateServerPrice()
     return basePrice
-  }, [servers])
+  }, [calculateServerPrice])
+
+  const calculateTotal = useCallback(() => {
+    return calculatePrice() + calculateSupport() + calculateServices()
+  }, [calculatePrice, calculateSupport, calculateServices])
 
   const getDescription = useCallback(() => {
     if (servers === 1) {
@@ -146,39 +170,70 @@ export default function PricingCalculator() {
             ))}
           </div>
 
-          {/*SERVICES*/}
-          <div className={`${styles.sectionText}`}>
-            <h3>Professional Services</h3>
-            <p>
-              Support, training, flow development, custom block development and general consultancy.
-            </p>
-          </div>
+          {/*SUPPORT AND SERVICES ROW*/}
+          <div className={styles.supportServicesRow}>
+            {/*SUPPORT*/}
+            <div className={styles.supportColumn}>
+              <div className={`${styles.sectionText}`}>
+                <h3>Support</h3>
+                <p>
+                  Monthly support hours for assistance, troubleshooting, and maintenance.
+                </p>
+              </div>
 
-          <div className={`${styles.servicesRow} !mt-[30px]`}>
-            <div className={styles.servicesInputContainer}>
-              <input
-                type="number"
-                id="serviceAmount"
-                min="0"
-                max="100"
-                value={serviceAmount}
-                onChange={e =>
-                  setServiceAmount(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))
-                }
-                className={styles.numericInput}
-              />
+              <div className={`${styles.servicesRow} !mt-[30px]`}>
+                <div className={styles.servicesDropdownContainer}>
+                  <select
+                    id="supportHours"
+                    value={supportHours}
+                    onChange={e => setSupportHours(parseInt(e.target.value))}
+                    className={styles.dropdown}>
+                    <option value={0}>No support</option>
+                    <option value={2}>2 hours</option>
+                    <option value={4}>4 hours</option>
+                    <option value={8}>8 hours</option>
+                    <option value={16}>16 hours</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div className={styles.servicesDropdownContainer}>
-              <select
-                id="serviceUnit"
-                value={serviceUnit}
-                onChange={e => setServiceUnit(e.target.value)}
-                className={styles.dropdown}>
-                <option value="Hours">Hours</option>
-                <option value="Days">Days</option>
-                <option value="Weeks">Weeks</option>
-                <option value="Months">Months</option>
-              </select>
+
+            {/*SERVICES*/}
+            <div className={styles.servicesColumn}>
+              <div className={`${styles.sectionText}`}>
+                <h3>Professional Services</h3>
+                <p>
+                  Support, training, flow development, custom block development and general consultancy.
+                </p>
+              </div>
+
+              <div className={`${styles.servicesRow} !mt-[30px]`}>
+                <div className={styles.servicesInputContainer}>
+                  <input
+                    type="number"
+                    id="serviceAmount"
+                    min="0"
+                    max="100"
+                    value={serviceAmount}
+                    onChange={e =>
+                      setServiceAmount(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))
+                    }
+                    className={styles.numericInput}
+                  />
+                </div>
+                <div className={styles.servicesDropdownContainer}>
+                  <select
+                    id="serviceUnit"
+                    value={serviceUnit}
+                    onChange={e => setServiceUnit(e.target.value)}
+                    className={styles.dropdown}>
+                    <option value="Hours">Hours</option>
+                    <option value="Days">Days</option>
+                    <option value="Weeks">Weeks</option>
+                    <option value="Months">Months</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -199,6 +254,26 @@ export default function PricingCalculator() {
                 </div>
               </div>
 
+              {/*SUPPORT*/}
+              <div className={styles.resultHeading}>Support</div>
+              <div className={styles.resultResult}>
+                <span>{formatPrice(calculateSupport())}</span>
+                <span className="font-light text-base"> /year</span>
+              </div>
+              <div className={styles.descriptionWrapper}>
+                <div className={styles.resultDescription}>
+                  {supportHours === 0 ? (
+                    <p>
+                      4 hours of support or training is available free of charge
+                    </p>
+                  ) : (
+                    <p>
+                      <span className="font-semibold">Includes</span> : {supportHours} hours per month of support
+                    </p>
+                  )}
+                </div>
+              </div>
+
               {/*SERVICES*/}
               <div className={styles.resultHeading}>Professional Services</div>
               <div className={styles.resultResult}>
@@ -206,7 +281,28 @@ export default function PricingCalculator() {
                 <span className="font-light text-base"></span>
               </div>
               <div className={styles.descriptionWrapper}>
-                <div className={styles.resultDescription}></div>
+                <div className={styles.resultDescription}>
+                  {serviceAmount > 0 ? (
+                    <p>
+                      <span className="font-semibold">Includes</span> : {serviceAmount} {serviceUnit.toLowerCase()} of professional services
+                    </p>
+                  ) : (
+                    <p>
+                      Professional services available on request
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              {/*TOTAL*/}
+              <div className={styles.totalSection}>
+                <div className={styles.resultHeading}>Total in Year 1</div>
+                <div className={styles.resultResult}>
+                  <span>{formatPrice(calculateTotal())}</span>
+                </div>
+              </div>
+
+              <div className={styles.descriptionWrapper}>
                 <button className={styles.button}>
                   <a href="/contact">Let's talk</a>
                 </button>

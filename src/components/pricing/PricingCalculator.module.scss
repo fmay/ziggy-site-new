@@ -199,6 +199,22 @@
   .resultDescription {
     @apply text-base text-white opacity-90 leading-relaxed;
   }
+
+  .totalSection {
+    @apply mt-8 pt-6 border-t-2 border-white border-opacity-30;
+
+    .resultHeading {
+      @apply text-3xl md:text-3xl font-semibold mb-4;
+    }
+
+    .resultResult {
+      @apply mb-6;
+
+      span:first-child {
+        @apply text-5xl font-normal;
+      }
+    }
+  }
 }
 
 .button {
@@ -258,9 +274,22 @@
   @apply select-none;
 }
 
+// Support and Services row styles
+.supportServicesRow {
+  @apply flex flex-col md:flex-row gap-8 pb-8 border-b border-gray-200;
+}
+
+.supportColumn {
+  @apply flex-1 md:w-1/2;
+}
+
+.servicesColumn {
+  @apply flex-1 md:w-1/2;
+}
+
 // Services row styles
 .servicesRow {
-  @apply flex flex-row gap-4 pb-8 border-b border-gray-200;
+  @apply flex flex-row gap-4;
 }
 
 .servicesInputContainer {
