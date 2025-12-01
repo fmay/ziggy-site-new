@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="header scss">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="header update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/DesktopDropdownContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/DesktopDropdownContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/DesktopNavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/DesktopNavItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/MobileNavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/MobileNavItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/QuickBookDemo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/HomePricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomePricing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/HomeScrollList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/HomeScrollList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,15 +139,7 @@
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
       <workItem from="1764399109126" duration="39287000" />
-      <workItem from="1764490461648" duration="44567000" />
-    </task>
-    <task id="LOCAL-00036" summary="reset on no visibility 2">
-      <option name="closed" value="true" />
-      <created>1764338748730</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1764338748730</updated>
+      <workItem from="1764490461648" duration="46589000" />
     </task>
     <task id="LOCAL-00037" summary="cluster page 0.1">
       <option name="closed" value="true" />
@@ -531,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764594714176</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="header update">
+      <option name="closed" value="true" />
+      <created>1764595859120</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1764595859120</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="quick demo component" />
     <MESSAGE value="scroll pairs spacing" />
     <MESSAGE value="quick demo 0.5" />
     <MESSAGE value="cluster 0.6" />
@@ -602,7 +603,8 @@
     <MESSAGE value="nav update" />
     <MESSAGE value="tweaks" />
     <MESSAGE value="header scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="header scss" />
+    <MESSAGE value="header update" />
+    <option name="LAST_COMMIT_MESSAGE" value="header update" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

@@ -1,22 +1,20 @@
 .heroSection {
-  @apply relative pt-20 pb-20 sm:px-6 lg:px-2;
-}
-
-.overlay {
-  @apply absolute inset-0 -z-10 bg-gradient-to-b from-white/90 via-white/80 to-white/90;
+  @apply relative;
 }
 
 .container {
-  @apply flex flex-col gap-[50px] mx-auto px-[5%] text-center;
+  @apply flex flex-col gap-[50px]
+  px-[5%] py-20 mx-auto
+  text-center bg-dark-gray text-white;
 }
 
 .heading {
-  @apply text-5xl mb-[0px] sm:text-4xl lg:text-6xl font-normal text-stripe-navy;
+  @apply text-5xl max-w-[1200px] mb-[0px] mx-auto sm:text-4xl lg:text-6xl font-normal text-white;
   line-height: 4rem;
 }
 
 .subheading {
-  @apply mx-auto text-2xl max-w-[800px] text-mid-gray font-normal;
+  @apply mx-auto text-3xl max-w-[800px]  font-extralight;
 }
 
 .subheadingImage {

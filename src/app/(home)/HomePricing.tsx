@@ -37,7 +37,7 @@ const HomePricing: FC = () => {
             <div className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
               <h3 className={styles.title}>No usage based costs</h3>
               <p className={styles.content}>
-                As you add more and more Ziggy Flows, you won't pay a cent more.
+                As you add or run more Ziggy Flows, you won't pay a cent more for your server's usage.
               </p>
               <a href="/pricing" className={styles.link}>
                 Pricing →

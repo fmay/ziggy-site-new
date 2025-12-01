@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import ScrollContentImagePairs from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
+import ScrollContentImagePairs, { ContentImagePair } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import CTA from '@/components/ui/cta/CTA'
 import Link from 'next/link'
 
 const HomeScrollList: FC = () => {
-  const HP_Pairs = [
+  const HP_Pairs: ContentImagePair[] = [
     {
       content: (
         <div>
@@ -28,6 +28,7 @@ const HomeScrollList: FC = () => {
         </div>
       ),
       image: '/images/customise/home/flows-list.webp',
+      contentNudge: 10
     },
     {
       content: (
@@ -67,10 +68,11 @@ const HomeScrollList: FC = () => {
             You can then give them secure and easy access to your platform so they can perform their
             own processes using a white-labelled version of Ziggy.
           </p>
-          <CTA className="mt-20" label="Learn more" href="integration-partners" />
+          <CTA className="" label="Learn more" href="integration-partners"/>
         </div>
       ),
       image: '/images/customise/home/custom-flow.webp',
+      contentNudge: 90,
     },
   ]
   return <ScrollContentImagePairs contentImagePairs={HP_Pairs} />

@@ -9,6 +9,9 @@ const config: Config = {
   safelist: ['bg-flow-gray', 'bg-white'],
   theme: {
     extend: {
+      screens: {
+        'md': '990px',
+      },
       colors: {
         'stripe-navy': '#0a2540',
         'stripe-gray': '#727f96',

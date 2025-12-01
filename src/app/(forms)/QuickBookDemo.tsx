@@ -103,7 +103,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
       <div className={styles.formColumn}>
         <div className={styles.formField}>
           <label htmlFor="firstName" className={styles.label}>
-            First name
+            Your name
           </label>
           <input
             id="Your name"

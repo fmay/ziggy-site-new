@@ -1,9 +1,7 @@
-.overlay {
-  @apply fixed inset-0 bg-stripe-navy/5 z-40 transition-opacity duration-[250ms] ease-out;
-}
+
 
 .header {
-  @apply fixed top-0 left-0 right-0 bg-header-footer text-white border-b border-gray-100 z-50;
+  @apply fixed top-0 left-0 right-0 bg-header-footer text-white z-50;
   button, a {
     @apply text-white font-light hover:text-white;
   }
@@ -40,10 +38,22 @@
 
 .desktopNav {
   @apply hidden md:flex items-center;
+
+  @media (max-width: 1099px) {
+    button, a {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 .ctaButtons {
   @apply hidden md:flex items-center space-x-4;
+
+  @media (max-width: 1099px) {
+    a {
+      font-size: 0.7rem;
+    }
+  }
 }
 
 .ctaButton {
