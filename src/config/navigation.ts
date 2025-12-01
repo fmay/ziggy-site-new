@@ -27,11 +27,10 @@ export interface NavigationConfig {
 export const navigationConfig: NavigationConfig = {
   items: [
     {
-      label: 'Product',
+      label: 'Platform',
       dropdown: {
         sections: [
           {
-            title: 'Core',
             items: [
               {
                 label: 'Flows',
@@ -73,11 +72,12 @@ export const navigationConfig: NavigationConfig = {
       dropdown: {
         sections: [
           {
+            title: 'General',
             items: [
               {
-                label: 'Integration Partners',
-                href: '/integration-partners',
-                description: 'White label Ziggy and build a new revenue stream',
+                label: 'Integrations',
+                href: '/solutions',
+                description: 'Trigger Ziggy Flows when data changes in any system',
                 icon: '/nav/flow.svg',
               },
               {
@@ -86,10 +86,15 @@ export const navigationConfig: NavigationConfig = {
                 description: 'Move any amount of data between systems',
                 icon: '/nav/flow.svg',
               },
+            ],
+          },
+          {
+            title: 'Sector',
+            items: [
               {
-                label: 'Integrations',
+                label: 'HubSpot',
                 href: '/solutions',
-                description: 'Trigger Ziggy Flows when data changes in any system',
+                description: 'Building Ziggy flows for HubSpot',
                 icon: '/nav/flow.svg',
               },
               {
@@ -104,33 +109,21 @@ export const navigationConfig: NavigationConfig = {
       },
     },
     {
-      label: 'Developers',
+      label: 'Integration Partners',
       dropdown: {
         sections: [
           {
             items: [
               {
-                label: 'Documentation',
-                href: '/developers',
-                description: 'Read our documentation',
+                label: 'About integration partners',
+                href: '/integration-partners',
+                description: 'What is an Integration Partner?',
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'Custom Block development',
+                label: 'Integrating with your platform',
                 href: '/developers',
-                description: 'Build custom blocks to talk to your platform',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'CLI',
-                href: '/developers',
-                description: 'For Block development and system administration',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'Source code',
-                href: '/developers',
-                description: 'Available upon request',
+                description: 'Building custom blocks that talk to your platform',
                 icon: '/nav/flow.svg',
               },
             ],
@@ -147,19 +140,13 @@ export const navigationConfig: NavigationConfig = {
               {
                 label: 'Docs',
                 href: '/resources',
-                description: 'Latest updates and insights',
+                description: 'Ziggy product documentation',
                 icon: '/nav/flow.svg',
               },
               {
                 label: 'Professional Services',
                 href: '/resources',
-                description: 'Best practices and tutorials',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'Support',
-                href: '/resources',
-                description: 'Stay up to date',
+                description: 'Support, training and Ziggy related services',
                 icon: '/nav/flow.svg',
               },
             ],
