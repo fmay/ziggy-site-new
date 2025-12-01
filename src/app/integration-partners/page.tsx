@@ -6,6 +6,7 @@ import CustomizationStack from '@/app/(features)/extend/CustomizationStack'
 import CollectionsExtendIntro from '@/app/(features)/extend/CollectionsExtendIntro'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
+import PartnerFeatures from '@/app/integration-partners/PartnerFeatures'
 
 export default function IntegrationPartners() {
   return (
@@ -16,7 +17,7 @@ export default function IntegrationPartners() {
       image="/placeholder.svg">
       <PageSection bgColor="bg-gray">
         <Intro
-          title="What is an Integration Partner"
+          title="What is an Integration Partner?"
           description={
             <div className="section-intro">
               <p>
@@ -40,14 +41,13 @@ export default function IntegrationPartners() {
             </div>
           }
           image="/placeholder.svg"
+          imageNudge={-90}
           imageScale={0.5}
         />
-        <CustomizationStack />
       </PageSection>
 
-      <PageSection bgColor="bg-gray-500 text-white">
-        <CollectionsExtendIntro />
-        <HubspotBlockCollection />
+      <PageSection>
+        <PartnerFeatures/>
       </PageSection>
 
       <PageSection bgColor="bg-gray-800">

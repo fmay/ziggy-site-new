@@ -9,6 +9,8 @@ export interface ContentImagePair {
   scene?: ReactNode
   bgColor?: string
   scaleToFit?: boolean
+  hasCTA?: boolean
+  imageNudge?: number
 }
 
 interface ScrollContentImagePairsProps {

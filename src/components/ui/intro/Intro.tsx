@@ -8,6 +8,8 @@ interface IntroProps {
   image?: string
   imageAlt?: string
   imageScale?: number
+  imageNudge?: number
+  hasCTA?: boolean
 }
 
 const Intro: FC<IntroProps> = ({
@@ -16,7 +18,15 @@ const Intro: FC<IntroProps> = ({
   image,
   imageAlt = 'Intro image',
   imageScale = 1,
+  imageNudge = 0,
+  hasCTA,
 }) => {
+  const getMarginY = () => {
+    if (hasCTA) return -90
+    if (imageNudge) return imageNudge
+    return 0
+  }
+
   if (image) {
     return (
       <div className="flex flex-row items-center">
@@ -24,7 +34,9 @@ const Intro: FC<IntroProps> = ({
           <div className="section-title">{title}</div>
           {description && <div className="section-intro">{description}</div>}
         </div>
-        <div className="w-1/2 flex items-center justify-center" style={{ transform: `scale(${imageScale})` }}>
+        <div
+          className="w-1/2 flex items-center justify-center"
+          style={{ transform: `scale(${imageScale})`, marginTop: getMarginY() }}>
           <Image
             src={image}
             alt={imageAlt}
