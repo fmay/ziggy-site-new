@@ -1,6 +1,6 @@
 'use client'
 
-import { NavItemWithDropdown } from '@/config/navigation'
+import { NavItemWithDropdown } from '@/components/navigation/navigation'
 import DropdownNavItem from './DropdownNavItem'
 
 interface DesktopDropdownContainerProps {

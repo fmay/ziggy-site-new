@@ -2,11 +2,12 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { navigationConfig, NavItemWithDropdown } from '@/config/navigation'
+import { navigationConfig, NavItemWithDropdown } from '@/components/navigation/navigation'
 import DesktopNavItem from './DesktopNavItem'
 import MobileNavItem from './MobileNavItem'
 import DesktopDropdownContainer from './DesktopDropdownContainer'
 import styles from './Header.module.scss'
+import { CiCalendar } from 'react-icons/ci'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -94,9 +95,7 @@ const Header = () => {
           <div className={styles.navContent}>
             {/* Logo */}
             <div className={styles.logoContainer}>
-              <Link href="/" className={styles.logo}>
-                Ziggy
-              </Link>
+              <Link href="/" className={styles.logo}></Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -115,6 +114,12 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className={styles.ctaButtons}>
+              <Link
+                href={navigationConfig.cta.bookDemo.href}
+                className={`${styles.ctaButton} flex flex-row gap-1 place-items-center`}>
+                <CiCalendar />
+                {navigationConfig.cta.bookDemo.label}
+              </Link>
               <Link href={navigationConfig.cta.contact.href} className={styles.ctaButton}>
                 {navigationConfig.cta.contact.label}
               </Link>
@@ -133,16 +138,25 @@ const Header = () => {
                 className={styles.menuToggle}
                 aria-label="Toggle menu">
                 {mobileMenuOpen ? (
-                  <svg className={styles.menuIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className={styles.menuIcon}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M6 18L18 6M6 6l12 12"
                     />
+                    xf
                   </svg>
                 ) : (
-                  <svg className={styles.menuIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className={styles.menuIcon}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -179,10 +193,16 @@ const Header = () => {
                   />
                 ))}
                 <Link
-                  href={navigationConfig.cta.signin.href}
+                  href={navigationConfig.cta.bookDemo.href}
                   className={styles.mobileCtaButton}
                   onClick={() => setMobileMenuOpen(false)}>
-                  {navigationConfig.cta.signin.label}
+                  {navigationConfig.cta.bookDemo.label}
+                </Link>
+                <Link
+                  href={navigationConfig.cta.contact.href}
+                  className={styles.mobileCtaButton}
+                  onClick={() => setMobileMenuOpen(false)}>
+                  {navigationConfig.cta.contact.label}
                 </Link>
               </div>
             </div>

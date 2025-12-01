@@ -1,0 +1,47 @@
+.footer {
+  @apply bg-header-footer text-white border-t border-gray-200;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.gridContainer {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-8;
+}
+
+.section {
+  // Container for each footer section
+}
+
+.sectionTitle {
+  @apply font-semibold text-white mb-4;
+}
+
+.linkList {
+  @apply space-y-3;
+}
+
+.linkItem {
+  // List item wrapper
+}
+
+.link {
+  @apply text-gray-300 hover:text-white transition-colors duration-200 font-light;
+}
+
+.bottomSection {
+  @apply mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center;
+}
+
+.copyright {
+  @apply text-gray-300 text-sm;
+}
+
+.bottomLinks {
+  @apply flex space-x-6 mt-4 md:mt-0;
+}
+
+.bottomLink {
+  @apply text-gray-300 hover:text-white text-sm transition-colors duration-200 font-light;
+}

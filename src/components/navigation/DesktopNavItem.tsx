@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { NavItemWithDropdown } from '@/config/navigation'
+import { NavItemWithDropdown } from '@/components/navigation/navigation'
 
 interface DesktopNavItemProps {
   item: NavItemWithDropdown

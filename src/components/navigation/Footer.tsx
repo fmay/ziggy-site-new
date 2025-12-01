@@ -1,31 +1,26 @@
 import Link from 'next/link'
+import styles from './Footer.module.scss'
 
 const Footer = () => (
-  <footer className="bg-stripe-light-bg border-t border-gray-200">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+  <footer className={styles.footer}>
+    <div className={styles.container}>
+      <div className={styles.gridContainer}>
         {/* Products */}
-        <div>
-          <h3 className="font-semibold text-stripe-navy mb-4">Products</h3>
-          <ul className="space-y-3">
-            <li>
-              <Link
-                href="/products"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Products</h3>
+          <ul className={styles.linkList}>
+            <li className={styles.linkItem}>
+              <Link href="/products" className={styles.link}>
                 Payments
               </Link>
             </li>
-            <li>
-              <Link
-                href="/products"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/products" className={styles.link}>
                 Billing
               </Link>
             </li>
-            <li>
-              <Link
-                href="/products"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/products" className={styles.link}>
                 Connect
               </Link>
             </li>
@@ -33,27 +28,21 @@ const Footer = () => (
         </div>
 
         {/* Developers */}
-        <div>
-          <h3 className="font-semibold text-stripe-navy mb-4">Developers</h3>
-          <ul className="space-y-3">
-            <li>
-              <Link
-                href="/developers"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Developers</h3>
+          <ul className={styles.linkList}>
+            <li className={styles.linkItem}>
+              <Link href="/developers" className={styles.link}>
                 Documentation
               </Link>
             </li>
-            <li>
-              <Link
-                href="/developers"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/developers" className={styles.link}>
                 API Reference
               </Link>
             </li>
-            <li>
-              <Link
-                href="/developers"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/developers" className={styles.link}>
                 Support
               </Link>
             </li>
@@ -61,27 +50,21 @@ const Footer = () => (
         </div>
 
         {/* Company */}
-        <div>
-          <h3 className="font-semibold text-stripe-navy mb-4">Company</h3>
-          <ul className="space-y-3">
-            <li>
-              <Link
-                href="/about"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Company</h3>
+          <ul className={styles.linkList}>
+            <li className={styles.linkItem}>
+              <Link href="/about" className={styles.link}>
                 About
               </Link>
             </li>
-            <li>
-              <Link
-                href="/contact"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/contact" className={styles.link}>
                 Contact
               </Link>
             </li>
-            <li>
-              <Link
-                href="/careers"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/careers" className={styles.link}>
                 Careers
               </Link>
             </li>
@@ -89,27 +72,21 @@ const Footer = () => (
         </div>
 
         {/* Resources */}
-        <div>
-          <h3 className="font-semibold text-stripe-navy mb-4">Resources</h3>
-          <ul className="space-y-3">
-            <li>
-              <Link
-                href="/resources"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+        <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>Resources</h3>
+          <ul className={styles.linkList}>
+            <li className={styles.linkItem}>
+              <Link href="/resources" className={styles.link}>
                 Blog
               </Link>
             </li>
-            <li>
-              <Link
-                href="/resources"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/resources" className={styles.link}>
                 Guides
               </Link>
             </li>
-            <li>
-              <Link
-                href="/resources"
-                className="text-stripe-gray hover:text-stripe-navy transition-colors duration-200">
+            <li className={styles.linkItem}>
+              <Link href="/resources" className={styles.link}>
                 Newsletter
               </Link>
             </li>
@@ -117,24 +94,18 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-        <div className="text-stripe-gray text-sm">
-          © {new Date().getFullYear()} Ziggy, Inc. All rights reserved.
+      <div className={styles.bottomSection}>
+        <div className={styles.copyright}>
+          © {new Date().getFullYear()} Ziggy Services, All rights reserved.
         </div>
-        <div className="flex space-x-6 mt-4 md:mt-0">
-          <Link
-            href="/privacy"
-            className="text-stripe-gray hover:text-stripe-navy text-sm transition-colors duration-200">
+        <div className={styles.bottomLinks}>
+          <Link href="/privacy" className={styles.bottomLink}>
             Privacy
           </Link>
-          <Link
-            href="/terms"
-            className="text-stripe-gray hover:text-stripe-navy text-sm transition-colors duration-200">
+          <Link href="/terms" className={styles.bottomLink}>
             Terms
           </Link>
-          <Link
-            href="/cookies"
-            className="text-stripe-gray hover:text-stripe-navy text-sm transition-colors duration-200">
+          <Link href="/cookies" className={styles.bottomLink}>
             Cookies
           </Link>
         </div>
