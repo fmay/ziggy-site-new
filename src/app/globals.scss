@@ -115,6 +115,6 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   div:nth-child(2) {
-    @apply flex w-1/2 justify-center bg-red-50;
+    @apply flex w-1/2 justify-center;
   }
 }

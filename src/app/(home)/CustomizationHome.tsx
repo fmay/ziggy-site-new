@@ -22,9 +22,9 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
           <p>We also provide discounted pricing for your customer for all Ziggy subscriptions. </p>
         </div>
         <div>
-          <div className="flex flex-col w-full">
-            <CTA label="About Integration Partners" href="#" />
-            <CTA label="Extend with custom block plugins" href="#" />
+          <div className="flex flex-col place-items-center">
+            <CTA label="About Integration Partners" href="#" marginY={1}/>
+            <CTA label="Extend with custom block plugins" href="#" marginY={1}/>
           </div>
         </div>
       </div>

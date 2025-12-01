@@ -1,20 +1,24 @@
 
 .button {
-  @apply my-12;
+  @apply my-12 w-fit;
 }
 
 .primaryCTAButton {
-  @apply sm:w-auto px-8 py-4 rounded-full;
+  @apply px-8 py-4 rounded-full whitespace-nowrap;
   @apply font-normal hover:font-semibold transition-all duration-200
   bg-stripe-purple text-white;
+  display: inline-block;
+  width: fit-content;
   &:hover {
     color: white !important;
   }
 }
 
 .secondaryCTAButton {
-  @apply  sm:w-auto px-8 py-4 rounded-full;
+  @apply px-8 py-4 rounded-full whitespace-nowrap;
   @apply border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  display: inline-block;
+  width: fit-content;
   &:hover {
     color: white !important;
   }
