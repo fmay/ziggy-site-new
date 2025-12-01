@@ -24,7 +24,7 @@ const Intro: FC<IntroProps> = ({
           <div className="section-title">{title}</div>
           {description && <div className="section-intro">{description}</div>}
         </div>
-        <div className="w-1/2" style={{ transform: `scale(${imageScale})` }}>
+        <div className="w-1/2 flex items-center justify-center" style={{ transform: `scale(${imageScale})` }}>
           <Image
             src={image}
             alt={imageAlt}

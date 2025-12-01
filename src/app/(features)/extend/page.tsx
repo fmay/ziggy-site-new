@@ -29,7 +29,7 @@ export default function Extend() {
                 complexities.
               </p>
               <CTA
-                label="Integration Partners"
+                label="Integration Partner Info"
                 href="https://docs.ziggyservices.com/user-guide/plugin/overview"
               />
             </div>

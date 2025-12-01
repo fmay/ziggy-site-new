@@ -1,22 +1,58 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+import PageSection from '@/components/ui/page-wrappers/PageSection'
+import Intro from '@/components/ui/intro/Intro'
+import CTA from '@/components/ui/cta/CTA'
+import CustomizationStack from '@/app/(features)/extend/CustomizationStack'
+import CollectionsExtendIntro from '@/app/(features)/extend/CollectionsExtendIntro'
+import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
+import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
 
 export default function IntegrationPartners() {
   return (
     <PageLayout
-      title="Integration Partners"
-      description="How we collect, use, and protect your information.">
-      <div className="max-w-4xl mx-auto prose prose-lg">
-        <div className="bg-white p-8 rounded-lg border border-gray-200">
-          <p className="text-stripe-gray mb-4">
-            <strong>Last updated:</strong> {new Date().toLocaleDateString()}
-          </p>
-          <p className="text-stripe-gray text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-      </div>
+      title="Integration Partner"
+      style="feature"
+      description="Let your customers read and write to your platform using Ziggy and completely avoid coding."
+      image="/placeholder.svg">
+      <PageSection bgColor="bg-gray">
+        <Intro
+          title="What is an Integration Partner"
+          description={
+            <div className="section-intro">
+              <p>
+                As an Integration Partner you can build your own custom blocks that connect to your
+                platform. Then let your customers use Ziggy to pull data from and write data to your
+                platform.
+              </p>
+              <p>
+                Providing easy access to your platform will not only delight your customers - they
+                no longer have to write code or even use you API, it opens up new revenue streams
+                for you.
+              </p>
+              <p>
+                You control all aspects of infrastructure, security, performance and
+                fault-tolerance.
+              </p>
+              <CTA
+                label="Integration Partner Info"
+                href="https://docs.ziggyservices.com/user-guide/plugin/overview"
+              />
+            </div>
+          }
+          image="/placeholder.svg"
+          imageScale={0.5}
+        />
+        <CustomizationStack />
+      </PageSection>
+
+      <PageSection bgColor="bg-gray-500 text-white">
+        <CollectionsExtendIntro />
+        <HubspotBlockCollection />
+      </PageSection>
+
+      <PageSection bgColor="bg-gray-800">
+        <QuickBookDemo background="dark" />
+      </PageSection>
     </PageLayout>
   )
 }
