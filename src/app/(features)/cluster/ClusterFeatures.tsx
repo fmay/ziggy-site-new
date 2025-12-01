@@ -23,7 +23,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
         </div>
       ),
-      image: '/product/level1-cluster.webp',
+      image: '/product/level1-cluster.svg',
     },
     {
       content: (

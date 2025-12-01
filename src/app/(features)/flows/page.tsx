@@ -9,18 +9,18 @@ export default function Products() {
   return (
     <PageLayout
       title="Ziggy Flows"
-      description="Build simple or highly complex data pipelines using Ziggy Blocks"
+      description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
       video="https://nxucrsk2vrk61vtm.public.blob.vercel-storage.com/website-videos/flow-animated.mov">
       {/*Scroll pair*/}
       <FlowFeatures />
 
-      {/*Block Collections*/}
-      <div>
+      <PageSection bgColor="bg-gray-500 text-white">
         <BlockCollections />
         <HubspotBlockCollection />
-      </div>
+      </PageSection>
 
-      <PageSection>
+
+      <PageSection bgColor="bg-gray-50">
         <JavascriptFeatures />
       </PageSection>
     </PageLayout>
