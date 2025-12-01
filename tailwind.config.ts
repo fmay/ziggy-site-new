@@ -21,6 +21,7 @@ const config: Config = {
         'flow-gray': '#D0D8E0',
         'dark-gray': 'rgb(66, 84, 102)',
         'header-footer': 'rgb(51,68,80)',
+        'pale-blue': `rgb(239, 246, 255)`,
         'mid-gray': '#68748a',
         'pale-gray': '#8e9cb3',
         'dark-text': 'rgb(10, 37, 64)',

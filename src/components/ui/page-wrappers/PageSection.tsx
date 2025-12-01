@@ -36,7 +36,7 @@ const PageSection: FC<PageSectionProps> = ({
   }
 
   return (
-    <div id={id || ''} className={`w-full ${bgColor} py-[80px] px-[10px]`}>
+    <div id={id || ''} className={`w-full ${bgColor} pt-[80px] px-[10px]`}>
       <div className="w-full max-w-[1200px] bg-transparent mx-auto">{children}</div>
     </div>
   )
