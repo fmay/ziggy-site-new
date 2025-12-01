@@ -13,7 +13,7 @@ export default function Extend() {
       title="Ziggy Plugins"
       style="feature"
       description="Extend Ziggy by building your own custom blocks that can connect to your platform or any other."
-      image="/canvas/home/cards/cluster.card.svg">
+      image="/placeholder.svg">
       <PageSection bgColor="bg-gray">
         <Intro
           title="Become an Integration Partner"
@@ -34,13 +34,16 @@ export default function Extend() {
               />
             </div>
           }
-          image="/misc/docker.svg"
+          image="/placeholder.svg"
           imageScale={0.5}
         />
+      </PageSection>
+
+      <PageSection bgColor="bg-gray-50">
         <CustomizationStack />
       </PageSection>
 
-      <PageSection bgColor="bg-gray-500 text-white">
+      <PageSection bgColor="">
         <CollectionsExtendIntro />
         <HubspotBlockCollection />
       </PageSection>

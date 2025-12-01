@@ -7,8 +7,8 @@ interface PageSectionProps {
   paddingX?: number
   bgColor?: string
   image?: string
-
   alt?: string
+  id?: string
 }
 
 const PageSection: FC<PageSectionProps> = ({
@@ -18,6 +18,7 @@ const PageSection: FC<PageSectionProps> = ({
   bgColor = 'transparent',
   image,
   alt,
+  id,
 }) => {
   if (image) {
     return (
@@ -35,7 +36,7 @@ const PageSection: FC<PageSectionProps> = ({
   }
 
   return (
-    <div className={`w-full ${bgColor} py-[80px] px-[10px]`}>
+    <div id={id || ''} className={`w-full ${bgColor} py-[80px] px-[10px]`}>
       <div className="w-full max-w-[1200px] bg-transparent mx-auto">{children}</div>
     </div>
   )

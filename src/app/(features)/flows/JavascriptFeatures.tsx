@@ -45,7 +45,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
 
   return (
     <div>
-      <div className="section-intro">
+      <div id="javascript" className="section-intro">
         <h2>Javascript Block</h2>
         <p>
           You don't need to be a developer to use the Javascript block. It's fully AI supported

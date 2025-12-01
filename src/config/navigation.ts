@@ -47,7 +47,7 @@ export const navigationConfig: NavigationConfig = {
               },
               {
                 label: 'System features',
-                href: '/products',
+                href: '/features',
                 description: 'Everything you need to support integration and migration flows',
                 icon: '/nav/flow.svg',
               },

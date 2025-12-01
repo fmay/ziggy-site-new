@@ -32,6 +32,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: var(--hover-default-color);
   transition: color 0.2s ease;
