@@ -47,7 +47,7 @@ const HomeScrollList: FC = () => {
           <p>
             Start with a low cost 2GB instance. Scale up and out as demand dictates.
           </p>
-          <CTA className="mt-20" label="Learn more" href="flows" />
+          <CTA className="mt-20" label="Learn more" href="cluster" />
         </div>
       ),
       image: '/images/customise/home/cluster-configs.webp',
@@ -67,7 +67,7 @@ const HomeScrollList: FC = () => {
             You can then give them secure and easy access to your platform so they can perform their
             own processes using a white-labelled version of Ziggy.
           </p>
-          <CTA className="mt-20" label="Learn more" href="flows" />
+          <CTA className="mt-20" label="Learn more" href="integration-partners" />
         </div>
       ),
       image: '/images/customise/home/custom-flow.webp',

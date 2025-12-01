@@ -23,8 +23,8 @@ const CustomizationHome: FC<JavascriptFeaturesProps> = ({}) => {
         </div>
         <div>
           <div className="flex flex-col place-items-center">
-            <CTA label="About Integration Partners" href="#"/>
-            <CTA label="Extend with custom block plugins" href="#" />
+            <CTA label="About Integration Partners" href="/integration-partners" className="my-6"/>
+            <CTA label="Extend with Ziggy plugins" href="/extend" className="my-2"/>
           </div>
         </div>
       </div>

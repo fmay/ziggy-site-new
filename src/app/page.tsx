@@ -19,7 +19,9 @@ export default function Home() {
         <CustomizationHome />
       </PageSection>
 
-      <HomePricing />
+      <PageSection bgColor="bg-gray-50">
+        <HomePricing />
+      </PageSection>
 
       {/*Professional Services*/}
       <PageSection>

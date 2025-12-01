@@ -10,9 +10,9 @@ import CollectionsExtendIntro from '@/app/(features)/extend/CollectionsExtendInt
 export default function Extend() {
   return (
     <PageLayout
-      title="Ziggy Plugins"
+      title="Extend Ziggy with plugins"
       style="feature"
-      description="Extend Ziggy by building your own custom blocks that can connect to your platform or any other."
+      description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
       image="/placeholder.svg">
       <PageSection bgColor="bg-gray">
         <Intro

@@ -6,14 +6,15 @@ import styles from '@/components/ui/carousel/CarouselItem.module.scss'
 
 const HomePricing: FC = () => {
   return (
-    <PageSection>
-      <div className="section-intro">
+    <>
+      <div className="section-intro mb-8">
         <h2>Transparent pricing</h2>
         <p>
-          We hope you'll agree that our pricing is not only low, but it steers well clear of hidden
+          Our pricing is not only low, but there are no hidden
           costs associated with ETL platforms, Make.com and Zapier let alone custom development.
         </p>
       </div>
+
       <Carousel slidesToShow={3}>
         {/*Always included*/}
         <div className="mx-4">
@@ -60,7 +61,7 @@ const HomePricing: FC = () => {
           </div>
         </div>
       </Carousel>
-    </PageSection>
+    </>
   )
 }
 
