@@ -24,7 +24,7 @@ const HomePricing: FC = () => {
               <p className={styles.content}>
                 One production server, one development server, one staging server.
               </p>
-              <a href="#" className={styles.link}>
+              <a href="/pricing" className={styles.link}>
                 Pricing →
               </a>
             </div>
@@ -39,7 +39,7 @@ const HomePricing: FC = () => {
               <p className={styles.content}>
                 As you add more and more Ziggy Flows, you won't pay a cent more.
               </p>
-              <a href="#" className={styles.link}>
+              <a href="/pricing" className={styles.link}>
                 Pricing →
               </a>
             </div>
@@ -54,7 +54,7 @@ const HomePricing: FC = () => {
               <p className={styles.content}>
                 We only charge extra for additional servers. Check out the pricing page calculator.
               </p>
-              <a href="#" className={styles.link}>
+              <a href="/pricing" className={styles.link}>
                 Pricing →
               </a>
             </div>
