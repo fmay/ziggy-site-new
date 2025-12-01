@@ -1,5 +1,7 @@
 import { FC } from 'react'
-import ScrollContentImagePairs, { ContentImagePair } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
+import ScrollContentImagePairs, {
+  ContentImagePair,
+} from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import CTA from '@/components/ui/cta/CTA'
 
 interface FlowFeaturesProps {}
@@ -14,9 +16,11 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
             You receive customised pricing that is tailored to your audience profile and is designed
             to suit the budgets of your smaller and larger clients.
           </p>
+          <CTA label="Contact us for pricing" href="/contact" className="mb-3"/>
         </div>
       ),
       image: '/placeholder.svg',
+      hasCTA: true,
     },
     {
       content: (
@@ -39,6 +43,8 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
             API. And, of course, they can take that data and put it into their other systems - also
             without coding.
           </p>
+          <CTA label="Build Custom Blocks" href="/extend" className="mb-3" />
+
         </div>
       ),
       image: '/placeholder.svg',
@@ -55,11 +61,11 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
             Once you've built your plugins, your customers are ready to build their flows without
             having to wait for there development teams to have some availability.
           </p>
-          <CTA label="Build Custom Blocks" href="/extend" />
+          <CTA label="Build Custom Blocks" href="/extend" className="mb-3" />
         </div>
       ),
       image: '/placeholder.svg',
-      hasCTA: true
+      hasCTA: true,
     },
   ]
 

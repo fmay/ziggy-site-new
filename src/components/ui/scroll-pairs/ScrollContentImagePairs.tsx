@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, ReactNode } from 'react'
 import styles from './ScrollContentImagePairs.module.scss'
+import CTA from '@/components/ui/cta/CTA'
 
 export interface ContentImagePair {
   content: ReactNode
@@ -10,7 +11,7 @@ export interface ContentImagePair {
   bgColor?: string
   scaleToFit?: boolean
   hasCTA?: boolean
-  imageNudge?: number
+  contentNudge?: number
 }
 
 interface ScrollContentImagePairsProps {
@@ -177,6 +178,12 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
     }
   }, [contentImagePairs.length])
 
+  const getMarginTop = (pair: ContentImagePair) => {
+    if(pair.hasCTA) return 60
+    if(pair.contentNudge) return pair.contentNudge
+    return 0
+  }
+
   return (
     <div ref={containerRef} className={styles.container}>
       {/* Desktop Layout */}
@@ -189,6 +196,7 @@ const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsP
               ref={el => {
                 contentRefs.current[index] = el
               }}
+              style={{paddingTop: getMarginTop(pair)}}
               className={styles.contentItem}>
               <div className={styles.contentWrapper}>{pair.content}</div>
             </div>

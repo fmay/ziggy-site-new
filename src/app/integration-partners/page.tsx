@@ -37,6 +37,7 @@ export default function IntegrationPartners() {
               <CTA
                 label="Integration Partner Info"
                 href="https://docs.ziggyservices.com/user-guide/plugin/overview"
+                className="mb-0"
               />
             </div>
           }

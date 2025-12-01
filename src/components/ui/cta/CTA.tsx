@@ -9,10 +9,9 @@ interface CTAProps {
   style?: 'primary' | 'secondary'
   href: string
   className?: string
-  marginY?: number
 }
 
-const CTA: FC<CTAProps> = ({ label, style, href, className = '', marginY }) => {
+const CTA: FC<CTAProps> = ({ label, style, href, className = '' }) => {
   const [styleClassName, setStyleClassName] = useState(styles.primaryCTAButton)
 
   useEffect(() => {
@@ -29,8 +28,6 @@ const CTA: FC<CTAProps> = ({ label, style, href, className = '', marginY }) => {
     }
   }, [style])
 
-  const marginStyle = marginY !== undefined ? { marginTop: `${marginY}rem`, marginBottom: `${marginY}rem` } : {}
-
   return (
     <>
       {href?.includes('http') ? (
@@ -38,16 +35,14 @@ const CTA: FC<CTAProps> = ({ label, style, href, className = '', marginY }) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${styleClassName} ${marginY === undefined ? styles.button : ''} ${className}`}
-          style={marginStyle}
+          className={`${styleClassName} ${styles.button} my-12 ${className}`}
         >
           {label}
         </a>
       ) : (
         <Link
           href={href || '#'}
-          className={`${styleClassName} ${marginY === undefined ? styles.button : ''} ${className}`}
-          style={marginStyle}
+          className={`${styleClassName} ${styles.button} my-12 ${className}`}
         >
           {label}
         </Link>
