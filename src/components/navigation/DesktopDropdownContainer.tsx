@@ -46,11 +46,11 @@ const DesktopDropdownContainer = ({
           <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45" />
 
           <div
-            className={`transition-opacity duration-400 relative flex gap-8 ${
+            className={`transition-opacity duration-400 relative flex flex-col gap-4 ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}>
             {dropdownContent.dropdown.sections.map((section, sectionIdx) => (
-              <div key={sectionIdx} className="flex-shrink-0">
+              <div key={sectionIdx}>
                 {section.title && (
                   <div className="px-4 mb-2">
                     <h3 className="text-xs font-semibold text-stripe-gray uppercase tracking-wide">

@@ -46,32 +46,21 @@ export const navigationConfig: NavigationConfig = {
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'System features',
-                href: '/features',
-                description: 'Everything you need to support integration and migration flows',
-                icon: '/nav/flow.svg',
-              },
-            ],
-          },
-          {
-            title: 'Advanced',
-            items: [
-              {
-                label: 'Ziggy Cluster',
-                href: '/cluster',
-                description: 'Scaling and high availability',
-                icon: '/nav/flow.svg',
-              },
-              {
                 label: 'Extend & Customize',
                 href: '/extend',
                 description: 'Extend Ziggy with your own Custom Blocks',
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'Internet of Things',
-                href: '/products',
-                description: 'Messaging and MQTT Blocks',
+                label: 'System features',
+                href: '/features',
+                description: 'Everything you need to support integration and migration flows',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Ziggy Cluster',
+                href: '/cluster',
+                description: 'Scaling and high availability',
                 icon: '/nav/flow.svg',
               },
             ],
