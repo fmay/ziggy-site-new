@@ -64,8 +64,8 @@ export const navigationConfig: NavigationConfig = {
               },
               {
                 label: 'Extend & Customize',
-                href: '/products',
-                description: 'Build your own Custom Blocks with plugins',
+                href: '/extend',
+                description: 'Extend Ziggy with your own Custom Blocks',
                 icon: '/nav/flow.svg',
               },
               {

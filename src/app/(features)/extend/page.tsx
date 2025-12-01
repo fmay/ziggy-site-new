@@ -1,40 +1,48 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
-import ClusterFeatures from '@/app/(features)/cluster/ClusterFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
 import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
+import CustomizationStack from '@/app/(features)/extend/CustomizationStack'
+import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
+import CollectionsExtendIntro from '@/app/(features)/extend/CollectionsExtendIntro'
 
 export default function Extend() {
   return (
     <PageLayout
-      title="Ziggy Cluster"
+      title="Ziggy Plugins"
       style="feature"
-      description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
+      description="Extend Ziggy by building your own custom blocks that can connect to your platform or any other."
       image="/canvas/home/cards/cluster.card.svg">
       <PageSection bgColor="bg-gray">
         <Intro
-          title="Just Docker"
+          title="Become an Integration Partner"
           description={
             <div className="section-intro">
               <p>
-                Ziggy is a quick and simple installation. It runs in a Docker container on the
-                infrastructure of your choice.
+                Do you want to give your customers the ability to pull data from your platform and
+                push data into it?
               </p>
               <p>
-                For fault tolerance and normal loads you can use small (2GB) instances. For
-                performance, use larger instance sizes and add instances to your cluster.
+                You can see how to extend Ziggy with plugin blocks so they can effortlessly do
+                things with your data that gives them all the flexibility they need and avoids the
+                complexities.
               </p>
               <CTA
-                label="Overview"
-                href="https://docs.ziggyservices.com/user-guide/cluster/overview"
+                label="Integration Partners"
+                href="https://docs.ziggyservices.com/user-guide/plugin/overview"
               />
             </div>
           }
           image="/misc/docker.svg"
           imageScale={0.5}
         />
-        <ClusterFeatures />
+        <CustomizationStack />
+      </PageSection>
+
+      <PageSection bgColor="bg-gray-500 text-white">
+        <CollectionsExtendIntro />
+        <HubspotBlockCollection />
       </PageSection>
 
       <PageSection bgColor="bg-gray-800">

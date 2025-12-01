@@ -174,7 +174,7 @@ const Header = () => {
               }}>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
-                  className="relative rounded-lg shadow-xl bg-red-50 border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
+                  className="relative rounded-lg shadow-xl bg-white border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
                   style={{
                     marginLeft: `${dropdownPosition}px`,
                     transform: 'translateX(-50%)',
