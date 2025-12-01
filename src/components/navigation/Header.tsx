@@ -6,6 +6,7 @@ import { navigationConfig, NavItemWithDropdown } from '@/config/navigation'
 import DesktopNavItem from './DesktopNavItem'
 import MobileNavItem from './MobileNavItem'
 import DesktopDropdownContainer from './DesktopDropdownContainer'
+import styles from './Header.module.scss'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -86,25 +87,20 @@ const Header = () => {
   return (
     <>
       {/* Overlay backdrop when dropdown is open */}
-      {activeDropdown && (
-        <div
-          className="fixed inset-0 bg-stripe-navy/5 z-40 transition-opacity duration-[250ms] ease-out"
-          onMouseEnter={handleMouseLeave}
-        />
-      )}
+      {activeDropdown && <div className={styles.overlay} onMouseEnter={handleMouseLeave} />}
 
-      <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex justify-between items-center h-16">
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <div className={styles.navContent}>
             {/* Logo */}
-            <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-stripe-navy">
+            <div className={styles.logoContainer}>
+              <Link href="/" className={styles.logo}>
                 Ziggy
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center" onMouseLeave={handleMouseLeave}>
+            <div className={styles.desktopNav} onMouseLeave={handleMouseLeave}>
               {navigationConfig.items.map((item, index) => (
                 <DesktopNavItem
                   key={item.label}
@@ -118,28 +114,26 @@ const Header = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden md:flex items-center space-x-4">
-              <Link
-                href={navigationConfig.cta.contact.href}
-                className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200">
+            <div className={styles.ctaButtons}>
+              <Link href={navigationConfig.cta.contact.href} className={styles.ctaButton}>
                 {navigationConfig.cta.contact.label}
               </Link>
               {/*<Link*/}
               {/*  href={navigationConfig.cta.signin.href}*/}
-              {/*  className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200"*/}
+              {/*  className={styles.ctaButton}*/}
               {/*>*/}
               {/*  {navigationConfig.cta.signin.label}*/}
               {/*</Link>*/}
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className={styles.mobileMenuButton}>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-stripe-navy p-2"
+                className={styles.menuToggle}
                 aria-label="Toggle menu">
                 {mobileMenuOpen ? (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={styles.menuIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -148,7 +142,7 @@ const Header = () => {
                     />
                   </svg>
                 ) : (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={styles.menuIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -173,8 +167,8 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-100">
-              <div className="flex flex-col space-y-4">
+            <div className={styles.mobileNav}>
+              <div className={styles.mobileNavContent}>
                 {navigationConfig.items.map(item => (
                   <MobileNavItem
                     key={item.label}
@@ -186,7 +180,7 @@ const Header = () => {
                 ))}
                 <Link
                   href={navigationConfig.cta.signin.href}
-                  className="px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 text-center"
+                  className={styles.mobileCtaButton}
                   onClick={() => setMobileMenuOpen(false)}>
                   {navigationConfig.cta.signin.label}
                 </Link>

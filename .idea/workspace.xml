@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="varibale parsing duration and delay" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="tweaks">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,43 +45,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(home)/hero-scene&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(features)/features",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(features)/features" />
+      <recent name="$PROJECT_DIR$/src/app/integration-partners" />
+      <recent name="$PROJECT_DIR$/src/app/(features)/extend" />
       <recent name="$PROJECT_DIR$/src/app/(home)/hero-scene" />
       <recent name="$PROJECT_DIR$/src/app/(home)" />
-      <recent name="$PROJECT_DIR$/src/app/(features)/cluster" />
-      <recent name="$PROJECT_DIR$/src/app/(home)/canvas" />
-      <recent name="$PROJECT_DIR$/public/hero" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pixelmator/product" />
+      <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
+      <recent name="$PROJECT_DIR$/pixelmator" />
       <recent name="$PROJECT_DIR$/public/canvas/home/cards" />
       <recent name="$PROJECT_DIR$/public/canvas/home/hero" />
-      <recent name="$PROJECT_DIR$/public/product" />
-      <recent name="$PROJECT_DIR$/src/components/ui/page-wrappers" />
-      <recent name="$PROJECT_DIR$/public/misc" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -128,199 +133,7 @@
       <workItem from="1764081554096" duration="8553000" />
       <workItem from="1764156049915" duration="45185000" />
       <workItem from="1764399109126" duration="39287000" />
-      <workItem from="1764490461648" duration="1507000" />
-    </task>
-    <task id="LOCAL-00011" summary="carousel restyling 0.1">
-      <option name="closed" value="true" />
-      <created>1764160998749</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1764160998749</updated>
-    </task>
-    <task id="LOCAL-00012" summary="carousel min height; page section">
-      <option name="closed" value="true" />
-      <created>1764163288307</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1764163288307</updated>
-    </task>
-    <task id="LOCAL-00013" summary="dd menu tweak">
-      <option name="closed" value="true" />
-      <created>1764165693738</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1764165693738</updated>
-    </task>
-    <task id="LOCAL-00014" summary="carousel tweaks">
-      <option name="closed" value="true" />
-      <created>1764166773869</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1764166773869</updated>
-    </task>
-    <task id="LOCAL-00015" summary="changed to poppins">
-      <option name="closed" value="true" />
-      <created>1764170401179</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1764170401179</updated>
-    </task>
-    <task id="LOCAL-00016" summary="pre home page table">
-      <option name="closed" value="true" />
-      <created>1764179072715</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1764179072715</updated>
-    </task>
-    <task id="LOCAL-00017" summary="home 0.1">
-      <option name="closed" value="true" />
-      <created>1764179678295</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1764179678295</updated>
-    </task>
-    <task id="LOCAL-00018" summary="home 0.11">
-      <option name="closed" value="true" />
-      <created>1764181740678</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1764181740678</updated>
-    </task>
-    <task id="LOCAL-00019" summary="home 0.12">
-      <option name="closed" value="true" />
-      <created>1764184748749</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1764184748749</updated>
-    </task>
-    <task id="LOCAL-00020" summary="home 0.13">
-      <option name="closed" value="true" />
-      <created>1764223854976</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1764223854976</updated>
-    </task>
-    <task id="LOCAL-00021" summary="CTA + styling elsewhere">
-      <option name="closed" value="true" />
-      <created>1764227433904</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1764227433904</updated>
-    </task>
-    <task id="LOCAL-00022" summary="tweaks">
-      <option name="closed" value="true" />
-      <created>1764227827012</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1764227827012</updated>
-    </task>
-    <task id="LOCAL-00023" summary="canvas 0.1">
-      <option name="closed" value="true" />
-      <created>1764239451905</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1764239451906</updated>
-    </task>
-    <task id="LOCAL-00024" summary="canvas 0.11">
-      <option name="closed" value="true" />
-      <created>1764241345971</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1764241345971</updated>
-    </task>
-    <task id="LOCAL-00025" summary="canvas 0.12">
-      <option name="closed" value="true" />
-      <created>1764241785626</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1764241785626</updated>
-    </task>
-    <task id="LOCAL-00026" summary="canvas 0.13">
-      <option name="closed" value="true" />
-      <created>1764242012619</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1764242012619</updated>
-    </task>
-    <task id="LOCAL-00027" summary="canvas 0.14">
-      <option name="closed" value="true" />
-      <created>1764242749333</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1764242749333</updated>
-    </task>
-    <task id="LOCAL-00028" summary="canvas 0.15">
-      <option name="closed" value="true" />
-      <created>1764243807537</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1764243807537</updated>
-    </task>
-    <task id="LOCAL-00029" summary="canvas 0.16 refactored image flip">
-      <option name="closed" value="true" />
-      <created>1764244539402</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1764244539402</updated>
-    </task>
-    <task id="LOCAL-00030" summary="canvas 0.17 refactored image flip">
-      <option name="closed" value="true" />
-      <created>1764245969168</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1764245969168</updated>
-    </task>
-    <task id="LOCAL-00031" summary="canvas 0.18 refactored image flip">
-      <option name="closed" value="true" />
-      <created>1764247371637</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1764247371637</updated>
-    </task>
-    <task id="LOCAL-00032" summary="canvas 0.19 refactored image flip">
-      <option name="closed" value="true" />
-      <created>1764248121204</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1764248121205</updated>
-    </task>
-    <task id="LOCAL-00033" summary="canvas 0.2 refactored image flip">
-      <option name="closed" value="true" />
-      <created>1764248342471</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1764248342471</updated>
-    </task>
-    <task id="LOCAL-00034" summary="canvas 0.22 refactored image flip">
-      <option name="closed" value="true" />
-      <created>1764251941764</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1764251941764</updated>
+      <workItem from="1764490461648" duration="43629000" />
     </task>
     <task id="LOCAL-00035" summary="reset on no visibility">
       <option name="closed" value="true" />
@@ -522,7 +335,199 @@
       <option name="project" value="LOCAL" />
       <updated>1764491965198</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="unflip timing">
+      <option name="closed" value="true" />
+      <created>1764493658450</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1764493658450</updated>
+    </task>
+    <task id="LOCAL-00061" summary="home scene v1">
+      <option name="closed" value="true" />
+      <created>1764496127345</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1764496127345</updated>
+    </task>
+    <task id="LOCAL-00062" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764498609638</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1764498609638</updated>
+    </task>
+    <task id="LOCAL-00063" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764503379414</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1764503379414</updated>
+    </task>
+    <task id="LOCAL-00064" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764503689765</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1764503689765</updated>
+    </task>
+    <task id="LOCAL-00065" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764503823454</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1764503823454</updated>
+    </task>
+    <task id="LOCAL-00066" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764503953481</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1764503953482</updated>
+    </task>
+    <task id="LOCAL-00067" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764504057642</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1764504057642</updated>
+    </task>
+    <task id="LOCAL-00068" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764504186285</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1764504186285</updated>
+    </task>
+    <task id="LOCAL-00069" summary="home customisations">
+      <option name="closed" value="true" />
+      <created>1764506801853</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1764506801853</updated>
+    </task>
+    <task id="LOCAL-00070" summary="nav dropdown 0.0">
+      <option name="closed" value="true" />
+      <created>1764566503178</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1764566503178</updated>
+    </task>
+    <task id="LOCAL-00071" summary="hover">
+      <option name="closed" value="true" />
+      <created>1764568932438</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1764568932438</updated>
+    </task>
+    <task id="LOCAL-00072" summary="cta wrap 0.0">
+      <option name="closed" value="true" />
+      <created>1764572895332</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1764572895332</updated>
+    </task>
+    <task id="LOCAL-00073" summary="CTA marginy">
+      <option name="closed" value="true" />
+      <created>1764574378875</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1764574378875</updated>
+    </task>
+    <task id="LOCAL-00074" summary="drop shadow">
+      <option name="closed" value="true" />
+      <created>1764575202029</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1764575202029</updated>
+    </task>
+    <task id="LOCAL-00075" summary="update">
+      <option name="closed" value="true" />
+      <created>1764576797635</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1764576797635</updated>
+    </task>
+    <task id="LOCAL-00076" summary="pre scroll pairs nudge">
+      <option name="closed" value="true" />
+      <created>1764578694569</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1764578694569</updated>
+    </task>
+    <task id="LOCAL-00077" summary="cta update">
+      <option name="closed" value="true" />
+      <created>1764582267330</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1764582267330</updated>
+    </task>
+    <task id="LOCAL-00078" summary="update">
+      <option name="closed" value="true" />
+      <created>1764586391286</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1764586391286</updated>
+    </task>
+    <task id="LOCAL-00079" summary="externalised desktop dropdown">
+      <option name="closed" value="true" />
+      <created>1764586769513</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1764586769513</updated>
+    </task>
+    <task id="LOCAL-00080" summary="simple dropdown">
+      <option name="closed" value="true" />
+      <created>1764587053031</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1764587053031</updated>
+    </task>
+    <task id="LOCAL-00081" summary="nav update">
+      <option name="closed" value="true" />
+      <created>1764588375833</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1764588375833</updated>
+    </task>
+    <task id="LOCAL-00082" summary="tweaks">
+      <option name="closed" value="true" />
+      <created>1764589230334</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1764589230334</updated>
+    </task>
+    <task id="LOCAL-00083" summary="tweaks">
+      <option name="closed" value="true" />
+      <created>1764589334996</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1764589334996</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,22 +573,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="canvas 0.2 refactored image flip" />
-    <MESSAGE value="canvas 0.22 refactored image flip" />
-    <MESSAGE value="reset on no visibility" />
-    <MESSAGE value="reset on no visibility 2" />
-    <MESSAGE value="cluster page 0.1" />
-    <MESSAGE value="cluster page 0.11" />
-    <MESSAGE value="scroll image pair v center" />
-    <MESSAGE value="scroll image pair container v shrink" />
-    <MESSAGE value="scale prop for scene" />
-    <MESSAGE value="width, height, bgColor for scenes" />
-    <MESSAGE value="yaml size and color" />
-    <MESSAGE value="fixed observer issues" />
-    <MESSAGE value="reorg" />
-    <MESSAGE value="fixed width sections" />
-    <MESSAGE value="intro component" />
-    <MESSAGE value="scrolling pairs tweak" />
     <MESSAGE value="iintro image scaling" />
     <MESSAGE value="quick demo component" />
     <MESSAGE value="scroll pairs spacing" />
@@ -593,7 +582,23 @@
     <MESSAGE value="home updates" />
     <MESSAGE value="home updates home scene" />
     <MESSAGE value="varibale parsing duration and delay" />
-    <option name="LAST_COMMIT_MESSAGE" value="varibale parsing duration and delay" />
+    <MESSAGE value="unflip timing" />
+    <MESSAGE value="home scene v1" />
+    <MESSAGE value="home customisations" />
+    <MESSAGE value="nav dropdown 0.0" />
+    <MESSAGE value="xx" />
+    <MESSAGE value="hover" />
+    <MESSAGE value="cta wrap 0.0" />
+    <MESSAGE value="CTA marginy" />
+    <MESSAGE value="drop shadow" />
+    <MESSAGE value="pre scroll pairs nudge" />
+    <MESSAGE value="cta update" />
+    <MESSAGE value="update" />
+    <MESSAGE value="externalised desktop dropdown" />
+    <MESSAGE value="simple dropdown" />
+    <MESSAGE value="nav update" />
+    <MESSAGE value="tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaks" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

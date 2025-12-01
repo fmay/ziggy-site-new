@@ -1,0 +1,75 @@
+.overlay {
+  @apply fixed inset-0 bg-stripe-navy/5 z-40 transition-opacity duration-[250ms] ease-out;
+}
+
+.header {
+  @apply fixed top-0 left-0 right-0 bg-header-footer text-white border-b border-gray-100 z-50;
+  button, a {
+    @apply text-white font-light hover:text-white;
+  }
+}
+
+.nav {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative;
+}
+
+.navContent {
+  @apply flex justify-between items-center h-16;
+}
+
+.logoContainer {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply text-2xl font-bold text-stripe-navy;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url('../../../public/icons/apple-touch-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.desktopNav {
+  @apply hidden md:flex items-center;
+}
+
+.ctaButtons {
+  @apply hidden md:flex items-center space-x-4;
+}
+
+.ctaButton {
+  @apply px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200;
+}
+
+.mobileMenuButton {
+  @apply md:hidden;
+}
+
+.menuToggle {
+  @apply text-stripe-navy p-2;
+}
+
+.menuIcon {
+  @apply w-6 h-6;
+}
+
+.mobileNav {
+  @apply md:hidden py-4 border-t border-gray-100;
+}
+
+.mobileNavContent {
+  @apply flex flex-col space-y-4;
+}
+
+.mobileCtaButton {
+  @apply px-5 py-2 rounded-full bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 text-center;
+}
