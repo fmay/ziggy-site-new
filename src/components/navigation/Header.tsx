@@ -171,15 +171,16 @@ const Header = () => {
                   clearTimeout(closeTimeoutRef.current)
                   closeTimeoutRef.current = null
                 }
-              }}
-              onMouseLeave={handleMouseLeave}>
+              }}>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
-                  className="relative bg-white rounded-lg shadow-xl border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
+                  className="relative rounded-lg shadow-xl bg-red-50 border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
                   style={{
                     marginLeft: `${dropdownPosition}px`,
                     transform: 'translateX(-50%)',
-                  }}>
+                  }}
+                  onMouseLeave={handleMouseLeave}
+                >
                   {/* Arrow pointing up */}
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45" />
 
