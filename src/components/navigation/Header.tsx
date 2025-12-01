@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { navigationConfig, NavItemWithDropdown } from '@/config/navigation'
 import DesktopNavItem from './DesktopNavItem'
 import MobileNavItem from './MobileNavItem'
-import DropdownNavItem from './DropdownNavItem'
+import DesktopDropdownContainer from './DesktopDropdownContainer'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -162,53 +162,14 @@ const Header = () => {
           </div>
 
           {/* Shared Dropdown Container */}
-          {activeDropdown && dropdownContent?.dropdown && (
-            <div
-              className="hidden md:block absolute left-0 right-0 top-full"
-              style={{ paddingTop: '12px' }}
-              onMouseEnter={() => {
-                if (closeTimeoutRef.current) {
-                  clearTimeout(closeTimeoutRef.current)
-                  closeTimeoutRef.current = null
-                }
-              }}>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                  className="relative rounded-lg shadow-xl bg-white border border-gray-100 py-4 inline-block min-w-[280px] transition-all duration-300 ease-out"
-                  style={{
-                    marginLeft: `${dropdownPosition}px`,
-                    transform: 'translateX(-50%)',
-                  }}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {/* Arrow pointing up */}
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45" />
-
-                  <div
-                    className={`transition-opacity duration-400 relative flex gap-8 ${
-                      isTransitioning ? 'opacity-0' : 'opacity-100'
-                    }`}>
-                    {dropdownContent.dropdown.sections.map((section, sectionIdx) => (
-                      <div key={sectionIdx} className="flex-shrink-0">
-                        {section.title && (
-                          <div className="px-4 mb-2">
-                            <h3 className="text-xs font-semibold text-stripe-gray uppercase tracking-wide">
-                              {section.title}
-                            </h3>
-                          </div>
-                        )}
-                        <div className="px-2">
-                          {section.items.map(subItem => (
-                            <DropdownNavItem key={subItem.label} subItem={subItem} />
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          <DesktopDropdownContainer
+            activeDropdown={activeDropdown}
+            dropdownContent={dropdownContent}
+            isTransitioning={isTransitioning}
+            dropdownPosition={dropdownPosition}
+            closeTimeoutRef={closeTimeoutRef}
+            onMouseLeave={handleMouseLeave}
+          />
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
