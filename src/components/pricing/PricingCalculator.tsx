@@ -2,6 +2,10 @@
 
 import { useState, useCallback } from 'react'
 import styles from './PricingCalculator.module.scss'
+import Slider from './Slider'
+import Support from './Support'
+import Services from './Services'
+import Cost from './Cost'
 
 interface SliderConfig {
   id: string
@@ -105,15 +109,6 @@ export default function PricingCalculator() {
     }
   }
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-GB', {
-      style: 'currency',
-      currency: 'GBP',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(price)
-  }
-
   const getSliderValue = (id: string) => {
     switch (id) {
       case 'servers':
@@ -121,12 +116,6 @@ export default function PricingCalculator() {
       default:
         return 1
     }
-  }
-
-  const calculateLabelPosition = (index: number, totalLabels: number) => {
-    if (totalLabels <= 1) return '0%'
-    const percentage = (index / (totalLabels - 1)) * 100
-    return `calc(${percentage}% + ${25 - percentage * 0.24}px)`
   }
 
   return (
@@ -137,178 +126,45 @@ export default function PricingCalculator() {
           <div className={styles.sliderSupportRow}>
             {/*SLIDER*/}
             {sliderConfigs.map((config, idx) => (
-              <div key={config.id} className={`${styles.slider} ${styles[`slider${idx + 1}`]}`}>
-                <div className={styles.sliderHeading}>
-                  <label htmlFor={config.id}>{config.label}</label>
-                  <p>{config.description}</p>
-                </div>
-                <div className={styles.rangeWrapper}>
-                  <input
-                    type="range"
-                    id={config.id}
-                    name={config.id}
-                    min={config.min}
-                    max={config.max}
-                    step={config.step}
-                    value={getSliderValue(config.id)}
-                    onChange={e => handleSliderChange(config.id, parseInt(e.target.value))}
-                    className={styles.rangeInput}
-                  />
-                  <div className={styles.rangeLabels}>
-                    {config.labels.map((label, index) => (
-                      <span
-                        key={index}
-                        className={styles.rangeLabel}
-                        style={{ left: calculateLabelPosition(index, config.labels.length) }}>
-                        {label}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <p>{getDescription()}</p>
-              </div>
+              <Slider
+                key={config.id}
+                config={config}
+                value={getSliderValue(config.id)}
+                onChange={handleSliderChange}
+                description={getDescription()}
+                index={idx}
+              />
             ))}
           </div>
 
           {/*SUPPORT AND SERVICES ROW*/}
           <div className={styles.supportServicesRow}>
             {/*SUPPORT*/}
-            <div className={styles.supportColumn}>
-              <div className={`${styles.sectionText}`}>
-                <h3>Support</h3>
-                <p>
-                  Monthly support hours for assistance, troubleshooting, and maintenance.
-                </p>
-              </div>
-
-              <div className={`${styles.servicesRow} !mt-[30px]`}>
-                <div className={styles.servicesDropdownContainer}>
-                  <select
-                    id="supportHours"
-                    value={supportHours}
-                    onChange={e => setSupportHours(parseInt(e.target.value))}
-                    className={styles.dropdown}>
-                    <option value={0}>No support</option>
-                    <option value={2}>2 hours</option>
-                    <option value={4}>4 hours</option>
-                    <option value={8}>8 hours</option>
-                    <option value={16}>16 hours</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+            <Support
+              supportHours={supportHours}
+              onSupportHoursChange={setSupportHours}
+            />
 
             {/*SERVICES*/}
-            <div className={styles.servicesColumn}>
-              <div className={`${styles.sectionText}`}>
-                <h3>Professional Services</h3>
-                <p>
-                  Support, training, flow development, custom block development and general consultancy.
-                </p>
-              </div>
-
-              <div className={`${styles.servicesRow} !mt-[30px]`}>
-                <div className={styles.servicesInputContainer}>
-                  <input
-                    type="number"
-                    id="serviceAmount"
-                    min="0"
-                    max="100"
-                    value={serviceAmount}
-                    onChange={e =>
-                      setServiceAmount(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))
-                    }
-                    className={styles.numericInput}
-                  />
-                </div>
-                <div className={styles.servicesDropdownContainer}>
-                  <select
-                    id="serviceUnit"
-                    value={serviceUnit}
-                    onChange={e => setServiceUnit(e.target.value)}
-                    className={styles.dropdown}>
-                    <option value="Hours">Hours</option>
-                    <option value="Days">Days</option>
-                    <option value="Weeks">Weeks</option>
-                    <option value="Months">Months</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+            <Services
+              serviceAmount={serviceAmount}
+              serviceUnit={serviceUnit}
+              onServiceAmountChange={setServiceAmount}
+              onServiceUnitChange={setServiceUnit}
+            />
           </div>
 
           {/*COST*/}
-          <div className={styles.estimateContainer}>
-            <div className={styles.resultContainer}>
-              {/*SUBSCRIPTION*/}
-              <div className={styles.resultHeading}>Subscription Price</div>
-              <div className={styles.resultResult}>
-                <span>{formatPrice(calculatePrice())}</span>
-                <span className="font-light text-base"> /year</span>
-              </div>
-              <div className={styles.descriptionWrapper}>
-                <div className={styles.resultDescription}>
-                  <p>
-                    <span className="font-semibold">Includes</span> : <span>{getIncludes()}</span>
-                  </p>
-                </div>
-              </div>
-
-              {/*SUPPORT*/}
-              <div className={styles.resultHeading}>Support</div>
-              <div className={styles.resultResult}>
-                <span>{formatPrice(calculateSupport())}</span>
-                <span className="font-light text-base"> /year</span>
-              </div>
-              <div className={styles.descriptionWrapper}>
-                <div className={styles.resultDescription}>
-                  {supportHours === 0 ? (
-                    <p>
-                      4 hours of support or training is available free of charge
-                    </p>
-                  ) : (
-                    <p>
-                      <span className="font-semibold">Includes</span> : {supportHours} hours per month of support
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/*SERVICES*/}
-              <div className={styles.resultHeading}>Professional Services</div>
-              <div className={styles.resultResult}>
-                <span>{formatPrice(calculateServices())}</span>
-                <span className="font-light text-base"></span>
-              </div>
-              <div className={styles.descriptionWrapper}>
-                <div className={styles.resultDescription}>
-                  {serviceAmount > 0 ? (
-                    <p>
-                      <span className="font-semibold">Includes</span> : {serviceAmount} {serviceUnit.toLowerCase()} of professional services
-                    </p>
-                  ) : (
-                    <p>
-                      Professional services available on request
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/*TOTAL*/}
-              <div className={styles.totalSection}>
-                <div className={styles.resultHeading}>Total in Year 1</div>
-                <div className={styles.resultResult}>
-                  <span>{formatPrice(calculateTotal())}</span>
-                </div>
-              </div>
-
-              <div className={styles.descriptionWrapper}>
-                <button className={styles.button}>
-                  <a href="/contact">Let's talk</a>
-                </button>
-              </div>
-            </div>
-          </div>
+          <Cost
+            subscriptionPrice={calculatePrice()}
+            supportPrice={calculateSupport()}
+            servicesPrice={calculateServices()}
+            totalPrice={calculateTotal()}
+            includes={getIncludes()}
+            supportHours={supportHours}
+            serviceAmount={serviceAmount}
+            serviceUnit={serviceUnit}
+          />
         </div>
       </div>
     </div>
