@@ -19,7 +19,11 @@ const Wavy: FC<WavyProps> = ({ fromColor, toColor, children, waveInvert }) => {
   return (
     <div className={`w-full flex flex-col`} style={{ backgroundColor: fromCol }}>
       {children}
-      <svg className="w-full mt-[-7vw]" viewBox="0 0 1440 300">
+      <svg
+        className="w-full mt-[-7vw]"
+        viewBox="0 0 1440 300"
+        style={{ transform: waveInvert ? 'scaleX(-1)' : undefined }}
+      >
         <path
           fill={toCol}
           d="M0,192L120,186.7C240,181,480,171,720,181.3C960,192,1200,224,1320,240L1440,256V320H0Z"></path>

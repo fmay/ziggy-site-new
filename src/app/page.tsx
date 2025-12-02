@@ -20,7 +20,7 @@ export default function Home() {
         <CustomizationHome />
       </PageSection>
 
-      <PageSection bgColor="white" waveToColor="pale-blue">
+      <PageSection bgColor="white" waveToColor="pale-blue" waveInvert>
         <HomePricing />
       </PageSection>
 

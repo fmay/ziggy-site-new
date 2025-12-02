@@ -44,7 +44,7 @@ const PageSection: FC<PageSectionProps> = ({
   return (
     <div id={id || ''} className={`${styles.pageSection} ${bgColor}`}>
       {waveToColor && (
-        <Wavy fromColor={bgColor} toColor={waveToColor}>
+        <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
           <div className={styles.container}>{children}</div>
         </Wavy>
       )}
