@@ -1,6 +1,7 @@
 'use client'
 
 import { FC, useState } from 'react'
+import { InlineWidget } from 'react-calendly'
 import CTA from '@/components/ui/cta/CTA'
 import styles from './QuickBookDemo.module.scss'
 
@@ -40,6 +41,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
     email: '',
   })
   const [emailError, setEmailError] = useState<string>('')
+  const [showCalendly, setShowCalendly] = useState<boolean>(false)
 
   const validateEmail = (email: string): string => {
     if (!email.trim()) {
@@ -90,8 +92,33 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
     // Placeholder function - add your logic here
     console.log('Form submitted:', formData)
 
-    // Open Calendly link
-    window.open('https://calendly.com/freddy-may-ziggyservices/30-minute-meeting-clone', '_blank')
+    // Show Calendly widget inline
+    setShowCalendly(true)
+
+    // Scroll to Calendly widget
+    setTimeout(() => {
+      document.getElementById('calendly-inline-widget')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      })
+    }, 100)
+  }
+
+  // Calendly prefill configuration
+  const calendlyPrefill = {
+    name: formData.firstName,
+    email: formData.email,
+  }
+
+  // Calendly page settings for theme support
+  const calendlyPageSettings = {
+    backgroundColor: background === 'dark' ? 'ffffff' : '0a2540',
+    primaryColor: '635bff',
+    textColor: background === 'dark' ? '0a2540' : 'ffffff',
+  }
+
+  const handleBack = () => {
+    setShowCalendly(false)
   }
 
   return (
@@ -100,7 +127,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
         <h2>Book a demo</h2>
       </div>
 
-      <div className={styles.formColumn}>
+      {!showCalendly && <div className={styles.formColumn}>
         <div className={styles.formField}>
           <label htmlFor="firstName" className={styles.label}>
             Your name
@@ -164,7 +191,23 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
             Schedule a time
           </button>
         </div>
-      </div>
+      </div>}
+
+      {showCalendly && (
+        <div className={styles.calendlyWrapper}>
+          <button onClick={handleBack} className={styles.backButton}>
+            ← Back
+          </button>
+          <div id="calendly-inline-widget" className={styles.calendlyContainer}>
+            <InlineWidget
+              url="https://calendly.com/freddy-may-ziggyservices/30-minute-meeting-clone"
+              prefill={calendlyPrefill}
+              pageSettings={calendlyPageSettings}
+              styles={{ height: '700px', width: '100%' }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

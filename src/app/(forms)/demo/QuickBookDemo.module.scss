@@ -52,3 +52,27 @@
 .buttonDisabled {
   @apply bg-gray-300 text-gray-500 cursor-not-allowed;
 }
+
+.calendlyWrapper {
+  @apply w-full flex flex-col;
+}
+
+.backButton {
+  @apply px-4 py-2 mb-4 text-sm font-medium text-blue-600 hover:text-blue-700
+         bg-transparent border border-blue-600 rounded-md
+         transition-colors cursor-pointer self-start;
+
+  &:hover {
+    @apply bg-blue-50;
+  }
+}
+
+.calendlyContainer {
+  @apply w-full rounded-lg overflow-hidden;
+  min-height: 700px;
+
+  iframe {
+    @apply w-full;
+    border: none;
+  }
+}
