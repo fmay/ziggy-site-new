@@ -4,7 +4,7 @@ import HomePricing from '@/app/(home)/HomePricing'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import HomeScene from '@/app/(home)/HomeScene'
 import CustomizationHome from '@/app/(home)/CustomizationHome'
-import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
+import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
 
 export default function Home() {

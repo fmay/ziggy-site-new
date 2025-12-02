@@ -5,7 +5,7 @@ import CTA from '@/components/ui/cta/CTA'
 import CustomizationStack from '@/app/(features)/extend/CustomizationStack'
 import CollectionsExtendIntro from '@/app/(features)/extend/CollectionsExtendIntro'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
+import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import PartnerFeatures from '@/app/integration-partners/PartnerFeatures'
 
 export default function IntegrationPartners() {

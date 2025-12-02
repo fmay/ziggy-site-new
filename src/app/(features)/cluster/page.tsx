@@ -3,7 +3,7 @@ import ClusterFeatures from '@/app/(features)/cluster/ClusterFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
-import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
+import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 
 export default function Cluster() {
   return (

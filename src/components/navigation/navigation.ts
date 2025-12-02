@@ -157,7 +157,7 @@ export const navigationConfig: NavigationConfig = {
     { label: 'Pricing', href: '/pricing' },
   ],
   cta: {
-    bookDemo: { label: 'Book Demo', href: '/contact' },
+    bookDemo: { label: 'Book Demo', href: '/demo' },
     contact: { label: 'Contact Us', href: '/contact' },
   },
 }

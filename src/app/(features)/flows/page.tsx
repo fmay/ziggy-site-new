@@ -6,7 +6,7 @@ import JavascriptFeatures from '@/app/(features)/flows/JavascriptFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
 import Intro from '@/components/ui/intro/Intro'
-import QuickBookDemo from '@/app/(forms)/QuickBookDemo'
+import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 
 export default function Products() {
   return (
