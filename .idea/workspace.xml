@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="features page new approach">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="tweaks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,15 +135,7 @@
       <workItem from="1764156049915" duration="45185000" />
       <workItem from="1764399109126" duration="39287000" />
       <workItem from="1764490461648" duration="59823000" />
-      <workItem from="1764675912397" duration="2941000" />
-    </task>
-    <task id="LOCAL-00041" summary="scale prop for scene">
-      <option name="closed" value="true" />
-      <created>1764354646785</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1764354646785</updated>
+      <workItem from="1764675912397" duration="5262000" />
     </task>
     <task id="LOCAL-00042" summary="width, height, bgColor for scenes">
       <option name="closed" value="true" />
@@ -527,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764676108616</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="tweaks">
+      <option name="closed" value="true" />
+      <created>1764682317040</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1764682317040</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,14 +593,14 @@
     <MESSAGE value="externalised desktop dropdown" />
     <MESSAGE value="simple dropdown" />
     <MESSAGE value="nav update" />
-    <MESSAGE value="tweaks" />
     <MESSAGE value="header scss" />
     <MESSAGE value="header update" />
     <MESSAGE value="priing 0.0" />
     <MESSAGE value="priing 0.3" />
     <MESSAGE value="pricing 0.4" />
     <MESSAGE value="features page new approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="features page new approach" />
+    <MESSAGE value="tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaks" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

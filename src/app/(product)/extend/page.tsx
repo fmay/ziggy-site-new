@@ -6,15 +6,13 @@ import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
+import { Section } from '@/app/page'
 
 export default function Extend() {
-  return (
-    <PageLayout
-      title="Extend Ziggy with plugins"
-      style="feature"
-      description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
-      image="/placeholder.svg">
-      <PageSection bgColor="bg-gray">
+  const sections: Section[] = [
+    {
+      bgColor: 'bg-gray',
+      children: (
         <Intro
           title="Become an Integration Partner"
           description={
@@ -37,20 +35,47 @@ export default function Extend() {
           image="/placeholder.svg"
           imageScale={0.5}
         />
-      </PageSection>
+      ),
+    },
+    {
+      bgColor: 'bg-gray-50',
+      children: <CustomizationStack />,
+    },
+    {
+      id: 'hubspot',
+      bgColor: '',
+      children: (
+        <>
+          <CollectionsExtendIntro />
+          <HubspotBlockCollection />
+        </>
+      ),
+    },
+    {
+      bgColor: 'bg-gray-800',
+      children: <QuickBookDemo background="dark" />,
+    },
+  ]
 
-      <PageSection bgColor="bg-gray-50">
-        <CustomizationStack />
-      </PageSection>
+  return (
+    <PageLayout
+      title="Extend Ziggy with plugins"
+      style="feature"
+      description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
+      image="/placeholder.svg">
 
-      <PageSection bgColor="" id="hubspot">
-        <CollectionsExtendIntro />
-        <HubspotBlockCollection />
-      </PageSection>
+      {sections.map((section, index) => (
+        <PageSection
+          key={index}
+          id={section.id}
+          bgColor={section.bgColor}
+          waveToColor={sections[index + 1]?.bgColor}
+          waveInvert={section.waveInvert}
+        >
+          {section.children}
+        </PageSection>
+      ))}
 
-      <PageSection bgColor="bg-gray-800">
-        <QuickBookDemo background="dark" />
-      </PageSection>
     </PageLayout>
   )
 }

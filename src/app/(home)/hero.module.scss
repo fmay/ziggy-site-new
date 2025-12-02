@@ -3,18 +3,38 @@
 }
 
 .container {
-  @apply flex flex-col gap-[50px]
+  @apply flex flex-row gap-[50px]
   px-[5%] py-20 mx-auto
-  text-center bg-dark-gray text-white;
+   bg-dark-gray text-white;
+}
+
+.col1, .col2 {
+  @apply w-1/2;
 }
 
 .heading {
-  @apply text-5xl max-w-[1200px] mb-[0px] mx-auto sm:text-4xl lg:text-6xl font-normal text-white;
-  line-height: 4rem;
+  @apply flex justify-start max-w-[1200px]
+  mb-[0px] mx-auto
+  sm:text-4xl lg:text-5xl font-normal text-white text-start;
+  line-height: 3.5rem;
 }
 
 .subheading {
-  @apply mx-auto text-3xl max-w-[800px]  font-extralight;
+  @apply mx-auto text-2xl max-w-[800px] font-extralight;
+  ul {
+    @apply list-none text-left mt-4;
+    li {
+      @apply font-extralight mb-1;
+    }
+  }
+}
+
+.signoff {
+  @apply mt-10 text-4xl text-left;
+}
+
+.heroImage {
+  @apply object-contain mx-auto flex items-center;
 }
 
 .subheadingImage {

@@ -7,16 +7,13 @@ import PageSection from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
 import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
+import { Section } from '@/app/page'
 
 export default function Products() {
-  return (
-    <PageLayout
-      title="Ziggy Flows"
-      style="feature"
-      description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
-      video="https://nxucrsk2vrk61vtm.public.blob.vercel-storage.com/website-videos/flow-animated.mov"
-      image="/placeholder.svg">
-      <PageSection bgColor="bg-gray">
+  const sections: Section[] = [
+    {
+      bgColor: 'bg-gray',
+      children: (
         <Intro
           title="Ziggy Flows"
           description={
@@ -32,24 +29,53 @@ export default function Products() {
           image="/placeholder.svg"
           imageScale={0.5}
         />
-      </PageSection>
+      ),
+    },
+    {
+      bgColor: 'bg-gray-50',
+      children: <FlowFeatures />,
+    },
+    {
+      id: 'hubspot',
+      bgColor: '',
+      children: (
+        <>
+          <BlockCollections />
+          <HubspotBlockCollection />
+        </>
+      ),
+    },
+    {
+      id: 'javascript',
+      bgColor: 'bg-gray-50',
+      children: <JavascriptFeatures />,
+    },
+    {
+      bgColor: 'bg-gray-300',
+      children: <QuickBookDemo />,
+    },
+  ]
 
-      <PageSection bgColor="bg-gray-50">
-        <FlowFeatures />
-      </PageSection>
+  return (
+    <PageLayout
+      title="Ziggy Flows"
+      style="feature"
+      description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
+      video="https://nxucrsk2vrk61vtm.public.blob.vercel-storage.com/website-videos/flow-animated.mov"
+      image="/placeholder.svg">
 
-      <PageSection id="hubspot" bgColor="">
-        <BlockCollections />
-        <HubspotBlockCollection />
-      </PageSection>
+      {sections.map((section, index) => (
+        <PageSection
+          key={index}
+          id={section.id}
+          bgColor={section.bgColor}
+          waveToColor={sections[index + 1]?.bgColor}
+          waveInvert={section.waveInvert}
+        >
+          {section.children}
+        </PageSection>
+      ))}
 
-      <PageSection id="javascript" bgColor="bg-gray-50">
-        <JavascriptFeatures />
-      </PageSection>
-
-      <PageSection id="javascript" bgColor="bg-gray-300">
-        <QuickBookDemo />
-      </PageSection>
     </PageLayout>
   )
 }
