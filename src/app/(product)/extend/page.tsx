@@ -3,9 +3,9 @@ import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
-import CustomizationStack from '@/app/(features)/extend/CustomizationStack'
+import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import CollectionsExtendIntro from '@/app/(features)/extend/CollectionsExtendIntro'
+import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
 
 export default function Extend() {
   return (

@@ -46,13 +46,13 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
   return (
     <div>
       <div id="javascript" className="section-intro">
-        <h2>Javascript Block</h2>
+        <h2>AI supported Javascript block</h2>
         <p>
-          You don't need to be a developer to use the Javascript block. It's fully AI supported
+          This is a "do anything" block. You don't need to be a developer to use the Javascript block. It's fully AI supported
           letting you generate code and explain it, too.
         </p>
         <p>
-          It can take the data from the incoming edge to help produce the best possible results.
+          And it uses the data from the incoming edge to help produce the best possible results when developing.
         </p>
       </div>
       <ImageStack items={items} />

@@ -1,5 +1,5 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
-import ClusterFeatures from '@/app/(features)/cluster/ClusterFeatures'
+import ClusterFeatures from '@/app/(product)/cluster/ClusterFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'

@@ -33,27 +33,21 @@ export const navigationConfig: NavigationConfig = {
           {
             items: [
               {
-                label: 'Flows',
+                label: 'Flows and Blocks',
                 href: '/flows',
-                description: 'Building your data pipeline',
+                description: 'Building your data pipeline with flows and blocks',
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'Blocks',
-                href: '/products',
-                description: 'They make Ziggy so friendly - build your own to connect to your platform',
+                label: 'Features',
+                href: '/features',
+                description: 'Overview of Ziggy features',
                 icon: '/nav/flow.svg',
               },
               {
                 label: 'Extend & Customize',
                 href: '/extend',
                 description: 'Extend Ziggy with your own Custom Blocks',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'System features',
-                href: '/features',
-                description: 'Everything you need to support integration and migration flows',
                 icon: '/nav/flow.svg',
               },
               {
