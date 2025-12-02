@@ -15,7 +15,7 @@ export default function Support({ supportHours, onSupportHoursChange }: SupportP
         </p>
       </div>
 
-      <div className={`${styles.servicesRow} !mt-[30px]`}>
+      <div className={`${styles.servicesRow}`}>
         <div className={styles.servicesDropdownContainer}>
           <select
             id="supportHours"

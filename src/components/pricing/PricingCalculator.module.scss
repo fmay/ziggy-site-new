@@ -7,7 +7,7 @@
 }
 
 .container {
-  @apply bg-white rounded-2xl shadow-xl p-8 md:p-12;
+  @apply bg-white rounded-2xl shadow-xl p-8 md:p-12 mt-[-20px];
 }
 
 .header {
@@ -33,7 +33,15 @@
 }
 
 .mainContent {
-  @apply space-y-12;
+  @apply flex flex-col md:flex-row gap-8;
+}
+
+.column1 {
+  @apply flex-1 space-y-8 pr-8;
+}
+
+.column2 {
+  @apply flex-1;
 }
 
 .sliderSupportRow {
@@ -41,7 +49,7 @@
 }
 
 .slider {
-  @apply md:w-2/3;
+  //@apply md:w-2/3;
 
   &:last-of-type {
     @apply border-b-0;
@@ -61,7 +69,7 @@
 }
 
 .rangeWrapper {
-  @apply relative pt-8 pb-12;
+  @apply relative pt-2 pb-12;
 }
 
 .rangeInput {
@@ -174,7 +182,7 @@
 }
 
 .estimateContainer {
-  @apply bg-gradient-to-br from-stripe-purple to-purple-600 rounded-xl p-8 mt-8 font-normal;
+  @apply bg-gradient-to-br from-stripe-purple to-purple-600 rounded-xl p-8 mt-2 font-normal;
 
   .resultContainer {
     @apply text-white;
@@ -280,11 +288,11 @@
 }
 
 .supportColumn {
-  @apply flex-1 md:w-1/2;
+  @apply flex-1;
 }
 
 .servicesColumn {
-  @apply flex-1 md:w-1/2;
+  @apply flex-1;
 }
 
 // Services row styles
@@ -339,26 +347,6 @@
 
   .rangeInput::-moz-range-thumb {
     @apply bg-blue-600;
-  }
-}
-
-.slider2 {
-  .rangeInput::-webkit-slider-thumb {
-    @apply bg-purple-600;
-  }
-
-  .rangeInput::-moz-range-thumb {
-    @apply bg-purple-600;
-  }
-}
-
-.slider3 {
-  .rangeInput::-webkit-slider-thumb {
-    @apply bg-indigo-600;
-  }
-
-  .rangeInput::-moz-range-thumb {
-    @apply bg-indigo-600;
   }
 }
 

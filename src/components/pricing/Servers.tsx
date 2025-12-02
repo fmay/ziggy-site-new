@@ -19,7 +19,7 @@ interface SliderProps {
   index: number
 }
 
-export default function Slider({ config, value, onChange, description, index }: SliderProps) {
+export default function Servers({ config, value, onChange, description, index }: SliderProps) {
   const calculateLabelPosition = (labelIndex: number, totalLabels: number) => {
     if (totalLabels <= 1) return '0%'
     const percentage = (labelIndex / (totalLabels - 1)) * 100

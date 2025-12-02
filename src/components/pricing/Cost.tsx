@@ -57,7 +57,7 @@ export default function Cost({
           <div className={styles.resultDescription}>
             {supportHours === 0 ? (
               <p>
-                4 hours of support or training is available free of charge
+                Total of 4 hours of support or training is available free of charge.
               </p>
             ) : (
               <p>
@@ -95,9 +95,10 @@ export default function Cost({
           </div>
         </div>
 
+        <div className="mt-4 text-transparent">x</div>
         <div className={styles.descriptionWrapper}>
           <button className={styles.button}>
-            <a href="/contact">Let's talk</a>
+            <a href="/contact">Contact Us</a>
           </button>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function Services({
         </p>
       </div>
 
-      <div className={`${styles.servicesRow} !mt-[30px]`}>
+      <div className={`${styles.servicesRow}`}>
         <div className={styles.servicesInputContainer}>
           <input
             type="number"

@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import styles from './PricingCalculator.module.scss'
-import Slider from './Slider'
+import Servers from './Servers'
 import Support from './Support'
 import Services from './Services'
 import Cost from './Cost'
@@ -97,7 +97,7 @@ export default function PricingCalculator() {
     else
       inc = `${servers} production servers, ${servers} staging servers, ${servers} development servers.`
 
-    inc += ` One year of upgrades.`
+    inc += ` Updates and upgrades.`
     return inc
   }
 
@@ -122,11 +122,11 @@ export default function PricingCalculator() {
     <div className={styles.calc} id="calculator">
       <div className={styles.container}>
         <div className={styles.mainContent}>
-          {/*SLIDER AND SUPPORT ROW*/}
-          <div className={styles.sliderSupportRow}>
+          {/*COLUMN 1: SLIDER, SUPPORT, SERVICES*/}
+          <div className={styles.column1}>
             {/*SLIDER*/}
             {sliderConfigs.map((config, idx) => (
-              <Slider
+              <Servers
                 key={config.id}
                 config={config}
                 value={getSliderValue(config.id)}
@@ -135,10 +135,7 @@ export default function PricingCalculator() {
                 index={idx}
               />
             ))}
-          </div>
 
-          {/*SUPPORT AND SERVICES ROW*/}
-          <div className={styles.supportServicesRow}>
             {/*SUPPORT*/}
             <Support
               supportHours={supportHours}
@@ -154,17 +151,19 @@ export default function PricingCalculator() {
             />
           </div>
 
-          {/*COST*/}
-          <Cost
-            subscriptionPrice={calculatePrice()}
-            supportPrice={calculateSupport()}
-            servicesPrice={calculateServices()}
-            totalPrice={calculateTotal()}
-            includes={getIncludes()}
-            supportHours={supportHours}
-            serviceAmount={serviceAmount}
-            serviceUnit={serviceUnit}
-          />
+          {/*COLUMN 2: COST*/}
+          <div className={styles.column2}>
+            <Cost
+              subscriptionPrice={calculatePrice()}
+              supportPrice={calculateSupport()}
+              servicesPrice={calculateServices()}
+              totalPrice={calculateTotal()}
+              includes={getIncludes()}
+              supportHours={supportHours}
+              serviceAmount={serviceAmount}
+              serviceUnit={serviceUnit}
+            />
+          </div>
         </div>
       </div>
     </div>
