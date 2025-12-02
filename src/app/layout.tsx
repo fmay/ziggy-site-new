@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 import './globals.scss'
 import Header from '@/components/navigation/Header'
 import Footer from '@/components/navigation/Footer'
+import CookieBanner from '@/components/ui/cookies/CookieBanner'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   )

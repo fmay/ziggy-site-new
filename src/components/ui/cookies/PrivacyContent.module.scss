@@ -1,0 +1,35 @@
+.privacyPolicy {
+  @apply max-w-4xl mx-auto px-4 py-8;
+}
+
+.section {
+  @apply mb-8;
+
+  h2 {
+    @apply text-3xl font-normal mb-4 mt-8;
+  }
+
+  p {
+    @apply mb-4 leading-relaxed text-gray-700;
+  }
+
+  ul {
+    @apply list-disc list-inside mb-4 space-y-2;
+
+    li {
+      @apply ml-4 text-gray-700;
+    }
+  }
+}
+
+.contact {
+  @apply bg-gray-50 p-4 rounded-lg border border-gray-200;
+
+  p {
+    @apply mb-0;
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+}

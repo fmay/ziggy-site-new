@@ -1,4 +1,5 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+import PrivacyContent from '@/components/ui/cookies/PrivacyContent'
 
 export default function Privacy() {
   return (
@@ -10,11 +11,7 @@ export default function Privacy() {
           <p className="text-stripe-gray mb-4">
             <strong>Last updated:</strong> {new Date().toLocaleDateString()}
           </p>
-          <p className="text-stripe-gray text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          <PrivacyContent />
         </div>
       </div>
     </PageLayout>

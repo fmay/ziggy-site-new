@@ -102,9 +102,6 @@ const Footer = () => (
           <Link href="/privacy" className={styles.bottomLink}>
             Privacy
           </Link>
-          <Link href="/terms" className={styles.bottomLink}>
-            Terms
-          </Link>
           <Link href="/cookies" className={styles.bottomLink}>
             Cookies
           </Link>

@@ -1,4 +1,5 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+import CookiePolicyContent from '@/components/ui/cookies/CookiePolicyContent'
 
 export default function Cookies() {
   return (
@@ -8,11 +9,7 @@ export default function Cookies() {
           <p className="text-stripe-gray mb-4">
             <strong>Last updated:</strong> {new Date().toLocaleDateString()}
           </p>
-          <p className="text-stripe-gray text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          <CookiePolicyContent />
         </div>
       </div>
     </PageLayout>
