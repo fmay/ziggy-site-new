@@ -43,7 +43,7 @@ export default function Extend() {
         <CustomizationStack />
       </PageSection>
 
-      <PageSection bgColor="">
+      <PageSection bgColor="" id="hubspot">
         <CollectionsExtendIntro />
         <HubspotBlockCollection />
       </PageSection>

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pricing 0.4">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="features page new approach">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,14 +133,7 @@
       <workItem from="1764156049915" duration="45185000" />
       <workItem from="1764399109126" duration="39287000" />
       <workItem from="1764490461648" duration="59823000" />
-    </task>
-    <task id="LOCAL-00040" summary="scroll image pair container v shrink">
-      <option name="closed" value="true" />
-      <created>1764352766102</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1764352766102</updated>
+      <workItem from="1764675912397" duration="2941000" />
     </task>
     <task id="LOCAL-00041" summary="scale prop for scene">
       <option name="closed" value="true" />
@@ -524,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764614991695</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="features page new approach">
+      <option name="closed" value="true" />
+      <created>1764676108616</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1764676108616</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +573,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="cusotmisation home 0.4" />
     <MESSAGE value="home updates" />
     <MESSAGE value="home updates home scene" />
     <MESSAGE value="varibale parsing duration and delay" />
@@ -595,7 +597,8 @@
     <MESSAGE value="priing 0.0" />
     <MESSAGE value="priing 0.3" />
     <MESSAGE value="pricing 0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="pricing 0.4" />
+    <MESSAGE value="features page new approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="features page new approach" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

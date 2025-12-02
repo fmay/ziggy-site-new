@@ -7,13 +7,7 @@ import ScrollListExtra1 from '@/app/(product)/features/ScrollList_Extra1'
 import ScrollListExtra2 from '@/app/(product)/features/ScrollList_Extra2'
 import PerformanceFeatures from '@/app/(product)/features/PerformanceFeatures'
 import { ReactNode } from 'react'
-
-interface Section {
-  bgColor: string
-  children: ReactNode
-  id?: string
-  waveInvert?: boolean
-}
+import { Section } from '@/app/page'
 
 export default function Features() {
   const sections: Section[] = [

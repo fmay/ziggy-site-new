@@ -2,15 +2,15 @@ import Hero from '@/app/(home)/Hero'
 import HomeScrollList from '@/app/(home)/HomeScrollList'
 import HomePricing from '@/app/(home)/HomePricing'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
-import HomeScene from '@/app/(home)/HomeScene'
 import CustomizationHome from '@/app/(home)/CustomizationHome'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
 import { ReactNode } from 'react'
 
-interface Section {
+export interface Section {
   bgColor: string
   children: ReactNode
+  id?: string
   waveInvert?: boolean
 }
 
