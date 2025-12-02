@@ -19,7 +19,6 @@ export interface NavItemWithDropdown {
 export interface NavigationConfig {
   items: NavItemWithDropdown[]
   cta: {
-    bookDemo: NavItem
     contact: NavItem
   }
 }
@@ -149,9 +148,10 @@ export const navigationConfig: NavigationConfig = {
       },
     },
     { label: 'Pricing', href: '/pricing' },
+    { label: 'About Us', href: '/about' },
   ],
   cta: {
-    bookDemo: { label: 'Book Demo', href: '/demo' },
+    // bookDemo: { label: 'Book Demo', href: '/demo' },
     contact: { label: 'Contact Us', href: '/contact' },
   },
 }

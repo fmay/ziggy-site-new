@@ -114,12 +114,12 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className={styles.ctaButtons}>
-              <Link
-                href={navigationConfig.cta.bookDemo.href}
-                className={`${styles.ctaButton} flex flex-row gap-1 place-items-center`}>
-                <CiCalendar />
-                {navigationConfig.cta.bookDemo.label}
-              </Link>
+              {/*<Link*/}
+              {/*  href={navigationConfig.cta.bookDemo.href}*/}
+              {/*  className={`${styles.ctaButton} flex flex-row gap-1 place-items-center`}>*/}
+              {/*  <CiCalendar />*/}
+              {/*  {navigationConfig.cta.bookDemo.label}*/}
+              {/*</Link>*/}
               <Link href={navigationConfig.cta.contact.href} className={styles.ctaButton}>
                 {navigationConfig.cta.contact.label}
               </Link>
@@ -192,12 +192,12 @@ const Header = () => {
                     setMobileMenuOpen={setMobileMenuOpen}
                   />
                 ))}
-                <Link
-                  href={navigationConfig.cta.bookDemo.href}
-                  className={styles.mobileCtaButton}
-                  onClick={() => setMobileMenuOpen(false)}>
-                  {navigationConfig.cta.bookDemo.label}
-                </Link>
+                {/*<Link*/}
+                {/*  href={navigationConfig.cta.bookDemo.href}*/}
+                {/*  className={styles.mobileCtaButton}*/}
+                {/*  onClick={() => setMobileMenuOpen(false)}>*/}
+                {/*  {navigationConfig.cta.bookDemo.label}*/}
+                {/*</Link>*/}
                 <Link
                   href={navigationConfig.cta.contact.href}
                   className={styles.mobileCtaButton}
