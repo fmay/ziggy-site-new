@@ -1,0 +1,23 @@
+.pageSection {
+  @apply w-full;
+}
+
+.pageSectionWithImage {
+  @apply w-full bg-red-50 text-white py-[80px] px-[10px];
+}
+
+.container {
+  @apply w-full py-[50px] px-[20px] max-w-[1200px] bg-transparent mx-auto;
+}
+
+.flexContainer {
+  @apply flex flex-row;
+}
+
+.contentColumn {
+  @apply w-2/3;
+}
+
+.imageColumn {
+  @apply w-1/3;
+}

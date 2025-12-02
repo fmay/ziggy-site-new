@@ -13,7 +13,7 @@ const ScrollListCore: FC = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Flows and Blocks</h2>
           <div className="">
             <p className="text-lg text-gray-600 mb-4">
-              Flows and your data pipelines, composed of Blocks.
+              Flows are your data pipelines, composed of interncononected Blocks.
             </p>
             <ul>
               <li>Each Block performs one focused task only</li>

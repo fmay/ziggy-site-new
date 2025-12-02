@@ -1,5 +1,7 @@
 import { FC, ReactNode } from 'react'
 import Image from 'next/image'
+import styles from './PageSection.module.scss'
+import Wavy from '@/components/ui/page-wrappers/Wavy'
 
 interface PageSectionProps {
   children: ReactNode
@@ -9,6 +11,8 @@ interface PageSectionProps {
   image?: string
   alt?: string
   id?: string
+  waveToColor?: string
+  waveInvert?: boolean
 }
 
 const PageSection: FC<PageSectionProps> = ({
@@ -19,14 +23,16 @@ const PageSection: FC<PageSectionProps> = ({
   image,
   alt,
   id,
+  waveToColor,
+  waveInvert,
 }) => {
   if (image) {
     return (
-      <div className={`w-full bg-red-50 text-white py-[80px] px-[10px]`}>
-        <div className="w-full max-w-[1200px] bg-transparent mx-auto">
-          <div className="flex flex-row">
-            <div className="w-2/3">{children}</div>
-            <div className="w-1/3">
+      <div className={styles.pageSectionWithImage}>
+        <div className={styles.container}>
+          <div className={styles.flexContainer}>
+            <div className={styles.contentColumn}>{children}</div>
+            <div className={styles.imageColumn}>
               <Image src={image} alt={alt || 'Section image'} width={200} height={200} />
             </div>
           </div>
@@ -36,8 +42,13 @@ const PageSection: FC<PageSectionProps> = ({
   }
 
   return (
-    <div id={id || ''} className={`w-full ${bgColor} pt-[80px] px-[10px]`}>
-      <div className="w-full max-w-[1200px] bg-transparent mx-auto">{children}</div>
+    <div id={id || ''} className={`${styles.pageSection} ${bgColor}`}>
+      {waveToColor && (
+        <Wavy fromColor={bgColor} toColor={waveToColor}>
+          <div className={styles.container}>{children}</div>
+        </Wavy>
+      )}
+      {!waveToColor && <div className={styles.container}>{children}</div>}
     </div>
   )
 }

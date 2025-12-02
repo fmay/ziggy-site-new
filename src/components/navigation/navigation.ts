@@ -41,7 +41,7 @@ export const navigationConfig: NavigationConfig = {
               {
                 label: 'Features',
                 href: '/features',
-                description: 'Overview of Ziggy features',
+                description: 'Out-of-the-box Ziggy features',
                 icon: '/nav/flow.svg',
               },
               {

@@ -21,26 +21,26 @@ export default function Features() {
       image="/placeholder.svg">
 
       {/*FLOWS, BLOCKS, DEBUGGER*/}
-      <PageSection bgColor="bg-pale-blue">
+      <PageSection bgColor="pale-blue" waveToColor="white">
         <ScrollListCore />
       </PageSection>
 
-      <PageSection bgColor="">
+      <PageSection bgColor="white" waveToColor="pale-blue">
         <ScrollListEdge />
       </PageSection>
 
       {/*JAVASCRIPT*/}
-      <PageSection id="javascript" bgColor="bg-gray-50">
+      <PageSection id="javascript" bgColor="pale-blue"  waveToColor="white">
         <JavascriptFeatures />
       </PageSection>
 
       {/*EXTRA 1*/}
-      <PageSection id="extra1" bgColor="">
+      <PageSection id="extra1" bgColor="white" waveToColor="bg-gray-200">
         <ScrollListExtra1 />
       </PageSection>
 
       {/*EXTRA 1*/}
-      <PageSection id="extra1" bgColor="bg-pale-blue">
+      <PageSection id="extra1" bgColor="bg-gray-200">
         <ScrollListExtra2 />
       </PageSection>
 

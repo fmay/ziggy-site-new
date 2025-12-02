@@ -12,20 +12,20 @@ export default function Home() {
     <div className="min-h-screen mx-auto pt-12">
       <Hero />
 
-      <PageSection bgColor="bg-gray-100">
+      <PageSection bgColor="gray-100" waveToColor="pale-blue">
         <HomeScrollList />
       </PageSection>
 
-      <PageSection>
+      <PageSection bgColor="pale-blue" waveToColor="white">
         <CustomizationHome />
       </PageSection>
 
-      <PageSection bgColor="bg-gray-50">
+      <PageSection bgColor="white" waveToColor="pale-blue">
         <HomePricing />
       </PageSection>
 
       {/*Professional Services*/}
-      <PageSection>
+      <PageSection bgColor="pale-blue" waveToColor="gray-100">
         <div className="section-intro-2-col">
           <div>
             <h2>Professional Services</h2>
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </PageSection>
 
-      <PageSection bgColor="bg-gray-700">
+      <PageSection bgColor="gray-100">
         <QuickBookDemo background="dark" />
       </PageSection>
     </div>

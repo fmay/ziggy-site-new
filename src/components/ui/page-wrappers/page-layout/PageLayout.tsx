@@ -57,7 +57,7 @@ const PageLayout = ({
       <PageSection bgColor={finalBgColor}>
         <div className={`${styles.pageContainer} ${config.textColor}`}>
           <div
-            className={`${styles.contentWrapper} `}>
+            className={styles.contentWrapper}>
             <div className={styles.headerCentered}>
               <h1 className={styles.title}>{title}</h1>
               <p className={styles.descriptionCentered}>{description}</p>
