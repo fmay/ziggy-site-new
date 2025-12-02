@@ -6,26 +6,32 @@ import HomeScene from '@/app/(home)/HomeScene'
 import CustomizationHome from '@/app/(home)/CustomizationHome'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
+import { ReactNode } from 'react'
+
+interface Section {
+  bgColor: string
+  children: ReactNode
+  waveInvert?: boolean
+}
 
 export default function Home() {
-  return (
-    <div className="min-h-screen mx-auto pt-12">
-      <Hero />
-
-      <PageSection bgColor="gray-100" waveToColor="pale-blue">
-        <HomeScrollList />
-      </PageSection>
-
-      <PageSection bgColor="pale-blue" waveToColor="white">
-        <CustomizationHome />
-      </PageSection>
-
-      <PageSection bgColor="white" waveToColor="pale-blue" waveInvert>
-        <HomePricing />
-      </PageSection>
-
-      {/*Professional Services*/}
-      <PageSection bgColor="pale-blue" waveToColor="gray-100">
+  const sections: Section[] = [
+    {
+      bgColor: 'gray-100',
+      children: <HomeScrollList />,
+    },
+    {
+      bgColor: 'pale-blue',
+      children: <CustomizationHome />,
+    },
+    {
+      bgColor: 'white',
+      children: <HomePricing />,
+      waveInvert: true,
+    },
+    {
+      bgColor: 'pale-blue',
+      children: (
         <div className="section-intro-2-col">
           <div>
             <h2>Professional Services</h2>
@@ -38,11 +44,28 @@ export default function Home() {
             <CTA label="Contact Us" href="/contact" />
           </div>
         </div>
-      </PageSection>
+      ),
+    },
+    {
+      bgColor: 'gray-100',
+      children: <QuickBookDemo background="dark" />,
+    },
+  ]
 
-      <PageSection bgColor="gray-100">
-        <QuickBookDemo background="dark" />
-      </PageSection>
+  return (
+    <div className="min-h-screen mx-auto pt-12">
+      <Hero />
+
+      {sections.map((section, index) => (
+        <PageSection
+          key={index}
+          bgColor={section.bgColor}
+          waveToColor={sections[index + 1]?.bgColor}
+          waveInvert={section.waveInvert}
+        >
+          {section.children}
+        </PageSection>
+      ))}
     </div>
   )
 }
