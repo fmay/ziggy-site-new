@@ -23,7 +23,7 @@ export default function Servers({ config, value, onChange, description, index }:
   const calculateLabelPosition = (labelIndex: number, totalLabels: number) => {
     if (totalLabels <= 1) return '0%'
     const percentage = (labelIndex / (totalLabels - 1)) * 100
-    return `calc(${percentage}% + ${25 - percentage * 0.24}px)`
+    return `calc(${percentage}% + ${20 - percentage * 0.24}px)`
   }
 
   return (
@@ -55,7 +55,7 @@ export default function Servers({ config, value, onChange, description, index }:
           ))}
         </div>
       </div>
-      <p>{description}</p>
+      <p className={styles.explanation}>{description}</p>
     </div>
   )
 }

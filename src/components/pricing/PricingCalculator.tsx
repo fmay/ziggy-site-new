@@ -24,10 +24,10 @@ const sliderConfigs: SliderConfig[] = [
     label: 'Production Servers',
     description: 'How many servers will you run in production?',
     min: 1,
-    max: 5,
+    max: 9,
     step: 1,
     defaultValue: 2,
-    labels: ['1', '2', '3', '4', '5+'],
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
   },
 ]
 
@@ -93,11 +93,14 @@ export default function PricingCalculator() {
   const getIncludes = () => {
     let inc = ''
     if (servers === 1)
-      inc = `${servers} production server, ${servers} staging server, ${servers} development server.`
+      inc = `${servers} production server, ${servers} staging server, ${servers} development server. `
     else
-      inc = `${servers} production servers, ${servers} staging servers, ${servers} development servers.`
+      inc = `${servers} production servers, ${servers} staging servers, ${servers} development servers. `
 
-    inc += ` Updates and upgrades.`
+    if(servers>2)
+    inc += 'All in one cluster or separate clusters. '
+
+    inc += `Updates and upgrades.`
     return inc
   }
 
@@ -124,7 +127,7 @@ export default function PricingCalculator() {
         <div className={styles.mainContent}>
           {/*COLUMN 1: SLIDER, SUPPORT, SERVICES*/}
           <div className={styles.column1}>
-            {/*SLIDER*/}
+            {/*SERVERS*/}
             {sliderConfigs.map((config, idx) => (
               <Servers
                 key={config.id}
@@ -137,10 +140,7 @@ export default function PricingCalculator() {
             ))}
 
             {/*SUPPORT*/}
-            <Support
-              supportHours={supportHours}
-              onSupportHoursChange={setSupportHours}
-            />
+            <Support supportHours={supportHours} onSupportHoursChange={setSupportHours} />
 
             {/*SERVICES*/}
             <Services
