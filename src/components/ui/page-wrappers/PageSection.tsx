@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react'
 import Image from 'next/image'
 import styles from './PageSection.module.scss'
 import Wavy from '@/components/ui/page-wrappers/Wavy'
+import { tailwindClassToHex } from '@/utils/tailwindColors'
 
 interface PageSectionProps {
   children: ReactNode
@@ -41,8 +42,17 @@ const PageSection: FC<PageSectionProps> = ({
     )
   }
 
+  // Convert bgColor to hex for inline style when there's no wave
+  const bgColorHex = !waveToColor && bgColor !== 'transparent'
+    ? tailwindClassToHex(bgColor)
+    : undefined
+
   return (
-    <div id={id || ''} className={`${styles.pageSection} ${bgColor}`}>
+    <div
+      id={id || ''}
+      className={`${styles.pageSection} ${bgColor}`}
+      style={bgColorHex ? { backgroundColor: bgColorHex } : undefined}
+    >
       {waveToColor && (
         <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
           <div className={styles.container}>{children}</div>
