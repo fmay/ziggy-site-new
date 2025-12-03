@@ -5,7 +5,6 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CustomizationHome from '@/app/(home)/CustomizationHome'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
-import { ReactNode } from 'react'
 
 export default function Home() {
   const sections: Section[] = [

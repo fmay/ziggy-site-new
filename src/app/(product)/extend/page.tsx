@@ -1,14 +1,13 @@
 'use client'
 
 import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
-import PageSection from '@/components/ui/page-wrappers/PageSection'
+import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
-import { Section } from '@/app/page'
 
 export default function Extend() {
   const sections: Section[] = [

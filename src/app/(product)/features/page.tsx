@@ -2,13 +2,12 @@
 
 import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import JavascriptFeatures from '@/app/(product)/flows/JavascriptFeatures'
-import PageSection from '@/components/ui/page-wrappers/PageSection'
+import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import ScrollListCore from '@/app/(product)/features/ScrollList_Core'
 import ScrollListEdge from '@/app/(product)/features/ScrollList_Edge'
 import ScrollListExtra1 from '@/app/(product)/features/ScrollList_Extra1'
 import ScrollListExtra2 from '@/app/(product)/features/ScrollList_Extra2'
 import PerformanceFeatures from '@/app/(product)/features/PerformanceFeatures'
-import { Section } from '@/app/page'
 
 export default function Features() {
   const sections: Section[] = [
