@@ -42,7 +42,7 @@ export const navigationConfig: NavigationConfig = {
               },
               {
                 label: 'AI Features',
-                href: '/platform',
+                href: '/ai-features',
                 description: 'How Ziggy uses AI',
                 icon: '/nav/flow.svg',
               },

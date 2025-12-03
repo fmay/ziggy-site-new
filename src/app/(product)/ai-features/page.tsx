@@ -17,7 +17,7 @@ export default function Platform() {
       children: (
         <>
           <Intro
-            title="The Ziggy Platform"
+            title="AI Stuff"
             description={
               <div className="section-intro">
                 <p>
@@ -41,9 +41,9 @@ export default function Platform() {
 
   return (
     <PageLayout
-      title="The Ziggy Platform"
+      title="Ziggy's AI Features"
       style={LayoutStyleEnum.Feature}
-      description="Blah"
+      description="AI Blah"
       image="/placeholder.svg"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (

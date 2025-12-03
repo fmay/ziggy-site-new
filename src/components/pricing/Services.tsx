@@ -18,7 +18,7 @@ export default function Services({
       <div className={`${styles.sectionText}`}>
         <h3>Professional Services</h3>
         <p>
-          Support, training, flow development, custom block development and general consultancy.
+          Ad-hoc Support, training, flow development, custom block development and general consultancy.
         </p>
       </div>
 
