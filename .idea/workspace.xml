@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="nav home hero">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="wavy simple">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/waves/wave-simple.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/waves/wave-simple.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/waves/wave-simple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/waves/wave-simple.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/Wavy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/Wavy.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +87,7 @@
       <recent name="$PROJECT_DIR$/pixelmator" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -106,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -134,15 +138,7 @@
       <workItem from="1764399109126" duration="39287000" />
       <workItem from="1764490461648" duration="59823000" />
       <workItem from="1764675912397" duration="6899000" />
-      <workItem from="1764696531845" duration="6144000" />
-    </task>
-    <task id="LOCAL-00045" summary="reorg">
-      <option name="closed" value="true" />
-      <created>1764403040635</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1764403040635</updated>
+      <workItem from="1764696531845" duration="6957000" />
     </task>
     <task id="LOCAL-00046" summary="fixed width sections">
       <option name="closed" value="true" />
@@ -528,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764742083227</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="wavy simple">
+      <option name="closed" value="true" />
+      <created>1764744308990</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1764744308990</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +578,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="unflip timing" />
     <MESSAGE value="home scene v1" />
     <MESSAGE value="home customisations" />
     <MESSAGE value="nav dropdown 0.0" />
@@ -599,7 +602,8 @@
     <MESSAGE value="home alter" />
     <MESSAGE value="nav mods" />
     <MESSAGE value="nav home hero" />
-    <option name="LAST_COMMIT_MESSAGE" value="nav home hero" />
+    <MESSAGE value="wavy simple" />
+    <option name="LAST_COMMIT_MESSAGE" value="wavy simple" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

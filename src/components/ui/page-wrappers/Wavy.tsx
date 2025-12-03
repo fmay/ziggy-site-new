@@ -1,4 +1,6 @@
-import { FC, ReactNode } from 'react'
+'use client'
+
+import { FC, ReactNode, useEffect, useState } from 'react'
 import { tailwindClassToHex } from '@/utils/tailwindColors'
 
 interface WavyProps {
@@ -7,6 +9,56 @@ interface WavyProps {
   toColor: string
   waveInvert?: boolean
   variant?: 'standard' | 'simple'
+}
+
+interface WaveSvgProps {
+  fill: string
+  className: string
+  style?: React.CSSProperties
+  svgPath: string
+  viewBoxHeight?: number
+}
+
+const WaveSvg: FC<WaveSvgProps> = ({ fill, className, style, svgPath, viewBoxHeight }) => {
+  const [svgContent, setSvgContent] = useState<string>('')
+
+  useEffect(() => {
+    fetch(svgPath)
+      .then((res) => res.text())
+      .then((svg) => {
+        // Parse the SVG and extract viewBox and path
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(svg, 'image/svg+xml')
+        const svgElement = doc.querySelector('svg')
+        const pathElement = doc.querySelector('path')
+
+        if (svgElement && pathElement) {
+          const viewBox = svgElement.getAttribute('viewBox') || ''
+          const d = pathElement.getAttribute('d') || ''
+          setSvgContent(JSON.stringify({ viewBox, d }))
+        }
+      })
+  }, [svgPath])
+
+  if (!svgContent) return null
+
+  const { viewBox, d } = JSON.parse(svgContent)
+
+  // Override the last parameter (height) of viewBox if provided
+  let finalViewBox = viewBox
+  if (viewBoxHeight !== undefined) {
+    const parts = viewBox.split(' ')
+    if (parts.length === 4) {
+      parts[3] = viewBoxHeight.toString()
+      finalViewBox = parts.join(' ')
+    }
+  }
+
+  return (
+    <svg className={className} viewBox={finalViewBox} style={style}>
+      <path fill={fill} d={d} />
+    </svg>
+  )
 }
 
 const Wavy: FC<WavyProps> = ({
@@ -23,45 +75,29 @@ const Wavy: FC<WavyProps> = ({
   if (!fromColor.includes('#') && !fromColor.includes('rgb')) fromCol = tailwindClassToHex(fromCol)
   if (!toColor.includes('#') && !toColor.includes('rgb')) toCol = tailwindClassToHex(toColor)
 
-  const Standard = (): ReactNode => {
-    return (
-      <svg
-        className="w-full mt-[-7vw]"
-        viewBox="0 0 1440 300"
-        style={{ transform: waveInvert ? 'scaleX(-1)' : undefined }}>
-        <path
-          fill={toCol}
-          d="M0,192L120,186.7C240,181,480,171,720,181.3C960,192,1200,224,1320,240L1440,256V320H0Z"></path>
-      </svg>
-    )
-  }
+  let svgPath: string
+  let className: string
+  let viewBoxHeight: number | undefined
 
-  const Simple = (): ReactNode => {
-    return (
-      <svg className="w-full mt-[-2vw]" viewBox="0 0 1440 95">
-        <path
-          fill={toCol}
-          d="M 265 62.117645 C 689.978027 38.074532 1440 0 1440 0 L 1440 96 L 0 96 C 0 96 25.955353 75.641602 265 62.117645 Z"
-        />
-      </svg>
-    )
-  }
-
-  let waveComponent: ReactNode
   switch (variant) {
     case 'simple':
-      waveComponent = <Simple />
+      svgPath = '/waves/wave-simple.svg'
+      className = 'w-full mt-[-2vw]'
+      viewBoxHeight = 95 // Can be changed to adjust wave height
       break
     default:
-      waveComponent = <Standard />
+      svgPath = '/waves/standard.svg'
+      className = 'w-full mt-[-7vw]'
+      viewBoxHeight = 300 // Can be changed to adjust wave height
       break
   }
+
+  const style = variant === 'standard' && waveInvert ? { transform: 'scaleX(-1)' } : undefined
 
   return (
     <div className={`w-full flex flex-col`} style={{ backgroundColor: fromCol }}>
       {children}
-
-      {waveComponent}
+      <WaveSvg fill={toCol} className={className} style={style} svgPath={svgPath} viewBoxHeight={viewBoxHeight} />
     </div>
   )
 }
