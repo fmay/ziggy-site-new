@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="build">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="flows images">
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/cluster.card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/customise.card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/fast-friendly.card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/home-flow.card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/integrations-migrations.card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/integrations-migrations.card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/cards/one-instance.card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/hero/cluster.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/hero/flow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/canvas/home/hero/server.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/FlowFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/FlowFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/product/flows/subflow.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/product/flows/subflow.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/DesktopNavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/DesktopNavItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,36 +46,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(features)/features&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(product)/platform",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
+    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
       <recent name="$PROJECT_DIR$/src/app/(features)/features" />
       <recent name="$PROJECT_DIR$/src/app/integration-partners" />
       <recent name="$PROJECT_DIR$/src/app/(features)/extend" />
       <recent name="$PROJECT_DIR$/src/app/(home)/hero-scene" />
-      <recent name="$PROJECT_DIR$/src/app/(home)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pixelmator/logos" />
@@ -94,7 +85,7 @@
       <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -117,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -146,14 +137,7 @@
       <workItem from="1764490461648" duration="59823000" />
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
-    </task>
-    <task id="LOCAL-00053" summary="cluster 0.6">
-      <option name="closed" value="true" />
-      <created>1764425757013</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1764425757013</updated>
+      <workItem from="1764785035117" duration="734000" />
     </task>
     <task id="LOCAL-00054" summary="cusotmisation home 0.4">
       <option name="closed" value="true" />
@@ -539,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764761515793</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="flows images">
+      <option name="closed" value="true" />
+      <created>1764763225697</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1764763225697</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="hover" />
     <MESSAGE value="cta wrap 0.0" />
     <MESSAGE value="CTA marginy" />
     <MESSAGE value="drop shadow" />
@@ -610,7 +601,8 @@
     <MESSAGE value="base for page layout and wavy 0.3" />
     <MESSAGE value="page layout updated" />
     <MESSAGE value="build" />
-    <option name="LAST_COMMIT_MESSAGE" value="build" />
+    <MESSAGE value="flows images" />
+    <option name="LAST_COMMIT_MESSAGE" value="flows images" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

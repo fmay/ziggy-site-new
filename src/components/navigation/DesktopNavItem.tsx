@@ -24,28 +24,53 @@ const DesktopNavItem = ({
         key={item.label}
         className={index > 0 ? 'ml-8' : ''}
         onMouseEnter={e => onMouseEnter(item.label, item, e.currentTarget)}>
-        <button
-          className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
-            isActive ? 'text-stripe-purple' : ''
-          }`}
-          aria-expanded={isActive}>
-          {item.label}
-          <svg
-            className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
-              isActive ? 'rotate-180' : ''
+        {item.href ? (
+          <Link
+            href={item.href}
+            className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
+              isActive ? 'text-stripe-purple' : ''
+            }`}>
+            {item.label}
+            <svg
+              className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
+                isActive ? 'rotate-180' : ''
+              }`}
+              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </Link>
+        ) : (
+          <button
+            className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
+              isActive ? 'text-stripe-purple' : ''
             }`}
-            style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
+            aria-expanded={isActive}>
+            {item.label}
+            <svg
+              className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
+                isActive ? 'rotate-180' : ''
+              }`}
+              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+        )}
       </div>
     )
   }

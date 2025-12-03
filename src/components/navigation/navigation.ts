@@ -28,9 +28,22 @@ export const navigationConfig: NavigationConfig = {
   items: [
     {
       label: 'Platform',
+      href: '/platform',
       dropdown: {
         sections: [
           {
+            title: 'Overview',
+            items: [
+              {
+                label: 'Platform Overview',
+                href: '/platform',
+                description: 'An overview of the Ziggy Platform',
+                icon: '/nav/flow.svg',
+              },
+            ],
+          },
+          {
+            title: 'Functions',
             items: [
               {
                 label: 'Flows and Blocks',
