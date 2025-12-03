@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home alter">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="nav mods">
+      <change afterPath="$PROJECT_DIR$/public/hero/home-hero.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,11 +80,11 @@
       <recent name="$PROJECT_DIR$/src/app/(home)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/hero" />
       <recent name="$PROJECT_DIR$/src/components/navigation" />
       <recent name="$PROJECT_DIR$/pixelmator/product" />
       <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
       <recent name="$PROJECT_DIR$/pixelmator" />
-      <recent name="$PROJECT_DIR$/public/canvas/home/cards" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -105,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -132,15 +137,8 @@
       <workItem from="1764156049915" duration="45185000" />
       <workItem from="1764399109126" duration="39287000" />
       <workItem from="1764490461648" duration="59823000" />
-      <workItem from="1764675912397" duration="6626000" />
-    </task>
-    <task id="LOCAL-00043" summary="yaml size and color">
-      <option name="closed" value="true" />
-      <created>1764355519695</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1764355519695</updated>
+      <workItem from="1764675912397" duration="6899000" />
+      <workItem from="1764696531845" duration="3977000" />
     </task>
     <task id="LOCAL-00044" summary="fixed observer issues">
       <option name="closed" value="true" />
@@ -526,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764688021830</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="nav mods">
+      <option name="closed" value="true" />
+      <created>1764688720010</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1764688720010</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +578,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="home updates home scene" />
     <MESSAGE value="varibale parsing duration and delay" />
     <MESSAGE value="unflip timing" />
     <MESSAGE value="home scene v1" />
@@ -597,7 +602,8 @@
     <MESSAGE value="features page new approach" />
     <MESSAGE value="tweaks" />
     <MESSAGE value="home alter" />
-    <option name="LAST_COMMIT_MESSAGE" value="home alter" />
+    <MESSAGE value="nav mods" />
+    <option name="LAST_COMMIT_MESSAGE" value="nav mods" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

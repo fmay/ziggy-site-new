@@ -8,34 +8,39 @@ const Hero = () => (
     <div className={styles.overlay} />
 
     <div className={styles.container}>
-      {/*Left Col*/}
-      <div className={styles.col1}>
-        {/* Main Heading */}
-        <h1 className={styles.heading}>
-          The Automation and Integration Platform - new and different
-        </h1>
+      {/*Inner Wrapper*/}
+      <div className={styles.wrapper}>
+        {/*Left Col*/}
+        <div className={styles.col1}>
+          {/* Main Heading */}
+          <h1 className={styles.heading}>
+            The Automation and Integration Platform. New and Different.
+          </h1>
 
-        {/*Subheading*/}
-        <div className={styles.subheading}>
-          {/*<p className={styles.subheading}>*/}
-          {/*  Runs on your servers. Easy access to the widest range of data sources. Fully*/}
-          {/*  customizable. Transparent non usage based pricing.*/}
-          {/*</p>*/}
-          <ul>
-            <li>Runs on your servers</li>
-            <li>Easy access to the widest range of data sources</li>
-            <li>Fully customizable</li>
-            <li>Transparent non usage based pricing</li>
-          </ul>
+          {/*Subheading*/}
+          <div className={styles.subheading}>
+            {/*<p className={styles.subheading}>*/}
+            {/*  Runs on your servers. Easy access to the widest range of data sources. Fully*/}
+            {/*  customizable. Transparent non usage based pricing.*/}
+            {/*</p>*/}
+            <ul>
+              <li>Runs on your servers</li>
+              <li>Easy access to any data sources</li>
+              <li>Fully customizable</li>
+              <li>Transparent non usage based pricing</li>
+            </ul>
+          </div>
+          <p className={styles.signoffDesktop}>Ziggy it!</p>
         </div>
-        <p className={styles.signoff}>Ziggy it!</p>
-      </div>
 
-      {/*Hero Image*/}
-      <div className={styles.col2}>
-        <div className={styles.heroImage}>
-          <Image src="/placeholder.svg" alt="" width={700} height={400} />
+        {/*Hero Image*/}
+        <div className={styles.col2}>
+          <div className={styles.heroImage}>
+            <Image src="/hero/home-hero.webp" alt="" width={500} height={500} />
+          </div>
         </div>
+
+        <p className={styles.signoffMobile}>Ziggy it!</p>
       </div>
     </div>
   </section>

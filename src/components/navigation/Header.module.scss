@@ -20,7 +20,7 @@
 }
 
 .logo {
-  @apply text-2xl font-bold text-stripe-navy;
+  @apply text-2xl font-bold text-stripe-navy mt-[6px];
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -28,9 +28,9 @@
   &::before {
     content: '';
     display: inline-block;
-    width: 32px;
+    width: 100px;
     height: 32px;
-    background-image: url('../../../public/icons/apple-touch-icon.png');
+    background-image: url('../../../public/ziggy-logo-dark-bg.webp');
     background-size: contain;
     background-repeat: no-repeat;
   }

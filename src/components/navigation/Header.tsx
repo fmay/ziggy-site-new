@@ -192,12 +192,12 @@ const Header = () => {
                     setMobileMenuOpen={setMobileMenuOpen}
                   />
                 ))}
-                {/*<Link*/}
-                {/*  href={navigationConfig.cta.bookDemo.href}*/}
-                {/*  className={styles.mobileCtaButton}*/}
-                {/*  onClick={() => setMobileMenuOpen(false)}>*/}
-                {/*  {navigationConfig.cta.bookDemo.label}*/}
-                {/*</Link>*/}
+                <Link
+                  href={navigationConfig.cta.bookDemo!.href}
+                  className={styles.mobileCtaButton}
+                  onClick={() => setMobileMenuOpen(false)}>
+                  {navigationConfig.cta.bookDemo!.label}
+                </Link>
                 <Link
                   href={navigationConfig.cta.contact.href}
                   className={styles.mobileCtaButton}
