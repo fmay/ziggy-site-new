@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="flows images">
-      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="platform tlp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/product/flows/subflow.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/product/flows/subflow.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/DesktopNavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/DesktopNavItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
       <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -108,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -137,15 +134,7 @@
       <workItem from="1764490461648" duration="59823000" />
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
-      <workItem from="1764785035117" duration="734000" />
-    </task>
-    <task id="LOCAL-00054" summary="cusotmisation home 0.4">
-      <option name="closed" value="true" />
-      <created>1764427884527</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1764427884527</updated>
+      <workItem from="1764785035117" duration="1062000" />
     </task>
     <task id="LOCAL-00055" summary="home updates">
       <option name="closed" value="true" />
@@ -531,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764763225697</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="platform tlp">
+      <option name="closed" value="true" />
+      <created>1764785866526</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1764785866526</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +574,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="cta wrap 0.0" />
     <MESSAGE value="CTA marginy" />
     <MESSAGE value="drop shadow" />
     <MESSAGE value="pre scroll pairs nudge" />
@@ -602,7 +598,8 @@
     <MESSAGE value="page layout updated" />
     <MESSAGE value="build" />
     <MESSAGE value="flows images" />
-    <option name="LAST_COMMIT_MESSAGE" value="flows images" />
+    <MESSAGE value="platform tlp" />
+    <option name="LAST_COMMIT_MESSAGE" value="platform tlp" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

@@ -2,25 +2,21 @@ import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
 
 export default function About() {
   return (
-    <PageLayout
-      title="About Us"
-      description="Learn more about our mission and the team behind the platform.">
+    <PageLayout title="About Us" description="">
       <div className="max-w-4xl mx-auto prose prose-lg">
-        <div className="bg-white p-8 rounded-lg border border-gray-200 mb-8">
+        <div className="bg-white p-8 my-[-40px] rounded-lg border border-gray-200 mb-8">
           <h2 className="text-3xl font-semibold text-stripe-navy mb-4">Our Mission</h2>
           <p className="text-stripe-gray text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            At Ziggy we recognise that the data automation and integration market also known as the
+            Extract, Transform and Load (ETL) space has for too long been underserved either by
+            cumbersome service providers that are inflexible and expensive or by cloud based
+            platforms where it’s difficult to control security.
           </p>
-        </div>
-
-        <div className="bg-stripe-light-bg p-8 rounded-lg">
-          <h2 className="text-3xl font-semibold text-stripe-navy mb-4">Our Story</h2>
+          <p className="text-stripe-gray text-lg">So our mission is simple...</p>
           <p className="text-stripe-gray text-lg">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            To make it extremely easy, for any business to automate and integrate data, across their
+            own systems, and to and from third party systems, where security, customization,
+            resource flexibility, auditability and cost effectiveness are paramount. Ziggy it!
           </p>
         </div>
       </div>

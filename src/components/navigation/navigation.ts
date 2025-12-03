@@ -40,8 +40,15 @@ export const navigationConfig: NavigationConfig = {
                 description: 'An overview of the Ziggy Platform',
                 icon: '/nav/flow.svg',
               },
+              {
+                label: 'AI Features',
+                href: '/platform',
+                description: 'How Ziggy uses AI',
+                icon: '/nav/flow.svg',
+              },
             ],
           },
+
           {
             title: 'Functions',
             items: [
