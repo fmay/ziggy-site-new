@@ -29,36 +29,33 @@ const PageSection: FC<PageSectionProps> = ({
 }) => {
   if (image) {
     return (
-      <div className={styles.pageSectionWithImage}>
-        <div className={styles.container}>
-          <div className={styles.flexContainer}>
-            <div className={styles.contentColumn}>{children}</div>
-            <div className={styles.imageColumn}>
-              <Image src={image} alt={alt || 'Section image'} width={200} height={200} />
+      <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
+        <div className={styles.pageSectionWithImage}>
+          <div className={styles.container}>
+            <div className={styles.flexContainer}>
+              <div className={styles.contentColumn}>{children}</div>
+              <div className={styles.imageColumn}>
+                <Image src={image} alt={alt || 'Section image'} width={200} height={200} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Wavy>
     )
   }
 
   // Convert bgColor to hex for inline style when there's no wave
-  const bgColorHex = !waveToColor && bgColor !== 'transparent'
-    ? tailwindClassToHex(bgColor)
-    : undefined
+  const bgColorHex =
+    !waveToColor && bgColor !== 'transparent' ? tailwindClassToHex(bgColor) : undefined
 
   return (
     <div
       id={id || ''}
       className={`${styles.pageSection} ${bgColor}`}
-      style={bgColorHex ? { backgroundColor: bgColorHex } : undefined}
-    >
-      {waveToColor && (
-        <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
-          <div className={styles.container}>{children}</div>
-        </Wavy>
-      )}
-      {!waveToColor && <div className={styles.container}>{children}</div>}
+      style={bgColorHex ? { backgroundColor: bgColorHex } : undefined}>
+      <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
+        <div className={styles.container}>{children}</div>
+      </Wavy>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import styles from './PageLayout.module.scss'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
+import Wavy from '@/components/ui/page-wrappers/Wavy'
 
 interface PageLayoutProps {
   title: string
@@ -29,25 +30,29 @@ const PageLayout = ({
   style = 'default',
   bgColor,
   color,
+  waveToColor,
 }: PageLayoutProps) => {
   const config = styleConfig[style]
   const finalBgColor = bgColor || config.bgColor
   if (image) {
     return (
       <>
-        <PageSection bgColor={finalBgColor}>
-          <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
-            <div className={styles.headerWithImage}>
-              <div className={styles.textSection}>
-                <h1 className={styles.title}>{title}</h1>
-                <p className={styles.description}>{description}</p>
+          <PageSection bgColor={finalBgColor} waveToColor={waveToColor}>
+            <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
+              <div className={styles.headerWithImage}>
+                <div className={styles.textSection}>
+                  <h1 className={styles.title}>{title}</h1>
+                  <p className={styles.description}>{description}</p>
+                </div>
+                {image && (
+                  <div
+                    className={styles.imageSection}
+                    style={{ backgroundImage: `url(${image})` }}
+                  />
+                )}
               </div>
-              {image && (
-                <div className={styles.imageSection} style={{ backgroundImage: `url(${image})` }} />
-              )}
             </div>
-          </div>
-        </PageSection>
+          </PageSection>
         {children}
       </>
     )
@@ -55,17 +60,16 @@ const PageLayout = ({
 
   return (
     <>
-      <PageSection bgColor={finalBgColor}>
-        <div className={`${styles.pageContainer} ${config.textColor}`}>
-          <div
-            className={styles.contentWrapper}>
-            <div className={styles.headerCentered}>
-              <h1 className={styles.title}>{title}</h1>
-              <p className={styles.descriptionCentered}>{description}</p>
+        <PageSection bgColor={finalBgColor}>
+          <div className={`${styles.pageContainer} ${config.textColor}`}>
+            <div className={styles.contentWrapper}>
+              <div className={styles.headerCentered}>
+                <h1 className={styles.title}>{title}</h1>
+                <p className={styles.descriptionCentered}>{description}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </PageSection>
+        </PageSection>
       {children}
     </>
   )

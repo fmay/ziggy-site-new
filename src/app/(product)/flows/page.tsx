@@ -12,7 +12,7 @@ import { Section } from '@/app/page'
 export default function Products() {
   const sections: Section[] = [
     {
-      bgColor: 'bg-gray',
+      bgColor: 'bg-gray-50',
       children: (
         <Intro
           title="Ziggy Flows"
@@ -62,7 +62,9 @@ export default function Products() {
       style="feature"
       description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
       video="https://nxucrsk2vrk61vtm.public.blob.vercel-storage.com/website-videos/flow-animated.mov"
-      image="/placeholder.svg">
+      image="/placeholder.svg"
+      waveToColor={sections[0].bgColor}
+    >
 
       {sections.map((section, index) => (
         <PageSection

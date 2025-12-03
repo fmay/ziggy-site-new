@@ -5,8 +5,8 @@ import { tailwindClassToHex } from '@/utils/tailwindColors'
 
 interface WavyProps {
   children: ReactNode
-  fromColor: string
-  toColor: string
+  fromColor?: string
+  toColor?: string
   waveInvert?: boolean
   variant?: 'standard' | 'simple'
 }
@@ -24,8 +24,8 @@ const WaveSvg: FC<WaveSvgProps> = ({ fill, className, style, svgPath, viewBoxHei
 
   useEffect(() => {
     fetch(svgPath)
-      .then((res) => res.text())
-      .then((svg) => {
+      .then(res => res.text())
+      .then(svg => {
         // Parse the SVG and extract viewBox and path
         const parser = new DOMParser()
         const doc = parser.parseFromString(svg, 'image/svg+xml')
@@ -72,8 +72,11 @@ const Wavy: FC<WavyProps> = ({
   let fromCol = fromColor
   let toCol = toColor
 
-  if (!fromColor.includes('#') && !fromColor.includes('rgb')) fromCol = tailwindClassToHex(fromCol)
-  if (!toColor.includes('#') && !toColor.includes('rgb')) toCol = tailwindClassToHex(toColor)
+  if (fromColor && toColor) {
+    if (!fromColor.includes('#') && !fromColor.includes('rgb'))
+      fromCol = tailwindClassToHex(fromColor)
+    if (!toColor.includes('#') && !toColor.includes('rgb')) toCol = tailwindClassToHex(toColor)
+  }
 
   let svgPath: string
   let className: string
@@ -94,10 +97,20 @@ const Wavy: FC<WavyProps> = ({
 
   const style = variant === 'standard' && waveInvert ? { transform: 'scaleX(-1)' } : undefined
 
+  console.log(fromColor, toColor, fromCol, toCol, svgPath)
+
   return (
     <div className={`w-full flex flex-col`} style={{ backgroundColor: fromCol }}>
       {children}
-      <WaveSvg fill={toCol} className={className} style={style} svgPath={svgPath} viewBoxHeight={viewBoxHeight} />
+      {fromCol && toCol && (
+        <WaveSvg
+          fill={toCol}
+          className={className}
+          style={style}
+          svgPath={svgPath}
+          viewBoxHeight={viewBoxHeight}
+        />
+      )}
     </div>
   )
 }

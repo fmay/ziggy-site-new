@@ -35,6 +35,9 @@ export default function Cluster() {
           image="/misc/docker.svg"
           imageScale={0.5}
         />
+      </PageSection>
+
+      <PageSection bgColor="bg-gray-50" waveToColor="bg-gray-800">
         <ClusterFeatures />
       </PageSection>
 
