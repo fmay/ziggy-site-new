@@ -1,48 +1,51 @@
 import styles from './hero.module.scss'
 import Image from 'next/image'
 import HomeScene from '@/app/(home)/hero-scene/HomeScene'
+import Wavy from '@/components/ui/page-wrappers/Wavy'
 
 const Hero = () => (
   <section className={styles.heroSection}>
-    {/* Overlay for better text readability */}
-    <div className={styles.overlay} />
+    <Wavy fromColor="dark-gray" toColor="gray-100" variant="simple">
+      {/* Overlay for better text readability */}
+      <div className={styles.overlay} />
 
-    <div className={styles.container}>
-      {/*Inner Wrapper*/}
-      <div className={styles.wrapper}>
-        {/*Left Col*/}
-        <div className={styles.col1}>
-          {/* Main Heading */}
-          <h1 className={styles.heading}>
-            The Automation and Integration Platform. New and Different.
-          </h1>
+      <div className={styles.container}>
+        {/*Inner Wrapper*/}
+        <div className={styles.wrapper}>
+          {/*Left Col*/}
+          <div className={styles.col1}>
+            {/* Main Heading */}
+            <h1 className={styles.heading}>
+              The Automation and Integration Platform. New and Different.
+            </h1>
 
-          {/*Subheading*/}
-          <div className={styles.subheading}>
-            {/*<p className={styles.subheading}>*/}
-            {/*  Runs on your servers. Easy access to the widest range of data sources. Fully*/}
-            {/*  customizable. Transparent non usage based pricing.*/}
-            {/*</p>*/}
-            <ul>
-              <li>Runs on your servers</li>
-              <li>Easy access to any data sources</li>
-              <li>Fully customizable</li>
-              <li>Transparent non usage based pricing</li>
-            </ul>
+            {/*Subheading*/}
+            <div className={styles.subheading}>
+              {/*<p className={styles.subheading}>*/}
+              {/*  Runs on your servers. Easy access to the widest range of data sources. Fully*/}
+              {/*  customizable. Transparent non usage based pricing.*/}
+              {/*</p>*/}
+              <ul>
+                <li>Runs on your servers</li>
+                <li>Easy access to any data sources</li>
+                <li>Fully customizable</li>
+                <li>Transparent non usage based pricing</li>
+              </ul>
+            </div>
+            <p className={styles.signoffDesktop}>Ziggy it!</p>
           </div>
-          <p className={styles.signoffDesktop}>Ziggy it!</p>
-        </div>
 
-        {/*Hero Image*/}
-        <div className={styles.col2}>
-          <div className={styles.heroImage}>
-            <Image src="/hero/home-hero.webp" alt="" width={500} height={500} />
+          {/*Hero Image*/}
+          <div className={styles.col2}>
+            <div className={styles.heroImage}>
+              <Image src="/hero/home-hero.webp" alt="" width={500} height={500} />
+            </div>
           </div>
-        </div>
 
-        <p className={styles.signoffMobile}>Ziggy it!</p>
+          <p className={styles.signoffMobile}>Ziggy it!</p>
+        </div>
       </div>
-    </div>
+    </Wavy>
   </section>
 )
 
