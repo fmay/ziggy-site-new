@@ -11,7 +11,7 @@ import { Section } from '@/app/page'
 export default function Extend() {
   const sections: Section[] = [
     {
-      bgColor: 'bg-gray',
+      bgColor: 'bg-gray-50',
       children: (
         <Intro
           title="Become an Integration Partner"
@@ -62,7 +62,9 @@ export default function Extend() {
       title="Extend Ziggy with plugins"
       style="feature"
       description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
-      image="/placeholder.svg">
+      image="/placeholder.svg"
+      waveToColor={sections[0].bgColor}
+    >
 
       {sections.map((section, index) => (
         <PageSection

@@ -1,6 +1,15 @@
+'use client'
+
 import styles from './PageLayout.module.scss'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
-import Wavy from '@/components/ui/page-wrappers/Wavy'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+
+export enum LayoutStyleEnum {
+  Default = 'default',
+  Feature = 'feature',
+  Test = 'test',
+  Pricing = 'pricing',
+}
 
 interface PageLayoutProps {
   title: string
@@ -8,17 +17,33 @@ interface PageLayoutProps {
   children?: React.ReactNode
   image?: string
   video?: string
-  style?: 'default' | 'feature' | 'test' | 'pricing'
+  style?: LayoutStyleEnum
   bgColor?: string
   color?: string
   waveToColor?: string
 }
 
-const styleConfig = {
-  default: { bgColor: 'bg-white', textColor: 'text-dark-gray' },
-  feature: { bgColor: 'bg-gray-800', textColor: 'text-white' },
-  pricing: { bgColor: 'bg-dark-gray', textColor: 'text-white' },
-  test: { bgColor: 'bg-red-700', textColor: 'text-white' },
+interface StyleConfig {
+  bgColor: string
+  textColor: string
+  waveVariant: WavyVariantEnum
+}
+
+type StyleConfigMap = Record<LayoutStyleEnum, StyleConfig>
+
+const styleConfig: StyleConfigMap = {
+  default: {
+    bgColor: 'bg-white',
+    textColor: 'text-dark-gray',
+    waveVariant: WavyVariantEnum.Standard,
+  },
+  feature: { bgColor: 'bg-gray-800', textColor: 'text-white', waveVariant: WavyVariantEnum.Simple },
+  pricing: {
+    bgColor: 'bg-dark-gray',
+    textColor: 'text-white',
+    waveVariant: WavyVariantEnum.Standard,
+  },
+  test: { bgColor: 'bg-red-700', textColor: 'text-white', waveVariant: WavyVariantEnum.Simple },
 }
 
 const PageLayout = ({
@@ -27,32 +52,33 @@ const PageLayout = ({
   children,
   image,
   video,
-  style = 'default',
+  style = LayoutStyleEnum.Default,
   bgColor,
   color,
   waveToColor,
 }: PageLayoutProps) => {
   const config = styleConfig[style]
   const finalBgColor = bgColor || config.bgColor
+
   if (image) {
     return (
       <>
-          <PageSection bgColor={finalBgColor} waveToColor={waveToColor}>
-            <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
-              <div className={styles.headerWithImage}>
-                <div className={styles.textSection}>
-                  <h1 className={styles.title}>{title}</h1>
-                  <p className={styles.description}>{description}</p>
-                </div>
-                {image && (
-                  <div
-                    className={styles.imageSection}
-                    style={{ backgroundImage: `url(${image})` }}
-                  />
-                )}
+        <PageSection
+          bgColor={finalBgColor}
+          waveToColor={waveToColor}
+          waveVariant={config.waveVariant as WavyVariantEnum}>
+          <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
+            <div className={styles.headerWithImage}>
+              <div className={styles.textSection}>
+                <h1 className={styles.title}>{title}</h1>
+                <p className={styles.description}>{description}</p>
               </div>
+              {image && (
+                <div className={styles.imageSection} style={{ backgroundImage: `url(${image})` }} />
+              )}
             </div>
-          </PageSection>
+          </div>
+        </PageSection>
         {children}
       </>
     )
@@ -60,16 +86,16 @@ const PageLayout = ({
 
   return (
     <>
-        <PageSection bgColor={finalBgColor}>
-          <div className={`${styles.pageContainer} ${config.textColor}`}>
-            <div className={styles.contentWrapper}>
-              <div className={styles.headerCentered}>
-                <h1 className={styles.title}>{title}</h1>
-                <p className={styles.descriptionCentered}>{description}</p>
-              </div>
+      <PageSection bgColor={finalBgColor}>
+        <div className={`${styles.pageContainer} ${config.textColor}`}>
+          <div className={styles.contentWrapper}>
+            <div className={styles.headerCentered}>
+              <h1 className={styles.title}>{title}</h1>
+              <p className={styles.descriptionCentered}>{description}</p>
             </div>
           </div>
-        </PageSection>
+        </div>
+      </PageSection>
       {children}
     </>
   )

@@ -1,4 +1,6 @@
-import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+'use client'
+
+import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import FlowFeatures from '@/app/(product)/flows/FlowFeatures'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import BlockCollections from '@/app/(product)/flows/BlockCollections'
@@ -37,7 +39,7 @@ export default function Products() {
     },
     {
       id: 'hubspot',
-      bgColor: '',
+      bgColor: 'pale-blue',
       children: (
         <>
           <BlockCollections />
@@ -59,25 +61,20 @@ export default function Products() {
   return (
     <PageLayout
       title="Ziggy Flows"
-      style="feature"
+      style={LayoutStyleEnum.Feature}
       description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
-      video="https://nxucrsk2vrk61vtm.public.blob.vercel-storage.com/website-videos/flow-animated.mov"
       image="/placeholder.svg"
-      waveToColor={sections[0].bgColor}
-    >
-
+      waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection
           key={index}
           id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}
-        >
+          waveInvert={section.waveInvert}>
           {section.children}
         </PageSection>
       ))}
-
     </PageLayout>
   )
 }

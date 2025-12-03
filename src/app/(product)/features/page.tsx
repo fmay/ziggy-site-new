@@ -1,4 +1,6 @@
-import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+'use client'
+
+import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import JavascriptFeatures from '@/app/(product)/flows/JavascriptFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import ScrollListCore from '@/app/(product)/features/ScrollList_Core'
@@ -6,7 +8,6 @@ import ScrollListEdge from '@/app/(product)/features/ScrollList_Edge'
 import ScrollListExtra1 from '@/app/(product)/features/ScrollList_Extra1'
 import ScrollListExtra2 from '@/app/(product)/features/ScrollList_Extra2'
 import PerformanceFeatures from '@/app/(product)/features/PerformanceFeatures'
-import { ReactNode } from 'react'
 import { Section } from '@/app/page'
 
 export default function Features() {
@@ -42,22 +43,20 @@ export default function Features() {
   return (
     <PageLayout
       title="Ziggy Features"
-      style="feature"
+      style={LayoutStyleEnum.Feature}
+      waveToColor={sections[0].bgColor}
       description="Some of Ziggy's out-of-the-box features."
       image="/placeholder.svg">
-
       {sections.map((section, index) => (
         <PageSection
           key={index}
           id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}
-        >
+          waveInvert={section.waveInvert}>
           {section.children}
         </PageSection>
       ))}
-
     </PageLayout>
   )
 }

@@ -1,19 +1,20 @@
 import { FC, ReactNode } from 'react'
 import Image from 'next/image'
 import styles from './PageSection.module.scss'
-import Wavy from '@/components/ui/page-wrappers/Wavy'
+import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import { tailwindClassToHex } from '@/utils/tailwindColors'
+import { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 
 interface PageSectionProps {
   children: ReactNode
   paddingY?: number
   paddingX?: number
   bgColor?: string
-  image?: string
   alt?: string
   id?: string
   waveToColor?: string
   waveInvert?: boolean
+  waveVariant?: WavyVariantEnum
 }
 
 const PageSection: FC<PageSectionProps> = ({
@@ -21,29 +22,12 @@ const PageSection: FC<PageSectionProps> = ({
   paddingY = 100,
   paddingX = 40,
   bgColor = 'transparent',
-  image,
   alt,
   id,
   waveToColor,
   waveInvert,
+  waveVariant,
 }) => {
-  if (image) {
-    return (
-      <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
-        <div className={styles.pageSectionWithImage}>
-          <div className={styles.container}>
-            <div className={styles.flexContainer}>
-              <div className={styles.contentColumn}>{children}</div>
-              <div className={styles.imageColumn}>
-                <Image src={image} alt={alt || 'Section image'} width={200} height={200} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </Wavy>
-    )
-  }
-
   // Convert bgColor to hex for inline style when there's no wave
   const bgColorHex =
     !waveToColor && bgColor !== 'transparent' ? tailwindClassToHex(bgColor) : undefined
@@ -53,7 +37,7 @@ const PageSection: FC<PageSectionProps> = ({
       id={id || ''}
       className={`${styles.pageSection} ${bgColor}`}
       style={bgColorHex ? { backgroundColor: bgColorHex } : undefined}>
-      <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}>
+      <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}  variant={waveVariant}>
         <div className={styles.container}>{children}</div>
       </Wavy>
     </div>

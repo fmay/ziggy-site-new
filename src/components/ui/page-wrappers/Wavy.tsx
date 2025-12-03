@@ -3,12 +3,17 @@
 import { FC, ReactNode, useEffect, useState } from 'react'
 import { tailwindClassToHex } from '@/utils/tailwindColors'
 
+export enum WavyVariantEnum {
+  Standard = 'standard',
+  Simple = 'simple',
+}
+
 interface WavyProps {
   children: ReactNode
   fromColor?: string
   toColor?: string
   waveInvert?: boolean
-  variant?: 'standard' | 'simple'
+  variant?: WavyVariantEnum
 }
 
 interface WaveSvgProps {
@@ -97,7 +102,7 @@ const Wavy: FC<WavyProps> = ({
 
   const style = variant === 'standard' && waveInvert ? { transform: 'scaleX(-1)' } : undefined
 
-  console.log(fromColor, toColor, fromCol, toCol, svgPath)
+  // console.log(variant, svgPath)
 
   return (
     <div className={`w-full flex flex-col`} style={{ backgroundColor: fromCol }}>

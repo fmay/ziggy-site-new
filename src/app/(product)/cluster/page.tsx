@@ -4,16 +4,13 @@ import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
+import { Section } from '@/app/page'
 
 export default function Cluster() {
-  return (
-    <PageLayout
-      title="Ziggy Cluster"
-      style="feature"
-      description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
-      image="/placeholder.svg"
-      waveToColor="bg-gray">
-      <PageSection bgColor="bg-gray">
+  const sections: Section[] = [
+    {
+      bgColor: 'bg-gray-50',
+      children: (
         <Intro
           title="Just Docker"
           description={
@@ -35,15 +32,39 @@ export default function Cluster() {
           image="/misc/docker.svg"
           imageScale={0.5}
         />
-      </PageSection>
+      ),
+    },
+    {
+      bgColor: 'bg-gray-50',
+      children: <ClusterFeatures />,
+    },
+    {
+      bgColor: 'bg-gray-800',
+      children: <QuickBookDemo background="dark" />,
+    },
+  ]
 
-      <PageSection bgColor="bg-gray-50" waveToColor="bg-gray-800">
-        <ClusterFeatures />
-      </PageSection>
+  return (
+    <PageLayout
+      title="Ziggy Cluster"
+      style="feature"
+      description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
+      image="/placeholder.svg"
+      waveToColor={sections[0].bgColor}
+    >
 
-      <PageSection bgColor="bg-gray-800">
-        <QuickBookDemo background="dark" />
-      </PageSection>
+      {sections.map((section, index) => (
+        <PageSection
+          key={index}
+          id={section.id}
+          bgColor={section.bgColor}
+          waveToColor={sections[index + 1]?.bgColor}
+          waveInvert={section.waveInvert}
+        >
+          {section.children}
+        </PageSection>
+      ))}
+
     </PageLayout>
   )
 }

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="base for page layout and wavy">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="base for page layout and wavy 0.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/waves/simple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/waves/simplex.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/Wavy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/Wavy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.tsx" afterDir="false" />
@@ -137,14 +140,6 @@
       <workItem from="1764490461648" duration="59823000" />
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
-    </task>
-    <task id="LOCAL-00047" summary="intro component">
-      <option name="closed" value="true" />
-      <created>1764408381663</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1764408381663</updated>
     </task>
     <task id="LOCAL-00048" summary="scrolling pairs tweak">
       <option name="closed" value="true" />
@@ -530,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764746460843</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="base for page layout and wavy 0.3">
+      <option name="closed" value="true" />
+      <created>1764747745156</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1764747745156</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="home customisations" />
     <MESSAGE value="nav dropdown 0.0" />
     <MESSAGE value="xx" />
     <MESSAGE value="hover" />
@@ -601,7 +603,8 @@
     <MESSAGE value="nav home hero" />
     <MESSAGE value="wavy simple" />
     <MESSAGE value="base for page layout and wavy" />
-    <option name="LAST_COMMIT_MESSAGE" value="base for page layout and wavy" />
+    <MESSAGE value="base for page layout and wavy 0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="base for page layout and wavy 0.3" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
