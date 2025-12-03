@@ -19,7 +19,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/flows/editor.webp',
     },
     {
       content: (
@@ -39,21 +39,21 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/flows/block.webp',
     },
     {
       content: (
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Debugger</h2>
           <p className="text-lg text-gray-600 mb-4">
-            Step through your Flows, inspecting data in the pipeline as you go. You can even debug within the <a href="/flows#javascript">Javascript block.</a>
+            Step through your Flows, inspecting data in the pipeline as you go. You can also debug within the <a href="/flows#javascript">Javascript block</a> with stepping and variable inspection.
           </p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Debugging">
             Learn more
           </DocsLink>
         </div>
       ),
-      image: '/images/flows/js-debugger.png',
+      image: '/product/flows/debugger.webp',
     },
     {
       content: (
@@ -67,7 +67,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/flows/inspect-edge-data.webp',
     },
     {
       content: (
@@ -79,7 +79,8 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
             Ziggy offers several ways to validate and transform data in a flow
           </p>
           <ul>
-            <li>Dialogs for validating and mapping</li>
+            <li>AI Edge Transform</li>
+            <li>Dialogs for reusable validations and mappings</li>
             <li>
               The AI supported Javascript block can cover simple cases and absolutely any edge case
             </li>
@@ -103,7 +104,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/flows/subflow.webp',
     },
   ]
 

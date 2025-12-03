@@ -25,10 +25,10 @@ export default function Products() {
                   is a large number of blocks you can use to read, write, transform, map data as it
                   flows through the pipeline.
                 </p>
-                <CTA label="Platform features" href="/features" />
+                <CTA label="Features overview" href="/features" className="mb-0" />
               </div>
             }
-            image="/placeholder.svg"
+            // image="/placeholder.svg"
             imageScale={0.5}
           />
           <FlowFeatures />
@@ -61,7 +61,7 @@ export default function Products() {
       title="Ziggy Flows"
       style={LayoutStyleEnum.Feature}
       description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
-      image="/placeholder.svg"
+      image="/images/customise/home/flows-list.webp"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection
