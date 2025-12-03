@@ -1,10 +1,7 @@
-import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
-import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
-import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
-import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import PartnerFeatures from '@/app/integration-partners/PartnerFeatures'
 
@@ -12,7 +9,7 @@ export default function IntegrationPartners() {
   return (
     <PageLayout
       title="Integration Partner"
-      style="feature"
+      style={LayoutStyleEnum.Feature}
       description="Let your customers read and write to your platform using Ziggy and completely avoid coding."
       image="/placeholder.svg">
       <PageSection bgColor="bg-gray">
@@ -48,7 +45,7 @@ export default function IntegrationPartners() {
       </PageSection>
 
       <PageSection>
-        <PartnerFeatures/>
+        <PartnerFeatures />
       </PageSection>
 
       <PageSection bgColor="bg-gray-800">

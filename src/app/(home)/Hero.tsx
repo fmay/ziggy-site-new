@@ -1,11 +1,10 @@
 import styles from './hero.module.scss'
 import Image from 'next/image'
-import HomeScene from '@/app/(home)/hero-scene/HomeScene'
-import Wavy from '@/components/ui/page-wrappers/Wavy'
+import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 
 const Hero = () => (
   <section className={styles.heroSection}>
-    <Wavy fromColor="dark-gray" toColor="gray-100" variant="simple">
+    <Wavy fromColor="dark-gray" toColor="gray-100" variant={WavyVariantEnum.Simple}>
       {/* Overlay for better text readability */}
       <div className={styles.overlay} />
 
@@ -38,7 +37,7 @@ const Hero = () => (
           {/*Hero Image*/}
           <div className={styles.col2}>
             <div className={styles.heroImage}>
-              <Image src="/hero/home-hero.webp" alt="" width={500} height={500} />
+              <Image src="/hero/home.webp" alt="" width={500} height={500} />
             </div>
           </div>
 

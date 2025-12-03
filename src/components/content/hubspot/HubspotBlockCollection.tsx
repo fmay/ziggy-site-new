@@ -7,7 +7,7 @@ interface HubspotBlockCollectionProps {
 }
 
 const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => {
-  const ItemHeight = '570px'
+  const ItemHeight = '590px'
   return (
     <div
       style={{
@@ -17,7 +17,13 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           flexDirection: 'column',
         }),
       }}>
-      <Carousel slidesToShow={3.3} slidesToScroll={1} swipeToSlide={true} infinite={false}>
+      <Carousel
+        slidesToShow={3.3}
+        slidesToScroll={1}
+        swipeToSlide={true}
+        infinite={false}
+        enableTrackpadSwipe={true}
+      >
         {/*Read*/}
         <CarouselItem
           title="Read"

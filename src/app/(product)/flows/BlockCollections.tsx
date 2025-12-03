@@ -8,8 +8,8 @@ const BlockCollections:FC<BlockCollectionsProps> = ({}) => {
    <div className="section-intro">
      <h2>Block Collections</h2>
      <p>
-       Sheer user friendliness is our goal. So we never have overloaded dialogs that require
-       hours of training or reading to understand
+       Sheer user friendliness is our goal. So we never overload dialogs that require
+       hours of training or reading to understand.
      </p>
      <p>
        Instead, each platform comes with a collection of blocks, each of which does one thing

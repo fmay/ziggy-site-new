@@ -1,4 +1,6 @@
-import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+'use client'
+
+import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import ClusterFeatures from '@/app/(product)/cluster/ClusterFeatures'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
@@ -47,24 +49,20 @@ export default function Cluster() {
   return (
     <PageLayout
       title="Ziggy Cluster"
-      style="feature"
+      style={LayoutStyleEnum.Feature}
       description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
       image="/placeholder.svg"
-      waveToColor={sections[0].bgColor}
-    >
-
+      waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection
           key={index}
           id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}
-        >
+          waveInvert={section.waveInvert}>
           {section.children}
         </PageSection>
       ))}
-
     </PageLayout>
   )
 }

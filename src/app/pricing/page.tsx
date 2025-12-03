@@ -1,14 +1,14 @@
 import PricingCalculator from '@/components/pricing/PricingCalculator'
-import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 
 export default function Pricing() {
   return (
     <PageLayout
       title="Ziggy Pricing"
-      style="pricing"
-      description="Our pricing is simple and transparent. Use the calculator to estimate your costs."
-      >
+      style={LayoutStyleEnum.Feature}
+      bgColor="bg-pale-blue"
+      description="Our pricing is simple and transparent. Use the calculator to estimate your costs.">
       <PageSection bgColor="bg-pale-blue">
         <PricingCalculator />
       </PageSection>

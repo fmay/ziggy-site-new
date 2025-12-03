@@ -7,7 +7,7 @@
 }
 
 .wrapper {
-  @apply flex place-items-center mx-auto
+  @apply flex place-items-center mx-auto max-w-[1600px]
   flex-col w-full gap-[50px] px-10 py-20
   lg:flex-row lg:gap-[80px] lg:px-[60px] lg:pt-20;
 }
@@ -36,7 +36,7 @@
 }
 
 .signoffDesktop {
-  @apply sm:hidden lg:block mt-10 text-4xl text-left;
+  @apply hidden lg:block mt-10 text-4xl text-left;
 }
 .signoffMobile {
   @apply lg:hidden mt-0 text-4xl text-left;

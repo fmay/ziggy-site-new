@@ -1,4 +1,6 @@
-import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
+'use client'
+
+import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
@@ -43,7 +45,7 @@ export default function Extend() {
     },
     {
       id: 'hubspot',
-      bgColor: '',
+      bgColor: 'pale-blue',
       children: (
         <>
           <CollectionsExtendIntro />
@@ -60,24 +62,20 @@ export default function Extend() {
   return (
     <PageLayout
       title="Extend Ziggy with plugins"
-      style="feature"
+      style={LayoutStyleEnum.Feature}
       description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
-      image="/placeholder.svg"
-      waveToColor={sections[0].bgColor}
-    >
-
+      image="/hero/extend.webp"
+      waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection
           key={index}
           id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}
-        >
+          waveInvert={section.waveInvert}>
           {section.children}
         </PageSection>
       ))}
-
     </PageLayout>
   )
 }
