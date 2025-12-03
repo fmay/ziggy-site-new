@@ -10,6 +10,7 @@ interface PageLayoutProps {
   style?: 'default' | 'feature' | 'test' | 'pricing'
   bgColor?: string
   color?: string
+  waveToColor?: string
 }
 
 const styleConfig = {

@@ -11,7 +11,8 @@ export default function Cluster() {
       title="Ziggy Cluster"
       style="feature"
       description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
-      image="/placeholder.svg">
+      image="/placeholder.svg"
+      waveToColor="bg-gray">
       <PageSection bgColor="bg-gray">
         <Intro
           title="Just Docker"
