@@ -2,8 +2,8 @@
 
 import { FC, useState } from 'react'
 import { InlineWidget } from 'react-calendly'
-import CTA from '@/components/ui/cta/CTA'
 import styles from './QuickBookDemo.module.scss'
+import { LuCalendarDays } from 'react-icons/lu'
 
 interface QuickBookDemoProps {
   background?: 'dark' | 'light'
@@ -124,6 +124,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
   return (
     <div className={`${styles.container} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
       <div className={styles.heading}>
+        <LuCalendarDays />
         <h2>Book a demo</h2>
       </div>
 

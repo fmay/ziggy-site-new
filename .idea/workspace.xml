@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="page layout updated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/home/ziggy-logo-dark-bg.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/logos/ziggy-logo-dark-bg.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/home/ziggy-logo-light-bg.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/logos/ziggy-logo-light-bg.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/hero-home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/home-hero.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/demo/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/demo/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/CollectionsExtendIntro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/CollectionsExtendIntro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/BlockCollections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/BlockCollections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/CarouselItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/CarouselItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/page-layout/PageLayout.module.scss" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="build">
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,14 +134,6 @@
       <workItem from="1764490461648" duration="59823000" />
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
-    </task>
-    <task id="LOCAL-00049" summary="iintro image scaling">
-      <option name="closed" value="true" />
-      <created>1764409353251</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1764409353251</updated>
     </task>
     <task id="LOCAL-00050" summary="quick demo component">
       <option name="closed" value="true" />
@@ -544,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764750945643</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="build">
+      <option name="closed" value="true" />
+      <created>1764756936551</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1764756936551</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +573,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="xx" />
     <MESSAGE value="hover" />
     <MESSAGE value="cta wrap 0.0" />
     <MESSAGE value="CTA marginy" />
@@ -615,7 +597,8 @@
     <MESSAGE value="base for page layout and wavy" />
     <MESSAGE value="base for page layout and wavy 0.3" />
     <MESSAGE value="page layout updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="page layout updated" />
+    <MESSAGE value="build" />
+    <option name="LAST_COMMIT_MESSAGE" value="build" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

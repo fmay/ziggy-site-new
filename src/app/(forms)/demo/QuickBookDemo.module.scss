@@ -1,7 +1,6 @@
 .container {
-  @apply flex flex-row justify-between
-   border-gray-50
-  border rounded-lg p-6 items-start relative z-50;
+  @apply flex flex-row justify-start gap-20
+  rounded-lg p-16 items-center relative z-50;
 }
 
 .bgDark {
@@ -9,12 +8,12 @@
 }
 
 .bgLight {
-  @apply border-gray-700 text-white;
+  @apply text-white;
 }
 
 .heading {
   // No additional styles needed for h2
-  @apply text-2xl
+  @apply flex flex-row gap-2 place-items-center text-3xl
 }
 
 .formColumn {
