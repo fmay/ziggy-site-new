@@ -7,7 +7,7 @@ interface HubspotBlockCollectionProps {
 }
 
 const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => {
-  const ItemHeight = '590px'
+  const ItemHeight = '630px'
   return (
     <div
       style={{
