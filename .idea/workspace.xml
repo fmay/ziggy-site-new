@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="scroll pairs swap">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/FlowFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/FlowFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="INTRO UPDATED" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,15 +132,7 @@
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
       <workItem from="1764785035117" duration="3014000" />
-      <workItem from="1764853434322" duration="3963000" />
-    </task>
-    <task id="LOCAL-00060" summary="unflip timing">
-      <option name="closed" value="true" />
-      <created>1764493658450</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1764493658450</updated>
+      <workItem from="1764853434322" duration="4414000" />
     </task>
     <task id="LOCAL-00061" summary="home scene v1">
       <option name="closed" value="true" />
@@ -531,7 +518,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764858482900</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="INTRO UPDATED">
+      <option name="closed" value="true" />
+      <created>1764859154981</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1764859154981</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="update" />
     <MESSAGE value="externalised desktop dropdown" />
     <MESSAGE value="simple dropdown" />
     <MESSAGE value="nav update" />
@@ -602,7 +596,8 @@
     <MESSAGE value="new logo" />
     <MESSAGE value="hp hero" />
     <MESSAGE value="scroll pairs swap" />
-    <option name="LAST_COMMIT_MESSAGE" value="scroll pairs swap" />
+    <MESSAGE value="INTRO UPDATED" />
+    <option name="LAST_COMMIT_MESSAGE" value="INTRO UPDATED" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
