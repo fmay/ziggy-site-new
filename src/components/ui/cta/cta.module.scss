@@ -4,7 +4,7 @@
 }
 
 .primaryCTAButton {
-  @apply px-8 py-4 rounded-full whitespace-nowrap;
+  @apply px-8 py-4 rounded-lg whitespace-nowrap;
   @apply font-normal hover:font-semibold transition-all duration-200
   bg-stripe-purple text-white;
   display: inline-block;
@@ -15,7 +15,7 @@
 }
 
 .secondaryCTAButton {
-  @apply px-8 py-4 rounded-full whitespace-nowrap;
+  @apply px-8 py-4 rounded-lg whitespace-nowrap;
   @apply border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
   display: inline-block;
   width: fit-content;
