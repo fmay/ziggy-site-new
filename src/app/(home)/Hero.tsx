@@ -1,10 +1,11 @@
 import styles from './hero.module.scss'
 import Image from 'next/image'
 import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import { GiCheckMark } from 'react-icons/gi'
 
 const Hero = () => (
   <section className={styles.heroSection}>
-    <Wavy fromColor="dark-gray" toColor="gray-100" variant={WavyVariantEnum.Simple}>
+    <Wavy fromColor="header-footer" toColor="gray-100" variant={WavyVariantEnum.Simple}>
       {/* Overlay for better text readability */}
       <div className={styles.overlay} />
 
@@ -25,10 +26,22 @@ const Hero = () => (
               {/*  customizable. Transparent non usage based pricing.*/}
               {/*</p>*/}
               <ul>
-                <li>Runs on your servers</li>
-                <li>Easy access to any data sources</li>
-                <li>Fully customizable</li>
-                <li>Transparent non usage based pricing</li>
+                <li>
+                  <GiCheckMark className={styles.checkIcon} />
+                  <span>Runs on your servers</span>
+                </li>
+                <li>
+                  <GiCheckMark className={styles.checkIcon} />
+                  <span>Easy access to any data sources</span>
+                </li>
+                <li>
+                  <GiCheckMark className={styles.checkIcon} />
+                  <span>Fully customizable</span>
+                </li>
+                <li>
+                  <GiCheckMark className={styles.checkIcon} />
+                  <span>Transparent non usage based pricing</span>
+                </li>
               </ul>
             </div>
             <p className={styles.signoffDesktop}>Ziggy it!</p>

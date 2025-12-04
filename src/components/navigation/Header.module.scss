@@ -16,7 +16,7 @@
 }
 
 .logoContainer {
-  @apply flex items-center;
+  @apply flex items-start;
 }
 
 .logo {
@@ -28,9 +28,9 @@
   &::before {
     content: '';
     display: inline-block;
-    width: 100px;
-    height: 32px;
-    background-image: url('../../../public/ziggy-logo-dark-bg.webp');
+    width: 130px;
+    height: 50px;
+    background-image: url('../../../public/ziggy-logo-dark-bg.svg');
     background-size: contain;
     background-repeat: no-repeat;
   }

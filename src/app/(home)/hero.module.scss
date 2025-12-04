@@ -3,7 +3,7 @@
 }
 
 .container {
-  @apply bg-dark-gray text-white;
+  @apply bg-header-footer text-white;
 }
 
 .wrapper {
@@ -28,11 +28,16 @@
   @apply text-2xl max-w-[800px] font-extralight
     lg:mx-auto;
     ul {
-      @apply list-none text-center lg:text-left mt-4;
+      @apply list-none text-center lg:text-left mt-8;
       li {
-        @apply font-extralight mb-1;
+        @apply font-extralight mb-1 flex items-center justify-center lg:justify-start gap-2;
       }
     }
+
+  .checkIcon {
+    @apply text-white flex-shrink-0;
+    font-size: 1.2rem;
+  }
 }
 
 .signoffDesktop {

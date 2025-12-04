@@ -50,30 +50,30 @@ export const navigationConfig: NavigationConfig = {
           },
 
           {
-            title: 'Functions',
+            title: "How it's done",
             items: [
               {
-                label: 'Flows and Blocks',
+                label: 'Ziggy Flows and Ziggy Blocks',
                 href: '/flows',
                 description: 'Building your data pipeline with flows and blocks',
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'Features',
+                label: 'Supporting Features',
                 href: '/features',
                 description: 'Out-of-the-box Ziggy features',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'Extend & Customize',
-                href: '/extend',
-                description: 'Extend Ziggy with your own Custom Blocks',
                 icon: '/nav/flow.svg',
               },
               {
                 label: 'Ziggy Cluster',
                 href: '/cluster',
                 description: 'Scaling and high availability',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Extend and Customize',
+                href: '/extend',
+                description: 'Extend Ziggy with your own Custom Blocks',
                 icon: '/nav/flow.svg',
               },
             ],
