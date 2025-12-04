@@ -35,9 +35,9 @@ export const navigationConfig: NavigationConfig = {
             title: 'Overview',
             items: [
               {
-                label: 'Platform Overview',
+                label: 'Platform Introduction',
                 href: '/platform',
-                description: 'An overview of the Ziggy Platform',
+                description: 'An introduction to the platform',
                 icon: '/nav/flow.svg',
               },
               {
@@ -46,22 +46,22 @@ export const navigationConfig: NavigationConfig = {
                 description: 'How Ziggy uses AI',
                 icon: '/nav/flow.svg',
               },
+              {
+                label: 'Feature overview',
+                href: '/features',
+                description: "An overview of Ziggy's key features",
+                icon: '/nav/flow.svg',
+              },
             ],
           },
 
           {
-            title: "How it's done",
+            title: "How it works",
             items: [
               {
                 label: 'Ziggy Flows and Ziggy Blocks',
                 href: '/flows',
                 description: 'Building your data pipeline with flows and blocks',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'Supporting Features',
-                href: '/features',
-                description: 'Out-of-the-box Ziggy features',
                 icon: '/nav/flow.svg',
               },
               {
