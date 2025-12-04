@@ -26,7 +26,11 @@ const CarouselItem: FC<CarouselItemProps> = ({
     <div className={styles.wrapper} style={height ? { height } : undefined}>
       <div
         className={styles.card}
-        style={height ? { width: '100%', display: 'flex', flexDirection: 'column' } : undefined}>
+        style={
+          height
+            ? { width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }
+            : undefined
+        }>
         {imageUrl && imageAlt && (
           <Image
             className={styles.image}
