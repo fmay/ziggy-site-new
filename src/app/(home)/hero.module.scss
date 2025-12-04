@@ -10,7 +10,7 @@
 .wrapper {
   @apply flex place-items-center mx-auto max-w-[1200px]
   flex-col w-full gap-[50px] px-10 py-20
-  lg:flex-row lg:gap-[80px] lg:px-[60px] lg:pt-10;
+  lg:flex-row lg:gap-[80px] lg:px-[60px] lg:pt-0;
 }
 
 .col1 {
