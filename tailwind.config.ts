@@ -20,7 +20,7 @@ const config: Config = {
         'scroll-pair-border': 'rgb(109,106,189)',
         'flow-gray': '#D0D8E0',
         'dark-gray': 'rgb(66, 84, 102)',
-        'header-footer': '#0a0b23',
+        'header-footer': '#012442',
         'pale-blue': `rgb(239, 246, 255)`,
         'mid-gray': '#68748a',
         'pale-gray': '#8e9cb3',

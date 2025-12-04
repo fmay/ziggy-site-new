@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="INTRO UPDATED" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="Logo update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,7 @@
       <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -102,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -132,15 +135,7 @@
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
       <workItem from="1764785035117" duration="3014000" />
-      <workItem from="1764853434322" duration="4414000" />
-    </task>
-    <task id="LOCAL-00061" summary="home scene v1">
-      <option name="closed" value="true" />
-      <created>1764496127345</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1764496127345</updated>
+      <workItem from="1764853434322" duration="5377000" />
     </task>
     <task id="LOCAL-00062" summary="home customisations">
       <option name="closed" value="true" />
@@ -526,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764859154981</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Logo update">
+      <option name="closed" value="true" />
+      <created>1764859701322</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1764859701322</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="externalised desktop dropdown" />
     <MESSAGE value="simple dropdown" />
     <MESSAGE value="nav update" />
     <MESSAGE value="header scss" />
@@ -597,7 +599,8 @@
     <MESSAGE value="hp hero" />
     <MESSAGE value="scroll pairs swap" />
     <MESSAGE value="INTRO UPDATED" />
-    <option name="LAST_COMMIT_MESSAGE" value="INTRO UPDATED" />
+    <MESSAGE value="Logo update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logo update" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
