@@ -63,39 +63,21 @@ const PageLayout = ({
   const config = styleConfig[style]
   const finalBgColor = bgColor || config.bgColor
 
-  if (image) {
-    return (
-      <>
-        <PageSection
-          bgColor={finalBgColor}
-          waveToColor={waveToColor}
-          waveVariant={config.waveVariant as WavyVariantEnum}>
-          <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
-            <div className={styles.headerWithImage}>
-              <div className={styles.textSection}>
-                <h1 className={styles.title}>{title}</h1>
-                <p className={styles.description}>{description}</p>
-              </div>
-              {image && (
-                <div className={styles.imageSection} style={{ backgroundImage: `url(${image})` }} />
-              )}
-            </div>
-          </div>
-        </PageSection>
-        {children}
-      </>
-    )
-  }
-
   return (
     <>
-      <PageSection bgColor={finalBgColor}>
-        <div className={`${styles.pageContainer} ${config.textColor}`}>
-          <div className={styles.contentWrapper}>
-            <div className={styles.headerCentered}>
+      <PageSection
+        bgColor={finalBgColor}
+        waveToColor={waveToColor}
+        waveVariant={config.waveVariant as WavyVariantEnum}>
+        <div className={`${style ? styles[style] : ''} ${config.textColor}`}>
+          <div className={styles.headerWithImage}>
+            <div className={styles.textSection}>
               <h1 className={styles.title}>{title}</h1>
-              <p className={styles.descriptionCentered}>{description}</p>
+              <p className={styles.description}>{description}</p>
             </div>
+            {image && (
+              <div className={styles.imageSection} style={{ backgroundImage: `url(${image})` }} />
+            )}
           </div>
         </div>
       </PageSection>

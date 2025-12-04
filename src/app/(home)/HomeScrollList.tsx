@@ -75,7 +75,7 @@ const HomeScrollList: FC = () => {
       contentNudge: 90,
     },
   ]
-  return <ScrollContentImagePairs contentImagePairs={HP_Pairs} imagesLeft noBorder />
+  return <ScrollContentImagePairs contentImagePairs={HP_Pairs} imagesLeft />
 }
 
 export default HomeScrollList

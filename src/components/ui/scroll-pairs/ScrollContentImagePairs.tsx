@@ -17,10 +17,14 @@ export interface ContentImagePair {
 interface ScrollContentImagePairsProps {
   contentImagePairs: ContentImagePair[]
   imagesLeft?: boolean
-  noBorder?: boolean
+  border?: boolean
 }
 
-const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft, noBorder }: ScrollContentImagePairsProps) => {
+const ScrollContentImagePairs = ({
+  contentImagePairs,
+  imagesLeft,
+  border,
+}: ScrollContentImagePairsProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [imagePosition, setImagePosition] = useState<'scrolling' | 'fixed' | 'scrolling-out'>(
     'scrolling',
@@ -181,15 +185,17 @@ const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft, noBorder }: Sc
   }, [contentImagePairs.length])
 
   const getMarginTop = (pair: ContentImagePair) => {
-    if(pair.hasCTA) return 60
-    if(pair.contentNudge) return pair.contentNudge
+    if (pair.hasCTA) return 60
+    if (pair.contentNudge) return pair.contentNudge
     return 0
   }
 
   return (
     <div ref={containerRef} className={styles.container}>
       {/* Desktop Layout */}
-      <div className={`${styles.desktopLayout} ${imagesLeft ? styles.imagesLeft : ''}`} style={imagesLeft ? { direction: 'rtl' } : undefined}>
+      <div
+        className={`${styles.desktopLayout} ${imagesLeft ? styles.imagesLeft : ''}`}
+        style={imagesLeft ? { direction: 'rtl' } : undefined}>
         {/* Left Column - Scrolling Content */}
         <div className={styles.leftColumn} style={imagesLeft ? { direction: 'ltr' } : undefined}>
           {contentImagePairs.map((pair, index) => (
@@ -198,15 +204,20 @@ const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft, noBorder }: Sc
               ref={el => {
                 contentRefs.current[index] = el
               }}
-              style={{paddingTop: getMarginTop(pair)}}
+              style={{ paddingTop: getMarginTop(pair) }}
               className={styles.contentItem}>
-              <div className={`${styles.contentWrapper} ${noBorder ? styles.noBorder : ''}`}>{pair.content}</div>
+              <div className={`${styles.contentWrapper} ${border ? '' : styles.noBorder}`}>
+                {pair.content}
+              </div>
             </div>
           ))}
         </div>
 
         {/* Right Column - Fixed Images with Transitions */}
-        <div ref={rightColumnRef} className={styles.rightColumn} style={imagesLeft ? { direction: 'ltr' } : undefined}>
+        <div
+          ref={rightColumnRef}
+          className={styles.rightColumn}
+          style={imagesLeft ? { direction: 'ltr' } : undefined}>
           <div
             ref={imageContainerRef}
             className={`${styles.imageContainer} ${
