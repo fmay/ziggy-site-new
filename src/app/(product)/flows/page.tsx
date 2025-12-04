@@ -19,7 +19,7 @@ export default function Products() {
           <Intro
             title="Ziggy Flows"
             description={
-              <div className="section-intro right">
+              <div>
                 <p>
                   A Ziggy flow is a canvas based pipeline for performing operations on data. There
                   is a large number of blocks you can use to read, write, transform, map data as it
@@ -30,6 +30,7 @@ export default function Products() {
             }
             // image="/placeholder.svg"
             imageScale={0.5}
+            right
           />
           <FlowFeatures />
         </>

@@ -1,0 +1,31 @@
+.container {
+  @apply flex flex-row items-center;
+}
+
+.column {
+  @apply w-1/2;
+}
+
+.textContent {
+  @apply flex flex-col;
+}
+
+.title {
+  @apply text-3xl font-semibold mb-6;
+}
+
+.description {
+  @apply flex flex-col max-w-[600px];
+
+  :global(h2) {
+    @apply font-light text-[2.3rem] mb-4;
+  }
+}
+
+.imageWrapper {
+  @apply flex items-center justify-center;
+}
+
+.image {
+  @apply w-full h-auto;
+}

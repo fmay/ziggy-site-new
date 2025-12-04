@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react'
 import Image from 'next/image'
 import { HiOutlineServer } from 'react-icons/hi2'
+import styles from './Intro.module.scss'
 
 interface IntroProps {
   title: string
@@ -10,6 +11,7 @@ interface IntroProps {
   imageScale?: number
   imageNudge?: number
   hasCTA?: boolean
+  right?: boolean
 }
 
 const Intro: FC<IntroProps> = ({
@@ -20,6 +22,7 @@ const Intro: FC<IntroProps> = ({
   imageScale = 1,
   imageNudge = 0,
   hasCTA,
+  right,
 }) => {
   const getMarginY = () => {
     if (hasCTA) return -90
@@ -27,34 +30,41 @@ const Intro: FC<IntroProps> = ({
     return 0
   }
 
-  if (image) {
+  const textContent = (
+    <div className={styles.textContent}>
+      <div className={styles.title}>{title}</div>
+      {description && <div className={styles.description}>{description}</div>}
+    </div>
+  )
+
+  // If right prop is true, always use 2-column layout
+  if (right || image) {
+    const imageContent = image ? (
+      <div
+        className={styles.imageWrapper}
+        style={{ transform: `scale(${imageScale})`, marginTop: getMarginY() }}>
+        <Image
+          src={image}
+          alt={imageAlt}
+          width={0}
+          height={0}
+          sizes="100vw"
+          className={styles.image}
+        />
+      </div>
+    ) : (
+      <div className={styles.column}></div>
+    )
+
     return (
-      <div className="flex flex-row items-center">
-        <div className="w-1/2">
-          <div className="section-title">{title}</div>
-          {description && <div className="section-intro">{description}</div>}
-        </div>
-        <div
-          className="w-1/2 flex items-center justify-center"
-          style={{ transform: `scale(${imageScale})`, marginTop: getMarginY() }}>
-          <Image
-            src={image}
-            alt={imageAlt}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto"
-          />
-        </div>
+      <div className={styles.container}>
+        <div className={styles.column}>{right ? imageContent : textContent}</div>
+        <div className={styles.column}>{right ? textContent : imageContent}</div>
       </div>
     )
   }
-  return (
-    <>
-      <div className="section-title">{title}</div>
-      {description && <div className="section-intro">{description}</div>}
-    </>
-  )
+
+  return textContent
 }
 
 export default Intro
