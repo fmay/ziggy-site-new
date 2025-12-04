@@ -17,7 +17,7 @@ const config: Config = {
         'stripe-gray': '#727f96',
         'stripe-light-bg': '#f6f9fb',
         'stripe-purple': '#635bff',
-        'scroll-pair-border': 'rgb(109,106,189)',
+        'scroll-pair-border': '#bcbcd3',
         'flow-gray': '#D0D8E0',
         'dark-gray': 'rgb(66, 84, 102)',
         'header-footer': '#012442',

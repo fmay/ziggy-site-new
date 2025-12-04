@@ -7,7 +7,7 @@
 }
 
 .container {
-  @apply w-full py-[50px] px-[20px] max-w-[1200px] bg-transparent mx-auto;
+  @apply w-full py-[50px] px-4 sm:px-6 lg:px-8 max-w-7xl bg-transparent mx-auto;
 }
 
 .flexContainer {
