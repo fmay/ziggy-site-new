@@ -17,9 +17,10 @@ export interface ContentImagePair {
 interface ScrollContentImagePairsProps {
   contentImagePairs: ContentImagePair[]
   imagesLeft?: boolean
+  noBorder?: boolean
 }
 
-const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft }: ScrollContentImagePairsProps) => {
+const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft, noBorder }: ScrollContentImagePairsProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [imagePosition, setImagePosition] = useState<'scrolling' | 'fixed' | 'scrolling-out'>(
     'scrolling',
@@ -188,7 +189,7 @@ const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft }: ScrollConten
   return (
     <div ref={containerRef} className={styles.container}>
       {/* Desktop Layout */}
-      <div className={styles.desktopLayout} style={imagesLeft ? { direction: 'rtl' } : undefined}>
+      <div className={`${styles.desktopLayout} ${imagesLeft ? styles.imagesLeft : ''}`} style={imagesLeft ? { direction: 'rtl' } : undefined}>
         {/* Left Column - Scrolling Content */}
         <div className={styles.leftColumn} style={imagesLeft ? { direction: 'ltr' } : undefined}>
           {contentImagePairs.map((pair, index) => (
@@ -199,7 +200,7 @@ const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft }: ScrollConten
               }}
               style={{paddingTop: getMarginTop(pair)}}
               className={styles.contentItem}>
-              <div className={styles.contentWrapper}>{pair.content}</div>
+              <div className={`${styles.contentWrapper} ${noBorder ? styles.noBorder : ''}`}>{pair.content}</div>
             </div>
           ))}
         </div>

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="Logo update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/logos/ziggy-logo-dark-bg.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/logos/ziggy-logo-dark-bg.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="Logo downsize">
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,15 +134,7 @@
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
       <workItem from="1764785035117" duration="3014000" />
-      <workItem from="1764853434322" duration="7021000" />
-    </task>
-    <task id="LOCAL-00066" summary="home customisations">
-      <option name="closed" value="true" />
-      <created>1764503953481</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1764503953482</updated>
+      <workItem from="1764853434322" duration="7326000" />
     </task>
     <task id="LOCAL-00067" summary="home customisations">
       <option name="closed" value="true" />
@@ -531,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764861781606</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Logo downsize">
+      <option name="closed" value="true" />
+      <created>1764862315308</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1764862315308</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +574,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="simple dropdown" />
     <MESSAGE value="nav update" />
     <MESSAGE value="header scss" />
     <MESSAGE value="header update" />
@@ -602,7 +598,8 @@
     <MESSAGE value="scroll pairs swap" />
     <MESSAGE value="INTRO UPDATED" />
     <MESSAGE value="Logo update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logo update" />
+    <MESSAGE value="Logo downsize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logo downsize" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

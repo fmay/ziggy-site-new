@@ -13,6 +13,10 @@
   @apply hidden lg:grid lg:grid-cols-2 lg:gap-8 mx-auto;
 }
 
+.imagesLeft {
+  @apply lg:gap-16;
+}
+
 // Adjust this value to nudge the first image
 .imageContainerScrolling {
   @apply absolute top-[-28vh];
@@ -36,6 +40,14 @@
   h2 {
     @apply font-normal
   }
+}
+
+.imagesLeft .contentWrapper {
+  @apply border-l-0 border-r-2 border-scroll-pair-border pr-4 pl-0;
+}
+
+.noBorder {
+  @apply border-0 pl-0 pr-0 !important;
 }
 
 .imageContainer {
