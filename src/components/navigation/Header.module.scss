@@ -20,7 +20,7 @@
 }
 
 .logo {
-  @apply text-2xl font-bold text-stripe-navy mt-[6px];
+  @apply text-2xl font-bold text-stripe-navy mt-[18px];
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -28,7 +28,7 @@
   &::before {
     content: '';
     display: inline-block;
-    width: 130px;
+    width: 110px;
     height: 50px;
     background-image: url('../../../public/ziggy-logo-dark-bg.webp');
     background-size: contain;

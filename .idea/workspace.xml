@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="Logo update">
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/logos/ziggy-logo-dark-bg.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/logos/ziggy-logo-dark-bg.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,23 +137,7 @@
       <workItem from="1764675912397" duration="6899000" />
       <workItem from="1764696531845" duration="6957000" />
       <workItem from="1764785035117" duration="3014000" />
-      <workItem from="1764853434322" duration="6112000" />
-    </task>
-    <task id="LOCAL-00064" summary="home customisations">
-      <option name="closed" value="true" />
-      <created>1764503689765</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1764503689765</updated>
-    </task>
-    <task id="LOCAL-00065" summary="home customisations">
-      <option name="closed" value="true" />
-      <created>1764503823454</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1764503823454</updated>
+      <workItem from="1764853434322" duration="7021000" />
     </task>
     <task id="LOCAL-00066" summary="home customisations">
       <option name="closed" value="true" />
@@ -528,7 +515,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764860858878</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Logo update">
+      <option name="closed" value="true" />
+      <created>1764861291795</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1764861291795</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Logo update">
+      <option name="closed" value="true" />
+      <created>1764861781606</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1764861781606</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

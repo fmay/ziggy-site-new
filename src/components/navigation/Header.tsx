@@ -7,7 +7,6 @@ import DesktopNavItem from './DesktopNavItem'
 import MobileNavItem from './MobileNavItem'
 import DesktopDropdownContainer from './DesktopDropdownContainer'
 import styles from './Header.module.scss'
-import { CiCalendar } from 'react-icons/ci'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
