@@ -60,7 +60,7 @@ export default function Products() {
   return (
     <PageLayout
       title="Ziggy Flows"
-      style={LayoutStyleEnum.Feature}
+      style={LayoutStyleEnum.Default}
       description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
       image="/images/customise/home/flows-list.webp"
       waveToColor={sections[0].bgColor}>

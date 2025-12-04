@@ -4,7 +4,7 @@ export default function About() {
   return (
     <PageLayout title="About Us" description="">
       <div className="max-w-4xl mx-auto prose prose-lg">
-        <div className="bg-white p-8 my-[-40px] rounded-lg border border-gray-200 mb-8">
+        <div className="bg-white p-8 mt-[40px] mb-[280px] rounded-lg border border-gray-200 ">
           <h2 className="text-3xl font-semibold text-stripe-navy mb-4">Our Mission</h2>
           <p className="text-stripe-gray text-lg">
             At Ziggy we recognise that the data automation and integration market also known as the

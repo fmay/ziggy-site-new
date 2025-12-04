@@ -33,11 +33,14 @@ type StyleConfigMap = Record<LayoutStyleEnum, StyleConfig>
 
 const styleConfig: StyleConfigMap = {
   default: {
-    bgColor: 'bg-white',
-    textColor: 'text-dark-gray',
+    bgColor: 'bg-header-footer',
+    textColor: 'text-white',
     waveVariant: WavyVariantEnum.Standard,
   },
-  feature: { bgColor: 'bg-gray-800', textColor: 'text-white', waveVariant: WavyVariantEnum.Simple },
+  feature: {
+    bgColor: 'bg-header-footer',
+    textColor: 'text-white',
+    waveVariant: WavyVariantEnum.Simple },
   pricing: {
     bgColor: 'bg-dark-gray',
     textColor: 'text-white',

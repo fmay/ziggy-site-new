@@ -7,7 +7,6 @@ export default function Pricing() {
     <PageLayout
       title="Ziggy Pricing"
       style={LayoutStyleEnum.Feature}
-      bgColor="bg-pale-blue"
       description="Our pricing is simple and transparent. Use the calculator to estimate your costs.">
       <PageSection bgColor="bg-pale-blue">
         <PricingCalculator />
