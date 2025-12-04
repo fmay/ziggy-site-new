@@ -3,11 +3,12 @@
 }
 
 .container {
-  @apply bg-header-footer text-white;
+  @apply bg-header-footer text-white
+  lg:min-h-screen lg:flex lg:items-center lg:justify-center;
 }
 
 .wrapper {
-  @apply flex place-items-center mx-auto max-w-[1600px]
+  @apply flex place-items-center mx-auto max-w-[1200px]
   flex-col w-full gap-[50px] px-10 py-20
   lg:flex-row lg:gap-[80px] lg:px-[60px] lg:pt-20;
 }

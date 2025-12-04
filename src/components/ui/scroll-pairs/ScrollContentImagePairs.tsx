@@ -16,9 +16,10 @@ export interface ContentImagePair {
 
 interface ScrollContentImagePairsProps {
   contentImagePairs: ContentImagePair[]
+  imagesLeft?: boolean
 }
 
-const ScrollContentImagePairs = ({ contentImagePairs }: ScrollContentImagePairsProps) => {
+const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft }: ScrollContentImagePairsProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [imagePosition, setImagePosition] = useState<'scrolling' | 'fixed' | 'scrolling-out'>(
     'scrolling',
