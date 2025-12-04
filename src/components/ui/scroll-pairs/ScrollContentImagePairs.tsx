@@ -188,9 +188,9 @@ const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft }: ScrollConten
   return (
     <div ref={containerRef} className={styles.container}>
       {/* Desktop Layout */}
-      <div className={styles.desktopLayout}>
+      <div className={styles.desktopLayout} style={imagesLeft ? { direction: 'rtl' } : undefined}>
         {/* Left Column - Scrolling Content */}
-        <div className={styles.leftColumn}>
+        <div className={styles.leftColumn} style={imagesLeft ? { direction: 'ltr' } : undefined}>
           {contentImagePairs.map((pair, index) => (
             <div
               key={index}
@@ -205,7 +205,7 @@ const ScrollContentImagePairs = ({ contentImagePairs, imagesLeft }: ScrollConten
         </div>
 
         {/* Right Column - Fixed Images with Transitions */}
-        <div ref={rightColumnRef} className={styles.rightColumn}>
+        <div ref={rightColumnRef} className={styles.rightColumn} style={imagesLeft ? { direction: 'ltr' } : undefined}>
           <div
             ref={imageContainerRef}
             className={`${styles.imageContainer} ${

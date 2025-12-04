@@ -112,7 +112,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     <div className="">
       {/* Other page content above */}
       <div className="py-16">
-        <ScrollContentImagePairs contentImagePairs={contentImagePairs} />
+        <ScrollContentImagePairs contentImagePairs={contentImagePairs} imagesLeft/>
       </div>
       {/* Other page content below */}
     </div>
