@@ -9,29 +9,18 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
 import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
+import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
+import AIJavascript from '@/app/(product)/ai-features/AIJavascript'
 
 export default function Platform() {
   const sections: Section[] = [
     {
       bgColor: 'bg-gray-50',
-      children: (
-        <>
-          <Intro
-            title="AI Stuff"
-            description={
-              <div className="section-intro">
-                <p>
-                  This is the intro text
-                </p>
-                <CTA label="Features overview" href="/features" className="mb-0" />
-              </div>
-            }
-            // image="/placeholder.svg"
-            imageScale={0.5}
-          />
-          {/*<FlowFeatures />*/}
-        </>
-      ),
+      children: <EdgeAssistant />,
+    },
+    {
+      bgColor: 'bg-pale-blue',
+      children: <AIJavascript />,
     },
     {
       bgColor: 'bg-gray-50',
@@ -43,7 +32,7 @@ export default function Platform() {
     <PageLayout
       title="Ziggy's AI Features"
       style={LayoutStyleEnum.Feature}
-      description="AI Blah"
+      description="Ziggy uses AI extensively and more AI features being released all the time."
       image="/placeholder.svg"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
