@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react'
 import ImageStack from '@/components/ui/image-stack/ImageStack'
 import StackCard from '@/components/ui/image-stack/StackCard'
+import Intro from '@/components/ui/intro/Intro'
 
 interface JavascriptFeaturesProps {}
 
@@ -46,17 +47,26 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
 
   return (
     <div>
-      <div id="javascript" className="section-intro mb-20">
-        <h2>AI Edge transformations</h2>
-        <p>
-          Create validations, transformations and mappings on any edge. Data comes in, the AI
-          assistant performs the transformations and validations
-        </p>
-        <p>
-          <strong>AI is never applied at run time. It generates hidden code in the designer, so it is fast
-            and 100% consistent.</strong>
-        </p>
-      </div>
+      <Intro
+        right
+        title="AI Edge transformations"
+        description={
+          <div className="mb-[80px]">
+            <p>
+              Create validations, transformations and mappings on any edge. Data comes in, the AI
+              assistant performs the transformations and validations
+            </p>
+            <p>
+              <strong>
+                AI is never applied at run time. It generates hidden code in the designer, so it is
+                fast and 100% consistent.
+              </strong>
+            </p>
+          </div>
+        }
+        imageScale={0.5}
+      />
+
       <ImageStack items={items} />
     </div>
   )

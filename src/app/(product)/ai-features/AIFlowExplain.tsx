@@ -31,7 +31,6 @@ const AIFlowExplain: FC = () => {
   return (
     <div>
       <Intro
-        right
         title="Flow Explanation"
         description={
           <div className="mb-[100px]">

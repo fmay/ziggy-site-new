@@ -37,7 +37,7 @@ export default function Platform() {
     <PageLayout
       title="Ziggy's AI Features"
       style={LayoutStyleEnum.Feature}
-      description="Ziggy uses AI extensively and more AI features being released all the time."
+      description="Ziggy uses AI extensively and more AI features are being released all the time."
       image="/placeholder.svg"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
