@@ -11,6 +11,7 @@ import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import AIJavascript from '@/app/(product)/ai-features/AIJavascript'
+import AIFlowExplain from '@/app/(product)/ai-features/AIFlowExplain'
 
 export default function Platform() {
   const sections: Section[] = [
@@ -21,6 +22,10 @@ export default function Platform() {
     {
       bgColor: 'bg-pale-blue',
       children: <AIJavascript />,
+    },
+    {
+      bgColor: 'bg-white',
+      children: <AIFlowExplain />,
     },
     {
       bgColor: 'bg-gray-50',

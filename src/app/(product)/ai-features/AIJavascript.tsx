@@ -19,7 +19,7 @@ const AIJavascript: FC = () => {
           </DocsLink>
         </div>
       ),
-      image: '/product/js-ai/jsai-flow.webp',
+      image: '/product/ai-features/js-ai/jsai-flow.webp',
     },
     {
       content: (
@@ -27,14 +27,15 @@ const AIJavascript: FC = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Perform the magic</h2>
           <p className="text-lg text-gray-600 mb-4">
             Now enter your instructions. Ziggy handles the data context by passing in the edge data.
-            You can see the generated code
+            You can see the generated code.
           </p>
+          <p>And, of course, you can now edit the Javascript code.</p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant">
             Learn more
           </DocsLink>
         </div>
       ),
-      image: '/product/js-ai/jsai-prompt.webp',
+      image: '/product/ai-features/js-ai/jsai-prompt.webp',
     },
     {
       content: (
@@ -49,7 +50,7 @@ const AIJavascript: FC = () => {
           </DocsLink>
         </div>
       ),
-      image: '/product/js-ai/jsai-explain.webp',
+      image: '/product/ai-features/js-ai/jsai-explain.webp',
     },
   ]
 
@@ -59,7 +60,7 @@ const AIJavascript: FC = () => {
         right
         title="Javascript Block Assistant"
         description={
-          <div className="section-intro">
+          <div className="">
             <p>
               The Javascript block is the ideal <strong>do anything</strong> block. With Ziggy's AI Assistant,
               non-developers can get the job done, too!
