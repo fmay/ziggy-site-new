@@ -1,7 +1,7 @@
 .stackCard {
   @apply relative overflow-hidden rounded-lg shadow-md bg-white transition-all duration-300;
   h2 {
-    @apply text-[1.5rem];
+    @apply text-[1.5rem] font-normal;
   }
 
   &:hover {
@@ -10,7 +10,7 @@
 }
 
 .graphicLayer {
-  @apply relative z-10 px-0 pt-2;
+  @apply relative z-10 px-0 pt-0;
 }
 
 .graphicContainer {
@@ -62,7 +62,7 @@
 }
 
 .ctaLink {
-  @apply mt-0 inline-flex items-center gap-2 font-medium text-indigo-600 opacity-0 transition-all duration-300;
+  @apply mt-0 inline-flex items-center gap-2 font-medium text-mid-gray opacity-0 transition-all duration-300;
 
   .stackCard:hover & {
     @apply opacity-100;

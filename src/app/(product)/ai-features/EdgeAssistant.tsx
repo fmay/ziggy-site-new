@@ -9,7 +9,7 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
   const items: ReactNode[] = [
     <StackCard
       title="Transform data on any edge"
-      description="Click the AI icon on the edge to open the AI Assistant"
+      description="The AI icon on the edge indicates opens the AI Assistant"
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/AI-Edge-Assistant"
       ctaNewTab
@@ -18,7 +18,7 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
     />,
     <StackCard
       title="Natural language prompt"
-      description="The AI Assistant uses the incoming edge data to ensure it has full context for optimal transformations with minimal input."
+      description="The AI Assistant uses the incoming edge data to ensure it has full context for optimal transformations with minimal input. Error handling and validations elegantly handled. Writes failed validations to the Ziggy Data Store if requested."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/AI-Edge-Assistant"
       ctaNewTab
@@ -27,7 +27,7 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
     />,
     <StackCard
       title="Validations"
-      description="Run any validation operations. Triage into passed and failed. Choice of error handling. Write failed validations to the Ziggy Data Store."
+      description="Run any validation operations. Triage into passed and failed."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/AI-Edge-Assistant"
       ctaNewTab
