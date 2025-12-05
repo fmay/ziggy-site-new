@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="ScrollContentImagePairs borders">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="menu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(home)",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
-    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(home)&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/(home)" />
@@ -84,7 +79,7 @@
       <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -107,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -138,70 +133,7 @@
       <workItem from="1764696531845" duration="6957000" />
       <workItem from="1764785035117" duration="3014000" />
       <workItem from="1764853434322" duration="7964000" />
-    </task>
-    <task id="LOCAL-00068" summary="home customisations">
-      <option name="closed" value="true" />
-      <created>1764504186285</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1764504186285</updated>
-    </task>
-    <task id="LOCAL-00069" summary="home customisations">
-      <option name="closed" value="true" />
-      <created>1764506801853</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1764506801853</updated>
-    </task>
-    <task id="LOCAL-00070" summary="nav dropdown 0.0">
-      <option name="closed" value="true" />
-      <created>1764566503178</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1764566503178</updated>
-    </task>
-    <task id="LOCAL-00071" summary="hover">
-      <option name="closed" value="true" />
-      <created>1764568932438</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1764568932438</updated>
-    </task>
-    <task id="LOCAL-00072" summary="cta wrap 0.0">
-      <option name="closed" value="true" />
-      <created>1764572895332</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1764572895332</updated>
-    </task>
-    <task id="LOCAL-00073" summary="CTA marginy">
-      <option name="closed" value="true" />
-      <created>1764574378875</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1764574378875</updated>
-    </task>
-    <task id="LOCAL-00074" summary="drop shadow">
-      <option name="closed" value="true" />
-      <created>1764575202029</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1764575202029</updated>
-    </task>
-    <task id="LOCAL-00075" summary="update">
-      <option name="closed" value="true" />
-      <created>1764576797635</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1764576797635</updated>
+      <workItem from="1764864730215" duration="4510000" />
     </task>
     <task id="LOCAL-00076" summary="pre scroll pairs nudge">
       <option name="closed" value="true" />
@@ -531,7 +463,71 @@
       <option name="project" value="LOCAL" />
       <updated>1764862727177</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Left alignment 2">
+      <option name="closed" value="true" />
+      <created>1764865357895</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1764865357895</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Left alignment 3">
+      <option name="closed" value="true" />
+      <created>1764866636867</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1764866636867</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Left alignment done">
+      <option name="closed" value="true" />
+      <created>1764866855962</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1764866855962</updated>
+    </task>
+    <task id="LOCAL-00120" summary="rounded cta">
+      <option name="closed" value="true" />
+      <created>1764866937410</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1764866937410</updated>
+    </task>
+    <task id="LOCAL-00121" summary="carousel 1">
+      <option name="closed" value="true" />
+      <created>1764867737336</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1764867737336</updated>
+    </task>
+    <task id="LOCAL-00122" summary="carousel 2">
+      <option name="closed" value="true" />
+      <created>1764867787758</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1764867787759</updated>
+    </task>
+    <task id="LOCAL-00123" summary="about; pricing">
+      <option name="closed" value="true" />
+      <created>1764868968732</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1764868968732</updated>
+    </task>
+    <task id="LOCAL-00124" summary="menu">
+      <option name="closed" value="true" />
+      <created>1764869183932</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1764869183932</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,14 +573,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="header scss" />
-    <MESSAGE value="header update" />
-    <MESSAGE value="priing 0.0" />
-    <MESSAGE value="priing 0.3" />
-    <MESSAGE value="pricing 0.4" />
-    <MESSAGE value="features page new approach" />
-    <MESSAGE value="tweaks" />
-    <MESSAGE value="home alter" />
     <MESSAGE value="nav mods" />
     <MESSAGE value="nav home hero" />
     <MESSAGE value="wavy simple" />
@@ -602,7 +590,15 @@
     <MESSAGE value="Logo update" />
     <MESSAGE value="Logo downsize" />
     <MESSAGE value="ScrollContentImagePairs borders" />
-    <option name="LAST_COMMIT_MESSAGE" value="ScrollContentImagePairs borders" />
+    <MESSAGE value="Left alignment 2" />
+    <MESSAGE value="Left alignment 3" />
+    <MESSAGE value="Left alignment done" />
+    <MESSAGE value="rounded cta" />
+    <MESSAGE value="carousel 1" />
+    <MESSAGE value="carousel 2" />
+    <MESSAGE value="about; pricing" />
+    <MESSAGE value="menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
