@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="menu" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="logo updates">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,14 +136,8 @@
       <workItem from="1764785035117" duration="3014000" />
       <workItem from="1764853434322" duration="7964000" />
       <workItem from="1764864730215" duration="4510000" />
-    </task>
-    <task id="LOCAL-00076" summary="pre scroll pairs nudge">
-      <option name="closed" value="true" />
-      <created>1764578694569</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1764578694569</updated>
+      <workItem from="1764920277045" duration="207000" />
+      <workItem from="1764921522293" duration="589000" />
     </task>
     <task id="LOCAL-00077" summary="cta update">
       <option name="closed" value="true" />
@@ -527,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764869183932</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="logo updates">
+      <option name="closed" value="true" />
+      <created>1764920481991</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1764920481991</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="nav mods" />
     <MESSAGE value="nav home hero" />
     <MESSAGE value="wavy simple" />
     <MESSAGE value="base for page layout and wavy" />
@@ -598,7 +601,8 @@
     <MESSAGE value="carousel 2" />
     <MESSAGE value="about; pricing" />
     <MESSAGE value="menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu" />
+    <MESSAGE value="logo updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo updates" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
