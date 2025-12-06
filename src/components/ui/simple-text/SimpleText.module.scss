@@ -1,0 +1,35 @@
+.container {
+  @apply w-full;
+}
+
+.column {
+  @apply flex flex-col md:flex-row gap-6 items-start;
+}
+
+.columnSwapped {
+  @apply flex flex-col md:flex-row-reverse gap-6 items-start;
+}
+
+.textContent {
+  @apply flex-1 flex flex-col gap-4;
+}
+
+.title {
+  @apply text-4xl font-normal;
+}
+
+.subtitle {
+  @apply text-base;
+
+  p {
+    @apply m-0;
+  }
+}
+
+.extra {
+  @apply flex-1;
+}
+
+.extraCentered {
+  @apply flex-1 flex items-center justify-center;
+}

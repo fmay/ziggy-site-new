@@ -50,7 +50,7 @@ export default function Cluster() {
       title="Ziggy Cluster"
       style={LayoutStyleEnum.Feature}
       description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
-      image="/placeholder.svg"
+      image="/platform/cluster.webp"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection

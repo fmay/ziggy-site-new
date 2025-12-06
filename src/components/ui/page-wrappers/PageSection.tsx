@@ -5,6 +5,7 @@ import { tailwindClassToHex } from '@/utils/tailwindColors'
 
 export interface Section {
   bgColor: string
+  color?: string
   children: ReactNode
   id?: string
   waveInvert?: boolean
@@ -16,6 +17,7 @@ interface PageSectionProps {
   paddingY?: number
   paddingX?: number
   bgColor?: string
+  color?: string
   alt?: string
   id?: string
   waveToColor?: string
@@ -28,6 +30,7 @@ const PageSection: FC<PageSectionProps> = ({
   paddingY = 100,
   paddingX = 40,
   bgColor = 'transparent',
+  color,
   alt,
   id,
   waveToColor,
@@ -38,12 +41,17 @@ const PageSection: FC<PageSectionProps> = ({
   const bgColorHex =
     !waveToColor && bgColor !== 'transparent' ? tailwindClassToHex(bgColor) : undefined
 
+  // Convert color to hex for inline style
+  const colorHex = color ? tailwindClassToHex(color) : undefined
 
   return (
     <div
       id={id || ''}
       className={`${styles.pageSection} ${bgColor}`}
-      style={bgColorHex ? { backgroundColor: bgColorHex } : undefined}>
+      style={{
+        ...(bgColorHex ? { backgroundColor: bgColorHex } : {}),
+        ...(colorHex ? { color: colorHex } : {}),
+      }}>
       <Wavy fromColor={bgColor} toColor={waveToColor} waveInvert={waveInvert}  variant={waveVariant}>
         <div className={styles.container}>{children}</div>
       </Wavy>

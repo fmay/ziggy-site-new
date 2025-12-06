@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="hp and platform tlp">
-      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/Cluster.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/MadeEasy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/Pricing.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/simple-text/SimpleText.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,15 +146,7 @@
       <workItem from="1764921522293" duration="589000" />
       <workItem from="1764922421449" duration="11856000" />
       <workItem from="1764944474728" duration="616000" />
-      <workItem from="1765009096205" duration="20802000" />
-    </task>
-    <task id="LOCAL-00091" summary="home alter">
-      <option name="closed" value="true" />
-      <created>1764688021830</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1764688021830</updated>
+      <workItem from="1765009096205" duration="22740000" />
     </task>
     <task id="LOCAL-00092" summary="nav mods">
       <option name="closed" value="true" />
@@ -538,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765026361768</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="hp and platform tlp">
+      <option name="closed" value="true" />
+      <created>1765037187446</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1765037187446</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

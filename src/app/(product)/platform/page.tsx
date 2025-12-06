@@ -14,6 +14,7 @@ import Hero from '@/app/(product)/platform/Hero'
 import MadeEasy from '@/app/(product)/platform/MadeEasy'
 import Extensible from '@/app/(product)/platform/Extensible'
 import Cluster from '@/app/(product)/platform/Cluster'
+import Pricing from '@/app/(product)/platform/Pricing'
 
 export default function Platform() {
   const sections: Section[] = [
@@ -28,6 +29,11 @@ export default function Platform() {
     {
       bgColor: 'white',
       children: <Cluster />,
+    },
+    {
+      bgColor: '#d78383',
+      color: 'text-white',
+      children: <Pricing />,
     },
     {
       bgColor: 'pale-blue',
@@ -60,6 +66,7 @@ export default function Platform() {
         <PageSection
           key={index}
           bgColor={section.bgColor}
+          color={section.color}
           waveToColor={sections[index + 1]?.bgColor}
           waveInvert={section.waveInvert}
         >
