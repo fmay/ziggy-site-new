@@ -31,7 +31,7 @@
 }
 
 .imageColumn {
-  @apply flex-1;
+  width: 50%;
 }
 
 .image {
@@ -39,9 +39,11 @@
 }
 
 .imageCopyColumn {
-  @apply flex-1;
+  width: 50%;
+  position: relative;
+  z-index: 1;
 
-  * {
+  p {
     @apply text-xl;
   }
 
@@ -50,5 +52,10 @@
   }
   li {
     @apply text-lg text-gray-500 list-disc list-outside my-2;
+  }
+
+  a {
+    position: relative;
+    z-index: 10;
   }
 }

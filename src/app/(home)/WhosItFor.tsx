@@ -15,10 +15,16 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
             Developers are a scarce resource and even with AI, coding makes little sense other than
             for the simplest use-cases
           </li>
-          <li>Data specialists understand requirements and are best placed to implement solutions - if only it were simple. </li>
+          <li>
+            Data specialists understand requirements and are best placed to implement solutions - if
+            only it were simple.{' '}
+          </li>
         </ul>
-        <p>Ziggy solves these issue by letting both developers and non-developers integrate far faster.</p>
-        <CTA label="Learn More" href="platform" noBottomMargin/>
+        <p>
+          Ziggy solves these issue by letting both developers and non-developers integrate far
+          faster.
+        </p>
+        <CTA label="Learn More" href="platform" noBottomMargin />
       </>
     )
   }
@@ -31,8 +37,9 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
           Our team has a deep background in integrations and understands the challenges faced by
           companies of all sizes."
         imageCopy={<ImageContent />}
-        image="/placeholder.svg"
+        image="/home/who-for.webp"
         swap
+        scale={0.8}
       />
     </div>
   )

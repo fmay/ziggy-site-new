@@ -9,53 +9,52 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
 import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
+import WhosItFor from '@/app/(home)/WhosItFor'
+import Hero from '@/app/(product)/platform/Hero'
 
 export default function Platform() {
   const sections: Section[] = [
     {
-      bgColor: 'bg-gray-50',
+      bgColor: 'gray-100',
+      children: <WhosItFor />,
+    },
+    {
+      bgColor: 'pale-blue',
       children: (
-        <>
-          <Intro
-            title="The Ziggy Platform"
-            description={
-              <div className="section-intro">
-                <p>
-                  This is the intro text
-                </p>
-                <CTA label="Features overview" href="/features" className="mb-0" />
-              </div>
-            }
-            // image="/placeholder.svg"
-            imageScale={0.5}
-          />
-          {/*<FlowFeatures />*/}
-        </>
+        <div className="section-intro-2-col">
+          <div>
+            <h2>Professional Services</h2>
+            <p>
+              Whether you want us train, build flows, develop custom Ziggy Blocks or just hand-hold,
+              we're here to provide expert support when you need it.
+            </p>
+          </div>
+          <div>
+            <CTA label="Contact Us" href="/contact" />
+          </div>
+        </div>
       ),
     },
     {
-      bgColor: 'bg-gray-50',
-      children: <QuickBookDemo />,
+      bgColor: 'gray-100',
+      children: <QuickBookDemo background="dark" />,
     },
   ]
 
   return (
-    <PageLayout
-      title="The Ziggy Platform"
-      style={LayoutStyleEnum.Feature}
-      description="Blah"
-      image="/placeholder.svg"
-      waveToColor={sections[0].bgColor}>
+    <div className="min-h-screen mx-auto pt-12">
+      <Hero />
+
       {sections.map((section, index) => (
         <PageSection
           key={index}
-          id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}>
+          waveInvert={section.waveInvert}
+        >
           {section.children}
         </PageSection>
       ))}
-    </PageLayout>
+    </div>
   )
 }

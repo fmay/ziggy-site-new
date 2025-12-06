@@ -2,6 +2,7 @@ import styles from './hero.module.scss'
 import Image from 'next/image'
 import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import { GiCheckMark } from 'react-icons/gi'
+import CTA from '@/components/ui/cta/CTA'
 
 const Hero = () => (
   <section className={styles.heroSection}>
@@ -45,12 +46,14 @@ const Hero = () => (
               </ul>
             </div>
             <p className={styles.signoffDesktop}>Ziggy it!</p>
+            <CTA label="The Ziggy Platform" href="platform" />
+
           </div>
 
           {/*Hero Image*/}
           <div className={styles.col2}>
             <div className={styles.heroImage}>
-              <Image src="/hero/home.webp" alt="" width={500} height={500} />
+              <Image src="/hero/home.webp" alt="" width={600} height={600} />
             </div>
           </div>
 

@@ -34,12 +34,17 @@
 .subheading {
   @apply text-2xl max-w-[800px] font-extralight
     lg:mx-auto;
-    ul {
-      @apply list-none text-center lg:text-left mt-8;
-      li {
-        @apply font-extralight mb-1 flex items-center justify-center lg:justify-start gap-2;
-      }
+
+  p {
+    @apply text-2xl font-extralight mt-8;
+  }
+
+  ul {
+    @apply list-none text-center lg:text-left mt-8;
+    li {
+      @apply font-extralight mb-1 flex items-center justify-center lg:justify-start gap-2;
     }
+  }
 
   .checkIcon {
     @apply text-white flex-shrink-0;

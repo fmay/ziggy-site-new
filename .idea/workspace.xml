@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="about update">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="Home revision 0.2">
+      <change afterPath="$PROJECT_DIR$/pixelmator/hero/platform-hero.pxd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/Hero.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/hero.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/WhosItFor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/WhosItFor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/cta/cta.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/cta/cta.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,46 +53,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(product)/ai-features&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(product)/platform",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
+    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
+      <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/(product)/ai-features" />
       <recent name="$PROJECT_DIR$/public/icons" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/app/(home)" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pixelmator/hero" />
+      <recent name="$PROJECT_DIR$/public/hero" />
       <recent name="$PROJECT_DIR$/public/product/ai-features" />
       <recent name="$PROJECT_DIR$/public/product/flow-explain" />
       <recent name="$PROJECT_DIR$/public/product/js-ai" />
-      <recent name="$PROJECT_DIR$/public/product/edge-assistant" />
-      <recent name="$PROJECT_DIR$/pixelmator/logos" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -104,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -140,54 +151,7 @@
       <workItem from="1764921522293" duration="589000" />
       <workItem from="1764922421449" duration="11856000" />
       <workItem from="1764944474728" duration="616000" />
-    </task>
-    <task id="LOCAL-00083" summary="tweaks">
-      <option name="closed" value="true" />
-      <created>1764589334996</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1764589334996</updated>
-    </task>
-    <task id="LOCAL-00084" summary="header scss">
-      <option name="closed" value="true" />
-      <created>1764594714175</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1764594714176</updated>
-    </task>
-    <task id="LOCAL-00085" summary="header update">
-      <option name="closed" value="true" />
-      <created>1764595859120</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1764595859120</updated>
-    </task>
-    <task id="LOCAL-00086" summary="priing 0.0">
-      <option name="closed" value="true" />
-      <created>1764597953758</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1764597953758</updated>
-    </task>
-    <task id="LOCAL-00087" summary="priing 0.3">
-      <option name="closed" value="true" />
-      <created>1764613672735</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1764613672735</updated>
-    </task>
-    <task id="LOCAL-00088" summary="pricing 0.4">
-      <option name="closed" value="true" />
-      <created>1764614991695</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1764614991695</updated>
+      <workItem from="1765009096205" duration="16120000" />
     </task>
     <task id="LOCAL-00089" summary="features page new approach">
       <option name="closed" value="true" />
@@ -533,7 +497,55 @@
       <option name="project" value="LOCAL" />
       <updated>1764944141509</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="about update">
+      <option name="closed" value="true" />
+      <created>1765012424239</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1765012424239</updated>
+    </task>
+    <task id="LOCAL-00133" summary="nextjs update">
+      <option name="closed" value="true" />
+      <created>1765012588757</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1765012588757</updated>
+    </task>
+    <task id="LOCAL-00134" summary="home hero img">
+      <option name="closed" value="true" />
+      <created>1765013974204</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1765013974204</updated>
+    </task>
+    <task id="LOCAL-00135" summary="home hero img">
+      <option name="closed" value="true" />
+      <created>1765014687659</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1765014687659</updated>
+    </task>
+    <task id="LOCAL-00136" summary="simple pair 0.5">
+      <option name="closed" value="true" />
+      <created>1765019101894</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1765019101894</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Home revision 0.2">
+      <option name="closed" value="true" />
+      <created>1765020325926</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1765020325927</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,10 +591,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="flows images" />
-    <MESSAGE value="platform tlp" />
-    <MESSAGE value="ai-tlp" />
-    <MESSAGE value="new logo" />
     <MESSAGE value="hp hero" />
     <MESSAGE value="scroll pairs swap" />
     <MESSAGE value="INTRO UPDATED" />
@@ -604,7 +612,11 @@
     <MESSAGE value="ai-features 0.5" />
     <MESSAGE value="ai-features 0.7" />
     <MESSAGE value="about update" />
-    <option name="LAST_COMMIT_MESSAGE" value="about update" />
+    <MESSAGE value="nextjs update" />
+    <MESSAGE value="home hero img" />
+    <MESSAGE value="simple pair 0.5" />
+    <MESSAGE value="Home revision 0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home revision 0.2" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
