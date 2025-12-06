@@ -5,21 +5,18 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CustomizationHome from '@/app/(home)/CustomizationHome'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
+import WhosItFor from '@/app/(home)/WhosItFor'
+import BusinessFunctions from '@/app/(home)/BusinessFunctions'
 
 export default function HomePage() {
   const sections: Section[] = [
     {
       bgColor: 'gray-100',
-      children: <HomeScrollList />,
+      children: <WhosItFor />,
     },
     {
       bgColor: 'pale-blue',
-      children: <CustomizationHome />,
-    },
-    {
-      bgColor: 'white',
-      children: <HomePricing />,
-      waveInvert: true,
+      children: <BusinessFunctions />,
     },
     {
       bgColor: 'pale-blue',
