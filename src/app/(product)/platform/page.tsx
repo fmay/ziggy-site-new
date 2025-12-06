@@ -11,12 +11,23 @@ import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import WhosItFor from '@/app/(home)/WhosItFor'
 import Hero from '@/app/(product)/platform/Hero'
+import MadeEasy from '@/app/(product)/platform/MadeEasy'
+import Extensible from '@/app/(product)/platform/Extensible'
+import Cluster from '@/app/(product)/platform/Cluster'
 
 export default function Platform() {
   const sections: Section[] = [
     {
       bgColor: 'gray-100',
-      children: <WhosItFor />,
+      children: <MadeEasy />,
+    },
+    {
+      bgColor: 'pale-blue',
+      children: <Extensible />,
+    },
+    {
+      bgColor: 'white',
+      children: <Cluster />,
     },
     {
       bgColor: 'pale-blue',
