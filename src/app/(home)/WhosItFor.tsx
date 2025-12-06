@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
+import CTA from '@/components/ui/cta/CTA'
 
 interface WhosItForProps {}
 
@@ -17,6 +18,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
           <li>Data specialists understand requirements and are best placed to implement solutions - if only it were simple. </li>
         </ul>
         <p>Ziggy solves these issue by letting both developers and non-developers integrate far faster.</p>
+        <CTA label="Learn More" href="platform" noBottomMargin/>
       </>
     )
   }

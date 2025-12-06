@@ -2,14 +2,15 @@ import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
 
-interface BusinessFunctionsProps {}
+interface ImproveProcessesProps {}
 
-const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
+const ImproveProcesses: FC<ImproveProcessesProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Copy needed?</p>
+        <p>Copy?</p>
         <CTA label="Learn More" href="platform" noBottomMargin/>
+
       </>
     )
   }
@@ -17,13 +18,14 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Business functions we help"
-        subtitle="Blah"
+        title="Automation and integration processes we improve"
+        subtitle="Subtitle copy?"
         imageCopy={<ImageContent />}
         image="/placeholder.svg"
+        swap
       />
     </div>
   )
 }
 
-export default BusinessFunctions
+export default ImproveProcesses

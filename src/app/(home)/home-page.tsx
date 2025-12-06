@@ -1,12 +1,11 @@
 import Hero from '@/app/(home)/Hero'
-import HomeScrollList from '@/app/(home)/HomeScrollList'
-import HomePricing from '@/app/(home)/HomePricing'
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
-import CustomizationHome from '@/app/(home)/CustomizationHome'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
 import WhosItFor from '@/app/(home)/WhosItFor'
 import BusinessFunctions from '@/app/(home)/BusinessFunctions'
+import ImproveProcesses from '@/app/(home)/ImproveProcesses'
+import IntegrationPartner from '@/app/(home)/IntegrationPartner'
 
 export default function HomePage() {
   const sections: Section[] = [
@@ -17,6 +16,14 @@ export default function HomePage() {
     {
       bgColor: 'pale-blue',
       children: <BusinessFunctions />,
+    },
+    {
+      bgColor: 'bg-white',
+      children: <ImproveProcesses />,
+    },
+    {
+      bgColor: 'pale-blue',
+      children: <IntegrationPartner />,
     },
     {
       bgColor: 'pale-blue',

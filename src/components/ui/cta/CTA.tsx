@@ -9,9 +9,10 @@ interface CTAProps {
   style?: 'primary' | 'secondary'
   href: string
   className?: string
+  noBottomMargin?: boolean
 }
 
-const CTA: FC<CTAProps> = ({ label, style, href, className = '' }) => {
+const CTA: FC<CTAProps> = ({ label, style, href, className = '', noBottomMargin }) => {
   const [styleClassName, setStyleClassName] = useState(styles.primaryCTAButton)
 
   useEffect(() => {
@@ -35,14 +36,14 @@ const CTA: FC<CTAProps> = ({ label, style, href, className = '' }) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${styleClassName} ${styles.button} my-12 ${className}`}
+          className={`${styleClassName} ${styles.button} my-12 ${noBottomMargin ? 'mb-0' : ''} ${className}`}
         >
           {label}
         </a>
       ) : (
         <Link
           href={href || '#'}
-          className={`${styleClassName} ${styles.button} my-12 ${className}`}
+          className={`${styleClassName} ${styles.button} my-12 ${noBottomMargin ? 'mb-0' : ''} ${className}`}
         >
           {label}
         </Link>

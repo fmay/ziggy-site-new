@@ -14,17 +14,22 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
   return (
     <div className={styles.container}>
       {/* First Row - Title and Subtitle */}
-      <div className={`${styles.textColumn} ${swap ? styles.swapped : ''}`}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.subtitle}>{subtitle}</p>
+      <div className={`${styles.textRow} ${swap ? styles.swapped : ''}`}>
+        <div className={styles.textColumn}>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.subtitle}>{subtitle}</p>
+        </div>
+        <div className={styles.textColumn}></div>
       </div>
 
       {/* Second Row - Image and Image Copy */}
-      <div className={`${styles.imageColumn} ${swap ? styles.swapped : ''}`}>
-        <Image src={image} alt={title} width={600} height={400} className={styles.image} />
-      </div>
-      <div className={`${styles.imageCopyColumn} ${swap ? styles.swapped : ''}`}>
-        {imageCopy}
+      <div className={`${styles.imageRow} ${swap ? styles.swapped : ''}`}>
+        <div className={styles.imageColumn}>
+          <Image src={image} alt={title} width={600} height={400} className={styles.image} />
+        </div>
+        <div className={styles.imageCopyColumn}>
+          {imageCopy}
+        </div>
       </div>
     </div>
   )
