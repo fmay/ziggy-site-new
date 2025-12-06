@@ -13,7 +13,7 @@
   "dependencies": {
     "js-yaml": "^4.1.1",
     "konva": "^10.0.12",
-    "next": "^16.0.5",
+    "next": "^16.0.7",
     "react": "^19.2.0",
     "react-calendly": "^4.4.0",
     "react-dom": "^19.2.0",
@@ -37,7 +37,7 @@
     "autoprefixer": "^10.4.16",
     "baseline-browser-mapping": "^2.8.32",
     "eslint": "^9.39.1",
-    "eslint-config-next": "^16.0.5",
+    "eslint-config-next": "^16.0.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
