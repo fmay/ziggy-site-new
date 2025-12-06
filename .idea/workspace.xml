@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="logo updates">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="about update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(home)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(product)/ai-features&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,18 +67,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/(product)/ai-features" />
+      <recent name="$PROJECT_DIR$/public/icons" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
-      <recent name="$PROJECT_DIR$/src/app/(features)/features" />
-      <recent name="$PROJECT_DIR$/src/app/integration-partners" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/product/ai-features" />
+      <recent name="$PROJECT_DIR$/public/product/flow-explain" />
+      <recent name="$PROJECT_DIR$/public/product/js-ai" />
+      <recent name="$PROJECT_DIR$/public/product/edge-assistant" />
       <recent name="$PROJECT_DIR$/pixelmator/logos" />
-      <recent name="$PROJECT_DIR$/public/hero" />
-      <recent name="$PROJECT_DIR$/src/components/navigation" />
-      <recent name="$PROJECT_DIR$/pixelmator/product" />
-      <recent name="$PROJECT_DIR$/src/components/ui/image-stack" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -138,54 +138,8 @@
       <workItem from="1764864730215" duration="4510000" />
       <workItem from="1764920277045" duration="207000" />
       <workItem from="1764921522293" duration="589000" />
-    </task>
-    <task id="LOCAL-00077" summary="cta update">
-      <option name="closed" value="true" />
-      <created>1764582267330</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1764582267330</updated>
-    </task>
-    <task id="LOCAL-00078" summary="update">
-      <option name="closed" value="true" />
-      <created>1764586391286</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1764586391286</updated>
-    </task>
-    <task id="LOCAL-00079" summary="externalised desktop dropdown">
-      <option name="closed" value="true" />
-      <created>1764586769513</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1764586769513</updated>
-    </task>
-    <task id="LOCAL-00080" summary="simple dropdown">
-      <option name="closed" value="true" />
-      <created>1764587053031</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1764587053031</updated>
-    </task>
-    <task id="LOCAL-00081" summary="nav update">
-      <option name="closed" value="true" />
-      <created>1764588375833</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1764588375833</updated>
-    </task>
-    <task id="LOCAL-00082" summary="tweaks">
-      <option name="closed" value="true" />
-      <created>1764589230334</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1764589230334</updated>
+      <workItem from="1764922421449" duration="11856000" />
+      <workItem from="1764944474728" duration="616000" />
     </task>
     <task id="LOCAL-00083" summary="tweaks">
       <option name="closed" value="true" />
@@ -531,7 +485,55 @@
       <option name="project" value="LOCAL" />
       <updated>1764920481991</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="icon updates">
+      <option name="closed" value="true" />
+      <created>1764922610684</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1764922610684</updated>
+    </task>
+    <task id="LOCAL-00127" summary="ai-features 0.3">
+      <option name="closed" value="true" />
+      <created>1764932536066</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1764932536066</updated>
+    </task>
+    <task id="LOCAL-00128" summary="ai-features 0.4">
+      <option name="closed" value="true" />
+      <created>1764933938791</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1764933938791</updated>
+    </task>
+    <task id="LOCAL-00129" summary="ai-features 0.5">
+      <option name="closed" value="true" />
+      <created>1764934131057</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1764934131057</updated>
+    </task>
+    <task id="LOCAL-00130" summary="ai-features 0.7">
+      <option name="closed" value="true" />
+      <created>1764940564828</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1764940564828</updated>
+    </task>
+    <task id="LOCAL-00131" summary="about update">
+      <option name="closed" value="true" />
+      <created>1764944141509</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1764944141509</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,12 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="nav home hero" />
-    <MESSAGE value="wavy simple" />
-    <MESSAGE value="base for page layout and wavy" />
-    <MESSAGE value="base for page layout and wavy 0.3" />
-    <MESSAGE value="page layout updated" />
-    <MESSAGE value="build" />
     <MESSAGE value="flows images" />
     <MESSAGE value="platform tlp" />
     <MESSAGE value="ai-tlp" />
@@ -602,7 +598,13 @@
     <MESSAGE value="about; pricing" />
     <MESSAGE value="menu" />
     <MESSAGE value="logo updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="logo updates" />
+    <MESSAGE value="icon updates" />
+    <MESSAGE value="ai-features 0.3" />
+    <MESSAGE value="ai-features 0.4" />
+    <MESSAGE value="ai-features 0.5" />
+    <MESSAGE value="ai-features 0.7" />
+    <MESSAGE value="about update" />
+    <option name="LAST_COMMIT_MESSAGE" value="about update" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

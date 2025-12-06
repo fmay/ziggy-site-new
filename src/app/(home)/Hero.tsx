@@ -32,7 +32,7 @@ const Hero = () => (
                 </li>
                 <li>
                   <GiCheckMark className={styles.checkIcon} />
-                  <span>Easy access to any data sources</span>
+                  <span>Wonderfully easy to use</span>
                 </li>
                 <li>
                   <GiCheckMark className={styles.checkIcon} />
