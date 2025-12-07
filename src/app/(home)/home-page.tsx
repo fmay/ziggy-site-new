@@ -8,6 +8,7 @@ import ImproveProcesses from '@/app/(home)/ImproveProcesses'
 import IntegrationPartner from '@/app/(home)/IntegrationPartner'
 import ExampleAutomations from '@/app/(home)/ExampleAutomations'
 import AI from '@/app/(home)/AI'
+import Pricing from '@/app/(home)/Pricing'
 
 export default function HomePage() {
   const sections: Section[] = [
@@ -31,6 +32,10 @@ export default function HomePage() {
     {
       bgColor: 'pale-blue',
       children: <IntegrationPartner />,
+    },
+    {
+      bgColor: 'white',
+      children: <Pricing />,
     },
     {
       bgColor: 'pale-blue',
