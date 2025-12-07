@@ -7,6 +7,7 @@ import BusinessFunctions from '@/app/(home)/BusinessFunctions'
 import ImproveProcesses from '@/app/(home)/ImproveProcesses'
 import IntegrationPartner from '@/app/(home)/IntegrationPartner'
 import ExampleAutomations from '@/app/(home)/ExampleAutomations'
+import AI from '@/app/(home)/AI'
 
 export default function HomePage() {
   const sections: Section[] = [
@@ -21,6 +22,11 @@ export default function HomePage() {
     {
       bgColor: 'bg-white',
       children: <ExampleAutomations />,
+    },
+    {
+      bgColor: 'bg-gray-50',
+      waveInvert: true,
+      children: <AI />,
     },
     {
       bgColor: 'pale-blue',
