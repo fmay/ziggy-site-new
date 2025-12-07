@@ -6,6 +6,7 @@ import WhosItFor from '@/app/(home)/WhosItFor'
 import BusinessFunctions from '@/app/(home)/BusinessFunctions'
 import ImproveProcesses from '@/app/(home)/ImproveProcesses'
 import IntegrationPartner from '@/app/(home)/IntegrationPartner'
+import ExampleAutomations from '@/app/(home)/ExampleAutomations'
 
 export default function HomePage() {
   const sections: Section[] = [
@@ -19,7 +20,7 @@ export default function HomePage() {
     },
     {
       bgColor: 'bg-white',
-      children: <ImproveProcesses />,
+      children: <ExampleAutomations />,
     },
     {
       bgColor: 'pale-blue',

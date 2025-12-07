@@ -8,9 +8,8 @@ const ImproveProcesses: FC<ImproveProcessesProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Copy?</p>
-        <CTA label="Learn More" href="platform" noBottomMargin/>
-
+        <p>Below are some example process. Scroll through the list to get some ideas.</p>
+        <CTA label="Learn More" href="platform" noBottomMargin />
       </>
     )
   }
@@ -18,8 +17,8 @@ const ImproveProcesses: FC<ImproveProcessesProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Automation and integration processes we improve"
-        subtitle="Subtitle copy?"
+        title="Automation and integration processes"
+        subtitle="The list is endless. Ziggy can help you move data from A to B in almost any scenario and between almost any platform, database, API, files etc."
         imageCopy={<ImageContent />}
         image="/placeholder.svg"
         swap

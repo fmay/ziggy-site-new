@@ -8,7 +8,7 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Copy needed?</p>
+        <p>Ziggy is your invisible facilitator for ensuring that things happen seamlessly, securely and quickly. </p>
         <CTA label="Learn More" href="platform" noBottomMargin/>
       </>
     )
@@ -18,9 +18,9 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
     <div>
       <SimplePair
         title="Business functions we help"
-        subtitle="Blah"
+        subtitle="Ziggy and help automate process in every department in your company with normal data operations and Generative AI processes."
         imageCopy={<ImageContent />}
-        image="/placeholder.svg"
+        image="/home/business-functions copy.webp"
       />
     </div>
   )

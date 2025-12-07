@@ -12,6 +12,7 @@ interface IntroProps {
   imageNudge?: number
   hasCTA?: boolean
   right?: boolean
+  className?: string
 }
 
 const Intro: FC<IntroProps> = ({
@@ -23,6 +24,7 @@ const Intro: FC<IntroProps> = ({
   imageNudge = 0,
   hasCTA,
   right,
+  className
 }) => {
   const getMarginY = () => {
     if (hasCTA) return -90
@@ -57,7 +59,7 @@ const Intro: FC<IntroProps> = ({
     )
 
     return (
-      <div className={styles.container}>
+      <div className={`${styles.container} ${className}`}>
         <div className={styles.column}>{right ? imageContent : textContent}</div>
         <div className={styles.column}>{right ? textContent : imageContent}</div>
       </div>
