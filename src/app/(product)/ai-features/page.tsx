@@ -13,6 +13,7 @@ import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import AIJavascript from '@/app/(product)/ai-features/AIJavascript'
 import AIFlowExplain from '@/app/(product)/ai-features/AIFlowExplain'
 import ComingSoon from '@/app/(product)/ai-features/ComingSoon'
+import AIGenerate from '@/app/(product)/ai-features/AIGenerate'
 
 export default function Platform() {
   const sections: Section[] = [
@@ -25,7 +26,11 @@ export default function Platform() {
       children: <AIJavascript />,
     },
     {
-      bgColor: 'bg-white',
+      bgColor: 'white',
+      children: <AIGenerate />,
+    },
+    {
+      bgColor: 'bg-gray-100',
       children: <AIFlowExplain />,
     },
     {
@@ -42,8 +47,8 @@ export default function Platform() {
     <PageLayout
       title="Ziggy's AI Features"
       style={LayoutStyleEnum.Feature}
-      description="Ziggy uses AI extensively and more AI features are being released all the time."
-      image="/placeholder.svg"
+      description="Ziggy uses AI extensively and more AI features are being released all the time. Be assured, AI never touches your data during flow execution"
+      image="/hero/ai-features.webp"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection

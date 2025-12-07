@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="processes 0.11">
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/AI.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/Pricing.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="processes 0.13">
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/AIGenerate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/AIFlowExplain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/AIFlowExplain.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/ComingSoon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/ComingSoon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,35 +46,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(home)&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.cache.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(product)/ai-features",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.cache.executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
+    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(product)/ai-features" />
       <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/ai-features" />
       <recent name="$PROJECT_DIR$/public/icons" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
@@ -158,23 +159,8 @@
       <workItem from="1765009096205" duration="24587000" />
       <workItem from="1765088717751" duration="7535000" />
       <workItem from="1765098006009" duration="415000" />
-      <workItem from="1765098532046" duration="351000" />
-    </task>
-    <task id="LOCAL-00097" summary="page layout updated">
-      <option name="closed" value="true" />
-      <created>1764750945643</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1764750945643</updated>
-    </task>
-    <task id="LOCAL-00098" summary="build">
-      <option name="closed" value="true" />
-      <created>1764756936551</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1764756936551</updated>
+      <workItem from="1765098532046" duration="721000" />
+      <workItem from="1765125054091" duration="2692000" />
     </task>
     <task id="LOCAL-00099" summary="build">
       <option name="closed" value="true" />
@@ -552,7 +538,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765098359770</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="processes 0.12">
+      <option name="closed" value="true" />
+      <created>1765099148683</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1765099148683</updated>
+    </task>
+    <task id="LOCAL-00147" summary="processes 0.13">
+      <option name="closed" value="true" />
+      <created>1765099242687</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1765099242687</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,8 +600,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="ScrollContentImagePairs borders" />
-    <MESSAGE value="Left alignment 2" />
     <MESSAGE value="Left alignment 3" />
     <MESSAGE value="Left alignment done" />
     <MESSAGE value="rounded cta" />
@@ -623,7 +623,9 @@
     <MESSAGE value="functions" />
     <MESSAGE value="processes 0.1" />
     <MESSAGE value="processes 0.11" />
-    <option name="LAST_COMMIT_MESSAGE" value="processes 0.11" />
+    <MESSAGE value="processes 0.12" />
+    <MESSAGE value="processes 0.13" />
+    <option name="LAST_COMMIT_MESSAGE" value="processes 0.13" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

@@ -9,12 +9,11 @@ const ComingSoon: FC<JavascriptFeaturesProps> = ({}) => {
   return (
     <div>
       <Intro
-        right
         title="Coming soon"
         description={
           <div className="mb-[80px]">
             <p>
-              The following features are under active development and will be available soon.
+              Agentic Flow building is under active development and will be available soon.
             </p>
           </div>
         }
