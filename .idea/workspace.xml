@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="functions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="processes 0.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +80,7 @@
       <recent name="$PROJECT_DIR$/public/product/js-ai" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -117,9 +113,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.cache" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -155,15 +151,7 @@
       <workItem from="1764922421449" duration="11856000" />
       <workItem from="1764944474728" duration="616000" />
       <workItem from="1765009096205" duration="24587000" />
-      <workItem from="1765088717751" duration="7126000" />
-    </task>
-    <task id="LOCAL-00095" summary="base for page layout and wavy">
-      <option name="closed" value="true" />
-      <created>1764746460843</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1764746460843</updated>
+      <workItem from="1765088717751" duration="7535000" />
     </task>
     <task id="LOCAL-00096" summary="base for page layout and wavy 0.3">
       <option name="closed" value="true" />
@@ -549,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765096488768</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="processes 0.1">
+      <option name="closed" value="true" />
+      <created>1765097612077</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1765097612077</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +591,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Logo update" />
     <MESSAGE value="Logo downsize" />
     <MESSAGE value="ScrollContentImagePairs borders" />
     <MESSAGE value="Left alignment 2" />
@@ -620,7 +615,8 @@
     <MESSAGE value="hp and platform tlp" />
     <MESSAGE value="updates" />
     <MESSAGE value="functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="functions" />
+    <MESSAGE value="processes 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="processes 0.1" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

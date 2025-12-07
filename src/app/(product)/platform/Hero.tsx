@@ -18,6 +18,9 @@ const Hero = () => (
             {/*Subheading*/}
             <div className={styles.subheading}>
               <p>
+                Automate the movement of data from anywhere to anywhere else!
+              </p>
+              <p>
                 Runs on <strong>your</strong> servers, giving you full control over security,
                 performance and cost. And it's exceptionally easy to use and fully extensible.
               </p>
