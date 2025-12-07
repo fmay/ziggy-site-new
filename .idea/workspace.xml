@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/home-test.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/home-test.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/home/who-for.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/home/who-for.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/home.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/home.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/home/who-for.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/who-for.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/who-for.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/ImproveProcesses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/ImproveProcesses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,15 +155,7 @@
       <workItem from="1764922421449" duration="11856000" />
       <workItem from="1764944474728" duration="616000" />
       <workItem from="1765009096205" duration="24587000" />
-      <workItem from="1765088717751" duration="6025000" />
-    </task>
-    <task id="LOCAL-00094" summary="wavy simple">
-      <option name="closed" value="true" />
-      <created>1764744308990</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1764744308990</updated>
+      <workItem from="1765088717751" duration="7126000" />
     </task>
     <task id="LOCAL-00095" summary="base for page layout and wavy">
       <option name="closed" value="true" />
@@ -558,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765061147091</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="functions">
+      <option name="closed" value="true" />
+      <created>1765096488768</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1765096488768</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +595,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="INTRO UPDATED" />
     <MESSAGE value="Logo update" />
     <MESSAGE value="Logo downsize" />
     <MESSAGE value="ScrollContentImagePairs borders" />
@@ -629,7 +619,8 @@
     <MESSAGE value="Home revision 0.2" />
     <MESSAGE value="hp and platform tlp" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="functions" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

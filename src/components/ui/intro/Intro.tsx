@@ -66,7 +66,7 @@ const Intro: FC<IntroProps> = ({
     )
   }
 
-  return textContent
+  return <div className={className}>{textContent}</div>
 }
 
 export default Intro
