@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="ai generate">
-      <change afterPath="$PROJECT_DIR$/src/app/about/Hero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/about/hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pre pricing">
+      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,15 +159,7 @@
       <workItem from="1765125054091" duration="3030000" />
       <workItem from="1765176428434" duration="1820000" />
       <workItem from="1765183951428" duration="1328000" />
-      <workItem from="1765193064930" duration="8976000" />
-    </task>
-    <task id="LOCAL-00104" summary="platform tlp">
-      <option name="closed" value="true" />
-      <created>1764786184630</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1764786184630</updated>
+      <workItem from="1765193064930" duration="9788000" />
     </task>
     <task id="LOCAL-00105" summary="ai-tlp">
       <option name="closed" value="true" />
@@ -556,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765201983834</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="pre pricing">
+      <option name="closed" value="true" />
+      <created>1765208949590</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1765208949590</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +599,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Left alignment done" />
     <MESSAGE value="rounded cta" />
     <MESSAGE value="carousel 1" />
     <MESSAGE value="carousel 2" />
@@ -627,7 +623,8 @@
     <MESSAGE value="processes 0.12" />
     <MESSAGE value="processes 0.13" />
     <MESSAGE value="ai generate" />
-    <option name="LAST_COMMIT_MESSAGE" value="ai generate" />
+    <MESSAGE value="pre pricing" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre pricing" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
