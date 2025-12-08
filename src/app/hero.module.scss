@@ -1,0 +1,79 @@
+.heroSection {
+  @apply relative;
+}
+
+.container {
+  @apply bg-header-footer text-white
+  lg:min-h-screen lg:flex lg:items-center lg:justify-center;
+}
+
+.wrapper {
+  @apply flex place-items-center mx-auto max-w-7xl
+  flex-col w-full gap-[50px] px-4 py-20
+  sm:px-6 lg:px-8
+  lg:flex-row lg:gap-[80px] lg:pt-0;
+}
+
+.col1 {
+  @apply lg:w-[50%];
+}
+
+.col2 {
+  @apply lg:w-[50%] mt-[-100px];
+}
+
+
+.heading {
+  @apply flex
+  mb-[0px] mx-auto
+  text-4xl font-normal text-white text-center leading-[3.0rem]
+  lg:text-5xl lg:text-start lg:leading-[3.5rem];
+  //line-height: 3.5rem;
+}
+
+.subheading {
+  @apply text-2xl max-w-[800px] font-extralight
+    lg:mx-auto;
+    ul {
+      @apply list-none text-center lg:text-left mt-8;
+      li {
+        @apply font-extralight mb-1 flex items-center justify-center lg:justify-start gap-2;
+      }
+    }
+
+  .checkIcon {
+    @apply text-white flex-shrink-0;
+    font-size: 1.2rem;
+  }
+}
+
+.signoffDesktop {
+  @apply hidden lg:block mt-10 text-4xl text-left;
+}
+.signoffMobile {
+  @apply lg:hidden mt-0 text-4xl text-left;
+}
+
+.heroImage {
+  @apply object-contain mx-auto flex items-center;
+}
+
+.subheadingImage {
+  @apply w-full bg-gray-50 mx-auto order-last lg:order-none flex justify-center items-center min-h-[700px];
+
+  img {
+    @apply w-full h-auto rounded-lg;
+  }
+}
+
+.ctaButtons {
+  @apply flex flex-col sm:flex-row justify-center items-center gap-4 mt-12;
+
+  .primaryButton {
+    @apply w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;
+  }
+
+  .secondaryButton {
+    @apply w-full sm:w-auto px-8 py-4 rounded-full border-2 border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  }
+}

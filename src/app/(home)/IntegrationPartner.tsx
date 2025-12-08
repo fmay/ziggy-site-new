@@ -31,7 +31,7 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
         title="Become a Platform Integration Partner"
         subtitle="Extend Ziggy so your customers can use Ziggy to effortlessly get data into and out of your platform."
         imageCopy={<ImageContent />}
-        image="/hero/pip.webp"
+        image="/hero/integration-partners.webp"
         scale={0.75}
         swap
       />
