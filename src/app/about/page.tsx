@@ -1,10 +1,12 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import PageSection from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
+import Hero from '@/app/about/Hero'
 
 export default function About() {
   return (
     <PageLayout title="About Us" description="">
+      <Hero />
       <PageSection>
         <div className="max-w-4xl prose prose-lg">
           <div className="bg-white p-0 mt-[40px] mb-[280px] rounded-lg  border-gray-200 ">
