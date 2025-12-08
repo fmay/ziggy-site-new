@@ -63,7 +63,7 @@ export default function Extend() {
       title="Extend Ziggy with plugins"
       style={LayoutStyleEnum.Feature}
       description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
-      image="/platform/plugin.webp"
+      image="/hero/customise.webp"
       waveToColor={sections[0].bgColor}>
       {sections.map((section, index) => (
         <PageSection
