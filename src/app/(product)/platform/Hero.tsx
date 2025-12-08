@@ -32,7 +32,7 @@ const Hero = () => (
           {/*Hero Image*/}
           <div className={styles.col2}>
             <div className={styles.heroImage}>
-              <Image src="/hero/platform-hero.webp" alt="" width={600} height={600} />
+              <Image src="/hero/home.webp" alt="" width={600} height={600} />
             </div>
           </div>
 

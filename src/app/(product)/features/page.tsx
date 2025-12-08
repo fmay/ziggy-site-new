@@ -45,7 +45,7 @@ export default function Features() {
       style={LayoutStyleEnum.Feature}
       waveToColor={sections[0].bgColor}
       description="Some of Ziggy's out-of-the-box features."
-      image="/placeholder.svg">
+      image="/hero/feature-overview.webp">
       {sections.map((section, index) => (
         <PageSection
           key={index}
