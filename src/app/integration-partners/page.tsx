@@ -11,7 +11,7 @@ export default function IntegrationPartners() {
       title="Integration Partner"
       style={LayoutStyleEnum.Feature}
       description="Let your customers read and write to your platform using Ziggy and completely avoid coding."
-      image="/placeholder.svg">
+      image="/hero/pip.webp">
       <PageSection bgColor="bg-gray">
         <Intro
           title="What is an Integration Partner?"
