@@ -3,16 +3,26 @@
 }
 
 .card {
-  @apply p-0 transition-shadow duration-200 bg-dark-gray text-white
-    rounded-lg shadow-sm;
+  @apply p-0 transition-shadow duration-200 bg-gray-100 text-dark-text
+    rounded-lg shadow-sm border;
 
   * {
-    @apply text-white font-extralight;
+    @apply text-dark-text font-extralight;
   }
 }
 
+.header {
+  @apply border-b ;
+}
+
 .image {
-  @apply mt-0 mx-auto p-3 flex justify-center;
+  @apply mt-0 mx-auto p-3 flex justify-center overflow-hidden bg-gray-50;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 }
 
 .title {
@@ -24,7 +34,7 @@
 }
 
 .lowerContent {
-  @apply pb-5 px-5;
+  @apply pb-5 px-5 border-t;
 }
 
 .linkWrapper {

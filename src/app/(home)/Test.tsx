@@ -6,13 +6,13 @@ interface TestProps {}
 
 const Test: FC<TestProps> = ({}) => {
   return (
-    <div className="flex flex-row flex-wrap">
+    <div className="flex flex-row flex-wrap mt-[90px]">
       <SimpleCard
         className="w-[300px]"
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="ERP" />
+            <ProcessImage from="ERP" to="CRM" />
           </div>
         }
         content="When a record changes in your ERP, update the corresponding record in your CRM. Or vice-versa. "></SimpleCard>
@@ -30,7 +30,7 @@ const Test: FC<TestProps> = ({}) => {
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="file" />
+            <ProcessImage from="helpdesk" to="email" />
           </div>
         }
         content="When a support ticket is created, create a summary using AI then email the result"></SimpleCard>
@@ -39,7 +39,7 @@ const Test: FC<TestProps> = ({}) => {
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="CRM" />
+            <ProcessImage from="file" to="database" />
           </div>
         }
         content="Periodically poll an SFTP server for a file, read it and update a database"></SimpleCard>
@@ -48,7 +48,7 @@ const Test: FC<TestProps> = ({}) => {
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="CRM" />
+            <ProcessImage from="ERP" to="warehouse" />
           </div>
         }
         content="Update a data warehouse when data changes in your ERP"></SimpleCard>
@@ -57,16 +57,16 @@ const Test: FC<TestProps> = ({}) => {
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="CRM" />
+            <ProcessImage from="CRM" to="database" />
           </div>
         }
-        content="Keep your reporting data base up to date whenever data changes in your CRM"></SimpleCard>
+        content="Keep your reporting database up to date whenever data changes in your CRM"></SimpleCard>
       <SimpleCard
         className="w-[300px]"
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="anywhere" />
+            <ProcessImage from="anywhere" to="api" />
           </div>
         }
         content="When a record changes in any system, make an API call"></SimpleCard>
