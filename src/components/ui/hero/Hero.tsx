@@ -57,6 +57,8 @@ const Hero: FC<HeroProps> = ({
 
           {signoff && <p className={styles.signoffMobile}>{signoff}</p>}
         </div>
+
+        {beneath && <div className={styles.beneath}>{beneath}</div>}
       </div>
     </Wavy>
   </section>
