@@ -33,6 +33,8 @@ const PUBLIC_EMAIL_DOMAINS = [
   'msn.com',
 ]
 
+const CALENDLY_HEIGHT = 920
+
 const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
@@ -204,7 +206,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
               url="https://calendly.com/freddy-may-ziggyservices/30-minute-meeting-clone"
               prefill={calendlyPrefill}
               pageSettings={calendlyPageSettings}
-              styles={{ height: '700px', width: '100%' }}
+              styles={{ height: `${CALENDLY_HEIGHT}px`, width: '100%' }}
             />
           </div>
         </div>
