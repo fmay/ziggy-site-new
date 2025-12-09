@@ -26,8 +26,8 @@ const DesktopDropdownContainer = ({
 
   return (
     <div
-      className="hidden md:block absolute left-0 right-0 top-full"
-      style={{ paddingTop: '12px' }}
+      className="hidden md:block absolute left-0 right-0"
+      style={{ top: 'calc(100% - 12px)', paddingTop: '12px' }}
       onMouseEnter={() => {
         if (closeTimeoutRef.current) {
           clearTimeout(closeTimeoutRef.current)
