@@ -2,7 +2,7 @@ import styles from './hero.module.scss'
 import Image from 'next/image'
 import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
-import Mission from '@/app/pricing/Mission'
+import Mission from '@/app/about/Mission'
 
 const Hero = () => (
   <section className={styles.heroSection}>
@@ -14,7 +14,7 @@ const Hero = () => (
           {/*Left Col*/}
           <div className={styles.col1}>
             {/* Main Heading */}
-            <h1 className={styles.heading}>Our Mission</h1>
+            <h1 className={styles.heading}>About Us</h1>
 
             {/*Subheading*/}
             <div className={styles.subheading}>
@@ -22,16 +22,6 @@ const Hero = () => (
                 Ziggy was born out of a recognition that data automation, integration and migration
                 also known as the Extract Transform and Load (ETL) space was in desperate need of
                 innovation.
-              </p>
-              <p className="text-lg">
-                Existing technology service providers are either cumbersome, inflexible and
-                expensive or they have cloud based platforms where security can’t be controlled.
-              </p>
-              <p className="text-lg">
-                Also, because of the technology providers current offerings, resourcing data
-                automation projects with the right people is challenging. The tasks required demand
-                an over-reliance on ‘developer level’ technical resources. These are scarce
-                resources for most businesses and can be costly to deploy.
               </p>
             </div>
           </div>
@@ -41,9 +31,9 @@ const Hero = () => (
             <div className={styles.heroImage}>
               <Image src="/hero/about.webp" alt="" width={600} height={600} />
             </div>
-            <Mission />
           </div>
         </div>
+        <Mission />
       </div>
     </Wavy>
   </section>

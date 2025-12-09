@@ -1,19 +1,16 @@
 'use client'
 
 import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
-import FlowFeatures from '@/app/(product)/flows/FlowFeatures'
-import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import BlockCollections from '@/app/(product)/flows/BlockCollections'
-import JavascriptFeatures from '@/app/(product)/flows/JavascriptFeatures'
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
-import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import AIJavascript from '@/app/(product)/ai-features/AIJavascript'
 import AIFlowExplain from '@/app/(product)/ai-features/AIFlowExplain'
 import ComingSoon from '@/app/(product)/ai-features/ComingSoon'
 import AIGenerate from '@/app/(product)/ai-features/AIGenerate'
+import Hero from '@/components/ui/hero/Hero'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 
 export default function Platform() {
   const sections: Section[] = [
@@ -44,12 +41,20 @@ export default function Platform() {
   ]
 
   return (
-    <PageLayout
-      title="Ziggy's AI Features"
-      style={LayoutStyleEnum.Feature}
-      description="Ziggy uses AI extensively and more AI features are being released all the time. Be assured, AI never touches your data during flow execution"
-      image="/hero/ai-features.webp"
-      waveToColor={sections[0].bgColor}>
+    <div>
+      <Hero
+        fromColor="header-footer"
+        toColor="gray-50"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/ai-features.webp"
+        title="Ziggy's AI Features"
+        subtitle={
+          <div>
+            Ziggy uses AI extensively and more AI features are being released all the time. Be assured, AI never touches your data during flow execution
+          </div>
+        }
+        cta={<CTA label="See More Features" href="features" />}
+      />
       {sections.map((section, index) => (
         <PageSection
           key={index}
@@ -60,6 +65,7 @@ export default function Platform() {
           {section.children}
         </PageSection>
       ))}
-    </PageLayout>
+
+    </div>
   )
 }

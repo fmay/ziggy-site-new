@@ -6,6 +6,8 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import Hero from '@/components/ui/hero/Hero'
 
 export default function Cluster() {
   const sections: Section[] = [
@@ -46,12 +48,21 @@ export default function Cluster() {
   ]
 
   return (
-    <PageLayout
-      title="Ziggy Cluster"
-      style={LayoutStyleEnum.Feature}
-      description="Ziggy Cluster supports extremely high loads and is fully fault tolerant"
-      image="/hero/cluster.webp"
-      waveToColor={sections[0].bgColor}>
+    <>
+      <Hero
+        fromColor="header-footer"
+        toColor="gray-50"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/cluster.webp"
+        title="Ziggy Cluster"
+        subtitle={
+          <div>
+            <p>Ziggy Cluster supports extremely high loads and is fully fault tolerant.</p>
+            <p>Installation is simple using Docker.</p>
+          </div>
+        }
+        cta={<CTA label="Book a demo" href="demo" />}
+      />
       {sections.map((section, index) => (
         <PageSection
           key={index}
@@ -62,6 +73,6 @@ export default function Cluster() {
           {section.children}
         </PageSection>
       ))}
-    </PageLayout>
+    </>
   )
 }

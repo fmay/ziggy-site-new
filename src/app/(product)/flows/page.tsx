@@ -9,6 +9,8 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
 import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
+import Hero from '@/components/ui/hero/Hero'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 
 export default function Products() {
   const sections: Section[] = [
@@ -58,12 +60,21 @@ export default function Products() {
   ]
 
   return (
-    <PageLayout
-      title="Ziggy Flows"
-      style={LayoutStyleEnum.Default}
-      description="Build simple or highly complex data pipelines using Ziggy Blocks and run them at any scale."
-      image="/hero/flows-blocks.webp"
-      waveToColor={sections[0].bgColor}>
+    <>
+      <Hero
+        fromColor="header-footer"
+        toColor="gray-50"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/flows-blocks.webp"
+        title="Ziggy Flows and Blocks"
+        subtitle={
+          <div>
+            Build simple or highly complex data pipelines using Ziggy Blocks and run them at any
+            scale.
+          </div>
+        }
+        cta={<CTA label="Book a demo" href="demo" />}
+      />
       {sections.map((section, index) => (
         <PageSection
           key={index}
@@ -74,6 +85,6 @@ export default function Products() {
           {section.children}
         </PageSection>
       ))}
-    </PageLayout>
+    </>
   )
 }

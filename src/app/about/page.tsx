@@ -1,5 +1,5 @@
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
-import Mission from '@/app/pricing/Mission'
+import Mission from '@/app/about/Mission'
 import Hero from '@/app/about/Hero'
 
 export default function About() {

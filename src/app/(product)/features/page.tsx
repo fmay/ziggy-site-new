@@ -8,6 +8,9 @@ import ScrollListEdge from '@/app/(product)/features/ScrollList_Edge'
 import ScrollListExtra1 from '@/app/(product)/features/ScrollList_Extra1'
 import ScrollListExtra2 from '@/app/(product)/features/ScrollList_Extra2'
 import PerformanceFeatures from '@/app/(product)/features/PerformanceFeatures'
+import Hero from '@/components/ui/hero/Hero'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import CTA from '@/components/ui/cta/CTA'
 
 export default function Features() {
   const sections: Section[] = [
@@ -40,12 +43,21 @@ export default function Features() {
   ]
 
   return (
-    <PageLayout
-      title="Ziggy Features"
-      style={LayoutStyleEnum.Feature}
-      waveToColor={sections[0].bgColor}
-      description="Some of Ziggy's out-of-the-box features."
-      image="/hero/feature-overview.webp">
+    <>
+      <Hero
+        fromColor="header-footer"
+        toColor="gray-50"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/feature-overview.webp"
+        title="Ziggy Feature Overview"
+        subtitle={
+          <div>
+            Ziggy comes with a lot of features for building, debugging, secrets, rate limiting, flow
+            execution history and much more.
+          </div>
+        }
+        cta={<CTA label="Book a demo" href="demo" />}
+      />
       {sections.map((section, index) => (
         <PageSection
           key={index}
@@ -56,6 +68,6 @@ export default function Features() {
           {section.children}
         </PageSection>
       ))}
-    </PageLayout>
+    </>
   )
 }

@@ -8,6 +8,8 @@ import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
+import Hero from '@/components/ui/hero/Hero'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 
 export default function Extend() {
   const sections: Section[] = [
@@ -59,12 +61,27 @@ export default function Extend() {
   ]
 
   return (
-    <PageLayout
-      title="Extend Ziggy with plugins"
-      style={LayoutStyleEnum.Feature}
-      description="Extend Ziggy by building your own custom blocks that can connect your platform with any others."
-      image="/hero/customise.webp"
-      waveToColor={sections[0].bgColor}>
+    <>
+      <Hero
+        fromColor="header-footer"
+        toColor="gray-50"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/customise.webp"
+        title="Extend Ziggy with plugins"
+        subtitle={
+          <div>
+            <p>
+              Extend Ziggy by building your own custom blocks that can connect your platform with
+              any others.
+            </p>
+            <p>
+              Now your customer can build their own Ziggy flows for getting data into and out of
+              your platform.
+            </p>
+          </div>
+        }
+        cta={<CTA label="Book a demo" href="demo" />}
+      />
       {sections.map((section, index) => (
         <PageSection
           key={index}
@@ -75,6 +92,6 @@ export default function Extend() {
           {section.children}
         </PageSection>
       ))}
-    </PageLayout>
+    </>
   )
 }

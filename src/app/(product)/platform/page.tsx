@@ -1,20 +1,14 @@
 'use client'
 
-import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
-import FlowFeatures from '@/app/(product)/flows/FlowFeatures'
-import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import BlockCollections from '@/app/(product)/flows/BlockCollections'
-import JavascriptFeatures from '@/app/(product)/flows/JavascriptFeatures'
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import CTA from '@/components/ui/cta/CTA'
-import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
-import WhosItFor from '@/app/(home)/WhosItFor'
-import Hero from '@/app/(product)/platform/Hero'
 import MadeEasy from '@/app/(product)/platform/MadeEasy'
 import Extensible from '@/app/(product)/platform/Extensible'
 import Cluster from '@/app/(product)/platform/Cluster'
 import Pricing from '@/app/(product)/platform/Pricing'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import Hero from '@/components/ui/hero/Hero'
 
 export default function Platform() {
   const sections: Section[] = [
@@ -60,7 +54,23 @@ export default function Platform() {
 
   return (
     <div className="min-h-screen mx-auto pt-12">
-      <Hero />
+      <Hero
+        fromColor="header-footer"
+        toColor="gray-100"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/home.webp"
+        title="Ziggy - a new Automation and Integration Platform."
+        subtitle={
+          <>
+            <p>Automate the movement of data from anywhere to anywhere else!</p>
+            <p>
+              Runs on <strong>your</strong> servers, giving you full control over security,
+              performance and cost. And it's exceptionally easy to use and fully extensible.
+            </p>
+          </>
+        }
+        cta={<CTA label="Learn More" href="features" />}
+      />
 
       {sections.map((section, index) => (
         <PageSection
@@ -68,8 +78,7 @@ export default function Platform() {
           bgColor={section.bgColor}
           color={section.color}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}
-        >
+          waveInvert={section.waveInvert}>
           {section.children}
         </PageSection>
       ))}

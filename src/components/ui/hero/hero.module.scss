@@ -27,22 +27,26 @@
   @apply flex
   mb-[0px] mx-auto
   text-4xl font-normal text-white text-center leading-[3.0rem]
-  lg:text-5xl lg:text-start lg:leading-[3.5rem];
-  //line-height: 3.5rem;
+  lg:text-[2.8rem] lg:text-start lg:leading-[3.5rem] lg:mb-[40px];
 }
 
 .subheading {
-  @apply text-2xl max-w-[800px] font-extralight
+  @apply max-w-[800px] font-extralight
     lg:mx-auto;
-    ul {
-      @apply list-none text-center lg:text-left mt-8;
-      li {
-        @apply font-extralight mb-1 flex items-center justify-center lg:justify-start gap-2;
-      }
+
+  * {
+    @apply text-xl font-extralight;
+  }
+
+  ul {
+    @apply list-none text-center lg:text-left mt-8;
+    li {
+      @apply font-extralight mb-3 flex items-center justify-center lg:justify-start gap-2;
     }
+  }
 
   .checkIcon {
-    @apply text-white flex-shrink-0;
+    @apply text-white flex-shrink-0 mr-[20px];
     font-size: 1.2rem;
   }
 }
@@ -67,7 +71,7 @@
 }
 
 .ctaButtons {
-  @apply flex flex-col sm:flex-row justify-center items-center gap-4 mt-12;
+  @apply flex flex-col sm:flex-row justify-start items-center gap-4 mt-12;
 
   .primaryButton {
     @apply w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;

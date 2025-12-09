@@ -1,7 +1,11 @@
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import PricingCalculator from '@/components/pricing/PricingCalculator'
-import Hero from '@/app/pricing/Hero'
+import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import { GiCheckMark } from 'react-icons/gi'
+import styles from '@/components/ui/hero/hero.module.scss'
+import CTA from '@/components/ui/cta/CTA'
+import Hero from '@/components/ui/hero/Hero'
 
 export default function IntegrationPartners() {
   const sections: Section[] = [
@@ -23,7 +27,20 @@ export default function IntegrationPartners() {
 
   return (
     <div className="min-h-screen mx-auto pt-12">
-      <Hero />
+      <Hero
+        fromColor="header-footer"
+        toColor="pale-blue"
+        wavyVariant={WavyVariantEnum.Simple}
+        image="/hero/customise.webp"
+        title="Pricing"
+        subtitle={
+          <p className={styles.subheading}>
+            Our subscription prices are the lowest you'll find. But you will spend a lot less in
+            staff time and cost, too.
+          </p>
+        }
+        cta={<CTA label="Calculator" href="#calculator" />}
+      />
 
       {sections.map((section, index) => (
         <PageSection
