@@ -25,7 +25,7 @@ const SimpleCard: FC<SimpleCardProps> = ({
   linkUrl,
 }) => {
   return (
-    <div className={className}>
+    <div className={`${className} flex`}>
       <div className={styles.wrapper}>
         <div className={styles.card}>
           {imageUrl && imageAlt && (

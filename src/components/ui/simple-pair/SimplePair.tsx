@@ -12,17 +12,10 @@ interface SimplePairProps {
   contentNudge?: number
 }
 
-const SimplePair: FC<SimplePairProps> = ({
-  swap = false,
-  title,
-  subtitle,
-  imageCopy,
-  image,
-  scale = 1,
-  contentNudge = 0,
-}) => {
+const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageCopy, image, scale = 1, contentNudge =0 }) => {
   return (
     <div className={styles.container}>
+
       {/* Second Row - Image and Image Copy */}
       <div className={`${styles.imageRow} ${swap ? styles.swapped : ''}`}>
         <div className={styles.imageCopyColumn} style={{ paddingTop: `${contentNudge}px` }}>

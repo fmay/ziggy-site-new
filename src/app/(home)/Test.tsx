@@ -6,7 +6,7 @@ interface TestProps {}
 
 const Test: FC<TestProps> = ({}) => {
   return (
-    <div className="flex flex-row flex-wrap mt-[90px]">
+    <div className="flex flex-row flex-wrap items-stretch mt-[90px]">
       <SimpleCard
         className="w-[300px]"
         title=""
@@ -21,19 +21,19 @@ const Test: FC<TestProps> = ({}) => {
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="CRM" to="CRM" />
+            <ProcessImage from="helpdesk" to="email" />
           </div>
         }
-        content="When a record changes in your CRM perform a task that update something else in the CRM "></SimpleCard>
+        content="When a support ticket is created, create a summary using AI then email the result"></SimpleCard>
       <SimpleCard
         className="w-[300px]"
         title=""
         imageDiv={
           <div className="">
-            <ProcessImage from="helpdesk" to="email" />
+            <ProcessImage from="CRM" to="CRM" />
           </div>
         }
-        content="When a support ticket is created, create a summary using AI then email the result"></SimpleCard>
+        content="When a record changes in your CRM perform a task that update something else in the CRM "></SimpleCard>
       <SimpleCard
         className="w-[300px]"
         title=""
@@ -70,6 +70,15 @@ const Test: FC<TestProps> = ({}) => {
           </div>
         }
         content="When a record changes in any system, make an API call"></SimpleCard>
+      <SimpleCard
+        className="w-[300px]"
+        title=""
+        imageDiv={
+          <div className="">
+            <ProcessImage from="anywhere" to="anywhere" />
+          </div>
+        }
+        content="Migrate all your data when moving from one platform to another"></SimpleCard>
     </div>
   )
 }
