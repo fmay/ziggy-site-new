@@ -12,17 +12,17 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript"
       ctaNewTab
-      graphic="/images/flows/js-example.png"
+      graphic="/product/features/running-flows.webp"
       graphicBgColor="bg-flow-gray"
     />,
     <StackCard
       title="Monitor"
-      description="Ziggy has two monitoring screens. One seeing currently executing flows and another for key server resource levels."
+      description="Ziggy has two monitoring screens. One shows currently executing flows and another for key server resource levels."
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant"
       ctaNewTab
       graphicBgColor="bg-flow-gray"
-      graphic="/images/flows/js-ai.png"
+      graphic="/product/features/system-monitor.webp"
     />,
     <StackCard
       title="Clustering"
@@ -30,7 +30,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
       ctaNewTab
-      graphic="/images/flows/js-debugger.png"
+      graphic="/product/features/alerts.webp"
     />,
     <StackCard
       title="Load Testing"
@@ -38,7 +38,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       ctaText="Learn more in the docs"
       ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
       ctaNewTab
-      graphic="/images/flows/js-explain.png"
+      graphic="/product/features/load-test.webp"
       graphicBgColor="bg-flow-gray"
     />,
   ]

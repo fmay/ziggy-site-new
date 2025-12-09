@@ -4,45 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pre pricing">
-      <change afterPath="$PROJECT_DIR$/src/app/hero.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/integration-partners/Hero.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="features 0.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/block.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/cluster.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/cluster.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/customise.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/fast-friendly.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/flow.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/home-block.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/home-collection.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/home-flow.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/home-pricing.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/integrations-migrations.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/one-instance.card.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/cards/server.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/ai-features.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/ai-features.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/home-test.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/integration-partners.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/home.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/home.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/pip-hero.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/pip-hero.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/home/business-functions.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/home/business-functions.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/home/who-for.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/home/who-for.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/api.color.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/api.gray.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/crm.color.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/crm.gray.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/database.color.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/database.gray.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/erp.color.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/erp.gray.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/warehouse.color.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/icons/warehouse.gray.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/business-functions.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/business-functions.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/who-for.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/who-for.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/AI.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/AI.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/PerformanceFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/PerformanceFeatures.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra2.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,44 +45,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/integration-partners",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.cache.executor": "Run",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
-    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/pixelmator/home&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cache.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pixelmator/home" />
+      <recent name="$PROJECT_DIR$/src/components/ui/simple-card" />
+      <recent name="$PROJECT_DIR$/src/components/ui/hero" />
+      <recent name="$PROJECT_DIR$/src/app/pricing" />
       <recent name="$PROJECT_DIR$/src/app/integration-partners" />
-      <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/pixelmator/integration-partners" />
-      <recent name="$PROJECT_DIR$/src/app/about" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/ai-features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/product/features" />
+      <recent name="$PROJECT_DIR$/pixelmator/home" />
+      <recent name="$PROJECT_DIR$/src/app/about" />
       <recent name="$PROJECT_DIR$/pixelmator/hero" />
       <recent name="$PROJECT_DIR$/public/hero" />
-      <recent name="$PROJECT_DIR$/public/product/ai-features" />
-      <recent name="$PROJECT_DIR$/public/product/flow-explain" />
-      <recent name="$PROJECT_DIR$/public/product/js-ai" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -197,206 +163,8 @@
       <workItem from="1765176428434" duration="1820000" />
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
-    </task>
-    <task id="LOCAL-00106" summary="new logo">
-      <option name="closed" value="true" />
-      <created>1764857242899</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1764857242899</updated>
-    </task>
-    <task id="LOCAL-00107" summary="hp hero">
-      <option name="closed" value="true" />
-      <created>1764857654533</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1764857654533</updated>
-    </task>
-    <task id="LOCAL-00108" summary="scroll pairs swap">
-      <option name="closed" value="true" />
-      <created>1764858482900</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1764858482900</updated>
-    </task>
-    <task id="LOCAL-00109" summary="INTRO UPDATED">
-      <option name="closed" value="true" />
-      <created>1764859154981</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1764859154981</updated>
-    </task>
-    <task id="LOCAL-00110" summary="Logo update">
-      <option name="closed" value="true" />
-      <created>1764859701322</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1764859701322</updated>
-    </task>
-    <task id="LOCAL-00111" summary="Logo update">
-      <option name="closed" value="true" />
-      <created>1764860555923</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1764860555923</updated>
-    </task>
-    <task id="LOCAL-00112" summary="Logo update">
-      <option name="closed" value="true" />
-      <created>1764860858878</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1764860858878</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Logo update">
-      <option name="closed" value="true" />
-      <created>1764861291795</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1764861291795</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Logo update">
-      <option name="closed" value="true" />
-      <created>1764861781606</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1764861781606</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Logo downsize">
-      <option name="closed" value="true" />
-      <created>1764862315308</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1764862315308</updated>
-    </task>
-    <task id="LOCAL-00116" summary="ScrollContentImagePairs borders">
-      <option name="closed" value="true" />
-      <created>1764862727177</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1764862727177</updated>
-    </task>
-    <task id="LOCAL-00117" summary="Left alignment 2">
-      <option name="closed" value="true" />
-      <created>1764865357895</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1764865357895</updated>
-    </task>
-    <task id="LOCAL-00118" summary="Left alignment 3">
-      <option name="closed" value="true" />
-      <created>1764866636867</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1764866636867</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Left alignment done">
-      <option name="closed" value="true" />
-      <created>1764866855962</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1764866855962</updated>
-    </task>
-    <task id="LOCAL-00120" summary="rounded cta">
-      <option name="closed" value="true" />
-      <created>1764866937410</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1764866937410</updated>
-    </task>
-    <task id="LOCAL-00121" summary="carousel 1">
-      <option name="closed" value="true" />
-      <created>1764867737336</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1764867737336</updated>
-    </task>
-    <task id="LOCAL-00122" summary="carousel 2">
-      <option name="closed" value="true" />
-      <created>1764867787758</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1764867787759</updated>
-    </task>
-    <task id="LOCAL-00123" summary="about; pricing">
-      <option name="closed" value="true" />
-      <created>1764868968732</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1764868968732</updated>
-    </task>
-    <task id="LOCAL-00124" summary="menu">
-      <option name="closed" value="true" />
-      <created>1764869183932</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1764869183932</updated>
-    </task>
-    <task id="LOCAL-00125" summary="logo updates">
-      <option name="closed" value="true" />
-      <created>1764920481991</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1764920481991</updated>
-    </task>
-    <task id="LOCAL-00126" summary="icon updates">
-      <option name="closed" value="true" />
-      <created>1764922610684</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1764922610684</updated>
-    </task>
-    <task id="LOCAL-00127" summary="ai-features 0.3">
-      <option name="closed" value="true" />
-      <created>1764932536066</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1764932536066</updated>
-    </task>
-    <task id="LOCAL-00128" summary="ai-features 0.4">
-      <option name="closed" value="true" />
-      <created>1764933938791</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1764933938791</updated>
-    </task>
-    <task id="LOCAL-00129" summary="ai-features 0.5">
-      <option name="closed" value="true" />
-      <created>1764934131057</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1764934131057</updated>
-    </task>
-    <task id="LOCAL-00130" summary="ai-features 0.7">
-      <option name="closed" value="true" />
-      <created>1764940564828</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1764940564828</updated>
+      <workItem from="1765217450430" duration="37944000" />
+      <workItem from="1765300658738" duration="970000" />
     </task>
     <task id="LOCAL-00131" summary="about update">
       <option name="closed" value="true" />
@@ -590,7 +358,207 @@
       <option name="project" value="LOCAL" />
       <updated>1765210364745</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="pre pricing">
+      <option name="closed" value="true" />
+      <created>1765218053094</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1765218053094</updated>
+    </task>
+    <task id="LOCAL-00156" summary="pricing">
+      <option name="closed" value="true" />
+      <created>1765218660208</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1765218660208</updated>
+    </task>
+    <task id="LOCAL-00157" summary="about us">
+      <option name="closed" value="true" />
+      <created>1765220063266</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1765220063266</updated>
+    </task>
+    <task id="LOCAL-00158" summary="hero updates">
+      <option name="closed" value="true" />
+      <created>1765263983197</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1765263983197</updated>
+    </task>
+    <task id="LOCAL-00159" summary="about us">
+      <option name="closed" value="true" />
+      <created>1765265502824</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1765265502825</updated>
+    </task>
+    <task id="LOCAL-00160" summary="demo 0.4">
+      <option name="closed" value="true" />
+      <created>1765268049948</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1765268049948</updated>
+    </task>
+    <task id="LOCAL-00161" summary="demo 0.6">
+      <option name="closed" value="true" />
+      <created>1765268541184</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1765268541184</updated>
+    </task>
+    <task id="LOCAL-00162" summary="demo 0.7">
+      <option name="closed" value="true" />
+      <created>1765268948168</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1765268948169</updated>
+    </task>
+    <task id="LOCAL-00163" summary="demo 1">
+      <option name="closed" value="true" />
+      <created>1765269414104</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1765269414104</updated>
+    </task>
+    <task id="LOCAL-00164" summary="image nudge up in hero">
+      <option name="closed" value="true" />
+      <created>1765269689462</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1765269689462</updated>
+    </task>
+    <task id="LOCAL-00165" summary="scroll padding">
+      <option name="closed" value="true" />
+      <created>1765270530520</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1765270530520</updated>
+    </task>
+    <task id="LOCAL-00166" summary="services">
+      <option name="closed" value="true" />
+      <created>1765272299220</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1765272299220</updated>
+    </task>
+    <task id="LOCAL-00167" summary="home">
+      <option name="closed" value="true" />
+      <created>1765273000014</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1765273000014</updated>
+    </task>
+    <task id="LOCAL-00168" summary="pricing">
+      <option name="closed" value="true" />
+      <created>1765273045587</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1765273045587</updated>
+    </task>
+    <task id="LOCAL-00169" summary="home bus. functions">
+      <option name="closed" value="true" />
+      <created>1765273816729</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1765273816729</updated>
+    </task>
+    <task id="LOCAL-00170" summary="align">
+      <option name="closed" value="true" />
+      <created>1765280403488</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1765280403488</updated>
+    </task>
+    <task id="LOCAL-00171" summary="align">
+      <option name="closed" value="true" />
+      <created>1765280582473</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1765280582473</updated>
+    </task>
+    <task id="LOCAL-00172" summary="align">
+      <option name="closed" value="true" />
+      <created>1765281594482</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1765281594482</updated>
+    </task>
+    <task id="LOCAL-00173" summary="cards">
+      <option name="closed" value="true" />
+      <created>1765289577185</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1765289577185</updated>
+    </task>
+    <task id="LOCAL-00174" summary="cards">
+      <option name="closed" value="true" />
+      <created>1765290115370</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1765290115371</updated>
+    </task>
+    <task id="LOCAL-00175" summary="cards">
+      <option name="closed" value="true" />
+      <created>1765291200597</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1765291200597</updated>
+    </task>
+    <task id="LOCAL-00176" summary="cards">
+      <option name="closed" value="true" />
+      <created>1765291547899</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1765291547899</updated>
+    </task>
+    <task id="LOCAL-00177" summary="nav gap">
+      <option name="closed" value="true" />
+      <created>1765291753299</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1765291753299</updated>
+    </task>
+    <task id="LOCAL-00178" summary="flows simple flow">
+      <option name="closed" value="true" />
+      <created>1765292931621</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1765292931621</updated>
+    </task>
+    <task id="LOCAL-00179" summary="features 0.3">
+      <option name="closed" value="true" />
+      <created>1765300437986</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1765300437986</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,23 +604,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="rounded cta" />
-    <MESSAGE value="carousel 1" />
-    <MESSAGE value="carousel 2" />
-    <MESSAGE value="about; pricing" />
-    <MESSAGE value="menu" />
-    <MESSAGE value="logo updates" />
-    <MESSAGE value="icon updates" />
-    <MESSAGE value="ai-features 0.3" />
-    <MESSAGE value="ai-features 0.4" />
-    <MESSAGE value="ai-features 0.5" />
-    <MESSAGE value="ai-features 0.7" />
-    <MESSAGE value="about update" />
-    <MESSAGE value="nextjs update" />
-    <MESSAGE value="home hero img" />
-    <MESSAGE value="simple pair 0.5" />
-    <MESSAGE value="Home revision 0.2" />
-    <MESSAGE value="hp and platform tlp" />
     <MESSAGE value="updates" />
     <MESSAGE value="functions" />
     <MESSAGE value="processes 0.1" />
@@ -661,7 +612,24 @@
     <MESSAGE value="processes 0.13" />
     <MESSAGE value="ai generate" />
     <MESSAGE value="pre pricing" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre pricing" />
+    <MESSAGE value="hero updates" />
+    <MESSAGE value="about us" />
+    <MESSAGE value="demo 0.4" />
+    <MESSAGE value="demo 0.6" />
+    <MESSAGE value="demo 0.7" />
+    <MESSAGE value="demo 1" />
+    <MESSAGE value="image nudge up in hero" />
+    <MESSAGE value="scroll padding" />
+    <MESSAGE value="services" />
+    <MESSAGE value="home" />
+    <MESSAGE value="pricing" />
+    <MESSAGE value="home bus. functions" />
+    <MESSAGE value="align" />
+    <MESSAGE value="cards" />
+    <MESSAGE value="nav gap" />
+    <MESSAGE value="flows simple flow" />
+    <MESSAGE value="features 0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="features 0.3" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

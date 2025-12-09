@@ -19,7 +19,7 @@ const ScrollListExtra2: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/alerts.webp',
       contentNudge: 10,
     },
     {
@@ -33,7 +33,7 @@ const ScrollListExtra2: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/secrets.webp',
     },
     {
       content: (
@@ -46,17 +46,17 @@ const ScrollListExtra2: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/connections.webp',
       contentNudge: 90,
     },
   ]
 
   return (
     <>
-      <div id="javascript" className="section-intro">
-        <h2>Alerting, Secrets, Connections, Auditing</h2>
-        <p>A few more powerful features available out-of-the-box.</p>
-      </div>
+      {/*<div id="javascript" className="section-intro">*/}
+      {/*  <h2>Alerting, Secrets, Connections, Auditing</h2>*/}
+      {/*  <p>A few more powerful features available out-of-the-box.</p>*/}
+      {/*</div>*/}
       <ScrollContentImagePairs contentImagePairs={HP_Pairs} />
     </>
   )
