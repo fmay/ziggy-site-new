@@ -20,7 +20,7 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
         title="Extend and customize"
         subtitle="Extend, customise Ziggy using our plugin system and integrate with your platform"
         imageCopy={<ImageContent />}
-        image="/platform/plugin.webp"
+        image="/home/home-customise.webp"
         scale={0.7}
       />
     </div>

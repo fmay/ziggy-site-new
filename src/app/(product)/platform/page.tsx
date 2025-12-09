@@ -41,7 +41,7 @@ export default function Platform() {
             </p>
           </div>
           <div>
-            <CTA label="Contact Us" href="/contact" />
+            <CTA label="Contact Us" href="/pricing#services" />
           </div>
         </div>
       ),

@@ -10,9 +10,9 @@ const MadeEasy: FC<MadeEasyProps> = ({}) => {
       <>
         <p>Easy to use whether you're a developer or not.</p>
         <ul>
-          <li>Designed for non-developers and developers alike</li>
           <li>Each Ziggy Block does one simple thing only</li>
           <li>All data pipelines are built on a visual canvas</li>
+          <li>AI features let you do things only a developer could normally do</li>
           <li>Backed by all the features you need</li>
         </ul>
         <CTA label="Learn More" href="features" noBottomMargin />
