@@ -7,6 +7,7 @@ import { GiCheckMark } from 'react-icons/gi'
 import Hero from '@/components/ui/hero/Hero'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function IntegrationPartners() {
   const getNextColor = createColorCycler()
@@ -25,7 +26,7 @@ export default function IntegrationPartners() {
     <div className="min-h-screen mx-auto pt-12">
       <Hero
         fromColor="header-footer"
-        toColor="gray-50"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/customise.webp"
         title="Become an Integration Partner"

@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="features 0.6">
-      <change afterPath="$PROJECT_DIR$/src/constants/default-colors.ts" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="color cycling">
+      <change afterPath="$PROJECT_DIR$/pixelmator/product/cluster/level2.pxd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/ClusterFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/ClusterFeatures.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
@@ -52,37 +54,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/pixelmator/home&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.cache.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/pixelmator/product/cluster",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.cache.executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
+    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pixelmator/product/cluster" />
       <recent name="$PROJECT_DIR$/pixelmator/home" />
       <recent name="$PROJECT_DIR$/src/components/ui/simple-card" />
       <recent name="$PROJECT_DIR$/src/components/ui/hero" />
       <recent name="$PROJECT_DIR$/src/app/pricing" />
-      <recent name="$PROJECT_DIR$/src/app/integration-partners" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/product/features" />
@@ -171,15 +173,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="2749000" />
-    </task>
-    <task id="LOCAL-00132" summary="about update">
-      <option name="closed" value="true" />
-      <created>1765012424239</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1765012424239</updated>
+      <workItem from="1765300658738" duration="5193000" />
     </task>
     <task id="LOCAL-00133" summary="nextjs update">
       <option name="closed" value="true" />
@@ -565,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765301995867</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="color cycling">
+      <option name="closed" value="true" />
+      <created>1765303670558</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1765303670558</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="functions" />
     <MESSAGE value="processes 0.1" />
     <MESSAGE value="processes 0.11" />
     <MESSAGE value="processes 0.12" />
@@ -636,7 +637,8 @@
     <MESSAGE value="flows simple flow" />
     <MESSAGE value="features 0.3" />
     <MESSAGE value="features 0.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="features 0.6" />
+    <MESSAGE value="color cycling" />
+    <option name="LAST_COMMIT_MESSAGE" value="color cycling" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

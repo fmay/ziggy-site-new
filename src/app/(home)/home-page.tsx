@@ -12,6 +12,7 @@ import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
 import ImproveProcesses from '@/app/(home)/ImproveProcesses'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function HomePage() {
   const getNextColor = createColorCycler()
@@ -51,7 +52,7 @@ export default function HomePage() {
     <div className="min-h-screen mx-auto pt-12">
       <Hero
         fromColor="header-footer"
-        toColor="gray-100"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/home.webp"
         signoff="Ziggy it!"

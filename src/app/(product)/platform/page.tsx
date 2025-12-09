@@ -10,6 +10,7 @@ import Pricing from '@/app/(product)/platform/Pricing'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function Platform() {
   const getNextColor = createColorCycler()
@@ -57,7 +58,7 @@ export default function Platform() {
     <div className="min-h-screen mx-auto pt-12">
       <Hero
         fromColor="header-footer"
-        toColor="gray-100"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/home.webp"
         title="Ziggy - a new Automation and Integration Platform."

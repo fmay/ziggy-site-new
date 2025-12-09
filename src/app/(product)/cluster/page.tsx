@@ -9,6 +9,7 @@ import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function Cluster() {
   const getNextColor = createColorCycler()
@@ -53,7 +54,7 @@ export default function Cluster() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="gray-50"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/cluster.webp"
         title="Ziggy Cluster"

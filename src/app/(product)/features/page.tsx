@@ -12,6 +12,7 @@ import CTA from '@/components/ui/cta/CTA'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function Features() {
   const getNextColor = createColorCycler()
@@ -93,7 +94,7 @@ export default function Features() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="gray-50"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/feature-overview.webp"
         title="Ziggy Feature Overview"

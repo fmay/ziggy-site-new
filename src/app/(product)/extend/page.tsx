@@ -11,6 +11,7 @@ import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntr
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function Extend() {
   const getNextColor = createColorCycler()
@@ -66,7 +67,7 @@ export default function Extend() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="gray-50"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/customise.webp"
         title="Extend Ziggy with plugins"

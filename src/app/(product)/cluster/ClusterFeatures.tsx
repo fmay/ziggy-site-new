@@ -23,7 +23,8 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
         </div>
       ),
-      image: '/product/level1-cluster.svg',
+      contentNudge: 30,
+      image: '/product/cluster/level1.webp',
     },
     {
       content: (
@@ -36,7 +37,8 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
         </div>
       ),
-      image: '/product/level2-cluster.svg',
+      contentNudge: 30,
+      image: '/product/cluster/level2.webp',
     },
     {
       content: (
@@ -50,10 +52,9 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             monitored in the UI in real time.
           </p>
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/monitoring" />
-
         </div>
       ),
-      image: '/product/monitoring.svg',
+      image: '/product/cluster/monitor.webp',
     },
     {
       content: (
@@ -70,7 +71,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
 
         </div>
       ),
-      image: '/product/load-test.svg',
+      image: '/product/cluster/load-test.webp',
     },
   ]
 

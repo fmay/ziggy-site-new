@@ -35,7 +35,7 @@ const ScrollListExtra1: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/batching.webp',
     },
     {
       content: (
@@ -72,12 +72,6 @@ const ScrollListExtra1: FC = () => {
 
   return (
     <>
-      {/*<div id="javascript" className="section-intro">*/}
-      {/*  <h2>Rate limiting, batching, data store and scheduling</h2>*/}
-      {/*  <p>*/}
-      {/*    Some more powerful features available out-of-the-box.*/}
-      {/*  </p>*/}
-      {/*</div>*/}
       <ScrollContentImagePairs contentImagePairs={HP_Pairs} />
     </>
   )

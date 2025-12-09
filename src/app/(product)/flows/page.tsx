@@ -12,6 +12,7 @@ import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import { createColorCycler } from '@/utils/colorCycler'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function Products() {
   const getNextColor = createColorCycler()
@@ -88,7 +89,7 @@ export default function Products() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="gray-50"
+        toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/flows-blocks.webp"
         title="Ziggy Flows and Blocks"
