@@ -4,43 +4,25 @@ import ScrollContentImagePairs, {
 } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import CTA from '@/components/ui/cta/CTA'
 import Link from 'next/link'
+import DocsLink from '@/components/ui/docs-link/DocsLink'
 
 const ScrollListCore: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
     {
+      bgColor: 'bg-red-50',
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Flows and Blocks</h2>
-          <div className="">
-            <p className="text-lg text-gray-600 mb-4">
-              Flows are your data pipelines, composed of interncononected Blocks.
-            </p>
-            <ul>
-              <li>Each Block performs one focused task only</li>
-              <li>Blocks are extremely easy to use</li>
-              <li>They can connect to anything</li>
-              <li>They can perform any task</li>
-              <li>You can build your own</li>
-            </ul>
-          </div>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
-        </div>
-      ),
-      image: '/placeholder.svg',
-      contentNudge: 10,
-    },
-    {
-      content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Custom Blocks</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Flow Editor</h2>
           <p className="text-lg text-gray-600 mb-4">
-            Ziggy's plugins allow you to build your own block collection that do everything you need
-            to connect to any system, including your own platform.
+            A drag-and-drop canvas for building your data pipelines. These can be very simple but
+            complex flows are no problem, too.
           </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Flow-Editor-Layout">
+            Learn more
+          </DocsLink>
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/editor.webp',
     },
     {
       content: (
@@ -52,13 +34,13 @@ const ScrollListCore: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/debugger.webp',
       contentNudge: 90,
     },
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Launching flows with API calls</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Launch flows with API calls</h2>
           <p className="text-lg text-gray-600 mb-4">
             Each flow can be run from the Ziggy UI or with an API call. Pass in data that should be
             processed by the flow.
@@ -66,7 +48,7 @@ const ScrollListCore: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/postman.webp',
       contentNudge: 90,
     },
     {
@@ -81,7 +63,7 @@ const ScrollListCore: FC = () => {
           <CTA className="my-2" label="How Ziggy works" href="flows" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/execution-history.webp',
       contentNudge: 90,
     },
     {
@@ -92,23 +74,19 @@ const ScrollListCore: FC = () => {
             Create development and production Connection and Secret configurations then toggle
             between these in your flow for testing or making changes
           </p>
-          <p>Alternatively, use a dev or staging server (these are free) and transfer flows between them.</p>
+          <p>
+            Alternatively, use a dev or staging server (these are free) and transfer flows between
+            them.
+          </p>
           <CTA className="" label="Learn more" href="integration-partners" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/features/dev-prod.webp',
       contentNudge: 90,
     },
   ]
   return (
     <>
-      <div id="javascript" className="section-intro">
-        <h2>Building flows</h2>
-        <p>
-          All data pipelines are built in your browser using a visual canvas called a Flow. It's
-          easy to use and is self-documenting thanks to its visual nature.
-        </p>
-      </div>
       <ScrollContentImagePairs contentImagePairs={HP_Pairs} />
     </>
   )

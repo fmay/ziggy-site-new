@@ -1,6 +1,5 @@
 'use client'
 
-import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import FlowFeatures from '@/app/(product)/flows/FlowFeatures'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import BlockCollections from '@/app/(product)/flows/BlockCollections'
@@ -12,7 +11,6 @@ import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
-import Image from 'next/image'
 
 export default function Products() {
   const sections: Section[] = [

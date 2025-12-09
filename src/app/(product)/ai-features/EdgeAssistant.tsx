@@ -3,9 +3,11 @@ import ImageStack from '@/components/ui/image-stack/ImageStack'
 import StackCard from '@/components/ui/image-stack/StackCard'
 import Intro from '@/components/ui/intro/Intro'
 
-interface JavascriptFeaturesProps {}
+interface JavascriptFeaturesProps {
+  headerRight?: boolean
+}
 
-const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
+const EdgeAssistant: FC<JavascriptFeaturesProps> = ({headerRight}) => {
   const items: ReactNode[] = [
     <StackCard
       title="Transform data on any edge"
@@ -48,7 +50,7 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
   return (
     <div>
       <Intro
-        right
+        right={headerRight}
         title="AI Edge transformations"
         description={
           <div className="mb-[80px]">
