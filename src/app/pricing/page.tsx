@@ -32,7 +32,7 @@ export default function IntegrationPartners() {
         fromColor="header-footer"
         toColor="pale-blue"
         wavyVariant={WavyVariantEnum.Simple}
-        image="/hero/customise.webp"
+        image="/hero/pricing.webp"
         title="Pricing"
         subtitle={
           <p className={styles.subheading}>
