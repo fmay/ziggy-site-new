@@ -13,6 +13,7 @@ interface HeroProps {
   wavyVariant: WavyVariantEnum
   cta?: React.ReactNode
   signoff?: string
+  beneath?: React.ReactNode
 }
 
 const Hero: FC<HeroProps> = ({
@@ -24,6 +25,7 @@ const Hero: FC<HeroProps> = ({
   wavyVariant,
   cta,
   signoff,
+  beneath
 }) => (
   <section className={styles.heroSection}>
     <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
