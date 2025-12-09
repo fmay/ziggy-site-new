@@ -6,7 +6,7 @@ interface TestProps {}
 
 const Test: FC<TestProps> = ({}) => {
   return (
-    <div className="flex flex-row flex-wrap items-stretch mt-[90px]">
+    <div className="flex flex-row flex-wrap items-stretch mt-[90px] gap-y-[30px]">
       <SimpleCard
         className="w-[300px]"
         title=""

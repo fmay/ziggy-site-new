@@ -9,7 +9,7 @@ interface ProcessImageProps {
 
 const ProcessImage:FC<ProcessImageProps> = ({from, to}) => {
  return (
-  <div className="flex flex-row place-items-center">
+  <div className="flex flex-row place-items-center ">
     <Image
       className={styles.image}
       src={`/home/process-examples/${from}.webp`}
