@@ -33,7 +33,6 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/home-pip.webp"
         scale={0.75}
-        swap
       />
     </div>
   )

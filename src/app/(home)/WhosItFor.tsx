@@ -28,8 +28,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
         subtitle="Ziggy is for anyone who works with data and is considering ETL tools, Make.com or Zapier and wants to get the job done quicker and for less."
         imageCopy={<ImageContent />}
         image="/home/who-for.webp"
-        swap
-        scale={0.8}
+        scale={0.7}
       />
     </div>
   )

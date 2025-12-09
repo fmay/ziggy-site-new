@@ -11,6 +11,7 @@ import { GiCheckMark } from 'react-icons/gi'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
+import Test from '@/app/(home)/Test'
 
 export default function HomePage() {
   const sections: Section[] = [
@@ -24,7 +25,7 @@ export default function HomePage() {
     },
     {
       bgColor: 'bg-white',
-      children: <ExampleAutomations />,
+      children: <Test />,
     },
     {
       bgColor: 'bg-gray-50',

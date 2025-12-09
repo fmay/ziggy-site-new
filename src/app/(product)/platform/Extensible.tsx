@@ -22,6 +22,7 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/home-customise.webp"
         scale={0.7}
+        swap
       />
     </div>
   )

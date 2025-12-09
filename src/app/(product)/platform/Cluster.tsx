@@ -27,7 +27,6 @@ const Cluster: FC<ClusterProps> = ({}) => {
         subtitle="Simple Docker installation on any infrastructure whether you need something single of scalability and high availability."
         imageCopy={<ImageContent />}
         image="/platform/cluster.webp"
-        swap
         scale={0.7}
       />
     </div>

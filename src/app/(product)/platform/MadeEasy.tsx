@@ -27,7 +27,6 @@ const MadeEasy: FC<MadeEasyProps> = ({}) => {
         subtitle="Ziggy is designed from the ground up to be easy to use. It avoids the complexities of ETL platforms and coding while providing everything you need to operate at scale."
         imageCopy={<ImageContent />}
         image="/platform/easy.webp"
-        swap
         scale={0.5}
       />
     </div>
