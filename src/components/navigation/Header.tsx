@@ -113,21 +113,9 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className={styles.ctaButtons}>
-              {/*<Link*/}
-              {/*  href={navigationConfig.cta.bookDemo.href}*/}
-              {/*  className={`${styles.ctaButton} flex flex-row gap-1 place-items-center`}>*/}
-              {/*  <CiCalendar />*/}
-              {/*  {navigationConfig.cta.bookDemo.label}*/}
-              {/*</Link>*/}
               <Link href={navigationConfig.cta.contact.href} className={styles.ctaButton}>
                 {navigationConfig.cta.contact.label}
               </Link>
-              {/*<Link*/}
-              {/*  href={navigationConfig.cta.signin.href}*/}
-              {/*  className={styles.ctaButton}*/}
-              {/*>*/}
-              {/*  {navigationConfig.cta.signin.label}*/}
-              {/*</Link>*/}
             </div>
 
             {/* Mobile menu button */}

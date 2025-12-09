@@ -24,6 +24,9 @@
 
 .col2 {
   @apply lg:w-[50%] mt-[0px];
+  img {
+    @apply mt-[-100px];
+  }
 }
 
 
