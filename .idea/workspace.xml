@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="features 0.3">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="features 0.6">
+      <change afterPath="$PROJECT_DIR$/src/constants/default-colors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/PerformanceFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/PerformanceFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra2.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,15 +171,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="970000" />
-    </task>
-    <task id="LOCAL-00131" summary="about update">
-      <option name="closed" value="true" />
-      <created>1764944141509</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1764944141509</updated>
+      <workItem from="1765300658738" duration="2749000" />
     </task>
     <task id="LOCAL-00132" summary="about update">
       <option name="closed" value="true" />
@@ -558,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765300437986</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="features 0.6">
+      <option name="closed" value="true" />
+      <created>1765301995867</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1765301995867</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="updates" />
     <MESSAGE value="functions" />
     <MESSAGE value="processes 0.1" />
     <MESSAGE value="processes 0.11" />
@@ -629,7 +635,8 @@
     <MESSAGE value="nav gap" />
     <MESSAGE value="flows simple flow" />
     <MESSAGE value="features 0.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="features 0.3" />
+    <MESSAGE value="features 0.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="features 0.6" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

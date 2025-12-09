@@ -11,36 +11,38 @@ import styles from '@/components/ui/hero/hero.module.scss'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
 import ImproveProcesses from '@/app/(home)/ImproveProcesses'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function HomePage() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'gray-100',
+      bgColor: getNextColor(),
       children: <WhosItFor />,
     },
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <BusinessFunctions />,
     },
     {
-      bgColor: 'bg-white',
+      bgColor: getNextColor(),
       children: <ImproveProcesses />,
     },
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       waveInvert: true,
       children: <AI />,
     },
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <IntegrationPartner />,
     },
     {
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <Pricing />,
     },
     {
-      bgColor: 'gray-100',
+      bgColor: getNextColor(),
       children: <QuickBookDemo background="dark" />,
     },
   ]

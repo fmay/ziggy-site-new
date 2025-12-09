@@ -1,10 +1,8 @@
 'use client'
 
-import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import JavascriptFeatures from '@/app/(product)/flows/JavascriptFeatures'
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import ScrollListCore from '@/app/(product)/features/ScrollList_Core'
-import ScrollListEdge from '@/app/(product)/features/ScrollList_Edge'
 import ScrollListExtra1 from '@/app/(product)/features/ScrollList_Extra1'
 import ScrollListExtra2 from '@/app/(product)/features/ScrollList_Extra2'
 import PerformanceFeatures from '@/app/(product)/features/PerformanceFeatures'
@@ -13,11 +11,13 @@ import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function Features() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: (
         <SimplePair
           title="Simple flows can do complex things"
@@ -43,11 +43,11 @@ export default function Features() {
       ),
     },
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <ScrollListCore />,
     },
     {
-      bgColor: 'gray-50',
+      bgColor: getNextColor(),
       children: (
         <SimplePair
           title="Extend Ziggy with Custom Blocks"
@@ -66,25 +66,25 @@ export default function Features() {
       ),
     },
     {
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <EdgeAssistant />,
     },
     {
       id: 'javascript',
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <JavascriptFeatures />,
     },
     {
       id: 'extra1',
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <ScrollListExtra1 />,
     },
     {
-      bgColor: 'bg-gray-200',
+      bgColor: getNextColor(),
       children: <ScrollListExtra2 />,
     },
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: <PerformanceFeatures />,
     },
   ]

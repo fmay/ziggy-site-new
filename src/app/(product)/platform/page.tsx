@@ -9,28 +9,29 @@ import Cluster from '@/app/(product)/platform/Cluster'
 import Pricing from '@/app/(product)/platform/Pricing'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function Platform() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'gray-100',
+      bgColor: getNextColor(),
       children: <MadeEasy />,
     },
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <Extensible />,
     },
     {
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <Cluster />,
     },
     {
-      bgColor: '#d78383',
-      color: 'text-white',
+      bgColor: getNextColor(),
       children: <Pricing />,
     },
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: (
         <div className="section-intro-2-col">
           <div>
@@ -47,7 +48,7 @@ export default function Platform() {
       ),
     },
     {
-      bgColor: 'gray-100',
+      bgColor: getNextColor(),
       children: <QuickBookDemo background="dark" />,
     },
   ]

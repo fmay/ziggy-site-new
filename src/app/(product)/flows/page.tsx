@@ -11,12 +11,14 @@ import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function Products() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
       id: '',
-      bgColor: 'gray-50',
+      bgColor: getNextColor(),
       children: (
         <>
           <SimplePair
@@ -38,7 +40,7 @@ export default function Products() {
       ),
     },
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: (
         <>
           <Intro
@@ -63,7 +65,7 @@ export default function Products() {
     },
     {
       id: 'hubspot',
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: (
         <>
           <BlockCollections />
@@ -73,11 +75,11 @@ export default function Products() {
     },
     {
       id: 'javascript',
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: <JavascriptFeatures />,
     },
     {
-      bgColor: 'bg-gray-300',
+      bgColor: getNextColor(),
       children: <QuickBookDemo />,
     },
   ]

@@ -10,11 +10,13 @@ import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCol
 import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function Extend() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: (
         <Intro
           title="Become an Integration Partner"
@@ -41,12 +43,12 @@ export default function Extend() {
       ),
     },
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: <CustomizationStack />,
     },
     {
       id: 'hubspot',
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: (
         <>
           <CollectionsExtendIntro />
@@ -55,7 +57,7 @@ export default function Extend() {
       ),
     },
     {
-      bgColor: 'bg-gray-800',
+      bgColor: getNextColor(),
       children: <QuickBookDemo background="dark" />,
     },
   ]

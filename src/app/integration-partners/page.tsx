@@ -6,15 +6,17 @@ import CTA from '@/components/ui/cta/CTA'
 import { GiCheckMark } from 'react-icons/gi'
 import Hero from '@/components/ui/hero/Hero'
 import styles from '@/components/ui/hero/hero.module.scss'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function IntegrationPartners() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <PartnerFeatures />,
     },
     {
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <QuickBookDemo background="dark" />,
     },
   ]

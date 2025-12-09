@@ -8,11 +8,13 @@ import CTA from '@/components/ui/cta/CTA'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function Cluster() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: (
         <>
           {' '}
@@ -42,7 +44,7 @@ export default function Cluster() {
       ),
     },
     {
-      bgColor: 'bg-gray-800',
+      bgColor: getNextColor(),
       children: <QuickBookDemo background="dark" />,
     },
   ]

@@ -11,31 +11,33 @@ import ComingSoon from '@/app/(product)/ai-features/ComingSoon'
 import AIGenerate from '@/app/(product)/ai-features/AIGenerate'
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function Platform() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: <EdgeAssistant />,
     },
     {
-      bgColor: 'bg-pale-blue',
+      bgColor: getNextColor(),
       children: <AIJavascript />,
     },
     {
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <AIGenerate />,
     },
     {
-      bgColor: 'bg-gray-100',
+      bgColor: getNextColor(),
       children: <AIFlowExplain />,
     },
     {
-      bgColor: 'bg-pale-blue',
+      bgColor: getNextColor(),
       children: <ComingSoon />,
     },
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: <QuickBookDemo />,
     },
   ]

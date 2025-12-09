@@ -7,21 +7,23 @@ import styles from '@/components/ui/hero/hero.module.scss'
 import CTA from '@/components/ui/cta/CTA'
 import Hero from '@/components/ui/hero/Hero'
 import Services from '@/app/pricing/Services'
+import { createColorCycler } from '@/utils/colorCycler'
 
 export default function IntegrationPartners() {
+  const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
       id: 'calculator',
-      bgColor: 'pale-blue',
+      bgColor: getNextColor(),
       children: <PricingCalculator />,
     },
     {
       id: 'services',
-      bgColor: 'white',
+      bgColor: getNextColor(),
       children: <Services />
     },
     {
-      bgColor: 'bg-gray-50',
+      bgColor: getNextColor(),
       children: <QuickBookDemo background="light" />,
     },
   ]
