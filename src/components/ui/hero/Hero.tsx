@@ -4,6 +4,8 @@ import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
 import { FC } from 'react'
 
+const NUDGE_UP = 100 // pixels
+
 interface HeroProps {
   title: string
   subtitle: string | React.ReactNode
@@ -32,7 +34,10 @@ const Hero: FC<HeroProps> = ({
       {/* Overlay for better text readability */}
       <div className={styles.overlay} />
 
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        style={beneath ? { marginTop: `-${NUDGE_UP}px` } : undefined}
+      >
         {/*Inner Wrapper*/}
         <div className={styles.wrapper}>
           {/*Left Col*/}
