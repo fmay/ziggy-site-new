@@ -21,7 +21,8 @@ const DropdownNavItem = ({ subItem, variant = 'desktop', onMobileClick }: Dropdo
       <Link
         key={subItem.label}
         href={subItem.href}
-        className="">
+        className=""
+        {...(subItem.href.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
         <div className="label">{subItem.label}</div>
         {subItem.description && (
           <div className="description">{subItem.description}</div>

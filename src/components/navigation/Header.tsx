@@ -113,7 +113,7 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className={styles.ctaButtons}>
-              <Link href={navigationConfig.cta.contact.href} className={styles.ctaButton}>
+              <Link href={navigationConfig.cta.contact.href} className={styles.ctaButton} {...(navigationConfig.cta.contact.href.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
                 {navigationConfig.cta.contact.label}
               </Link>
             </div>
@@ -182,13 +182,15 @@ const Header = () => {
                 <Link
                   href={navigationConfig.cta.bookDemo!.href}
                   className={styles.mobileCtaButton}
-                  onClick={() => setMobileMenuOpen(false)}>
+                  onClick={() => setMobileMenuOpen(false)}
+                  {...(navigationConfig.cta.bookDemo!.href.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
                   {navigationConfig.cta.bookDemo!.label}
                 </Link>
                 <Link
                   href={navigationConfig.cta.contact.href}
                   className={styles.mobileCtaButton}
-                  onClick={() => setMobileMenuOpen(false)}>
+                  onClick={() => setMobileMenuOpen(false)}
+                  {...(navigationConfig.cta.contact.href.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
                   {navigationConfig.cta.contact.label}
                 </Link>
               </div>

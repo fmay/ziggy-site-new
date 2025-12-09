@@ -8,22 +8,14 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Why do integration projects always take so long?</p>
+        <p>Data specialists and developers will love Ziggy.</p>
         <ul>
-          <li>ETL products are expensive and complex.</li>
+          <li>It's easier, faster and cheaper than ETL tools.</li>
           <li>
-            Developers are a scarce resource and even with AI, coding makes little sense other than
-            for the simplest use-cases
+            You have total control over performance, security and cost.
           </li>
-          <li>
-            Data specialists understand requirements and are best placed to implement solutions - if
-            only it were simple.{' '}
-          </li>
+          <li>AI features help non-developers accomplish things that would normally require developers.</li>
         </ul>
-        <p>
-          Ziggy solves these issue by letting both developers and non-developers integrate far
-          faster.
-        </p>
         <CTA label="Learn More" href="platform" noBottomMargin />
       </>
     )
@@ -33,9 +25,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
     <div>
       <SimplePair
         title="Who is Ziggy for?"
-        subtitle="Ziggy was designed for non-developers and developers alike with pure ease-of-use in mind.
-          Our team has a deep background in integrations and understands the challenges faced by
-          companies of all sizes."
+        subtitle="Ziggy is for anyone who works with data and is considering ETL tools, Make.com or Zapier and wants to get the job done quicker and for less."
         imageCopy={<ImageContent />}
         image="/home/who-for.webp"
         swap

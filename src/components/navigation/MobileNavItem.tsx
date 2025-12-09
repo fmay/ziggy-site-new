@@ -71,7 +71,8 @@ const MobileNavItem = ({
       key={item.label}
       href={item.href!}
       className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2 block"
-      onClick={() => setMobileMenuOpen(false)}>
+      onClick={() => setMobileMenuOpen(false)}
+      {...(item.href!.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
       {item.label}
     </Link>
   )

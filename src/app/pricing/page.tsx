@@ -6,6 +6,7 @@ import { GiCheckMark } from 'react-icons/gi'
 import styles from '@/components/ui/hero/hero.module.scss'
 import CTA from '@/components/ui/cta/CTA'
 import Hero from '@/components/ui/hero/Hero'
+import Services from '@/app/pricing/Services'
 
 export default function IntegrationPartners() {
   const sections: Section[] = [
@@ -17,7 +18,7 @@ export default function IntegrationPartners() {
     {
       id: 'services',
       bgColor: 'white',
-      children: <><div>SERVICES</div></>
+      children: <Services />
     },
     {
       bgColor: 'bg-gray-50',

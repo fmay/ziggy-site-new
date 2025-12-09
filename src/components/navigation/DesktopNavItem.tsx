@@ -29,7 +29,8 @@ const DesktopNavItem = ({
             href={item.href}
             className={`text-stripe-navy hover:text-stripe-purple transition-colors duration-200 flex items-center ${
               isActive ? 'text-stripe-purple' : ''
-            }`}>
+            }`}
+            {...(item.href.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
             {item.label}
             <svg
               className={`w-4 h-4 ml-1 transition-transform duration-[400ms] ${
@@ -79,7 +80,8 @@ const DesktopNavItem = ({
     <div key={item.label} className={index > 0 ? 'ml-8' : ''} onMouseEnter={onClearDropdown}>
       <Link
         href={item.href!}
-        className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200">
+        className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
+        {...(item.href!.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
         {item.label}
       </Link>
     </div>
