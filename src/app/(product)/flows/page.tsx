@@ -11,9 +11,34 @@ import Intro from '@/components/ui/intro/Intro'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import SimplePair from '@/components/ui/simple-pair/SimplePair'
+import Image from 'next/image'
 
 export default function Products() {
   const sections: Section[] = [
+    {
+      id: '',
+      bgColor: 'gray-50',
+      children: (
+        <>
+          <SimplePair
+            title="Simple flows can do complex things"
+            subtitle=""
+            image="/home/simple-flow.webp"
+            imageCopy={
+              <div>
+                <p>The Ziggy flow below looks simple enough. In reality, it's</p>
+                <ul>
+                  <li>Getting exchanges rates from an API</li>
+                  <li>Extracting rates from within the returned data (the AI icon does this)</li>
+                  <li>Updating all exchange rates in HubSpot with the latest rates.</li>
+                </ul>
+              </div>
+            }
+          />
+        </>
+      ),
+    },
     {
       bgColor: 'bg-gray-50',
       children: (
