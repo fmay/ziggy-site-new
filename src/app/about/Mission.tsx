@@ -5,12 +5,8 @@ interface MissionProps {}
 
 const Mission: FC<MissionProps> = ({}) => {
   return (
-    <div className="flex flex-row">
+    <div className="mx-auto max-w-7xl w-full px-4 lg:px-8 flex flex-row gap-[100px]">
       <div className="w-1/2">
-        <p className="text-lg">
-          Existing technology service providers are either cumbersome, inflexible and expensive or
-          they have cloud based platforms where security can’t be controlled.
-        </p>
         <p className="text-lg">
           Also, because of the technology providers current offerings, resourcing data automation
           projects with the right people is challenging. The tasks required demand an over-reliance
@@ -19,14 +15,7 @@ const Mission: FC<MissionProps> = ({}) => {
         </p>
         <CTA label="Book a demo" href="demo" />
       </div>
-      <div  className="w-1/2">
-        <p className="text-3xl text-white">So our mission is simple...</p>
-        <p className="text-2xl text-white font-extralight">
-          To make it extremely easy, for any business to automate and integrate data, across their
-          own systems, and to and from third party systems, where security, customization, technical
-          resource flexibility, auditability and cost effectiveness are paramount.
-        </p>
-      </div>
+
     </div>
   )
 }

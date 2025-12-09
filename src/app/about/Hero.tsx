@@ -20,9 +20,27 @@ const Hero = () => (
             <div className={styles.subheading}>
               <p className="text-lg">
                 Ziggy was born out of a recognition that data automation, integration and migration
-                also known as the Extract Transform and Load (ETL) space was in desperate need of
+                also known as the Extract Transform and Load (ETL) space was in serious need of
                 innovation.
               </p>
+              <p className="text-lg">
+                Existing ETL providers are complex and expensive. Cloud platform like Zapier and
+                Make.com leave you without complete control over cost, performance and security.
+              </p>
+              <p>
+                Integration projects usually overrun from a cost and time perspective. This is due
+                to complexity of tools and lack of availability of suitable internal resources.
+                Ziggy is not only priced sensibly but is is easier to use by less technical users
+                enabling projects to be delivered much quicker.
+              </p>
+              <div className="">
+                <p className="!text-[2.0rem] !mt-[50px]">So our mission is simple...</p>
+                <p className="!text-[1.5rem] !leading-[2.0rem]">
+                  To make it extremely easy to automate and integrate data and processes so the
+                  Total Cost of Ownership is heavily reduced and where our customers have total
+                  control over security, performance and cost.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -33,7 +51,7 @@ const Hero = () => (
             </div>
           </div>
         </div>
-        <Mission />
+        {/*<Mission />*/}
       </div>
     </Wavy>
   </section>

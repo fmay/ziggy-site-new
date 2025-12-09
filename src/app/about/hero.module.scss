@@ -4,13 +4,13 @@
 
 .container {
   @apply bg-header-footer text-white
-  lg:min-h-screen lg:flex lg:items-center lg:justify-center;
+  lg:min-h-screen lg:flex lg:flex-col lg:items-center lg:justify-start;
 }
 
 .wrapper {
-  @apply flex place-items-center mx-auto max-w-7xl
+  @apply flex items-center mx-auto max-w-7xl
   flex-col w-full gap-[50px] px-4 py-20
-  lg:px-8 lg:flex-row lg:gap-[80px] lg:pt-0;
+  lg:px-8 lg:flex-row lg:gap-[80px] lg:pb-0 lg:pt-[90px];
 }
 
 .col1 {
@@ -18,7 +18,7 @@
 }
 
 .col2 {
-  @apply lg:w-[50%] mt-[-100px];
+  @apply lg:w-[50%] lg:mt-[-250px];
 }
 
 
