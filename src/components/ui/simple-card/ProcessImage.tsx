@@ -3,24 +3,24 @@ import Image from 'next/image'
 import styles from '@/components/ui/simple-card/SimpleCard.module.scss'
 
 interface ProcessImageProps {
-  urlFrom: string
-  urlTo: string
+  from: string
+  to: string
 }
 
-const ProcessImage:FC<ProcessImageProps> = ({urlFrom, urlTo}) => {
+const ProcessImage:FC<ProcessImageProps> = ({from, to}) => {
  return (
   <div className="flex flex-row place-items-center">
     <Image
       className={styles.image}
-      src={urlFrom}
+      src={`/home/process-examples/${from}.webp`}
       alt={"pair"}
       width={500}
       height={0}
     />
-    <div className="font-semibold mt-[-7px] mx-1">⟷</div>
+    <div className="font-semibold text-2xl mt-[-7px] mx-1">⟷</div>
     <Image
       className={styles.image}
-      src={urlTo}
+      src={`/home/process-examples/${to}.webp`}
       alt={"pair"}
       width={500}
       height={0}

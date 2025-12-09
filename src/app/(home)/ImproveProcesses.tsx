@@ -1,28 +1,23 @@
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
+import Test from '@/app/(home)/Test'
+import Intro from '@/components/ui/intro/Intro'
 
 interface ImproveProcessesProps {}
 
 const ImproveProcesses: FC<ImproveProcessesProps> = ({}) => {
-  const ImageContent = () => {
-    return (
-      <>
-        <p>Below are some example process. Scroll through the list to get some ideas.</p>
-        <CTA label="Learn More" href="platform" noBottomMargin />
-      </>
-    )
-  }
-
   return (
     <div>
       <SimplePair
-        title="Automation and integration processes"
-        subtitle="The list is endless. Ziggy can help you move data from A to B in almost any scenario and between almost any platform, database, API, files etc."
-        imageCopy={<ImageContent />}
-        image="/placeholder.svg"
-        swap
+        title="Processes we can help with"
+        subtitle="Ziggy can help you move data from A to B in almost any scenario and between almost any platform, database, API, files etc."
+        imageCopy=""
+        image="/home/processes.webp"
+        scale={0.6}
       />
+      <Test />
+      <CTA label="Learn More" href="platform" />
     </div>
   )
 }

@@ -29,16 +29,18 @@ const SimpleCard: FC<SimpleCardProps> = ({
       <div className={styles.wrapper}>
         <div className={styles.card}>
           {imageUrl && imageAlt && (
-            <Image
-              className={styles.image}
-              src={imageUrl}
-              alt={imageAlt}
-              width={500}
-              height={0}
-              // style={{ width: 'auto', height: 'auto' }}
-            />
+            <div className={styles.image}>
+              <Image
+                // className={styles.image}
+                src={imageUrl}
+                alt={imageAlt}
+                width={500}
+                height={0}
+                // style={{ width: 'auto', height: 'auto' }}
+              />
+            </div>
           )}
-          {imageDiv && <div>{imageDiv}</div>}
+          {imageDiv && <div className={styles.image}>{imageDiv}</div>}
           <div className={styles.lowerContent}>
             <div>
               <h3 className={styles.title}>{title}</h3>

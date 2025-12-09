@@ -3,11 +3,16 @@
 }
 
 .card {
-  @apply p-0 bg-white rounded-lg border border-gray-200 shadow-md transition-shadow duration-200;
+  @apply p-0 transition-shadow duration-200 bg-dark-gray text-white
+    rounded-lg shadow-sm;
+
+  * {
+    @apply text-white font-extralight;
+  }
 }
 
 .image {
-  @apply mt-0 mx-auto rounded-lg shadow-sm brightness-90;
+  @apply mt-0 mx-auto p-3 flex justify-center;
 }
 
 .title {
@@ -15,11 +20,11 @@
 }
 
 .content {
-  @apply font-normal text-[var(--dark-gray)] my-2;
+  @apply font-extralight my-2;
 }
 
 .lowerContent {
-  @apply p-5;
+  @apply pb-5 px-5;
 }
 
 .linkWrapper {

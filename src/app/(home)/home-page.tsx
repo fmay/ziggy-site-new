@@ -3,7 +3,6 @@ import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import WhosItFor from '@/app/(home)/WhosItFor'
 import BusinessFunctions from '@/app/(home)/BusinessFunctions'
 import IntegrationPartner from '@/app/(home)/IntegrationPartner'
-import ExampleAutomations from '@/app/(home)/ExampleAutomations'
 import AI from '@/app/(home)/AI'
 import Pricing from '@/app/(home)/Pricing'
 import Hero from '@/components/ui/hero/Hero'
@@ -11,7 +10,7 @@ import { GiCheckMark } from 'react-icons/gi'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
-import Test from '@/app/(home)/Test'
+import ImproveProcesses from '@/app/(home)/ImproveProcesses'
 
 export default function HomePage() {
   const sections: Section[] = [
@@ -25,7 +24,7 @@ export default function HomePage() {
     },
     {
       bgColor: 'bg-white',
-      children: <Test />,
+      children: <ImproveProcesses />,
     },
     {
       bgColor: 'bg-gray-50',
