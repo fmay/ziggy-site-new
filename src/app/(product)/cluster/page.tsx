@@ -58,7 +58,7 @@ export default function Cluster() {
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/cluster.webp"
         title="Ziggy Cluster"
         subtitle={
@@ -75,7 +75,8 @@ export default function Cluster() {
           id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
-          waveInvert={section.waveInvert}>
+          waveInvert={section.waveInvert}
+          waveVariant={WavyVariantEnum.Standard}>
           {section.children}
         </PageSection>
       ))}

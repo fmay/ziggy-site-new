@@ -53,7 +53,7 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({ headerRight }) => {
         right={headerRight}
         title="AI Edge transformations"
         description={
-          <div className="mb-[0px]">
+          <>
             <p>
               Create validations, transformations and mappings on any edge. Data comes in, the AI
               assistant performs the transformations and validations
@@ -62,7 +62,7 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({ headerRight }) => {
               AI is never applied at run time. It generates hidden code in the designer, so it is
               fast and 100% consistent.
             </p>
-          </div>
+          </>
         }
         imageScale={0.5}
       />

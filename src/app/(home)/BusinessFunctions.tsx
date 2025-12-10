@@ -8,7 +8,10 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Ziggy handles automation and integration processes within, from and to every function and department in your company. </p>
+        <p>
+          Ziggy handles automation and integration processes within, from and to every function and
+          department in your company.{' '}
+        </p>
       </>
     )
   }
@@ -21,7 +24,7 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/business-functions.webp"
         scale={0.9}
-        cta={<CTA label="Learn More" href="platform" noBottomMargin/>}
+        cta={<CTA label="Learn More" href="platform" noBottomMargin />}
         swap
       />
     </div>

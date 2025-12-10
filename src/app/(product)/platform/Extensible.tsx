@@ -8,8 +8,10 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Backed by a CLI and SDK, TypeScript developer can build custom blocks that plugin straight into Ziggy</p>
-        <CTA label="Learn More" href="extend" noBottomMargin />
+        <p>
+          Backed by a CLI and SDK, TypeScript developer can build custom blocks that plugin straight
+          into Ziggy
+        </p>
       </>
     )
   }
@@ -22,6 +24,7 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/home-customise.webp"
         scale={0.7}
+        cta={<CTA label="Learn More" href="extend" noBottomMargin />}
         swap
       />
     </div>

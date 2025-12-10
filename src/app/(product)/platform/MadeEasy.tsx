@@ -15,7 +15,6 @@ const MadeEasy: FC<MadeEasyProps> = ({}) => {
           <li>AI features let you do things only a developer could normally do</li>
           <li>Backed by all the features you need</li>
         </ul>
-        <CTA label="Learn More" href="features" noBottomMargin />
       </>
     )
   }
@@ -28,6 +27,7 @@ const MadeEasy: FC<MadeEasyProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/platform/easy.webp"
         scale={0.6}
+        cta={<CTA label="Learn More" href="features" noBottomMargin />}
       />
     </div>
   )

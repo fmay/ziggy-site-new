@@ -31,7 +31,7 @@
 }
 
 .imageColumn {
-  @apply flex-1 order-2 lg:order-none overflow-hidden;
+  @apply flex-1 order-2 lg:order-none overflow-hidden max-w-[100%];
   min-width: 0;
 }
 

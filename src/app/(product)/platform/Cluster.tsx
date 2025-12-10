@@ -15,7 +15,6 @@ const Cluster: FC<ClusterProps> = ({}) => {
           <li>All data pipelines are built on a visual canvas</li>
           <li>Backed by all the features you need</li>
         </ul>
-        <CTA label="Learn More" href="cluster" noBottomMargin />
       </>
     )
   }
@@ -27,6 +26,7 @@ const Cluster: FC<ClusterProps> = ({}) => {
         subtitle="Simple Docker installation on any infrastructure whether you need something single of scalability and high availability."
         imageCopy={<ImageContent />}
         image="/platform/cluster.webp"
+        cta={<CTA label="Learn More" href="cluster" noBottomMargin />}
         scale={0.7}
       />
     </div>

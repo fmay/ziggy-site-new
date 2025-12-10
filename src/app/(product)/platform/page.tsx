@@ -55,11 +55,11 @@ export default function Platform() {
   ]
 
   return (
-    <div className="min-h-screen mx-auto pt-12">
+    <>
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/home.webp"
         title="Ziggy - a new Automation and Integration Platform."
         subtitle={
@@ -84,6 +84,6 @@ export default function Platform() {
           {section.children}
         </PageSection>
       ))}
-    </div>
+    </>
   )
 }

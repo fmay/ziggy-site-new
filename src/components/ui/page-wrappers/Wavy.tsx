@@ -76,6 +76,8 @@ const Wavy: FC<WavyProps> = ({
   // Convert Tailwind classes to hex if needed
   let fromCol = fromColor
   let toCol = toColor
+  console.log(variant)
+
 
   if (fromColor && toColor) {
     if (!fromColor.includes('#') && !fromColor.includes('rgb'))

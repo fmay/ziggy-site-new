@@ -48,7 +48,7 @@ export default function Platform() {
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/ai-features.webp"
         title="Ziggy's AI Features"
         subtitle={

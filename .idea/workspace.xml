@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="global styling 0.2">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pre wavy change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/EdgeAssistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/EdgeAssistant.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/Cluster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/Cluster.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/MadeEasy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/MadeEasy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/Wavy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/Wavy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,15 +171,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="28422000" />
-    </task>
-    <task id="LOCAL-00144" summary="processes 0.1">
-      <option name="closed" value="true" />
-      <created>1765097612077</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1765097612077</updated>
+      <workItem from="1765300658738" duration="30470000" />
     </task>
     <task id="LOCAL-00145" summary="processes 0.11">
       <option name="closed" value="true" />
@@ -559,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765366303011</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="pre wavy change">
+      <option name="closed" value="true" />
+      <created>1765368526883</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1765368526883</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="demo 1" />
     <MESSAGE value="image nudge up in hero" />
     <MESSAGE value="scroll padding" />
     <MESSAGE value="services" />
@@ -630,7 +635,8 @@
     <MESSAGE value="global styling 0.13" />
     <MESSAGE value="global styling 0.14" />
     <MESSAGE value="global styling 0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="global styling 0.2" />
+    <MESSAGE value="pre wavy change" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre wavy change" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
