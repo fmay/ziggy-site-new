@@ -68,7 +68,6 @@ export default function Platform() {
           {section.children}
         </PageSection>
       ))}
-
     </div>
   )
 }

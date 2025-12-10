@@ -32,6 +32,7 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
             className={styles.imageWrapper}
             style={{
               width: `${600 * scale}px`,
+              maxWidth: '100%',
               margin: '0 auto',
               height: '100%',
               display: 'flex',

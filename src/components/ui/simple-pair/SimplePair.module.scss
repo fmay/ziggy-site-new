@@ -19,51 +19,25 @@
 }
 
 .imageRow {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
+  @apply flex flex-col gap-8 items-center lg:gap-16 lg:flex-row;
 
   &.swapped {
-    flex-direction: row-reverse;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 2rem;
-
-    &.swapped {
-      flex-direction: column;
-
-      .headerSection {
-        order: 1;
-      }
-      .imageColumn {
-        order: 2;
-      }
-      .subCopy {
-        order: 3;
-      }
-    }
+    @apply lg:flex-row-reverse;
   }
 }
 
 .headerSection {
-  flex: 1;
-
-  @media (max-width: 768px) {
-    order: 1;
-  }
+  @apply flex-1 order-1 lg:order-none;
 }
 
 .imageColumn {
-  flex: 1;
-
-  @media (max-width: 768px) {
-    order: 2;
-  }
+  @apply flex-1 order-2 lg:order-none overflow-hidden;
+  min-width: 0;
 }
 
 .subCopy {
+  @apply order-3 lg:order-none;
+
   ul {
     @apply my-6 text-sm ml-4;
   }
@@ -72,19 +46,17 @@
   }
 
   a {
-    position: relative;
-    z-index: 10;
-  }
-
-  @media (max-width: 768px) {
-    order: 3;
+    @apply relative z-10;
   }
 }
 
 .imageWrapper {
-  @media (max-width: 768px) {
-    max-width: 100% !important;
-    width: 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+
+  @media (min-width: 1024px) {
+    width: auto !important;
+    max-width: none !important;
   }
 }
 
@@ -93,15 +65,9 @@
 }
 
 .ctaDesktop {
-  @apply hidden lg:flex;
-  position: relative;
-  z-index: 10;
-  margin-top: 1.5rem;
+  @apply hidden lg:flex relative z-10 mt-6;
 }
 
 .ctaMobile {
-  @apply lg:hidden block;
-  position: relative;
-  z-index: 10;
-  margin-top: 1rem;
+  @apply flex justify-center lg:hidden relative z-10 mt-4;
 }

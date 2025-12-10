@@ -1,5 +1,5 @@
 .heroSection {
-  @apply relative;
+  @apply relative min-h-screen mx-auto pt-12;
 }
 
 .container {
@@ -9,9 +9,9 @@
 
 .wrapper {
   @apply flex place-items-center mx-auto max-w-7xl
-  flex-col w-full gap-[50px] px-3 py-20
-  lg:px-8
-  lg:flex-row lg:gap-[80px] lg:pt-[90px];
+  flex-col w-full
+  gap-[20px] px-3 pt-[30px] pb-2
+  lg:px-8 lg:flex-row lg:gap-[80px] lg:pt-[90px];
 }
 
 .beneath {
@@ -62,7 +62,7 @@
   @apply hidden lg:block mt-10 text-4xl text-left;
 }
 .signoffMobile {
-  @apply lg:hidden mt-0 text-4xl text-left;
+  @apply lg:hidden mt-0 mb-4 text-4xl text-left;
 }
 
 .heroImage {

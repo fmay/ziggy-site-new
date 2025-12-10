@@ -49,7 +49,7 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen mx-auto pt-12">
+    <>
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
@@ -93,6 +93,6 @@ export default function HomePage() {
           {section.children}
         </PageSection>
       ))}
-    </div>
+    </>
   )
 }
