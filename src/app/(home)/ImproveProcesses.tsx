@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
-import Test from '@/app/(home)/Test'
+import ProcessItems from '@/app/(home)/ProcessItems'
 import Intro from '@/components/ui/intro/Intro'
 
 interface ImproveProcessesProps {}
@@ -16,7 +16,7 @@ const ImproveProcesses: FC<ImproveProcessesProps> = ({}) => {
         image="/home/processes.webp"
         scale={0.6}
       />
-      <Test />
+      <ProcessItems />
       <CTA label="Learn More" href="platform" />
     </div>
   )

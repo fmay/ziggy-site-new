@@ -20,7 +20,7 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
         title="Business functions we help"
         subtitle="Ziggy automates process in every department in your company with normal data operations and Generative AI processes."
         imageCopy={<ImageContent />}
-        image="/home/business-functions.svg"
+        image="/home/business-functions.webp"
         scale={0.9}
         swap
       />

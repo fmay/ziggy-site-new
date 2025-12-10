@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="hero scss">
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/MobileNavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/MobileNavItem.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="mobile nav">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/home/business-functions.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/home/business-functions.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/home/who-for.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/home/who-for.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/business-functions.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/business-functions.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/who-for.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/who-for.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/ImproveProcesses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/ImproveProcesses.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/ProcessItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,15 +172,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="14088000" />
-    </task>
-    <task id="LOCAL-00136" summary="simple pair 0.5">
-      <option name="closed" value="true" />
-      <created>1765019101894</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1765019101894</updated>
+      <workItem from="1765300658738" duration="17708000" />
     </task>
     <task id="LOCAL-00137" summary="Home revision 0.2">
       <option name="closed" value="true" />
@@ -555,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765350778218</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="mobile nav">
+      <option name="closed" value="true" />
+      <created>1765351414791</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1765351414791</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +612,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="processes 0.13" />
     <MESSAGE value="ai generate" />
     <MESSAGE value="pre pricing" />
     <MESSAGE value="hero updates" />
@@ -626,7 +636,8 @@
     <MESSAGE value="cluster updated" />
     <MESSAGE value="hubspot collections" />
     <MESSAGE value="hero scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="hero scss" />
+    <MESSAGE value="mobile nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobile nav" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

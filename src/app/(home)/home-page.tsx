@@ -42,10 +42,10 @@ export default function HomePage() {
       bgColor: getNextColor(),
       children: <Pricing />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo background="dark" />,
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <QuickBookDemo background="dark" />,
+    // },
   ]
 
   return (
