@@ -5,6 +5,7 @@ import styles from './ScrollContentImagePairs.module.scss'
 import CTA from '@/components/ui/cta/CTA'
 
 export interface ContentImagePair {
+  title?: string
   content: ReactNode
   image?: string
   scene?: ReactNode
@@ -186,8 +187,8 @@ const ScrollContentImagePairs = ({
 
   const getMarginTop = (pair: ContentImagePair) => {
     if (pair.hasCTA) return 60
-    if (pair.contentNudge) return pair.contentNudge
-    return 0
+    if (pair.contentNudge) return 140+ pair.contentNudge
+    return 140
   }
 
   return (
@@ -206,6 +207,7 @@ const ScrollContentImagePairs = ({
               }}
               style={{ paddingTop: getMarginTop(pair) }}
               className={styles.contentItem}>
+              <h3>{pair.title || ''}</h3>
               <div className={`${styles.contentWrapper} ${border ? '' : styles.noBorder}`}>
                 {pair.content}
               </div>

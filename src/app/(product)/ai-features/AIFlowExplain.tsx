@@ -33,12 +33,10 @@ const AIFlowExplain: FC = () => {
       <Intro
         title="Explain my Flow"
         description={
-          <div className="mb-[100px]">
-            <p>
-              Sometimes you're faced with a Flow and you're not sure it does. Ziggy can explain with
-              a button click.
-            </p>
-          </div>
+          <p>
+            Sometimes you're faced with a Flow and you're not sure it does. Ziggy can explain with a
+            button click.
+          </p>
         }
         imageScale={0.5}
       />

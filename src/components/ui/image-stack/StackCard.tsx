@@ -47,7 +47,7 @@ const StackCard: FC<StackCardProps> = ({
   graphic,
   graphicAlt = '',
   graphicBgColor = 'bg-white',
-  className = ''
+  className = '',
 }) => {
   return (
     <div
@@ -55,9 +55,7 @@ const StackCard: FC<StackCardProps> = ({
       style={{
         ['--productFeaturePrimaryAccentColor' as string]: primaryColor,
         ['--productFeatureSecondaryAccentColor' as string]: secondaryColor,
-      }}
-    >
-
+      }}>
       {/* Graphic layer */}
       {graphic && (
         <div className={styles.graphicLayer}>
@@ -79,11 +77,7 @@ const StackCard: FC<StackCardProps> = ({
         {/* Product Badge */}
         {badgeLabel && (
           <div className={styles.badge}>
-            {icon && (
-              <div className={styles.badgeIcon}>
-                {icon}
-              </div>
-            )}
+            {icon && <div className={styles.badgeIcon}>{icon}</div>}
             <div className={styles.badgeLabel}>
               <span>{badgeLabel}</span>
             </div>
@@ -91,14 +85,10 @@ const StackCard: FC<StackCardProps> = ({
         )}
 
         {/* Title */}
-        <h3 className={styles.title}>
-          {title}
-        </h3>
+        <h4>{title}</h4>
 
         {/* Description */}
-        <p className={styles.description}>
-          {description}
-        </p>
+        <p className={styles.description}>{description}</p>
 
         {/* CTA Link - Fixed height, hidden by default */}
         <div className={styles.ctaWrapper}>
@@ -107,9 +97,8 @@ const StackCard: FC<StackCardProps> = ({
             className={styles.ctaLink}
             {...(ctaNewTab && {
               target: '_blank',
-              rel: 'noopener noreferrer'
-            })}
-          >
+              rel: 'noopener noreferrer',
+            })}>
             {ctaText} {'>'}
           </a>
         </div>

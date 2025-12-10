@@ -14,12 +14,8 @@
   @apply flex-1;
 }
 
-.title {
-  @apply text-4xl font-normal mb-6;
-}
-
 .subtitle {
-  @apply text-2xl font-light text-gray-600;
+  @apply  text-gray-600;
 }
 
 .imageRow {
@@ -81,15 +77,6 @@
 }
 
 .subCopy {
-  position: relative;
-  z-index: 1;
-  margin-top: 30px;
-  grid-column: 1;
-  grid-row: 2;
-
-  p {
-    @apply text-lg;
-  }
 
   ul {
     @apply my-6 text-sm ml-4;

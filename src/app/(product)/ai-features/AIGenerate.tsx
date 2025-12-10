@@ -50,13 +50,11 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({}) => {
       <Intro
         title="Generative AI"
         description={
-          <div className="mb-[80px]">
-            <p>
-              The <strong>AI Generate</strong> block is a great way to generate content based on
-              data on the incoming edge. This is great for summaries or whatever else you can turn
-              you mind to.
-            </p>
-          </div>
+          <p>
+            The <strong>AI Generate</strong> block is a great way to generate content based on data
+            on the incoming edge. This is great for summaries or whatever else you can turn you mind
+            to.
+          </p>
         }
         imageScale={0.5}
       />

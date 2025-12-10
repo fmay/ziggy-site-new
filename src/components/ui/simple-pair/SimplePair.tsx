@@ -16,12 +16,15 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
   return (
     <div className={styles.container}>
 
-      {/* Second Row - Image and Image Copy */}
       <div className={`${styles.imageRow} ${swap ? styles.swapped : ''}`}>
+        {/*COL1*/}
         <div className={styles.headerSection} style={{ paddingTop: `${contentNudge}px` }}>
-          <h2 className={styles.title}>{title}</h2>
+          <h2>{title}</h2>
           <p className={styles.subtitle}>{subtitle}</p>
+          <div className={styles.subCopy}>{imageCopy}</div>
         </div>
+
+        {/*COL2*/}
         <div className={styles.imageColumn}>
           <div
             className={styles.imageWrapper}
@@ -42,7 +45,6 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
             />
           </div>
         </div>
-        <div className={styles.subCopy}>{imageCopy}</div>
       </div>
     </div>
   )

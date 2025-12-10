@@ -24,7 +24,7 @@
 
 // Adjust this value for the spacing
 .contentItem {
-  @apply min-h-[45vh] flex items-center;
+  @apply min-h-[45vh] flex flex-col;
 }
 
 .leftColumn {
@@ -101,7 +101,7 @@
 }
 
 .mobilePair {
-  @apply space-y-8;
+  @apply space-y-4  bg-red-50 p-2 rounded-md shadow-md mb-1;
 }
 
 .mobileContent {
