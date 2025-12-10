@@ -22,7 +22,7 @@ const MobileNavItem = ({
       <div key={item.label}>
         <button
           onClick={() => toggleMobileItem(item.label)}
-          className="w-full flex items-center justify-between text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2"
+          className="w-full flex items-center justify-between text-white hover:text-stripe-purple transition-colors duration-200 py-2"
           aria-expanded={isExpanded}>
           <span>{item.label}</span>
           <svg
@@ -40,13 +40,13 @@ const MobileNavItem = ({
 
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
           }`}>
           <div className="pl-4 pb-2 space-y-2 pt-2">
             {item.dropdown.sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 {section.title && (
-                  <div className="text-xs font-semibold text-stripe-gray uppercase tracking-wide mt-2 mb-1">
+                  <div className="text-xs font-semibold text-white uppercase tracking-wide mt-2 mb-1">
                     {section.title}
                   </div>
                 )}
@@ -70,7 +70,7 @@ const MobileNavItem = ({
     <Link
       key={item.label}
       href={item.href!}
-      className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 py-2 block"
+      className="text-white hover:text-stripe-purple transition-colors duration-200 py-2 block"
       onClick={() => setMobileMenuOpen(false)}
       {...(item.href!.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
       {item.label}

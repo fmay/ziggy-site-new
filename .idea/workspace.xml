@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="hubspot collections">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="hero scss">
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/MobileNavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/MobileNavItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,15 +161,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="13691000" />
-    </task>
-    <task id="LOCAL-00135" summary="home hero img">
-      <option name="closed" value="true" />
-      <created>1765014687659</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1765014687659</updated>
+      <workItem from="1765300658738" duration="14088000" />
     </task>
     <task id="LOCAL-00136" summary="simple pair 0.5">
       <option name="closed" value="true" />
@@ -556,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765348808957</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="hero scss">
+      <option name="closed" value="true" />
+      <created>1765350778218</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1765350778218</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="processes 0.12" />
     <MESSAGE value="processes 0.13" />
     <MESSAGE value="ai generate" />
     <MESSAGE value="pre pricing" />
@@ -627,7 +625,8 @@
     <MESSAGE value="color cycling" />
     <MESSAGE value="cluster updated" />
     <MESSAGE value="hubspot collections" />
-    <option name="LAST_COMMIT_MESSAGE" value="hubspot collections" />
+    <MESSAGE value="hero scss" />
+    <option name="LAST_COMMIT_MESSAGE" value="hero scss" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

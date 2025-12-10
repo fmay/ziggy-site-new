@@ -104,6 +104,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.mobile-dropdown-item {
+  a {
+    @apply hover:bg-transparent;
+  }
+  .label {
+    @apply text-white;
+  }
+  .description {
+    @apply text-white;
+  }
+}
+
 .section-intro {
   @apply flex flex-col max-w-[600px];
   h2 {
