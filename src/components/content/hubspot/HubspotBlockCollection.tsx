@@ -1,13 +1,18 @@
+'use client'
+
 import { FC } from 'react'
 import Carousel from '@/components/ui/carousel/Carousel'
 import CarouselItem from '@/components/ui/carousel/Carouseltem'
+import { useScreenSize } from '@/hooks/useScreenSize'
 
 interface HubspotBlockCollectionProps {
   height?: string
 }
 
 const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => {
-  const ItemHeight = '530px'
+  const { isLg } = useScreenSize()
+
+  const ItemHeight = isLg ? '530px' : '590px'
   return (
     <div
       style={{
@@ -18,12 +23,11 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
         }),
       }}>
       <Carousel
-        slidesToShow={4.3}
+        slidesToShow={isLg ? 4.3 : 1.2}
         slidesToScroll={1}
         swipeToSlide={true}
         infinite={false}
-        enableTrackpadSwipe={true}
-      >
+        enableTrackpadSwipe={true}>
         {/*Read*/}
         <CarouselItem
           title="Read"
@@ -63,8 +67,8 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           height={ItemHeight}>
           <div>
             <p>
-              Get associated objects of the require type. Specify the association type and
-              choose what properties you require.
+              Get associated objects of the require type. Specify the association type and choose
+              what properties you require.
             </p>
           </div>
         </CarouselItem>
@@ -78,9 +82,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-create-associations"
           height={ItemHeight}>
           <div>
-            <p>
-              Make associations in Hubspot based data passed into the block
-            </p>
+            <p>Make associations in Hubspot based data passed into the block</p>
           </div>
         </CarouselItem>
 
@@ -93,9 +95,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-get-all-owners"
           height={ItemHeight}>
           <div>
-            <p>
-              Get a list of Hubspot users and associated metadata
-            </p>
+            <p>Get a list of Hubspot users and associated metadata</p>
           </div>
         </CarouselItem>
 
@@ -108,9 +108,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-owner-translate"
           height={ItemHeight}>
           <div>
-            <p>
-              Takes an email address and translates it into a HubSpot owner/user id
-            </p>
+            <p>Takes an email address and translates it into a HubSpot owner/user id</p>
           </div>
         </CarouselItem>
 
@@ -123,9 +121,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-currency"
           height={ItemHeight}>
           <div>
-            <p>
-              Takes an email address and translates it into a HubSpot owner/user id
-            </p>
+            <p>Takes an email address and translates it into a HubSpot owner/user id</p>
           </div>
         </CarouselItem>
 
@@ -138,9 +134,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-search"
           height={ItemHeight}>
           <div>
-            <p>
-              Search on any HubSpot object.
-            </p>
+            <p>Search on any HubSpot object.</p>
           </div>
         </CarouselItem>
 
@@ -153,9 +147,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-owner-translate"
           height={ItemHeight}>
           <div>
-            <p>
-              Get/set file attachments
-            </p>
+            <p>Get/set file attachments</p>
           </div>
         </CarouselItem>
       </Carousel>

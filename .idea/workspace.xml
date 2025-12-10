@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="tweaking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/AIJavascript.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/AIJavascript.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/ClusterFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/ClusterFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Core.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Core.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Edge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Edge.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra2.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,15 +162,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="33144000" />
-    </task>
-    <task id="LOCAL-00147" summary="processes 0.13">
-      <option name="closed" value="true" />
-      <created>1765099242687</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1765099242687</updated>
+      <workItem from="1765300658738" duration="33872000" />
     </task>
     <task id="LOCAL-00148" summary="ai generate">
       <option name="closed" value="true" />
@@ -566,7 +548,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765370305246</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="tweaking">
+      <option name="closed" value="true" />
+      <created>1765372843654</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1765372843654</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
