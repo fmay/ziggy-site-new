@@ -11,7 +11,7 @@
 }
 
 .form {
-  @apply bg-white px-3 py-4 rounded-lg border border-gray-200 shadow-sm text-left;
+  @apply bg-white px-3 py-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm text-left;
 }
 
 .formFields {

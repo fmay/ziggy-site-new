@@ -29,7 +29,7 @@ export default function Contact() {
           </div>
         }
         minimal
-        contentNudge={0}
+        contentNudge={-70}
       />
 
       {sections.map((section, index) => (

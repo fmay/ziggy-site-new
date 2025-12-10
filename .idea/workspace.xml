@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="mid contact demo">
-      <change afterPath="$PROJECT_DIR$/src/app/(forms)/(subscribe)/Subscribe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/contact.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/contact.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/contact.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/contact.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.module.scss" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="contact demo">
       <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/demo/QuickBookDemo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/demo/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/demo/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,15 +161,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="43723000" />
-    </task>
-    <task id="LOCAL-00150" summary="ai generate">
-      <option name="closed" value="true" />
-      <created>1765200280541</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1765200280541</updated>
+      <workItem from="1765300658738" duration="44086000" />
     </task>
     <task id="LOCAL-00151" summary="ai generate">
       <option name="closed" value="true" />
@@ -568,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765379244885</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="contact demo">
+      <option name="closed" value="true" />
+      <created>1765389478973</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1765389478973</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="home" />
     <MESSAGE value="pricing" />
     <MESSAGE value="home bus. functions" />
     <MESSAGE value="align" />
@@ -639,7 +625,8 @@
     <MESSAGE value="tweaking" />
     <MESSAGE value="conditional carousel options" />
     <MESSAGE value="mid contact demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="mid contact demo" />
+    <MESSAGE value="contact demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="contact demo" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

@@ -7,10 +7,6 @@ interface ContactFormProps {}
 const ContactForm: FC<ContactFormProps> = ({}) => {
   return (
     <div className={styles.container}>
-      <div className={styles.demo}>
-        <CTA label="I'd prefer a demo" href="demo" />
-      </div>
-
       <form className={styles.form}>
         <div className={styles.formFields}>
           <div className={styles.fieldGroup}>
