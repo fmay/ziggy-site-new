@@ -7,7 +7,7 @@ interface JavascriptFeaturesProps {
   headerRight?: boolean
 }
 
-const EdgeAssistant: FC<JavascriptFeaturesProps> = ({headerRight}) => {
+const EdgeAssistant: FC<JavascriptFeaturesProps> = ({ headerRight }) => {
   const items: ReactNode[] = [
     <StackCard
       title="Transform data on any edge"
@@ -53,16 +53,14 @@ const EdgeAssistant: FC<JavascriptFeaturesProps> = ({headerRight}) => {
         right={headerRight}
         title="AI Edge transformations"
         description={
-          <div className="mb-[80px]">
+          <div className="mb-[0px]">
             <p>
               Create validations, transformations and mappings on any edge. Data comes in, the AI
               assistant performs the transformations and validations
             </p>
             <p>
-              <strong>
-                AI is never applied at run time. It generates hidden code in the designer, so it is
-                fast and 100% consistent.
-              </strong>
+              AI is never applied at run time. It generates hidden code in the designer, so it is
+              fast and 100% consistent.
             </p>
           </div>
         }

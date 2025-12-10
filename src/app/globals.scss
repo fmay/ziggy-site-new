@@ -52,7 +52,15 @@ p {
 
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-semibold;
+  @apply font-normal;
+}
+
+h1, h2 {
+  @apply text-3xl lg:text-4xl
+}
+
+h3, h4 {
+  @apply text-2xl lg:text-3xl
 }
 
 @layer utilities {

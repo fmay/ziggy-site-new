@@ -3,7 +3,7 @@
 }
 
 .column {
-  @apply w-1/2;
+  @apply lg:w-1/2;
 }
 
 .textContent {
@@ -11,19 +11,11 @@
 }
 
 .title {
-  @apply text-3xl font-normal mb-6;
+  @apply mb-6;
 }
 
 .description {
   @apply flex flex-col max-w-[600px];
-
-  p {
-    @apply text-2xl text-mid-gray;
-  }
-
-  :global(h2) {
-    @apply font-light text-[2.3rem] mb-4;
-  }
 }
 
 .imageWrapper {
