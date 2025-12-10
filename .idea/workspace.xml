@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home tweaks">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="global styling 0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/EdgeAssistant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/EdgeAssistant.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/intro/Intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/ImageStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/ImageStack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,15 +166,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="18353000" />
-    </task>
-    <task id="LOCAL-00138" summary="hp and platform tlp">
-      <option name="closed" value="true" />
-      <created>1765026253490</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1765026253490</updated>
+      <workItem from="1765300658738" duration="18960000" />
     </task>
     <task id="LOCAL-00139" summary="hp and platform tlp">
       <option name="closed" value="true" />
@@ -559,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765354812247</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="global styling 0.1">
+      <option name="closed" value="true" />
+      <created>1765355440016</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1765355440016</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="pre pricing" />
     <MESSAGE value="hero updates" />
     <MESSAGE value="about us" />
     <MESSAGE value="demo 0.4" />
@@ -630,7 +630,8 @@
     <MESSAGE value="hero scss" />
     <MESSAGE value="mobile nav" />
     <MESSAGE value="home tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="home tweaks" />
+    <MESSAGE value="global styling 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="global styling 0.1" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

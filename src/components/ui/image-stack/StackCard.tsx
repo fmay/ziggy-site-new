@@ -91,9 +91,9 @@ const StackCard: FC<StackCardProps> = ({
         )}
 
         {/* Title */}
-        <h2 className={styles.title}>
+        <h3 className={styles.title}>
           {title}
-        </h2>
+        </h3>
 
         {/* Description */}
         <p className={styles.description}>

@@ -52,7 +52,7 @@ p {
 
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-normal;
+  @apply font-light;
 }
 
 h1, h2 {
@@ -60,7 +60,7 @@ h1, h2 {
 }
 
 h3, h4 {
-  @apply text-2xl lg:text-3xl
+  @apply text-xl lg:text-2xl
 }
 
 @layer utilities {
