@@ -1,0 +1,36 @@
+.container {
+  @apply max-w-2xl mx-auto text-dark-text;
+  * {
+    @apply text-base;
+  }
+}
+
+.form {
+  @apply bg-white px-3 py-4 rounded-lg border border-gray-200 shadow-sm text-left;
+}
+
+.formFields {
+  @apply space-y-6;
+}
+
+.fieldGroup {
+  // No styles needed - structural element
+}
+
+.label {
+  @apply block text-base  text-stripe-navy mb-1 ml-[8px];
+}
+
+.input {
+  @apply w-full px-4 py-3 rounded-lg border border-gray-300;
+}
+
+.textarea {
+  @apply w-full px-4 py-3 rounded-lg border border-gray-300;
+  @apply focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent;
+}
+
+.submitButton {
+  @apply w-full px-6 py-4 bg-stripe-purple text-white rounded-full font-semibold;
+  @apply hover:opacity-90 transition-opacity;
+}

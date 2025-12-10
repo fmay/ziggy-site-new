@@ -15,25 +15,21 @@ export default function IntegrationPartners() {
   const sections: Section[] = [
     {
       id: 'calculator',
-      bgColor: getNextColor(),
+      bgColor: "pale-blue",
       children: <PricingCalculator />,
     },
     {
       id: 'services',
-      bgColor: getNextColor(),
+      bgColor: "white",
       children: <Services />
-    },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo background="light" />,
     },
   ]
 
   return (
-    <div className="min-h-screen mx-auto pt-12">
+    <>
       <Hero
         fromColor="header-footer"
-        toColor={DefaultColorCycle[0]}
+        toColor="pale-blue"
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/pricing.webp"
         title="Pricing"
@@ -55,6 +51,6 @@ export default function IntegrationPartners() {
           {section.children}
         </PageSection>
       ))}
-    </div>
+    </>
   )
 }

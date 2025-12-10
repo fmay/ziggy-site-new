@@ -8,7 +8,7 @@ export default function BookDemoPage() {
       <Hero
         fromColor="header-footer"
         toColor="header-footer"
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/demo.webp"
         title="Book Demo"
         subtitle={
@@ -20,7 +20,7 @@ export default function BookDemoPage() {
           </>
         }
         beneath={
-          <div className="mt-[-100px]">
+          <div className="lg:mt-[50px]">
             <QuickBookDemo />
           </div>
         }

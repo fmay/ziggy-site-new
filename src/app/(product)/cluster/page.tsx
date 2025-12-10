@@ -47,10 +47,6 @@ export default function Cluster() {
       bgColor: getNextColor(),
       children: <ClusterFeatures />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo background="dark" />,
-    },
   ]
 
   return (

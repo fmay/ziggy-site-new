@@ -34,13 +34,15 @@ export default function Extend() {
                   things with your data that gives them all the flexibility they need and avoids the
                   complexities.
                 </p>
-                <CTA
-                  label="Integration Partner Info"
-                  href="https://docs.ziggyservices.com/user-guide/plugin/overview"
-                />
               </div>
             }
             image="/product/extend/become-partner.webp"
+            cta={
+              <CTA
+                label="Integration Partner Info"
+                href="https://docs.ziggyservices.com/user-guide/plugin/overview"
+              />
+            }
             scale={0.9}
           />
         </>
@@ -59,10 +61,6 @@ export default function Extend() {
           <HubspotBlockCollection />
         </>
       ),
-    },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo background="dark" />,
     },
   ]
 

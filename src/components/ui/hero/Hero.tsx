@@ -38,9 +38,9 @@ const Hero: FC<HeroProps> = ({
         style={beneath ? { marginTop: `-${NUDGE_UP}px` } : undefined}
       >
         {/*Inner Wrapper*/}
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper}`}>
           {/*Left Col*/}
-          <div className={styles.col1}>
+          <div className={`${styles.col1}  ${styles.beneath ? styles.beneath : ''}`}>
             {/* TITLE */}
             <h1 className={styles.heading}>{title}</h1>
 

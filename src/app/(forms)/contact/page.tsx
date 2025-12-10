@@ -15,14 +15,12 @@ export default function Contact() {
         image="/hero/contact.webp"
         title=""
         subtitle={
-          <>
-            <div className="mt-[80px]">
-              <ContactForm />
-              <div className="text-center mt-[20px]">
-                <CTA label="I'd prefer a demo" href="demo" />
-              </div>
+          <div className="lg:mt-[-290px]">
+            <div className="text-center mt-[20px]">
+              <CTA label="I'd prefer a demo" href="demo" />
             </div>
-          </>
+            <ContactForm />
+          </div>
         }
       />
     </>

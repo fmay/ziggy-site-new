@@ -16,14 +16,10 @@ export default function IntegrationPartners() {
       bgColor: getNextColor(),
       children: <PartnerFeatures />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo background="dark" />,
-    },
   ]
 
   return (
-    <div className="min-h-screen mx-auto pt-12">
+    <>
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
@@ -65,6 +61,6 @@ export default function IntegrationPartners() {
           {section.children}
         </PageSection>
       ))}
-    </div>
+    </>
   )
 }

@@ -1,5 +1,5 @@
 .heroSection {
-  @apply relative min-h-screen mx-auto pt-12 lg:pt-0;
+  @apply relative min-h-[80vh] lg:min-h-screen  mx-auto pt-12 lg:pt-0;
 }
 
 .container {
@@ -20,6 +20,10 @@
 
 .col1 {
   @apply lg:w-[50%];
+}
+
+.beneath .col1 {
+  @apply lg:w-[100%];
 }
 
 .col2 {

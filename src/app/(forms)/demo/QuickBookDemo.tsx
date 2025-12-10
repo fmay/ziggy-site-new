@@ -126,7 +126,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
   return (
     <div className={`${styles.container} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
       <div className={styles.heading}>
-        <LuCalendarDays />
+        <LuCalendarDays className="mt-[-25px]" />
         <h2>Book a demo</h2>
       </div>
 
@@ -143,32 +143,6 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
             className={styles.input}
           />
         </div>
-
-        {/*<div className={styles.formField}>*/}
-        {/*  <label htmlFor="lastName" className={styles.label}>*/}
-        {/*    Last name*/}
-        {/*  </label>*/}
-        {/*  <input*/}
-        {/*    id="lastName"*/}
-        {/*    type="text"*/}
-        {/*    value={formData.lastName}*/}
-        {/*    onChange={e => handleInputChange('lastName', e.target.value)}*/}
-        {/*    className={styles.input}*/}
-        {/*  />*/}
-        {/*</div>*/}
-
-        {/*<div className={styles.formField}>*/}
-        {/*  <label htmlFor="company" className={styles.label}>*/}
-        {/*    Company*/}
-        {/*  </label>*/}
-        {/*  <input*/}
-        {/*    id="company"*/}
-        {/*    type="text"*/}
-        {/*    value={formData.company}*/}
-        {/*    onChange={e => handleInputChange('company', e.target.value)}*/}
-        {/*    className={styles.input}*/}
-        {/*  />*/}
-        {/*</div>*/}
 
         <div className={styles.formField}>
           <label htmlFor="email" className={styles.label}>

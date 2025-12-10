@@ -1,78 +1,70 @@
 import { FC } from 'react'
+import styles from './ContactForm.module.scss'
 
-interface ContactFormProps {
-}
+interface ContactFormProps {}
 
-const ContactForm:FC<ContactFormProps> = ({}) => {
- return (
-  <div>
-    <div className="max-w-2xl mx-auto">
-      <form className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-        <div className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-stripe-navy mb-2">
+const ContactForm: FC<ContactFormProps> = ({}) => {
+  return (
+    <div className={styles.container}>
+      <form className={styles.form}>
+        <div className={styles.formFields}>
+          <div className={styles.fieldGroup}>
+            <label htmlFor="name" className={styles.label}>
               Full Name
             </label>
             <input
               type="text"
               id="name"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent"
+              className={styles.input}
               placeholder="John Doe"
             />
           </div>
 
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-stripe-navy mb-2">
+          <div className={styles.fieldGroup}>
+            <label htmlFor="email" className={styles.label}>
               Email Address
             </label>
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent"
+              className={styles.input}
               placeholder="john@example.com"
             />
           </div>
 
-          <div>
-            <label
-              htmlFor="company"
-              className="block text-sm font-semibold text-stripe-navy mb-2">
+          <div className={styles.fieldGroup}>
+            <label htmlFor="company" className={styles.label}>
               Company
             </label>
             <input
               type="text"
               id="company"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent"
+              className={styles.input}
               placeholder="Acme Inc."
             />
           </div>
 
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold text-stripe-navy mb-2">
+          <div className={styles.fieldGroup}>
+            <label htmlFor="message" className={styles.label}>
               Message
             </label>
             <textarea
               id="message"
               rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-stripe-purple focus:border-transparent"
+              className={styles.textarea}
               placeholder="Tell us about your needs..."
             />
           </div>
 
           <button
             type="submit"
-            className="w-full px-6 py-4 bg-stripe-purple text-white rounded-full font-semibold hover:opacity-90 transition-opacity">
+            className={styles.submitButton}>
             Send Message
           </button>
         </div>
       </form>
     </div>
-  </div>
- )
+  )
 }
 
 export default ContactForm

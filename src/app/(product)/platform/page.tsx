@@ -48,10 +48,6 @@ export default function Platform() {
         </div>
       ),
     },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo background="dark" />,
-    },
   ]
 
   return (

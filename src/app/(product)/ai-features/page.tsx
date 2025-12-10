@@ -37,10 +37,6 @@ export default function Platform() {
       bgColor: getNextColor(),
       children: <ComingSoon />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo />,
-    },
   ]
 
   return (
