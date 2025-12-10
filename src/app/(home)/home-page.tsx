@@ -25,23 +25,23 @@ export default function HomePage() {
       bgColor: getNextColor(),
       children: <BusinessFunctions />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <ImproveProcesses />,
-    },
-    {
-      bgColor: getNextColor(),
-      waveInvert: true,
-      children: <AI />,
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <ImproveProcesses />,
+    // },
+    // {
+    //   bgColor: getNextColor(),
+    //   waveInvert: true,
+    //   children: <AI />,
+    // },
     {
       bgColor: getNextColor(),
       children: <IntegrationPartner />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <Pricing />,
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <Pricing />,
+    // },
     // {
     //   bgColor: getNextColor(),
     //   children: <QuickBookDemo background="dark" />,
@@ -57,16 +57,20 @@ export default function HomePage() {
         image="/hero/home.webp"
         signoff="Ziggy it!"
         cta={<CTA label="Learn More" href="platform" />}
-        title="The Automation and Integration Platform. New and Different."
+        title="The Automation and Integration Platform that's different."
         subtitle={
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Runs on your servers</span>
+              <span>AI enabled</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Wonderfully easy to use</span>
+              <span>Runs on your servers for optimal performance and security</span>
+            </li>
+            <li>
+              <GiCheckMark className={styles.checkIcon} />
+              <span>Built for extreme ease of use and access to any data source</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />

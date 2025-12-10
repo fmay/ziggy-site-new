@@ -9,17 +9,9 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
     return (
       <>
         <p>
-          Our plugin system lets you customise Ziggy so your platform can exchange data with
-          anything else with minimal effort for your customers
+          If you are a platform business that wants to make it easier for your customers to integrate data with your platform you can become one of our Platform Integration Partners and use
+          using your own customised Ziggy Blocks
         </p>
-        <ul>
-          <li>Typescript based plugin system</li>
-          <li>CLI and SDK for rapid development</li>
-          <li>
-            Your customer build flows in minutes that work directly with your platform and without
-            needing to code or use complex, costly ETL platforms.
-          </li>
-        </ul>
         <CTA label="Learn More" href="integration-partners" noBottomMargin />
       </>
     )
@@ -33,7 +25,6 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/home-pip.webp"
         scale={0.75}
-        swap
       />
     </div>
   )

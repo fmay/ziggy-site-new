@@ -10,9 +10,10 @@ interface SimplePairProps {
   image: string
   scale?: number
   contentNudge?: number
+  cta? : ReactNode
 }
 
-const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageCopy, image, scale = 1, contentNudge =0 }) => {
+const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageCopy, image, cta, scale = 1, contentNudge =0 }) => {
   return (
     <div className={styles.container}>
 
@@ -22,6 +23,7 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
           <h2>{title}</h2>
           <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.subCopy}>{imageCopy}</div>
+          {cta && <div className={styles.ctaDesktop}>{cta}</div>}
         </div>
 
         {/*COL2*/}
@@ -44,6 +46,7 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
               className={styles.image}
             />
           </div>
+          {cta && <div className={styles.ctaMobile}>{cta}</div>}
         </div>
       </div>
     </div>

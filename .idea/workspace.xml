@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="global styling 0.11 (about to do scroll pairs titles)">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="global styling 0.12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/AIFlowExplain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/AIFlowExplain.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/AIGenerate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/AIGenerate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/AIJavascript.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/AIJavascript.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/WhosItFor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/WhosItFor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" afterDir="false" />
     </list>
@@ -171,15 +167,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="21567000" />
-    </task>
-    <task id="LOCAL-00140" summary="hp and platform tlp">
-      <option name="closed" value="true" />
-      <created>1765037187446</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1765037187446</updated>
+      <workItem from="1765300658738" duration="24242000" />
     </task>
     <task id="LOCAL-00141" summary="updates">
       <option name="closed" value="true" />
@@ -565,7 +553,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765356123940</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="global styling 0.12">
+      <option name="closed" value="true" />
+      <created>1765358831481</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1765358831481</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +607,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="about us" />
     <MESSAGE value="demo 0.4" />
     <MESSAGE value="demo 0.6" />
     <MESSAGE value="demo 0.7" />
@@ -636,7 +631,8 @@
     <MESSAGE value="home tweaks" />
     <MESSAGE value="global styling 0.1" />
     <MESSAGE value="global styling 0.11 (about to do scroll pairs titles)" />
-    <option name="LAST_COMMIT_MESSAGE" value="global styling 0.11 (about to do scroll pairs titles)" />
+    <MESSAGE value="global styling 0.12" />
+    <option name="LAST_COMMIT_MESSAGE" value="global styling 0.12" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
