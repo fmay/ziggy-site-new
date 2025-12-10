@@ -15,6 +15,9 @@ interface HeroProps {
   cta?: React.ReactNode
   signoff?: string
   beneath?: React.ReactNode
+  minimal?: boolean
+  scale?: number
+  contentNudge?: number
 }
 
 const Hero: FC<HeroProps> = ({
@@ -26,7 +29,10 @@ const Hero: FC<HeroProps> = ({
   wavyVariant,
   cta,
   signoff,
-  beneath
+  beneath,
+  minimal,
+  scale = 1,
+  contentNudge = 0,
 }) => (
   <section className={styles.heroSection}>
     <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
@@ -34,15 +40,18 @@ const Hero: FC<HeroProps> = ({
       <div className={styles.overlay} />
 
       <div
-        className={styles.container}
-        style={beneath ? { marginTop: `-${NUDGE_UP}px` } : undefined}
-      >
+        className={`${styles.container} ${minimal ? styles.minimal : ''}`}
+        style={beneath ? { marginTop: `-${NUDGE_UP}px` } : undefined}>
         {/*Inner Wrapper*/}
         <div className={`${styles.wrapper}`}>
           {/*Left Col*/}
           <div className={`${styles.col1}  ${styles.beneath ? styles.beneath : ''}`}>
             {/* TITLE */}
-            <h1 className={styles.heading}>{title}</h1>
+            <h1
+              className={styles.heading}
+              style={{ marginTop: `${contentNudge && contentNudge + 'px'}` }}>
+              {title}
+            </h1>
 
             {/*SUBTITLE*/}
             <div className={styles.subheading}>{subtitle}</div>
@@ -55,13 +64,12 @@ const Hero: FC<HeroProps> = ({
           {/*IMAGE*/}
           <div className={styles.col2}>
             <div className={styles.heroImage}>
-              <Image src={image} alt="" width={600} height={600} />
+              <Image src={image} alt="" width={600 * scale} height={0} />
             </div>
           </div>
 
           {signoff && <p className={styles.signoffMobile}>{signoff}</p>}
           {cta && <div className={`${styles.ctaButtons} ${styles.mobile}`}>{cta}</div>}
-
         </div>
 
         {beneath && <div className={styles.beneath}>{beneath}</div>}

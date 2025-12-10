@@ -1,5 +1,5 @@
 .heroSection {
-  @apply relative min-h-[80vh] lg:min-h-screen  mx-auto pt-12 lg:pt-0;
+  @apply mx-auto pt-12 lg:pt-0;
 }
 
 .container {
@@ -7,10 +7,14 @@
   lg:min-h-screen lg:flex lg:flex-col lg:items-center lg:justify-center;
 }
 
+.container.minimal {
+  @apply lg:min-h-0 lg:mt-[150px];
+}
+
 .wrapper {
   @apply flex place-items-center mx-auto max-w-7xl
   flex-col w-full
-  gap-[20px] px-3 pt-[30px] pb-2
+  gap-[40px] px-3 pt-[30px] pb-2
   lg:px-8 lg:flex-row lg:gap-[80px] lg:pt-[90px];
 }
 

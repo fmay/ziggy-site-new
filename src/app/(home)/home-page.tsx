@@ -10,6 +10,7 @@ import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import Subscribe from '@/app/(forms)/(subscribe)/Subscribe'
 
 export default function HomePage() {
   const getNextColor = createColorCycler()
@@ -26,6 +27,10 @@ export default function HomePage() {
     {
       bgColor: getNextColor(),
       children: <IntegrationPartner />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <Subscribe />,
     },
   ]
 

@@ -1,6 +1,11 @@
 .container {
-  @apply flex flex-col lg:flex-row lg:justify-start gap-20
-  rounded-lg p-6 lg:items-start relative z-50 min-h-fit;
+  @apply flex flex-col gap-20 rounded-lg p-6 relative min-h-fit mx-auto
+  mt-[-40px] mb-[70px]
+  lg:flex-row lg:justify-start lg:items-start lg:mt-[-150px] lg:max-w-[600px] lg:mb-[150px];
+}
+
+.container.subscribe {
+  @apply mt-0 mb-0;
 }
 
 .bgDark {
@@ -25,7 +30,7 @@
 }
 
 .label {
-  @apply block text-sm mb-1;
+  @apply block text-sm mb-0 ml-[8px];
 }
 
 .input {

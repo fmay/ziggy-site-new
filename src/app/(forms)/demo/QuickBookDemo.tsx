@@ -3,10 +3,10 @@
 import { FC, useState } from 'react'
 import { InlineWidget } from 'react-calendly'
 import styles from './QuickBookDemo.module.scss'
-import { LuCalendarDays } from 'react-icons/lu'
 
 interface QuickBookDemoProps {
   background?: 'dark' | 'light'
+  subscribe?: boolean
 }
 
 interface FormData {
@@ -35,7 +35,7 @@ const PUBLIC_EMAIL_DOMAINS = [
 
 const CALENDLY_HEIGHT = 920
 
-const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
+const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark', subscribe }) => {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -124,51 +124,49 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark' }) => {
   }
 
   return (
-    <div className={`${styles.container} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
-      <div className={styles.heading}>
-        <LuCalendarDays className="mt-[-25px]" />
-        <h2>Book a demo</h2>
-      </div>
+    <div
+      className={`${styles.container} ${styles.subscribe} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
+      {!showCalendly && (
+        <div className={styles.formColumn}>
+          <div className={styles.formField}>
+            <label htmlFor="firstName" className={styles.label}>
+              Your name
+            </label>
+            <input
+              id="Your name"
+              type="text"
+              value={formData.firstName}
+              onChange={e => handleInputChange('firstName', e.target.value)}
+              className={styles.input}
+            />
+          </div>
 
-      {!showCalendly && <div className={styles.formColumn}>
-        <div className={styles.formField}>
-          <label htmlFor="firstName" className={styles.label}>
-            Your name
-          </label>
-          <input
-            id="Your name"
-            type="text"
-            value={formData.firstName}
-            onChange={e => handleInputChange('firstName', e.target.value)}
-            className={styles.input}
-          />
-        </div>
+          <div className={styles.formField}>
+            <label htmlFor="email" className={styles.label}>
+              Email address
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={e => handleInputChange('email', e.target.value)}
+              className={styles.input}
+            />
+            {emailError && <p className={styles.error}>{emailError}</p>}
+          </div>
 
-        <div className={styles.formField}>
-          <label htmlFor="email" className={styles.label}>
-            Email address
-          </label>
-          <input
-            id="email"
-            type="email"
-            value={formData.email}
-            onChange={e => handleInputChange('email', e.target.value)}
-            className={styles.input}
-          />
-          {emailError && <p className={styles.error}>{emailError}</p>}
+          <div className={styles.buttonWrapper}>
+            <button
+              onClick={handleSubmit}
+              disabled={!isFormValid()}
+              className={`${styles.button} ${
+                isFormValid() ? styles.buttonEnabled : styles.buttonDisabled
+              }`}>
+              {subscribe ? 'Subscribe' : 'Schedule a time'}
+            </button>
+          </div>
         </div>
-
-        <div className={styles.buttonWrapper}>
-          <button
-            onClick={handleSubmit}
-            disabled={!isFormValid()}
-            className={`${styles.button} ${
-              isFormValid() ? styles.buttonEnabled : styles.buttonDisabled
-            }`}>
-            Schedule a time
-          </button>
-        </div>
-      </div>}
+      )}
 
       {showCalendly && (
         <div className={styles.calendlyWrapper}>

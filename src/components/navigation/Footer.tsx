@@ -7,7 +7,7 @@ const Footer = () => (
       <div className={styles.gridContainer}>
         {/* Products */}
         <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Products</h3>
+          <h4 className={styles.sectionTitle}>Products</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="/products" className={styles.link}>
@@ -29,7 +29,7 @@ const Footer = () => (
 
         {/* Developers */}
         <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Developers</h3>
+          <h4 className={styles.sectionTitle}>Developers</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="/developers" className={styles.link}>
@@ -51,7 +51,7 @@ const Footer = () => (
 
         {/* Company */}
         <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Company</h3>
+          <h4 className={styles.sectionTitle}>Company</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="/about" className={styles.link}>
@@ -73,7 +73,7 @@ const Footer = () => (
 
         {/* Resources */}
         <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Resources</h3>
+          <h4 className={styles.sectionTitle}>Resources</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="/resources" className={styles.link}>

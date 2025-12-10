@@ -1,8 +1,16 @@
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 
 export default function BookDemoPage() {
+  const sections: Section[] = [
+    {
+      bgColor: "header-footer",
+      children: <QuickBookDemo />,
+    },
+  ]
+
   return (
     <>
       <Hero
@@ -11,6 +19,8 @@ export default function BookDemoPage() {
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/demo.webp"
         title="Book Demo"
+        minimal
+        scale={0.5}
         subtitle={
           <>
             <p>
@@ -19,12 +29,17 @@ export default function BookDemoPage() {
             </p>
           </>
         }
-        beneath={
-          <div className="lg:mt-[50px]">
-            <QuickBookDemo />
-          </div>
-        }
       />
+
+      {sections.map((section, index) => (
+        <PageSection
+          key={index}
+          bgColor={section.bgColor}
+          waveToColor={sections[index + 1]?.bgColor}
+          waveInvert={section.waveInvert}>
+          {section.children}
+        </PageSection>
+      ))}
     </>
   )
 }

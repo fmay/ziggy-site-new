@@ -1,23 +1,23 @@
 import { FC } from 'react'
 import styles from './ContactForm.module.scss'
+import CTA from '@/components/ui/cta/CTA'
 
 interface ContactFormProps {}
 
 const ContactForm: FC<ContactFormProps> = ({}) => {
   return (
     <div className={styles.container}>
+      <div className={styles.demo}>
+        <CTA label="I'd prefer a demo" href="demo" />
+      </div>
+
       <form className={styles.form}>
         <div className={styles.formFields}>
           <div className={styles.fieldGroup}>
             <label htmlFor="name" className={styles.label}>
               Full Name
             </label>
-            <input
-              type="text"
-              id="name"
-              className={styles.input}
-              placeholder="John Doe"
-            />
+            <input type="text" id="name" className={styles.input} placeholder="John Doe" />
           </div>
 
           <div className={styles.fieldGroup}>
@@ -36,12 +36,7 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
             <label htmlFor="company" className={styles.label}>
               Company
             </label>
-            <input
-              type="text"
-              id="company"
-              className={styles.input}
-              placeholder="Acme Inc."
-            />
+            <input type="text" id="company" className={styles.input} placeholder="Acme Inc." />
           </div>
 
           <div className={styles.fieldGroup}>
@@ -56,9 +51,7 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
             />
           </div>
 
-          <button
-            type="submit"
-            className={styles.submitButton}>
+          <button type="submit" className={styles.submitButton}>
             Send Message
           </button>
         </div>
