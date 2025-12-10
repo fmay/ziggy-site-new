@@ -32,6 +32,8 @@
     gap: 2rem;
 
     &.swapped {
+      flex-direction: column;
+
       .headerSection {
         order: 1;
       }
@@ -91,7 +93,7 @@
 }
 
 .ctaDesktop {
-  @apply hidden lg:block;
+  @apply hidden lg:flex;
   position: relative;
   z-index: 10;
   margin-top: 1.5rem;

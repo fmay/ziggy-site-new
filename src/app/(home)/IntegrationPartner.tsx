@@ -12,7 +12,6 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
           If you are a platform business that wants to make it easier for your customers to integrate data with your platform you can become one of our Platform Integration Partners and use
           using your own customised Ziggy Blocks
         </p>
-        <CTA label="Learn More" href="integration-partners" noBottomMargin />
       </>
     )
   }
@@ -25,6 +24,7 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/home-pip.webp"
         scale={0.75}
+        cta={<CTA label="Learn More" href="integration-partners" noBottomMargin />}
       />
     </div>
   )
