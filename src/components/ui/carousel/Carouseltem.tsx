@@ -54,7 +54,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
           </div>
           {linkText && (
             <div className={styles.linkWrapper}>
-              <a href={linkUrl} className={styles.link}>
+              <a href={linkUrl} target="__blank" className={styles.link}>
                 <div className={styles.linkText}>
                   <span>{linkText}</span> <FaLongArrowAltRight className={styles.icon} />
                 </div>

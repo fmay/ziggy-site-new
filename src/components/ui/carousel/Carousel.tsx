@@ -110,7 +110,12 @@ const Carousel: React.FC<CarouselProps> = ({
     <div ref={containerRef} style={{ margin: `0 -${halfGap}` }}>
       <Slider ref={sliderRef} {...settings}>
         {React.Children.map(children, (child, index) => (
-          <div key={index} style={{ padding: `0 ${halfGap}`, boxSizing: 'border-box' }}>
+          <div
+            key={index}
+            style={{
+              padding: `0 ${halfGap}`,
+              boxSizing: 'border-box',
+            }}>
             {child}
           </div>
         ))}

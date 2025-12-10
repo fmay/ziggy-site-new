@@ -77,6 +77,15 @@
   }
 }
 
+.ctaButtons.desktop {
+  @apply sm:hidden;
+}
+
+.ctaButtons.mobile {
+  @apply lg:hidden;
+}
+
+
 .ctaButtons {
   @apply flex flex-col sm:flex-row justify-start items-center gap-4 mt-12;
 

@@ -14,7 +14,7 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Partner Pricing</h2>
           <p className="text-lg text-gray-600 mb-4">
             You receive customised pricing that is tailored to your audience profile and is designed
-            to suit the budgets of your smaller and larger clients.
+            to suit your customers' budgets.
           </p>
           <CTA label="Contact us for pricing" href="/contact" className="mb-3"/>
         </div>
@@ -27,8 +27,7 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">No API? No problem.</h2>
           <p>
-            You may not have a public facing API. Using Ziggy's custom blocks, you can access your
-            platform data in any way you choose.
+            Your platorm may not have a public facing API. Using Ziggy's custom blocks this doesn't matter.
           </p>
         </div>
       ),
@@ -37,9 +36,9 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">No coding.</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">No coding for your customers</h2>
           <p>
-            Your customers may hug you for letting them access your data without having to use an
+            Your customers will hug you for letting them access your data without having to use an
             API. And, of course, they can take that data and put it into their other systems - also
             without coding.
           </p>

@@ -1,6 +1,5 @@
 'use client'
 
-import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
@@ -12,6 +11,7 @@ import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import SimplePair from '@/components/ui/simple-pair/SimplePair'
 
 export default function Extend() {
   const getNextColor = createColorCycler()
@@ -19,28 +19,31 @@ export default function Extend() {
     {
       bgColor: getNextColor(),
       children: (
-        <Intro
-          title="Become an Integration Partner"
-          description={
-            <div className="section-intro">
-              <p>
-                Do you want to give your customers the ability to pull data from your platform and
-                push data into it?
-              </p>
-              <p>
-                You can see how to extend Ziggy with plugin blocks so they can effortlessly do
-                things with your data that gives them all the flexibility they need and avoids the
-                complexities.
-              </p>
-              <CTA
-                label="Integration Partner Info"
-                href="https://docs.ziggyservices.com/user-guide/plugin/overview"
-              />
-            </div>
-          }
-          image="/placeholder.svg"
-          imageScale={0.5}
-        />
+        <>
+          <SimplePair
+            title="Become an Integration Partner"
+            subtitle=""
+            imageCopy={
+              <div className="section-intro">
+                <p>
+                  Do you want to give your customers the ability to pull data from your platform and
+                  push data into it?
+                </p>
+                <p>
+                  You can see how to extend Ziggy with plugin blocks so they can effortlessly do
+                  things with your data that gives them all the flexibility they need and avoids the
+                  complexities.
+                </p>
+                <CTA
+                  label="Integration Partner Info"
+                  href="https://docs.ziggyservices.com/user-guide/plugin/overview"
+                />
+              </div>
+            }
+            image="/product/extend/become-partner.webp"
+            scale={0.9}
+          />
+        </>
       ),
     },
     {

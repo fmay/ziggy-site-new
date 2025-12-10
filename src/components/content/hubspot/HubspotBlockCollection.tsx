@@ -7,7 +7,7 @@ interface HubspotBlockCollectionProps {
 }
 
 const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => {
-  const ItemHeight = '630px'
+  const ItemHeight = '530px'
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
         }),
       }}>
       <Carousel
-        slidesToShow={3.3}
+        slidesToShow={4.3}
         slidesToScroll={1}
         swipeToSlide={true}
         infinite={false}
@@ -118,9 +118,9 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
         <CarouselItem
           title="Set/Get Currency"
           imageAlt="Set/Get Currency"
-          imageUrl="/hubspot-blocks/owner-translate.png"
+          imageUrl="/hubspot-blocks/currency.webp"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-owner-translate"
+          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-currency"
           height={ItemHeight}>
           <div>
             <p>
@@ -129,7 +129,22 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           </div>
         </CarouselItem>
 
-        {/*Get File attachments*/}
+        {/*Search*/}
+        <CarouselItem
+          title="Search"
+          imageAlt="Search on any HubSpot object."
+          imageUrl="/hubspot-blocks/search.webp"
+          linkText="Learn more"
+          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-search"
+          height={ItemHeight}>
+          <div>
+            <p>
+              Search on any HubSpot object.
+            </p>
+          </div>
+        </CarouselItem>
+
+        {/*Get/Set File attachments*/}
         <CarouselItem
           title="Get File Attachments"
           imageAlt="Get File Attachments"
@@ -139,22 +154,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           height={ItemHeight}>
           <div>
             <p>
-              Gets file attachments from HubSpot
-            </p>
-          </div>
-        </CarouselItem>
-
-        {/*Set File Attachments*/}
-        <CarouselItem
-          title="Create File Attachments"
-          imageAlt="Create File Attachments"
-          imageUrl="/hubspot-blocks/file-attachments-set.png"
-          // linkText="Learn more"
-          // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-owner-translate"
-          height={ItemHeight}>
-          <div>
-            <p>
-              Create file attachments in HubSpot
+              Get/set file attachments
             </p>
           </div>
         </CarouselItem>

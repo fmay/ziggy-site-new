@@ -11,11 +11,11 @@
 }
 
 .title {
-  @apply text-xl mt-3 font-semibold text-stripe-navy mb-0;
+  @apply text-xl mt-3 font-normal mb-0;
 }
 
 .content {
-  @apply font-normal text-[var(--dark-gray)] my-2;
+  * {@apply font-light text-sm text-[var(--dark-gray)] my-2};
 }
 
 .lowerContent {

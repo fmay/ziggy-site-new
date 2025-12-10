@@ -10,6 +10,7 @@ import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import SimplePair from '@/components/ui/simple-pair/SimplePair'
 
 export default function Cluster() {
   const getNextColor = createColorCycler()
@@ -18,31 +19,28 @@ export default function Cluster() {
       bgColor: getNextColor(),
       children: (
         <>
-          {' '}
-          <Intro
-            title="Just Docker"
-            description={
-              <div className="section-intro">
-                <p>
-                  Installing Ziggy is simple. It runs in a single Docker container on the
-                  infrastructure of your choice.
-                </p>
-                <p>
-                  For fault tolerance and normal loads you can use small (2GB) instances. For
-                  performance, just add larger instances to your cluster.
-                </p>
-                <CTA
-                  label="Overview"
-                  href="https://docs.ziggyservices.com/user-guide/cluster/overview"
-                />
-              </div>
-            }
-            image="/misc/docker.svg"
-            imageScale={0.5}
-          />
-          <ClusterFeatures />
+          <SimplePair title="Simple Docker installation" subtitle="" imageCopy={
+            <div className="section-intro">
+            <p>
+            Ziggy runs in a single Docker container on the
+            infrastructure of your choice.
+            </p>
+            <p>
+            For fault tolerance with normal loads you can use small (2GB) instances. For
+            performance, just add larger instances to your cluster.
+            </p>
+            <CTA
+            label="Overview"
+            href="https://docs.ziggyservices.com/user-guide/cluster/overview"
+            />
+            </div>
+          } image="/misc/docker.svg" scale={0.6}/>
         </>
       ),
+    },
+    {
+      bgColor: getNextColor(),
+      children: <ClusterFeatures />
     },
     {
       bgColor: getNextColor(),

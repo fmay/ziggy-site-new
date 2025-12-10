@@ -53,7 +53,7 @@ export default function IntegrationPartners() {
             </li>
           </ul>
         }
-        cta={<CTA label="Book a demo" href="demo" />}
+        cta={<CTA label="Book a Demo" href="demo" />}
       />
 
       {sections.map((section, index) => (

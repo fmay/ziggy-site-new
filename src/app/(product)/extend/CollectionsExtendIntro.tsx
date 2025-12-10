@@ -12,7 +12,7 @@ const CollectionsExtendIntro: FC<BlockCollectionsProps> = ({}) => {
       </p>
       <p>
         Below is an example collection for the HubSpot platform. Scroll through it to see what the
-        blocks do. Chances are things will be similar for your platform.
+        blocks do.
       </p>
     </div>
   )

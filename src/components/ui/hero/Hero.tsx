@@ -50,7 +50,7 @@ const Hero: FC<HeroProps> = ({
 
             {/*CTA*/}
             {signoff && <p className={styles.signoffDesktop}>{signoff}</p>}
-            {cta && <div className={styles.ctaButtons}>{cta}</div>}
+            {cta && <div className={`${styles.ctaButtons} ${styles.desktop}`}>{cta}</div>}
           </div>
 
           {/*IMAGE*/}
@@ -61,6 +61,8 @@ const Hero: FC<HeroProps> = ({
           </div>
 
           {signoff && <p className={styles.signoffMobile}>{signoff}</p>}
+          {cta && <div className={`${styles.ctaButtons} ${styles.mobile}`}>{cta}</div>}
+
         </div>
 
         {beneath && <div className={styles.beneath}>{beneath}</div>}

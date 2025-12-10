@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="color cycling">
-      <change afterPath="$PROJECT_DIR$/pixelmator/product/cluster/level2.pxd" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="cluster updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/ai-features/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/ClusterFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/ClusterFeatures.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/CollectionsExtendIntro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/CollectionsExtendIntro.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/ScrollList_Extra1.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/flows/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/PartnerFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/PartnerFeatures.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/hubspot/HubspotBlockCollection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/CarouselItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/CarouselItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,15 +171,7 @@
       <workItem from="1765183951428" duration="1328000" />
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
-      <workItem from="1765300658738" duration="5193000" />
-    </task>
-    <task id="LOCAL-00133" summary="nextjs update">
-      <option name="closed" value="true" />
-      <created>1765012588757</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1765012588757</updated>
+      <workItem from="1765300658738" duration="11679000" />
     </task>
     <task id="LOCAL-00134" summary="home hero img">
       <option name="closed" value="true" />
@@ -567,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765303670558</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="cluster updated">
+      <option name="closed" value="true" />
+      <created>1765306598814</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1765306598815</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="processes 0.1" />
     <MESSAGE value="processes 0.11" />
     <MESSAGE value="processes 0.12" />
     <MESSAGE value="processes 0.13" />
@@ -638,18 +635,8 @@
     <MESSAGE value="features 0.3" />
     <MESSAGE value="features 0.6" />
     <MESSAGE value="color cycling" />
-    <option name="LAST_COMMIT_MESSAGE" value="color cycling" />
+    <MESSAGE value="cluster updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="cluster updated" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(product)/extend/CollectionsExtendIntro.tsx</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
