@@ -1,5 +1,5 @@
 .container {
-  @apply flex flex-col gap-0 w-full mt-[0px];
+  @apply flex flex-col gap-0 w-full lg:mt-[0px];
 }
 
 .textRow {
@@ -19,7 +19,7 @@
 }
 
 .imageRow {
-  @apply flex flex-col gap-8 items-center lg:gap-16 lg:flex-row;
+  @apply flex flex-col gap-2 items-center lg:gap-16 lg:flex-row;
 
   &.swapped {
     @apply lg:flex-row-reverse;
@@ -51,23 +51,23 @@
 }
 
 .imageWrapper {
-  width: 100% !important;
-  max-width: 100% !important;
+  //width: 100% !important;
+  //max-width: 100% !important;
 
-  @media (min-width: 1024px) {
-    width: auto !important;
-    max-width: none !important;
-  }
+  //@media (min-width: 1024px) {
+  //  width: auto !important;
+  //  max-width: none !important;
+  //}
 }
 
 .image {
-  @apply w-full h-auto object-cover rounded-lg;
+  @apply h-auto rounded-lg w-[70%] lg:w-auto;
 }
 
 .ctaDesktop {
-  @apply hidden lg:flex relative z-10 mt-6;
+  @apply hidden lg:flex relative z-10 mt-0 mb-0;
 }
 
 .ctaMobile {
-  @apply flex justify-center lg:hidden relative z-10 mt-4;
+  @apply flex justify-center lg:hidden relative z-10 mt-0 mb-0;
 }

@@ -1,7 +1,6 @@
 import styles from './hero.module.scss'
 import Image from 'next/image'
 import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
-import CTA from '@/components/ui/cta/CTA'
 import { FC } from 'react'
 
 const NUDGE_UP = 100 // pixels

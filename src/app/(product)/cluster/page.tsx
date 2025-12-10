@@ -19,28 +19,33 @@ export default function Cluster() {
       bgColor: getNextColor(),
       children: (
         <>
-          <SimplePair title="Simple Docker installation" subtitle="" imageCopy={
-            <div className="section-intro">
-            <p>
-            Ziggy runs in a single Docker container on the
-            infrastructure of your choice.
-            </p>
-            <p>
-            For fault tolerance with normal loads you can use small (2GB) instances. For
-            performance, just add larger instances to your cluster.
-            </p>
-            <CTA
-            label="Overview"
-            href="https://docs.ziggyservices.com/user-guide/cluster/overview"
-            />
-            </div>
-          } image="/misc/docker.svg" scale={0.6}/>
+          <SimplePair
+            title="Simple Docker installation"
+            subtitle=""
+            imageCopy={
+              <div className="section-intro">
+                <p>Ziggy runs in a single Docker container on the infrastructure of your choice.</p>
+                <p>
+                  For fault tolerance with normal loads you can use small (2GB) instances. For
+                  performance, just add larger instances to your cluster.
+                </p>
+              </div>
+            }
+            image="/misc/docker.svg"
+            scale={0.5}
+            cta={
+              <CTA
+                label="Overview"
+                href="https://docs.ziggyservices.com/user-guide/cluster/overview"
+              />
+            }
+          />
         </>
       ),
     },
     {
       bgColor: getNextColor(),
-      children: <ClusterFeatures />
+      children: <ClusterFeatures />,
     },
     {
       bgColor: getNextColor(),
