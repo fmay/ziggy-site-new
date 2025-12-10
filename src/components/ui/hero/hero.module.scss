@@ -9,8 +9,8 @@
 
 .wrapper {
   @apply flex place-items-center mx-auto max-w-7xl
-  flex-col w-full gap-[50px] px-4 py-20
-  sm:px-6 lg:px-8
+  flex-col w-full gap-[50px] px-6 py-20
+  lg:px-8
   lg:flex-row lg:gap-[80px] lg:pt-[90px];
 }
 
@@ -31,24 +31,24 @@
 
 
 .heading {
-  @apply flex
-  mb-[0px] mx-auto
+  @apply
+  mb-[20px] mx-auto
   text-4xl font-normal text-white text-center leading-[3.0rem]
   lg:text-[2.8rem] lg:text-start lg:leading-[3.5rem] lg:mb-[40px];
 }
 
 .subheading {
   @apply max-w-[800px] font-extralight
-    lg:mx-auto;
+    text-center lg:text-start lg:mx-auto;
 
   * {
     @apply text-xl font-extralight;
   }
 
   ul {
-    @apply list-none text-center lg:text-left mt-8;
+    @apply list-none mt-8 text-left ml-[40px] lg:ml-0;
     li {
-      @apply font-extralight mb-3 flex items-center justify-center lg:justify-start gap-2;
+      @apply font-extralight mb-3 flex items-center lg:justify-start gap-2;
     }
   }
 
@@ -66,7 +66,8 @@
 }
 
 .heroImage {
-  @apply object-contain mx-auto flex items-center;
+  @apply object-contain mx-auto flex items-center
+  mt-[90px] lg:mt-[0px]
 }
 
 .subheadingImage {
@@ -77,23 +78,22 @@
   }
 }
 
-.ctaButtons.desktop {
-  @apply sm:hidden;
-}
-
-.ctaButtons.mobile {
-  @apply lg:hidden;
-}
-
-
 .ctaButtons {
-  @apply flex flex-col sm:flex-row justify-start items-center gap-4 mt-12;
+  @apply flex w-full ;
 
   .primaryButton {
-    @apply w-full sm:w-auto px-8 py-4 rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;
+    @apply w-auto  rounded-full bg-stripe-purple text-white font-semibold hover:opacity-90 transition-opacity duration-200;
   }
 
   .secondaryButton {
-    @apply w-full sm:w-auto px-8 py-4 rounded-full border-2 border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+    @apply rounded-full border-2 border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
   }
+}
+
+.ctaButtons.desktop {
+  @apply hidden lg:block flex-row justify-start items-center gap-4 mt-12;
+}
+
+.ctaButtons.mobile {
+  @apply lg:hidden block flex-col px-8 py-0 text-center mt-[-40px];
 }
