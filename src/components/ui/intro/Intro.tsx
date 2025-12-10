@@ -35,7 +35,7 @@ const Intro: FC<IntroProps> = ({
   const textContent = (
     <div className={styles.textContent}>
       <h2 className={styles.title}>{title}</h2>
-      {description && <p className={styles.description}>{description}</p>}
+      {description && <div className={styles.description}>{description}</div>}
     </div>
   )
 

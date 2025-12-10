@@ -290,7 +290,6 @@ const ScrollContentImagePairs = ({
       <div className={styles.mobileLayout}>
         {contentImagePairs.map((pair, index) => (
           <div key={index} className={styles.mobilePair}>
-            <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>
             <div
               className={styles.mobileImageWrapper}
               style={pair.bgColor ? { backgroundColor: pair.bgColor } : undefined}>
@@ -302,6 +301,7 @@ const ScrollContentImagePairs = ({
                 <img src={pair.image} alt={`Content ${index + 1}`} className={styles.mobileImage} />
               ) : null}
             </div>
+            <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>
           </div>
         ))}
       </div>

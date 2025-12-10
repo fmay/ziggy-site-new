@@ -8,22 +8,22 @@ const ScrollListEdge: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
     {
       content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Edge inspection</h2>
-          <p className="text-lg text-gray-600 mb-4">
+        <>
+          <h2>Edge inspection</h2>
+          <p>
             Edges are the lines that join blocks. Just click on an edge bubble to view the data when
             debugging.
           </p>
           <CTA className="mt-20" label="Learn more" href="cluster" />
-        </div>
+        </>
       ),
       image: '/placeholder.svg',
     },
     {
       content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Validate, Transform, Map</h2>
-          <p className="text-lg text-gray-600 mb-4">The Edge popup dialog also lets you</p>
+        <>
+          <h2>Validate, Transform, Map</h2>
+          <p>The Edge popup dialog also lets you</p>
           <ul>
             <li>
               <strong>Validate</strong> - ensure that data flowing into the edge confirms to your
@@ -40,7 +40,7 @@ const ScrollListEdge: FC = () => {
             <li>You can also perform all of the above using the AI supprted Javascript block</li>
           </ul>
           <CTA className="mt-20" label="Learn more" href="cluster" />
-        </div>
+        </>
       ),
       image: '/placeholder.svg',
     },

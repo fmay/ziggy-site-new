@@ -37,9 +37,6 @@
 
 .contentWrapper {
   @apply w-full border-l-2 border-scroll-pair-border pl-4;
-  h2 {
-    @apply font-normal
-  }
 }
 
 .imagesLeft .contentWrapper {
@@ -109,7 +106,7 @@
 }
 
 .mobileImageWrapper {
-  @apply w-full aspect-video flex items-center justify-center;
+  @apply w-full flex items-center justify-center;
 }
 
 .mobileImage {

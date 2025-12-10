@@ -56,7 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  @apply text-3xl lg:text-4xl mb-4
+  @apply text-3xl leading-[2.5rem] mb-6
+    lg:text-4xl lg:leading-[3.1rem]
 }
 
 h4 {
@@ -126,18 +127,18 @@ h4 {
 
 .section-intro {
   @apply flex flex-col max-w-[600px];
-  h2 {
-    @apply font-light text-[2.3rem] mb-4;
-  }
+  //h2 {
+  //  @apply font-light text-[2.3rem] mb-4;
+  //}
 }
 
 .section-intro-2-col {
   @apply flex flex-row w-full place-items-center;
   div:nth-child(1) {
-    @apply flex flex-col w-1/2 ;
-    h2 {
-      @apply font-light text-[2.3rem] mb-4;
-    }
+    @apply flex flex-col w-1/2;
+    //h2 {
+    //  @apply font-light text-[2.3rem] mb-4;
+    //}
   }
   div:nth-child(2) {
     @apply flex w-1/2 justify-center;

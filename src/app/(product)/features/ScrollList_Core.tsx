@@ -12,8 +12,8 @@ const ScrollListCore: FC = () => {
       bgColor: 'bg-red-50',
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Flow Editor</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Flow Editor</h2>
+          <p>
             A drag-and-drop canvas for building your data pipelines. These can be very simple but
             complex flows are no problem, too.
           </p>
@@ -27,8 +27,8 @@ const ScrollListCore: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Visual Debugger</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Visual Debugger</h2>
+          <p>
             Ziggy has a great visual debugger. Step through the flow. Supply with test data
           </p>
           <CTA className="my-2" label="How Ziggy works" href="flows" />
@@ -40,8 +40,8 @@ const ScrollListCore: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Launch flows with API calls</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Launch flows with API calls</h2>
+          <p>
             Each flow can be run from the Ziggy UI or with an API call. Pass in data that should be
             processed by the flow.
           </p>
@@ -54,8 +54,8 @@ const ScrollListCore: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Execution History</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Execution History</h2>
+          <p>
             You have the option of storing successful and/or failed flow executions to a history
             log. These can then be viewed in a browser.
           </p>
@@ -69,8 +69,8 @@ const ScrollListCore: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Development & Production</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Development & Production</h2>
+          <p>
             Create development and production Connection and Secret configurations then toggle
             between these in your flow for testing or making changes
           </p>

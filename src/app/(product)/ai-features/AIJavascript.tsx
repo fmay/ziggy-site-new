@@ -12,7 +12,7 @@ const AIJavascript: FC = () => {
       title: 'Example flow',
       content: (
         <div>
-          <p className="text-lg text-gray-600 mb-4">
+          <p>
             Here's a flow that reads data from your CRM. We also have some extra data. We want to
             perform some custom operations to transform the data
           </p>
@@ -27,7 +27,7 @@ const AIJavascript: FC = () => {
       title: 'Perform the magic',
       content: (
         <div>
-          <p className="text-lg text-gray-600 mb-4">
+          <p>
             Now enter your instructions. Ziggy handles the data context by passing in the edge data.
             You can see the generated code.
           </p>
@@ -43,7 +43,7 @@ const AIJavascript: FC = () => {
       title: 'Help! What does it do?',
       content: (
         <div>
-          <p className="text-lg text-gray-600 mb-4">
+          <p>
             If you have some Javascript code already present, you can enter <strong>Explain</strong>{' '}
             in the prompt and it will do just that.
           </p>
@@ -72,7 +72,7 @@ const AIJavascript: FC = () => {
         }
         imageScale={0.5}
       />
-      <div className="py-16">
+      <div className="">
         <ScrollContentImagePairs contentImagePairs={contentImagePairs} />
       </div>
       {/* Other page content below */}

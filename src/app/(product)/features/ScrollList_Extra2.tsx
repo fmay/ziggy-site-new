@@ -10,9 +10,9 @@ const ScrollListExtra2: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Alerts and Logging</h2>
+          <h2>Alerts and Logging</h2>
           <div className="">
-            <p className="text-lg text-gray-600 mb-4">
+            <p>
               Configure email and SMS alerts, which come as digests on a schedule you choose.
             </p>
           </div>
@@ -25,8 +25,8 @@ const ScrollListExtra2: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Secrets Management</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Secrets Management</h2>
+          <p>
             Store and manage your secrets, fully encrypted, in Ziggy and reference from your flows.
             You can optionally configure a development/production pair.
           </p>
@@ -38,8 +38,8 @@ const ScrollListExtra2: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Connections</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Connections</h2>
+          <p>
             Store and manage your connection parameters and reference from your flows. You can
             optionally configure a development/production pair.
           </p>

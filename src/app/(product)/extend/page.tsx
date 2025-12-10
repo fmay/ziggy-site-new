@@ -71,11 +71,11 @@ export default function Extend() {
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/customise.webp"
         title="Extend Ziggy with plugins"
         subtitle={
-          <div>
+          <>
             <p>
               Extend Ziggy by building your own custom blocks that can connect your platform with
               any others.
@@ -84,7 +84,7 @@ export default function Extend() {
               Now your customer can build their own Ziggy flows for getting data into and out of
               your platform.
             </p>
-          </div>
+          </>
         }
         cta={<CTA label="Book a demo" href="demo" />}
       />

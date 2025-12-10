@@ -10,8 +10,8 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Rate Limiting</h2>
-          <div className="">
+          <h3>Rate Limiting</h3>
+          <div>
             <p className="text-lg text-gray-600 mb-4">
               Create special rate limit queues that ensure you don't exceed any 3rd party platform
               limits.
@@ -26,8 +26,8 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Batching</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Batching</h2>
+          <p>
             When reading or writing large numbers of records, making batch calls increases
             throughput significantly and ensure you don't overload a platform or database.
           </p>
@@ -40,8 +40,8 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Data Store</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Data Store</h2>
+          <p>
             Ziggy comes with a fast internal data store. This is a great place to write data for
             processing later or in other flows.
           </p>
@@ -57,8 +57,8 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Scheduler</h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <h2>Scheduler</h2>
+          <p>
             Ziggy has an integrated scheduler that launches flows. For example, schedule daily reads
             from SFTP servers or update a data warehouse every hour.
           </p>

@@ -11,9 +11,9 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
   const contentImagePairs: ContentImagePair[] = [
     {
       content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Level 1</h2>
-          <p className="text-lg text-gray-600 mb-4">
+        <>
+          <h2>Level 1</h2>
+          <p>
             The basic Ziggy cluster can have two or more servers. One of them runs the database.
           </p>
           <p className="text-lg text-gray-600 mb-4">
@@ -21,30 +21,30 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             goes down.
           </p>
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
-        </div>
+        </>
       ),
       contentNudge: 30,
       image: '/product/cluster/level1.webp',
     },
     {
       content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Level 2</h2>
-          <p className="text-lg text-gray-600 mb-4">
+        <>
+          <h2>Level 2</h2>
+          <p>
             When you need both high performance and fault tolerance. The database can run in a
             managed service such as AWS RDS or in your own database cluster.
           </p>
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
-        </div>
+        </>
       ),
       contentNudge: 30,
       image: '/product/cluster/level2.webp',
     },
     {
       content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Monitoring</h2>
-          <p className="text-lg text-gray-600 mb-4">
+        <>
+          <h2>Monitoring</h2>
+          <p>
             Ziggy comes with several monitoring tools for the system and individual servers.
           </p>
           <p>
@@ -52,15 +52,15 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             monitored in the UI in real time.
           </p>
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/monitoring" />
-        </div>
+        </>
       ),
       image: '/product/cluster/monitor.webp',
     },
     {
       content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Load Testing</h2>
-          <p className="text-lg text-gray-600 mb-4">
+        <>
+          <h2>Load Testing</h2>
+          <p>
             We even offer a built-in load tester where you can run Flows under expected and extreme
             conditions.
           </p>
@@ -69,7 +69,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
           </p>
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/load-testing" />
 
-        </div>
+        </>
       ),
       image: '/product/cluster/load-test.webp',
     },
