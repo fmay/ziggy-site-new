@@ -60,11 +60,14 @@ export default function Platform() {
         title="Ziggy - a new Automation and Integration Platform."
         subtitle={
           <>
-            <p>Automate the movement of data from anywhere to anywhere else!</p>
             <p>
-              Runs on <strong>your</strong> servers, giving you full control over security,
-              performance and cost. And it's exceptionally easy to use and fully extensible.
+              In house teams use Ziggy for all their data automation and integration requirements.
             </p>
+            <p>
+              AI features allow projects to be run without an over reliance on Developer resources.
+            </p>
+            <p>Any data source can be accessed, regardless of where it sits.</p>
+            <p>Automation and integration projects are completed using Ziggy Blocks and Flows.</p>
           </>
         }
         cta={<CTA label="Learn More" href="features" />}

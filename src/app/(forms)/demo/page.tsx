@@ -18,7 +18,7 @@ export default function BookDemoPage() {
         toColor="header-footer"
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/demo.webp"
-        title="Book Demo"
+        title="Book a Demo"
         minimal
         scale={0.5}
         subtitle={
