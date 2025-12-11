@@ -19,14 +19,14 @@ export default function Platform() {
       bgColor: getNextColor(),
       children: <MadeEasy />,
     },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <Extensible />,
-    // },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <Cluster />,
-    // },
+    {
+      bgColor: getNextColor(),
+      children: <Extensible />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <Cluster />,
+    },
   ]
 
   return (

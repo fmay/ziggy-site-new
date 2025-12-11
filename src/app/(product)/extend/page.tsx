@@ -1,9 +1,7 @@
 'use client'
 
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
-import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
-import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
@@ -53,8 +51,8 @@ export default function Extend() {
             image="/product/extend/become-partner.webp"
             cta={
               <CTA
-                label="Integration Partner Info"
-                href="https://docs.ziggyservices.com/user-guide/plugin/overview"
+                label="Booke a Demo"
+                href="demo"
               />
             }
             scale={0.9}
