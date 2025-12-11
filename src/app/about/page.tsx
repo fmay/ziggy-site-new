@@ -9,7 +9,7 @@ import { useScreenSize } from '@/hooks/useScreenSize'
 
 export default function About() {
   const sections: Section[] = [{ bgColor: 'header-footer', children: <Mission /> }]
-  const {isLg} = useScreenSize()
+  const { isLg } = useScreenSize()
   return (
     <div>
       <Hero
@@ -28,8 +28,8 @@ export default function About() {
             </p>
             <p className="text-lg">
               Existing ETL technology providers are cumbersome, complex and expensive. Cloud
-              platforms (like Make and Zapier) don't give users control over security and
-              performance and visibility over cost.
+              platforms don't give users control over security and performance or visibility over
+              cost.
             </p>
             <p>
               Inappropriate technologies makes staff resourcing for data automation projects very
