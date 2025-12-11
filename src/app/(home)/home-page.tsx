@@ -11,6 +11,7 @@ import CTA from '@/components/ui/cta/CTA'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
 import Subscribe from '@/app/(forms)/(subscribe)/Subscribe'
+import PlatformOverview from '@/app/(home)/PlatformOverview'
 
 export default function HomePage() {
   const getNextColor = createColorCycler()
@@ -23,6 +24,10 @@ export default function HomePage() {
     {
       bgColor: getNextColor(),
       children: <BusinessFunctions />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <PlatformOverview />,
     },
     {
       bgColor: getNextColor(),

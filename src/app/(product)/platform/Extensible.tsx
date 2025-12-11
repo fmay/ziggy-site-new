@@ -25,7 +25,6 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
         image="/home/home-customise.webp"
         scale={0.7}
         cta={<CTA label="Learn More" href="extend" noBottomMargin />}
-        swap
       />
     </div>
   )

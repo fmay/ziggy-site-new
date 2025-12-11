@@ -39,7 +39,7 @@ export default function IntegrationPartners() {
         fromColor="header-footer"
         toColor="header-footer"
         wavyVariant={WavyVariantEnum.Simple}
-        image="/hero/customise.webp"
+        image="/hero/integration-partners.webp"
         title="Become an Integration Partner"
         subtitle={
           <ul>

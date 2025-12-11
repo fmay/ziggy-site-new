@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="about us">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="about, pricing">
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/PlatformOverview.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/features/SimpleFlows.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/AllFeatures.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(product)/platform/ComplexFlows.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/Mission.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/Mission.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/hero.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/Services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pricing/PricingCalculator.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/PricingCalculator.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pricing/Support.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/Support.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pixelmator/hero/integration-partners.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/integration-partners.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/hero/integration-partners.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/integration-partners.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/simple-flow.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/Cluster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/Cluster.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/integration-partners",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/(product)/platform",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,18 +82,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
+      <recent name="$PROJECT_DIR$/src/app/(product)/features" />
+      <recent name="$PROJECT_DIR$/src/app/(home)" />
       <recent name="$PROJECT_DIR$/src/app/integration-partners" />
       <recent name="$PROJECT_DIR$/src/app/(forms)/(subscribe)" />
-      <recent name="$PROJECT_DIR$/pixelmator/product/cluster" />
-      <recent name="$PROJECT_DIR$/pixelmator/home" />
-      <recent name="$PROJECT_DIR$/src/components/ui/simple-card" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
       <recent name="$PROJECT_DIR$/pixelmator/integration-partners" />
       <recent name="$PROJECT_DIR$/public/integration-partners" />
       <recent name="$PROJECT_DIR$/public/product/features" />
       <recent name="$PROJECT_DIR$/pixelmator/home" />
-      <recent name="$PROJECT_DIR$/src/app/about" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -169,15 +176,7 @@
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
       <workItem from="1765300658738" duration="49501000" />
-      <workItem from="1765434632730" duration="15027000" />
-    </task>
-    <task id="LOCAL-00161" summary="demo 0.6">
-      <option name="closed" value="true" />
-      <created>1765268541184</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1765268541184</updated>
+      <workItem from="1765434632730" duration="16751000" />
     </task>
     <task id="LOCAL-00162" summary="demo 0.7">
       <option name="closed" value="true" />
@@ -563,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765447996785</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="about, pricing">
+      <option name="closed" value="true" />
+      <created>1765450968866</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1765450968866</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="align" />
     <MESSAGE value="cards" />
     <MESSAGE value="nav gap" />
     <MESSAGE value="flows simple flow" />
@@ -634,7 +640,8 @@
     <MESSAGE value="contact demo" />
     <MESSAGE value="copy update" />
     <MESSAGE value="about us" />
-    <option name="LAST_COMMIT_MESSAGE" value="about us" />
+    <MESSAGE value="about, pricing" />
+    <option name="LAST_COMMIT_MESSAGE" value="about, pricing" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

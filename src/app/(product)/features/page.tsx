@@ -13,35 +13,14 @@ import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import SimpleFlows from '@/app/(product)/features/SimpleFlows'
 
 export default function Features() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
-      children: (
-        <SimplePair
-          title="Simple flows can do complex things"
-          subtitle=""
-          image="/home/simple-flow.webp"
-          imageCopy={
-            <div>
-              <p>
-                This Ziggy flow looks simple enough. In reality, it does the following with just two
-                blocks.
-              </p>
-              <ul>
-                <li>Gets exchanges rates from an API</li>
-                <li>
-                  Extracts rates from within the returned data into a flat format (the AI icon does
-                  this)
-                </li>
-                <li>Updates all exchange rates in HubSpot with the latest rates.</li>
-              </ul>
-            </div>
-          }
-        />
-      ),
+      children: <SimpleFlows />
     },
     {
       bgColor: getNextColor(),

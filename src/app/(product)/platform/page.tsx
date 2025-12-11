@@ -11,13 +11,24 @@ import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import SimpleFlows from '@/app/(product)/features/SimpleFlows'
+import ComplexFlows from '@/app/(product)/platform/ComplexFlows'
+import AllFeatures from '@/app/(product)/platform/AllFeatures'
 
 export default function Platform() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
-      children: <MadeEasy />,
+      children: <SimpleFlows />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <ComplexFlows />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <AllFeatures />,
     },
     {
       bgColor: getNextColor(),

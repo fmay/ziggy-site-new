@@ -2,9 +2,9 @@ import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
 
-interface ClusterProps {}
+interface AllFeaturesProps {}
 
-const Cluster: FC<ClusterProps> = ({}) => {
+const AllFeatures: FC<AllFeaturesProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
@@ -22,11 +22,11 @@ const Cluster: FC<ClusterProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Single Instance or Ziggy Cluster"
-        subtitle="Simple Docker installation on any infrastructure whether you need something single of scalability and high availability."
+        title="Feature overview"
+        subtitle="Browse thorugh Ziggy's key features"
         imageCopy={<ImageContent />}
-        image="/platform/cluster.webp"
-        cta={<CTA label="Learn More" href="cluster" noBottomMargin />}
+        image="/platform/AllFeatures.webp"
+        cta={<CTA label="See Features" href="features" noBottomMargin />}
         scale={0.7}
         swap
       />
@@ -34,4 +34,4 @@ const Cluster: FC<ClusterProps> = ({}) => {
   )
 }
 
-export default Cluster
+export default AllFeatures
