@@ -1,8 +1,11 @@
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
+import { getSwapStatus } from '@/utils/swapStatus'
 
 interface ExtensibleProps {}
+
+const swap = getSwapStatus()
 
 const Extensible: FC<ExtensibleProps> = ({}) => {
   const ImageContent = () => {
@@ -25,6 +28,7 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
         image="/home/home-customise.webp"
         scale={0.7}
         cta={<CTA label="Learn More" href="extend" noBottomMargin />}
+        swap={swap}
       />
     </div>
   )

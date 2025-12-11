@@ -2,8 +2,11 @@ import { FC } from 'react'
 import SimpleText from '@/components/ui/simple-text/SimpleText'
 import CTA from '@/components/ui/cta/CTA'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
+import { getSwapStatus } from '@/utils/swapStatus'
 
 interface AIProps {}
+
+const swap = getSwapStatus()
 
 const AI: FC<AIProps> = ({}) => {
   return (
@@ -26,6 +29,7 @@ const AI: FC<AIProps> = ({}) => {
         }
         image="/home/ai-features.webp"
         scale={0.6}
+        swap={swap}
       />
     </div>
   )

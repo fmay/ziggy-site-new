@@ -14,6 +14,11 @@ import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
 import SimpleFlows from '@/app/(product)/features/SimpleFlows'
+import { getSwapStatus } from '@/utils/swapStatus'
+import ComplexFlows from '@/app/(product)/platform/ComplexFlows'
+
+const swap = getSwapStatus()
+
 
 export default function Features() {
   const getNextColor = createColorCycler()
@@ -21,6 +26,10 @@ export default function Features() {
     {
       bgColor: getNextColor(),
       children: <SimpleFlows />
+    },
+    {
+      bgColor: getNextColor(),
+      children: <ComplexFlows />
     },
     {
       bgColor: getNextColor(),

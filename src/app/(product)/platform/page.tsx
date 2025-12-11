@@ -14,13 +14,20 @@ import { DefaultColorCycle } from '@/constants/default-colors'
 import SimpleFlows from '@/app/(product)/features/SimpleFlows'
 import ComplexFlows from '@/app/(product)/platform/ComplexFlows'
 import AllFeatures from '@/app/(product)/platform/AllFeatures'
+import { resetSwapStatus } from '@/utils/swapStatus'
+import AI from '@/app/(home)/AI'
 
 export default function Platform() {
   const getNextColor = createColorCycler()
+  resetSwapStatus()
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
       children: <SimpleFlows />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <AI />,
     },
     {
       bgColor: getNextColor(),
@@ -46,15 +53,15 @@ export default function Platform() {
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
-        image="/hero/home.webp"
-        title="Ziggy - a new Automation and Integration Platform."
+        image="/hero/platform-hero.webp"
+        title="Ziggy - simplify your Integration and Automation chaos"
         subtitle={
           <>
             <p>
               In house teams use Ziggy for all their data automation and integration requirements.
             </p>
             <p>
-              AI features allow projects to be run without an over reliance on Developer resources.
+              AI features reduce your reliance on Developer resources.
             </p>
             <p>Any data source can be accessed, regardless of where it sits.</p>
             <p>Automation and integration projects are completed using Ziggy Blocks and Flows.</p>
