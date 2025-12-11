@@ -9,7 +9,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Flow Editor</h2>
+          <h3>Flow Editor</h3>
           <p className="text-lg text-gray-600 mb-4">
             A drag-and-drop canvas for building your data pipelines. These can be very simple but
             complex flows are no problem, too.
@@ -24,7 +24,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Blocks</h2>
+          <h3>Blocks</h3>
           <p className="text-lg text-gray-600 mb-4">
             Ziggy Blocks are designed to be incredibly friendly and easy to use. Each block does one
             thing and one thing only. No more highly complex dialogs. Dropdowns are dynamically
@@ -44,7 +44,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Debugger</h2>
+          <h3>Debugger</h3>
           <p className="text-lg text-gray-600 mb-4">
             Step through your Flows, inspecting data in the pipeline as you go. You can also debug within the <a href="/flows#javascript">Javascript block</a> with stepping and variable inspection.
           </p>
@@ -58,7 +58,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Edge Inspection</h2>
+          <h3>Edge Inspection</h3>
           <p className="text-lg text-gray-600 mb-4">
             Click on any edge in the flow to inspect data. Great for debugging.
           </p>
@@ -72,9 +72,9 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h3>
             Data Validation and Transformation
-          </h2>
+          </h3>
           <p className="text-lg text-gray-600 mb-4">
             Ziggy offers several ways to validate and transform data in a flow
           </p>
@@ -95,7 +95,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Subflows</h2>
+          <h3>Subflows</h3>
           <p className="text-lg text-gray-600 mb-4">
             Flows can be called from other flows, ensuring modularity and reusability.
           </p>

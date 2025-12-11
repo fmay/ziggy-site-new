@@ -15,18 +15,18 @@ import HowItsDone from '@/app/integration-partners/HowItsDone'
 export default function IntegrationPartners() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
-    {
-      bgColor: getNextColor(),
-      children: <PlatformIntro />,
-    },
-    {
-      bgColor: getNextColor(),
-      children: <NoCoding />,
-    },
-    {
-      bgColor: getNextColor(),
-      children: <HowItsDone />,
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <PlatformIntro />,
+    // },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <NoCoding />,
+    // },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <HowItsDone />,
+    // },
     // {
     //   bgColor: getNextColor(),
     //   children: <PartnerFeatures />,
@@ -37,7 +37,7 @@ export default function IntegrationPartners() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor={DefaultColorCycle[0]}
+        toColor="header-footer"
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/customise.webp"
         title="Become an Integration Partner"
@@ -64,7 +64,7 @@ export default function IntegrationPartners() {
             </li>
           </ul>
         }
-        cta={<CTA label="Become a Partner" href="contact" />}
+        cta={<div className="flex flex-row gap-8"><CTA label="Become a Partner" href="contact" /><CTA label="Learn More" href="extend" /></div>}
       />
 
       {sections.map((section, index) => (
