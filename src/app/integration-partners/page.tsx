@@ -64,7 +64,14 @@ export default function IntegrationPartners() {
             </li>
           </ul>
         }
-        cta={<div className="flex flex-row gap-8"><CTA label="Become a Partner" href="contact" /><CTA label="Learn More" href="extend" /></div>}
+        cta={
+          <div
+            className="flex flex-col gap-0 items-center 
+            lg:flex-row lg:gap-8 lg:items-start">
+            <CTA label="Become a Partner" href="contact" noBottomMargin />
+            <CTA label="Learn More" href="extend" noBottomMargin />
+          </div>
+        }
       />
 
       {sections.map((section, index) => (

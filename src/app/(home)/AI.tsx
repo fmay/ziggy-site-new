@@ -24,12 +24,12 @@ const AI: FC<AIProps> = ({}) => {
               This ensures that you can be 100% confident that hallucinations and variations will
               never impact the integrity of your flow or its data.
             </p>
-            <CTA label="AI Features" href="ai-features" noBottomMargin />
           </div>
         }
         image="/home/ai-features.webp"
-        scale={1}
+        scale={0.7}
         swap={swap}
+        cta={<CTA label="AI Features" href="ai-features" noBottomMargin />}
       />
     </div>
   )
