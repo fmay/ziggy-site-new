@@ -47,6 +47,12 @@
   flex-col w-full
   gap-[40px] px-3 pt-[30px] pb-2
   lg:px-8 lg:flex-row lg:gap-[80px];
+
+  * {
+    a {
+      @apply text-white underline;
+    }
+  }
 }
 
 .col1 {

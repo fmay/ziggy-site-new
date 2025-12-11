@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="hero top doing mobile 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/cluster.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/cluster.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/customise.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/customise.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/feature-overview.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/feature-overview.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/integration-partners.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/integration-partners.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/platform-hero.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/platform-hero.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/pricing.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/pricing.pxd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/cluster.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/cluster.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/customise.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/customise.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/feature-overview.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/feature-overview.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/integration-partners.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/integration-partners.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/platform-hero.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/platform-hero.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/pricing.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/pricing.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/features/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/hero/hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/page-wrappers/PageSection.module.scss" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="hero top doing mobile 3">
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,15 +162,7 @@
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
       <workItem from="1765300658738" duration="49501000" />
-      <workItem from="1765434632730" duration="33076000" />
-    </task>
-    <task id="LOCAL-00171" summary="align">
-      <option name="closed" value="true" />
-      <created>1765280582473</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1765280582473</updated>
+      <workItem from="1765434632730" duration="33566000" />
     </task>
     <task id="LOCAL-00172" summary="align">
       <option name="closed" value="true" />
@@ -578,7 +548,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765468407924</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="hero top doing mobile 3">
+      <option name="closed" value="true" />
+      <created>1765476228737</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1765476228737</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +602,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="cluster updated" />
     <MESSAGE value="hubspot collections" />
     <MESSAGE value="hero scss" />
     <MESSAGE value="mobile nav" />
@@ -649,7 +626,8 @@
     <MESSAGE value="hero top 2" />
     <MESSAGE value="hero top doing mobile" />
     <MESSAGE value="hero top doing mobile 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="hero top doing mobile 2" />
+    <MESSAGE value="hero top doing mobile 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="hero top doing mobile 3" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

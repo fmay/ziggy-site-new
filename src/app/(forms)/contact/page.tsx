@@ -4,6 +4,7 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import ContactForm from '@/app/(forms)/contact/ContactForm'
 import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import CTA from '@/components/ui/cta/CTA'
+import Link from 'next/link'
 
 export default function Contact() {
   const sections: Section[] = [
@@ -25,7 +26,7 @@ export default function Contact() {
         subtitle={
           <div className="lg:mt-[-0px]">
             <p>
-              Please let us know how we can help. Or book a demo if you prefer.
+              Please let us know how we can help. Or <Link href="/demo">book a demo</Link> if you prefer.
             </p>
           </div>
         }
