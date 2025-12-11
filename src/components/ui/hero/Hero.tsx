@@ -1,9 +1,12 @@
+'use client'
+
 import styles from './hero.module.scss'
 import Image from 'next/image'
 import Wavy from '@/components/ui/page-wrappers/Wavy'
 import { WavyVariantEnum } from '@/types/wavy'
 import { FC } from 'react'
 import { tailwindClassToHex } from '@/utils/tailwindColors'
+import { useScreenSize } from '@/hooks/useScreenSize'
 
 interface HeroProps {
   title: string
@@ -32,7 +35,8 @@ const Hero: FC<HeroProps> = ({
   scale = 1,
   imageNudge = 0,
 }) => {
-  console.log('Hero:', title, 'wavyVariant:', wavyVariant)
+  const {isLg} = useScreenSize()
+
   return (
     <section
       className={styles.heroSection}
@@ -59,7 +63,7 @@ const Hero: FC<HeroProps> = ({
 
             {/*IMAGE*/}
             <div className={styles.col2}>
-              <div className={styles.heroImage} style={{ marginTop: `${imageNudge && imageNudge + 'px'}` }}>
+              <div className={styles.heroImage} style={{ marginTop: `${imageNudge && isLg && imageNudge + 'px'}` }}>
                 <Image src={image} alt="" width={600 * scale} height={0} />
               </div>
             </div>

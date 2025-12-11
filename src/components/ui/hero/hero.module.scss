@@ -1,21 +1,28 @@
 .heroSection {
   @apply mx-auto;
-  padding-top: 10vh; /* Default for all screens */
+  padding-top: 60px; /* Fixed padding for mobile */
 }
 
-@media (min-height: 801px) and (max-height: 999px) {
+/* Desktop: responsive padding based on viewport height */
+@media (min-width: 1024px) {
   .heroSection {
-    padding-top: 14vh; /* Medium height screens */
+    padding-top: 10vh;
   }
 }
 
-@media (min-height: 1000px) {
+@media (min-width: 1024px) and (min-height: 801px) and (max-height: 999px) {
+  .heroSection {
+    padding-top: 14vh;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1000px) {
   .heroSection {
     padding-top: 20vh;
   }
 }
 
-@media (min-height: 1200px) {
+@media (min-width: 1024px) and (min-height: 1200px) {
   .heroSection {
     padding-top: 22vh;
   }
@@ -74,7 +81,7 @@
   }
 
   ul {
-    @apply list-none mt-8 text-left ml-[4%]
+    @apply list-none mt-8 text-left mx-[4%]
       lg:ml-0;
     li {
       @apply font-extralight mb-3 flex items-center lg:justify-start gap-2;
@@ -91,7 +98,7 @@
   @apply hidden lg:block mt-10 text-4xl text-left;
 }
 .signoffMobile {
-  @apply lg:hidden mt-0 mb-4 text-4xl text-left;
+  @apply lg:hidden mt-0 mb-4 text-4xl text-center;
 }
 
 .subheadingImage {
