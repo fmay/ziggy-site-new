@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Wavy from '@/components/ui/page-wrappers/Wavy'
 import { WavyVariantEnum } from '@/types/wavy'
 import { FC } from 'react'
+import { tailwindClassToHex } from '@/utils/tailwindColors'
 
 interface HeroProps {
   title: string
@@ -33,7 +34,7 @@ const Hero: FC<HeroProps> = ({
 }) => {
   console.log('Hero:', title, 'wavyVariant:', wavyVariant)
   return (
-    <section className={styles.heroSection}>
+    <section className={styles.heroSection} style={{backgroundColor: tailwindClassToHex(fromColor)}}>
       <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
         {/* Overlay for better text readability */}
         <div className={styles.overlay} />

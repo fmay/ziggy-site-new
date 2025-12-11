@@ -60,7 +60,7 @@ export const navigationConfig: NavigationConfig = {
             items: [
               {
                 label: 'Ziggy Flows, Ziggy Blocks, Features',
-                href: '/flows',
+                href: '/features',
                 description: "A more detailed look at the Ziggy platform",
                 icon: '/nav/flow.svg',
               },

@@ -1,21 +1,21 @@
 .heroSection {
-  @apply mx-auto pt-12 lg:pt-0;
+  @apply mx-auto pt-12 lg:pt-[16%];
 }
 
 .container {
   @apply bg-header-footer text-white
-  lg:min-h-screen lg:flex lg:flex-col lg:items-center lg:justify-center;
+  lg:min-h-screen lg:flex lg:flex-col lg:items-center lg:justify-start;
 }
 
 .container.minimal {
-  @apply lg:min-h-0 lg:mt-[150px];
+  @apply lg:min-h-0;
 }
 
 .wrapper {
-  @apply flex place-items-center mx-auto max-w-7xl
+  @apply flex mx-auto max-w-7xl
   flex-col w-full
   gap-[40px] px-3 pt-[30px] pb-2
-  lg:px-8 lg:flex-row lg:gap-[80px] lg:pt-[90px];
+  lg:px-8 lg:flex-row lg:gap-[80px];
 }
 
 .col1 {
@@ -27,9 +27,11 @@
 }
 
 .col2 {
-  @apply lg:w-[50%] mt-[0px];
+  @apply lg:w-[50%] mt-[0px] flex items-center;
+  overflow: visible;
+  align-self: flex-start;
   img {
-    @apply mt-[-100px];
+    @apply mt-[0px];
   }
 }
 
@@ -68,8 +70,8 @@
 }
 
 .heroImage {
-  @apply object-contain mx-auto flex items-center
-  mt-[90px] lg:mt-[0px]
+  @apply flex items-center justify-start object-contain mx-auto
+  mt-[90px] lg:mt-[0px];
 }
 
 .subheadingImage {
