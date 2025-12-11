@@ -1,24 +1,25 @@
+'use client'
+
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import Mission from '@/app/about/Mission'
 import Hero from '@/components/ui/hero/Hero'
 import { DefaultColorCycle } from '@/constants/default-colors'
 import { WavyVariantEnum } from '@/types/wavy'
-import CTA from '@/components/ui/cta/CTA'
+import { useScreenSize } from '@/hooks/useScreenSize'
 
 export default function About() {
   const sections: Section[] = [{ bgColor: 'header-footer', children: <Mission /> }]
-
-  console.log('About page - WavyVariantEnum.None:', WavyVariantEnum.None)
-
+  const {isLg} = useScreenSize()
   return (
-    <div className="min-h-screen mx-auto pt-12">
+    <div>
       <Hero
         minimal
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.None}
         image="/hero/about.webp"
-        title="About Us"
+        title="Our Mission"
+        contentNudge={isLg ? -100 : 0}
         subtitle={
           <>
             <p className="text-lg font-[100]">

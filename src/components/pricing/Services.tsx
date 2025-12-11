@@ -16,10 +16,11 @@ export default function Services({
   return (
     <div className={styles.servicesColumn}>
       <div className={`${styles.sectionText}`}>
-        <h3>Professional Services</h3>
-        <p>
-          Ad-hoc Support, training, flow development, custom block development and general consultancy.
-        </p>
+        <div className={styles.sliderHeading}>
+          <label>Professional Services</label>
+          <p>Ad-hoc Support, training, flow development, custom block development and general consultancy.</p>
+        </div>
+
       </div>
 
       <div className={`${styles.servicesRow}`}>

@@ -15,13 +15,13 @@ export default function IntegrationPartners() {
   const sections: Section[] = [
     {
       id: 'calculator',
-      bgColor: "pale-blue",
+      bgColor: 'pale-blue',
       children: <PricingCalculator />,
     },
     {
       id: 'services',
-      bgColor: "white",
-      children: <Services />
+      bgColor: 'white',
+      children: <Services />,
     },
   ]
 
@@ -32,11 +32,11 @@ export default function IntegrationPartners() {
         toColor="pale-blue"
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/pricing.webp"
-        title="Pricing"
+        title="Simple, transparent pricing that scales with your business"
         subtitle={
           <p className={styles.subheading}>
-            Our subscription prices are the lowest you'll find. But you will spend a lot less in
-            staff time and cost, too.
+            Ziggy has a fixed price subscription model which is the lowest you’ll find and you will
+            spend a lot less in staff time and cost too.
           </p>
         }
         cta={<CTA label="Calculator" href="#calculator" />}

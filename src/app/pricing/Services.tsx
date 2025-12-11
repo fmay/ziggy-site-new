@@ -11,12 +11,12 @@ const Services: FC<ServicesProps> = ({}) => {
         description={
           <>
             <p>
-              Ziggy is easier to use than anything else, so you won't need much in the way of
-              services. We think that training is a real benefit.
+              Ziggy is easier to use than anything else, so you won’t need much in the way of
+              services but we’re always here if you need us.
             </p>
             <p>
-              But you'll be reassured to know that if want help building flows, custom blocks or
-              anything else, we're here to help.
+              We think training offers a real benefit and be reassured that if you want help
+              building Ziggy Blocks , Ziggy Flows or anything else, we’re here to help.
             </p>{' '}
           </>
         }

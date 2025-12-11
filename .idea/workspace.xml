@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="about us">
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/Mission.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/Mission.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/hero.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pricing/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/Services.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pricing/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pricing/PricingCalculator.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/PricingCalculator.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pricing/Support.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/Support.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,15 +169,7 @@
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
       <workItem from="1765300658738" duration="49501000" />
-      <workItem from="1765434632730" duration="12111000" />
-    </task>
-    <task id="LOCAL-00160" summary="demo 0.4">
-      <option name="closed" value="true" />
-      <created>1765268049948</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1765268049948</updated>
+      <workItem from="1765434632730" duration="15027000" />
     </task>
     <task id="LOCAL-00161" summary="demo 0.6">
       <option name="closed" value="true" />
@@ -556,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765447412942</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="about us">
+      <option name="closed" value="true" />
+      <created>1765447996785</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1765447996785</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

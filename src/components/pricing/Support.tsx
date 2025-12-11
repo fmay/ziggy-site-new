@@ -9,10 +9,10 @@ export default function Support({ supportHours, onSupportHoursChange }: SupportP
   return (
     <div className={styles.supportColumn}>
       <div className={`${styles.sectionText}`}>
-        <h3>Support</h3>
-        <p>
-          Monthly support hours for assistance, troubleshooting, and maintenance.
-        </p>
+        <div className={styles.sliderHeading}>
+          <label>Support</label>
+          <p>Monthly support hours for assistance, troubleshooting, and maintenance.</p>
+        </div>
       </div>
 
       <div className={`${styles.servicesRow}`}>
