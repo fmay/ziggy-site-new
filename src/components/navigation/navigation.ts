@@ -37,21 +37,21 @@ export const navigationConfig: NavigationConfig = {
               {
                 label: 'Platform Introduction',
                 href: '/platform',
-                description: 'An introduction to the platform',
+                description: 'An overview of features, how we use AI etc.',
                 icon: '/nav/flow.svg',
               },
-              {
-                label: 'AI Features',
-                href: '/ai-features',
-                description: 'How Ziggy uses AI',
-                icon: '/nav/flow.svg',
-              },
-              {
-                label: 'Feature overview',
-                href: '/features',
-                description: "An overview of Ziggy's key features",
-                icon: '/nav/flow.svg',
-              },
+              // {
+              //   label: 'AI Features',
+              //   href: '/ai-features',
+              //   description: 'How Ziggy uses AI',
+              //   icon: '/nav/flow.svg',
+              // },
+              // {
+              //   label: 'Feature overview',
+              //   href: '/features',
+              //   description: "An overview of Ziggy's key features",
+              //   icon: '/nav/flow.svg',
+              // },
             ],
           },
 
