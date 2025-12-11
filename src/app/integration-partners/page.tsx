@@ -30,14 +30,14 @@ export default function IntegrationPartners() {
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Simple for your customers to integrate and migrate with your platform</span>
+              <span>Make it simple for your customers to integrate with your platform</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
               <span>
-                    Provide your customers with your own branded and customised Ziggy Blocks that
-                    integrate directly with your platform
-                  </span>
+                Provide your customers with your own branded and customised Ziggy Blocks and Ziggy
+                Flows to represent your specific platform requirements.
+              </span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />

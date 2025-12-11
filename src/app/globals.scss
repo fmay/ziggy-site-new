@@ -55,9 +55,19 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-light;
 }
 
-h1, h2, h3 {
+h1 {
+  @apply text-[2rem] leading-[2.5rem] mb-6
+    lg:text-[2.6rem] lg:leading-[3.1rem]
+}
+
+h2 {
   @apply text-3xl leading-[2.5rem] mb-6
-    lg:text-4xl lg:leading-[3.1rem]
+  lg:text-4xl lg:leading-[3.1rem]
+}
+
+h3 {
+  @apply text-3xl leading-[2.5rem] mb-6
+  lg:text-4xl lg:leading-[3.1rem]
 }
 
 h4 {

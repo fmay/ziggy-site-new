@@ -8,13 +8,16 @@ const MadeEasy: FC<MadeEasyProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
-        <p>Easy to use whether you're a developer or not.</p>
-        <ul>
-          <li>Each Ziggy Block does one simple thing only</li>
-          <li>All data pipelines are built on a visual canvas</li>
-          <li>AI features let you do things only a developer could normally do</li>
-          <li>Backed by all the features you need</li>
-        </ul>
+        <p>
+          Ziggy is designed from the ground up to be easy to use whether you are a developer or not.
+        </p>
+        <p>Its AI features lets you do things that normally only a developer could do.</p>
+        <p>
+          It avoids the complexities of ETL platforms and coding while providing everything you need
+          to operate at scale.
+        </p>
+        <p>Each Ziggy Block does one simple thing only.</p>
+        <p>All data pipelines are built on a visual canvas.</p>
       </>
     )
   }

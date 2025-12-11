@@ -30,7 +30,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/who-for.webp"
         cta={<CTA label="Learn More" href="platform" noBottomMargin />}
-        scale={0.7}
+        scale={0.6}
       />
     </div>
   )

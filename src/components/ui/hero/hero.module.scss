@@ -18,10 +18,6 @@
   lg:px-8 lg:flex-row lg:gap-[80px] lg:pt-[90px];
 }
 
-.beneath {
-  @apply mx-auto max-w-7xl w-full px-4 lg:px-8;
-}
-
 .col1 {
   @apply lg:w-[50%];
 }
@@ -39,10 +35,7 @@
 
 
 .heading {
-  @apply
-  mb-[20px] mx-auto
-  text-4xl font-normal text-white text-center leading-[3.0rem]
-  lg:text-[2.8rem] lg:text-start lg:leading-[3.5rem] lg:mb-[40px];
+  @apply mx-auto text-center lg:text-left;
 }
 
 .subheading {
@@ -54,7 +47,8 @@
   }
 
   ul {
-    @apply list-none mt-8 text-left ml-[40px] lg:ml-0;
+    @apply list-none mt-8 text-left ml-[4%]
+      lg:ml-0;
     li {
       @apply font-extralight mb-3 flex items-center lg:justify-start gap-2;
     }

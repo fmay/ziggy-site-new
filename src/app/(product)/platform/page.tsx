@@ -19,35 +19,14 @@ export default function Platform() {
       bgColor: getNextColor(),
       children: <MadeEasy />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <Extensible />,
-    },
-    {
-      bgColor: getNextColor(),
-      children: <Cluster />,
-    },
-    {
-      bgColor: getNextColor(),
-      children: <Pricing />,
-    },
-    {
-      bgColor: getNextColor(),
-      children: (
-        <div className="section-intro-2-col">
-          <div>
-            <h2>Professional Services</h2>
-            <p>
-              Whether you want us train, build flows, develop custom Ziggy Blocks or just hand-hold,
-              we're here to provide expert support when you need it.
-            </p>
-          </div>
-          <div>
-            <CTA label="Contact Us" href="/pricing#services" />
-          </div>
-        </div>
-      ),
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <Extensible />,
+    // },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <Cluster />,
+    // },
   ]
 
   return (

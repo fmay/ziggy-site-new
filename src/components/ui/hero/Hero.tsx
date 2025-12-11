@@ -14,7 +14,6 @@ interface HeroProps {
   wavyVariant: WavyVariantEnum
   cta?: React.ReactNode
   signoff?: string
-  beneath?: React.ReactNode
   minimal?: boolean
   scale?: number
   contentNudge?: number
@@ -29,7 +28,6 @@ const Hero: FC<HeroProps> = ({
   wavyVariant,
   cta,
   signoff,
-  beneath,
   minimal,
   scale = 1,
   contentNudge = 0,
@@ -39,9 +37,7 @@ const Hero: FC<HeroProps> = ({
       {/* Overlay for better text readability */}
       <div className={styles.overlay} />
 
-      <div
-        className={`${styles.container} ${minimal ? styles.minimal : ''}`}
-        style={beneath ? { marginTop: `-${NUDGE_UP}px` } : undefined}>
+      <div className={`${styles.container} ${minimal ? styles.minimal : ''}`}>
         {/*Inner Wrapper*/}
         <div className={`${styles.wrapper}`}>
           {/*Left Col*/}
@@ -71,8 +67,6 @@ const Hero: FC<HeroProps> = ({
           {signoff && <p className={styles.signoffMobile}>{signoff}</p>}
           {cta && <div className={`${styles.ctaButtons} ${styles.mobile}`}>{cta}</div>}
         </div>
-
-        {beneath && <div className={styles.beneath}>{beneath}</div>}
       </div>
     </Wavy>
   </section>
