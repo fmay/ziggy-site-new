@@ -16,11 +16,12 @@ export default function BookDemoPage() {
       <Hero
         fromColor="header-footer"
         toColor="header-footer"
-        wavyVariant={WavyVariantEnum.Standard}
+        wavyVariant={WavyVariantEnum.None}
         image="/hero/demo.webp"
         title="Book a Demo"
         minimal
         scale={0.5}
+        contentNudge={-70}
         subtitle={
           <>
             <p>

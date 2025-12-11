@@ -39,7 +39,7 @@
 }
 
 .ctaWrapper {
-  @apply h-0 overflow-hidden transition-all duration-300 text-[0.8rem];
+  @apply h-0 overflow-hidden transition-all duration-300;
 
   .stackCard:hover & {
     @apply h-[40px];
@@ -47,7 +47,7 @@
 }
 
 .ctaLink {
-  @apply mt-0 inline-flex items-center gap-2 font-medium opacity-0 transition-all duration-300;
+  @apply mt-0 inline-flex items-center gap-2 opacity-0 transition-all duration-300;
 
   .stackCard:hover & {
     @apply opacity-100;

@@ -1,9 +1,8 @@
 import styles from './hero.module.scss'
 import Image from 'next/image'
-import Wavy, { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
+import Wavy from '@/components/ui/page-wrappers/Wavy'
+import { WavyVariantEnum } from '@/types/wavy'
 import { FC } from 'react'
-
-const NUDGE_UP = 100 // pixels
 
 interface HeroProps {
   title: string
@@ -31,45 +30,48 @@ const Hero: FC<HeroProps> = ({
   minimal,
   scale = 1,
   contentNudge = 0,
-}) => (
-  <section className={styles.heroSection}>
-    <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
-      {/* Overlay for better text readability */}
-      <div className={styles.overlay} />
+}) => {
+  console.log('Hero:', title, 'wavyVariant:', wavyVariant)
+  return (
+    <section className={styles.heroSection}>
+      <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
+        {/* Overlay for better text readability */}
+        <div className={styles.overlay} />
 
-      <div className={`${styles.container} ${minimal ? styles.minimal : ''}`}>
-        {/*Inner Wrapper*/}
-        <div className={`${styles.wrapper}`}>
-          {/*Left Col*/}
-          <div className={`${styles.col1}  ${styles.beneath ? styles.beneath : ''}`}>
-            {/* TITLE */}
-            <h1
-              className={styles.heading}
-              style={{ marginTop: `${contentNudge && contentNudge + 'px'}` }}>
-              {title}
-            </h1>
+        <div className={`${styles.container} ${minimal ? styles.minimal : ''}`}>
+          {/*Inner Wrapper*/}
+          <div className={`${styles.wrapper}`}>
+            {/*Left Col*/}
+            <div className={`${styles.col1}  ${styles.beneath ? styles.beneath : ''}`}>
+              {/* TITLE */}
+              <h1
+                className={styles.heading}
+                style={{ marginTop: `${contentNudge && contentNudge + 'px'}` }}>
+                {title}
+              </h1>
 
-            {/*SUBTITLE*/}
-            <div className={styles.subheading}>{subtitle}</div>
+              {/*SUBTITLE*/}
+              <div className={styles.subheading}>{subtitle}</div>
 
-            {/*CTA*/}
-            {signoff && <p className={styles.signoffDesktop}>{signoff}</p>}
-            {cta && <div className={`${styles.ctaButtons} ${styles.desktop}`}>{cta}</div>}
-          </div>
-
-          {/*IMAGE*/}
-          <div className={styles.col2}>
-            <div className={styles.heroImage}>
-              <Image src={image} alt="" width={600 * scale} height={0} />
+              {/*CTA*/}
+              {signoff && <p className={styles.signoffDesktop}>{signoff}</p>}
+              {cta && <div className={`${styles.ctaButtons} ${styles.desktop}`}>{cta}</div>}
             </div>
-          </div>
 
-          {signoff && <p className={styles.signoffMobile}>{signoff}</p>}
-          {cta && <div className={`${styles.ctaButtons} ${styles.mobile}`}>{cta}</div>}
+            {/*IMAGE*/}
+            <div className={styles.col2}>
+              <div className={styles.heroImage}>
+                <Image src={image} alt="" width={600 * scale} height={0} />
+              </div>
+            </div>
+
+            {signoff && <p className={styles.signoffMobile}>{signoff}</p>}
+            {cta && <div className={`${styles.ctaButtons} ${styles.mobile}`}>{cta}</div>}
+          </div>
         </div>
-      </div>
-    </Wavy>
-  </section>
-)
+      </Wavy>
+    </section>
+  )
+}
 
 export default Hero

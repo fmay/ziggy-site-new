@@ -125,7 +125,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark', subscribe 
 
   return (
     <div
-      className={`${styles.container} ${styles.subscribe} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
+      className={`${styles.container} ${subscribe && styles.subscribe} ${background === 'dark' ? styles.bgDark : styles.bgLight}`}>
       {!showCalendly && (
         <div className={styles.formColumn}>
           <div className={styles.formField}>

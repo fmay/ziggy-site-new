@@ -1,7 +1,7 @@
 .container {
-  @apply flex flex-col gap-20 rounded-lg p-6 relative min-h-fit mx-auto
-  mt-[-40px] mb-[70px]
-  lg:flex-row lg:justify-start lg:items-start lg:mt-[-150px] lg:max-w-[600px] lg:mb-[150px];
+  @apply flex gap-20 rounded-lg shadow-md p-6 relative min-h-fit mx-auto border border-gray-300
+  flex-col mt-[-40px] mb-[70px]
+  lg:flex-row lg:justify-start lg:items-start lg:mt-[-120px] lg:max-w-[600px] lg:mb-[150px] lg:mx-0;
 }
 
 .container.subscribe {
@@ -9,7 +9,7 @@
 }
 
 .bgDark {
-  @apply bg-gray-100 text-dark-text;
+  @apply bg-gray-200 text-dark-text;
 }
 
 .bgLight {

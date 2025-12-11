@@ -2,11 +2,9 @@
 
 import { FC, ReactNode, useEffect, useState } from 'react'
 import { tailwindClassToHex } from '@/utils/tailwindColors'
+import { WavyVariantEnum } from '@/types/wavy'
 
-export enum WavyVariantEnum {
-  Standard = 'standard',
-  Simple = 'simple',
-}
+export { WavyVariantEnum }
 
 interface WavyProps {
   children: ReactNode
@@ -95,10 +93,15 @@ const Wavy: FC<WavyProps> = ({
       className = 'w-full mt-[-2vw]'
       viewBoxHeight = 95 // Can be changed to adjust wave height
       break
-    default:
+    case 'standard':
       svgPath = '/waves/standard.svg'
       className = 'w-full mt-[-7vw]'
       viewBoxHeight = 300 // Can be changed to adjust wave height
+      break
+    default:
+      svgPath = '/waves/standard.svg'
+      className = 'w-full mt-[-7vw]'
+      viewBoxHeight = 0
       break
   }
 

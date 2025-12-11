@@ -93,10 +93,13 @@ const StackCard: FC<StackCardProps> = ({
         <p className={styles.description}>{description}</p>
 
         {/* CTA Link - Fixed height, hidden by default */}
-        <div className={styles.ctaWrapper}>
+        <div
+          className={styles.ctaWrapper}
+          style={!animate ? { height: '40px', overflow: 'visible' } : undefined}>
           <a
             href={ctaHref}
             className={styles.ctaLink}
+            style={!animate ? { opacity: 1 } : undefined}
             {...(ctaNewTab && {
               target: '_blank',
               rel: 'noopener noreferrer',
