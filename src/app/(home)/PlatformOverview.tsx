@@ -5,24 +5,19 @@ import CTA from '@/components/ui/cta/CTA'
 interface PlatformOverviewProps {}
 
 const PlatformOverview: FC<PlatformOverviewProps> = ({}) => {
-  const ImageContent = () => {
-    return (
-      <>
-        <p>
-          Ziggy is not only easy to use, it's packed with a raft of features.
-        </p>
-      </>
-    )
-  }
-
   return (
     <div>
       <SimplePair
-        title="Easy to use, yet feature packed"
+        title="Easy to use. Packed with features."
         subtitle=""
-        imageCopy={<ImageContent />}
-        image="/home/business-functions.webp"
-        scale={0.9}
+        imageCopy={
+          <>
+            {/*<p>Ziggy is easy to use. And it's packed features.</p>*/}
+          </>
+        }
+        contentNudge={30}
+        image="/platform/features.webp"
+        scale={0.6}
         cta={<CTA label="Learn More" href="platform" noBottomMargin />}
       />
     </div>
