@@ -19,7 +19,6 @@ export default function About() {
         wavyVariant={WavyVariantEnum.None}
         image="/hero/about.webp"
         title="Our Mission"
-        contentNudge={isLg ? 0 : 0}
         subtitle={
           <>
             <p className="text-lg font-[100]">

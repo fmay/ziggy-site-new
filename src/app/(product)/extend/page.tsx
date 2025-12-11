@@ -82,6 +82,7 @@ export default function Extend() {
             </p>
           </>
         }
+        imageNudge={-100}
         cta={<CTA label="Book a demo" href="demo" />}
       />
       {sections.map((section, index) => (

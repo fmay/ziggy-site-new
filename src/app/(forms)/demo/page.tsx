@@ -21,7 +21,6 @@ export default function BookDemoPage() {
         title="Book a Demo"
         minimal
         scale={0.5}
-        contentNudge={-70}
         subtitle={
           <>
             <p>

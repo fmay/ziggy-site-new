@@ -16,6 +16,7 @@ import { DefaultColorCycle } from '@/constants/default-colors'
 import SimpleFlows from '@/app/(product)/features/SimpleFlows'
 import { getSwapStatus } from '@/utils/swapStatus'
 import ComplexFlows from '@/app/(product)/platform/ComplexFlows'
+import AI from '@/app/(home)/AI'
 
 const swap = getSwapStatus()
 
@@ -37,6 +38,10 @@ export default function Features() {
     },
     {
       bgColor: getNextColor(),
+      children: <AI />,
+    },
+    {
+      bgColor: getNextColor(),
       children: (
         <SimplePair
           title="Extend Ziggy with Custom Blocks"
@@ -53,10 +58,6 @@ export default function Features() {
           image="/home/home-customise.webp"
         />
       ),
-    },
-    {
-      bgColor: getNextColor(),
-      children: <EdgeAssistant />,
     },
     {
       id: 'javascript',
@@ -92,6 +93,7 @@ export default function Features() {
             execution history and much more.
           </div>
         }
+        imageNudge={-120}
         cta={<CTA label="Book a demo" href="demo" />}
       />
 

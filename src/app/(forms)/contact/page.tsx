@@ -29,7 +29,6 @@ export default function Contact() {
           </div>
         }
         minimal
-        contentNudge={-70}
       />
 
       {sections.map((section, index) => (

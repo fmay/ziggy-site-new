@@ -16,7 +16,7 @@ interface HeroProps {
   signoff?: string
   minimal?: boolean
   scale?: number
-  contentNudge?: number
+  imageNudge?: number
 }
 
 const Hero: FC<HeroProps> = ({
@@ -30,11 +30,13 @@ const Hero: FC<HeroProps> = ({
   signoff,
   minimal,
   scale = 1,
-  contentNudge = 0,
+  imageNudge = 0,
 }) => {
   console.log('Hero:', title, 'wavyVariant:', wavyVariant)
   return (
-    <section className={styles.heroSection} style={{backgroundColor: tailwindClassToHex(fromColor)}}>
+    <section
+      className={styles.heroSection}
+      style={{ backgroundColor: tailwindClassToHex(fromColor) }}>
       <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
         {/* Overlay for better text readability */}
         <div className={styles.overlay} />
@@ -45,11 +47,7 @@ const Hero: FC<HeroProps> = ({
             {/*Left Col*/}
             <div className={`${styles.col1}  ${styles.beneath ? styles.beneath : ''}`}>
               {/* TITLE */}
-              <h1
-                className={styles.heading}
-                style={{ marginTop: `${contentNudge && contentNudge + 'px'}` }}>
-                {title}
-              </h1>
+              <h1 className={styles.heading}>{title}</h1>
 
               {/*SUBTITLE*/}
               <div className={styles.subheading}>{subtitle}</div>
@@ -61,7 +59,7 @@ const Hero: FC<HeroProps> = ({
 
             {/*IMAGE*/}
             <div className={styles.col2}>
-              <div className={styles.heroImage}>
+              <div className={styles.heroImage} style={{ marginTop: `${imageNudge && imageNudge + 'px'}` }}>
                 <Image src={image} alt="" width={600 * scale} height={0} />
               </div>
             </div>

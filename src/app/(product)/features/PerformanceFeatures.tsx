@@ -46,7 +46,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
   return (
     <div>
       <div id="javascript" className="section-intro">
-        <h2>Performance Features</h2>
+        <h3>Performance Features</h3>
         <p>
           Ziggy lets you tune, monitor and manage performance in various ways. There's even an internal load tester.
         </p>

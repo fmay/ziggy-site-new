@@ -26,7 +26,7 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2>Batching</h2>
+          <h3>Batching</h3>
           <p>
             When reading or writing large numbers of records, making batch calls increases
             throughput significantly and ensure you don't overload a platform or database.
@@ -40,7 +40,7 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2>Data Store</h2>
+          <h3>Data Store</h3>
           <p>
             Ziggy comes with a fast internal data store. This is a great place to write data for
             processing later or in other flows.
@@ -57,7 +57,7 @@ const ScrollListExtra1: FC = () => {
     {
       content: (
         <div>
-          <h2>Scheduler</h2>
+          <h3>Scheduler</h3>
           <p>
             Ziggy has an integrated scheduler that launches flows. For example, schedule daily reads
             from SFTP servers or update a data warehouse every hour.

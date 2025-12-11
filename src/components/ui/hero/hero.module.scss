@@ -35,6 +35,11 @@
   }
 }
 
+.heroImage {
+  @apply flex items-center justify-start object-contain mx-auto
+  mt-[90px] lg:mt-[0px];
+}
+
 
 .heading {
   @apply mx-auto text-center lg:text-left;
@@ -67,11 +72,6 @@
 }
 .signoffMobile {
   @apply lg:hidden mt-0 mb-4 text-4xl text-left;
-}
-
-.heroImage {
-  @apply flex items-center justify-start object-contain mx-auto
-  mt-[90px] lg:mt-[0px];
 }
 
 .subheadingImage {

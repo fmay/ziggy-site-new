@@ -28,7 +28,7 @@ const AI: FC<AIProps> = ({}) => {
           </div>
         }
         image="/home/ai-features.webp"
-        scale={0.6}
+        scale={1}
         swap={swap}
       />
     </div>

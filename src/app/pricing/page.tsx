@@ -40,6 +40,7 @@ export default function IntegrationPartners() {
           </p>
         }
         cta={<CTA label="Calculator" href="#calculator" />}
+        imageNudge={-100}
       />
 
       {sections.map((section, index) => (
