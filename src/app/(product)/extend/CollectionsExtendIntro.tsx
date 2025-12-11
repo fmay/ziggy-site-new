@@ -11,8 +11,7 @@ const CollectionsExtendIntro: FC<BlockCollectionsProps> = ({}) => {
         collection of blocks.
       </p>
       <p>
-        Below is an example collection for the HubSpot platform. Scroll through it to see what the
-        blocks do.
+        Below is an example for the HubSpot platform. You'll build your own collection that suits your customers' needs.
       </p>
     </div>
   )

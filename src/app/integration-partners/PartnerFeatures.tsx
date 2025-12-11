@@ -34,7 +34,7 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
             </p>
           </>
         }
-        image="/placeholder.svg"
+        image="/integration-partners/partners-intro.webp"
       />
     )
   }
@@ -57,40 +57,23 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">No API? No problem.</h2>
+          <h2>No code. No API.</h2>
           <p>
-            Your platform may not have a public facing API. Using Ziggy's custom blocks this doesn't
-            matter.
+            Delight your customers by letting them get data out of and into your platform without writing code.
           </p>
-        </div>
-      ),
-      image: '/placeholder.svg',
-    },
-    {
-      content: (
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">No coding for your customers</h2>
-          <p>
-            Your customers will hug you for letting them access your data without having to use an
-            API. And, of course, they can take that data and put it into their other systems - also
-            without coding.
-          </p>
+          <p>Your platform doesn't even need a public API,</p>
           <CTA label="Build Custom Blocks" href="/extend" className="mb-3" />
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/integration-partners/no-code.webp',
     },
     {
       content: (
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Custom blocks for your platform</h2>
+          <h2>It's done using Custom Blocks</h2>
           <p className="text-lg text-gray-600 mb-4">
             Custom Blocks are what make it so easy for your customers to access your platform's
-            data.
-          </p>
-          <p>
-            Once you've built your plugins, your customers are ready to build their flows without
-            having to wait for there development teams to have some availability.
+            data. Our CLI and SDK make it easy for TypeScript developers.
           </p>
           <CTA label="Build Custom Blocks" href="/extend" className="mb-3" />
         </div>
@@ -105,6 +88,7 @@ const PartnerFeatures: FC<FlowFeaturesProps> = ({}) => {
       {/* Other page content above */}
       <div className="">
         <PageSection children={<BillTemp />} />
+        {/*<div className="min-h-[30vh]"></div>*/}
         <ScrollContentImagePairs contentImagePairs={contentImagePairs} />
       </div>
       {/* Other page content below */}

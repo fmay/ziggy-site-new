@@ -95,7 +95,7 @@ export default function Features() {
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/feature-overview.webp"
         title="Ziggy Feature Overview"
         subtitle={

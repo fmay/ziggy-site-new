@@ -8,14 +8,29 @@ import Hero from '@/components/ui/hero/Hero'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import PlatformIntro from '@/app/integration-partners/PlatformIntro'
+import NoCoding from '@/app/integration-partners/NoCoding'
+import HowItsDone from '@/app/integration-partners/HowItsDone'
 
 export default function IntegrationPartners() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
-      children: <PartnerFeatures />,
+      children: <PlatformIntro />,
     },
+    {
+      bgColor: getNextColor(),
+      children: <NoCoding />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <HowItsDone />,
+    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <PartnerFeatures />,
+    // },
   ]
 
   return (
@@ -49,7 +64,7 @@ export default function IntegrationPartners() {
             </li>
           </ul>
         }
-        cta={<CTA label="Book a Demo" href="demo" />}
+        cta={<CTA label="Become a Partner" href="contact" />}
       />
 
       {sections.map((section, index) => (

@@ -18,6 +18,20 @@ export default function Extend() {
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
+      children: <CustomizationStack />,
+    },
+    {
+      id: 'hubspot',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <CollectionsExtendIntro />
+          <HubspotBlockCollection />
+        </>
+      ),
+    },
+    {
+      bgColor: getNextColor(),
       children: (
         <>
           <SimplePair
@@ -45,20 +59,6 @@ export default function Extend() {
             }
             scale={0.9}
           />
-        </>
-      ),
-    },
-    {
-      bgColor: getNextColor(),
-      children: <CustomizationStack />,
-    },
-    {
-      id: 'hubspot',
-      bgColor: getNextColor(),
-      children: (
-        <>
-          <CollectionsExtendIntro />
-          <HubspotBlockCollection />
         </>
       ),
     },

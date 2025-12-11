@@ -32,6 +32,7 @@ interface StackCardProps {
   graphicBgColor?: string
   /** Optional className for additional styling */
   className?: string
+  animate?: boolean
 }
 
 const StackCard: FC<StackCardProps> = ({
@@ -48,6 +49,7 @@ const StackCard: FC<StackCardProps> = ({
   graphicAlt = '',
   graphicBgColor = 'bg-white',
   className = '',
+  animate = false,
 }) => {
   return (
     <div

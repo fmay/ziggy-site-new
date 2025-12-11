@@ -11,12 +11,8 @@
 }
 
 .graphicContainer {
-  @apply relative px-2 pt-2 overflow-hidden transition-all duration-300 border-gray-200;
+  @apply relative px-0 pt-0 overflow-hidden transition-all duration-300 border-gray-200;
 }
-
-//.gradientOverlay {
-//  @apply absolute inset-0 z-[1] opacity-0 transition-opacity duration-300;
-//}
 
 .graphicImage {
   @apply relative z-[2] h-full w-full object-contain object-top transition-all duration-300 ;
