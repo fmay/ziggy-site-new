@@ -86,6 +86,8 @@ export default function Features() {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/feature-overview.webp"
+        imageNudge={-80}
+        scale={0.8}
         title="Ziggy Feature Overview"
         subtitle={
           <div>
@@ -93,7 +95,6 @@ export default function Features() {
             execution history and much more.
           </div>
         }
-        imageNudge={-120}
         cta={<CTA label="Book a demo" href="demo" />}
       />
 

@@ -1,6 +1,7 @@
 .container {
   @apply max-w-2xl text-dark-text
-  mt-[-180px];
+    mt-[-40px]
+    lg:mt-[-310px];
   * {
     @apply text-base;
   }

@@ -36,10 +36,10 @@ const Hero: FC<HeroProps> = ({
   imageNudge = 0,
 }) => {
   const {isLg} = useScreenSize()
-
+console.log(isLg)
   return (
     <section
-      className={styles.heroSection}
+      className={`${styles.heroSection} ${minimal ? styles.minimal : ''}`}
       style={{ backgroundColor: tailwindClassToHex(fromColor) }}>
       <Wavy fromColor={fromColor} toColor={toColor} variant={wavyVariant}>
         {/* Overlay for better text readability */}
@@ -63,7 +63,7 @@ const Hero: FC<HeroProps> = ({
 
             {/*IMAGE*/}
             <div className={styles.col2}>
-              <div className={styles.heroImage} style={{ marginTop: `${imageNudge && isLg && imageNudge + 'px'}` }}>
+              <div className={styles.heroImage} style={{ marginTop: `${(imageNudge && isLg) ? imageNudge + 'px' : '0px'}` }}>
                 <Image src={image} alt="" width={600 * scale} height={0} />
               </div>
             </div>

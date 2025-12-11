@@ -40,6 +40,8 @@ export default function IntegrationPartners() {
         toColor="header-footer"
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/integration-partners.webp"
+        scale={0.7}
+        imageNudge={60}
         title="Become an Integration Partner"
         subtitle={
           <ul>

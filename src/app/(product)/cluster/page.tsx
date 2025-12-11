@@ -56,6 +56,7 @@ export default function Cluster() {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/cluster.webp"
+        scale={0.6}
         title="Ziggy Cluster"
         subtitle={
           <div>

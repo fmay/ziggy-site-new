@@ -54,6 +54,7 @@ export default function Platform() {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/platform-hero.webp"
+        imageNudge={90}
         title="Ziggy - simplify your Integration and Automation chaos"
         subtitle={
           <>
@@ -68,6 +69,7 @@ export default function Platform() {
           </>
         }
         cta={<CTA label="Learn More" href="features" />}
+        scale={0.8}
       />
 
       {sections.map((section, index) => (

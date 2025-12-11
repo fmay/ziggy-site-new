@@ -19,6 +19,7 @@ export default function Contact() {
         toColor="header-footer"
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/contact.webp"
+        imageNudge={-60}
         scale={0.5}
         title="Contact Us"
         subtitle={

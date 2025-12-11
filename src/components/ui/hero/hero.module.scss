@@ -3,6 +3,10 @@
   padding-top: 60px; /* Fixed padding for mobile */
 }
 
+.heroSection.minimal {
+  @apply pt-[120px]; /* Fixed padding for mobile */
+}
+
 /* Desktop: responsive padding based on viewport height */
 @media (min-width: 1024px) {
   .heroSection {
@@ -54,7 +58,7 @@
 }
 
 .col2 {
-  @apply lg:w-[50%] mt-[0px] flex items-center;
+  @apply lg:w-[50%] mt-[0px] flex items-center mx-auto ;
   overflow: visible;
   align-self: flex-start;
   img {
@@ -64,7 +68,7 @@
 
 .heroImage {
   @apply flex items-center justify-start object-contain mx-auto
-  mt-[90px] lg:mt-[0px];
+  mt-[0px] lg:mt-[0px];
 }
 
 

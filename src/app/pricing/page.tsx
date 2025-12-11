@@ -32,6 +32,8 @@ export default function IntegrationPartners() {
         toColor="pale-blue"
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/pricing.webp"
+        scale={0.7}
+        imageNudge={-30}
         title="Simple, transparent pricing that scales with your business"
         subtitle={
           <p className={styles.subheading}>
@@ -40,7 +42,6 @@ export default function IntegrationPartners() {
           </p>
         }
         cta={<CTA label="Calculator" href="#calculator" />}
-        imageNudge={-100}
       />
 
       {sections.map((section, index) => (
