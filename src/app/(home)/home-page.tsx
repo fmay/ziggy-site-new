@@ -46,6 +46,7 @@ export default function HomePage() {
         toColor={DefaultColorCycle[0]}
         wavyVariant={heroWaveVariant}
         image="/hero/home.webp"
+        scale={0.7}
         signoff="Ziggy it!"
         cta={<CTA label="Learn More" href="platform" />}
         title="Ziggy. The Automation and Integration Platform that's different."
