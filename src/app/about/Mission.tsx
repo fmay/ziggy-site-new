@@ -4,12 +4,12 @@ interface MissionProps {}
 
 const Mission: FC<MissionProps> = ({}) => {
   return (
-    <div className="max-w-7xl w-full px-0 mt-[-150px]">
+    <div className="max-w-7xl w-full px-0 mt-[-120px]">
       <div className="w-full text-white">
         <div>
-          <p className="text-[1.25rem]">So our mission is simple…</p>
-          <p className="text-[1.25rem] font-semibold tracking-wide">
-            To make it extremely easy, for any business to automate and integrate data across their
+          <p className="text-[1.8rem]">So our mission is simple…</p>
+          <p className="text-[1.25rem] tracking-wide">
+            To make it easy, for any business to automate and integrate data across their
             own systems and with third party systems, where security, customization, technical
             resource flexibility and cost effectiveness are paramount.
           </p>
