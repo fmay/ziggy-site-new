@@ -49,7 +49,7 @@ export default function HomePage() {
         scale={0.7}
         signoff="Ziggy it!"
         cta={<CTA label="Learn More" href="platform" />}
-        title="Ziggy. The Automation and Integration Platform that's different."
+        title={"Ziggy. The Automation and Integration Platform that's different."}
         subtitle={
           <ul>
             <li>
