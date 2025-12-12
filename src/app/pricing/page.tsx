@@ -33,13 +33,15 @@ export default function IntegrationPartners() {
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/pricing.webp"
         scale={0.7}
-        imageNudge={-30}
+        imageNudge={-10}
         title="Simple, transparent pricing that scales with your business"
         subtitle={
-          <p className={styles.subheading}>
-            Ziggy has a fixed price subscription model which is the lowest you’ll find and you will
-            spend a lot less in staff time and cost too.
-          </p>
+          <>
+            <p className={styles.subheading}>
+              Ziggy has a fixed price subscription model which is the lowest you’ll find.
+            </p>
+            <p>You will also benefit in spending a lot less in staff time and cost, too.</p>
+          </>
         }
         cta={<CTA label="Calculator" href="#calculator" />}
       />

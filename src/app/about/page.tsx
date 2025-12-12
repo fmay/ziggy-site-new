@@ -22,20 +22,18 @@ export default function About() {
         subtitle={
           <>
             <p className="text-lg font-[100]">
-              Ziggy was born from an obsession for total project cost efficiency and a recognition
-              that data automation and integration and the ETL space was in serious need of
-              technology and resourcing innovation.
+              Ziggy was born from an obsession with total project cost efficiency and a recognition
+              that the Data Automation and Integration space is in need of technology and resourcing
+              innovation.
             </p>
             <p className="text-lg">
-              Existing ETL technology providers are cumbersome, complex and expensive. Cloud
-              platforms don't give users control over security and performance or visibility over
-              cost.
+              Existing ETL technology providers are cumbersome, complex and expensive and cloud
+              automation platforms don't give users complete control over security and performance.
             </p>
             <p>
-              Inappropriate technologies makes staff resourcing for data automation projects very
-              challenging with substantial cost implications. Traditional data automation tasks
-              demand an over-reliance on suitable developer level staff who are often scarce
-              resources within a business.
+              Inappropriate technology has made staff resourcing challenging for data automation
+              projects. Data automation tasks have demanded an over-reliance on developer level
+              staff who are scarce and this has created substantial cost implications.
             </p>
           </>
         }

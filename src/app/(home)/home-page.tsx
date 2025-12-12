@@ -48,7 +48,7 @@ export default function HomePage() {
         image="/hero/home.webp"
         signoff="Ziggy it!"
         cta={<CTA label="Learn More" href="platform" />}
-        title="The Automation and Integration Platform that's different."
+        title="Ziggy. The Automation and Integration Platform that's different."
         subtitle={
           <ul>
             <li>
