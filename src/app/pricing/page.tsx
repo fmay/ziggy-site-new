@@ -32,8 +32,8 @@ export default function IntegrationPartners() {
         toColor="pale-blue"
         wavyVariant={WavyVariantEnum.Simple}
         image="/hero/pricing.webp"
-        scale={0.7}
-        imageNudge={-10}
+        scale={0.8}
+        imageNudge={-5}
         title="Simple, transparent pricing that scales with your business"
         subtitle={
           <>
