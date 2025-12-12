@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="bill's changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero/home.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/hero/home.webp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,15 +162,7 @@
       <workItem from="1765193064930" duration="13904000" />
       <workItem from="1765217450430" duration="37944000" />
       <workItem from="1765300658738" duration="49501000" />
-      <workItem from="1765434632730" duration="39814000" />
-    </task>
-    <task id="LOCAL-00174" summary="cards">
-      <option name="closed" value="true" />
-      <created>1765290115370</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1765290115371</updated>
+      <workItem from="1765434632730" duration="41442000" />
     </task>
     <task id="LOCAL-00175" summary="cards">
       <option name="closed" value="true" />
@@ -557,7 +548,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765521717135</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="bill's changes">
+      <option name="closed" value="true" />
+      <created>1765525367292</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1765525367292</updated>
+    </task>
+    <option name="localTasksCounter" value="224" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
