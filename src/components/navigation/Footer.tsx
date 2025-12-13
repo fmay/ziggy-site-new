@@ -82,7 +82,7 @@ const Footer = () => (
 
       {/*Bottom Section*/}
       <div className={styles.bottomSection}>
-        <Image src="/ziggy-logo-dark-bg.webp" alt="Logo" width={100} height={0}/>
+        <Image src="/ziggy-logo-dark-bg-strapline.webp" alt="Logo" width={260} height={0} className="mb-3"/>
         <div className={styles.copyright}>
           © {new Date().getFullYear()} Ziggy Services, All rights reserved.
         </div>
