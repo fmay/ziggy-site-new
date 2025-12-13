@@ -13,6 +13,12 @@ import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import FlowsIntro from '@/app/(product)/flows/FlowsIntro'
+import BlockOverview from '@/app/(product)/flows/BlockOverview'
+import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
+import CollectionsIntro from '@/app/(product)/flows/CollectionsIntro'
+import FlowFeatureIntro from '@/app/(product)/flows/FlowFeatureIntro'
+import AI from '@/app/(home)/AI'
 
 export default function Products() {
   const getNextColor = createColorCycler()
@@ -20,68 +26,32 @@ export default function Products() {
     {
       id: '',
       bgColor: getNextColor(),
-      children: (
-        <>
-          <SimplePair
-            title="Simple flows can do complex things"
-            subtitle=""
-            image="/home/simple-flow.webp"
-            imageCopy={
-              <div>
-                <p>The Ziggy flow below looks simple enough. In reality, it's</p>
-                <ul>
-                  <li>Getting exchanges rates from an API</li>
-                  <li>Extracting rates from within the returned data (the AI icon does this)</li>
-                  <li>Updating all exchange rates in HubSpot with the latest rates.</li>
-                </ul>
-              </div>
-            }
-          />
-        </>
-      ),
+      children: <FlowsIntro />,
     },
     {
+      id: '',
       bgColor: getNextColor(),
-      children: (
-        <>
-          <Intro
-            title="Ziggy Flows"
-            description={
-              <div>
-                <p>
-                  A Ziggy flow is a canvas based pipeline for performing operations on data. There
-                  is a large number of blocks you can use to read, write, transform, map data as it
-                  flows through the pipeline.
-                </p>
-                <CTA label="Features overview" href="/features" className="mb-0" />
-              </div>
-            }
-            // image="/placeholder.svg"
-            imageScale={0.5}
-            right
-          />
-          <FlowFeatures />
-        </>
-      ),
+      children: <BlockOverview />,
     },
     {
       id: 'hubspot',
       bgColor: getNextColor(),
       children: (
         <>
-          <BlockCollections />
+          <CollectionsIntro />
           <HubspotBlockCollection />
         </>
       ),
     },
     {
-      id: 'javascript',
+      id: '',
       bgColor: getNextColor(),
-      children: <JavascriptFeatures />,
-    },
-    {
-      bgColor: getNextColor(),
-      children: <QuickBookDemo />,
+      children: (
+        <>
+          <FlowFeatureIntro />
+          <FlowFeatures />
+        </>
+      ),
     },
   ]
 
@@ -90,8 +60,9 @@ export default function Products() {
       <Hero
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
-        wavyVariant={WavyVariantEnum.Simple}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/flows-blocks.webp"
+        imageNudge={-80}
         title="Ziggy Flows and Blocks"
         subtitle={
           <div>

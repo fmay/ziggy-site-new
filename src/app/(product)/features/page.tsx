@@ -10,13 +10,11 @@ import Hero from '@/components/ui/hero/Hero'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import CTA from '@/components/ui/cta/CTA'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
-import EdgeAssistant from '@/app/(product)/ai-features/EdgeAssistant'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
-import SimpleFlows from '@/app/(product)/features/SimpleFlows'
 import { getSwapStatus } from '@/utils/swapStatus'
-import ComplexFlows from '@/app/(product)/platform/ComplexFlows'
 import AI from '@/app/(home)/AI'
+import FeaturesIntro from '@/app/(product)/features/FeaturesIntro'
 
 const swap = getSwapStatus()
 
@@ -26,11 +24,7 @@ export default function Features() {
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
-      children: <SimpleFlows />
-    },
-    {
-      bgColor: getNextColor(),
-      children: <ComplexFlows />
+      children: <FeaturesIntro />
     },
     {
       bgColor: getNextColor(),

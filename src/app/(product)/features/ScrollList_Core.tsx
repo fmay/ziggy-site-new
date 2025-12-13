@@ -9,35 +9,6 @@ import DocsLink from '@/components/ui/docs-link/DocsLink'
 const ScrollListCore: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
     {
-      bgColor: 'bg-red-50',
-      content: (
-        <div>
-          <h2>Flow Editor</h2>
-          <p>
-            A drag-and-drop canvas for building your data pipelines. These can be very simple but
-            complex flows are no problem, too.
-          </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Flow-Editor-Layout">
-            Learn more
-          </DocsLink>
-        </div>
-      ),
-      image: '/product/features/editor.webp',
-    },
-    {
-      content: (
-        <div>
-          <h2>Visual Debugger</h2>
-          <p>
-            Ziggy has a great visual debugger. Step through the flow. Supply with test data
-          </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
-        </div>
-      ),
-      image: '/product/features/debugger.webp',
-      contentNudge: 90,
-    },
-    {
       content: (
         <div>
           <h2>Launch flows with API calls</h2>

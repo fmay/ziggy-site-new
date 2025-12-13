@@ -46,12 +46,12 @@ export const navigationConfig: NavigationConfig = {
               //   description: 'How Ziggy uses AI',
               //   icon: '/nav/flow.svg',
               // },
-              // {
-              //   label: 'Feature overview',
-              //   href: '/features',
-              //   description: "An overview of Ziggy's key features",
-              //   icon: '/nav/flow.svg',
-              // },
+              {
+                label: 'Feature overview',
+                href: '/features',
+                description: "Ziggy's key features at a high level",
+                icon: '/nav/flow.svg',
+              },
             ],
           },
 
@@ -59,9 +59,9 @@ export const navigationConfig: NavigationConfig = {
             title: "How it works",
             items: [
               {
-                label: 'Ziggy Flows, Ziggy Blocks, Features',
-                href: '/features',
-                description: "A more detailed look at the Ziggy platform",
+                label: 'Ziggy Blocks and Ziggy Flows',
+                href: '/flows',
+                description: "Ziggy Blocks and single, simple responsibilities",
                 icon: '/nav/flow.svg',
               },
               {

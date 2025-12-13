@@ -9,51 +9,17 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <div>
-          <h3>Flow Editor</h3>
+          <h3>Flow Editor & Debugger</h3>
           <p className="text-lg text-gray-600 mb-4">
-            A drag-and-drop canvas for building your data pipelines. These can be very simple but
-            complex flows are no problem, too.
-          </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Flow-Editor-Layout">
-            Learn more
-          </DocsLink>
-        </div>
-      ),
-      image: '/product/flows/editor.webp',
-    },
-    {
-      content: (
-        <div>
-          <h3>Blocks</h3>
-          <p className="text-lg text-gray-600 mb-4">
-            Ziggy Blocks are designed to be incredibly friendly and easy to use. Each block does one
-            thing and one thing only. No more highly complex dialogs. Dropdowns are dynamically
-            populated from the underlying platform.
-          </p>
-          <p>
-            Want an example? See the <a href="/flows/#hubspot">HubSpot blocks</a> to see a complete
-            collection for the HubSpot platform
-          </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Flow-Editor-Layout">
-            Learn more
-          </DocsLink>
-        </div>
-      ),
-      image: '/product/flows/block.webp',
-    },
-    {
-      content: (
-        <div>
-          <h3>Debugger</h3>
-          <p className="text-lg text-gray-600 mb-4">
-            Step through your Flows, inspecting data in the pipeline as you go. You can also debug within the <a href="/flows#javascript">Javascript block</a> with stepping and variable inspection.
+            The drag-and-drop canvas for building your data pipelines. Everything can be visually
+            debugged, including Javscript code in Javascript blocks.
           </p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Debugging">
             Learn more
           </DocsLink>
         </div>
       ),
-      image: '/product/flows/debugger.webp',
+      image: '/product/features/debugger.webp',
     },
     {
       content: (
@@ -67,16 +33,14 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/product/flows/inspect-edge-data.webp',
+      image: '/product/flows/edge-click.webp',
     },
     {
       content: (
         <div>
-          <h3>
-            Data Validation and Transformation
-          </h3>
+          <h3>Data Validation and Transformation</h3>
           <p className="text-lg text-gray-600 mb-4">
-            Ziggy offers several ways to validate and transform data in a flow
+            Ziggy offers several AI and dialog driven ways to validate and transform data in a flow
           </p>
           <ul>
             <li>AI Edge Transform</li>
@@ -90,7 +54,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/placeholder.svg',
+      image: '/product/ai-features/edge-assistant/aie-assistant.webp',
     },
     {
       content: (
@@ -104,7 +68,22 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           </DocsLink>
         </div>
       ),
-      image: '/product/flows/subflow.webp',
+      image: '/product/features/subflow.webp',
+    },
+    {
+      content: (
+        <div>
+          <h3>Development / Production</h3>
+          <p className="text-lg text-gray-600 mb-4">
+            You can switch between development and production modes to address sandbox or test
+            configurations when testing flows.
+          </p>
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+            Learn more
+          </DocsLink>
+        </div>
+      ),
+      image: '/product/features/dev-prod.webp',
     },
   ]
 
@@ -112,7 +91,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
     <div className="">
       {/* Other page content above */}
       <div className="py-16">
-        <ScrollContentImagePairs contentImagePairs={contentImagePairs}/>
+        <ScrollContentImagePairs contentImagePairs={contentImagePairs} />
       </div>
       {/* Other page content below */}
     </div>
