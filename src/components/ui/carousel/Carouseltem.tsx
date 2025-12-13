@@ -1,7 +1,10 @@
+'use client'
+
 import { FC } from 'react'
 import Image from 'next/image'
-import { FaLongArrowAltRight } from 'react-icons/fa'
+import CTA from '@/components/ui/cta/CTA'
 import styles from './CarouselItem.module.scss'
+import { LuBookText } from 'react-icons/lu'
 
 interface CarouselItemProps {
   children: React.ReactNode
@@ -11,6 +14,7 @@ interface CarouselItemProps {
   linkText?: string
   linkUrl?: string
   height?: string
+  linkStyle?: 'primary' | 'secondary'
 }
 
 const CarouselItem: FC<CarouselItemProps> = ({
@@ -21,6 +25,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
   linkText,
   linkUrl,
   height,
+  linkStyle = 'primary',
 }) => {
   return (
     <div className={styles.wrapper} style={height ? { height } : undefined}>
@@ -45,21 +50,27 @@ const CarouselItem: FC<CarouselItemProps> = ({
           className={styles.lowerContent}
           style={
             height
-              ? { display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-between' }
+              ? {
+                  display: 'flex',
+                  flexDirection: 'column',
+                  flex: 1,
+                  justifyContent: 'space-between',
+                }
               : undefined
           }>
           <div>
             <h3 className={styles.title}>{title}</h3>
             <div className={styles.content}>{children}</div>
           </div>
-          {linkText && (
-            <div className={styles.linkWrapper}>
-              <a href={linkUrl} target="__blank" className={styles.link}>
-                <div className={styles.linkText}>
-                  <span>{linkText}</span> <FaLongArrowAltRight className={styles.icon} />
-                </div>
-              </a>
-            </div>
+          {linkText && linkUrl && (
+            <CTA
+              label={linkText}
+              href={linkUrl}
+              style={linkStyle}
+              noBottomMargin
+              className="!my-0 !px-4 !py-2"
+              icon={<LuBookText />}
+            />
           )}
         </div>
       </div>

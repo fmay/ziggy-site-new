@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates for bill">
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/docs-link/DocsLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/docs-link/DocsLink.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="docs links 0.5">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carouseltem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/cta/CTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/cta/CTA.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,15 +166,7 @@
       <workItem from="1765300658738" duration="49501000" />
       <workItem from="1765434632730" duration="43213000" />
       <workItem from="1765609650370" duration="7203000" />
-      <workItem from="1765616962485" duration="5760000" />
-    </task>
-    <task id="LOCAL-00189" summary="global styling 0.12">
-      <option name="closed" value="true" />
-      <created>1765358831481</created>
-      <option name="number" value="00189" />
-      <option name="presentableId" value="LOCAL-00189" />
-      <option name="project" value="LOCAL" />
-      <updated>1765358831481</updated>
+      <workItem from="1765616962485" duration="6507000" />
     </task>
     <task id="LOCAL-00190" summary="global styling 0.13">
       <option name="closed" value="true" />
@@ -559,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765627031023</updated>
     </task>
-    <option name="localTasksCounter" value="238" />
+    <task id="LOCAL-00238" summary="docs links 0.5">
+      <option name="closed" value="true" />
+      <created>1765628684422</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1765628684422</updated>
+    </task>
+    <option name="localTasksCounter" value="239" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="global styling 0.13" />
     <MESSAGE value="global styling 0.14" />
     <MESSAGE value="global styling 0.2" />
     <MESSAGE value="pre wavy change" />
@@ -630,7 +630,8 @@
     <MESSAGE value="pricing extenalised" />
     <MESSAGE value="pricing updated" />
     <MESSAGE value="updates for bill" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates for bill" />
+    <MESSAGE value="docs links 0.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs links 0.5" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
