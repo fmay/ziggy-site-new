@@ -187,7 +187,7 @@ const ScrollContentImagePairs = ({
 
   const getMarginTop = (pair: ContentImagePair) => {
     if (pair.hasCTA) return 60
-    if (pair.contentNudge) return 140+ pair.contentNudge
+    if (pair.contentNudge !== undefined) return 140 + pair.contentNudge
     return 140
   }
 

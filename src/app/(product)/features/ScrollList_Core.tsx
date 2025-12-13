@@ -59,7 +59,7 @@ const ScrollListCore: FC = () => {
         </div>
       ),
       image: '/product/features/dev-prod.webp',
-      contentNudge: 90,
+      contentNudge: 0,
     },
   ]
   return (
