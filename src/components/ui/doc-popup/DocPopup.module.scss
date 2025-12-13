@@ -1,0 +1,35 @@
+.overlay {
+  @apply fixed inset-0 z-50;
+  @apply bg-black bg-opacity-50;
+  @apply flex items-center justify-center;
+  @apply p-4;
+}
+
+.closeButton {
+  @apply absolute top-8 right-0 lg:right-12 z-[60];
+  @apply w-10 h-10;
+  @apply flex items-center justify-center;
+  @apply bg-white rounded-full shadow-md;
+  @apply text-gray-600 hover:text-gray-900;
+  @apply transition-colors duration-200;
+  @apply cursor-pointer;
+
+  svg {
+    @apply w-6 h-6;
+  }
+
+  &:hover {
+    @apply bg-gray-100;
+  }
+}
+
+.modal {
+  @apply bg-white rounded-lg shadow-2xl;
+  @apply w-[98vw] lg:w-[90vw] h-[90vh];
+}
+
+.iframe {
+  @apply w-full h-full;
+  @apply rounded-lg;
+  @apply border-0;
+}

@@ -3,6 +3,7 @@
 import { FC, ReactNode, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { LuBookText } from 'react-icons/lu'
+import DocPopup from '../doc-popup/DocPopup'
 import styles from './docslink.module.scss'
 
 interface DocsLinkProps {
@@ -14,6 +15,7 @@ interface DocsLinkProps {
 
 const DocsLink: FC<DocsLinkProps> = ({ href, children, style, className = '' }) => {
   const [styleClassName, setStyleClassName] = useState(styles.primaryDocsLink)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   useEffect(() => {
     switch (style) {
@@ -32,15 +34,20 @@ const DocsLink: FC<DocsLinkProps> = ({ href, children, style, className = '' }) 
   return (
     <>
       {href?.includes('http') ? (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${styleClassName} ${styles.link} ${className} !px-4 !py-2 `}
-        >
-          <LuBookText />
-          <span>{children}</span>
-        </a>
+        <>
+          <button
+            onClick={() => setIsPopupOpen(true)}
+            className={`${styleClassName} ${styles.link} ${className} !px-4 !py-2 `}
+          >
+            <LuBookText />
+            <span>{children}</span>
+          </button>
+          <DocPopup
+            url={href}
+            isOpen={isPopupOpen}
+            onClose={() => setIsPopupOpen(false)}
+          />
+        </>
       ) : (
         <Link
           href={href || '#'}
