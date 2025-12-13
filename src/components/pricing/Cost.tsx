@@ -34,10 +34,12 @@ export default function Cost({
     <div className={styles.estimateContainer}>
       <div className={styles.resultContainer}>
         {/*SUBSCRIPTION*/}
-        <div className={styles.resultHeading}>Subscription</div>
-        <div className={styles.resultResult}>
-          <span>{formatPrice(subscriptionPrice)}</span>
-          <span className="font-light text-base"> /year</span>
+        <div className={styles.resultRow}>
+          <div className={styles.resultHeading}>Subscription</div>
+          <div className={styles.resultResult}>
+            <span>{formatPrice(subscriptionPrice)}</span>
+            <span className="font-light text-base"> /year</span>
+          </div>
         </div>
         <div className={styles.descriptionWrapper}>
           <div className={styles.resultDescription}>
@@ -48,10 +50,12 @@ export default function Cost({
         </div>
 
         {/*SUPPORT*/}
-        <div className={styles.resultHeading}>Support</div>
-        <div className={styles.resultResult}>
-          <span>{formatPrice(supportPrice)}</span>
-          <span className="font-light text-base"> /year</span>
+        <div className={styles.resultRow}>
+          <div className={styles.resultHeading}>Support</div>
+          <div className={styles.resultResult}>
+            <span>{formatPrice(supportPrice)}</span>
+            <span className="font-light text-base"> /year</span>
+          </div>
         </div>
         <div className={styles.descriptionWrapper}>
           <div className={styles.resultDescription}>
@@ -68,10 +72,12 @@ export default function Cost({
         </div>
 
         {/*SERVICES*/}
-        <div className={styles.resultHeading}>Services</div>
-        <div className={styles.resultResult}>
-          <span>{formatPrice(servicesPrice)}</span>
-          <span className="font-light text-base"></span>
+        <div className={styles.resultRow}>
+          <div className={styles.resultHeading}>Services</div>
+          <div className={styles.resultResult}>
+            <span>{formatPrice(servicesPrice)}</span>
+            <span className="font-light text-base"></span>
+          </div>
         </div>
         <div className={styles.descriptionWrapper}>
           <div className={styles.resultDescription}>

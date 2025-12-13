@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="flows 0.8">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pricing extenalised">
+      <change beforePath="$PROJECT_DIR$/src/components/pricing/Cost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/Cost.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pricing/Cost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/Cost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pricing/PricingCalculator.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pricing/PricingCalculator.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,15 +165,7 @@
       <workItem from="1765300658738" duration="49501000" />
       <workItem from="1765434632730" duration="43213000" />
       <workItem from="1765609650370" duration="7203000" />
-      <workItem from="1765616962485" duration="302000" />
-    </task>
-    <task id="LOCAL-00178" summary="flows simple flow">
-      <option name="closed" value="true" />
-      <created>1765292931621</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1765292931621</updated>
+      <workItem from="1765616962485" duration="638000" />
     </task>
     <task id="LOCAL-00179" summary="features 0.3">
       <option name="closed" value="true" />
@@ -560,7 +551,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765616740434</updated>
     </task>
-    <option name="localTasksCounter" value="227" />
+    <task id="LOCAL-00227" summary="pricing extenalised">
+      <option name="closed" value="true" />
+      <created>1765617353013</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1765617353013</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="global styling 0.1" />
     <MESSAGE value="global styling 0.11 (about to do scroll pairs titles)" />
     <MESSAGE value="global styling 0.12" />
     <MESSAGE value="global styling 0.13" />
@@ -631,7 +629,8 @@
     <MESSAGE value="bill's changes" />
     <MESSAGE value="flows 0.7" />
     <MESSAGE value="flows 0.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="flows 0.8" />
+    <MESSAGE value="pricing extenalised" />
+    <option name="LAST_COMMIT_MESSAGE" value="pricing extenalised" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
