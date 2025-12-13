@@ -1,0 +1,54 @@
+.estimateContainer {
+  @apply bg-gradient-to-br from-stripe-purple to-purple-600 rounded-xl p-8 mt-2 font-normal;
+
+  .resultContainer {
+    @apply text-white;
+  }
+
+  .resultHeading {
+    @apply text-2xl md:text-2xl font-normal mb-0;
+  }
+
+  .resultResult {
+    @apply text-white text-xl font-normal mb-6;
+
+    span:first-child {
+      @apply text-4xl font-normal;
+    }
+  }
+
+  .descriptionWrapper {
+    @apply space-y-6 font-light;
+  }
+
+  .resultDescription {
+    @apply text-base text-white opacity-90 leading-relaxed;
+  }
+
+  .totalSection {
+    @apply mt-8 pt-6 border-t-2 border-white border-opacity-30;
+
+    .resultHeading {
+      @apply text-3xl md:text-3xl font-semibold mb-4;
+    }
+
+    .resultResult {
+      @apply mb-6;
+
+      span:first-child {
+        @apply text-5xl font-normal;
+      }
+    }
+  }
+}
+
+.button {
+  @apply inline-block;
+
+  a {
+    @apply block px-8 py-4 bg-white text-stripe-purple rounded-full;
+    @apply font-semibold text-lg transition-all duration-200;
+    @apply hover:bg-opacity-90 hover:shadow-lg hover:scale-105;
+    @apply no-underline;
+  }
+}

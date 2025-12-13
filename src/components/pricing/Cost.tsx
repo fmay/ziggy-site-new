@@ -1,4 +1,4 @@
-import styles from './PricingCalculator.module.scss'
+import styles from './Cost.module.scss'
 
 interface CostProps {
   subscriptionPrice: number
@@ -34,7 +34,7 @@ export default function Cost({
     <div className={styles.estimateContainer}>
       <div className={styles.resultContainer}>
         {/*SUBSCRIPTION*/}
-        <div className={styles.resultHeading}>Subscription Price</div>
+        <div className={styles.resultHeading}>Subscription</div>
         <div className={styles.resultResult}>
           <span>{formatPrice(subscriptionPrice)}</span>
           <span className="font-light text-base"> /year</span>
@@ -68,7 +68,7 @@ export default function Cost({
         </div>
 
         {/*SERVICES*/}
-        <div className={styles.resultHeading}>Professional Services</div>
+        <div className={styles.resultHeading}>Services</div>
         <div className={styles.resultResult}>
           <span>{formatPrice(servicesPrice)}</span>
           <span className="font-light text-base"></span>
