@@ -12,10 +12,18 @@ interface DropdownNavItemProps {
   subItem: DropdownSubItem
   variant?: 'desktop' | 'mobile'
   onMobileClick?: () => void
+  onClick?: () => void
 }
 
-const DropdownNavItem = ({ subItem, variant = 'desktop', onMobileClick }: DropdownNavItemProps) => {
+const DropdownNavItem = ({ subItem, variant = 'desktop', onMobileClick, onClick }: DropdownNavItemProps) => {
   const isMobile = variant === 'mobile'
+  const handleClick = () => {
+    if (isMobile && onMobileClick) {
+      onMobileClick()
+    } else if (onClick) {
+      onClick()
+    }
+  }
 
   return (
     <div className={`dropdown-item ${isMobile ? 'mobile-dropdown-item' : ''}`}>
@@ -24,7 +32,7 @@ const DropdownNavItem = ({ subItem, variant = 'desktop', onMobileClick }: Dropdo
         key={subItem.label}
         href={subItem.href}
         className=""
-        onClick={onMobileClick}
+        onClick={handleClick}
         {...(subItem.href.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
         <div className={`label ${isMobile ? 'text-white' : ''}`}>{subItem.label}</div>
         {subItem.description && (

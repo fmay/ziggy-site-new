@@ -10,6 +10,7 @@ interface DesktopDropdownContainerProps {
   dropdownPosition: number
   closeTimeoutRef: React.MutableRefObject<NodeJS.Timeout | null>
   onMouseLeave: () => void
+  onItemClick: () => void
 }
 
 const DesktopDropdownContainer = ({
@@ -19,6 +20,7 @@ const DesktopDropdownContainer = ({
   dropdownPosition,
   closeTimeoutRef,
   onMouseLeave,
+  onItemClick,
 }: DesktopDropdownContainerProps) => {
   if (!activeDropdown || !dropdownContent?.dropdown) {
     return null
@@ -60,7 +62,7 @@ const DesktopDropdownContainer = ({
                 )}
                 <div className="px-2">
                   {section.items.map(subItem => (
-                    <DropdownNavItem key={subItem.label} subItem={subItem} />
+                    <DropdownNavItem key={subItem.label} subItem={subItem} onClick={onItemClick} />
                   ))}
                 </div>
               </div>

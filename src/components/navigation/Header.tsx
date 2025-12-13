@@ -164,6 +164,7 @@ const Header = () => {
             dropdownPosition={dropdownPosition}
             closeTimeoutRef={closeTimeoutRef}
             onMouseLeave={handleMouseLeave}
+            onItemClick={handleClearDropdown}
           />
 
           {/* Mobile Navigation */}

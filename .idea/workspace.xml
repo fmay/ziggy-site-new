@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates for bill">
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/CustomizationStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/CustomizationStack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates for bill" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,23 +162,7 @@
       <workItem from="1765300658738" duration="49501000" />
       <workItem from="1765434632730" duration="43213000" />
       <workItem from="1765609650370" duration="7203000" />
-      <workItem from="1765616962485" duration="4065000" />
-    </task>
-    <task id="LOCAL-00184" summary="hero scss">
-      <option name="closed" value="true" />
-      <created>1765350778218</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1765350778218</updated>
-    </task>
-    <task id="LOCAL-00185" summary="mobile nav">
-      <option name="closed" value="true" />
-      <created>1765351414791</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1765351414791</updated>
+      <workItem from="1765616962485" duration="4391000" />
     </task>
     <task id="LOCAL-00186" summary="home tweaks">
       <option name="closed" value="true" />
@@ -560,7 +540,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765626023866</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="updates for bill">
+      <option name="closed" value="true" />
+      <created>1765626249401</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1765626249401</updated>
+    </task>
+    <task id="LOCAL-00234" summary="updates for bill">
+      <option name="closed" value="true" />
+      <created>1765626555873</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1765626555873</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
