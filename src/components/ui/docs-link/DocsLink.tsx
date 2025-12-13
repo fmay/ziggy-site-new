@@ -8,7 +8,7 @@ import styles from './docslink.module.scss'
 
 interface DocsLinkProps {
   href: string
-  children: ReactNode
+  children?: ReactNode
   style?: 'primary' | 'secondary'
   className?: string
 }
@@ -40,7 +40,7 @@ const DocsLink: FC<DocsLinkProps> = ({ href, children, style, className = '' }) 
             className={`${styleClassName} ${styles.link} ${className} !px-4 !py-2 `}
           >
             <LuBookText />
-            <span>{children}</span>
+            <span>{children || 'Learn more'}</span>
           </button>
           <DocPopup
             url={href}

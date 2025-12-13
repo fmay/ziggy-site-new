@@ -1,5 +1,5 @@
 .stackCard {
-  @apply relative overflow-hidden rounded-lg shadow-md bg-gray-100 transition-all duration-300;
+  @apply relative overflow-hidden rounded-lg shadow-md bg-gray-100 transition-all duration-300 pb-4;
 
   &:hover {
     @apply shadow-2xl;

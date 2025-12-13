@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="docs links 0.8">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="docs links and footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/Services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/NoCoding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/NoCoding.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/doc-popup/DocPopup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/doc-popup/DocPopup.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/docs-link/DocsLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/docs-link/DocsLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/image-stack/StackCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,15 +169,7 @@
       <workItem from="1765300658738" duration="49501000" />
       <workItem from="1765434632730" duration="43213000" />
       <workItem from="1765609650370" duration="7203000" />
-      <workItem from="1765616962485" duration="7826000" />
-    </task>
-    <task id="LOCAL-00192" summary="global styling 0.2">
-      <option name="closed" value="true" />
-      <created>1765366303011</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1765366303011</updated>
+      <workItem from="1765616962485" duration="8498000" />
     </task>
     <task id="LOCAL-00193" summary="pre wavy change">
       <option name="closed" value="true" />
@@ -560,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765630218657</updated>
     </task>
-    <option name="localTasksCounter" value="241" />
+    <task id="LOCAL-00241" summary="docs links and footer">
+      <option name="closed" value="true" />
+      <created>1765630801111</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1765630801111</updated>
+    </task>
+    <option name="localTasksCounter" value="242" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +609,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="pre wavy change" />
     <MESSAGE value="tweaking" />
     <MESSAGE value="conditional carousel options" />
     <MESSAGE value="mid contact demo" />
@@ -631,7 +633,8 @@
     <MESSAGE value="docs links 0.5" />
     <MESSAGE value="docs links 0.6" />
     <MESSAGE value="docs links 0.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs links 0.8" />
+    <MESSAGE value="docs links and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs links and footer" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

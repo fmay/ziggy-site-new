@@ -6,7 +6,7 @@
 }
 
 .closeButton {
-  @apply absolute top-8 right-0 lg:right-12 z-[60];
+  @apply absolute top-8 lg:top-[calc(64px)] right-0 lg:right-12 z-[60];
   @apply w-10 h-10;
   @apply flex items-center justify-center;
   @apply bg-white rounded-full shadow-md;
@@ -25,7 +25,7 @@
 
 .modal {
   @apply bg-white rounded-lg shadow-2xl;
-  @apply w-[98vw] lg:w-[90vw] h-[90vh];
+  @apply w-[98vw] lg:w-[90vw] h-[calc(90vh-64px)];
 }
 
 .iframe {

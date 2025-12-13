@@ -4,6 +4,7 @@ import React, { ReactNode } from 'react'
 import type { FC } from 'react'
 import Image from 'next/image'
 import styles from './StackCard.module.scss'
+import DocsLink from '@/components/ui/docs-link/DocsLink'
 
 interface StackCardProps {
   /** Primary gradient color (e.g., '#FFA500') */
@@ -97,16 +98,17 @@ const StackCard: FC<StackCardProps> = ({
           <div
             className={styles.ctaWrapper}
             style={!animate ? { height: '40px', overflow: 'visible' } : undefined}>
-            <a
-              href={ctaHref}
-              className={styles.ctaLink}
-              style={!animate ? { opacity: 1 } : undefined}
-              {...(ctaNewTab && {
-                target: '_blank',
-                rel: 'noopener noreferrer',
-              })}>
-              {ctaText} {'>'}
-            </a>
+            {/*<a*/}
+            {/*  href={ctaHref}*/}
+            {/*  className={styles.ctaLink}*/}
+            {/*  style={!animate ? { opacity: 1 } : undefined}*/}
+            {/*  {...(ctaNewTab && {*/}
+            {/*    target: '_blank',*/}
+            {/*    rel: 'noopener noreferrer',*/}
+            {/*  })}>*/}
+            {/*  {ctaText} {'>'}*/}
+            {/*</a>*/}
+            <DocsLink href={ctaHref} className="!mb-3" />
           </div>
         )}
       </div>
