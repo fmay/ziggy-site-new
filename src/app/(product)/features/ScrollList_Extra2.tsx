@@ -4,6 +4,7 @@ import ScrollContentImagePairs, {
 } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import CTA from '@/components/ui/cta/CTA'
 import Link from 'next/link'
+import DocsLink from '@/components/ui/docs-link/DocsLink'
 
 const ScrollListExtra2: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
@@ -16,7 +17,8 @@ const ScrollListExtra2: FC = () => {
               Configure email and SMS alerts, which come as digests on a schedule you choose.
             </p>
           </div>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Alerts">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/alerts.webp',
@@ -30,7 +32,7 @@ const ScrollListExtra2: FC = () => {
             Store and manage your secrets, fully encrypted, in Ziggy and reference from your flows.
             You can optionally configure a development/production pair.
           </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Secrets">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/secrets.webp',
@@ -43,7 +45,7 @@ const ScrollListExtra2: FC = () => {
             Store and manage your connection parameters and reference from your flows. You can
             optionally configure a development/production pair.
           </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Connections">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/connections.webp',

@@ -19,9 +19,9 @@ interface StackCardProps {
   /** Description text */
   description: string
   /** CTA link text */
-  ctaText: string
+  ctaText?: string
   /** CTA link href */
-  ctaHref: string
+  ctaHref?: string
   /** Open CTA link in new tab (reuses existing tab if domain matches) */
   ctaNewTab?: boolean
   /** Path to image in public folder (e.g., '/images/dashboard.png') */
@@ -93,20 +93,22 @@ const StackCard: FC<StackCardProps> = ({
         <p className={styles.description}>{description}</p>
 
         {/* CTA Link - Fixed height, hidden by default */}
-        <div
-          className={styles.ctaWrapper}
-          style={!animate ? { height: '40px', overflow: 'visible' } : undefined}>
-          <a
-            href={ctaHref}
-            className={styles.ctaLink}
-            style={!animate ? { opacity: 1 } : undefined}
-            {...(ctaNewTab && {
-              target: '_blank',
-              rel: 'noopener noreferrer',
-            })}>
-            {ctaText} {'>'}
-          </a>
-        </div>
+        {ctaHref && ctaText && (
+          <div
+            className={styles.ctaWrapper}
+            style={!animate ? { height: '40px', overflow: 'visible' } : undefined}>
+            <a
+              href={ctaHref}
+              className={styles.ctaLink}
+              style={!animate ? { opacity: 1 } : undefined}
+              {...(ctaNewTab && {
+                target: '_blank',
+                rel: 'noopener noreferrer',
+              })}>
+              {ctaText} {'>'}
+            </a>
+          </div>
+        )}
       </div>
     </div>
   )

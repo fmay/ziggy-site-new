@@ -4,6 +4,7 @@ import ScrollContentImagePairs, {
 } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
 import CTA from '@/components/ui/cta/CTA'
 import Link from 'next/link'
+import DocsLink from '@/components/ui/docs-link/DocsLink'
 
 const ScrollListExtra1: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
@@ -17,7 +18,7 @@ const ScrollListExtra1: FC = () => {
               limits.
             </p>
           </div>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Queuing">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/rate-limiting.webp',
@@ -32,7 +33,7 @@ const ScrollListExtra1: FC = () => {
             throughput significantly and ensure you don't overload a platform or database.
           </p>
           <p>This is all baked into Ziggy so flows are both fast and safe.</p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Batching">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/batching.webp',
@@ -48,7 +49,7 @@ const ScrollListExtra1: FC = () => {
           <p>
             You can also use external stores (DynamoDB, ElastiCache, Cosmos) and regular databases.
           </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/utility/Data-Store">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/data-store.webp',
@@ -62,7 +63,7 @@ const ScrollListExtra1: FC = () => {
             Ziggy has an integrated scheduler that launches flows. For example, schedule daily reads
             from SFTP servers or update a data warehouse every hour.
           </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Scheduled-Flows">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/schedule.webp',

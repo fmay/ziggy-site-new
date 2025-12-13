@@ -16,7 +16,9 @@ const ScrollListCore: FC = () => {
             Each flow can be run from the Ziggy UI or with an API call. Pass in data that should be
             processed by the flow.
           </p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Launching-flows">
+            Learn more
+          </DocsLink>
         </div>
       ),
       image: '/product/features/postman.webp',
@@ -31,7 +33,9 @@ const ScrollListCore: FC = () => {
             log. These can then be viewed in a browser.
           </p>
           <p>You can even open up failed flows to see where and why they failed.</p>
-          <CTA className="my-2" label="How Ziggy works" href="flows" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Monitoring">
+            Learn more
+          </DocsLink>
         </div>
       ),
       image: '/product/features/execution-history.webp',
@@ -49,7 +53,9 @@ const ScrollListCore: FC = () => {
             Alternatively, use a dev or staging server (these are free) and transfer flows between
             them.
           </p>
-          <CTA className="" label="Learn more" href="integration-partners" />
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+            Learn more
+          </DocsLink>
         </div>
       ),
       image: '/product/features/dev-prod.webp',

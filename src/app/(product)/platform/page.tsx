@@ -66,7 +66,7 @@ export default function Platform() {
             <p>Automation and integration projects are completed using Ziggy Blocks and Flows.</p>
           </>
         }
-        cta={<CTA label="Learn More" href="features" />}
+        cta={<CTA label="Feature Overview" href="features" />}
         scale={0.8}
       />
 

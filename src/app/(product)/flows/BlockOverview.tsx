@@ -24,7 +24,6 @@ const AI: FC<AIProps> = ({}) => {
         image="/product/features/block.webp"
         scale={0.7}
         swap={swap}
-        cta={<CTA label="AI Features" href="ai-features" noBottomMargin />}
       />
     </div>
   )

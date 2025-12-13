@@ -27,8 +27,6 @@ const CustomizationStack: FC<JavascriptFeaturesProps> = ({}) => {
     <StackCard
       title="Embed in flows"
       description="This flow read from your platform (green block) then writes to Snowflake"
-      ctaText="Learn more in the docs"
-      ctaHref="/flows"
       ctaNewTab
       graphicBgColor=""
       graphic="/images/customise/ss-custom-flow.webp"
@@ -36,8 +34,7 @@ const CustomizationStack: FC<JavascriptFeaturesProps> = ({}) => {
     <StackCard
       title="Access to your platform"
       description="Build a collection of blocks that provide access to your platform for your customers. Above is a collection of HubSpot blocks, for example."
-      ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
+
       ctaNewTab
       graphic="/images/customise/ss-collections.webp"
     />,
