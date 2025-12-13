@@ -23,9 +23,9 @@ export default function IntegrationPartners() {
     //   children: <PlatformIntro />,
     // },
     {
+      id: "nocoding",
       bgColor: getNextColor(),
       children: <NoCoding />,
-      id: "nocoding"
     },
     {
       bgColor: getNextColor(),
@@ -97,6 +97,7 @@ export default function IntegrationPartners() {
       {sections.map((section, index) => (
         <PageSection
           key={index}
+          id={section.id}
           bgColor={section.bgColor}
           waveToColor={sections[index + 1]?.bgColor}
           waveInvert={section.waveInvert}>

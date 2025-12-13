@@ -44,7 +44,7 @@ const CustomizationStack: FC<JavascriptFeaturesProps> = ({}) => {
     <div>
       <div className="section-intro">
         <h2>
-          Build custom Ziggy blocks
+          How custom Ziggy blocks are built
         </h2>
         <p>
           Create custom Ziggy blocks with TypeScript, our CLI and SDK.
