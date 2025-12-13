@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import { getSwapStatus } from '@/utils/swapStatus'
+import CTA from '@/components/ui/cta/CTA'
 
 interface SimpleFlowsProps {}
 
@@ -21,6 +22,7 @@ const SimpleFlows: FC<SimpleFlowsProps> = ({}) => {
           </p>
         </div>
       }
+      cta={<CTA label="Flows and Blocks" href="flows" noBottomMargin />}
     />
   )
 }

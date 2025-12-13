@@ -41,6 +41,8 @@ a {
   color: var(--hover-default-color);
   transition: color 0.2s ease;
   font-weight: 100;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 
   &:hover {
     color: var(--mid-gray);

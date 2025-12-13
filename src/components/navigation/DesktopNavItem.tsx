@@ -80,7 +80,7 @@ const DesktopNavItem = ({
     <div key={item.label} className={index > 0 ? 'ml-8' : ''} onMouseEnter={onClearDropdown}>
       <Link
         href={item.href!}
-        className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200"
+        className="text-stripe-navy hover:text-stripe-purple transition-colors duration-200 no-underline"
         {...(item.href!.includes('http') && { target: '_blank', rel: 'noopener noreferrer' })}>
         {item.label}
       </Link>

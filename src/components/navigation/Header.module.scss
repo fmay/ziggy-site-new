@@ -3,7 +3,7 @@
 .header {
   @apply fixed top-0 left-0 right-0 bg-header-footer text-white z-50;
   button, a {
-    @apply text-white font-light hover:text-white;
+    @apply text-white font-light hover:text-white no-underline;
   }
 }
 
@@ -57,7 +57,7 @@
 }
 
 .ctaButton {
-  @apply px-5 py-2 rounded-lg bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200;
+  @apply px-5 py-2 rounded-lg bg-stripe-purple text-white hover:opacity-90 transition-opacity duration-200 no-underline;
 }
 
 .mobileMenuButton {
@@ -77,7 +77,7 @@
 }
 
 .mobileNavContent {
-  @apply flex flex-col space-y-4;
+  @apply flex flex-col space-y-4 no-underline;
 }
 
 .mobileCtaButton {

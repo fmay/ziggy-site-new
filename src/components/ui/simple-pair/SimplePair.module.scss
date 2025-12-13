@@ -47,6 +47,9 @@
 
   a {
     @apply relative z-10;
+    a {
+      text-decoration: none;
+    }
   }
 }
 

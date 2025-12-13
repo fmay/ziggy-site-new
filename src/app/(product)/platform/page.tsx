@@ -27,11 +27,11 @@ export default function Platform() {
     },
     {
       bgColor: getNextColor(),
-      children: <AI />,
+      children: <ComplexFlows />,
     },
     {
       bgColor: getNextColor(),
-      children: <ComplexFlows />,
+      children: <AI />,
     },
     {
       bgColor: getNextColor(),
@@ -61,9 +61,7 @@ export default function Platform() {
             <p>
               In house teams use Ziggy for all their data automation and integration requirements.
             </p>
-            <p>
-              AI features reduce your reliance on Developer resources.
-            </p>
+            <p>AI features reduce your reliance on Developer resources.</p>
             <p>Any data source can be accessed, regardless of where it sits.</p>
             <p>Automation and integration projects are completed using Ziggy Blocks and Flows.</p>
           </>
