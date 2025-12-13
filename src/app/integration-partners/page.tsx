@@ -25,6 +25,7 @@ export default function IntegrationPartners() {
     {
       bgColor: getNextColor(),
       children: <NoCoding />,
+      id: "nocoding"
     },
     {
       bgColor: getNextColor(),

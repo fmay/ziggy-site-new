@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates for bill">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/extend/CustomizationStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/extend/CustomizationStack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/NoCoding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/NoCoding.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,23 +165,7 @@
       <workItem from="1765300658738" duration="49501000" />
       <workItem from="1765434632730" duration="43213000" />
       <workItem from="1765609650370" duration="7203000" />
-      <workItem from="1765616962485" duration="3391000" />
-    </task>
-    <task id="LOCAL-00181" summary="color cycling">
-      <option name="closed" value="true" />
-      <created>1765303670558</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1765303670558</updated>
-    </task>
-    <task id="LOCAL-00182" summary="cluster updated">
-      <option name="closed" value="true" />
-      <created>1765306598814</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1765306598815</updated>
+      <workItem from="1765616962485" duration="3701000" />
     </task>
     <task id="LOCAL-00183" summary="hubspot collections">
       <option name="closed" value="true" />
@@ -561,7 +543,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765618951587</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="updates for bill">
+      <option name="closed" value="true" />
+      <created>1765625596557</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1765625596557</updated>
+    </task>
+    <task id="LOCAL-00231" summary="updates for bill">
+      <option name="closed" value="true" />
+      <created>1765625674936</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1765625674936</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
