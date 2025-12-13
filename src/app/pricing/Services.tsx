@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Intro from '@/components/ui/intro/Intro'
+import CTA from '@/components/ui/cta/CTA'
 
 interface ServicesProps {}
 
@@ -18,8 +19,10 @@ const Services: FC<ServicesProps> = ({}) => {
               We think training offers a real benefit and be reassured that if you want help
               building Ziggy Blocks , Ziggy Flows or anything else, we’re here to help.
             </p>{' '}
+            <CTA label="Contact Us" href="contact" />
           </>
         }
+        hasCTA
       />
     </div>
   )

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from './Footer.module.scss'
+import Image from 'next/image'
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -22,23 +23,18 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* Developers */}
+        {/* Integration Partners */}
         <div className={styles.section}>
           <h4 className={styles.sectionTitle}>Developers</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
-              <Link href="/developers" className={styles.link}>
-                Documentation
+              <Link href="/integration-partners" className={styles.link}>
+                Become a Partner
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/developers" className={styles.link}>
-                API Reference
-              </Link>
-            </li>
-            <li className={styles.linkItem}>
-              <Link href="/developers" className={styles.link}>
-                Support
+              <Link href="/integration-partners#nocoding" className={styles.link}>
+                Customization
               </Link>
             </li>
           </ul>
@@ -50,7 +46,7 @@ const Footer = () => (
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="/about" className={styles.link}>
-                About
+                About us
               </Link>
             </li>
             <li className={styles.linkItem}>
@@ -59,8 +55,8 @@ const Footer = () => (
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/careers" className={styles.link}>
-                Careers
+              <Link href="/demo" className={styles.link}>
+                Book a demo
               </Link>
             </li>
           </ul>
@@ -71,25 +67,22 @@ const Footer = () => (
           <h4 className={styles.sectionTitle}>Resources</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
-              <Link href="/resources" className={styles.link}>
-                Blog
+              <Link href="https://docs.ziggyservices.com" target="__blank" className={styles.link}>
+                Documentation
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/resources" className={styles.link}>
+              <Link href="" className={styles.link}>
                 Guides
-              </Link>
-            </li>
-            <li className={styles.linkItem}>
-              <Link href="/resources" className={styles.link}>
-                Newsletter
               </Link>
             </li>
           </ul>
         </div>
       </div>
 
+      {/*Bottom Section*/}
       <div className={styles.bottomSection}>
+        <Image src="/ziggy-logo-dark-bg.webp" alt="Logo" width={100} height={0}/>
         <div className={styles.copyright}>
           © {new Date().getFullYear()} Ziggy Services, All rights reserved.
         </div>
