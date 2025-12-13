@@ -5,23 +5,18 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.container}>
       <div className={styles.gridContainer}>
-        {/* Products */}
+        {/* Platform */}
         <div className={styles.section}>
-          <h4 className={styles.sectionTitle}>Products</h4>
+          <h4 className={styles.sectionTitle}>Platform</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
-              <Link href="/products" className={styles.link}>
-                Payments
+              <Link href="/platform" className={styles.link}>
+                Platform
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/products" className={styles.link}>
-                Billing
-              </Link>
-            </li>
-            <li className={styles.linkItem}>
-              <Link href="/products" className={styles.link}>
-                Connect
+              <Link href="/pricing" className={styles.link}>
+                Pricing
               </Link>
             </li>
           </ul>

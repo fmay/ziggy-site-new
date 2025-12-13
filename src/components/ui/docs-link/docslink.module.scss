@@ -1,0 +1,33 @@
+
+.link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  @apply w-fit;
+}
+
+.primaryDocsLink {
+  @apply px-8 py-4 rounded-lg whitespace-nowrap;
+  @apply font-normal hover:font-normal transition-all duration-200
+  bg-stripe-purple text-white;
+  display: inline-flex;
+  width: fit-content;
+  cursor: pointer;
+  &:hover {
+    color: white !important;
+  }
+}
+
+.secondaryDocsLink {
+  @apply px-8 py-4 rounded-lg whitespace-nowrap;
+  @apply border-stripe-navy text-stripe-navy font-semibold hover:bg-stripe-navy hover:text-white transition-all duration-200;
+  display: inline-flex;
+  width: fit-content;
+  cursor: pointer;
+  &:hover {
+    color: white !important;
+  }
+}
