@@ -8,19 +8,20 @@ const NoCoding: FC<NoCodingProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="No code. No API."
+        title="Your customers can Ziggy it, not code it."
         subtitle=""
         imageCopy={
           <>
             {' '}
             <p>
-              Delight your customers by letting them get data out of and into your platform without
-              writing code.
+              Delight your customers by letting them use Ziggy to get data out of and into your platform without
+              having to code.
             </p>
+            <p>See how Ziggy blocks are built below.</p>
           </>
         }
         image="/integration-partners/no-code.webp"
-        cta={<CTA label="Learn More" href="extend" noBottomMargin />}
+        cta={<CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/plugin/overview" noBottomMargin />}
         scale={1}
         swap
       />

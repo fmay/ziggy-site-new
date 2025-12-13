@@ -11,6 +11,9 @@ import { DefaultColorCycle } from '@/constants/default-colors'
 import PlatformIntro from '@/app/integration-partners/PlatformIntro'
 import NoCoding from '@/app/integration-partners/NoCoding'
 import HowItsDone from '@/app/integration-partners/HowItsDone'
+import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
+import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
+import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 
 export default function IntegrationPartners() {
   const getNextColor = createColorCycler()
@@ -19,10 +22,24 @@ export default function IntegrationPartners() {
     //   bgColor: getNextColor(),
     //   children: <PlatformIntro />,
     // },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <NoCoding />,
-    // },
+    {
+      bgColor: getNextColor(),
+      children: <NoCoding />,
+    },
+    {
+      bgColor: getNextColor(),
+      children: <CustomizationStack />,
+    },
+    {
+      id: 'hubspot',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <CollectionsExtendIntro />
+          <HubspotBlockCollection />
+        </>
+      ),
+    },
     // {
     //   bgColor: getNextColor(),
     //   children: <HowItsDone />,

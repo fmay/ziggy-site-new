@@ -44,14 +44,12 @@ const CustomizationStack: FC<JavascriptFeaturesProps> = ({}) => {
     <div>
       <div className="section-intro">
         <h2>
-          Integrate Ziggy with <strong>your</strong> platform for{' '}
-          <strong>your</strong> customers.
+          Build custom Ziggy blocks
         </h2>
         <p>
-          Customize Ziggy by creating plugin blocks. You control both the UI and the run-time with
-          simple TypeScript code.
+          Create custom Ziggy blocks with TypeScript, our CLI and SDK.
         </p>
-        <p>Ziggy source code is also available for those who require the ultimate control.</p>
+        <p>Ziggy's full source code is also available for those who require the ultimate control.</p>
       </div>
       <ImageStack items={items} />
     </div>
