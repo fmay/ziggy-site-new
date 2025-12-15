@@ -28,7 +28,7 @@ const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
         subtitle=""
         imageCopy={<ImageContent />}
         image="/home/about-automations.webp"
-        cta={<CTA label="Learn More" href="platform" noBottomMargin />}
+        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
         scale={0.7}
         swap={swap}
       />
