@@ -3,10 +3,12 @@ import Carousel from '@/components/ui/carousel/Carousel'
 import CarouselItem from '@/components/ui/carousel/Carouseltem'
 import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
+import { getSwapStatus } from '@/utils/swapStatus'
 
 interface ExampleAutomationsProps {
   height?: string
 }
+const swap = getSwapStatus()
 
 const ExampleAutomations: FC<ExampleAutomationsProps> = ({ height }) => {
   const ItemHeight = '630px'

@@ -1,8 +1,12 @@
+'use client'
+
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
+import { getSwapStatus } from '@/utils/swapStatus'
 
 interface WhosItForProps {}
+const swap = getSwapStatus()
 
 const WhosItFor: FC<WhosItForProps> = ({}) => {
   const ImageContent = () => {
@@ -31,6 +35,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
         image="/home/who-for.webp"
         cta={<CTA label="Learn More" href="platform" noBottomMargin />}
         scale={0.6}
+        swap={swap}
       />
     </div>
   )

@@ -5,17 +5,18 @@ import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
 import { getSwapStatus } from '@/utils/swapStatus'
 
-interface BusinessFunctionsProps {}
+interface WhatIntegrationAutomationProps {}
 const swap = getSwapStatus()
 
-const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
+const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
   const ImageContent = () => {
     return (
       <>
         <p>
-          Ziggy handles automation and integration processes within, from and to every function and
-          department in your company.{' '}
+          Integrations and Automations listen to events in systems and react to them by launching
+          Ziggy flows and blocks.
         </p>
+        <p>Click Learn More to see some examples.</p>
       </>
     )
   }
@@ -23,16 +24,16 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Business functions we help"
+        title="What are Integrations and Automations?"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/home/business-functions.webp"
-        scale={0.9}
+        image="/home/about-automations.webp"
         cta={<CTA label="Learn More" href="platform" noBottomMargin />}
+        scale={0.7}
         swap={swap}
       />
     </div>
   )
 }
 
-export default BusinessFunctions
+export default WhatIntegrationAutomation

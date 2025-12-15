@@ -12,11 +12,16 @@ import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
 import Subscribe from '@/app/(forms)/(subscribe)/Subscribe'
 import PlatformOverview from '@/app/(home)/PlatformOverview'
+import WhatIntegrationAutomation from '@/app/(home)/WhatIntegrationAutomation'
 
 export default function HomePage() {
   const getNextColor = createColorCycler()
   const heroWaveVariant = WavyVariantEnum.Simple
   const sections: Section[] = [
+    {
+      bgColor: getNextColor(),
+      children: <WhatIntegrationAutomation />,
+    },
     {
       bgColor: getNextColor(),
       children: <WhosItFor />,

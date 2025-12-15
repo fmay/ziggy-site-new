@@ -1,8 +1,12 @@
+'use client'
+
 import { FC } from 'react'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
 import CTA from '@/components/ui/cta/CTA'
+import { getSwapStatus } from '@/utils/swapStatus'
 
 interface IntegrationPartnerProps {}
+const swap = getSwapStatus()
 
 const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
   const ImageContent = () => {
@@ -24,8 +28,8 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/home-pip.webp"
         scale={0.75}
-        swap
         cta={<CTA label="Learn More" href="integration-partners" noBottomMargin />}
+        swap={swap}
       />
     </div>
   )

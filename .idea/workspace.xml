@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="docs links and footer">
+      <change afterPath="$PROJECT_DIR$/src/app/(home)/WhatIntegrationAutomation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/BusinessFunctions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/ExampleAutomations.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntegrationPartner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/PlatformOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/PlatformOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/WhosItFor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/WhosItFor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/platform/Extensible.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,15 +172,9 @@
       <workItem from="1765300658738" duration="49501000" />
       <workItem from="1765434632730" duration="43213000" />
       <workItem from="1765609650370" duration="7203000" />
-      <workItem from="1765616962485" duration="11528000" />
-    </task>
-    <task id="LOCAL-00195" summary="tweaking">
-      <option name="closed" value="true" />
-      <created>1765370305246</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1765370305246</updated>
+      <workItem from="1765616962485" duration="12751000" />
+      <workItem from="1765816985877" duration="300000" />
+      <workItem from="1765817732641" duration="1983000" />
     </task>
     <task id="LOCAL-00196" summary="tweaking">
       <option name="closed" value="true" />
@@ -559,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765637523042</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="docs links and footer">
+      <option name="closed" value="true" />
+      <created>1765646350081</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1765646350081</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
