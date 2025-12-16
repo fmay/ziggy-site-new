@@ -13,7 +13,7 @@ const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
     return (
       <>
         <p>
-          Integrations and Automations listen to events in systems and react to them by launching
+          Automations and Integrations listen to events in systems and react to them by launching
           Ziggy flows and blocks.
         </p>
         <p>Click Learn More to see some examples.</p>
@@ -24,7 +24,7 @@ const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="What are Integrations and Automations?"
+        title="What are Automations and Integrations?"
         subtitle=""
         imageCopy={<ImageContent />}
         image="/hero/whats-an-automation.webp"

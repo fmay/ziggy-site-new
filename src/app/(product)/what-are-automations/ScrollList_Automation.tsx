@@ -68,7 +68,7 @@ const ScrollListAutomation: FC = () => {
             a flow with the event data.{' '}
           </p>
           <p>
-            The triggered Flow can do anything you require - trnasform data, store in multiple systems, send
+            The triggered Flow can do anything you require - transform data, store in multiple systems, send
             alerts and notifications etc.
           </p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">

@@ -25,7 +25,7 @@ const Footer = () => (
 
         {/* Integration Partners */}
         <div className={styles.section}>
-          <h4 className={styles.sectionTitle}>Developers</h4>
+          <h4 className={styles.sectionTitle}>Integration Partners</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
               <Link href="/integration-partners" className={styles.link}>
