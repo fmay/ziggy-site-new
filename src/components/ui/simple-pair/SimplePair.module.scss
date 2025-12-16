@@ -39,17 +39,14 @@
   @apply order-3 lg:order-none;
 
   ul {
-    @apply my-6 text-sm ml-4;
+    @apply my-6 ml-4;
   }
   li {
-    @apply text-lg text-gray-500 list-disc list-outside my-2;
+    @apply list-disc list-outside my-2;
   }
 
   a {
     @apply relative z-10;
-    a {
-      text-decoration: none;
-    }
   }
 }
 

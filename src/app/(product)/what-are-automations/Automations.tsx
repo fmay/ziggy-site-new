@@ -13,9 +13,14 @@ const Automations: FC<AutomationsProps> = ({}) => {
     return (
       <>
         <p>
-          An Ziggy flow that is triggered by an event in a messaging system such as Internet of Things,
-          Email, WhatsApp, SMS or external Queues such as AWS SQS/SNS, Kafka, Redis Event Streams/PubSub etc.
+          An Ziggy flow that is triggered by ...
         </p>
+        <ul>
+          <li>An incoming Email, WhatsApp, SMS, Social Media post</li>
+          <li>an event in a messaging system such as Internet of Things/MQTT,
+            AWS SQS/SNS, Kafka, Redis Event Streams/PubSub etc.</li>
+          <li>Ziggy's Scheduler</li>
+        </ul>
       </>
     )
   }

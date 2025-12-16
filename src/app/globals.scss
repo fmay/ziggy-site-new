@@ -49,7 +49,7 @@ a {
   }
 }
 
-p {
+p, ul, li {
   @apply text-[1.05rem] mb-[1rem] leading-[1.6rem] font-[100];
 }
 
@@ -70,7 +70,7 @@ h2 {
 
 h3 {
   @apply text-[1.5rem] leading-[1.8rem] mb-6
-  lg:text-[2.0rem] lg:leading-[2.2rem]
+  lg:text-[1.6rem] lg:leading-[2.0rem]
 }
 
 h4 {

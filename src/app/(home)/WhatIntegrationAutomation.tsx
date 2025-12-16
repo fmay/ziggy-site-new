@@ -27,7 +27,7 @@ const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
         title="What are Integrations and Automations?"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/home/about-automations.webp"
+        image="/hero/whats-an-automation.webp"
         cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
         scale={0.7}
         swap={swap}

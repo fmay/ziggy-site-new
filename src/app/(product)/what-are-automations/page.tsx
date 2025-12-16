@@ -7,6 +7,9 @@ import { DefaultColorCycle } from '@/constants/default-colors'
 import { WavyVariantEnum } from '@/types/wavy'
 import Automations from '@/app/(product)/what-are-automations/Automations'
 import Integrations from '@/app/(product)/what-are-automations/Integrations'
+import ScrollListAutomation from '@/app/(product)/what-are-automations/ScrollList_Automation'
+import Intro from '@/components/ui/intro/Intro'
+import ScrollListIntegration from '@/app/(product)/what-are-automations/ScrollList_Integration'
 
 interface WhatAreAutomationsPageProps {}
 
@@ -14,14 +17,26 @@ const WhatAreAutomationsPage: FC<WhatAreAutomationsPageProps> = ({}) => {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      id: 'example-automation',
       bgColor: getNextColor(),
       children: <Automations />,
     },
     {
-      id: 'example-integration',
       bgColor: getNextColor(),
       children: <Integrations />,
+    },
+    {
+      id: 'example-automation',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <ScrollListAutomation />
+        </>
+      ),
+    },
+    {
+      id: 'example-integration',
+      bgColor: getNextColor(),
+      children: <ScrollListIntegration />,
     },
   ]
 
@@ -31,13 +46,14 @@ const WhatAreAutomationsPage: FC<WhatAreAutomationsPageProps> = ({}) => {
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
-        image="/home/about-automations.webp"
+        image="/hero/whats-an-automation.webp"
         scale={0.5}
         title="About Automations and Integrations"
         subtitle={
           <div>
             <p>
-              Both Automations and Integrations trigger Ziggy Flows. The difference is the type of triggering event.
+              Both Automations and Integrations trigger Ziggy Flows. The difference is the type of
+              triggering event.
             </p>
             <p>You'll find and explanation an examples below.</p>
           </div>
