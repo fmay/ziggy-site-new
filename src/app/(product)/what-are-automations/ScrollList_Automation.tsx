@@ -22,37 +22,53 @@ const ScrollListAutomation: FC = () => {
           </DocsLink>
         </div>
       ),
-      image: '/product/features/postman.webp',
+      image: '/images/what-automation/example-1a.webp',
       contentNudge: 0,
     },
     {
-      title: 'Process the email',
+      title: 'Triggered flow',
       content: (
         <div>
           <p>
-            The Ziggy flow receives all the email data then uses the <strong>AI Generate</strong>{' '}
-            block to calculate a happiness score and categorize the contents before assigning it to
-            the right person and storing the data in the your Helpdesk system and CRM.
+            The Ziggy flow receives the email data then uses the <strong>AI Generate</strong> block
+            to calculate a happiness score and categorize the contents before creating a new ticket
+            in your CRM.
           </p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/Monitoring">
             Learn more
           </DocsLink>
         </div>
       ),
-      image: '/product/features/execution-history.webp',
+      image: '/images/what-automation/example-1b.webp',
       contentNudge: 90,
     },
     {
-      title: 'Example 2 : Message queue processing',
+      title: 'AI Generate',
+      content: (
+        <div>
+          <p>
+            The AI Generate block lets you configure a prompt that does whatever you need it to do.
+            It puts the result onto the output edge as you request.
+          </p>
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Monitoring">
+            Learn more
+          </DocsLink>
+        </div>
+      ),
+      image: '/images/what-automation/example-1c.webp',
+      contentNudge: 90,
+    },
+    {
+      title: 'Example 2 : Message Queue processing',
       content: (
         <div>
           <p>Your application uses a Queue/Event Stream to send notifications to other systems.</p>
           <p>
-            Configure Ziggy Messaging to listen to Queue events and trigger a Flow on each
-            notification.
+            This example shows Ziggy configured to listen to two Redis Stream Events and then launch
+            a flow with the event data.{' '}
           </p>
           <p>
-            The Flow can do anything you require - trasform data, store in multiple systems, send
+            The triggered Flow can do anything you require - trnasform data, store in multiple systems, send
             alerts and notifications etc.
           </p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
@@ -60,17 +76,17 @@ const ScrollListAutomation: FC = () => {
           </DocsLink>
         </div>
       ),
-      image: '/product/features/dev-prod.webp',
+      image: '/images/what-automation/example-2.webp',
       contentNudge: 0,
     },
     {
       title: 'Example 3 : Scheduled SFTP/CSV load',
       content: (
         <div>
-          <p>You want to read a CSV file stored on an SFTP server every day at 6am, 12pm and 6pm.</p>
           <p>
-            Ziggy's Scheduler lets you launch flows on any schedule.
+            You want to read a CSV file stored on an SFTP server every day at 6am, 12pm and 6pm.
           </p>
+          <p>Ziggy's Scheduler lets you launch flows on any schedule.</p>
           <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
             Learn more
           </DocsLink>
