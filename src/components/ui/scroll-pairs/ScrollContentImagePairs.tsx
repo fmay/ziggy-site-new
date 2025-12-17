@@ -13,6 +13,7 @@ export interface ContentImagePair {
   scaleToFit?: boolean
   hasCTA?: boolean
   contentNudge?: number
+  scale?: number
 }
 
 interface ScrollContentImagePairsProps {
@@ -267,6 +268,11 @@ const ScrollContentImagePairs = ({
                       src={pair.image}
                       alt={`Content ${index + 1}`}
                       className={styles.image}
+                      style={
+                        pair.scale !== undefined
+                          ? { transform: `scale(${pair.scale})` }
+                          : undefined
+                      }
                       onLoad={() => {
                         const heights = [...imageHeights]
                         const containerWidth = rightColumnRef.current?.clientWidth || 0
@@ -298,7 +304,14 @@ const ScrollContentImagePairs = ({
                   {pair.scene}
                 </div>
               ) : pair.image ? (
-                <img src={pair.image} alt={`Content ${index + 1}`} className={styles.mobileImage} />
+                <img
+                  src={pair.image}
+                  alt={`Content ${index + 1}`}
+                  className={styles.mobileImage}
+                  style={
+                    pair.scale !== undefined ? { transform: `scale(${pair.scale})` } : undefined
+                  }
+                />
               ) : null}
             </div>
             <div className={`prose ${styles.mobileContent}`}>{pair.content}</div>

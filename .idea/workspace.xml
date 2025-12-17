@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="update what are" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates">
+      <change beforePath="$PROJECT_DIR$/pixelmator/hero/pricing.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/pricing.pxd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntroScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntroScroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,11 +77,11 @@
       <recent name="$PROJECT_DIR$/src/app/(home)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pixelmator/home" />
       <recent name="$PROJECT_DIR$/public/product/what-are-automations" />
       <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
       <recent name="$PROJECT_DIR$/pixelmator/integration-partners" />
       <recent name="$PROJECT_DIR$/public/integration-partners" />
-      <recent name="$PROJECT_DIR$/public/product/features" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -166,22 +170,7 @@
       <workItem from="1765816985877" duration="300000" />
       <workItem from="1765817732641" duration="14715000" />
       <workItem from="1765954395583" duration="3486000" />
-    </task>
-    <task id="LOCAL-00203" summary="copy update">
-      <option name="closed" value="true" />
-      <created>1765434575611</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1765434575611</updated>
-    </task>
-    <task id="LOCAL-00204" summary="copy update">
-      <option name="closed" value="true" />
-      <created>1765440866557</created>
-      <option name="number" value="00204" />
-      <option name="presentableId" value="LOCAL-00204" />
-      <option name="project" value="LOCAL" />
-      <updated>1765440866557</updated>
+      <workItem from="1765972305113" duration="6784000" />
     </task>
     <task id="LOCAL-00205" summary="about us">
       <option name="closed" value="true" />
@@ -559,7 +548,23 @@
       <option name="project" value="LOCAL" />
       <updated>1765956126630</updated>
     </task>
-    <option name="localTasksCounter" value="252" />
+    <task id="LOCAL-00252" summary="scroll to; updates">
+      <option name="closed" value="true" />
+      <created>1765984693125</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1765984693125</updated>
+    </task>
+    <task id="LOCAL-00253" summary="updates">
+      <option name="closed" value="true" />
+      <created>1765986340722</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
+      <option name="project" value="LOCAL" />
+      <updated>1765986340722</updated>
+    </task>
+    <option name="localTasksCounter" value="254" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,8 +610,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="copy update" />
-    <MESSAGE value="about us" />
     <MESSAGE value="about, pricing" />
     <MESSAGE value="adding content" />
     <MESSAGE value="update" />
@@ -630,7 +633,9 @@
     <MESSAGE value="what are automations 2" />
     <MESSAGE value="what are automations 3" />
     <MESSAGE value="update what are" />
-    <option name="LAST_COMMIT_MESSAGE" value="update what are" />
+    <MESSAGE value="scroll to; updates" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

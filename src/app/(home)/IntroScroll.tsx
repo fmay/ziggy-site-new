@@ -36,6 +36,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
         </div>
       ),
       image: '/misc/docker2.webp',
+      scale: 0.5,
       contentNudge: 90,
     },
     {
@@ -66,7 +67,8 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
           <CTA label="Ziggy Pricing" href="pricing" noBottomMargin/>
         </div>
       ),
-      image: '/product/features/dev-prod.webp',
+      image: '/home/pricing-home.webp',
+      scale: 0.7,
       contentNudge: 0,
     },
     {
