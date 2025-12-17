@@ -55,10 +55,6 @@ const ScrollListExtra2: FC = () => {
 
   return (
     <>
-      {/*<div id="javascript" className="section-intro">*/}
-      {/*  <h3>Alerting, Secrets, Connections, Auditing</h3>*/}
-      {/*  <p>A few more powerful features available out-of-the-box.</p>*/}
-      {/*</div>*/}
       <ScrollContentImagePairs contentImagePairs={HP_Pairs} />
     </>
   )

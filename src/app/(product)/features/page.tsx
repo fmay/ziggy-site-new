@@ -16,9 +16,6 @@ import { getSwapStatus } from '@/utils/swapStatus'
 import AI from '@/app/(home)/AI'
 import FeaturesIntro from '@/app/(product)/features/FeaturesIntro'
 
-const swap = getSwapStatus()
-
-
 export default function Features() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [

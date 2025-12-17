@@ -13,6 +13,7 @@ import { DefaultColorCycle } from '@/constants/default-colors'
 import Subscribe from '@/app/(forms)/(subscribe)/Subscribe'
 import PlatformOverview from '@/app/(home)/PlatformOverview'
 import WhatIntegrationAutomation from '@/app/(home)/WhatIntegrationAutomation'
+import IntroScroll from '@/app/(home)/IntroScroll'
 
 export default function HomePage() {
   const getNextColor = createColorCycler()
@@ -20,20 +21,24 @@ export default function HomePage() {
   const sections: Section[] = [
     {
       bgColor: getNextColor(),
-      children: <WhatIntegrationAutomation />,
+      children: (
+        <>
+          <IntroScroll />
+        </>
+      ),
     },
     {
       bgColor: getNextColor(),
-      children: <WhosItFor />,
+      children: <WhatIntegrationAutomation />,
     },
     {
       bgColor: getNextColor(),
       children: <BusinessFunctions />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <PlatformOverview />,
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <PlatformOverview />,
+    // },
     {
       bgColor: getNextColor(),
       children: <IntegrationPartner />,
@@ -59,7 +64,7 @@ export default function HomePage() {
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>AI enabled</span>
+              <span>Built for extreme ease of use and access to any data source</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
@@ -67,15 +72,15 @@ export default function HomePage() {
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Built for extreme ease of use and access to any data source</span>
-            </li>
-            <li>
-              <GiCheckMark className={styles.checkIcon} />
               <span>Fully customizable</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Transparent non usage based pricing</span>
+              <span>A different approach to pricing</span>
+            </li>
+            <li>
+              <GiCheckMark className={styles.checkIcon} />
+              <span>AI enabled</span>
             </li>
           </ul>
         }

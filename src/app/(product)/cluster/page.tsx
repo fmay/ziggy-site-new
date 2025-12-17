@@ -57,7 +57,7 @@ export default function Cluster() {
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/cluster.webp"
         scale={0.5}
-        title="Ziggy Cluster"
+        title="Laptop, Single Instance or Cluster"
         subtitle={
           <div>
             <p>Ziggy Cluster supports extremely high loads and is fully fault tolerant.</p>
