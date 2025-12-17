@@ -17,9 +17,9 @@ const Automations: FC<AutomationsProps> = ({}) => {
         </p>
         <ul>
           <li>An incoming Email, WhatsApp, SMS, Social Media post</li>
-          <li>an event in a messaging system such as Internet of Things/MQTT,
+          <li>An event in a messaging system such as Internet of Things/MQTT,
             AWS SQS/SNS, Kafka, Redis Event Streams/PubSub etc.</li>
-          <li>Ziggy's Scheduler</li>
+          <li>Ziggy's Scheduler.</li>
         </ul>
       </>
     )

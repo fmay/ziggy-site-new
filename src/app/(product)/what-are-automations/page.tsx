@@ -8,7 +8,6 @@ import { WavyVariantEnum } from '@/types/wavy'
 import Automations from '@/app/(product)/what-are-automations/Automations'
 import Integrations from '@/app/(product)/what-are-automations/Integrations'
 import ScrollListAutomation from '@/app/(product)/what-are-automations/ScrollList_Automation'
-import Intro from '@/components/ui/intro/Intro'
 import ScrollListIntegration from '@/app/(product)/what-are-automations/ScrollList_Integration'
 
 interface WhatAreAutomationsPageProps {}
@@ -47,12 +46,12 @@ const WhatAreAutomationsPage: FC<WhatAreAutomationsPageProps> = ({}) => {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/whats-an-automation.webp"
-        scale={0.5}
-        title="About Automations and Integrations"
+        scale={0.8}
+        title="Automations and Integrations"
         subtitle={
           <div>
             <p>
-              Both Automations and Integrations trigger Ziggy Flows. The difference is the type of
+              Both Automations and Integrations trigger Ziggy Flows automatically. The difference is the type of
               triggering event.
             </p>
             <p>You'll find and explanation an examples below.</p>

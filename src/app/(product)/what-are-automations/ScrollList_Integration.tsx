@@ -10,7 +10,7 @@ import Intro from '@/components/ui/intro/Intro'
 const ScrollListIntegration: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
     {
-      title: 'Example 1 : a record is updated in your CRM',
+      title: 'Example 1 : when your ERP data changes, update your CRM',
       content: (
         <div>
           <p>Configure a webhook in your CRM that launches a Ziggy Flow.</p>
@@ -23,7 +23,7 @@ const ScrollListIntegration: FC = () => {
           </DocsLink>
         </div>
       ),
-      image: '/product/features/postman.webp',
+      image: '/product/what-are-automations/webhook-hubspot.webp',
       contentNudge: 0,
     },
     {
@@ -35,12 +35,12 @@ const ScrollListIntegration: FC = () => {
             performs any transformation and 3rd party platform operations your require.
           </p>
 
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Launching-flows">
             Learn more
           </DocsLink>
         </div>
       ),
-      image: '/product/features/dev-prod.webp',
+      image: '/product/features/postman.webp',
       contentNudge: 0,
     },
     {
@@ -53,9 +53,9 @@ const ScrollListIntegration: FC = () => {
             objected, Ziggy Flows let you audit, validate, map, transform your data so it ends up in
             the right place in the right format.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
-            Learn more
-          </DocsLink>
+          {/*<DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">*/}
+          {/*  Learn more*/}
+          {/*</DocsLink>*/}
         </div>
       ),
       image: '/product/features/dev-prod.webp',

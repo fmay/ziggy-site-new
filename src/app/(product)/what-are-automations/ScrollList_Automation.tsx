@@ -10,14 +10,14 @@ import Intro from '@/components/ui/intro/Intro'
 const ScrollListAutomation: FC = () => {
   const HP_Pairs: ContentImagePair[] = [
     {
-      title: 'Example 1 : an email is sent to support@yourcompany.com',
+      title: 'Example 1 (step 1) : an email is sent to support@yourcompany.com',
       content: (
         <div>
           <p>
             Configure Ziggy's Messaging to monitor an email address. Each email then triggers a
             Ziggy Flow
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Launching-flows">
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Messaging">
             Learn more
           </DocsLink>
         </div>
@@ -26,7 +26,7 @@ const ScrollListAutomation: FC = () => {
       contentNudge: 0,
     },
     {
-      title: 'Triggered flow',
+      title: 'Example 1 (step 2) - Triggered flow',
       content: (
         <div>
           <p>
@@ -34,7 +34,7 @@ const ScrollListAutomation: FC = () => {
             to calculate a happiness score and categorize the contents before creating a new ticket
             in your CRM.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Monitoring">
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/ai/ai-generate">
             Learn more
           </DocsLink>
         </div>
@@ -43,14 +43,14 @@ const ScrollListAutomation: FC = () => {
       contentNudge: 90,
     },
     {
-      title: 'AI Generate',
+      title: 'Example 1 (step 3) - AI Generate',
       content: (
         <div>
           <p>
             The AI Generate block lets you configure a prompt that does whatever you need it to do.
             It puts the result onto the output edge as you request.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Monitoring">
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/ai/ai-generate">
             Learn more
           </DocsLink>
         </div>
@@ -62,16 +62,16 @@ const ScrollListAutomation: FC = () => {
       title: 'Example 2 : Message Queue processing',
       content: (
         <div>
-          <p>Your application uses a Queue/Event Stream to send notifications to other systems.</p>
+          <p>A company application uses a Queue/Event Stream to send notifications.</p>
           <p>
             This example shows Ziggy configured to listen to two Redis Stream Events and then launch
-            a flow with the event data.{' '}
+            a flow, passing in the event data.
           </p>
           <p>
-            The triggered Flow can do anything you require - transform data, store in multiple systems, send
-            alerts and notifications etc.
+            The triggered Flow can do anything you require - transform data, store in multiple
+            systems, send alerts and notifications etc.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+          <DocsLink href="https://docs.ziggyservices.com/user-guide/Messaging">
             Learn more
           </DocsLink>
         </div>
@@ -86,13 +86,16 @@ const ScrollListAutomation: FC = () => {
           <p>
             You want to read a CSV file stored on an SFTP server every day at 6am, 12pm and 6pm.
           </p>
-          <p>Ziggy's Scheduler lets you launch flows on any schedule.</p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+          <p>
+            Ziggy's Scheduler launches a flow that reads the CSV file from the SFTP server then
+            processes as you require with further Ziggy blocks.
+          </p>
+          <DocsLink href="http://docs.ziggyservices.com/user-guide/block-types/utility/file-reader-writer">
             Learn more
           </DocsLink>
         </div>
       ),
-      image: '/product/features/dev-prod.webp',
+      image: '/product/what-are-automations/schedule.webp',
       contentNudge: 70,
     },
   ]
