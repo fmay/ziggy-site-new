@@ -9,7 +9,7 @@ import { tailwindClassToHex } from '@/utils/tailwindColors'
 import { useScreenSize } from '@/hooks/useScreenSize'
 
 interface HeroProps {
-  title: string
+  title: string | React.ReactNode
   subtitle: string | React.ReactNode
   fromColor: string
   toColor: string

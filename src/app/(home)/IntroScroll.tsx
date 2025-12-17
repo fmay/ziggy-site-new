@@ -35,7 +35,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
           <CTA label="How it's configured" href="cluster" noBottomMargin/>
         </div>
       ),
-      image: '/product/features/execution-history.webp',
+      image: '/misc/docker2.webp',
       contentNudge: 90,
     },
     {

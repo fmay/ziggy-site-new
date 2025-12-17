@@ -24,7 +24,12 @@ export default function Cluster() {
             subtitle=""
             imageCopy={
               <div className="section-intro">
-                <p>Ziggy runs in a single Docker container on the infrastructure of your choice.</p>
+                <p>Ziggy runs in a simple Docker container on the machine or infrastructure of your choice.</p>
+                <ul>
+                  <li>Laptop</li>
+                  <li>Single Server</li>
+                  <li>Cluster</li>
+                </ul>
                 <p>
                   For fault tolerance with normal loads you can use small (2GB) instances. For
                   performance, just add larger instances to your cluster.
@@ -32,6 +37,33 @@ export default function Cluster() {
               </div>
             }
             image="/misc/docker.svg"
+            scale={0.5}
+            cta={
+              <CTA
+                label="Overview"
+                href="https://docs.ziggyservices.com/user-guide/cluster/overview"
+              />
+            }
+          />
+        </>
+      ),
+    },
+    {
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <SimplePair
+            title="What size server do I need?"
+            subtitle=""
+            imageCopy={
+              <div className="section-intro">
+                <p>In simple integration situations, Ziggy will run on a $12 a month 2GB server.</p>
+                <p>
+                  But when you need more performance, simply upgrade your servers - we won't charge a penny more when you do.
+                </p>
+              </div>
+            }
+            image="/misc/docker2.svg"
             scale={0.5}
             cta={
               <CTA
@@ -56,12 +88,14 @@ export default function Cluster() {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/cluster.webp"
+        imageNudge={60}
         scale={0.5}
-        title="Laptop, Single Instance or Cluster"
+        title={<><h2>Install anywhere.</h2>Laptop, Single Instance or Cluster.</>}
         subtitle={
           <div>
+            <p>If a machine can run Docker, it can run Ziggy.</p>
             <p>Ziggy Cluster supports extremely high loads and is fully fault tolerant.</p>
-            <p>Installation is simple using Docker.</p>
+            <p>And because its on your servers, your control all aspects of security and performance,</p>
           </div>
         }
         cta={<CTA label="Book a demo" href="demo" />}

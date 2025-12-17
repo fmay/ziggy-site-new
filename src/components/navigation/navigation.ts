@@ -65,15 +65,15 @@ export const navigationConfig: NavigationConfig = {
                 icon: '/nav/flow.svg',
               },
               {
-                label: 'Ziggy Cluster',
-                href: '/cluster',
-                description: 'Scaling and high availability',
-                icon: '/nav/flow.svg',
-              },
-              {
                 label: 'Customization',
                 href: '/integration-partners#nocoding',
                 description: 'Extend Ziggy with your own Custom Blocks',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Laptop, Server or Cluster',
+                href: '/cluster',
+                description: 'Ziggy is quickly installed on laptops, servers or clusters.',
                 icon: '/nav/flow.svg',
               },
             ],

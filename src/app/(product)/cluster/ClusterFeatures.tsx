@@ -2,7 +2,6 @@ import { FC } from 'react'
 import ScrollContentImagePairs, {
   ContentImagePair,
 } from '@/components/ui/scroll-pairs/ScrollContentImagePairs'
-import HomeScene from '@/app/(home)/HomeScene'
 import CTA from '@/components/ui/cta/CTA'
 
 interface FlowFeaturesProps {}
@@ -12,7 +11,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <>
-          <h2>Level 1</h2>
+          <h2>Level 1 Cluster</h2>
           <p>
             The basic Ziggy cluster can have two or more servers. One of them runs the database.
           </p>
@@ -29,7 +28,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <>
-          <h2>Level 2</h2>
+          <h2>Level 2 CLuster</h2>
           <p>
             When you need both high performance and fault tolerance. The database can run in a
             managed service such as AWS RDS or in your own database cluster.
