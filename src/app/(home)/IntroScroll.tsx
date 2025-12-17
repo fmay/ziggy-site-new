@@ -85,6 +85,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
         </div>
       ),
       image: '/home/ai-features.webp',
+      scale: 0.75,
       contentNudge: 0,
     },
     {
@@ -102,8 +103,9 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
           <CTA label="How it's configured" href="/features#javascript" noBottomMargin/>
         </div>
       ),
-      image: '/product/features/dev-prod.webp',
-      contentNudge: 0,
+      image: '/home/javascript-home.webp',
+      scale: 0.7,
+      contentNudge: -20,
     },
   ]
   return (
