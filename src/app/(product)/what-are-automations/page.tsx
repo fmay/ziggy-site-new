@@ -46,6 +46,7 @@ const WhatAreAutomationsPage: FC<WhatAreAutomationsPageProps> = ({}) => {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/whats-an-automation.webp"
+        imageNudge={20}
         scale={0.8}
         title="Automations and Integrations"
         subtitle={
