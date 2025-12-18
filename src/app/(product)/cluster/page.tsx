@@ -90,7 +90,7 @@ export default function Cluster() {
         image="/hero/cluster.webp"
         imageNudge={60}
         scale={0.5}
-        title={<><h1>Install anywhere.</h1>Laptop, Single Instance or Cluster.</>}
+        title={<>Install anywhere - Laptop, Single Instance or Cluster.</>}
         subtitle={
           <div>
             <p>If a machine can run Docker, it can run Ziggy.</p>
