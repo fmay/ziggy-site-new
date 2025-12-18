@@ -17,7 +17,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
             We designed Ziggy to be easy to use, making your total cost of ownership even lower.
           </p>
           <p>But it's still packed with all the features your automations and integrations need.</p>
-          <CTA label="About Ziggy Flows and Blocks" href="flows" noBottomMargin/>
+          <CTA label="About Ziggy Flows and Blocks" href="flows" noBottomMargin />
         </div>
       ),
       image: '/home/flows-blocks.webp',
@@ -32,7 +32,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
             that runs Docker.
           </p>
           <p>As a result, you have total control over security and performance.</p>
-          <CTA label="How it's configured" href="cluster" noBottomMargin/>
+          <CTA label="Installation and Ziggy Cluster" href="cluster" noBottomMargin />
         </div>
       ),
       image: '/misc/docker2.webp',
@@ -48,7 +48,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
             You can build blocks that talk to your own systems or any other system, removing the
             needs APIs.
           </p>
-          <CTA label="How it's configured" href="extend"/>
+          <CTA label="How to Customize Ziggy" href="extend" />
         </div>
       ),
       image: '/integration-partners/no-code.webp',
@@ -64,7 +64,7 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
             faster development times and simple maintenance, Ziggy's total cost of ownership is
             substantially lower.
           </p>
-          <CTA label="Ziggy Pricing" href="pricing" noBottomMargin/>
+          <CTA label="Ziggy Pricing" href="pricing" noBottomMargin />
         </div>
       ),
       image: '/home/pricing-home.webp',
@@ -75,13 +75,13 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
       content: (
         <div>
           <h2>AI enabled</h2>
-          <p>Ziggy makes extensive use of AI. </p>
+          <p>Ziggy makes extensive use of AI but it can't hallucinate with pipeline data.</p>
           <p>
-            There's no usage-based pricing, so you have total visibility for budgeting. Combined
-            faster development times and simple maintenance, Ziggy's total cost of ownership is
-            substantially lower.
+            For any data transformations, AI generates testable code that, once approved, remains
+            static.
           </p>
-          <CTA label="How it's configured" href="ai-features" noBottomMargin/>
+          <p>There is also a Generative AI block that is allowed to operate at execution time.</p>
+          <CTA label="AI Features" href="ai-features" noBottomMargin />
         </div>
       ),
       image: '/home/ai-features.webp',
@@ -93,14 +93,14 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
         <div>
           <h2>Code when and where you need to</h2>
           <p>
-            Ziggy has a powerful Javascript block that lets you write code wherever required or if
-            you're a developer who finds it more efficient.{' '}
+            Ziggy has a powerful Javascript block that lets you write code wherever required or
+            wanted.
           </p>
           <p>
-            We have truly powerful and useful AI support that also lets non-coders deal with
-            edge-cases tasks that require a custom approach.
+            It has context aware support that's like Claude Code for Ziggy, allowing non-developers
+            to deal with complex data challenges.
           </p>
-          <CTA label="How it's configured" href="/features#javascript" noBottomMargin/>
+          <CTA label="Javascript Block" href="/features#javascript" noBottomMargin />
         </div>
       ),
       image: '/home/javascript-home.webp',

@@ -46,6 +46,7 @@ export default function Platform() {
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
         image="/hero/ai-features.webp"
+        imageNudge={-60}
         title="Ziggy's AI Features"
         subtitle={
           <div>
