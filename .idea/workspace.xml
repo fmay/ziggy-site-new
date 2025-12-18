@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="updates">
-      <change beforePath="$PROJECT_DIR$/pixelmator/hero/pricing.pxd" beforeDir="false" afterPath="$PROJECT_DIR$/pixelmator/hero/pricing.pxd" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home refactor 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(home)/IntroScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntroScroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,30 +172,8 @@
       <workItem from="1765817732641" duration="14715000" />
       <workItem from="1765954395583" duration="3486000" />
       <workItem from="1765972305113" duration="6784000" />
-    </task>
-    <task id="LOCAL-00205" summary="about us">
-      <option name="closed" value="true" />
-      <created>1765443905800</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1765443905800</updated>
-    </task>
-    <task id="LOCAL-00206" summary="about us">
-      <option name="closed" value="true" />
-      <created>1765446051408</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1765446051408</updated>
-    </task>
-    <task id="LOCAL-00207" summary="about us">
-      <option name="closed" value="true" />
-      <created>1765446708914</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1765446708914</updated>
+      <workItem from="1765987317795" duration="4916000" />
+      <workItem from="1766036167569" duration="1980000" />
     </task>
     <task id="LOCAL-00208" summary="about us">
       <option name="closed" value="true" />
@@ -564,7 +543,31 @@
       <option name="project" value="LOCAL" />
       <updated>1765986340722</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="pre nestjs error fix">
+      <option name="closed" value="true" />
+      <created>1765988068713</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1765988068714</updated>
+    </task>
+    <task id="LOCAL-00255" summary="home refactor">
+      <option name="closed" value="true" />
+      <created>1765991927767</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1765991927767</updated>
+    </task>
+    <task id="LOCAL-00256" summary="home refactor 2">
+      <option name="closed" value="true" />
+      <created>1766036083464</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1766036083464</updated>
+    </task>
+    <option name="localTasksCounter" value="257" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,10 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="about, pricing" />
-    <MESSAGE value="adding content" />
-    <MESSAGE value="update" />
-    <MESSAGE value="hero top" />
     <MESSAGE value="hero top 2" />
     <MESSAGE value="hero top doing mobile" />
     <MESSAGE value="hero top doing mobile 2" />
@@ -635,7 +634,11 @@
     <MESSAGE value="update what are" />
     <MESSAGE value="scroll to; updates" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="pre nestjs error fix" />
+    <MESSAGE value="aaa" />
+    <MESSAGE value="home refactor" />
+    <MESSAGE value="home refactor 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="home refactor 2" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

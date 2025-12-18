@@ -2,9 +2,9 @@
   @apply relative mb-[0vh];
 
   ul {
-    @apply my-12;
+    @apply my-12 ml-4;
     li {
-      @apply list-none ml-0 mb-2 text-mid-gray;
+      @apply list-disc;
     }
   }
 }

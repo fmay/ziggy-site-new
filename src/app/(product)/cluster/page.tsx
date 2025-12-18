@@ -23,7 +23,7 @@ export default function Cluster() {
             title="Simple Docker installation"
             subtitle=""
             imageCopy={
-              <div className="section-intro">
+              <div className="">
                 <p>Ziggy runs in a simple Docker container on the machine or infrastructure of your choice.</p>
                 <ul>
                   <li>Laptop</li>
@@ -36,8 +36,8 @@ export default function Cluster() {
                 </p>
               </div>
             }
-            image="/misc/docker.svg"
-            scale={0.5}
+            image="/product/cluster/machines.webp"
+            scale={0.8}
             cta={
               <CTA
                 label="Overview"
@@ -56,15 +56,15 @@ export default function Cluster() {
             title="What size server do I need?"
             subtitle=""
             imageCopy={
-              <div className="section-intro">
-                <p>In simple integration situations, Ziggy will run on a $12 a month 2GB server.</p>
+              <div className="">
+                <p>In typical integration scenarios, Ziggy will run on a $12 a month 2GB server.</p>
                 <p>
                   But when you need more performance, simply upgrade your servers - we won't charge a penny more when you do.
                 </p>
               </div>
             }
-            image="/misc/docker2.svg"
-            scale={0.5}
+            image="/product/cluster/server-size.webp"
+            scale={0.7}
             cta={
               <CTA
                 label="Overview"
@@ -90,7 +90,7 @@ export default function Cluster() {
         image="/hero/cluster.webp"
         imageNudge={60}
         scale={0.5}
-        title={<><h2>Install anywhere.</h2>Laptop, Single Instance or Cluster.</>}
+        title={<><h1>Install anywhere.</h1>Laptop, Single Instance or Cluster.</>}
         subtitle={
           <div>
             <p>If a machine can run Docker, it can run Ziggy.</p>

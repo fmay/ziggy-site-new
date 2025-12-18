@@ -59,11 +59,12 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
         <div>
           <h2>Priced differently</h2>
           <p>Ziggy's pricing is far below other systems when run at scale.</p>
-          <p>
-            There's no usage-based pricing, so you have total visibility for budgeting. Combined
-            faster development times and simple maintenance, Ziggy's total cost of ownership is
-            substantially lower.
-          </p>
+          <ul>
+            <li>Subscriptions are independent of usage.</li>
+            <li>You don't pay for larger server instance sizes.</li>
+            <li>Total cost of ownership is lower - flow design is quicker and developer requirements are far lower.</li>
+            <li>Complete visibility for your budgeting.</li>
+          </ul>
           <CTA label="Ziggy Pricing" href="pricing" noBottomMargin />
         </div>
       ),
@@ -91,9 +92,9 @@ const IntroScroll: FC<IntroScrollProps> = ({}) => {
     {
       content: (
         <div>
-          <h2>Code when and where you need to</h2>
+          <h2>Code when and where you need to, with or without AI</h2>
           <p>
-            Ziggy has a powerful Javascript block that lets you write code wherever required or
+            Ziggy has a powerful, debugger enabled Javascript block that lets you write code wherever required or
             wanted.
           </p>
           <p>
