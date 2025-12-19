@@ -37,6 +37,20 @@ const ScrollIntro: FC<ScrollIntroProps> = ({}) => {
     {
       content: (
         <div>
+          <h2>API and code free integration for your customers</h2>
+          <p>
+            Delight your customers by letting them use Ziggy to get data out of and into your
+            platform without having to code.
+          </p>
+        </div>
+      ),
+      image: '/integration-partners/no-code.webp',
+      scale: 0.7,
+      contentNudge: 0,
+    },
+    {
+      content: (
+        <div>
           <h2>Extend Ziggy with custom block plugins for your platform.</h2>
           <p>Custom block plugins are what makes it so easy for your customer to integrate with your platform. Read on to see how it's done.</p>
           <CTA label="How to Customize Ziggy" href="#how-its-done" />

@@ -23,11 +23,11 @@ export default function IntegrationPartners() {
     //   bgColor: getNextColor(),
     //   children: <PlatformIntro />,
     // },
-    {
-      id: "nocoding",
-      bgColor: getNextColor(),
-      children: <NoCoding />,
-    },
+    // {
+    //   id: "nocoding",
+    //   bgColor: getNextColor(),
+    //   children: <NoCoding />,
+    // },
     {
       bgColor: getNextColor(),
       children: <ScrollIntro />,
