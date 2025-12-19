@@ -24,6 +24,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
       ),
       contentNudge: 30,
       image: '/product/cluster/level1.webp',
+      scale: 0.7
     },
     {
       content: (
@@ -38,6 +39,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
       ),
       contentNudge: 30,
       image: '/product/cluster/level2.webp',
+      scale: 0.7
     },
     {
       content: (
@@ -54,6 +56,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
         </>
       ),
       image: '/product/cluster/monitor.webp',
+      scale: 0.7
     },
     {
       content: (
@@ -67,10 +70,10 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             Use Ziggy monitoring to see exactly how the system and each server is performing.
           </p>
           <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/load-testing" />
-
         </>
       ),
       image: '/product/cluster/load-test.webp',
+      scale: 0.7
     },
   ]
 

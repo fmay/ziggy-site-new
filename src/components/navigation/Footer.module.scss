@@ -1,5 +1,7 @@
 .footer {
   @apply bg-header-footer text-white border-t border-gray-200;
+  position: relative;
+  z-index: 10;
   a {
     @apply no-underline
   }

@@ -1,5 +1,6 @@
 .container {
   @apply relative mb-[0vh];
+  isolation: isolate;
 
   ul {
     @apply my-12 ml-4;
@@ -53,6 +54,8 @@
 
 .imageContainerFixed {
   @apply fixed top-1/2 -translate-y-1/2;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .imageContainerScrollingOut {
