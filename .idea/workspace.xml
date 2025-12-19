@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home refactor 2">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="home refactor 3">
+      <change afterPath="$PROJECT_DIR$/src/app/integration-partners/ScrollIntro.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(home)/IntroScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/IntroScroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(product)/cluster/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/scroll-pairs/ScrollContentImagePairs.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,23 +172,8 @@
       <workItem from="1765954395583" duration="3486000" />
       <workItem from="1765972305113" duration="6784000" />
       <workItem from="1765987317795" duration="4916000" />
-      <workItem from="1766036167569" duration="1980000" />
-    </task>
-    <task id="LOCAL-00208" summary="about us">
-      <option name="closed" value="true" />
-      <created>1765447412942</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1765447412942</updated>
-    </task>
-    <task id="LOCAL-00209" summary="about us">
-      <option name="closed" value="true" />
-      <created>1765447996785</created>
-      <option name="number" value="00209" />
-      <option name="presentableId" value="LOCAL-00209" />
-      <option name="project" value="LOCAL" />
-      <updated>1765447996785</updated>
+      <workItem from="1766036167569" duration="2370000" />
+      <workItem from="1766137012154" duration="3928000" />
     </task>
     <task id="LOCAL-00210" summary="about, pricing">
       <option name="closed" value="true" />
@@ -567,7 +551,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766036083464</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="home refactor 3">
+      <option name="closed" value="true" />
+      <created>1766039964329</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1766039964329</updated>
+    </task>
+    <task id="LOCAL-00258" summary="home refactor 3">
+      <option name="closed" value="true" />
+      <created>1766040015540</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
+      <option name="project" value="LOCAL" />
+      <updated>1766040015540</updated>
+    </task>
+    <option name="localTasksCounter" value="259" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="hero top 2" />
     <MESSAGE value="hero top doing mobile" />
     <MESSAGE value="hero top doing mobile 2" />
     <MESSAGE value="hero top doing mobile 3" />
@@ -638,7 +637,8 @@
     <MESSAGE value="aaa" />
     <MESSAGE value="home refactor" />
     <MESSAGE value="home refactor 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="home refactor 2" />
+    <MESSAGE value="home refactor 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="home refactor 3" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

@@ -9,7 +9,7 @@ const NoCoding: FC<NoCodingProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Your customers can Ziggy it, not code it."
+        title="API and code free integration for your customers"
         subtitle=""
         imageCopy={
           <>
@@ -27,7 +27,7 @@ const NoCoding: FC<NoCodingProps> = ({}) => {
             <DocsLink href="https://docs.ziggyservices.com/user-guide/plugin/overview">Learn More</DocsLink>
           </>
         }
-        scale={1}
+        scale={0.8}
         swap
       />
     </div>
