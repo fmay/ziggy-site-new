@@ -1,16 +1,16 @@
 'use client'
 
-import PageLayout, { LayoutStyleEnum } from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import ClusterFeatures from '@/app/(product)/cluster/ClusterFeatures'
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
-import Intro from '@/components/ui/intro/Intro'
 import CTA from '@/components/ui/cta/CTA'
-import QuickBookDemo from '@/app/(forms)/demo/QuickBookDemo'
 import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
 import Hero from '@/components/ui/hero/Hero'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
+import { getSwapStatus } from '@/utils/swapStatus'
+
+const swap = getSwapStatus()
 
 export default function Cluster() {
   const getNextColor = createColorCycler()
@@ -24,7 +24,10 @@ export default function Cluster() {
             subtitle=""
             imageCopy={
               <div className="">
-                <p>Ziggy runs in a simple Docker container on the machine or infrastructure of your choice.</p>
+                <p>
+                  Ziggy runs in a simple Docker container on the machine or infrastructure of your
+                  choice.
+                </p>
                 <ul>
                   <li>Laptop</li>
                   <li>Single Server</li>
@@ -38,6 +41,7 @@ export default function Cluster() {
             }
             image="/product/cluster/machines.webp"
             scale={0.8}
+            swap={swap}
           />
         </>
       ),
@@ -53,12 +57,14 @@ export default function Cluster() {
               <div className="">
                 <p>In typical integration scenarios, Ziggy will run on a $12 a month 2GB server.</p>
                 <p>
-                  But when you need more performance, simply upgrade your servers - we won't charge a penny more when you do.
+                  But when you need more performance, simply upgrade your servers - we won't charge
+                  a penny more when you do.
                 </p>
               </div>
             }
             image="/product/cluster/server-size.webp"
             scale={0.7}
+            swap={swap}
           />
         </>
       ),
@@ -83,7 +89,9 @@ export default function Cluster() {
           <div>
             <p>If a machine can run Docker, it can run Ziggy.</p>
             <p>Ziggy Cluster supports extremely high loads and is fully fault tolerant.</p>
-            <p>And because its on your servers, your control all aspects of security and performance,</p>
+            <p>
+              And because its on your servers, your control all aspects of security and performance,
+            </p>
           </div>
         }
         cta={<CTA label="Book a demo" href="demo" />}

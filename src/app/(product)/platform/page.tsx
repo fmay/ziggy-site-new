@@ -74,6 +74,7 @@ export default function Platform() {
       {sections.map((section, index) => (
         <PageSection
           key={index}
+          id={section.id}
           bgColor={section.bgColor}
           color={section.color}
           waveToColor={sections[index + 1]?.bgColor}
