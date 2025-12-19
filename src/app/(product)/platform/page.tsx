@@ -22,6 +22,7 @@ export default function Platform() {
   resetSwapStatus()
   const sections: Section[] = [
     {
+      id: "simple-flows",
       bgColor: getNextColor(),
       children: <SimpleFlows />,
     },
@@ -66,7 +67,7 @@ export default function Platform() {
             <p>Automation and integration projects are completed using Ziggy Blocks and Flows.</p>
           </>
         }
-        cta={<CTA label="Feature Overview" href="features" />}
+        cta={<CTA label="Learn More" href="platform#simple-flows" />}
         scale={0.8}
       />
 

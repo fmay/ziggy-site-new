@@ -38,12 +38,6 @@ export default function Cluster() {
             }
             image="/product/cluster/machines.webp"
             scale={0.8}
-            cta={
-              <CTA
-                label="Overview"
-                href="https://docs.ziggyservices.com/user-guide/cluster/overview"
-              />
-            }
           />
         </>
       ),
@@ -65,12 +59,6 @@ export default function Cluster() {
             }
             image="/product/cluster/server-size.webp"
             scale={0.7}
-            cta={
-              <CTA
-                label="Overview"
-                href="https://docs.ziggyservices.com/user-guide/cluster/overview"
-              />
-            }
           />
         </>
       ),

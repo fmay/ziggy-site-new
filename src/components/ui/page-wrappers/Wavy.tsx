@@ -110,7 +110,7 @@ const Wavy: FC<WavyProps> = ({
   // console.log(variant, svgPath)
 
   return (
-    <div className={`w-full flex flex-col`} style={{ backgroundColor: fromCol }}>
+    <div className={`w-full flex flex-col`} style={{ backgroundColor: fromCol, zIndex: -1 }}>
       {children}
       {fromCol && toCol && (
         <WaveSvg

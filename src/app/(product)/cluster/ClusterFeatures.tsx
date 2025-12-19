@@ -28,7 +28,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
     {
       content: (
         <>
-          <h2>Level 2 CLuster</h2>
+          <h2>Level 2 Cluster</h2>
           <p>
             When you need both high performance and fault tolerance. The database can run in a
             managed service such as AWS RDS or in your own database cluster.

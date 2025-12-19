@@ -95,7 +95,6 @@ export default function IntegrationPartners() {
             className="flex flex-col gap-0 items-center 
             lg:flex-row lg:gap-8 lg:items-start">
             <CTA label="Become a Partner" href="contact" noBottomMargin />
-            <CTA label="Learn More" href="extend" noBottomMargin />
           </div>
         }
       />

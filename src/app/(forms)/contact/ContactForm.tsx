@@ -20,6 +20,7 @@ const PUBLIC_EMAIL_DOMAINS = [
   'gmx.com',
   'live.com',
   'me.com',
+  'mac.com',
   'msn.com',
 ]
 

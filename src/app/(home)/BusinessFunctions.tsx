@@ -28,7 +28,7 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
         imageCopy={<ImageContent />}
         image="/home/business-functions.webp"
         scale={0.9}
-        cta={<CTA label="Learn More" href="platform" noBottomMargin />}
+        cta={<CTA label="Learn More" href="demo" noBottomMargin />}
         swap={swap}
       />
     </div>

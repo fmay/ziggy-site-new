@@ -50,10 +50,10 @@ export default function Extend() {
             }
             image="/product/extend/become-partner.webp"
             cta={
-              <CTA
-                label="Booke a Demo"
-                href="demo"
-              />
+              <>
+                {/*<CTA label="About Integration Partners" href="demo" />*/}
+                <CTA label="Booke a Demo" href="demo" />{' '}
+              </>
             }
             scale={0.9}
           />
@@ -82,8 +82,12 @@ export default function Extend() {
             </p>
           </>
         }
-        imageNudge={-10}
-        cta={<CTA label="Book a demo" href="demo" />}
+        imageNudge={30}
+        cta={
+          <div className="flex flex-row gap-4">
+            <CTA label="Book a demo" href="demo" noBottomMargin /> <CTA label="Become an Integation Partner" href="integrtion-partners" noBottomMargin />
+          </div>
+        }
       />
       {sections.map((section, index) => (
         <PageSection

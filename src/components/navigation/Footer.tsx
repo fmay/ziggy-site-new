@@ -33,7 +33,7 @@ const Footer = () => (
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link href="/integration-partners#nocoding" className={styles.link}>
+              <Link href="extend" className={styles.link}>
                 Customization
               </Link>
             </li>
@@ -71,11 +71,11 @@ const Footer = () => (
                 Documentation
               </Link>
             </li>
-            <li className={styles.linkItem}>
-              <Link href="" className={styles.link}>
-                Guides
-              </Link>
-            </li>
+            {/*<li className={styles.linkItem}>*/}
+            {/*  <Link href="" className={styles.link}>*/}
+            {/*    Guides*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
           </ul>
         </div>
       </div>

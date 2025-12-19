@@ -66,7 +66,7 @@ export const navigationConfig: NavigationConfig = {
               },
               {
                 label: 'Customization',
-                href: '/integration-partners#nocoding',
+                href: '/extend',
                 description: 'Extend Ziggy with your own Custom Blocks',
                 icon: '/nav/flow.svg',
               },
