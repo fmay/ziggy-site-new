@@ -43,10 +43,10 @@ export default function HomePage() {
       bgColor: getNextColor(),
       children: <IntegrationPartner />,
     },
-    {
-      bgColor: getNextColor(),
-      children: <Subscribe />,
-    },
+    // {
+    //   bgColor: getNextColor(),
+    //   children: <Subscribe />,
+    // },
   ]
 
   return (

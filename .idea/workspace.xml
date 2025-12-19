@@ -7,7 +7,10 @@
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="integration partners update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/integration-partners/ScrollIntro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/integration-partners/ScrollIntro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(home)/home-page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,15 +176,7 @@
       <workItem from="1765972305113" duration="6784000" />
       <workItem from="1765987317795" duration="4916000" />
       <workItem from="1766036167569" duration="2370000" />
-      <workItem from="1766137012154" duration="5083000" />
-    </task>
-    <task id="LOCAL-00211" summary="adding content">
-      <option name="closed" value="true" />
-      <created>1765452896426</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1765452896426</updated>
+      <workItem from="1766137012154" duration="7378000" />
     </task>
     <task id="LOCAL-00212" summary="update">
       <option name="closed" value="true" />
@@ -567,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766143030814</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary="integration partners update">
+      <option name="closed" value="true" />
+      <created>1766144519535</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1766144519536</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
