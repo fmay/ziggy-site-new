@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="contact form sending">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(forms)/contact/ContactForm.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="bill fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,47 +170,7 @@
       <workItem from="1765987317795" duration="4916000" />
       <workItem from="1766036167569" duration="2370000" />
       <workItem from="1766137012154" duration="7849000" />
-      <workItem from="1766157931046" duration="308000" />
-    </task>
-    <task id="LOCAL-00213" summary="update">
-      <option name="closed" value="true" />
-      <created>1765458499917</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1765458499918</updated>
-    </task>
-    <task id="LOCAL-00214" summary="hero top">
-      <option name="closed" value="true" />
-      <created>1765463986678</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1765463986678</updated>
-    </task>
-    <task id="LOCAL-00215" summary="hero top">
-      <option name="closed" value="true" />
-      <created>1765465196490</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1765465196491</updated>
-    </task>
-    <task id="LOCAL-00216" summary="hero top">
-      <option name="closed" value="true" />
-      <created>1765465558649</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1765465558649</updated>
-    </task>
-    <task id="LOCAL-00217" summary="hero top 2">
-      <option name="closed" value="true" />
-      <created>1765467546856</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1765467546856</updated>
+      <workItem from="1766157931046" duration="5675000" />
     </task>
     <task id="LOCAL-00218" summary="hero top doing mobile">
       <option name="closed" value="true" />
@@ -567,7 +524,47 @@
       <option name="project" value="LOCAL" />
       <updated>1766147895147</updated>
     </task>
-    <option name="localTasksCounter" value="262" />
+    <task id="LOCAL-00262" summary="content update">
+      <option name="closed" value="true" />
+      <created>1766161024836</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1766161024836</updated>
+    </task>
+    <task id="LOCAL-00263" summary="svg overlap fixed">
+      <option name="closed" value="true" />
+      <created>1766161484941</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1766161484941</updated>
+    </task>
+    <task id="LOCAL-00264" summary="anchor fixed">
+      <option name="closed" value="true" />
+      <created>1766161968605</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1766161968605</updated>
+    </task>
+    <task id="LOCAL-00265" summary="bill fixes">
+      <option name="closed" value="true" />
+      <created>1766162322022</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1766162322022</updated>
+    </task>
+    <task id="LOCAL-00266" summary="bill fixes">
+      <option name="closed" value="true" />
+      <created>1766163194975</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1766163194975</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,10 +610,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="hero top doing mobile 3" />
-    <MESSAGE value="hero top doing mobile 4" />
-    <MESSAGE value="bill's changes" />
-    <MESSAGE value="flows 0.7" />
     <MESSAGE value="flows 0.8" />
     <MESSAGE value="pricing extenalised" />
     <MESSAGE value="pricing updated" />
@@ -638,7 +631,11 @@
     <MESSAGE value="home refactor 3" />
     <MESSAGE value="integration partners update" />
     <MESSAGE value="contact form sending" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact form sending" />
+    <MESSAGE value="content update" />
+    <MESSAGE value="svg overlap fixed" />
+    <MESSAGE value="anchor fixed" />
+    <MESSAGE value="bill fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bill fixes" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
