@@ -8,11 +8,10 @@ import Hero from '@/components/ui/hero/Hero'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
 import SimplePair from '@/components/ui/simple-pair/SimplePair'
-import { getSwapStatus } from '@/utils/swapStatus'
-
-const swap = getSwapStatus()
+import { getSwapStatus, resetSwapStatus } from '@/utils/swapStatus'
 
 export default function Cluster() {
+  resetSwapStatus()
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
@@ -41,7 +40,7 @@ export default function Cluster() {
             }
             image="/product/cluster/machines.webp"
             scale={0.8}
-            swap={swap}
+            swap={getSwapStatus()}
           />
         </>
       ),
@@ -64,7 +63,7 @@ export default function Cluster() {
             }
             image="/product/cluster/server-size.webp"
             scale={0.7}
-            swap={swap}
+            swap={getSwapStatus()}
           />
         </>
       ),

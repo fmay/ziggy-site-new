@@ -6,7 +6,6 @@ import CTA from '@/components/ui/cta/CTA'
 import { getSwapStatus } from '@/utils/swapStatus'
 
 interface BusinessFunctionsProps {}
-const swap = getSwapStatus()
 
 const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
   const ImageContent = () => {
@@ -29,7 +28,7 @@ const BusinessFunctions: FC<BusinessFunctionsProps> = ({}) => {
         image="/home/business-functions.webp"
         scale={0.9}
         cta={<CTA label="Learn More" href="demo" noBottomMargin />}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

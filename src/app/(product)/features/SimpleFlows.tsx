@@ -5,15 +5,13 @@ import CTA from '@/components/ui/cta/CTA'
 
 interface SimpleFlowsProps {}
 
-const swap = getSwapStatus()
-
 const SimpleFlows: FC<SimpleFlowsProps> = ({}) => {
   return (
     <SimplePair
       title="Simple flows can do complex things"
       subtitle=""
       image="/home/simple-flow.webp"
-      swap={swap}
+      swap={getSwapStatus()}
       imageCopy={
         <div>
           <p>

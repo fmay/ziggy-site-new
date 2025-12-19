@@ -5,12 +5,10 @@ import CTA from '@/components/ui/cta/CTA'
 
 interface ComplexFlowsProps {}
 
-const swap = getSwapStatus()
-
 const ComplexFlows: FC<ComplexFlowsProps> = ({}) => {
   return (
     <SimplePair
-      swap={swap}
+      swap={getSwapStatus()}
       title="Ziggy does complex, too!"
       subtitle=""
       image="/platform/complex-flow.webp"

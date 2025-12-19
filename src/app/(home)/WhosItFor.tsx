@@ -6,7 +6,6 @@ import CTA from '@/components/ui/cta/CTA'
 import { getSwapStatus } from '@/utils/swapStatus'
 
 interface WhosItForProps {}
-const swap = getSwapStatus()
 
 const WhosItFor: FC<WhosItForProps> = ({}) => {
   const ImageContent = () => {
@@ -20,7 +19,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
         <p>
           Its AI features let you to accomplish tasks that normally require developers.
         </p>
-        <p>It’s simply easier and faster to use than other automation tools
+        <p>It's simply easier and faster to use than other automation tools
           and platforms.</p>
       </>
     )
@@ -35,7 +34,7 @@ const WhosItFor: FC<WhosItForProps> = ({}) => {
         image="/home/who-for.webp"
         cta={<CTA label="Learn More" href="platform" noBottomMargin />}
         scale={0.6}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

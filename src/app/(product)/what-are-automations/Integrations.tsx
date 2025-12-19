@@ -7,7 +7,6 @@ import { getSwapStatus } from '@/utils/swapStatus'
 
 interface IntegrationsProps {
 }
-const swap = getSwapStatus()
 
 const Integrations:FC<IntegrationsProps> = ({}) => {
   const ImageContent = () => {
@@ -28,7 +27,7 @@ const Integrations:FC<IntegrationsProps> = ({}) => {
       image="/product/what-are-automations/integrations.webp"
       cta={<CTA label="See Example" href="#example-integration" noBottomMargin />}
       scale={0.6}
-      swap={swap}
+      swap={getSwapStatus()}
     />
   )
 }

@@ -5,8 +5,6 @@ import { getSwapStatus } from '@/utils/swapStatus'
 
 interface AllFeaturesProps {}
 
-const swap = getSwapStatus()
-
 const AllFeatures: FC<AllFeaturesProps> = ({}) => {
   const ImageContent = () => {
     return (
@@ -31,7 +29,7 @@ const AllFeatures: FC<AllFeaturesProps> = ({}) => {
         image="/platform/features.webp"
         cta={<CTA label="See Features" href="features" noBottomMargin />}
         scale={0.7}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

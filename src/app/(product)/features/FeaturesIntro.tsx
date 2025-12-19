@@ -6,15 +6,13 @@ import Link from 'next/link'
 
 interface FeaturesIntroProps {}
 
-const swap = getSwapStatus()
-
 const FeaturesIntro: FC<FeaturesIntroProps> = ({}) => {
   return (
     <SimplePair
       title="Flows and Blocks"
       subtitle=""
       image="/platform/complex-flow.webp"
-      swap={swap}
+      swap={getSwapStatus()}
       imageCopy={
         <div>
           <p>See <Link href="flows">Ziggy Blocks and Flows</Link> for information about flow building process.</p>

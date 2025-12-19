@@ -6,7 +6,6 @@ import CTA from '@/components/ui/cta/CTA'
 import { getSwapStatus } from '@/utils/swapStatus'
 
 interface IntegrationPartnerProps {}
-const swap = getSwapStatus()
 
 const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
   const ImageContent = () => {
@@ -29,7 +28,7 @@ const IntegrationPartner: FC<IntegrationPartnerProps> = ({}) => {
         image="/home/home-pip.webp"
         scale={0.75}
         cta={<CTA label="Learn More" href="integration-partners" noBottomMargin />}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

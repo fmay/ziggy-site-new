@@ -5,8 +5,6 @@ import { getSwapStatus } from '@/utils/swapStatus'
 
 interface ClusterProps {}
 
-const swap = getSwapStatus()
-
 const Cluster: FC<ClusterProps> = ({}) => {
   const ImageContent = () => {
     return (
@@ -31,7 +29,7 @@ const Cluster: FC<ClusterProps> = ({}) => {
         image="/platform/cluster.webp"
         cta={<CTA label="Learn More" href="cluster" noBottomMargin />}
         scale={0.7}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

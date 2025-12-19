@@ -6,8 +6,6 @@ import { getSwapStatus } from '@/utils/swapStatus'
 
 interface AIProps {}
 
-const swap = getSwapStatus()
-
 const AI: FC<AIProps> = ({}) => {
   return (
     <div>
@@ -23,7 +21,7 @@ const AI: FC<AIProps> = ({}) => {
         }
         image="/product/features/block.webp"
         scale={0.7}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

@@ -6,7 +6,6 @@ import CTA from '@/components/ui/cta/CTA'
 import { getSwapStatus } from '@/utils/swapStatus'
 
 interface WhatIntegrationAutomationProps {}
-const swap = getSwapStatus()
 
 const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
   const ImageContent = () => {
@@ -30,7 +29,7 @@ const WhatIntegrationAutomation: FC<WhatIntegrationAutomationProps> = ({}) => {
         image="/hero/whats-an-automation.webp"
         cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
         scale={0.7}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

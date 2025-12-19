@@ -7,8 +7,6 @@ import { getSwapStatus } from '@/utils/swapStatus'
 
 interface ExtensibleProps {}
 
-const swap = getSwapStatus()
-
 const Extensible: FC<ExtensibleProps> = ({}) => {
   const ImageContent = () => {
     return (
@@ -30,7 +28,7 @@ const Extensible: FC<ExtensibleProps> = ({}) => {
         image="/home/home-customise.webp"
         scale={0.7}
         cta={<CTA label="Learn More" href="extend" noBottomMargin />}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )

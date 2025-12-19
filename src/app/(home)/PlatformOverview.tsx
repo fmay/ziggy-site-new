@@ -6,7 +6,6 @@ import CTA from '@/components/ui/cta/CTA'
 import { getSwapStatus } from '@/utils/swapStatus'
 
 interface PlatformOverviewProps {}
-const swap = getSwapStatus()
 
 const PlatformOverview: FC<PlatformOverviewProps> = ({}) => {
   return (
@@ -23,7 +22,7 @@ const PlatformOverview: FC<PlatformOverviewProps> = ({}) => {
         image="/platform/features.webp"
         scale={0.6}
         cta={<CTA label="Learn More" href="platform" noBottomMargin />}
-        swap={swap}
+        swap={getSwapStatus()}
       />
     </div>
   )
