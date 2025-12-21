@@ -51,8 +51,8 @@ export default function Extend() {
             image="/product/extend/become-partner.webp"
             cta={
               <>
-                {/*<CTA label="About Integration Partners" href="demo" />*/}
-                <CTA label="Booke a Demo" href="demo" />{' '}
+                <CTA label="About Integration Partners" href="integration-partners" />
+                {/*<CTA label="Booke a Demo" href="demo" />{' '}*/}
               </>
             }
             scale={0.9}
