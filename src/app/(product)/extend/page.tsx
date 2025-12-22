@@ -85,7 +85,7 @@ export default function Extend() {
         imageNudge={30}
         cta={
           <div className="flex flex-row gap-4">
-            <CTA label="Book a demo" href="demo" noBottomMargin /> <CTA label="Become an Integation Partner" href="integrtion-partners" noBottomMargin />
+            <CTA label="Book a demo" href="demo" noBottomMargin /> <CTA label="Become an Integation Partner" href="integration-partners" noBottomMargin />
           </div>
         }
       />
