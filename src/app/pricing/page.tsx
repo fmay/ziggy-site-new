@@ -9,14 +9,20 @@ import Hero from '@/components/ui/hero/Hero'
 import Services from '@/app/pricing/Services'
 import { createColorCycler } from '@/utils/colorCycler'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import PricingTable from '@/app/pricing/pricing-table'
 
 export default function IntegrationPartners() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
+    // {
+    //   id: 'calculator',
+    //   bgColor: 'pale-blue',
+    //   children: <PricingCalculator />,
+    // },
     {
       id: 'calculator',
       bgColor: 'pale-blue',
-      children: <PricingCalculator />,
+      children: <PricingTable />,
     },
     {
       id: 'services',

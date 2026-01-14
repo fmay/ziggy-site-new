@@ -36,7 +36,6 @@ const Hero: FC<HeroProps> = ({
   imageNudge = 0,
 }) => {
   const {isLg} = useScreenSize()
-console.log(isLg)
   return (
     <section
       className={`${styles.heroSection} ${minimal ? styles.minimal : ''}`}

@@ -1,0 +1,83 @@
+.tableContainer {
+  @apply w-full overflow-x-auto;
+}
+
+.pricingTable {
+  @apply w-full border-collapse;
+}
+
+// Header styles
+.featureHeader {
+  @apply text-left text-sm font-semibold text-gray-700 py-4 px-4 border-b-2 border-gray-200;
+}
+
+.columnHeader {
+  @apply text-center text-sm font-semibold text-gray-900 py-4 px-4 border-b-2 border-gray-200;
+}
+
+// Row styles
+.featureRow {
+  @apply border-b border-gray-100;
+
+  &:hover {
+    @apply bg-gray-50;
+  }
+}
+
+// Cell styles
+.featureCell {
+  @apply py-4 px-4 text-sm text-gray-700;
+  @apply flex items-center gap-2;
+}
+
+.featureName {
+  @apply font-medium;
+}
+
+.valueCell {
+  @apply py-4 px-4 text-sm text-gray-600 text-center;
+}
+
+// Info icon and tooltip
+.infoIcon {
+  @apply relative inline-flex items-center cursor-help text-gray-400;
+  @apply hover:text-gray-600 transition-colors;
+
+  svg {
+    @apply w-4 h-4;
+  }
+}
+
+.tooltip {
+  position: fixed;
+  background-color: #111827;
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  z-index: 50;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: auto;
+  max-width: 400px;
+}
+
+// Footer and CTA styles
+.footerCell {
+  @apply py-6 px-4;
+}
+
+.ctaCell {
+  @apply py-6 px-4 text-center;
+}
+
+.ctaButton {
+  @apply inline-block px-6 py-2 bg-stripe-purple text-white text-sm font-medium rounded-full;
+  @apply hover:bg-opacity-90 transition-all duration-200;
+  @apply no-underline;
+}
+
+// Mobile placeholder styles
+.mobilePlaceholder {
+  @apply p-8 text-center text-gray-500 bg-gray-50 rounded-lg;
+}

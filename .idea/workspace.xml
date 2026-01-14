@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="bill fixes">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="seo basics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <recent name="$PROJECT_DIR$/public/integration-partners" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -117,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.cache" />
       </list>
     </recent_temporary>
@@ -179,15 +177,7 @@
       <workItem from="1766308964815" duration="377000" />
       <workItem from="1766310887767" duration="215000" />
       <workItem from="1766407561538" duration="1593000" />
-      <workItem from="1766821793513" duration="2376000" />
-    </task>
-    <task id="LOCAL-00221" summary="hero top doing mobile 4">
-      <option name="closed" value="true" />
-      <created>1765476679524</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1765476679524</updated>
+      <workItem from="1766821793513" duration="3904000" />
     </task>
     <task id="LOCAL-00222" summary="bill's changes">
       <option name="closed" value="true" />
@@ -573,7 +563,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766407663556</updated>
     </task>
-    <option name="localTasksCounter" value="270" />
+    <task id="LOCAL-00270" summary="seo basics">
+      <option name="closed" value="true" />
+      <created>1766824658804</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1766824658804</updated>
+    </task>
+    <option name="localTasksCounter" value="271" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="flows 0.8" />
     <MESSAGE value="pricing extenalised" />
     <MESSAGE value="pricing updated" />
     <MESSAGE value="updates for bill" />
@@ -644,7 +641,8 @@
     <MESSAGE value="svg overlap fixed" />
     <MESSAGE value="anchor fixed" />
     <MESSAGE value="bill fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bill fixes" />
+    <MESSAGE value="seo basics" />
+    <option name="LAST_COMMIT_MESSAGE" value="seo basics" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
