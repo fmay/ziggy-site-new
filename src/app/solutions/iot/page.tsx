@@ -1,54 +1,24 @@
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
-import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
-import CTA from '@/components/ui/cta/CTA'
-import { GiCheckMark } from 'react-icons/gi'
-import Hero from '@/components/ui/hero/Hero'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { createColorCycler } from '@/utils/colorCycler'
-import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
-import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
+import Hero from '@/components/ui/hero/Hero'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import ScrollIntro from '@/app/integration-partners/ScrollIntro'
+import { WavyVariantEnum } from '@/types/wavy'
+import { GiCheckMark } from 'react-icons/gi'
+import CTA from '@/components/ui/cta/CTA'
 
-export default function IntegrationPartners() {
+export default function CRMSolutions() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <PlatformIntro />,
-    // },
-    // {
-    //   id: "nocoding",
-    //   bgColor: getNextColor(),
-    //   children: <NoCoding />,
-    // },
-    {
-      bgColor: getNextColor(),
-      children: <ScrollIntro />,
-    },
-    {
-      id: "how-its-done",
-      bgColor: getNextColor(),
-      children: <CustomizationStack />,
-    },
     {
       id: 'hubspot',
       bgColor: getNextColor(),
       children: (
         <>
-          <CollectionsExtendIntro />
           <HubspotBlockCollection />
         </>
       ),
     },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <HowItsDone />,
-    // },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <PartnerFeatures />,
-    // },
   ]
 
   return (
@@ -60,33 +30,30 @@ export default function IntegrationPartners() {
         image="/hero/integration-partners.webp"
         scale={0.7}
         imageNudge={60}
-        title="Become an Integration Partner"
+        title="Internet of Things"
         subtitle={
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Make it simple for your customers to integrate with your platform</span>
+              <span>Full support for MQTT and other messaging protocols</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>
-                Provide your customers with your own branded and customised Ziggy Blocks and Ziggy
-                Flows to represent your specific platform requirements.
-              </span>
+              <span>Process any volume of messages in Ziggy Flows</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Open up new customer revenue streams for your business</span>
+              <span>Event driven or manual messages to IoT devices</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Keep performance & security 100% under your control</span>
+              <span>Complete control over data security and performance - runs on your preferred infrastructure</span>
             </li>
           </ul>
         }
         cta={
           <div
-            className="flex flex-col gap-0 items-center 
+            className="flex flex-col gap-0 items-center
             lg:flex-row lg:gap-8 lg:items-start">
             <CTA label="Become a Partner" href="contact" noBottomMargin />
           </div>

@@ -1,54 +1,58 @@
 import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
-import { WavyVariantEnum } from '@/components/ui/page-wrappers/Wavy'
-import CTA from '@/components/ui/cta/CTA'
-import { GiCheckMark } from 'react-icons/gi'
-import Hero from '@/components/ui/hero/Hero'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { createColorCycler } from '@/utils/colorCycler'
-import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
-import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
+import Hero from '@/components/ui/hero/Hero'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import ScrollIntro from '@/app/integration-partners/ScrollIntro'
+import { WavyVariantEnum } from '@/types/wavy'
+import { GiCheckMark } from 'react-icons/gi'
+import CTA from '@/components/ui/cta/CTA'
+import ExampleBlocks from '@/app/solutions/crm/ExampleBlocks'
+import Spacer from '@/components/page/Spacer'
+import AboutIntegrations from '@/app/solutions/crm/AboutIntegrations'
+import Hosting from '@/app/solutions/crm/Hosting'
+import Services from '@/app/solutions/crm/Services'
 
-export default function IntegrationPartners() {
+export default function CRMSolutions() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <PlatformIntro />,
-    // },
-    // {
-    //   id: "nocoding",
-    //   bgColor: getNextColor(),
-    //   children: <NoCoding />,
-    // },
     {
+      id: 'about',
       bgColor: getNextColor(),
-      children: <ScrollIntro />,
+      children: (
+        <>
+          <AboutIntegrations />
+        </>
+      ),
     },
     {
-      id: "how-its-done",
+      id: 'control',
       bgColor: getNextColor(),
-      children: <CustomizationStack />,
+      children: (
+        <>
+          <Hosting />
+        </>
+      ),
     },
     {
       id: 'hubspot',
       bgColor: getNextColor(),
       children: (
         <>
-          <CollectionsExtendIntro />
+          <ExampleBlocks />
+          <Spacer height={100} />
           <HubspotBlockCollection />
         </>
       ),
     },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <HowItsDone />,
-    // },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <PartnerFeatures />,
-    // },
+    {
+      id: 'services',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <Services />
+        </>
+      ),
+    },
   ]
 
   return (
@@ -60,33 +64,30 @@ export default function IntegrationPartners() {
         image="/hero/integration-partners.webp"
         scale={0.7}
         imageNudge={60}
-        title="Become an Integration Partner"
+        title="Integrations, Automations and Migration for your CRM platform"
         subtitle={
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Make it simple for your customers to integrate with your platform</span>
+              <span>Integrate your CRM with other platforms, databases, APIs and systems</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>
-                Provide your customers with your own branded and customised Ziggy Blocks and Ziggy
-                Flows to represent your specific platform requirements.
-              </span>
+              <span>Automate processes triggered by events in your CRM or other systems</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Open up new customer revenue streams for your business</span>
+              <span>Generate revenues from Ziggy centric professional services</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Keep performance & security 100% under your control</span>
+              <span>Use for customer migrations</span>
             </li>
           </ul>
         }
         cta={
           <div
-            className="flex flex-col gap-0 items-center 
+            className="flex flex-col gap-0 items-center
             lg:flex-row lg:gap-8 lg:items-start">
             <CTA label="Become a Partner" href="contact" noBottomMargin />
           </div>

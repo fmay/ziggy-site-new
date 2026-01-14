@@ -81,71 +81,36 @@ export const navigationConfig: NavigationConfig = {
         ],
       },
     },
-    // {
-    //   label: 'Solutions',
-    //   dropdown: {
-    //     sections: [
-    //       {
-    //         title: 'General',
-    //         items: [
-    //           {
-    //             label: 'Integrations',
-    //             href: '/solutions',
-    //             description: 'Trigger Ziggy Flows when data changes in any system',
-    //             icon: '/nav/flow.svg',
-    //           },
-    //           {
-    //             label: 'Migrations',
-    //             href: '/solutions',
-    //             description: 'Move any amount of data between systems',
-    //             icon: '/nav/flow.svg',
-    //           },
-    //         ],
-    //       },
-    //       {
-    //         title: 'Sector',
-    //         items: [
-    //           {
-    //             label: 'HubSpot',
-    //             href: '/solutions',
-    //             description: 'Building Ziggy flows for HubSpot',
-    //             icon: '/nav/flow.svg',
-    //           },
-    //           {
-    //             label: 'Internet of Things',
-    //             href: '/solutions',
-    //             description: 'Store data anywhere at any scale, send messages to devices',
-    //             icon: '/nav/flow.svg',
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      label: 'Solutions',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              {
+                label: 'CRM',
+                href: '/solutions/crm',
+                description: 'Integrations. automations and migrations for your CRM',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Internet of Things',
+                href: '/solutions/iot',
+                description: 'Handle IoT messages at scale, processing data with Ziggy Flows',
+                icon: '/nav/flow.svg',
+              },
+              {
+                label: 'Resellers & Agencies',
+                href: '/solutions/reseller',
+                description: 'Generate revenue from Ziggy-centric services and sales',
+                icon: '/nav/flow.svg',
+              },
+            ],
+          },
+        ],
+      },
+    },
     { label: 'Integration Partners', href: '/integration-partners' },
-    // {
-    //   label: 'Integration Partners',
-    //   dropdown: {
-    //     sections: [
-    //       {
-    //         items: [
-    //           {
-    //             label: 'About integration partners',
-    //             href: '/integration-partners',
-    //             description: 'What is an Integration Partner?',
-    //             icon: '/nav/flow.svg',
-    //           },
-    //           {
-    //             label: 'Integrating with your platform',
-    //             href: '/developers',
-    //             description: 'Building custom blocks that talk to your platform',
-    //             icon: '/nav/flow.svg',
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
     {
       label: 'Resources',
       dropdown: {
