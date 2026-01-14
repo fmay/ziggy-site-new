@@ -6,16 +6,58 @@ import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCol
 import { WavyVariantEnum } from '@/types/wavy'
 import { GiCheckMark } from 'react-icons/gi'
 import CTA from '@/components/ui/cta/CTA'
+import AboutIOT from '@/app/solutions/iot/AboutIOT'
+import Hosting from '@/app/solutions/iot/Hosting'
+import { DefaultColorCycle } from '@/constants/default-colors'
+import ProcessMessages from '@/app/solutions/iot/ProcessMessages'
+import SendMessages from '@/app/solutions/iot/SendMessages'
+import Services from '@/app/solutions/iot/Services'
 
 export default function CRMSolutions() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      id: 'hubspot',
+      id: 'about',
       bgColor: getNextColor(),
       children: (
         <>
-          <HubspotBlockCollection />
+          <AboutIOT />
+        </>
+      ),
+    },
+    {
+      id: 'messaging',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <ProcessMessages />
+        </>
+      ),
+    },
+    {
+      id: 'send-message',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <SendMessages />
+        </>
+      ),
+    },
+    {
+      id: 'hosting',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <Hosting />
+        </>
+      ),
+    },
+    {
+      id: 'services',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <Services />
         </>
       ),
     },
@@ -25,8 +67,8 @@ export default function CRMSolutions() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="header-footer"
-        wavyVariant={WavyVariantEnum.Simple}
+        toColor={DefaultColorCycle[0]}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/integration-partners.webp"
         scale={0.7}
         imageNudge={60}

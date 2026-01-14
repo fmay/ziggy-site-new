@@ -2,20 +2,41 @@ import PageSection, { Section } from '@/components/ui/page-wrappers/PageSection'
 import styles from '@/components/ui/hero/hero.module.scss'
 import { createColorCycler } from '@/utils/colorCycler'
 import Hero from '@/components/ui/hero/Hero'
-import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
 import { WavyVariantEnum } from '@/types/wavy'
 import { GiCheckMark } from 'react-icons/gi'
 import CTA from '@/components/ui/cta/CTA'
+import { DefaultColorCycle } from '@/constants/default-colors'
+import ConsultancyOpportunity from '@/app/solutions/reseller/ConsultancyOpportunity'
+import ResaleOpportunity from '@/app/solutions/reseller/ResaleOpportunity'
+import Discounts from '@/app/solutions/reseller/Discounts'
 
 export default function CRMSolutions() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      id: 'hubspot',
+      id: 'consultancy',
       bgColor: getNextColor(),
       children: (
         <>
-          <HubspotBlockCollection />
+          <ConsultancyOpportunity />
+        </>
+      ),
+    },
+    {
+      id: 'resale',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <ResaleOpportunity />
+        </>
+      ),
+    },
+    {
+      id: 'discount',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <Discounts />
         </>
       ),
     },
@@ -25,8 +46,8 @@ export default function CRMSolutions() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="header-footer"
-        wavyVariant={WavyVariantEnum.Simple}
+        toColor={DefaultColorCycle[0]}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/integration-partners.webp"
         scale={0.7}
         imageNudge={60}

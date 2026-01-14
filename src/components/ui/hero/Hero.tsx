@@ -35,7 +35,7 @@ const Hero: FC<HeroProps> = ({
   scale = 1,
   imageNudge = 0,
 }) => {
-  const {isLg} = useScreenSize()
+  const { isLg } = useScreenSize()
   return (
     <section
       className={`${styles.heroSection} ${minimal ? styles.minimal : ''}`}
@@ -62,7 +62,9 @@ const Hero: FC<HeroProps> = ({
 
             {/*IMAGE*/}
             <div className={styles.col2}>
-              <div className={styles.heroImage} style={{ marginTop: `${(imageNudge && isLg) ? imageNudge + 'px' : '0px'}` }}>
+              <div
+                className={styles.heroImage}
+                style={{ marginTop: `${imageNudge && isLg ? imageNudge + 'px' : '0px'}` }}>
                 <Image src={image} alt="" width={600 * scale} height={0} />
               </div>
             </div>

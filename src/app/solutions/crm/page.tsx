@@ -11,6 +11,7 @@ import Spacer from '@/components/page/Spacer'
 import AboutIntegrations from '@/app/solutions/crm/AboutIntegrations'
 import Hosting from '@/app/solutions/crm/Hosting'
 import Services from '@/app/solutions/crm/Services'
+import { DefaultColorCycle } from '@/constants/default-colors'
 
 export default function CRMSolutions() {
   const getNextColor = createColorCycler()
@@ -59,8 +60,8 @@ export default function CRMSolutions() {
     <>
       <Hero
         fromColor="header-footer"
-        toColor="header-footer"
-        wavyVariant={WavyVariantEnum.Simple}
+        toColor={DefaultColorCycle[0]}
+        wavyVariant={WavyVariantEnum.Standard}
         image="/hero/integration-partners.webp"
         scale={0.7}
         imageNudge={60}
