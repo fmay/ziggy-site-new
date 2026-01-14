@@ -18,10 +18,18 @@ export interface FeatureWithoutInfo {
 
 export type Feature = FeatureWithInfo | FeatureWithoutInfo
 
+// Type for pricing in multiple currencies
+export interface PricingConfig {
+  usd: number
+  eur: number
+  gbp: number
+}
+
 // Type for column configuration
 export interface ColumnConfig {
   title: string
   values: Record<string, string>
+  pricing: PricingConfig
   contactLink?: string
 }
 
@@ -32,32 +40,25 @@ export const features: Feature[] = [
   { name: 'Hosting', hasInfo: true, infoText: 'Ziggy always runs in a private instance. For Enterprise and Integration Partner, you have the choice between Ziggy managed infrastructure or your own.' },
   { name: 'Organizations', hasInfo: true, infoText: 'Only the Integration Partners supports multiple organizations' },
   { name: 'Multi-tenant', hasInfo: false },
-  { name: 'Price', hasInfo: false },
+  { name: 'Training', hasInfo: false },
 ]
 
 // Column configurations
 export const columns: ColumnConfig[] = [
   {
-    title: 'Starter',
-    values: {
-      Users: '1',
-      Flows: 'Up to 3',
-      Hosting: 'Private Ziggy managed',
-      Organizations: '1',
-      'Multi-tenant': 'No',
-      Price: '3000',
-    },
-    contactLink: '/contact',
-  },
-  {
     title: 'Enterprise',
     values: {
       Users: 'Unlimited',
       Flows: 'Unlimited',
-      Hosting: 'Private managed or your own Infrastructure',
+      Hosting: 'Private : Ziggy managed or your own Infrastructure',
       Organizations: '1',
       'Multi-tenant': 'No',
-      Price: '12000',
+      Training: '8 hours',
+    },
+    pricing: {
+      usd: 16000,
+      eur: 13500,
+      gbp: 12000,
     },
     contactLink: '/contact',
   },
@@ -66,10 +67,15 @@ export const columns: ColumnConfig[] = [
     values: {
       Users: '3 per Organization',
       Flows: '5 per Organization',
-      Hosting: 'Private managed or your own Infrastructure',
+      Hosting: 'Private: Ziggy managed or your own Infrastructure',
       Organizations: '10 included',
       'Multi-tenant': 'Yes',
-      Price: '6000',
+      Training: '8 hours',
+    },
+    pricing: {
+      usd: 6000,
+      eur: 6500,
+      gbp: 8000,
     },
     contactLink: '/contact',
   },
@@ -92,7 +98,7 @@ const PricingTable: FC<PricingTableProps> = ({}) => {
   }, [])
 
   if (isMobile) {
-    return <PricingTableMobile features={features} columns={columns} />
+    return <PricingTableDesktop features={features} columns={columns} />
   }
 
   return <PricingTableDesktop features={features} columns={columns} />

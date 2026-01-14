@@ -49,7 +49,7 @@ export default function IntegrationPartners() {
             <p>You will also benefit in spending a lot less in staff time and cost, too.</p>
           </>
         }
-        cta={<CTA label="Calculator" href="#calculator" />}
+        // cta={<CTA label="Calculator" href="#calculator" />}
       />
 
       {sections.map((section, index) => (

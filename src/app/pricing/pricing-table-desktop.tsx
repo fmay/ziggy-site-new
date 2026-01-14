@@ -2,7 +2,7 @@
 
 import { FC, useState, useEffect, useRef } from 'react'
 import { IoIosInformationCircleOutline } from 'react-icons/io'
-import { Feature, ColumnConfig } from './pricing-table'
+import { Feature, ColumnConfig, PricingConfig } from './pricing-table'
 import styles from './pricing-table.module.scss'
 import Link from 'next/link'
 
@@ -16,6 +16,22 @@ interface TooltipState {
   text: string
   x: number
   y: number
+}
+
+// Format price with locale-specific thousand separators
+const formatPrice = (amount: number, currency: 'usd' | 'eur' | 'gbp'): string => {
+  const localeMap = {
+    usd: 'en-US',
+    eur: 'de-DE',
+    gbp: 'en-GB',
+  }
+  const symbolMap = {
+    usd: '$',
+    eur: '€',
+    gbp: '£',
+  }
+  const formatted = amount.toLocaleString(localeMap[currency])
+  return `${symbolMap[currency]}${formatted}`
 }
 
 const PricingTableDesktop: FC<PricingTableDesktopProps> = ({ features, columns }) => {
@@ -57,59 +73,75 @@ const PricingTableDesktop: FC<PricingTableDesktopProps> = ({ features, columns }
 
   return (
     <div className={styles.tableContainer}>
-      <table className={styles.pricingTable}>
-        <thead>
-          <tr>
-            <th className={styles.featureHeader}>Features</th>
-            {columns.map((column) => (
-              <th key={column.title} className={styles.columnHeader}>
-                {column.title}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {features.map((feature) => (
-            <tr key={feature.name} className={styles.featureRow}>
-              <td className={styles.featureCell}>
-                <span className={styles.featureName}>{feature.name}</span>
-                {feature.hasInfo && (
-                  <span
-                    className={styles.infoIcon}
-                    onMouseEnter={(e) => handleMouseEnter(feature, e)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <IoIosInformationCircleOutline />
-                  </span>
-                )}
-              </td>
-              {columns.map((column) => (
-                <td key={`${feature.name}-${column.title}`} className={styles.valueCell}>
-                  {column.values[feature.name] || '-'}
-                </td>
-              ))}
-            </tr>
+      <div className={styles.pricingGrid}>
+        {/* Header row */}
+        <div className={styles.gridRow}>
+          <div className={styles.featureHeader}></div>
+          {columns.map((column) => (
+            <div key={column.title} className={styles.columnHeader}>
+              {column.title}
+            </div>
           ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td className={styles.footerCell}></td>
+        </div>
+
+        {/* Feature rows */}
+        {features.map((feature) => (
+          <div key={feature.name} className={styles.gridRow}>
+            <div className={styles.featureCell}>
+              <span className={styles.featureName}>{feature.name}</span>
+              {feature.hasInfo && (
+                <span
+                  className={styles.infoIcon}
+                  onMouseEnter={(e) => handleMouseEnter(feature, e)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <IoIosInformationCircleOutline />
+                </span>
+              )}
+            </div>
             {columns.map((column) => (
-              <td key={`cta-${column.title}`} className={styles.ctaCell}>
-                <Link href={column.contactLink || '/contact'} className={styles.ctaButton}>
-                  Contact Us
-                </Link>
-              </td>
+              <div key={`${feature.name}-${column.title}`} className={styles.valueCell}>
+                {column.values[feature.name] || '-'}
+              </div>
             ))}
-          </tr>
-        </tfoot>
-      </table>
+          </div>
+        ))}
+
+        {/* Pricing row */}
+        <div className={styles.gridRow}>
+          <div className={styles.featureCell}>
+            <span className={styles.featureName}>Price</span>
+          </div>
+          {columns.map((column) => (
+            <div key={`price-${column.title}`} className={styles.valueCell}>
+              <div className={styles.pricingList}>
+                <div>{formatPrice(column.pricing.usd, 'usd')}</div>
+                <div>{formatPrice(column.pricing.eur, 'eur')}</div>
+                <div>{formatPrice(column.pricing.gbp, 'gbp')}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA row */}
+        <div className={styles.gridRow}>
+          <div className={styles.footerCell}></div>
+          {columns.map((column) => (
+            <div key={`cta-${column.title}`} className={styles.ctaCell}>
+              <Link href={column.contactLink || '/contact'} className={styles.ctaButton}>
+                Contact Us
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {tooltip && (
         <div
           ref={tooltipRef}
           style={{
             position: 'fixed',
+            display: 'inline-block',
             left: tooltip.x,
             top: tooltip.y,
             transform: 'translateY(-100%) translateY(-8px)',
@@ -121,7 +153,7 @@ const PricingTableDesktop: FC<PricingTableDesktopProps> = ({ features, columns }
             padding: '0.5rem 0.75rem',
             zIndex: 50,
             boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
-            maxWidth: 400,
+            maxWidth: 300,
           }}
         >
           {tooltip.text}

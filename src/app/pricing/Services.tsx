@@ -12,13 +12,13 @@ const Services: FC<ServicesProps> = ({}) => {
         description={
           <>
             <p>
-              Ziggy is easier to use than anything else, so you won’t need much in the way of
-              services but we’re always here if you need us.
+              Ziggy offers a range of services that cover training, support, consultancy, custom
+              block building and flow design. We're here if you need us.
             </p>
             <p>
-              We think training offers a real benefit and be reassured that if you want help
-              building Ziggy Blocks , Ziggy Flows or anything else, we’re here to help.
-            </p>{' '}
+              We include a day of training to ensure you get off to the best possible start. This
+              training is tailored to suit your needs and can be split into multiple sessions.
+            </p>
             <CTA label="Contact Us" href="contact" />
           </>
         }
