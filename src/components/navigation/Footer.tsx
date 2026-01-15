@@ -67,7 +67,7 @@ const Footer = () => (
           <h4 className={styles.sectionTitle}>Resources</h4>
           <ul className={styles.linkList}>
             <li className={styles.linkItem}>
-              <Link href="https://docs.ziggyservices.com" target="__blank" className={styles.link}>
+              <Link href="https://docs.ziggyplatform.com" target="__blank" className={styles.link}>
                 Documentation
               </Link>
             </li>

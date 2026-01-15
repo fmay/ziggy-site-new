@@ -24,7 +24,7 @@ const NoCoding: FC<NoCodingProps> = ({}) => {
         image="/integration-partners/no-code.webp"
         cta={
           <>
-            <DocsLink href="https://docs.ziggyservices.com/user-guide/plugin/overview">Learn More</DocsLink>
+            <DocsLink href="https://docs.ziggyplatform.com/user-guide/plugin/overview">Learn More</DocsLink>
           </>
         }
         scale={0.8}

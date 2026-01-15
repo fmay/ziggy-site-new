@@ -47,7 +47,7 @@ const ExampleAutomations: FC<ExampleAutomationsProps> = ({ height }) => {
             imageAlt="CRM to ERP"
             imageUrl="/placeholder.svg"
             // linkText="Learn more"
-            // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-read"
+            // linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-read"
             height={ItemHeight}>
             <div>
               <p>When a record changes in your ERP, update the corresponding record in your CRM. Or vice-versa.</p>
@@ -60,7 +60,7 @@ const ExampleAutomations: FC<ExampleAutomationsProps> = ({ height }) => {
             imageAlt="CRM ⟷ ERP"
             imageUrl="/placeholder.svg"
             // linkText="Learn more"
-            // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-read"
+            // linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-read"
             height={ItemHeight}>
             <div>
               <p>When a record change in your CRM, generate an AI summary and save it or send it.</p>
@@ -73,7 +73,7 @@ const ExampleAutomations: FC<ExampleAutomationsProps> = ({ height }) => {
             imageAlt="reporting"
             imageUrl="/placeholder.svg"
             // linkText="Learn more"
-            // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-read"
+            // linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-read"
             height={ItemHeight}>
             <div>
               <p>When data changes in your ERP, CRM or anywhere else, update a data warehouse or database so your reporting is updated</p>
@@ -86,7 +86,7 @@ const ExampleAutomations: FC<ExampleAutomationsProps> = ({ height }) => {
             imageAlt="sftp loading"
             imageUrl="/placeholder.svg"
             // linkText="Learn more"
-            // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-read"
+            // linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-read"
             height={ItemHeight}>
             <div>
               <p>Schedule a periodic load of data from a CSV/JSON file on an SFTP server and load it into any system.</p>

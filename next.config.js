@@ -20,6 +20,32 @@ const nextConfig = {
     })
     return config
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'ziggyservices.com',
+          },
+        ],
+        destination: 'https://ziggyplatform.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.ziggyservices.com',
+          },
+        ],
+        destination: 'https://ziggyplatform.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

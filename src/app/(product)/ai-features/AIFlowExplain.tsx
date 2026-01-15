@@ -12,7 +12,7 @@ const AIFlowExplain: FC = () => {
       title="Transform data on any edge"
       description="Click the AI icon on the edge to open the AI Assistant"
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/AI-Edge-Assistant"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/AI-Edge-Assistant"
       ctaNewTab
       graphic="/product/ai-features/flow-explain/flow-nasty.webp"
       graphicBgColor="bg-flow-gray"
@@ -21,7 +21,7 @@ const AIFlowExplain: FC = () => {
       title="Natural language prompt"
       description="The AI Assistant uses the incoming edge data to ensure it has full context for optimal transformations with minimal input."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/AI-Edge-Assistant"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/AI-Edge-Assistant"
       ctaNewTab
       graphic="/product/ai-features/flow-explain/flow-explain.webp"
       graphicBgColor="bg-flow-gray"

@@ -18,7 +18,7 @@ const ScrollListExtra2: FC = () => {
             </p>
           </div>
 
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Alerts">Learn more</DocsLink>
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Alerts">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/alerts.webp',
@@ -32,7 +32,7 @@ const ScrollListExtra2: FC = () => {
             Store and manage your secrets, fully encrypted, in Ziggy and reference from your flows.
             You can optionally configure a development/production pair.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Secrets">Learn more</DocsLink>
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Secrets">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/secrets.webp',
@@ -45,7 +45,7 @@ const ScrollListExtra2: FC = () => {
             Store and manage your connection parameters and reference from your flows. You can
             optionally configure a development/production pair.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Connections">Learn more</DocsLink>
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Connections">Learn more</DocsLink>
         </div>
       ),
       image: '/product/features/connections.webp',

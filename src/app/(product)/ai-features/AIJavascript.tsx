@@ -16,7 +16,7 @@ const AIJavascript: FC = () => {
             Here's a flow that reads data from your CRM. We also have some extra data. We want to
             perform some custom operations to transform the data
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript#ai-assistant">
             Learn more
           </DocsLink>
         </div>
@@ -32,7 +32,7 @@ const AIJavascript: FC = () => {
             You can see the generated code.
           </p>
           <p>And, of course, you can now edit the Javascript code.</p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript#ai-assistant">
             Learn more
           </DocsLink>
         </div>
@@ -47,7 +47,7 @@ const AIJavascript: FC = () => {
             If you have some Javascript code already present, you can enter <strong>Explain</strong>{' '}
             in the prompt and it will do just that.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript#ai-assistant">
             Learn more
           </DocsLink>
         </div>

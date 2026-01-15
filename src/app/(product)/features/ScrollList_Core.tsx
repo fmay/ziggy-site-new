@@ -16,7 +16,7 @@ const ScrollListCore: FC = () => {
             Each flow can be run from the Ziggy UI or with an API call. Pass in data that should be
             processed by the flow.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Launching-flows">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Launching-flows">
             Learn more
           </DocsLink>
         </div>
@@ -33,7 +33,7 @@ const ScrollListCore: FC = () => {
             log. These can then be viewed in a browser.
           </p>
           <p>You can even open up failed flows to see where and why they failed.</p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Monitoring">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Monitoring">
             Learn more
           </DocsLink>
         </div>
@@ -53,7 +53,7 @@ const ScrollListCore: FC = () => {
             Alternatively, use a dev or staging server (these are free) and transfer flows between
             them.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Dev-Prod-Modes">
             Learn more
           </DocsLink>
         </div>

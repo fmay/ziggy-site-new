@@ -14,7 +14,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
             The drag-and-drop canvas for building your data pipelines. Everything can be visually
             debugged, including Javscript code in Javascript blocks.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/Debugging">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/editor/Debugging">
             Learn more
           </DocsLink>
         </div>
@@ -28,7 +28,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           <p className="text-lg text-gray-600 mb-4">
             Click on any edge in the flow to inspect data. Great for debugging.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/editor/edge-inspection">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/editor/edge-inspection">
             Learn more
           </DocsLink>
         </div>
@@ -49,7 +49,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
               The AI supported Javascript block can cover simple cases and absolutely any edge case
             </li>
           </ul>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Structures-and-mapping">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Structures-and-mapping">
             Learn more
           </DocsLink>
         </div>
@@ -63,7 +63,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
           <p className="text-lg text-gray-600 mb-4">
             Flows can be called from other flows, ensuring modularity and reusability.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/core/Subflow">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/block-types/core/Subflow">
             Learn more
           </DocsLink>
         </div>
@@ -78,7 +78,7 @@ const FlowFeatures: FC<FlowFeaturesProps> = ({}) => {
             You can switch between development and production modes to address sandbox or test
             configurations when testing flows.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Dev-Prod-Modes">
             Learn more
           </DocsLink>
         </div>

@@ -17,7 +17,7 @@ const ScrollListAutomation: FC = () => {
             Configure Ziggy's Messaging to monitor an email address. Each email then triggers a
             Ziggy Flow
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Messaging">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Messaging">
             Learn more
           </DocsLink>
         </div>
@@ -34,7 +34,7 @@ const ScrollListAutomation: FC = () => {
             to calculate a happiness score and categorize the contents before creating a new ticket
             in your CRM.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/ai/ai-generate">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/block-types/ai/ai-generate">
             Learn more
           </DocsLink>
         </div>
@@ -50,7 +50,7 @@ const ScrollListAutomation: FC = () => {
             The AI Generate block lets you configure a prompt that does whatever you need it to do.
             It puts the result onto the output edge as you request.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/block-types/ai/ai-generate">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/block-types/ai/ai-generate">
             Learn more
           </DocsLink>
         </div>
@@ -71,7 +71,7 @@ const ScrollListAutomation: FC = () => {
             The triggered Flow can do anything you require - transform data, store in multiple
             systems, send alerts and notifications etc.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Messaging">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Messaging">
             Learn more
           </DocsLink>
         </div>
@@ -90,7 +90,7 @@ const ScrollListAutomation: FC = () => {
             Ziggy's Scheduler launches a flow that reads the CSV file from the SFTP server then
             processes as you require with further Ziggy blocks.
           </p>
-          <DocsLink href="http://docs.ziggyservices.com/user-guide/block-types/utility/file-reader-writer">
+          <DocsLink href="http://docs.ziggyplatform.com/user-guide/block-types/utility/file-reader-writer">
             Learn more
           </DocsLink>
         </div>

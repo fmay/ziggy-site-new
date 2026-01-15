@@ -10,7 +10,7 @@ const CustomizationStack: FC<JavascriptFeaturesProps> = ({}) => {
       title="Ziggy CLI"
       description="Create and manage your plugins with the Ziggy CLI."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/plugin/cli"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/plugin/cli"
       ctaNewTab
       graphic="/images/customise/ss-cli.webp"
       graphicBgColor=""
@@ -19,7 +19,7 @@ const CustomizationStack: FC<JavascriptFeaturesProps> = ({}) => {
       title="Code"
       description="Each block consists of a React UI component and an execution component - written in TypeScript"
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/plugin/client"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/plugin/client"
       ctaNewTab
       graphicBgColor=""
       graphic="/images/customise/ss-custom-block-code.webp"

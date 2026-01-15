@@ -89,7 +89,7 @@ export default function CookiePolicyContent() {
         <h2>6. Contact Us</h2>
         <div className={styles.contact}>
           <p>If you have questions about our cookie use, please contact us at:</p>
-          <p><strong>Email:</strong> <a href="mailto:info@ziggyservice.com">info@ziggyservice.com</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@ziggyservices.com">info@ziggyservice.com</a></p>
         </div>
       </section>
 

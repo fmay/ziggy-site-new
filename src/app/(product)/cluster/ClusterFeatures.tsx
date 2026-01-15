@@ -19,7 +19,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             Level 1 is fine for testing scaling but is not fault tolerant if the database server
             goes down.
           </p>
-          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
+          <CTA label="Docs" href="https://docs.ziggyplatform.com/user-guide/cluster/levels" />
         </>
       ),
       contentNudge: 30,
@@ -34,7 +34,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             When you need both high performance and fault tolerance. The database can run in a
             managed service such as AWS RDS or in your own database cluster.
           </p>
-          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/levels" />
+          <CTA label="Docs" href="https://docs.ziggyplatform.com/user-guide/cluster/levels" />
         </>
       ),
       contentNudge: 30,
@@ -52,7 +52,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
             System resources, flows per second, queue sizes, queue overflow to database can all be
             monitored in the UI in real time.
           </p>
-          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/monitoring" />
+          <CTA label="Docs" href="https://docs.ziggyplatform.com/user-guide/cluster/monitoring" />
         </>
       ),
       image: '/product/cluster/monitor.webp',
@@ -69,7 +69,7 @@ const ClusterFeatures: FC<FlowFeaturesProps> = ({}) => {
           <p className="text-lg text-gray-600 mb-4">
             Use Ziggy monitoring to see exactly how the system and each server is performing.
           </p>
-          <CTA label="Docs" href="https://docs.ziggyservices.com/user-guide/cluster/load-testing" />
+          <CTA label="Docs" href="https://docs.ziggyplatform.com/user-guide/cluster/load-testing" />
         </>
       ),
       image: '/product/cluster/load-test.webp',

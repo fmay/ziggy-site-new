@@ -18,7 +18,7 @@ const ScrollListIntegration: FC = () => {
             The flow can perform any transformations and actions you require such as writing to a
             Data Warehouse, Database, calling an API or writing back to your CRM.
           </p>
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Launching-flows">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Launching-flows">
             Learn more
           </DocsLink>
         </div>
@@ -35,7 +35,7 @@ const ScrollListIntegration: FC = () => {
             performs any transformation and 3rd party platform operations your require.
           </p>
 
-          <DocsLink href="https://docs.ziggyservices.com/user-guide/Launching-flows">
+          <DocsLink href="https://docs.ziggyplatform.com/user-guide/Launching-flows">
             Learn more
           </DocsLink>
         </div>
@@ -53,7 +53,7 @@ const ScrollListIntegration: FC = () => {
             objected, Ziggy Flows let you audit, validate, map, transform your data so it ends up in
             the right place in the right format.
           </p>
-          {/*<DocsLink href="https://docs.ziggyservices.com/user-guide/Dev-Prod-Modes">*/}
+          {/*<DocsLink href="https://docs.ziggyplatform.com/user-guide/Dev-Prod-Modes">*/}
           {/*  Learn more*/}
           {/*</DocsLink>*/}
         </div>

@@ -119,7 +119,7 @@ export const navigationConfig: NavigationConfig = {
             items: [
               {
                 label: 'Docs',
-                href: 'https://docs.ziggyservices.com',
+                href: 'https://docs.ziggyplatform.com',
                 description: 'Ziggy product documentation',
                 icon: '/nav/flow.svg',
               },

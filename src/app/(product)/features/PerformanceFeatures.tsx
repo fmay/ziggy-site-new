@@ -10,7 +10,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       title="Performance tuning"
       description="Tune number of parallel executing flows, system queue sizes, Javascript worker pool size. Then use the load tester to see the results. Rinse and repeat."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/Performance-Tuning"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/Performance-Tuning"
       ctaNewTab
       graphic="/product/features/running-flows.webp"
       graphicBgColor="bg-flow-gray"
@@ -19,7 +19,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       title="Monitor"
       description="Ziggy has two monitoring screens. One shows currently executing flows and another for key server resource levels (shown)."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/Global-Settings#system-monitor"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/Global-Settings#system-monitor"
       ctaNewTab
       graphicBgColor="bg-flow-gray"
       graphic="/product/features/system-monitor.webp"
@@ -28,7 +28,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       title="Clustering"
       description="Configuring a Ziggy Cluster is easy. Add multiple instances and optionally configure an external database cluster."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/cluster/overview"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/cluster/overview"
       ctaNewTab
       graphic="/product/features/alerts.webp"
     />,
@@ -36,7 +36,7 @@ const PerformanceFeatures: FC<PerformanceFeaturesProps> = ({}) => {
       title="Load Testing"
       description="Use Ziggy's internal load tester or use your own for more varied tests."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/Global-Settings#load-test"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/Global-Settings#load-test"
       ctaNewTab
       graphic="/product/features/load-test.webp"
       graphicBgColor="bg-flow-gray"

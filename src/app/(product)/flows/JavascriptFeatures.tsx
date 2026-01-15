@@ -10,7 +10,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       title="Basic features"
       description="Code completion, linting, full screen editor"
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript"
       ctaNewTab
       graphic="/images/flows/js-example.png"
       graphicBgColor="bg-flow-gray"
@@ -19,7 +19,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       title="AI Code generation"
       description="Ziggy will generate code from your instructions. It also understands the data in your flow to ensure it has the full context."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#ai-assistant"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript#ai-assistant"
       ctaNewTab
       graphicBgColor="bg-flow-gray"
       graphic="/images/flows/js-ai.png"
@@ -28,7 +28,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       title="Debugger"
       description="Comes with a fully integrated debugger, letting you step through your code and inspect variables"
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#debugger"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript#debugger"
       ctaNewTab
       graphic="/images/flows/js-debugger.png"
     />,
@@ -36,7 +36,7 @@ const JavascriptFeatures: FC<JavascriptFeaturesProps> = ({}) => {
       title="AI Explain"
       description="Not sure what's going on? AI Explain will put you out of your misery."
       ctaText="Learn more in the docs"
-      ctaHref="https://docs.ziggyservices.com/user-guide/block-types/core/Javascript#explain"
+      ctaHref="https://docs.ziggyplatform.com/user-guide/block-types/core/Javascript#explain"
       ctaNewTab
       graphic="/images/flows/js-explain.png"
       graphicBgColor="bg-flow-gray"

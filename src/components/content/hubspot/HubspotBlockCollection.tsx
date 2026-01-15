@@ -34,7 +34,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Hubspot Read"
           imageUrl="/hubspot-blocks/read-batch.png"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-read"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-read"
           height={ItemHeight}>
           <div>
             <p>Read anything from HubSpot with batching, filtering, property selection</p>
@@ -47,7 +47,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Hubspot Write"
           imageUrl="/hubspot-blocks/write-upsert.png"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-write"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-write"
           height={ItemHeight}>
           <div>
             <p>
@@ -63,7 +63,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Get Associated Object"
           imageUrl="/hubspot-blocks/get-associations.png"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-get-associated"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-get-associated"
           height={ItemHeight}>
           <div>
             <p>
@@ -79,7 +79,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Set Associations"
           imageUrl="/hubspot-blocks/set-associations.png"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-create-associations"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-create-associations"
           height={ItemHeight}>
           <div>
             <p>Make associations in Hubspot based data passed into the block</p>
@@ -92,7 +92,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Get Owners"
           imageUrl="/hubspot-blocks/get-owners.png"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-get-all-owners"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-get-all-owners"
           height={ItemHeight}>
           <div>
             <p>Get a list of Hubspot users and associated metadata</p>
@@ -105,7 +105,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Translate Owners"
           imageUrl="/hubspot-blocks/owner-translate.png"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-owner-translate"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-owner-translate"
           height={ItemHeight}>
           <div>
             <p>Takes an email address and translates it into a HubSpot owner/user id</p>
@@ -118,7 +118,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Set/Get Currency"
           imageUrl="/hubspot-blocks/currency.webp"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-currency"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-currency"
           height={ItemHeight}>
           <div>
             <p>Takes an email address and translates it into a HubSpot owner/user id</p>
@@ -131,7 +131,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Search on any HubSpot object."
           imageUrl="/hubspot-blocks/search.webp"
           linkText="Learn more"
-          linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-search"
+          linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-search"
           height={ItemHeight}>
           <div>
             <p>Search on any HubSpot object.</p>
@@ -144,7 +144,7 @@ const HubspotBlockCollection: FC<HubspotBlockCollectionProps> = ({ height }) => 
           imageAlt="Get File Attachments"
           imageUrl="/hubspot-blocks/attachments-get.png"
           // linkText="Learn more"
-          // linkUrl="https://docs.ziggyservices.com/user-guide/block-types/hubspot/hs-owner-translate"
+          // linkUrl="https://docs.ziggyplatform.com/user-guide/block-types/hubspot/hs-owner-translate"
           height={ItemHeight}>
           <div>
             <p>Get/set file attachments</p>
