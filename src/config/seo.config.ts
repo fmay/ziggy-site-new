@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Ziggy',
   description: 'The Automation and Integration Platform that\'s different',
-  url: 'https://ziggyservices.com',
+  url: 'https://ziggyplatform.com',
   ogImage: '/og-image.png',
   links: {
     twitter: 'https://twitter.com/ziggyservices',
