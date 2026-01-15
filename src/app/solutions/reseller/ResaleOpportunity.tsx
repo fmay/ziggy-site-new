@@ -9,7 +9,7 @@ const ResaleOpportunity: FC<ResaleOpportunityProps> = ({}) => {
   const ImageContent = () => {
     return (
       <div className="">
-        <p>Resale commissions</p>
+        <p>Resale commission</p>
         <p>Ziggy offers generous commissions for Ziggy system sales. Contact us for more information.</p>
       </div>
     )
