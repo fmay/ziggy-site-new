@@ -35,18 +35,10 @@ export default function HomePage() {
       bgColor: getNextColor(),
       children: <BusinessFunctions />,
     },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <PlatformOverview />,
-    // },
     {
       bgColor: getNextColor(),
       children: <IntegrationPartner />,
     },
-    // {
-    //   bgColor: getNextColor(),
-    //   children: <Subscribe />,
-    // },
   ]
 
   return (
@@ -65,11 +57,11 @@ export default function HomePage() {
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Built for extreme ease of use and access to any data source</span>
+              <span>Runs on your servers for perfect security and performance</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Runs on your servers for optimal performance and security</span>
+              <span>Extremely easy to quick to use</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
@@ -77,7 +69,7 @@ export default function HomePage() {
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>A different approach to pricing</span>
+              <span>Priced to reduce overall project costs</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
