@@ -31,9 +31,9 @@ const ProcessMessages: FC<ProcessMessagesProps> = ({}) => {
         title="Message processing"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
+        image="/solutions/iot/iot-messaging.webp"
         cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
-        scale={0.7}
+        scale={1}
         swap={getSwapStatus()}
       />
     </div>

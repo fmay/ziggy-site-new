@@ -32,8 +32,8 @@ const AboutIOT: FC<AboutIOTProps> = ({}) => {
         title="Put Ziggy in the middle of your IoT data flows"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
+        image="/platform/complex-flow.webp"
+        cta={<CTA label="Feature overview" href="/features" noBottomMargin />}
         scale={0.7}
         swap={getSwapStatus()}
       />

@@ -52,15 +52,6 @@ export default function CRMSolutions() {
         </>
       ),
     },
-    {
-      id: 'services',
-      bgColor: getNextColor(),
-      children: (
-        <>
-          <Services />
-        </>
-      ),
-    },
   ]
 
   return (
@@ -69,9 +60,9 @@ export default function CRMSolutions() {
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
-        image="/hero/integration-partners.webp"
-        scale={0.7}
-        imageNudge={60}
+        image="/solutions/iot/iot-hero.webp"
+        scale={0.9}
+        imageNudge={-40}
         title="Internet of Things"
         subtitle={
           <ul>
