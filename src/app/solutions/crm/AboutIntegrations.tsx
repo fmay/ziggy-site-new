@@ -16,8 +16,8 @@ const AboutIntegrations:FC<AboutIntegrationsProps> = ({}) => {
           of your CRM.
         </p>
         <p>
-          You can perform any required data transformations before putting data into any object in
-          your CRM or into any 3rd party system.
+          You can perform any required data transformations before putting data anywhere in
+          your CRM or 3rd party system.
         </p>
       </div>
     )
@@ -26,12 +26,13 @@ const AboutIntegrations:FC<AboutIntegrationsProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Integrations, Automations and Migrations for any CRM"
+        title="Moving data into and out of your CRM doesn't have to be complicated and messy"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
+        image="/solutions/crm/crm-messy.webp"
+        cta={<CTA label="The Ziggy platform" href="/platform" noBottomMargin />}
         scale={0.7}
+        contentNudge={30}
         swap={getSwapStatus()}
       />
     </div>

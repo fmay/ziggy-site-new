@@ -8,7 +8,7 @@ import { createColorCycler } from '@/utils/colorCycler'
 import CustomizationStack from '@/app/(product)/extend/CustomizationStack'
 import CollectionsExtendIntro from '@/app/(product)/extend/CollectionsExtendIntro'
 import HubspotBlockCollection from '@/components/content/hubspot/HubspotBlockCollection'
-import ScrollIntro from '@/app/integration-partners/ScrollIntro'
+import ScrollIntro from '@/app/partners/integration-partners/ScrollIntro'
 
 export default function IntegrationPartners() {
   const getNextColor = createColorCycler()

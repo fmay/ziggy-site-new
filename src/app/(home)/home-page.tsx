@@ -57,11 +57,15 @@ export default function HomePage() {
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Runs on your servers for perfect security and performance</span>
+              <span>Runs on your servers for complete security and performance</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Extremely easy to quick to use</span>
+              <span>Extremely easy to use</span>
+            </li>
+            <li>
+              <GiCheckMark className={styles.checkIcon} />
+              <span>Access any data source</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />

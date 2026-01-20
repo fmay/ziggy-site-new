@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="seo basics">
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="reseller 0.22">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="pricing-resellers" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,8 +46,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/(product)/what-are-automations&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/solutions/reseller&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -68,11 +68,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/solutions/reseller" />
+      <recent name="$PROJECT_DIR$/src/app/solutions/iot" />
+      <recent name="$PROJECT_DIR$/src/app/solutions/crm" />
+      <recent name="$PROJECT_DIR$/src/app/solutions" />
       <recent name="$PROJECT_DIR$/src/app/(product)/what-are-automations" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/features" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/flows" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
-      <recent name="$PROJECT_DIR$/src/app/(home)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pixelmator/home" />
@@ -82,7 +82,7 @@
       <recent name="$PROJECT_DIR$/public/integration-partners" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -115,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.cache" />
       </list>
     </recent_temporary>
@@ -178,70 +178,8 @@
       <workItem from="1766310887767" duration="215000" />
       <workItem from="1766407561538" duration="1593000" />
       <workItem from="1766821793513" duration="3904000" />
-    </task>
-    <task id="LOCAL-00222" summary="bill's changes">
-      <option name="closed" value="true" />
-      <created>1765521717135</created>
-      <option name="number" value="00222" />
-      <option name="presentableId" value="LOCAL-00222" />
-      <option name="project" value="LOCAL" />
-      <updated>1765521717135</updated>
-    </task>
-    <task id="LOCAL-00223" summary="bill's changes">
-      <option name="closed" value="true" />
-      <created>1765525367292</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1765525367292</updated>
-    </task>
-    <task id="LOCAL-00224" summary="bill's changes">
-      <option name="closed" value="true" />
-      <created>1765527545089</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1765527545089</updated>
-    </task>
-    <task id="LOCAL-00225" summary="flows 0.7">
-      <option name="closed" value="true" />
-      <created>1765615719138</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1765615719139</updated>
-    </task>
-    <task id="LOCAL-00226" summary="flows 0.8">
-      <option name="closed" value="true" />
-      <created>1765616740434</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1765616740434</updated>
-    </task>
-    <task id="LOCAL-00227" summary="pricing extenalised">
-      <option name="closed" value="true" />
-      <created>1765617353013</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1765617353013</updated>
-    </task>
-    <task id="LOCAL-00228" summary="pricing updated">
-      <option name="closed" value="true" />
-      <created>1765617674161</created>
-      <option name="number" value="00228" />
-      <option name="presentableId" value="LOCAL-00228" />
-      <option name="project" value="LOCAL" />
-      <updated>1765617674161</updated>
-    </task>
-    <task id="LOCAL-00229" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765618951587</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
-      <option name="project" value="LOCAL" />
-      <updated>1765618951587</updated>
+      <workItem from="1768377524155" duration="30229000" />
+      <workItem from="1768815115814" duration="596000" />
     </task>
     <task id="LOCAL-00230" summary="updates for bill">
       <option name="closed" value="true" />
@@ -571,7 +509,71 @@
       <option name="project" value="LOCAL" />
       <updated>1766824658804</updated>
     </task>
-    <option name="localTasksCounter" value="271" />
+    <task id="LOCAL-00271" summary="pricing 0.1">
+      <option name="closed" value="true" />
+      <created>1768382493697</created>
+      <option name="number" value="00271" />
+      <option name="presentableId" value="LOCAL-00271" />
+      <option name="project" value="LOCAL" />
+      <updated>1768382493697</updated>
+    </task>
+    <task id="LOCAL-00272" summary="pricing 0.2">
+      <option name="closed" value="true" />
+      <created>1768386642439</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1768386642439</updated>
+    </task>
+    <task id="LOCAL-00273" summary="crm 0.1">
+      <option name="closed" value="true" />
+      <created>1768401904923</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1768401904923</updated>
+    </task>
+    <task id="LOCAL-00274" summary="reseller 0.1">
+      <option name="closed" value="true" />
+      <created>1768406105044</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1768406105044</updated>
+    </task>
+    <task id="LOCAL-00275" summary="reseller 0.2">
+      <option name="closed" value="true" />
+      <created>1768465624902</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1768465624902</updated>
+    </task>
+    <task id="LOCAL-00276" summary="reseller 0.21">
+      <option name="closed" value="true" />
+      <created>1768470073486</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1768470073486</updated>
+    </task>
+    <task id="LOCAL-00277" summary="reseller 0.21">
+      <option name="closed" value="true" />
+      <created>1768470116019</created>
+      <option name="number" value="00277" />
+      <option name="presentableId" value="LOCAL-00277" />
+      <option name="project" value="LOCAL" />
+      <updated>1768470116019</updated>
+    </task>
+    <task id="LOCAL-00278" summary="reseller 0.22">
+      <option name="closed" value="true" />
+      <created>1768501173874</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1768501173874</updated>
+    </task>
+    <option name="localTasksCounter" value="279" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,13 +619,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="pricing extenalised" />
-    <MESSAGE value="pricing updated" />
-    <MESSAGE value="updates for bill" />
-    <MESSAGE value="docs links 0.5" />
-    <MESSAGE value="docs links 0.6" />
-    <MESSAGE value="docs links 0.8" />
-    <MESSAGE value="docs links and footer" />
     <MESSAGE value="what are automations" />
     <MESSAGE value="what are automations 2" />
     <MESSAGE value="what are automations 3" />
@@ -642,7 +637,14 @@
     <MESSAGE value="anchor fixed" />
     <MESSAGE value="bill fixes" />
     <MESSAGE value="seo basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="seo basics" />
+    <MESSAGE value="pricing 0.1" />
+    <MESSAGE value="pricing 0.2" />
+    <MESSAGE value="crm 0.1" />
+    <MESSAGE value="reseller 0.1" />
+    <MESSAGE value="reseller 0.2" />
+    <MESSAGE value="reseller 0.21" />
+    <MESSAGE value="reseller 0.22" />
+    <option name="LAST_COMMIT_MESSAGE" value="reseller 0.22" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

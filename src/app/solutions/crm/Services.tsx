@@ -9,7 +9,7 @@ const Services: FC<ServicesProps> = ({}) => {
   const ImageContent = () => {
     return (
       <div className="">
-        <p>If you need help with anything, we're here to help.</p>
+        <p>If you need us to assist, our services team is here to help.</p>
         <ul>
           <li>End to end flow design</li>
           <li>Training</li>
@@ -27,8 +27,8 @@ const Services: FC<ServicesProps> = ({}) => {
         title="Ziggy Services"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
+        image="/solutions/crm/crm-services.webp"
+        cta={<CTA label="Contact us" href="/contact" noBottomMargin />}
         scale={0.7}
         swap={getSwapStatus()}
       />

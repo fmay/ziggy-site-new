@@ -10,9 +10,8 @@ const ExampleBlocks: FC<ExampleBlocksProps> = ({}) => {
     return (
       <>
         <p>
-          Ziggy Flows are a visual data pipeline that move and transform data using Ziggy Blocks.
-          Data transformations are heavily AI supported. Developers can write and debug Javascript
-          code within a special Javascript block.
+          Ziggy Flows are visual data pipelines that move and transform data using Ziggy Blocks.
+          They can do almost anything and are quickly built whether you have development skills or not.
         </p>
         <p>
           Below are some HubSpot blocks. Other CRM platforms have a similar set of Blocks and new
@@ -28,9 +27,9 @@ const ExampleBlocks: FC<ExampleBlocksProps> = ({}) => {
         title="How it works"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
-        scale={0.7}
+        image="/solutions/crm/crm-how-it-works.webp"
+        cta={<CTA label="Learn More" href="/flows" noBottomMargin />}
+        scale={1}
         swap={getSwapStatus()}
       />
     </div>

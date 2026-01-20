@@ -56,12 +56,12 @@ export const navigationConfig: NavigationConfig = {
           },
 
           {
-            title: "How it works",
+            title: 'How it works',
             items: [
               {
                 label: 'Ziggy Blocks and Ziggy Flows',
                 href: '/flows',
-                description: "Ziggy Blocks and single, simple responsibilities",
+                description: 'Ziggy Blocks and single, simple responsibilities',
                 icon: '/nav/flow.svg',
               },
               {
@@ -99,9 +99,26 @@ export const navigationConfig: NavigationConfig = {
                 description: 'Handle IoT messages at scale, processing data with Ziggy Flows',
                 icon: '/nav/flow.svg',
               },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: 'Partners',
+      dropdown: {
+        sections: [
+          {
+            items: [
+              {
+                label: 'Integration Partners',
+                href: '/partners/integration-partners',
+                description: 'Multi-tenant platform offering Ziggy integrations to your customers',
+                icon: '/nav/flow.svg',
+              },
               {
                 label: 'Resellers & Agencies',
-                href: '/solutions/reseller',
+                href: '/partners/reseller',
                 description: 'Generate revenue from Ziggy-centric services and sales',
                 icon: '/nav/flow.svg',
               },
@@ -110,7 +127,6 @@ export const navigationConfig: NavigationConfig = {
         ],
       },
     },
-    { label: 'Integration Partners', href: '/integration-partners' },
     {
       label: 'Resources',
       dropdown: {

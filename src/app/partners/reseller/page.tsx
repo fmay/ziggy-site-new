@@ -6,9 +6,9 @@ import { WavyVariantEnum } from '@/types/wavy'
 import { GiCheckMark } from 'react-icons/gi'
 import CTA from '@/components/ui/cta/CTA'
 import { DefaultColorCycle } from '@/constants/default-colors'
-import ConsultancyOpportunity from '@/app/solutions/reseller/ConsultancyOpportunity'
-import ResaleOpportunity from '@/app/solutions/reseller/ResaleOpportunity'
-import Discounts from '@/app/solutions/reseller/Discounts'
+import ConsultancyOpportunity from '@/app/partners/reseller/ConsultancyOpportunity'
+import ResaleOpportunity from '@/app/partners/reseller/ResaleOpportunity'
+import Discounts from '@/app/partners/reseller/Discounts'
 
 export default function CRMSolutions() {
   const getNextColor = createColorCycler()

@@ -12,6 +12,7 @@ import AboutIntegrations from '@/app/solutions/crm/AboutIntegrations'
 import Hosting from '@/app/solutions/crm/Hosting'
 import Services from '@/app/solutions/crm/Services'
 import { DefaultColorCycle } from '@/constants/default-colors'
+import CRMUseCases from '@/app/solutions/crm/CRMUseCases'
 
 export default function CRMSolutions() {
   const getNextColor = createColorCycler()
@@ -26,11 +27,11 @@ export default function CRMSolutions() {
       ),
     },
     {
-      id: 'control',
+      id: 'use-cases',
       bgColor: getNextColor(),
       children: (
         <>
-          <Hosting />
+          <CRMUseCases />
         </>
       ),
     },
@@ -62,27 +63,30 @@ export default function CRMSolutions() {
         fromColor="header-footer"
         toColor={DefaultColorCycle[0]}
         wavyVariant={WavyVariantEnum.Standard}
-        image="/hero/integration-partners.webp"
-        scale={0.7}
-        imageNudge={60}
+        image="/solutions/crm/crm-hero.webp"
+        scale={0.9}
+        imageNudge={-30}
         title="Integrations, Automations and Migration for your CRM platform"
         subtitle={
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Integrate your CRM with other platforms, databases, APIs and systems</span>
+              <span>
+                Integrate your CRM with other systems using Ziggy "do
+                anything" automations.
+              </span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Automate processes triggered by events in your CRM or other systems</span>
+              <span>Run automation processes triggered by events in your CRM or other systems</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Generate revenues from Ziggy centric professional services</span>
+              <span>Run one-off or regular data migrations</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Use for customer migrations</span>
+              <span>Aggregate data from your CRM and other systems for unified reporting.</span>
             </li>
           </ul>
         }
@@ -90,7 +94,7 @@ export default function CRMSolutions() {
           <div
             className="flex flex-col gap-0 items-center
             lg:flex-row lg:gap-8 lg:items-start">
-            <CTA label="Become a Partner" href="contact" noBottomMargin />
+            <CTA label="Contact Us" href="contact" noBottomMargin />
           </div>
         }
       />
