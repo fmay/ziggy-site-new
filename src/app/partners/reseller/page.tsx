@@ -9,6 +9,7 @@ import { DefaultColorCycle } from '@/constants/default-colors'
 import ConsultancyOpportunity from '@/app/partners/reseller/ConsultancyOpportunity'
 import ResaleOpportunity from '@/app/partners/reseller/ResaleOpportunity'
 import Discounts from '@/app/partners/reseller/Discounts'
+import AboutZiggy from '@/app/partners/reseller/AboutZiggy'
 
 export default function CRMSolutions() {
   const getNextColor = createColorCycler()
@@ -23,6 +24,15 @@ export default function CRMSolutions() {
       ),
     },
     {
+      id: 'discount',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <Discounts />
+        </>
+      ),
+    },
+    {
       id: 'resale',
       bgColor: getNextColor(),
       children: (
@@ -32,11 +42,11 @@ export default function CRMSolutions() {
       ),
     },
     {
-      id: 'discount',
+      id: 'about',
       bgColor: getNextColor(),
       children: (
         <>
-          <Discounts />
+          <AboutZiggy />
         </>
       ),
     },
@@ -51,24 +61,26 @@ export default function CRMSolutions() {
         image="/hero/integration-partners.webp"
         scale={0.7}
         imageNudge={60}
-        title="Generate revenue streams from Ziggy centric services and platform sales"
+        title="Generate revenue streams from Ziggy services and platform sales"
         subtitle={
           <ul>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Generate revenues from Ziggy centric professional services</span>
+              <span>Build complex integrations and automations for your customers</span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Use Ziggy for customer migrations with total control over data security and performance</span>
+              <span>
+                Run migrations of any complexity with total control over data security and
+                performance
+              </span>
             </li>
             <li>
               <GiCheckMark className={styles.checkIcon} />
-              <span>Create complex integrations and automations for your customers</span>
-            </li>
-            <li>
-              <GiCheckMark className={styles.checkIcon} />
-              <span>Meet the most stringent security requirements of your customers by running on private, scalable infrastructure</span>
+              <span>
+                Meet the most stringent security requirements of your customers by running on
+                any private, scalable infrastructure
+              </span>
             </li>
           </ul>
         }
@@ -76,7 +88,7 @@ export default function CRMSolutions() {
           <div
             className="flex flex-col gap-0 items-center
             lg:flex-row lg:gap-8 lg:items-start">
-            <CTA label="Become a Partner" href="contact" noBottomMargin />
+            <CTA label="Contact Us" href="/contact" noBottomMargin />
           </div>
         }
       />

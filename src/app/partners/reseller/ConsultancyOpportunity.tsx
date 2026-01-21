@@ -12,19 +12,19 @@ const ConsultancyOpportunity: FC<ConsultancyOpportunityProps> = ({}) => {
         <p>Professional Services opportunities for Ziggy customers</p>
         <ul>
           <li>
-            Flow Building - your clients may want you to design some or all or their integration
+            <strong>Flow Building</strong> - your clients may want you to design some or all or their integration
             Flows.
           </li>
           <li>
-            Migrations - clients do not normally want to run migrations. Ziggy is great at running
+            <strong>Migrations</strong> - clients do not normally want to run migrations. Ziggy is great at running
             simple or complex migrations at any scale.
           </li>
           <li>
-            Training - if you have sold a Ziggy system into a client or if we refer a client of ours
+            <strong>Training</strong> - if you have sold a Ziggy system into a client or if we refer a client of ours
             to you.
           </li>
           <li>
-            Support - clients running a Ziggy installation often want ongoing retained support.
+            <strong>Support</strong> - clients running a Ziggy installation often want ongoing retained support.
           </li>
         </ul>
       </div>
@@ -37,9 +37,9 @@ const ConsultancyOpportunity: FC<ConsultancyOpportunityProps> = ({}) => {
         title="Consultancy revenue opportunities."
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
-        scale={0.7}
+        image="/solutions/crm/crm-consultancy.webp"
+        cta={<CTA label="Ziggy Platform" href="/platform" noBottomMargin />}
+        scale={0.6}
         swap={getSwapStatus()}
       />
     </div>

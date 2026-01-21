@@ -9,7 +9,8 @@ const Discounts: FC<DiscountsProps> = ({}) => {
   const ImageContent = () => {
     return (
       <div className="">
-        <p>Resellers receive discounts for their own internal use. Please contact us for details.</p>
+        <p>We offer generous discounts to qualified resellers for internal usage.</p>
+        <p>We provide free Ziggy platforms for internal evaluation purposes.</p>
       </div>
     )
   }
@@ -17,12 +18,12 @@ const Discounts: FC<DiscountsProps> = ({}) => {
   return (
     <div>
       <SimplePair
-        title="Ziggy discounts"
+        title="Internal usage discounts and evaluations"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
-        scale={0.7}
+        image="/reseller/reseller-discounts.webp"
+        cta={<CTA label="Contact Us" href="/contact" noBottomMargin />}
+        scale={0.5}
         swap={getSwapStatus()}
       />
     </div>
