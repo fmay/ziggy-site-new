@@ -10,16 +10,15 @@ const ProcessMessages: FC<ProcessMessagesProps> = ({}) => {
     return (
       <div className="">
         <p>
-          Ziggy's powerful messaging system supports MQTT (others coming soon). Configure which
-          messages to listen to and process, then launch a Zigy Flow to process it.
+          Ziggy's powerful messaging system supports MQTT (other protocols available). Configure which
+          messages to subscribe to that launch Ziggy Flows.
         </p>
         <p>
           Ziggy Flows can perform any require data transformations before passing the data to other
           platforms, databases, APIs or systems.
         </p>
         <p>
-          Ziggy can start small and low cost but then scale to deal with extremely large amounts of
-          data using Ziggy Cluster.
+          Process any message volume with Ziggy Cluster.
         </p>
       </div>
     )
@@ -32,7 +31,7 @@ const ProcessMessages: FC<ProcessMessagesProps> = ({}) => {
         subtitle=""
         imageCopy={<ImageContent />}
         image="/solutions/iot/iot-messaging.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
+        cta={<CTA label="Learn More" href="https://docs.ziggyplatform.com/user-guide/MQTT" noBottomMargin />}
         scale={1}
         swap={getSwapStatus()}
       />

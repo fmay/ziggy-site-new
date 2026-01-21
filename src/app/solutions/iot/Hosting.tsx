@@ -36,9 +36,9 @@ const Hosting: FC<HostingProps> = ({}) => {
         title="Total control over data security, performance and cost"
         subtitle=""
         imageCopy={<ImageContent />}
-        image="/hero/whats-an-automation.webp"
-        cta={<CTA label="Learn More" href="what-are-automations" noBottomMargin />}
-        scale={0.7}
+        image="/solutions/iot/iot-cluster.webp"
+        cta={<CTA label="Learn More" href="/cluster" noBottomMargin />}
+        scale={0.5}
         swap={getSwapStatus()}
       />
     </div>

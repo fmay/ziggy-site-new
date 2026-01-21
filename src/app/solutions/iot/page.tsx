@@ -17,20 +17,20 @@ export default function CRMSolutions() {
   const getNextColor = createColorCycler()
   const sections: Section[] = [
     {
-      id: 'about',
-      bgColor: getNextColor(),
-      children: (
-        <>
-          <AboutIOT />
-        </>
-      ),
-    },
-    {
       id: 'messaging',
       bgColor: getNextColor(),
       children: (
         <>
           <ProcessMessages />
+        </>
+      ),
+    },
+    {
+      id: 'about',
+      bgColor: getNextColor(),
+      children: (
+        <>
+          <AboutIOT />
         </>
       ),
     },
@@ -88,7 +88,7 @@ export default function CRMSolutions() {
           <div
             className="flex flex-col gap-0 items-center
             lg:flex-row lg:gap-8 lg:items-start">
-            <CTA label="Become a Partner" href="contact" noBottomMargin />
+            <CTA label="Contact Us" href="/contact" noBottomMargin />
           </div>
         }
       />
