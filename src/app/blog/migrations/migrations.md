@@ -66,12 +66,19 @@ Special Ziggy blocks take care of this. In the flow below
 
 Associations will need to be made between all relevant object types including Activities (emails, calls, tasks, todo's etc).
 
+## File Attachments
+
+Another important part of a serious migration is the migration of file attachments. Ziggy provides a File Attachment block that ensures that files are
+
+- Uploaded to the target system 
+- Associations are correctly made to their owning entity
+- Set whether the file is public or private
+
 ## Flow Organization
 
 Ziggy lets you tag your flows so you can find them easily. You can see below how we have a set of migration flows for dealing with Companies, Contacts, Deals and Line Items.
 
 ![Customer Export](/blog/migrations/migrate-organize.webp)
-
 
 ## Flow Orchestration
 
