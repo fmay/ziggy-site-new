@@ -175,7 +175,7 @@ const QuickBookDemo: FC<QuickBookDemoProps> = ({ background = 'dark', subscribe 
           </button>
           <div id="calendly-inline-widget" className={styles.calendlyContainer}>
             <InlineWidget
-              url="https://calendly.com/freddy-may-ziggyservices/30-minute-meeting-clone"
+              url="https://calendly.com/freddy-may-ziggyplatform/30min"
               prefill={calendlyPrefill}
               pageSettings={calendlyPageSettings}
               styles={{ height: `${CALENDLY_HEIGHT}px`, width: '100%' }}
