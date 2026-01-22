@@ -57,7 +57,7 @@ export default function PrivacyContent() {
         <div className={styles.contact}>
           <p>
             If you have any questions or concerns about our privacy practices, please contact us at{' '}
-            <a href="mailto:info@ziggyservices.com">info@ziggyservices.com</a>.
+            <a href="mailto:info@ziggyplatform.com">info@ziggyplatform.com</a>.
           </p>
         </div>
       </section>

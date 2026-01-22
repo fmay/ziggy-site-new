@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     // Email content
     const mailOptions = {
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: 'info@ziggyservices.com',
+      to: 'info@ziggyplatform.com',
       subject: `New Contact Form Submission from ${name}`,
       text: `
 Name: ${name}

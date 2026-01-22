@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="reseller 0.22">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="reseller 0.9" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,44 +40,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/solutions/reseller&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.cache.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/freddymay/ziggy-site-new/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/Users/freddymay/ziggy-site-new/src/app/partners/reseller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.cache.executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/freddymay/ziggy-site-new/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/freddymay/ziggy-site-new/node_modules/typescript/lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/partners/reseller" />
+      <recent name="$PROJECT_DIR$/src/app/solutions/crm" />
       <recent name="$PROJECT_DIR$/src/app/solutions/reseller" />
       <recent name="$PROJECT_DIR$/src/app/solutions/iot" />
-      <recent name="$PROJECT_DIR$/src/app/solutions/crm" />
       <recent name="$PROJECT_DIR$/src/app/solutions" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/what-are-automations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pixelmator/home" />
-      <recent name="$PROJECT_DIR$/public/product/what-are-automations" />
-      <recent name="$PROJECT_DIR$/src/app/(product)/platform" />
-      <recent name="$PROJECT_DIR$/pixelmator/integration-partners" />
-      <recent name="$PROJECT_DIR$/public/integration-partners" />
+      <recent name="$PROJECT_DIR$/public/reseller" />
+      <recent name="$PROJECT_DIR$/public/solutions/crm" />
+      <recent name="$PROJECT_DIR$/public/solutions/iot" />
+      <recent name="$PROJECT_DIR$/pixelmator/solutions/iot" />
+      <recent name="$PROJECT_DIR$/pixelmator/solutions/crm" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -180,38 +178,7 @@
       <workItem from="1766821793513" duration="3904000" />
       <workItem from="1768377524155" duration="30229000" />
       <workItem from="1768815115814" duration="596000" />
-    </task>
-    <task id="LOCAL-00230" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765625596557</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1765625596557</updated>
-    </task>
-    <task id="LOCAL-00231" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765625674936</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1765625674936</updated>
-    </task>
-    <task id="LOCAL-00232" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765626023866</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1765626023866</updated>
-    </task>
-    <task id="LOCAL-00233" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765626249401</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1765626249401</updated>
+      <workItem from="1768916538844" duration="17168000" />
     </task>
     <task id="LOCAL-00234" summary="updates for bill">
       <option name="closed" value="true" />
@@ -573,7 +540,39 @@
       <option name="project" value="LOCAL" />
       <updated>1768501173874</updated>
     </task>
-    <option name="localTasksCounter" value="279" />
+    <task id="LOCAL-00279" summary="crm">
+      <option name="closed" value="true" />
+      <created>1768933365174</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1768933365174</updated>
+    </task>
+    <task id="LOCAL-00280" summary="iot 0.5">
+      <option name="closed" value="true" />
+      <created>1768936293553</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1768936293553</updated>
+    </task>
+    <task id="LOCAL-00281" summary="iot 0.9">
+      <option name="closed" value="true" />
+      <created>1768985524979</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1768985524979</updated>
+    </task>
+    <task id="LOCAL-00282" summary="reseller 0.9">
+      <option name="closed" value="true" />
+      <created>1768989016948</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1768989016948</updated>
+    </task>
+    <option name="localTasksCounter" value="283" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,10 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="what are automations" />
-    <MESSAGE value="what are automations 2" />
-    <MESSAGE value="what are automations 3" />
-    <MESSAGE value="update what are" />
     <MESSAGE value="scroll to; updates" />
     <MESSAGE value="updates" />
     <MESSAGE value="pre nestjs error fix" />
@@ -644,7 +639,11 @@
     <MESSAGE value="reseller 0.2" />
     <MESSAGE value="reseller 0.21" />
     <MESSAGE value="reseller 0.22" />
-    <option name="LAST_COMMIT_MESSAGE" value="reseller 0.22" />
+    <MESSAGE value="crm" />
+    <MESSAGE value="iot 0.5" />
+    <MESSAGE value="iot 0.9" />
+    <MESSAGE value="reseller 0.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="reseller 0.9" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
