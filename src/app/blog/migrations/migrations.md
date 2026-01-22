@@ -59,8 +59,16 @@ Let's say you are importing 1 million companies and 5 million contacts. Getting 
 
 Special Ziggy blocks take care of this. In the flow below
 
-- we are reading from our data store (where the association data was store when we imported from our legacy system)
-- and then writing the association data to our CRM platform (circled block).
+- We are getting the associations between companies and deals.
+- And between Deals and Line Items.
+- Then storing them to a data store.
+
+![Import Associations](/blog/migrations/migrate-import-associations.webp)
+
+When we are ready to migrate to the target platform
+
+- we read from the above associations data store 
+- and then write the association data to our CRM platform (circled block).
 
 ![Associations](/blog/migrations/migrate-associate.webp)
 

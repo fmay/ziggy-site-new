@@ -235,3 +235,17 @@ h4 {
     @apply text-[1.1rem] leading-[1.75rem];
   }
 }
+
+// Table of Contents styles
+.toc {
+  @apply text-sm text-[var(--mid-gray)];
+
+  a {
+    @apply block py-1.5 hover:text-[var(--dark-text)] transition-colors;
+    text-decoration: none;
+  }
+
+  .toc-h3 {
+    @apply pl-4;
+  }
+}
