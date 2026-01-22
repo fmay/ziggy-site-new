@@ -26,7 +26,8 @@ const PUBLIC_EMAIL_DOMAINS = [
 
 const ContactForm: FC<ContactFormProps> = ({}) => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     company: '',
     message: '',
@@ -99,7 +100,8 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
         setSubmitMessage('Thank you! Your message has been sent successfully.')
         // Reset form
         setFormData({
-          name: '',
+          firstName: '',
+          lastName: '',
           email: '',
           company: '',
           message: '',
@@ -117,7 +119,8 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
     }
   }
 
-  const isFormValid = formData.name.trim() !== '' &&
+  const isFormValid = formData.firstName.trim() !== '' &&
+                       formData.lastName.trim() !== '' &&
                        formData.email.trim() !== '' &&
                        formData.company.trim() !== '' &&
                        emailError === ''
@@ -133,19 +136,35 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
             <div className={styles.errorMessage}>{submitMessage}</div>
           )}
 
-          <div className={styles.fieldGroup}>
-            <label htmlFor="name" className={styles.label}>
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className={styles.input}
-              placeholder="John Doe"
-              value={formData.name}
-              onChange={handleChange}
-              disabled={isSubmitting}
-            />
+          <div className={styles.fieldRow}>
+            <div className={styles.fieldGroupHalf}>
+              <label htmlFor="firstName" className={styles.label}>
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                className={styles.input}
+                placeholder="John"
+                value={formData.firstName}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+            </div>
+            <div className={styles.fieldGroupHalf}>
+              <label htmlFor="lastName" className={styles.label}>
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                className={styles.input}
+                placeholder="Doe"
+                value={formData.lastName}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+            </div>
           </div>
 
           <div className={styles.fieldGroup}>

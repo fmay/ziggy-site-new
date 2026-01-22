@@ -19,8 +19,16 @@
   @apply space-y-6;
 }
 
+.fieldRow {
+  @apply flex gap-4;
+}
+
 .fieldGroup {
   // No styles needed - structural element
+}
+
+.fieldGroupHalf {
+  @apply flex-1;
 }
 
 .label {

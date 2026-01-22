@@ -49,3 +49,34 @@ Once checks have been performed, the migration to the target platform or sandbox
 
 ![Customer Export](/blog/migrations/migrate-customers-import.webp)
 
+Most migrations follow a similar pattern although the Flows are usually more complex for real-world scenarios.
+
+## Associating Objects
+
+An important component of a migration is the correct association between object records and types.
+
+Let's say you are importing 1 million companies and 5 million contacts. Getting those into your target CRM is only one step. You then need to ensure that each company is correctly associated with its contacts.
+
+Special Ziggy blocks take care of this. In the flow below
+
+- we are reading from our data store (where the association data was store when we imported from our legacy system)
+- and then writing the association data to our CRM platform (circled block).
+
+![Associations](/blog/migrations/migrate-associate.webp)
+
+Associations will need to be made between all relevant object types including Activities (emails, calls, tasks, todo's etc).
+
+## Flow Organization
+
+Ziggy lets you tag your flows so you can find them easily. You can see below how we have a set of migration flows for dealing with Companies, Contacts, Deals and Line Items.
+
+![Customer Export](/blog/migrations/migrate-organize.webp)
+
+
+## Flow Orchestration
+
+You can also create Ziggy Flows that are use to Orchestrate the various components or phases of a migration. These let you run individual or groups of flows with a single click without having to navigate to the flows individually.
+
+![Customer Export](/blog/migrations/migrate-commander.webp)
+
+
