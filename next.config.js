@@ -27,7 +27,7 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'ziggyservices.com',
+            value: 'ziggyplatform.com',
           },
         ],
         destination: 'https://ziggyplatform.com/:path*',
@@ -38,7 +38,7 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'www.ziggyservices.com',
+            value: 'www.ziggyplatform.com',
           },
         ],
         destination: 'https://ziggyplatform.com/:path*',

@@ -20,7 +20,7 @@ export const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Sales',
-    email: 'sales@ziggyservices.com', // PLACEHOLDER - update with actual email
+    email: 'sales@ziggyplatform.com', // PLACEHOLDER - update with actual email
   },
   sameAs: [
     siteConfig.links.twitter,
