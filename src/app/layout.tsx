@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import Script from 'next/script'
 import './globals.scss'
 import Header from '@/components/navigation/Header'
 import Footer from '@/components/navigation/Footer'
@@ -84,6 +85,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <CookieBanner />
+        <Script
+          id="hs-script-loader"
+          src="//js-eu1.hs-scripts.com/144231748.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
