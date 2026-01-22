@@ -9,6 +9,7 @@ export enum LayoutStyleEnum {
   Feature = 'feature',
   Test = 'test',
   Pricing = 'pricing',
+  Blog = 'blog',
 }
 
 interface PageLayoutProps {
@@ -17,7 +18,7 @@ interface PageLayoutProps {
   children?: React.ReactNode
   image?: string
   video?: string
-  style?: LayoutStyleEnum
+  style?: LayoutStyleEnum | `${LayoutStyleEnum}`
   bgColor?: string
   color?: string
   waveToColor?: string
@@ -47,6 +48,11 @@ const styleConfig: StyleConfigMap = {
     waveVariant: WavyVariantEnum.Standard,
   },
   test: { bgColor: 'bg-red-700', textColor: 'text-white', waveVariant: WavyVariantEnum.Simple },
+  blog: {
+    bgColor: 'bg-header-footer',
+    textColor: 'text-white',
+    waveVariant: WavyVariantEnum.Simple,
+  },
 }
 
 const PageLayout = ({
@@ -76,7 +82,14 @@ const PageLayout = ({
               <p className={styles.description}>{description}</p>
             </div>
             {image && (
-              <div className={styles.imageSection} style={{ backgroundImage: `url(${image})` }} />
+              style === 'blog' ? (
+                <img src={image} alt="" className={styles.blogImage} />
+              ) : (
+                <div
+                  className={styles.imageSection}
+                  style={{ backgroundImage: `url(${image})` }}
+                />
+              )
             )}
           </div>
         </div>

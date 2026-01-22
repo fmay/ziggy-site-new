@@ -7,7 +7,7 @@
 }
 
 // Page Layout Style
-.default, .feature {
+.default, .feature, .blog {
   @apply py-4 px-8 lg:px-0;
 }
 
@@ -49,4 +49,12 @@
 
 .imageSection {
   @apply h-64 w-64 lg:w-[500px] lg:h-[500px] bg-cover bg-center bg-no-repeat rounded-lg;
+}
+
+.imageSectionContained {
+  @apply h-64 w-64 lg:w-[500px] lg:h-[500px] bg-contain bg-center bg-no-repeat rounded-lg;
+}
+
+.blogImage {
+  @apply max-w-full lg:max-w-[500px] h-auto rounded-lg;
 }

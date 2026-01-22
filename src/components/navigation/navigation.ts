@@ -102,6 +102,7 @@ export const navigationConfig: NavigationConfig = {
             ],
           },
           {
+            title: 'Articles',
             items: [
               {
                 label: 'Migrations',

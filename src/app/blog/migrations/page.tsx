@@ -4,13 +4,16 @@ import fs from 'fs'
 import path from 'path'
 
 export default function Migrations() {
-  const markdownPath = path.join(process.cwd(), 'src/app/blog/migrations.md')
+  const markdownPath = path.join(process.cwd(), 'src/app/blog/migrations/migrations.md')
   const markdownContent = fs.readFileSync(markdownPath, 'utf-8')
 
   return (
     <PageLayout
       title="Data Migrations"
-      description="How Ziggy handles data migrations with precision and reliability.">
+      description="How Ziggy handles data migrations with precision and reliability."
+      image="/blog/migrations/blog-migration-hero.webp"
+      style="blog"
+    >
       <div className="max-w-4xl mx-auto prose prose-lg">
         <div className="bg-white p-8 rounded-lg border border-gray-200">
           <ReactMarkdown>{markdownContent}</ReactMarkdown>
