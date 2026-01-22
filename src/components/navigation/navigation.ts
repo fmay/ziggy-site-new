@@ -152,7 +152,7 @@ export const navigationConfig: NavigationConfig = {
               },
               {
                 label: 'Professional Services',
-                href: 'pricing#services',
+                href: '/pricing#services',
                 description: 'Support, training and Ziggy related services',
                 icon: '/nav/flow.svg',
               },

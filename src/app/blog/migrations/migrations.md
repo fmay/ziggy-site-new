@@ -4,6 +4,10 @@ A data migration is the structured process of transferring data from one system,
 
 In practical terms, it involves moving data such as customer records, transactions, files, or configurations between environments—for example, from a legacy database to a modern cloud platform.
 
+## Outsource your migration
+
+If you have a complex migration to be handled for you, please [contact us](/contact) and we will connect you with a Ziggy Partner or we'll handle this in-house.
+
 ## Key characteristics
 
 Source and target systems: Data moves from an existing system (source) to a new system (target), which may differ in technology, schema, or data model.
