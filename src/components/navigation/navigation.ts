@@ -101,6 +101,16 @@ export const navigationConfig: NavigationConfig = {
               },
             ],
           },
+          {
+            items: [
+              {
+                label: 'Migrations',
+                href: '/blog/migrations',
+                description: 'About migrations in general and how Ziggy manages them',
+                icon: '/nav/flow.svg',
+              },
+            ],
+          },
         ],
       },
     },

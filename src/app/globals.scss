@@ -158,3 +158,76 @@ h4 {
     @apply flex w-1/2 justify-center;
   }
 }
+
+// Prose styles for markdown content
+.prose {
+  @apply text-[var(--default-text)];
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--dark-text)];
+  }
+
+  h1 {
+    @apply mt-8 mb-4;
+  }
+
+  h2 {
+    @apply mt-6 mb-3;
+  }
+
+  h3 {
+    @apply mt-4 mb-2;
+  }
+
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  ul, ol {
+    @apply ml-6 mb-4;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  strong {
+    @apply font-semibold text-[var(--dark-text)];
+  }
+
+  code {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono text-[var(--dark-text)];
+  }
+
+  pre {
+    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+
+    code {
+      @apply bg-transparent p-0;
+    }
+  }
+
+  blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic text-[var(--mid-gray)] my-4;
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-800;
+  }
+}
+
+.prose-lg {
+  @apply text-lg;
+
+  p, li {
+    @apply text-[1.1rem] leading-[1.75rem];
+  }
+}
