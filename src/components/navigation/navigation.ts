@@ -122,6 +122,12 @@ export const navigationConfig: NavigationConfig = {
                 description: 'How to integrate with and migrate to Hubspot',
                 icon: '/nav/flow.svg',
               },
+              {
+                label: 'Messaging - Internet of Things',
+                href: '/blog/iot',
+                description: 'Using Ziggy Messaging to read from messaging systems',
+                icon: '/nav/flow.svg',
+              },
             ],
 
           },

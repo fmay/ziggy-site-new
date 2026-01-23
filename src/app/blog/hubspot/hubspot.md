@@ -24,6 +24,7 @@ The following blocks are available. All objects have integrated batching and rat
 
 Below are some simple flows that illustrate the use of HubSpot blocks. 
 
+### Ziggy flow editor and debugger
 Note that building and testing flows is supported by the visual debugger. From the Ziggy UI, you can execute flows, step from block to block and Inspect data anywhere in the flow. 
 
 The screenshot below shows a user stepping through a flow. Clicking on any of the bubbles on the connecting lines shows data at that point.
