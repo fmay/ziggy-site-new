@@ -6,7 +6,7 @@ In practical terms, it involves moving data such as customer records, transactio
 
 ## Outsource your migration
 
-If you have a complex migration to be handled for you, please [contact us](/contact) and we will connect you with a Ziggy Partner or we'll handle this in-house.
+If you have a complex migration to be handled for you, please [contact us](/contact), and we will connect you with a Ziggy Partner, or we'll handle this in-house.
 
 ## Key characteristics
 
@@ -17,15 +17,15 @@ As a result, migrations can be very complex. They require detailed discovery, im
 - **Transformation**: Data often needs to be normalized, restructured, or enriched to meet the requirements of the target system.
 - **Cleansing**: A migration is a good time to perform data cleaning operations. This can involve automated processes or creating logs of invalid records that need a manual review before reprocessing.
 - **Validation**: Post-migration checks ensure completeness, correctness, and consistency of the migrated data.
-- **Controlled execution**: Migrations are typically planned, tested, and executed in phases to minimize risk and downtime. Migrated data is best quality controlled in a sandboxed environment before the final production migration.
+- **Controlled execution**: Migrations are typically planned, tested, and executed in phases to minimize risk and downtime. Migrated data is ideally quality controlled in a sandboxed environment before the final production migration.
 - **Audit**: some organization may require a comprehensive audit trail, documenting precisely what was migrated and the final data structure.
 - **Testing and validation**: The potentially many phases of a migration should be tested and validated independently with the ability to rerun as required.
-- **Production migration**: The final migration to a production platform needs careful planning. It needs to be sensitive to downtime and the time required to migrate potentially millions of records. A dry run is especially storngly recommended when migrating into systems that are already operational.
+- **Production migration**: The final migration to a production platform needs careful planning. It needs to be sensitive to downtime and the time required to migrate potentially millions of records. A dry run is especially strongly recommended when migrating into systems that are already operational.
 
 ## Examples
 Two common migration examples are 
 
-- Legcay CRM to a new CRM
+- Legacy CRM to a new CRM
 - Data from multiple platforms and data stores into a new ERP platform.
 
 A CRM system usually has many objects that needs migrating.
@@ -45,7 +45,7 @@ An ERP migration is often similar in nature.
 
 Ziggy manages migrations with Ziggy Flows. A very simple migration can accomplish everything with a single Flow. However, complex migrations will require many Flows, each of which handles a discreet part of the migration.
 
-Below is a simple flow that imports customers from a database (but this could be any data source or mutiple connected sources) into a data store, where further auditing and checking operations could be performed.
+Below is a simple flow that imports customers from a database (but this could be any data source or multiple connected sources) into a data store, where further auditing and checking operations could be performed.
 
 ![Customer Import](/blog/migrations/migrate-customers-import.webp)
 
@@ -76,7 +76,7 @@ When we are ready to migrate to the target platform
 
 ![Associations](/blog/migrations/migrate-associate.webp)
 
-Associations will need to be made between all relevant object types including Activities (emails, calls, tasks, todo's etc).
+Associations will need to be made between all relevant object types including Activities (emails, calls, tasks, todos etc.).
 
 ## File Attachments
 
@@ -94,7 +94,7 @@ Ziggy lets you tag your flows so you can find them easily. You can see below how
 
 ## Flow Orchestration
 
-You can also create Ziggy Flows that are use to Orchestrate the various components or phases of a migration. These let you run individual or groups of flows with a single click without having to navigate to the flows individually.
+You can also create Ziggy Flows that are used to Orchestrate the various components or phases of a migration. These let you run individual or groups of flows with a single click without having to navigate to the flows individually.
 
 ![Customer Export](/blog/migrations/migrate-commander.webp)
 

@@ -110,7 +110,14 @@ export const navigationConfig: NavigationConfig = {
                 description: 'About migrations in general and how Ziggy manages them',
                 icon: '/nav/flow.svg',
               },
+              {
+                label: 'Automations and Integrations',
+                href: '/blog/integrations',
+                description: 'An article about automations and integrations',
+                icon: '/nav/flow.svg',
+              },
             ],
+
           },
         ],
       },

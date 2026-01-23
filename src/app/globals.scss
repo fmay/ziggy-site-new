@@ -172,11 +172,11 @@ h4 {
   }
 
   h2 {
-    @apply mt-[50px] mb-6;
+    @apply font-normal mt-[50px] mb-8;
   }
 
   h3 {
-    @apply mt-4 mb-2;
+    @apply mt-[40px] mb-8;
   }
 
   p {
@@ -238,7 +238,7 @@ h4 {
 
 // Table of Contents styles
 .toc {
-  @apply text-sm text-[var(--mid-gray)];
+  @apply pt-12 text-sm text-[var(--mid-gray)];
 
   a {
     @apply block py-1.5 hover:text-[var(--dark-text)] transition-colors;
