@@ -116,6 +116,12 @@ export const navigationConfig: NavigationConfig = {
                 description: 'An article about automations and integrations',
                 icon: '/nav/flow.svg',
               },
+              {
+                label: 'Hubspot Integrations and Migrations',
+                href: '/blog/hubspot',
+                description: 'How to integrate with and migrate to Hubspot',
+                icon: '/nav/flow.svg',
+              },
             ],
 
           },
