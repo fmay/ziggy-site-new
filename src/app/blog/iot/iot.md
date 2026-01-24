@@ -10,6 +10,18 @@ Ziggy has messaging processing support for any type of messaging system. We curr
 
 Other messaging protocols are quickly added, so if you require support for another protocol, please [contact us](/contact).
 
+## Scalability and redundancy
+
+Ziggy can deal with very large message volumes. The data flow is as follows.
+
+- Message topic received.
+- Added immediately to the Ziggy system queue.
+- As soon as Ziggy has available capacity (you configure how many flows can execute in parallel) the flow will execute.
+- If the queue itself is full, requests are buffered to the database.
+
+If you have very large message volumes and slow running flows, you can move to [Ziggy Cluster](/cluster) which can scale to meet your performance requirements.
+
+Ziggy Cluster also ensures uninterrupted operation if a server fails.
 
 ## MQTT
 

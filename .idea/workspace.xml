@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iot 0.2">
-      <change afterPath="$PROJECT_DIR$/public/blog/iot/iot-messaging-config.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/blog/iot/iot-messaging-manager.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/blog/iot/iot.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/iot/iot.md" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iot 0.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,15 +182,7 @@
       <workItem from="1768815115814" duration="596000" />
       <workItem from="1768916538844" duration="17168000" />
       <workItem from="1769070502518" duration="588000" />
-      <workItem from="1769234474799" duration="934000" />
-    </task>
-    <task id="LOCAL-00244" summary="docs links and footer">
-      <option name="closed" value="true" />
-      <created>1765646350081</created>
-      <option name="number" value="00244" />
-      <option name="presentableId" value="LOCAL-00244" />
-      <option name="project" value="LOCAL" />
-      <updated>1765646350081</updated>
+      <workItem from="1769234474799" duration="1282000" />
     </task>
     <task id="LOCAL-00245" summary="what are automations">
       <option name="closed" value="true" />
@@ -581,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769189225378</updated>
     </task>
-    <option name="localTasksCounter" value="293" />
+    <task id="LOCAL-00293" summary="iot 0.2">
+      <option name="closed" value="true" />
+      <created>1769235754080</created>
+      <option name="number" value="00293" />
+      <option name="presentableId" value="LOCAL-00293" />
+      <option name="project" value="LOCAL" />
+      <updated>1769235754081</updated>
+    </task>
+    <option name="localTasksCounter" value="294" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
