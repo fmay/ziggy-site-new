@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="info@ziggyplatform.com" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iot 0.2">
+      <change afterPath="$PROJECT_DIR$/public/blog/iot/iot-messaging-config.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/blog/iot/iot-messaging-manager.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/blog/iot/iot.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/iot/iot.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/partners/reseller&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/freddymay/ziggy-site-new/src/app/blog/iot&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -66,18 +71,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/blog/iot" />
+      <recent name="$PROJECT_DIR$/src/app/blog/hubspot" />
+      <recent name="$PROJECT_DIR$/src/app/blog/integrations" />
       <recent name="$PROJECT_DIR$/src/app/partners/reseller" />
       <recent name="$PROJECT_DIR$/src/app/solutions/crm" />
-      <recent name="$PROJECT_DIR$/src/app/solutions/reseller" />
-      <recent name="$PROJECT_DIR$/src/app/solutions/iot" />
-      <recent name="$PROJECT_DIR$/src/app/solutions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/reseller" />
-      <recent name="$PROJECT_DIR$/public/solutions/crm" />
-      <recent name="$PROJECT_DIR$/public/solutions/iot" />
-      <recent name="$PROJECT_DIR$/pixelmator/solutions/iot" />
-      <recent name="$PROJECT_DIR$/pixelmator/solutions/crm" />
+      <recent name="$PROJECT_DIR$/public/blog/iot" />
+      <recent name="$PROJECT_DIR$/public/blog/hubspot" />
+      <recent name="$PROJECT_DIR$/public/blog/integrations" />
+      <recent name="$PROJECT_DIR$/public/blog/integrtions" />
+      <recent name="$PROJECT_DIR$/public/blog/migrations" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -114,7 +119,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.cache" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.cache" />
       </list>
     </recent_temporary>
@@ -180,70 +187,7 @@
       <workItem from="1768815115814" duration="596000" />
       <workItem from="1768916538844" duration="17168000" />
       <workItem from="1769070502518" duration="588000" />
-    </task>
-    <task id="LOCAL-00236" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765626863858</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1765626863858</updated>
-    </task>
-    <task id="LOCAL-00237" summary="updates for bill">
-      <option name="closed" value="true" />
-      <created>1765627031023</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
-      <option name="project" value="LOCAL" />
-      <updated>1765627031023</updated>
-    </task>
-    <task id="LOCAL-00238" summary="docs links 0.5">
-      <option name="closed" value="true" />
-      <created>1765628684422</created>
-      <option name="number" value="00238" />
-      <option name="presentableId" value="LOCAL-00238" />
-      <option name="project" value="LOCAL" />
-      <updated>1765628684422</updated>
-    </task>
-    <task id="LOCAL-00239" summary="docs links 0.6">
-      <option name="closed" value="true" />
-      <created>1765629343072</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1765629343072</updated>
-    </task>
-    <task id="LOCAL-00240" summary="docs links 0.8">
-      <option name="closed" value="true" />
-      <created>1765630218657</created>
-      <option name="number" value="00240" />
-      <option name="presentableId" value="LOCAL-00240" />
-      <option name="project" value="LOCAL" />
-      <updated>1765630218657</updated>
-    </task>
-    <task id="LOCAL-00241" summary="docs links and footer">
-      <option name="closed" value="true" />
-      <created>1765630801111</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1765630801111</updated>
-    </task>
-    <task id="LOCAL-00242" summary="docs links and footer">
-      <option name="closed" value="true" />
-      <created>1765631321067</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1765631321067</updated>
-    </task>
-    <task id="LOCAL-00243" summary="docs links and footer">
-      <option name="closed" value="true" />
-      <created>1765637523042</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1765637523042</updated>
+      <workItem from="1769234474799" duration="934000" />
     </task>
     <task id="LOCAL-00244" summary="docs links and footer">
       <option name="closed" value="true" />
@@ -573,7 +517,71 @@
       <option name="project" value="LOCAL" />
       <updated>1769070824756</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="blog md files">
+      <option name="closed" value="true" />
+      <created>1769085242202</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1769085242202</updated>
+    </task>
+    <task id="LOCAL-00286" summary="hubspot form and blog">
+      <option name="closed" value="true" />
+      <created>1769092161166</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1769092161166</updated>
+    </task>
+    <task id="LOCAL-00287" summary="hubspot form scss styling tweak blog">
+      <option name="closed" value="true" />
+      <created>1769092474145</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1769092474145</updated>
+    </task>
+    <task id="LOCAL-00288" summary="Blog link panel">
+      <option name="closed" value="true" />
+      <created>1769093175622</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1769093175622</updated>
+    </task>
+    <task id="LOCAL-00289" summary="Blog link panel">
+      <option name="closed" value="true" />
+      <created>1769093612858</created>
+      <option name="number" value="00289" />
+      <option name="presentableId" value="LOCAL-00289" />
+      <option name="project" value="LOCAL" />
+      <updated>1769093612858</updated>
+    </task>
+    <task id="LOCAL-00290" summary="integrations">
+      <option name="closed" value="true" />
+      <created>1769164602840</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1769164602840</updated>
+    </task>
+    <task id="LOCAL-00291" summary="hubspot">
+      <option name="closed" value="true" />
+      <created>1769186979462</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1769186979462</updated>
+    </task>
+    <task id="LOCAL-00292" summary="iot 0.2">
+      <option name="closed" value="true" />
+      <created>1769189225378</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1769189225378</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,13 +627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="updates" />
-    <MESSAGE value="pre nestjs error fix" />
-    <MESSAGE value="aaa" />
-    <MESSAGE value="home refactor" />
-    <MESSAGE value="home refactor 2" />
-    <MESSAGE value="home refactor 3" />
-    <MESSAGE value="integration partners update" />
     <MESSAGE value="contact form sending" />
     <MESSAGE value="content update" />
     <MESSAGE value="svg overlap fixed" />
@@ -644,7 +645,25 @@
     <MESSAGE value="iot 0.9" />
     <MESSAGE value="reseller 0.9" />
     <MESSAGE value="info@ziggyplatform.com" />
-    <option name="LAST_COMMIT_MESSAGE" value="info@ziggyplatform.com" />
+    <MESSAGE value="blog md files" />
+    <MESSAGE value="hubspot form and blog" />
+    <MESSAGE value="hubspot form scss styling tweak blog" />
+    <MESSAGE value="Blog link panel" />
+    <MESSAGE value="integrations" />
+    <MESSAGE value="hubspot" />
+    <MESSAGE value="iot 0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="iot 0.2" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/api/contact/route.ts</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

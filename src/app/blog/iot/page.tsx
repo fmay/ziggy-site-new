@@ -1,5 +1,6 @@
 import PageLayout from '@/components/ui/page-wrappers/page-layout/PageLayout'
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import fs from 'fs'
 import path from 'path'
 import TableOfContents from '@/components/ui/TableOfContents'
@@ -38,6 +39,7 @@ export default function IOT() {
         <div className="flex-1 max-w-4xl prose prose-lg">
           <div className="bg-white p-8 rounded-lg border border-gray-200">
             <ReactMarkdown
+              rehypePlugins={[rehypeRaw]}
               components={{
                 h2: ({ children }) => (
                   <h2 id={slugify(getTextContent(children))}>{children}</h2>
