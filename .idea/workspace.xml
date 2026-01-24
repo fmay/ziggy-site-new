@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iot 0.2" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iot 0.8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,15 +182,7 @@
       <workItem from="1768815115814" duration="596000" />
       <workItem from="1768916538844" duration="17168000" />
       <workItem from="1769070502518" duration="588000" />
-      <workItem from="1769234474799" duration="1282000" />
-    </task>
-    <task id="LOCAL-00245" summary="what are automations">
-      <option name="closed" value="true" />
-      <created>1765819958986</created>
-      <option name="number" value="00245" />
-      <option name="presentableId" value="LOCAL-00245" />
-      <option name="project" value="LOCAL" />
-      <updated>1765819958987</updated>
+      <workItem from="1769234474799" duration="1670000" />
     </task>
     <task id="LOCAL-00246" summary="what are automations">
       <option name="closed" value="true" />
@@ -576,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769235754081</updated>
     </task>
-    <option name="localTasksCounter" value="294" />
+    <task id="LOCAL-00294" summary="iot 0.8">
+      <option name="closed" value="true" />
+      <created>1769236138845</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1769236138845</updated>
+    </task>
+    <option name="localTasksCounter" value="295" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="contact form sending" />
     <MESSAGE value="content update" />
     <MESSAGE value="svg overlap fixed" />
     <MESSAGE value="anchor fixed" />
@@ -647,7 +646,8 @@
     <MESSAGE value="integrations" />
     <MESSAGE value="hubspot" />
     <MESSAGE value="iot 0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="iot 0.2" />
+    <MESSAGE value="iot 0.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="iot 0.8" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">

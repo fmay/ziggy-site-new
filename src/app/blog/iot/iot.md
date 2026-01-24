@@ -1,6 +1,4 @@
 
-## Ziggy Messaging
-
 Ziggy has messaging processing support for any type of messaging system. We currently support the following.
 
 - MQTT
