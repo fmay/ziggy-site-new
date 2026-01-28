@@ -38,7 +38,7 @@ export const features: Feature[] = [
   { name: 'Users', hasInfo: false },
   { name: 'Flows', hasInfo: false },
   { name: 'Hosting', hasInfo: true, infoText: 'Ziggy always runs in a private instance. For Enterprise and Integration Partner, you have the choice between Ziggy managed infrastructure or your own.' },
-  { name: 'Organizations', hasInfo: true, infoText: 'Only the Integration Partners supports multiple organizations' },
+  { name: 'Organizations', hasInfo: true, infoText: 'Only Integration Partner supports multiple organizations' },
   { name: 'Multi-tenant', hasInfo: false },
   { name: 'Training', hasInfo: false },
 ]
@@ -73,9 +73,9 @@ export const columns: ColumnConfig[] = [
       Training: '8 hours',
     },
     pricing: {
-      usd: 6000,
+      usd: 8000,
       eur: 6500,
-      gbp: 8000,
+      gbp: 6000,
     },
     contactLink: '/contact',
   },
