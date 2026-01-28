@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="iot 0.8">
-      <change afterPath="$PROJECT_DIR$/src/app/resources/services/page.tsx" afterDir="false" />
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pricing table fixes">
+      <change afterPath="$PROJECT_DIR$/public/services/services-hero.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/ServicesList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pricing/pricing-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pricing/pricing-table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,11 +78,11 @@
       <recent name="$PROJECT_DIR$/src/app/partners/reseller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/services" />
       <recent name="$PROJECT_DIR$/public/blog/iot" />
       <recent name="$PROJECT_DIR$/public/blog/hubspot" />
       <recent name="$PROJECT_DIR$/public/blog/integrations" />
       <recent name="$PROJECT_DIR$/public/blog/integrtions" />
-      <recent name="$PROJECT_DIR$/public/blog/migrations" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -188,15 +188,7 @@
       <workItem from="1768916538844" duration="17168000" />
       <workItem from="1769070502518" duration="588000" />
       <workItem from="1769234474799" duration="2165000" />
-      <workItem from="1769594535500" duration="697000" />
-    </task>
-    <task id="LOCAL-00247" summary="what are automations 2">
-      <option name="closed" value="true" />
-      <created>1765863932515</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1765863932515</updated>
+      <workItem from="1769594535500" duration="3917000" />
     </task>
     <task id="LOCAL-00248" summary="what are automations 3">
       <option name="closed" value="true" />
@@ -582,7 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769236177409</updated>
     </task>
-    <option name="localTasksCounter" value="296" />
+    <task id="LOCAL-00296" summary="pricing table fixes">
+      <option name="closed" value="true" />
+      <created>1769595395188</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1769595395188</updated>
+    </task>
+    <option name="localTasksCounter" value="297" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +628,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="content update" />
     <MESSAGE value="svg overlap fixed" />
     <MESSAGE value="anchor fixed" />
     <MESSAGE value="bill fixes" />
@@ -653,7 +652,8 @@
     <MESSAGE value="hubspot" />
     <MESSAGE value="iot 0.2" />
     <MESSAGE value="iot 0.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="iot 0.8" />
+    <MESSAGE value="pricing table fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="pricing table fixes" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
