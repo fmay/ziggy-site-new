@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="pricing table fixes">
-      <change afterPath="$PROJECT_DIR$/public/services/services-hero.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/ServicesList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/ServicesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/ServicesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/simple-pair/SimplePair.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,15 +187,7 @@
       <workItem from="1768916538844" duration="17168000" />
       <workItem from="1769070502518" duration="588000" />
       <workItem from="1769234474799" duration="2165000" />
-      <workItem from="1769594535500" duration="3917000" />
-    </task>
-    <task id="LOCAL-00248" summary="what are automations 3">
-      <option name="closed" value="true" />
-      <created>1765867274846</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1765867274846</updated>
+      <workItem from="1769594535500" duration="4611000" />
     </task>
     <task id="LOCAL-00249" summary="what are automations 3">
       <option name="closed" value="true" />
@@ -582,7 +573,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769595395188</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="pricing table fixes">
+      <option name="closed" value="true" />
+      <created>1769599266738</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1769599266738</updated>
+    </task>
+    <option name="localTasksCounter" value="298" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

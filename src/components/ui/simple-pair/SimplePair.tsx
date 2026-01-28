@@ -7,7 +7,7 @@ interface SimplePairProps {
   title: string
   subtitle: string
   imageCopy: ReactNode
-  image: string
+  image?: string
   scale?: number
   contentNudge?: number
   cta? : ReactNode
@@ -39,13 +39,15 @@ const SimplePair: FC<SimplePairProps> = ({ swap = false, title, subtitle, imageC
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Image
-              src={image}
-              alt={title}
-              width={600 * scale}
-              height={0}
-              className={styles.image}
-            />
+            {image && (
+              <Image
+                src={image}
+                alt={title}
+                width={600 * scale}
+                height={0}
+                className={styles.image}
+              />
+            )}
           </div>
           {cta && <div className={styles.ctaMobile}>{cta}</div>}
         </div>
