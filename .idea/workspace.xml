@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="bill fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="629464a8-5b34-4063-8383-7b3ca101aa81" name="Changes" comment="services" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
